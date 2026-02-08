@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="442a-94b5-5142-d10c" name="Daemons of Chaos WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="7" authorContact="Contact me via Discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="442a-94b5-5142-d10c" name="Daemons of Chaos WAP 1.73" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="8" authorContact="Contact me via Discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Armoury" id="61ff-ad9f-83c7-fbff" targetId="522e-5e2a-d54c-4959"/>
     <catalogueLink type="catalogue" name="Bestiary" id="f60e-240a-8426-d3ed" targetId="1fc9-2903-cb19-5737"/>
@@ -7,7 +7,7 @@
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Lore of Chaos" hidden="false" id="8144-4176-bad4-531d" sortIndex="1">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9b00-dbe2-4ee8-21cf"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9b00-dbe2-4ee8-21cf" automatic="true"/>
       </constraints>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Scions of the Dark Gods" hidden="false" id="a4b8-d5fd-d3c9-a324" sortIndex="1">
@@ -22,12 +22,12 @@
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from this lore is cast, roll a D6 for each unsaved Wound caused by it; on a 5+, add 1 Wound&apos;s worth of models to one friendly Daemonic unit within 12&quot;, just like a summoning spell.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Roll a D6 for each unsaved Wound caused by a spell from this lore; on a 5+, add 1 Wound&apos;s worth of models to one friendly Daemonic unit within 12&quot; of the caster, just like a summoning spell.</characteristic>
               </characteristics>
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="0. The Summoning" hidden="false" id="eb81-3408-e486-63f8">
+        <selectionEntry type="upgrade" import="true" name="The Summoning" hidden="false" id="eb81-3408-e486-63f8">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8022-9f7b-a4df-912b-min"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8022-9f7b-a4df-912b-max"/>
@@ -253,7 +253,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4aa8-d19e-db43-3d2d"/>
               </constraints>
               <profiles>
-                <profile name="1. Daemonic Familiars" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4c1a-63a8-f13a-58ef" publicationId="314a-aacb-0877-4081" page="5">
+                <profile name="Daemonic Familiars" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4c1a-63a8-f13a-58ef" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -269,7 +269,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a4a-580e-e7df-9014"/>
               </constraints>
               <profiles>
-                <profile name="2. Gift of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f66c-f6f8-3eff-98e2" publicationId="314a-aacb-0877-4081" page="5">
+                <profile name="Gift of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f66c-f6f8-3eff-98e2" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -280,34 +280,18 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Winds of Chaos" hidden="false" id="950a-ff32-d35c-1ff6">
+            <selectionEntry type="upgrade" import="true" name="5. Winds of Chaos" hidden="true" id="950a-ff32-d35c-1ff6">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c25f-c489-c127-598b"/>
               </constraints>
               <profiles>
                 <profile name="Winds of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="79a7-84fd-7b73-a74d" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
                     <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers -2 to their Movement until the start of the caster&apos;s next turn.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Call to Glory" hidden="true" id="4513-7449-6b6f-71ae">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1421-96ae-d202-3c2f"/>
-              </constraints>
-              <profiles>
-                <profile name="4. Call to Glory" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="46d6-9c2a-f9a7-4c0d" publicationId="314a-aacb-0877-4081" page="5">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. Choose one Leader model; while the spell is in effect, that model gains +1 Weapon Skill, Strength, Toughness, Wounds, Initiative, Attacks and Leadership and is treated as a Character in all aspects, though they may not leave their unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -325,7 +309,7 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Vision of Torment" hidden="true" id="7c07-4ea0-e5d6-848c">
+            <selectionEntry type="upgrade" import="true" name="4. Vision of Torment" hidden="true" id="7c07-4ea0-e5d6-848c">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb07-8670-a7e1-04f8"/>
               </constraints>
@@ -343,7 +327,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="5. Vision of Torment" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2fda-5237-4ebe-7639" publicationId="314a-aacb-0877-4081" page="5">
+                <profile name="Vision of Torment" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2fda-5237-4ebe-7639" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -372,7 +356,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="6. Binding Damnation" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a47c-d1d6-dc31-9246" publicationId="314a-aacb-0877-4081" page="5">
+                <profile name="Binding Damnation" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a47c-d1d6-dc31-9246" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -400,7 +384,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="7. Mask of Darkness" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1338-db2a-a948-9aae" publicationId="314a-aacb-0877-4081" page="5">
+                <profile name="Mask of Darkness" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1338-db2a-a948-9aae" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
@@ -428,7 +412,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2eca-ad2e-024e-2a0b"/>
               </constraints>
               <profiles>
-                <profile name="8. Veil of Corruption" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f595-67a4-1d99-d16b" publicationId="314a-aacb-0877-4081" page="5">
+                <profile name="Veil of Corruption" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f595-67a4-1d99-d16b" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -456,7 +440,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8301-38ac-9389-b9f9"/>
               </constraints>
               <profiles>
-                <profile name="9. Ruinous Vigour" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3a20-79e1-0fb1-91f6" publicationId="314a-aacb-0877-4081" page="5">
+                <profile name="Ruinous Vigour" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3a20-79e1-0fb1-91f6" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -479,7 +463,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="10. Chaotic Conduit" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9350-6ace-9e00-9b78" publicationId="314a-aacb-0877-4081" page="5">
+                <profile name="Chaotic Conduit" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9350-6ace-9e00-9b78" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -502,7 +486,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ac1-f42a-9447-b3c2"/>
               </constraints>
               <profiles>
-                <profile name="11. Spite-Tongue Curse" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="8dd6-a720-32f5-5842" publicationId="314a-aacb-0877-4081" page="5">
+                <profile name="Spite-Tongue Curse" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="8dd6-a720-32f5-5842" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -525,13 +509,29 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="12. Vortex of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d633-7a61-8824-3737" publicationId="314a-aacb-0877-4081" page="5">
+                <profile name="Vortex of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d633-7a61-8824-3737" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
                     <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Vortex Of Chaos is a magical vortex that uses the large round template. Any model touched by the template at any point during its move suffer a Strength 4 hit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="3. Veil of Gloom" hidden="false" id="b609-eafb-c81e-1e32">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5add-ae53-9b5b-829c"/>
+              </constraints>
+              <profiles>
+                <profile name="Veil of Gloom" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2750-c948-a872-3614" publicationId="314a-aacb-0877-4081" page="5">
+                  <characteristics>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a 5+ Ward save against missile attacks until the start of your next Magic phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -557,7 +557,7 @@
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from this lore is cast, roll a D6 for each unsaved Wound caused by it; on a 5+, add 1 Wound&apos;s worth of models to one friendly Daemons of Nurgle unit within 12&quot;, just like a summoning spell.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Roll a D6 for each unsaved Wound caused by a spell from this lore; on a 5+, add 1 Wound&apos;s worth of models to one friendly Daemons of Nurgle unit within 12&quot; of the caster, just like a summoning spell.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -568,7 +568,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3fb-d5a8-9652-73a0-max"/>
           </constraints>
           <profiles>
-            <profile name="0. Stream of Corruption" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="53d0-47bb-5115-55c2" publicationId="314a-aacb-0877-4081" page="6">
+            <profile name="Stream of Corruption" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="53d0-47bb-5115-55c2" publicationId="314a-aacb-0877-4081" page="6">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -788,7 +788,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a18-f7b7-5beb-cc27"/>
               </constraints>
               <profiles>
-                <profile name="1. Miasma of Pestilence" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0a57-456f-1120-fb10" publicationId="314a-aacb-0877-4081" page="5">
+                <profile name="Miasma of Pestilence" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0a57-456f-1120-fb10" publicationId="314a-aacb-0877-4081" page="5">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -804,7 +804,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cef3-becf-9a26-7a88"/>
               </constraints>
               <profiles>
-                <profile name="2. Blades of Putrefication" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1706-6446-cfc7-8a5a" publicationId="314a-aacb-0877-4081" page="6">
+                <profile name="Blades of Putrefication" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1706-6446-cfc7-8a5a" publicationId="314a-aacb-0877-4081" page="6">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -820,7 +820,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4940-02cf-376d-d747"/>
               </constraints>
               <profiles>
-                <profile name="3. Magnificient Buboues" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ace6-3e3e-2909-4885" publicationId="314a-aacb-0877-4081" page="6">
+                <profile name="Magnificient Buboues" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ace6-3e3e-2909-4885" publicationId="314a-aacb-0877-4081" page="6">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
@@ -849,7 +849,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="4. Curse of the Leper" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ace5-ead4-c2e2-33e2" publicationId="314a-aacb-0877-4081" page="6">
+                <profile name="Curse of the Leper" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ace5-ead4-c2e2-33e2" publicationId="314a-aacb-0877-4081" page="6">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex</characteristic>
@@ -878,13 +878,13 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="5. Plague Squall" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0ffb-74e6-4542-aa63" publicationId="314a-aacb-0877-4081" page="6">
+                <profile name="Plague Squall" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0ffb-74e6-4542-aa63" publicationId="314a-aacb-0877-4081" page="6">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template with the centre anywhere within this range; it scatters like a stone thrower. If a misfire is rolled, the caster suffers 1 Wound which Ignores Armour Saves. Any model hit suffer a Strength 1 Hit with the Ignores Armour Saves special rule.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template with the centre anywhere within this range; it scatters like a stone thrower. If a misfire is rolled, the caster suffers 1 Wound which Ignores Armour Saves. Any model hit suffers a Strength 1 Hit with the Ignores Armour Saves special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -927,7 +927,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="7. Rotbomb" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3aaf-630a-e110-00a4" publicationId="314a-aacb-0877-4081" page="6">
+                <profile name="Rotbomb" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3aaf-630a-e110-00a4" publicationId="314a-aacb-0877-4081" page="6">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -955,7 +955,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="8. Cloying Quagmire" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e987-58ed-9291-b97a" publicationId="314a-aacb-0877-4081" page="6">
+                <profile name="Cloying Quagmire" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e987-58ed-9291-b97a" publicationId="314a-aacb-0877-4081" page="6">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -983,7 +983,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="9. Fleshy Abundance" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7ed6-a89e-cc2a-dfe5" publicationId="314a-aacb-0877-4081" page="6">
+                <profile name="Fleshy Abundance" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7ed6-a89e-cc2a-dfe5" publicationId="314a-aacb-0877-4081" page="6">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -1006,7 +1006,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38c6-74cf-06c7-bdff"/>
               </constraints>
               <profiles>
-                <profile name="10. Grandfather Nurgle&apos;s Circle of Life" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5444-a41d-fd6b-5575" publicationId="314a-aacb-0877-4081" page="6">
+                <profile name="Grandfather Nurgle&apos;s Circle of Life" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5444-a41d-fd6b-5575" publicationId="314a-aacb-0877-4081" page="6">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -1029,7 +1029,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="11. Plague Wind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="eeeb-52c3-87ed-a55f" publicationId="314a-aacb-0877-4081" page="6">
+                <profile name="Plague Wind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="eeeb-52c3-87ed-a55f" publicationId="314a-aacb-0877-4081" page="6">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
@@ -1052,7 +1052,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="12. Rot, Glorious Rot" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="93a1-7078-3df9-1fd5" publicationId="314a-aacb-0877-4081" page="6">
+                <profile name="Rot, Glorious Rot" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="93a1-7078-3df9-1fd5" publicationId="314a-aacb-0877-4081" page="6">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -1069,7 +1069,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Lore of Slaanesh" hidden="false" id="6635-f101-5f8b-6991" sortIndex="3">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dac3-aefc-0625-9421"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dac3-aefc-0625-9421" automatic="true"/>
       </constraints>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Born of Damnation" hidden="false" id="f7d7-471e-fb29-71c0" sortIndex="1">
@@ -1084,7 +1084,7 @@
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from this lore is cast, roll a D6 for each unsaved Wound caused by it; on a 5+, add 1 Wound&apos;s worth of models to one friendly Daemons of Slaanesh unit within 12&quot;, just like a summoning spell.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Roll a D6 for each unsaved Wound caused by a spell from this lore; on a 5+, add 1 Wound&apos;s worth of models to one friendly Daemons of Slaanesh unit within 12&quot; of the caster, just like a summoning spell.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1095,13 +1095,13 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ed68-5881-5b41-9d68-max"/>
           </constraints>
           <profiles>
-            <profile name="0. Lash of Slaanesh" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="15be-18ab-80f3-bc3f" publicationId="314a-aacb-0877-4081" page="7">
+            <profile name="Lash of Slaanesh" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="15be-18ab-80f3-bc3f" publicationId="314a-aacb-0877-4081" page="7">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 24&quot; in length, within the caster’s forward arc and directly from their base. Each model in the way (determined using the line template) suffer a Strength 4 hit with the Armour Piercing (1) special rule. Any unit that suffers a casualty from this spell may not march in its next Movement phase.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 24&quot; in length, within the caster’s forward arc and directly from their base. Each model in the way (determined using the line template) suffers a Strength 4 hit with the Armour Piercing (1) special rule. Any unit that suffers a casualty from this spell may not march in its next Movement phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1315,13 +1315,13 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0dbf-1664-22ee-5cb7"/>
               </constraints>
               <profiles>
-                <profile name="1. Hysterical Frenzy" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fbcb-08f2-f95a-6a00" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Hysterical Frenzy" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fbcb-08f2-f95a-6a00" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target gains the Frenzy special rule (which is not lost if the unit is defeated in close combat) and suffer D6 Strength 3 hits at the end of each of the caster’s Magic phases.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target gains the Frenzy special rule (which is not lost if the unit is defeated in close combat) and suffers D6 Strength 3 hits at the end of each of the caster’s Magic phases.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1331,7 +1331,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="32cb-b58e-d0b0-3897"/>
               </constraints>
               <profiles>
-                <profile name="2. Pavane of Slaanesh" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9d1c-6730-c770-e1d2" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Pavane of Slaanesh" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9d1c-6730-c770-e1d2" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -1347,7 +1347,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db9d-70da-14a1-2c01"/>
               </constraints>
               <profiles>
-                <profile name="3. Succour of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="089c-dba9-c8c1-c233" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Succour of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="089c-dba9-c8c1-c233" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -1376,7 +1376,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="4. Titillating Delusions" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6928-39ac-7920-55e2" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Titillating Delusions" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6928-39ac-7920-55e2" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -1405,7 +1405,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="5. Slothful Stupor" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b25d-9976-fb73-66c5" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Slothful Stupor" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b25d-9976-fb73-66c5" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -1434,7 +1434,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="6. Aquiescence" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="474a-aca9-c6ee-c2a9" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Aquiescence" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="474a-aca9-c6ee-c2a9" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -1462,7 +1462,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="7. Delisious Excruciation" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d583-fdea-c279-3b77" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Delisious Excruciation" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d583-fdea-c279-3b77" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -1490,7 +1490,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a340-4bce-df05-3dff"/>
               </constraints>
               <profiles>
-                <profile name="8. Slicing Shards" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3cc5-f3a5-91c9-ed33" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Slicing Shards" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3cc5-f3a5-91c9-ed33" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
@@ -1518,7 +1518,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aed3-101a-f678-9928"/>
               </constraints>
               <profiles>
-                <profile name="9. Phantasmagoria" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3001-3fe7-ae01-d37a" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Phantasmagoria" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3001-3fe7-ae01-d37a" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">hex</characteristic>
@@ -1541,7 +1541,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="10. Cacophonic Choir" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b177-fff9-73a9-e720" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Cacophonic Choir" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b177-fff9-73a9-e720" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -1564,7 +1564,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="11. Ecstatic Seizures" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c83e-ce68-ad5d-3d65" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Ecstatic Seizures" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c83e-ce68-ad5d-3d65" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -1587,7 +1587,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="12. Song of Seduction" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5014-420b-f8fa-069c" publicationId="314a-aacb-0877-4081" page="7">
+                <profile name="Song of Seduction" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5014-420b-f8fa-069c" publicationId="314a-aacb-0877-4081" page="7">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -1604,8 +1604,8 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Lore of Tzeentch" hidden="false" id="bdb0-6b92-8131-dc78" sortIndex="4">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f046-2cc1-bdec-e176"/>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ce7d-71d1-72cb-c701"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f046-2cc1-bdec-e176" automatic="true"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ce7d-71d1-72cb-c701" automatic="true"/>
       </constraints>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Fires of Change" hidden="false" id="8ccd-bf54-e956-5c55" sortIndex="1">
@@ -1620,7 +1620,7 @@
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from this lore is cast, roll a D6 for each unsaved Wound caused by it; on a 5+, add 1 Wound&apos;s worth of models to one friendly Daemons of Tzeentch unit within 12&quot;, just like a summoning spell.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Roll a D6 for each unsaved Wound caused by a spell from this lore; on a 5+, add 1 Wound&apos;s worth of models to one friendly Daemons of Tzeentch unit within 12&quot; of the caster, just like a summoning spell.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1631,7 +1631,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6173-2064-f5f4-3317-max"/>
           </constraints>
           <profiles>
-            <profile name="0. Blue Fire of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3e64-e33e-0a9b-5b67" publicationId="314a-aacb-0877-4081" page="8">
+            <profile name="Blue Fire of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3e64-e33e-0a9b-5b67" publicationId="314a-aacb-0877-4081" page="8">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
@@ -1907,7 +1907,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7755-6adf-9662-36db"/>
               </constraints>
               <profiles>
-                <profile name="1. Baleful Transmogrification" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7339-a2ed-ff5b-e4a1" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Baleful Transmogrification" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7339-a2ed-ff5b-e4a1" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -1923,7 +1923,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="df05-30eb-4b8f-3e3e"/>
               </constraints>
               <profiles>
-                <profile name="2. Boon of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c8d9-1c3c-7b18-cad3" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Boon of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c8d9-1c3c-7b18-cad3" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -1939,7 +1939,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="47ce-9b8c-2815-1200"/>
               </constraints>
               <profiles>
-                <profile name="3. Pandemonium" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3a76-678e-9cd2-7dbd" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Pandemonium" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3a76-678e-9cd2-7dbd" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -1968,7 +1968,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="4. Pink Fire of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2170-c000-7283-8457" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Pink Fire of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2170-c000-7283-8457" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -1997,7 +1997,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="5. Bolt of Change" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1d97-67f5-85ba-1d49" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Bolt of Change" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1d97-67f5-85ba-1d49" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
@@ -2026,7 +2026,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="6. Shield of Fate" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="efea-5013-36d8-39f7" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Shield of Fate" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="efea-5013-36d8-39f7" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -2054,7 +2054,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="7. Fold Reality" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2ef2-9591-ea37-b6d5" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Fold Reality" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2ef2-9591-ea37-b6d5" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -2082,13 +2082,13 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="8. Glean Magic" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2e30-0338-01a0-fffa" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Glean Magic" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2e30-0338-01a0-fffa" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It targets a single enemy Wizard. The caster and the target both roll a D6 and add their Wizard level to the score. If the caster rolls higher, the target suffers a Strength 4 hit with the Flaming Attacks special rule and loses one Wizard level (along with one spell). The caster gains access to this spell (unless it is a summoning spell) and can cast it themselves for the remainder of the game (using Fires of Change as the Lore Attribute).</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It targets a single enemy Wizard within 18&quot;. The caster and the target both roll a D6 and add their Wizard level to the score. If the caster rolls higher, the target suffers a Strength 4 hit with the Flaming Attacks special rule and loses one Wizard level (along with one spell). The caster gains access to this spell (unless it is a summoning spell) and can cast it themselves for the remainder of the game (using Boon of Magic as the Lore Attribute).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2110,7 +2110,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="9. Tzeentch&apos;s Firestorm" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="eccd-02dd-994a-f879" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Tzeentch&apos;s Firestorm" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="eccd-02dd-994a-f879" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -2133,13 +2133,13 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="10. Daemonfire Vortex" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ef18-ce48-f15a-6ac8" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Daemonfire Vortex" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ef18-ce48-f15a-6ac8" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Daemonfire Vortex is a magical vortex that uses the small round template. Any model touched by the template at any point during its move suffer a Strength D6+1 hit (roll once for each unit and apply the result to all models in that unit) with the Flaming Attacks special rule.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Daemonfire Vortex is a magical vortex that uses the small round template. Any model touched by the template at any point during its move suffers a Strength D6+1 hit (roll once for each unit and apply the result to all models in that unit) with the Flaming Attacks special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2156,7 +2156,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="11. Treason of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f666-6883-141d-a7f7" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Treason of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f666-6883-141d-a7f7" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -2179,7 +2179,7 @@
                 </modifier>
               </modifiers>
               <profiles>
-                <profile name="12. Infernal Gateway" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="13ef-a20f-e064-6b92" publicationId="314a-aacb-0877-4081" page="8">
+                <profile name="Infernal Gateway" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="13ef-a20f-e064-6b92" publicationId="314a-aacb-0877-4081" page="8">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -3350,7 +3350,7 @@
       <description>A Daemon of Khorne has the Hatred (Daemons of Slaanesh), Magic Resistance (1) and Mighty Blow (1) special rules.</description>
     </rule>
     <rule name="Daemon of Slaanesh" id="3c4c-7e88-58a7-f4b0" hidden="false" publicationId="314a-aacb-0877-4081" page="3">
-      <description>A Daemon of Slaanesh has the Hatred (Daemons of Khorne) and Armour Piercing (1) special rules. For each unsaved Wound they cause in close combat, the model may may an additional Attack. These additional Attacks cannot generate further attacks.</description>
+      <description>A Daemon of Slaanesh has the Hatred (Daemons of Khorne) and Armour Piercing (1) special rules. For every regular Attack that causes an unsaved Wound, the model may may an additional Attack. These additional Attacks cannot generate further attacks.</description>
     </rule>
     <rule name="Daemonic Animosity" id="3ae9-411f-1505-c51b" hidden="false" publicationId="314a-aacb-0877-4081" page="3">
       <description>Daemons with a different Daemonic Alignment treat each other as Suspicious Allies. However, Daemons of Khorne and Slaanesh, or Tzeentch and Nurgle, treat each other as Desperate Allies, respectively.  
@@ -3388,7 +3388,7 @@ When the unit emerges, place a marker anywhere on the battlefield and roll 2D6 
 Once the final position is established, place the unit so it can touch the marker. If the marker is under a unit or impassable terrain, place it next to the closest edge of the unit/terrain. They may face in any direction.</description>
     </rule>
     <rule name="Chaos Armour" id="93e8-18ec-9c64-9680" hidden="false" publicationId="314a-aacb-0877-4081" page="19">
-      <description>Models with this special rule add +1 to their armour saves if they wear light, medium or heavy armour.</description>
+      <description>Models with this special rule add +1 to their armour saves if they wear light or medium armour.</description>
     </rule>
     <rule name="Sporific Musk" id="c8d6-8857-0913-03d0" hidden="false" publicationId="314a-aacb-0877-4081" page="45">
       <description>Units in base contact with one or more Fiends of Slaanesh suffer a -1 penalty to both Weapon Skill and Initiative. This has no effect on Daemons of Slaanesh.</description>
@@ -3403,9 +3403,9 @@ Once the final position is established, place the unit so it can touch the mark
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Daemonic Gifts" id="b625-b00d-2010-7f43" hidden="false" collapsible="true" sortIndex="0">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Gifts of Khorne" id="6764-8fa7-436d-98fc" hidden="false" collapsible="true" sortIndex="100" flatten="true">
+        <selectionEntryGroup name="Gifts of Khorne" id="6764-8fa7-436d-98fc" hidden="false" collapsible="true" sortIndex="24" flatten="true">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Arch-Slaughterer" hidden="false" id="2cc3-a08f-2f39-ab16" sortIndex="101">
+            <selectionEntry type="upgrade" import="true" name="Arch-Slaughterer" hidden="false" id="2cc3-a08f-2f39-ab16" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
@@ -3420,7 +3420,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Rage Unchained" hidden="false" id="35bf-fe18-3e23-638d" sortIndex="102">
+            <selectionEntry type="upgrade" import="true" name="Rage Unchained" hidden="false" id="35bf-fe18-3e23-638d" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb48-9629-f7f3-79c2"/>
               </constraints>
@@ -3435,7 +3435,7 @@ Once the final position is established, place the unit so it can touch the mark
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Devastating Blow" hidden="false" id="07ba-779b-f72a-88d4" sortIndex="103">
+            <selectionEntry type="upgrade" import="true" name="Devastating Blow" hidden="false" id="07ba-779b-f72a-88d4" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
@@ -3450,7 +3450,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Aspect of Death" hidden="false" id="56d1-07ce-eaf6-e774" sortIndex="104">
+            <selectionEntry type="upgrade" import="true" name="Aspect of Death" hidden="false" id="56d1-07ce-eaf6-e774" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -3465,7 +3465,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Relentless Hunter" hidden="false" id="8893-7850-cdd2-8a9a" sortIndex="105">
+            <selectionEntry type="upgrade" import="true" name="Relentless Hunter" hidden="false" id="8893-7850-cdd2-8a9a" sortIndex="5">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1b4d-6d7d-1465-0f8a"/>
               </constraints>
@@ -3487,7 +3487,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Unrivalled Battle-Lust" hidden="false" id="074d-c2e9-e13d-cd89" sortIndex="106">
+            <selectionEntry type="upgrade" import="true" name="Unrivalled Battle-Lust" hidden="false" id="074d-c2e9-e13d-cd89" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -3502,7 +3502,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Massive Might" hidden="false" id="766a-c825-47fa-2502" sortIndex="107">
+            <selectionEntry type="upgrade" import="true" name="Massive Might" hidden="false" id="766a-c825-47fa-2502" sortIndex="8">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -3517,7 +3517,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Battlemaster" hidden="false" id="aeda-90a7-0c8f-1d3e" sortIndex="108">
+            <selectionEntry type="upgrade" import="true" name="Battlemaster" hidden="false" id="aeda-90a7-0c8f-1d3e" sortIndex="7">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -3532,7 +3532,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Might of Khorne" hidden="false" id="3492-e4db-7c82-672f" sortIndex="109">
+            <selectionEntry type="upgrade" import="true" name="Might of Khorne" hidden="false" id="3492-e4db-7c82-672f" sortIndex="9">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -3547,7 +3547,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Spell Destroyer" hidden="false" id="4528-f397-1f78-483b" sortIndex="110">
+            <selectionEntry type="upgrade" import="true" name="Spell Destroyer" hidden="false" id="4528-f397-1f78-483b" sortIndex="12">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6e3d-68b9-30b0-e015"/>
               </constraints>
@@ -3562,7 +3562,7 @@ Once the final position is established, place the unit so it can touch the mark
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Spell Breaker" hidden="false" id="59db-ff48-76ef-59d1" sortIndex="111">
+            <selectionEntry type="upgrade" import="true" name="Spell Breaker" hidden="false" id="59db-ff48-76ef-59d1" sortIndex="11">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -3577,7 +3577,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Immortal Fury" hidden="false" id="4330-79f1-8c6d-3c01" sortIndex="112">
+            <selectionEntry type="upgrade" import="true" name="Immortal Fury" hidden="false" id="4330-79f1-8c6d-3c01" sortIndex="10">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -3592,7 +3592,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Dark Insanity" hidden="false" id="09b6-979a-77fc-dbf5" sortIndex="113">
+            <selectionEntry type="upgrade" import="true" name="Dark Insanity" hidden="false" id="09b6-979a-77fc-dbf5" sortIndex="13">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -3614,7 +3614,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Slaughterborn" hidden="false" id="5028-1ff0-7718-2338" sortIndex="114">
+            <selectionEntry type="upgrade" import="true" name="Slaughterborn" hidden="false" id="5028-1ff0-7718-2338" sortIndex="14">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -3629,7 +3629,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Hellfire" hidden="false" id="5e1a-2f60-b261-fc31" sortIndex="115">
+            <selectionEntry type="upgrade" import="true" name="Hellfire" hidden="false" id="5e1a-2f60-b261-fc31" sortIndex="15">
               <costs>
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
@@ -3660,31 +3660,32 @@ Once the final position is established, place the unit so it can touch the mark
               </profiles>
             </selectionEntry>
           </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <entryLinks>
-            <entryLink import="true" name="Aura of Fury" hidden="false" id="70c4-07b0-0d01-05fa" type="selectionEntry" targetId="4db9-8f9b-a943-919f" sortIndex="116">
+            <entryLink import="true" name="Aura of Fury" hidden="false" id="70c4-07b0-0d01-05fa" type="selectionEntry" targetId="4db9-8f9b-a943-919f" sortIndex="16">
               <costs>
                 <cost name="pts" typeId="points" value="50"/>
               </costs>
             </entryLink>
           </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Gifts of Nurgle" id="39b8-1200-ea60-9455" hidden="false" collapsible="true" sortIndex="200" flatten="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="a0af-6dec-1ccb-5cc4" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f8f1-240f-cbd0-0d97"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="a0af-6dec-1ccb-5cc4"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Gifts of Nurgle" id="39b8-1200-ea60-9455" hidden="false" collapsible="true" sortIndex="25" flatten="true">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Trappings of Nurgle" hidden="false" id="68d2-c0f0-47ba-0c3a" sortIndex="203">
+            <selectionEntry type="upgrade" import="true" name="Trappings of Nurgle" hidden="false" id="68d2-c0f0-47ba-0c3a" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -3708,7 +3709,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </infoLink>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Gift of Febrile Frenzy" hidden="false" id="a06f-cb50-64d1-abed" sortIndex="204">
+            <selectionEntry type="upgrade" import="true" name="Gift of Febrile Frenzy" hidden="false" id="a06f-cb50-64d1-abed" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -3723,7 +3724,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Noxious Vapours" hidden="false" id="3893-a645-4c98-d78d" sortIndex="205">
+            <selectionEntry type="upgrade" import="true" name="Noxious Vapours" hidden="false" id="3893-a645-4c98-d78d" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -3733,12 +3734,12 @@ Once the final position is established, place the unit so it can touch the mark
               <profiles>
                 <profile name="Noxious Vapours" typeId="3e3c-de8a-94f0-179a" typeName="Daemonic Gift" hidden="false" id="0c10-e369-1ddb-0905" publicationId="314a-aacb-0877-4081" page="11">
                   <characteristics>
-                    <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">All enemy models in base contact with this Daemon is subject to the Always Strikes Last special rule in close combat. This has no effect on Daemons of Nurgle.</characteristic>
+                    <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">All enemy models in base contact with this Daemon are subject to the Always Strikes Last special rule in close combat. This has no effect on Daemons of Nurgle.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Nurgle&apos;s Rot" hidden="false" id="a351-8fee-0a58-04ec" sortIndex="206">
+            <selectionEntry type="upgrade" import="true" name="Nurgle&apos;s Rot" hidden="false" id="a351-8fee-0a58-04ec" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -3753,7 +3754,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Pestilent Breath" hidden="false" id="120a-42ce-3c2f-cd26" sortIndex="208">
+            <selectionEntry type="upgrade" import="true" name="Pestilent Breath" hidden="false" id="120a-42ce-3c2f-cd26" sortIndex="8">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c77a-b097-4057-81ae"/>
               </constraints>
@@ -3776,14 +3777,14 @@ Once the final position is established, place the unit so it can touch the mark
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Pestilent Mucus" hidden="false" id="4a6e-d9d5-20c0-143e" sortIndex="209">
+            <selectionEntry type="upgrade" import="true" name="Pestilent Mucus" hidden="false" id="4a6e-d9d5-20c0-143e" sortIndex="9">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9653-db1d-6135-0c26"/>
               </constraints>
               <profiles>
                 <profile name="Pestilent Mucus" typeId="3e3c-de8a-94f0-179a" typeName="Daemonic Gift" hidden="false" id="d755-4ead-a4b5-4c7f" publicationId="314a-aacb-0877-4081" page="11">
                   <characteristics>
-                    <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">When this Daemon suffers a wound, all enemy models in base contact must pass a Toughness test for each wound inflicted on the Daemon or themselves suffer a wound, with the Ignores Armour Saves special rule. This has no effect on Daemons of Nurgle.</characteristic>
+                    <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">When this Daemon suffers a wound, all enemy models in base contact must pass a Toughness test for each Wound inflicted on the Daemon or themselves suffer a Wound with the Ignores Armour Saves special rule. This has no effect on Daemons of Nurgle.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3791,7 +3792,7 @@ Once the final position is established, place the unit so it can touch the mark
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Extreme Contagion" hidden="false" id="e30f-968c-6365-3573" sortIndex="210">
+            <selectionEntry type="upgrade" import="true" name="Extreme Contagion" hidden="false" id="e30f-968c-6365-3573" sortIndex="10">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3673-356b-fdb4-7d63"/>
               </constraints>
@@ -3805,7 +3806,7 @@ Once the final position is established, place the unit so it can touch the mark
               <profiles>
                 <profile name="Extreme Contagion" typeId="3e3c-de8a-94f0-179a" typeName="Daemonic Gift" hidden="false" id="b91b-9028-335d-5b1d" publicationId="314a-aacb-0877-4081" page="11">
                   <characteristics>
-                    <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">All enemy units within 6&quot; of the Daemon at the start of any close combat phase suffer D6 Hits that Wound on a 5+ and Ignores Armour saves. This has no effect on Daemons of Nurgle.</characteristic>
+                    <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">All enemy units within 6&quot; of the Daemon at the start of any close combat phase suffer D6 Hits that Wound on a 5+ with the Ignores Armour Saves special rule. This has no effect on Daemons of Nurgle.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3813,7 +3814,7 @@ Once the final position is established, place the unit so it can touch the mark
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Bountiful Swarm" hidden="false" id="6d4e-d951-e1e5-a8b8" sortIndex="211">
+            <selectionEntry type="upgrade" import="true" name="The Bountiful Swarm" hidden="false" id="6d4e-d951-e1e5-a8b8" sortIndex="12">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -3828,7 +3829,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Stream of Bile" hidden="false" id="4882-ff08-f0de-3a20" sortIndex="212">
+            <selectionEntry type="upgrade" import="true" name="Stream of Bile" hidden="false" id="4882-ff08-f0de-3a20" sortIndex="11">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -3853,33 +3854,41 @@ Once the final position is established, place the unit so it can touch the mark
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Slime Trail" hidden="false" id="f853-98ef-d41b-b4a3" type="selectionEntry" targetId="d081-2a42-5322-de22" sortIndex="202">
+            <entryLink import="true" name="Slime Trail" hidden="false" id="f853-98ef-d41b-b4a3" type="selectionEntry" targetId="d081-2a42-5322-de22" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Nurgling Infestation" hidden="false" id="b469-0d83-8050-7336" type="selectionEntry" targetId="77b2-b295-9d96-cfbc" sortIndex="207">
+            <entryLink import="true" name="Nurgling Infestation" hidden="false" id="b469-0d83-8050-7336" type="selectionEntry" targetId="77b2-b295-9d96-cfbc" sortIndex="7">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="The Endless Gift" hidden="false" id="0848-21bf-db86-987e" type="selectionEntry" targetId="c5b2-17fa-c247-d2fa" sortIndex="201">
+            <entryLink import="true" name="The Endless Gift" hidden="false" id="0848-21bf-db86-987e" type="selectionEntry" targetId="c5b2-17fa-c247-d2fa" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
           </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Gifts of Slaanesh" id="4745-b1cc-9fc3-dab2" hidden="false" collapsible="true" sortIndex="300" flatten="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="0294-2841-3edd-96be" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="864d-9dab-8c74-6a4d"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="2703-6202-c21b-c2cb" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="0294-2841-3edd-96be"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Gifts of Slaanesh" id="4745-b1cc-9fc3-dab2" hidden="false" collapsible="true" sortIndex="26" flatten="true">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Enrapturing Gaze" hidden="false" id="863f-c8eb-4e3e-1e7a" sortIndex="302">
+            <selectionEntry type="upgrade" import="true" name="Enrapturing Gaze" hidden="false" id="863f-c8eb-4e3e-1e7a" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -3894,7 +3903,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Tormentor" hidden="false" id="4660-5a0c-fe85-6c23" sortIndex="303">
+            <selectionEntry type="upgrade" import="true" name="Tormentor" hidden="false" id="4660-5a0c-fe85-6c23" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -3909,7 +3918,7 @@ Once the final position is established, place the unit so it can touch the mark
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cab0-aa9c-946c-3deb"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Invigorated by Pain" hidden="false" id="61c9-5b41-2727-2c87" sortIndex="304">
+            <selectionEntry type="upgrade" import="true" name="Invigorated by Pain" hidden="false" id="61c9-5b41-2727-2c87" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -3931,7 +3940,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Unnatural Swiftness" hidden="false" id="ee31-3089-e5b8-8d89" sortIndex="307">
+            <selectionEntry type="upgrade" import="true" name="Unnatural Swiftness" hidden="false" id="ee31-3089-e5b8-8d89" sortIndex="7">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -3946,7 +3955,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Symphoniac" hidden="false" id="8388-de6b-749a-65d9" sortIndex="308">
+            <selectionEntry type="upgrade" import="true" name="Symphoniac" hidden="false" id="8388-de6b-749a-65d9" sortIndex="8">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aeee-e8f7-617d-0e89"/>
               </constraints>
@@ -3961,7 +3970,7 @@ Once the final position is established, place the unit so it can touch the mark
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sensual Barrage" hidden="false" id="6131-3425-9615-3e31" sortIndex="310">
+            <selectionEntry type="upgrade" import="true" name="Sensual Barrage" hidden="false" id="6131-3425-9615-3e31" sortIndex="10">
               <costs>
                 <cost name="pts" typeId="points" value="50"/>
               </costs>
@@ -3985,43 +3994,51 @@ Once the final position is established, place the unit so it can touch the mark
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Allure of Slaanesh" hidden="false" id="2095-cdcd-883a-4b2c" type="selectionEntry" targetId="cb43-4172-9072-d23a" sortIndex="301">
+            <entryLink import="true" name="Allure of Slaanesh" hidden="false" id="2095-cdcd-883a-4b2c" type="selectionEntry" targetId="cb43-4172-9072-d23a" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Spirit Swallower" hidden="false" id="13d9-1921-6324-76ae" type="selectionEntry" targetId="2017-83c6-f080-3e05" sortIndex="311">
+            <entryLink import="true" name="Spirit Swallower" hidden="false" id="13d9-1921-6324-76ae" type="selectionEntry" targetId="2017-83c6-f080-3e05" sortIndex="11">
               <costs>
                 <cost name="pts" typeId="points" value="50"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Siren Song" hidden="false" id="9fbf-8918-85df-251d" type="selectionEntry" targetId="1d36-d268-a360-6cb1" sortIndex="305">
+            <entryLink import="true" name="Siren Song" hidden="false" id="9fbf-8918-85df-251d" type="selectionEntry" targetId="1d36-d268-a360-6cb1" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Soporific Musk" hidden="false" id="e7c5-39ff-4fc2-4f9c" type="selectionEntry" targetId="6044-d3c6-1078-ffbc" sortIndex="306">
+            <entryLink import="true" name="Soporific Musk" hidden="false" id="e7c5-39ff-4fc2-4f9c" type="selectionEntry" targetId="6044-d3c6-1078-ffbc" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Temptator" hidden="false" id="66e2-542e-3f3d-59c0" type="selectionEntry" targetId="49c1-90b7-1ebe-3683" sortIndex="309">
+            <entryLink import="true" name="Temptator" hidden="false" id="66e2-542e-3f3d-59c0" type="selectionEntry" targetId="49c1-90b7-1ebe-3683" sortIndex="9">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </entryLink>
           </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Gifts of Tzeentch" id="e52d-a4dd-daa9-11c6" hidden="false" collapsible="true" sortIndex="400" flatten="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="7baa-a42c-648a-a5e4" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="2545-78be-c761-95a9"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="2703-6202-c21b-c2cb" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="7baa-a42c-648a-a5e4"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Gifts of Tzeentch" id="e52d-a4dd-daa9-11c6" hidden="false" collapsible="true" sortIndex="27" flatten="true">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Mark of the Conjurer" hidden="false" id="b1a0-cfe2-77f9-758f" sortIndex="402">
+            <selectionEntry type="upgrade" import="true" name="Mark of the Conjurer" hidden="false" id="b1a0-cfe2-77f9-758f" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
@@ -4036,7 +4053,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Cursed Ichor" hidden="false" id="d801-28bf-049d-4984" sortIndex="403">
+            <selectionEntry type="upgrade" import="true" name="Cursed Ichor" hidden="false" id="d801-28bf-049d-4984" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -4046,12 +4063,12 @@ Once the final position is established, place the unit so it can touch the mark
               <profiles>
                 <profile name="Cursed Ichor" typeId="3e3c-de8a-94f0-179a" typeName="Daemonic Gift" hidden="false" id="f645-aeec-53c3-9d6b" publicationId="314a-aacb-0877-4081" page="13">
                   <characteristics>
-                    <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">Roll a D6 every time the Daemon suffers an unsaved Wound; on a 5+, the model that struck the blow suffers a Wound which Ignores Armour saves themselves.</characteristic>
+                    <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">Roll a D6 every time the Daemon suffers an unsaved Wound; on a 5+, the model that struck the blow suffers a Wound which Ignores Armour Saves.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Flames of Tzeentch" hidden="false" id="317a-7e93-271a-7b81" sortIndex="404">
+            <selectionEntry type="upgrade" import="true" name="Flames of Tzeentch" hidden="false" id="317a-7e93-271a-7b81" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -4062,7 +4079,7 @@ Once the final position is established, place the unit so it can touch the mark
                 <infoLink name="Flames of Tzeentch" id="5c80-013c-e094-e444" hidden="false" type="profile" targetId="8ea4-4d43-20bc-458f"/>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Iridescent Corona" hidden="false" id="2572-88ea-2cfd-a763" sortIndex="405">
+            <selectionEntry type="upgrade" import="true" name="Iridescent Corona" hidden="false" id="2572-88ea-2cfd-a763" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -4077,7 +4094,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Dark Magister" hidden="false" id="148c-b508-5744-fa0f" sortIndex="407">
+            <selectionEntry type="upgrade" import="true" name="Dark Magister" hidden="false" id="148c-b508-5744-fa0f" sortIndex="7">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -4092,7 +4109,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Wellspring of Arcane Might" hidden="false" id="b925-7daf-1805-0892" sortIndex="408">
+            <selectionEntry type="upgrade" import="true" name="Wellspring of Arcane Might" hidden="false" id="b925-7daf-1805-0892" sortIndex="8">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f4c5-85f4-bb1a-9f5d"/>
               </constraints>
@@ -4107,7 +4124,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Power Vortex" hidden="false" id="88a2-f12f-95ac-5ab9" sortIndex="410">
+            <selectionEntry type="upgrade" import="true" name="Power Vortex" hidden="false" id="88a2-f12f-95ac-5ab9" sortIndex="10">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -4122,7 +4139,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Lord of Flux" hidden="false" id="7da2-6340-98c2-0371" sortIndex="411">
+            <selectionEntry type="upgrade" import="true" name="Lord of Flux" hidden="false" id="7da2-6340-98c2-0371" sortIndex="11">
               <costs>
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
@@ -4132,12 +4149,12 @@ Once the final position is established, place the unit so it can touch the mark
               <profiles>
                 <profile name="Lord of Flux" typeId="3e3c-de8a-94f0-179a" typeName="Daemonic Gift" hidden="false" id="be7f-e054-9a74-e2c3" publicationId="314a-aacb-0877-4081" page="13">
                   <characteristics>
-                    <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">At the beginning of each round of close combat, all enemy models in base contact with the Daemon must roll a D6, on a 4+ they suffer 1 Wound which Ignores Armour saves.</characteristic>
+                    <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">At the beginning of each round of close combat, all enemy models in base contact with the Daemon must roll a D6, on a 4+ they suffer 1 Wound which Ignores Armour Saves.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Aspect of Tzeentch" hidden="false" id="6565-f461-9ed0-a8a8" sortIndex="412">
+            <selectionEntry type="upgrade" import="true" name="Aspect of Tzeentch" hidden="false" id="6565-f461-9ed0-a8a8" sortIndex="12">
               <costs>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
@@ -4152,7 +4169,7 @@ Once the final position is established, place the unit so it can touch the mark
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Tzeentch&apos;s Will" hidden="false" id="67c3-badb-efae-8b3a" sortIndex="414">
+            <selectionEntry type="upgrade" import="true" name="Tzeentch&apos;s Will" hidden="false" id="67c3-badb-efae-8b3a" sortIndex="14">
               <costs>
                 <cost name="pts" typeId="points" value="60"/>
               </costs>
@@ -4169,27 +4186,42 @@ Once the final position is established, place the unit so it can touch the mark
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Twin Heads" hidden="false" id="8bc3-ac43-9633-cdba" type="selectionEntry" targetId="cb6f-46ae-53d8-0e1b" sortIndex="413">
+            <entryLink import="true" name="Twin Heads" hidden="false" id="8bc3-ac43-9633-cdba" type="selectionEntry" targetId="cb6f-46ae-53d8-0e1b" sortIndex="13">
               <costs>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Barrage of Knowledge" hidden="false" id="1513-5727-12ac-c606" type="selectionEntry" targetId="2246-f99e-7c89-a438" sortIndex="406">
+            <entryLink import="true" name="Barrage of Knowledge" hidden="false" id="1513-5727-12ac-c606" type="selectionEntry" targetId="2246-f99e-7c89-a438" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Master of Sorcery" hidden="false" id="dc01-9803-e0f1-ff20" type="selectionEntry" targetId="4428-57fd-8beb-5733" sortIndex="409">
+            <entryLink import="true" name="Master of Sorcery" hidden="false" id="dc01-9803-e0f1-ff20" type="selectionEntry" targetId="4428-57fd-8beb-5733" sortIndex="9">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="All-Seeing Eye" hidden="false" id="7832-15c0-c040-cbba" type="selectionEntry" targetId="3709-20df-82f5-4f24" sortIndex="401">
+            <entryLink import="true" name="All-Seeing Eye" hidden="false" id="7832-15c0-c040-cbba" type="selectionEntry" targetId="3709-20df-82f5-4f24" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="e1ab-f6d2-70e0-77a7" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d31d-b31a-610d-d518"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="e1ab-f6d2-70e0-77a7"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
@@ -4403,12 +4435,12 @@ Once the final position is established, place the unit so it can touch the mark
           <profiles>
             <profile name="Radiance of Dark Glory" typeId="3e3c-de8a-94f0-179a" typeName="Daemonic Gift" hidden="false" id="266c-8fee-495f-b3fe" publicationId="314a-aacb-0877-4081" page="9">
               <characteristics>
-                <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">The Daemon and all friendly units within 12&quot; suffers one less wound than normal when taking Daemonic Instability tests.</characteristic>
+                <characteristic name="Effect" typeId="32f8-c3d9-bf18-d3c1">The Daemon and all friendly units within 12&quot; suffer one less wound than normal when taking Daemonic Instability tests.</characteristic>
               </characteristics>
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Daemonic Arrogance" hidden="false" id="6947-6493-badd-74ce" sortIndex="14">
+        <selectionEntry type="upgrade" import="true" name="Daemonic Arrogance" hidden="false" id="6947-6493-badd-74ce" sortIndex="15">
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
@@ -4423,7 +4455,7 @@ Once the final position is established, place the unit so it can touch the mark
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Chaos Disruption" hidden="false" id="69f4-f166-1c18-83a6" sortIndex="15">
+        <selectionEntry type="upgrade" import="true" name="Chaos Disruption" hidden="false" id="69f4-f166-1c18-83a6" sortIndex="14">
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
@@ -4461,7 +4493,7 @@ Once the final position is established, place the unit so it can touch the mark
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Souleater" hidden="false" id="ef50-bda4-0770-6dba" sortIndex="17">
+        <selectionEntry type="upgrade" import="true" name="Souleater" hidden="false" id="ef50-bda4-0770-6dba" sortIndex="18">
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
@@ -4476,7 +4508,7 @@ Once the final position is established, place the unit so it can touch the mark
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Soul Hunger" hidden="false" id="ac8b-7eb4-c245-5234" sortIndex="18">
+        <selectionEntry type="upgrade" import="true" name="Soul Hunger" hidden="false" id="ac8b-7eb4-c245-5234" sortIndex="17">
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
@@ -4609,10 +4641,10 @@ Once the final position is established, place the unit so it can touch the mark
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Common Magic Weapons" hidden="false" id="5c84-c891-5c31-f540" type="selectionEntryGroup" targetId="6820-41cc-94f6-87c1" sortIndex="99" flatten="true"/>
+        <entryLink import="true" name="Common Magic Weapons" hidden="false" id="5c84-c891-5c31-f540" type="selectionEntryGroup" targetId="6820-41cc-94f6-87c1" sortIndex="7" flatten="true"/>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Magic Weapons of Khorne" id="4ae9-4305-23fd-b53f" hidden="false" sortIndex="10" collapsible="true" flatten="true">
+        <selectionEntryGroup name="Magic Weapons of Khorne" id="4ae9-4305-23fd-b53f" hidden="false" sortIndex="3" collapsible="true" flatten="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Deathdealer" hidden="false" id="ca31-7e76-1551-4517" sortIndex="1">
               <costs>
@@ -4708,6 +4740,18 @@ Once the final position is established, place the unit so it can touch the mark
                   </characteristics>
                 </profile>
               </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="59f2-33f9-991c-c989" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="629d-3c51-25af-23aa" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Blade of Blood" hidden="false" id="3efb-84de-afd7-ecc3" sortIndex="6">
               <costs>
@@ -4767,22 +4811,23 @@ Once the final position is established, place the unit so it can touch the mark
               </profiles>
             </selectionEntry>
           </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="5a16-2605-9408-6d55" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d1ac-b06e-77f9-5a51"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
                 <condition type="equalTo" value="0" field="selections" scope="parent" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="5a16-2605-9408-6d55"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Weapons of Nurgle" id="6556-d1db-2e33-239a" hidden="false" sortIndex="20" flatten="true" collapsible="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup name="Magic Weapons of Nurgle" id="6556-d1db-2e33-239a" hidden="false" sortIndex="4" flatten="true" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Bileblade" hidden="false" id="a4a5-1357-6352-b7e5" sortIndex="1">
               <costs>
@@ -4887,15 +4932,23 @@ Once the final position is established, place the unit so it can touch the mark
               </profiles>
             </selectionEntry>
           </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Weapons of Slaanesh" id="042f-ebcf-824b-b77b" hidden="false" sortIndex="30" flatten="true" collapsible="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="0bdf-fe56-e2c5-e2bc" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3777-898b-7f8e-9ca2"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="2703-6202-c21b-c2cb" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="0bdf-fe56-e2c5-e2bc"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Magic Weapons of Slaanesh" id="042f-ebcf-824b-b77b" hidden="false" sortIndex="5" flatten="true" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Torment Blade" hidden="false" id="56a4-a596-cac6-18f5" sortIndex="1">
               <costs>
@@ -4955,15 +5008,23 @@ Once the final position is established, place the unit so it can touch the mark
               </profiles>
             </selectionEntry>
           </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Weapons of Tzeentch" id="c2be-9ccd-5aa1-574a" hidden="false" sortIndex="40" flatten="true" collapsible="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="c4df-6809-a012-0ac7" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="51fe-7d85-bce5-e113"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="2703-6202-c21b-c2cb" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="c4df-6809-a012-0ac7"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Magic Weapons of Tzeentch" id="c2be-9ccd-5aa1-574a" hidden="false" sortIndex="6" flatten="true" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Blade of Fate" hidden="false" id="bfee-8a5f-7ab0-a46b" sortIndex="1">
               <costs>
@@ -5055,12 +5116,27 @@ Once the final position is established, place the unit so it can touch the mark
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                     <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                     <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Any model that suffers one or more unsaved Wounds from the Staff of Change must immediately pass a Toughness test or suffer an additional D6 Wounds with the Ignores Armour Saves special rule. If a multiple-Wound model loses its last Wound to the Staff of Change, all models within D6&quot; immediately suffer a single Strength 5 hit.</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Any model that suffers one or more unsaved Wounds from the Staff of Change must immediately pass a Toughness test or suffer an additional D6 Wounds with the Ignores Armour Saves special rule. If a multiple-wound model loses its last Wound to the Staff of Change, all enemy models within D6&quot; immediately suffer a single Strength 5 hit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="0919-8934-0cbf-70b0" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="61ab-16cd-f3e8-c266"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="0919-8934-0cbf-70b0"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -5152,13 +5228,21 @@ Once the final position is established, place the unit so it can touch the mark
               </categoryLinks>
             </selectionEntry>
           </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="4b0c-bba4-3cec-9f35" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="53e2-55a4-524d-79ec"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
                 <condition type="equalTo" value="0" field="selections" scope="parent" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="4b0c-bba4-3cec-9f35"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -5213,22 +5297,23 @@ Once the final position is established, place the unit so it can touch the mark
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="f7da-296e-b4cc-7e33" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="cbfd-65a8-9b1f-5c6a"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
                 <condition type="equalTo" value="0" field="selections" scope="parent" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="f7da-296e-b4cc-7e33"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans of Tzeentch" id="1aaa-8e43-e990-bfb8" hidden="false" sortIndex="40" flatten="true" collapsible="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Daemonic Robes" hidden="false" id="ec6c-c8ea-23a0-1122" sortIndex="1">
               <costs>
@@ -5247,6 +5332,21 @@ Once the final position is established, place the unit so it can touch the mark
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="d941-ff2e-a6aa-242a" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="93b3-01ed-d751-1344"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="d941-ff2e-a6aa-242a"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -5272,7 +5372,7 @@ Once the final position is established, place the unit so it can touch the mark
         </modifier>
       </modifiers>
       <entryLinks>
-        <entryLink import="true" name="Common Arcane Items" hidden="false" id="ca39-502f-ebea-2a6e" type="selectionEntryGroup" targetId="6cd2-3f4b-da2d-1ee9" sortIndex="99" flatten="true"/>
+        <entryLink import="true" name="Common Arcane Items" hidden="false" id="ca39-502f-ebea-2a6e" type="selectionEntryGroup" targetId="6cd2-3f4b-da2d-1ee9" sortIndex="4" flatten="true"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Abhorrent Lodestone" hidden="false" id="1c46-681f-d36f-b0aa" sortIndex="1">
@@ -5293,7 +5393,7 @@ Once the final position is established, place the unit so it can touch the mark
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Arcane Items of Nurgle" id="a55a-0486-5dfe-3246" hidden="false" flatten="true" collapsible="true" sortIndex="20">
+        <selectionEntryGroup name="Arcane Items of Nurgle" id="a55a-0486-5dfe-3246" hidden="false" flatten="true" collapsible="true" sortIndex="2">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Tome of a Thousand Poxes" hidden="false" id="8fc8-9595-b296-c06f" sortIndex="1">
               <costs>
@@ -5356,26 +5456,27 @@ Once the final position is established, place the unit so it can touch the mark
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="63c0-e1a0-f88d-0b6b" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="5765-a740-7955-8c69"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
                 <condition type="equalTo" value="0" field="selections" scope="parent" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="63c0-e1a0-f88d-0b6b"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Arcane Items of Tzeentch" id="613d-dd02-d41b-7ee9" hidden="false" sortIndex="40" flatten="true" collapsible="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup name="Arcane Items of Tzeentch" id="613d-dd02-d41b-7ee9" hidden="false" sortIndex="3" flatten="true" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="The Chromatic Tome" hidden="false" id="2f4b-c6ea-fc3b-d6e7" sortIndex="1">
               <costs>
-                <cost name="pts" typeId="points" value="15"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f52c-8728-ed86-e95c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -5422,6 +5523,21 @@ Once the final position is established, place the unit so it can touch the mark
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="1ce9-1431-c826-7a04" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="5985-32f8-73ad-3311"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="1ce9-1431-c826-7a04"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -5455,7 +5571,7 @@ Once the final position is established, place the unit so it can touch the mark
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb1e-cd86-2f02-2be4"/>
       </constraints>
       <entryLinks>
-        <entryLink import="true" name="Common Enchanted Items" hidden="false" id="460e-a1f0-d62a-f015" type="selectionEntryGroup" targetId="5857-a7aa-f954-a027" sortIndex="99" flatten="true"/>
+        <entryLink import="true" name="Common Enchanted Items" hidden="false" id="460e-a1f0-d62a-f015" type="selectionEntryGroup" targetId="5857-a7aa-f954-a027" sortIndex="8" flatten="true"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="The Portalglyph" hidden="false" id="8f61-00ce-058a-b1d3" sortIndex="1">
@@ -5469,7 +5585,7 @@ Once the final position is established, place the unit so it can touch the mark
           <profiles>
             <profile name="The Portalglyph" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="07d8-f9e0-a2f7-1dfd" publicationId="314a-aacb-0877-4081" page="14">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">All friendly units attempting to deploy using the Summoned from Beyond special rule within 12&quot; bearer of this item may re-roll the dice to determine if they arrive this turn.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">All friendly units attempting to deploy using the Summoned from Beyond special rule within 12&quot; of the bearer of this item may re-roll the dice to determine if they arrive this turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5495,7 +5611,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Enchanted Items of Khorne" id="9a36-a3c6-7e5a-700b" hidden="false" sortIndex="10" collapsible="true" flatten="true">
+        <selectionEntryGroup name="Enchanted Items of Khorne" id="9a36-a3c6-7e5a-700b" hidden="false" sortIndex="4" collapsible="true" flatten="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="The Crimson Crown" hidden="false" id="d38b-6009-496d-2d26" sortIndex="1">
               <costs>
@@ -5557,24 +5673,28 @@ Cursed terrain features placed in this way must be positioned touching an exist
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="ce01-e86f-6848-33ca" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f2d6-1817-38e8-3095"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
                 <condition type="equalTo" value="0" field="selections" scope="parent" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="ce01-e86f-6848-33ca"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Enchanted Items of Nurgle" id="7da5-8f9a-6555-afc7" hidden="false" sortIndex="20" flatten="true" collapsible="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup name="Enchanted Items of Nurgle" id="7da5-8f9a-6555-afc7" hidden="false" sortIndex="5" flatten="true" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="The Witherstave" hidden="false" id="c766-2897-6949-84df" sortIndex="1">
               <costs>
@@ -5609,8 +5729,23 @@ Cursed terrain features placed in this way must be positioned touching an exist
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="a64c-c226-ee68-1595" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7fb8-427a-22ce-2d65"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="a64c-c226-ee68-1595"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Enchanted Items of Slaanesh" id="221a-43e2-9a26-f54e" hidden="false" sortIndex="30" collapsible="true" flatten="true">
+        <selectionEntryGroup name="Enchanted Items of Slaanesh" id="221a-43e2-9a26-f54e" hidden="false" sortIndex="6" collapsible="true" flatten="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Girdle of the Realm-Racer" hidden="false" id="dc0f-6d26-04b8-4420" sortIndex="1">
               <costs>
@@ -5708,22 +5843,23 @@ Cursed terrain features placed in this way must be positioned touching an exist
               </profiles>
             </selectionEntry>
           </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="72d0-5d53-441a-b078" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="12a8-b392-ca36-d663"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
                 <condition type="equalTo" value="0" field="selections" scope="parent" childId="2703-6202-c21b-c2cb" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="72d0-5d53-441a-b078"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Enchanted Items of Tzeentch" id="771b-9364-f6b5-424d" hidden="false" sortIndex="40" flatten="true" collapsible="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup name="Enchanted Items of Tzeentch" id="771b-9364-f6b5-424d" hidden="false" sortIndex="7" flatten="true" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="The Eternal Shroud" hidden="false" id="03c7-ac8a-9096-b4ce" sortIndex="1">
               <costs>
@@ -5758,6 +5894,21 @@ Cursed terrain features placed in this way must be positioned touching an exist
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="3384-2b23-ceb4-8f4f" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="817b-3982-6b63-f92f"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="3384-2b23-ceb4-8f4f"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -5813,7 +5964,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e847-9a06-4f40-f5c5"/>
       </constraints>
       <entryLinks>
-        <entryLink import="true" name="Common Magic Standards" hidden="false" id="bc3f-24bd-e9db-3eaa" type="selectionEntryGroup" targetId="2613-24d7-a26e-eb37" sortIndex="99" flatten="true" collapsible="true"/>
+        <entryLink import="true" name="Common Magic Standards" hidden="false" id="bc3f-24bd-e9db-3eaa" type="selectionEntryGroup" targetId="2613-24d7-a26e-eb37" sortIndex="11" flatten="true" collapsible="true"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Banner of Infernal Fire" hidden="false" id="5357-fc81-721e-c492" sortIndex="1">
@@ -5836,7 +5987,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="36ff-b138-39ba-13bc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Great Icon of Despair" hidden="false" id="029e-c26b-5fac-80ac" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Great Icon of Despair" hidden="false" id="029e-c26b-5fac-80ac" sortIndex="3">
           <costs>
             <cost name="pts" typeId="points" value="40"/>
           </costs>
@@ -5852,7 +6003,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Banner of Unholy Victory" hidden="false" id="ebce-f727-6bf5-3a86" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Banner of Unholy Victory" hidden="false" id="ebce-f727-6bf5-3a86" sortIndex="2">
           <costs>
             <cost name="pts" typeId="points" value="40"/>
           </costs>
@@ -5902,7 +6053,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Magic Standards of Khorne" id="8c42-ab5d-4d1c-109f" hidden="false" sortIndex="10" collapsible="true" flatten="true">
+        <selectionEntryGroup name="Magic Standards of Khorne" id="8c42-ab5d-4d1c-109f" hidden="false" sortIndex="7" collapsible="true" flatten="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Skull Totem" hidden="false" id="3e3d-3903-b333-fc26" sortIndex="1">
               <constraints>
@@ -5953,22 +6104,23 @@ Cursed terrain features placed in this way must be positioned touching an exist
               </profiles>
             </selectionEntry>
           </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="fa92-8456-6a7b-6091" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="6686-cd28-5c8a-ed0d"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="fa92-8456-6a7b-6091"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Standards of Nurgle" id="50d7-82de-c1e0-8d05" hidden="false" sortIndex="20" flatten="true" collapsible="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntryGroup name="Magic Standards of Nurgle" id="50d7-82de-c1e0-8d05" hidden="false" sortIndex="8" flatten="true" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Icon of Eternal Virulence" hidden="false" id="ece2-8152-95e5-c01f" sortIndex="1">
               <costs>
@@ -6027,15 +6179,23 @@ Cursed terrain features placed in this way must be positioned touching an exist
               </profiles>
             </selectionEntry>
           </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Standards of Slaanesh" id="cef7-e978-c9ab-cf48" hidden="false" sortIndex="30" flatten="true" collapsible="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="4039-6e23-46be-4c7c" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e383-0084-852b-1b2c"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="2703-6202-c21b-c2cb" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="4039-6e23-46be-4c7c"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Magic Standards of Slaanesh" id="cef7-e978-c9ab-cf48" hidden="false" sortIndex="9" flatten="true" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Banner of Ecstasy" hidden="false" id="472b-cd21-68e2-7bf3" sortIndex="1">
               <costs>
@@ -6102,15 +6262,23 @@ Cursed terrain features placed in this way must be positioned touching an exist
               </profiles>
             </selectionEntry>
           </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Standards of Tzeentch" id="946b-9ca8-0bbe-a2fc" hidden="false" sortIndex="40" collapsible="true" flatten="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="b39d-c177-254b-7639" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="01ab-547e-7c90-b91f"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="2703-6202-c21b-c2cb" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+              <modifiers>
+                <modifier type="set" value="0" field="b39d-c177-254b-7639"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Magic Standards of Tzeentch" id="946b-9ca8-0bbe-a2fc" hidden="false" sortIndex="10" collapsible="true" flatten="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Standard of Transmogrification" hidden="false" id="dd47-57bc-64ca-bca9" sortIndex="1">
               <costs>
@@ -6181,6 +6349,21 @@ Cursed terrain features placed in this way must be positioned touching an exist
               </profiles>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="max" value="-1" field="selections" scope="parent" shared="true" id="8bd0-b593-80e6-b9af" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="12c8-e2b4-23bc-6a7f"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="8bd0-b593-80e6-b9af"/>
+                <modifier type="set" value="true" field="hidden" affects="recursive"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
@@ -6189,34 +6372,6 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7616-0cc0-c6bd-4499" automatic="true"/>
       </constraints>
       <comment>min 0</comment>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="60. Wizard Level" id="f99e-88e6-b55e-d521" hidden="false">
-      <comment>1, 2, 3 &amp; 4, no minimum level</comment>
-      <entryLinks>
-        <entryLink import="true" name="Wizard Level 1" hidden="false" id="64c9-6e7a-940c-7683" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
-          <costs>
-            <cost name="pts" typeId="points" value="35"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Wizard Level 2" hidden="false" id="e3f1-a0a7-7d6c-823a" type="selectionEntry" targetId="801a-bc0a-a767-61db">
-          <costs>
-            <cost name="pts" typeId="points" value="70"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Wizard Level 3" hidden="false" id="0b98-f952-9e35-79cf" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
-          <costs>
-            <cost name="pts" typeId="points" value="105"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Wizard Level 4" hidden="false" id="c1e6-1802-a46e-8db5" type="selectionEntry" targetId="5460-3929-58ef-71ba">
-          <costs>
-            <cost name="pts" typeId="points" value="140"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="33c2-bb3a-a609-31e1" automatic="false"/>
-      </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="10. Character Options " id="f355-7a26-c779-da20" hidden="false">
       <comment>Alligned General, min 0</comment>
@@ -6324,6 +6479,360 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </conditions>
         </modifier>
       </modifiers>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="61. Lore" id="8a57-1b73-da0e-92c0" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="Lore of Nurgle" hidden="false" id="f397-fd62-70a9-02b8" type="selectionEntry" targetId="8b39-ac53-29c2-d695" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc27-a758-9cb4-eb19" automatic="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="fc27-a758-9cb4-eb19"/>
+                <modifier type="set" value="0" field="d7fd-5a0a-5ccc-7090"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="f99e-88e6-b55e-d521" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="d0a0-b36d-0420-dd76" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+        <entryLink import="true" name="Lore of Slaanesh" hidden="false" id="10ec-b41f-190d-cc9b" type="selectionEntry" targetId="6635-f101-5f8b-6991" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a25c-770d-d7eb-15e8" automatic="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="dac3-aefc-0625-9421"/>
+                <modifier type="set" value="0" field="a25c-770d-d7eb-15e8"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="2703-6202-c21b-c2cb" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="f99e-88e6-b55e-d521" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="d0a0-b36d-0420-dd76" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+        <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="716a-5336-d51e-7214" type="selectionEntry" targetId="bdb0-6b92-8131-dc78" sortIndex="3">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="f99e-88e6-b55e-d521" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="d0a0-b36d-0420-dd76" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier type="set" value="0" field="f046-2cc1-bdec-e176"/>
+                <modifier type="set" value="0" field="ce7d-71d1-72cb-c701"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1dc1-c828-710f-4c13" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63cc-6e93-d5f8-d075" automatic="true"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="1dc1-c828-710f-4c13"/>
+            <modifier type="set" value="0" field="63cc-6e93-d5f8-d075"/>
+          </modifiers>
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Undivided Lores" id="9180-d007-1047-23a4" hidden="false" flatten="true" sortIndex="4">
+          <entryLinks>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="56ec-0866-2474-2aaf" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67" sortIndex="9">
+              <modifiers>
+                <modifier type="set" value="0" field="9021-6a37-aa7b-8815">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aab2-86a3-c9d8-7a6c" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="6047-6c85-3051-d3fd"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lore of Beasts" hidden="false" id="f578-0827-d9bb-1a09" type="selectionEntry" targetId="b436-b410-dd41-304f" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="24da-f4b3-1477-8151"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="cf51-c3e7-8561-ffe5">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aab2-86a3-c9d8-7a6c" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="0fae-a505-24da-3433" shared="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="7219-6c7b-93cf-cbfd" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="0" field="c5ef-d69a-b34d-e8bf">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aab2-86a3-c9d8-7a6c" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="78b8-8c85-d994-e8c3"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lore of Fire" hidden="false" id="6038-9969-8050-2eaf" type="selectionEntry" targetId="4d24-c803-7a05-0894" sortIndex="4">
+              <modifiers>
+                <modifier type="set" value="0" field="1c55-bc61-cc88-d303">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aab2-86a3-c9d8-7a6c" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d60c-97ba-66a7-0a6d"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lore of Heavens" hidden="false" id="8061-0ef8-b994-4a36" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" sortIndex="5">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="058c-d7cc-2171-c859"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="5c00-7f3a-b515-7521">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aab2-86a3-c9d8-7a6c" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="0fae-a505-24da-3433" shared="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Lore of Metal" hidden="false" id="9a7e-1a99-b0ff-9468" type="selectionEntry" targetId="527f-89f1-1b92-a01d" sortIndex="8">
+              <modifiers>
+                <modifier type="set" value="0" field="6cdd-e249-97f2-2c76">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aab2-86a3-c9d8-7a6c" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="47d9-6fb9-458f-7144"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lore of Chaos" hidden="false" id="53e3-1af7-35e7-b35a" type="selectionEntry" targetId="8144-4176-bad4-531d" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="0" field="9b00-dbe2-4ee8-21cf">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aab2-86a3-c9d8-7a6c" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="5a17-2c29-26c0-9441"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lore of Light" hidden="false" id="5b57-07b7-0831-bc86" type="selectionEntry" targetId="c543-a893-3879-cf32" sortIndex="7">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="17ea-bd7a-0e92-7476"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="0" field="d548-2594-8049-83ce"/>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </entryLink>
+            <entryLink import="true" name="Lore of Life" hidden="false" id="4a93-3ab1-93fd-99d2" type="selectionEntry" targetId="968d-55ad-604c-f251" sortIndex="6">
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="0" field="1cdb-4c36-5076-244c"/>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d15a-0bfd-3ee9-2c0f"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="96ee-69bb-2ba8-84e8" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef46-248f-bdaf-3fdd" automatic="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="ef46-248f-bdaf-3fdd"/>
+                <modifier type="set" value="0" field="96ee-69bb-2ba8-84e8"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aab2-86a3-c9d8-7a6c" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier type="set" value="0" field="96ee-69bb-2ba8-84e8">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <comment>Daemon Prince &amp; Exalted Daemon</comment>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <profileTypes>
@@ -6739,23 +7248,9 @@ Cursed terrain features placed in this way must be positioned touching an exist
         </infoLink>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="60. Wizard Level" hidden="false" id="cebc-82c0-0251-c6a8" type="selectionEntryGroup" targetId="f99e-88e6-b55e-d521">
-          <modifiers>
-            <modifier type="set" value="0" field="33c2-bb3a-a609-31e1">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink import="true" name="15. Daemonic Alignement" hidden="false" id="9f22-96e8-8aa6-fb86" type="selectionEntryGroup" targetId="aab2-86a3-c9d8-7a6c">
           <entryLinks>
-            <entryLink import="true" name="Daemon of Khorne" hidden="false" id="5650-a50f-41f3-303f" type="selectionEntry" targetId="e567-8ed8-31d7-1247" sortIndex="2">
+            <entryLink import="true" name="Daemon of Khorne" hidden="false" id="5650-a50f-41f3-303f" type="selectionEntry" targetId="e567-8ed8-31d7-1247" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -6767,7 +7262,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Daemon of Nurgle" hidden="false" id="a477-a14a-dc57-e3de" type="selectionEntry" targetId="50ca-5cc6-77f5-7a6f" sortIndex="3">
+            <entryLink import="true" name="Daemon of Nurgle" hidden="false" id="a477-a14a-dc57-e3de" type="selectionEntry" targetId="50ca-5cc6-77f5-7a6f" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -6779,9 +7274,9 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Daemon of Slaanesh" hidden="false" id="72d1-1e9d-5a2d-0e98" type="selectionEntry" targetId="2703-6202-c21b-c2cb" sortIndex="1">
+            <entryLink import="true" name="Daemon of Slaanesh" hidden="false" id="72d1-1e9d-5a2d-0e98" type="selectionEntry" targetId="2703-6202-c21b-c2cb" sortIndex="3">
               <costs>
-                <cost name="pts" typeId="points" value="5"/>
+                <cost name="pts" typeId="points" value="15"/>
               </costs>
               <modifiers>
                 <modifier type="set" value="1" field="defaultAmount">
@@ -6834,6 +7329,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="61. Lore" hidden="false" id="4544-2b30-3032-cbe9" type="selectionEntryGroup" targetId="8a57-1b73-da0e-92c0"/>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="81. Upgrades" id="34dd-854b-7af0-8217" hidden="false">
@@ -6851,149 +7347,85 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="61. Lore" id="920a-66d3-e520-e641" hidden="false">
+        <selectionEntryGroup name="60. Wizard Level" id="f99e-88e6-b55e-d521" hidden="false">
+          <comment>1, 2, 3 &amp; 4, no minimum level</comment>
           <entryLinks>
-            <entryLink import="true" name="Lore of Chaos" hidden="false" id="683d-f65b-492d-fbad" type="selectionEntry" targetId="8144-4176-bad4-531d" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9f22-96e8-8aa6-fb86" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="3dcc-2895-9277-b037" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="2">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9f22-96e8-8aa6-fb86" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Fire" hidden="false" id="1642-c03e-89c9-25c7" type="selectionEntry" targetId="4d24-c803-7a05-0894" sortIndex="3">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9f22-96e8-8aa6-fb86" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="f485-08b0-ff42-e0d1" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67" sortIndex="6">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9f22-96e8-8aa6-fb86" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Slaanesh" hidden="false" id="4d5d-8aa3-4051-1f8a" type="selectionEntry" targetId="6635-f101-5f8b-6991" sortIndex="7">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="72d1-1e9d-5a2d-0e98" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="f99e-88e6-b55e-d521" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="0" field="d15d-aee3-2155-dfa8">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="72d1-1e9d-5a2d-0e98" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="f99e-88e6-b55e-d521" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
+            <entryLink import="true" name="Wizard Level 1" hidden="false" id="64c9-6e7a-940c-7683" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d15d-aee3-2155-dfa8" automatic="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7caa-0a2e-3c1e-3e49" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="fd10-23d9-94b3-1597"/>
               </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lore of Metal" hidden="false" id="3f84-d028-9f13-d592" type="selectionEntry" targetId="527f-89f1-1b92-a01d" sortIndex="4">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="7caa-0a2e-3c1e-3e49">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9f22-96e8-8aa6-fb86" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Lore of Nurgle" hidden="false" id="b424-319b-1212-edfd" type="selectionEntry" targetId="8b39-ac53-29c2-d695" sortIndex="5">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="f99e-88e6-b55e-d521" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="0" field="1178-6300-27c2-0b28">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="f99e-88e6-b55e-d521" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
+            <entryLink import="true" name="Wizard Level 2" hidden="false" id="e3f1-a0a7-7d6c-823a" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+              <costs>
+                <cost name="pts" typeId="points" value="70"/>
+              </costs>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1178-6300-27c2-0b28" automatic="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8155-f87e-de24-0201" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f847-9a30-e2c3-7e62"/>
               </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="aec4-74d0-fb27-9847" type="selectionEntry" targetId="bdb0-6b92-8131-dc78" sortIndex="8">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="6200-1301-f171-2604" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="f99e-88e6-b55e-d521" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="0" field="ce7d-71d1-72cb-c701">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="6200-1301-f171-2604" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="f99e-88e6-b55e-d521" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
+                <modifier type="set" value="0" field="8155-f87e-de24-0201">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Rulebook Lores (Master of Sorcery)" hidden="false" id="2660-6bda-4198-ff68" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
+            <entryLink import="true" name="Wizard Level 3" hidden="false" id="0b98-f952-9e35-79cf" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
+              <costs>
+                <cost name="pts" typeId="points" value="105"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1440-02f4-bf05-d489" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="6225-28ba-ae1a-eb0f"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="1440-02f4-bf05-d489">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Wizard Level 4" hidden="false" id="c1e6-1802-a46e-8db5" type="selectionEntry" targetId="5460-3929-58ef-71ba">
+              <costs>
+                <cost name="pts" typeId="points" value="140"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9297-6293-dd40-92ac" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9cdc-5788-b7f9-247f"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="9297-6293-dd40-92ac">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="13ff-8ae2-b38d-6f7a-min" automatic="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="13ff-8ae2-b38d-6f7a-max" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67d0-f59b-588f-6146" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4e7f-3df7-1861-817f"/>
           </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden"/>
-                <modifier type="set" value="0" field="13ff-8ae2-b38d-6f7a-min"/>
-                <modifier type="set" value="0" field="13ff-8ae2-b38d-6f7a-max"/>
-              </modifiers>
+          <modifiers>
+            <modifier type="set" value="0" field="67d0-f59b-588f-6146">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
-            </modifierGroup>
-          </modifierGroups>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -7133,20 +7565,6 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="60. Wizard Level" hidden="false" id="6330-4193-134b-7193" type="selectionEntryGroup" targetId="d0a0-b36d-0420-dd76">
-          <modifiers>
-            <modifier type="set" value="0" field="cade-7486-6efe-926d">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="5d86-59cd-52f3-f00c" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
         <entryLink import="true" name="15. Daemonic Alignement" hidden="false" id="c755-38bb-57dd-a9b9" type="selectionEntryGroup" targetId="aab2-86a3-c9d8-7a6c">
           <entryLinks>
             <entryLink import="true" name="Daemon of Khorne" hidden="false" id="5d86-59cd-52f3-f00c" type="selectionEntry" targetId="e567-8ed8-31d7-1247" sortIndex="2">
@@ -7218,6 +7636,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="61. Lore" hidden="false" id="85b1-81f5-d78f-5360" type="selectionEntryGroup" targetId="8a57-1b73-da0e-92c0"/>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="81. Upgrades" id="e85d-1c10-5eb7-bb92" hidden="false">
@@ -7235,153 +7654,52 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="61. Lore" id="1af4-a703-21dc-9e12" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Lore of Chaos" hidden="false" id="9417-7353-eaa0-80d6" type="selectionEntry" targetId="8144-4176-bad4-531d" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="c755-38bb-57dd-a9b9" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="35a2-75e0-d76c-5357" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="2">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="c755-38bb-57dd-a9b9" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Fire" hidden="false" id="29d2-ce4d-ebdf-3ae4" type="selectionEntry" targetId="4d24-c803-7a05-0894" sortIndex="3">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="c755-38bb-57dd-a9b9" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="c1e8-8d29-6600-4422" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67" sortIndex="6">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="c755-38bb-57dd-a9b9" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Slaanesh" hidden="false" id="e4bb-f0ed-36ea-8c2d" type="selectionEntry" targetId="6635-f101-5f8b-6991" sortIndex="7">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="0d85-82ad-bf78-2565" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="d0a0-b36d-0420-dd76" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="0" field="04b8-899e-96e7-ae23">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="0d85-82ad-bf78-2565" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="d0a0-b36d-0420-dd76" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="04b8-899e-96e7-ae23" automatic="true"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lore of Metal" hidden="false" id="6b1f-dde2-d7de-c6de" type="selectionEntry" targetId="527f-89f1-1b92-a01d" sortIndex="4">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="c755-38bb-57dd-a9b9" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Nurgle" hidden="false" id="5774-a923-8d06-6a2b" type="selectionEntry" targetId="8b39-ac53-29c2-d695" sortIndex="5">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="f1fb-aa6c-33c8-4dea" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="d0a0-b36d-0420-dd76" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="0" field="356e-ffa2-5dfd-a10e">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="f1fb-aa6c-33c8-4dea" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="d0a0-b36d-0420-dd76" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="356e-ffa2-5dfd-a10e" automatic="true"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="25ff-99b4-7e5a-8c94" type="selectionEntry" targetId="bdb0-6b92-8131-dc78" sortIndex="8">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="23bc-c7eb-cf89-75ce" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="d0a0-b36d-0420-dd76" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="0" field="900b-a9b1-e535-d575">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="23bc-c7eb-cf89-75ce" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="d0a0-b36d-0420-dd76" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="900b-a9b1-e535-d575" automatic="true"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Rulebook Lores (Master of Sorcery)" hidden="false" id="03d1-d4d6-1ed9-7ade" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
-          </entryLinks>
+        <selectionEntryGroup name="60. Wizard Level" id="dd30-3e3d-dcf9-bf99" hidden="false">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="75d4-0ad7-9769-7403" automatic="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fe1-7bd5-b2bb-314b" automatic="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7201-5750-43fa-11c2" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="851f-8c07-b8b9-eb76"/>
           </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden"/>
-                <modifier type="set" value="0" field="75d4-0ad7-9769-7403"/>
-                <modifier type="set" value="0" field="4fe1-7bd5-b2bb-314b"/>
-              </modifiers>
+          <modifiers>
+            <modifier type="set" value="0" field="7201-5750-43fa-11c2">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
-            </modifierGroup>
-          </modifierGroups>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Wizard Level 1" hidden="false" id="cdf6-d60c-8722-b589" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="03ad-1dcb-b0f8-1e7c" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1ffd-2709-3b4c-ea86"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="03ad-1dcb-b0f8-1e7c">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Wizard Level 2" hidden="false" id="6495-1c86-3dbd-15d4" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+              <costs>
+                <cost name="pts" typeId="points" value="70"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62be-5ead-d24a-6432" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3b9e-0101-1260-646e"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="62be-5ead-d24a-6432">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>

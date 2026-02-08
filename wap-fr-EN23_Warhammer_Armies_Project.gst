@@ -952,7 +952,7 @@
     </selectionEntry>
     <selectionEntry id="b436-b410-dd41-304f" name="Lore of Beasts" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cf51-c3e7-8561-ffe5" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cf51-c3e7-8561-ffe5" type="max" automatic="true"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="3ce9-08d9-0e1a-1e25" name="Wildheart" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -1420,7 +1420,7 @@
     </selectionEntry>
     <selectionEntry id="4d24-c803-7a05-0894" name="Lore of Fire" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1c55-bc61-cc88-d303" type="max" automatic="false"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1c55-bc61-cc88-d303" type="max" automatic="true"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="fff3-d6d4-bcac-0a6a" name="Kindleflame" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -1888,7 +1888,7 @@
     </selectionEntry>
     <selectionEntry id="527f-89f1-1b92-a01d" name="Lore of Metal" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6cdd-e249-97f2-2c76" type="max" automatic="false"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6cdd-e249-97f2-2c76" type="max" automatic="true"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="6387-34cd-3446-5e8d" name="Metallic Attraction" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -2356,7 +2356,7 @@
     </selectionEntry>
     <selectionEntry id="e64b-e6a1-58ba-0aee" name="Lore of Heavens" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5c00-7f3a-b515-7521" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5c00-7f3a-b515-7521" type="max" automatic="true"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="0a9f-7dc6-486b-092d" name="Fantastic Foresight" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -2824,7 +2824,7 @@
     </selectionEntry>
     <selectionEntry id="c543-a893-3879-cf32" name="Lore of Light" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d548-2594-8049-83ce" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d548-2594-8049-83ce" type="max" automatic="true"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="35f9-a846-5d77-2266" name="Focus Energy" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -3292,7 +3292,7 @@
     </selectionEntry>
     <selectionEntry id="968d-55ad-604c-f251" name="Lore of Life" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1cdb-4c36-5076-244c" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1cdb-4c36-5076-244c" type="max" automatic="true"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="7f68-7905-ad21-9d6d" name="Lifebloom" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -3760,7 +3760,7 @@
     </selectionEntry>
     <selectionEntry id="6c88-e0ab-2ca2-7e67" name="Lore of Shadow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9021-6a37-aa7b-8815" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9021-6a37-aa7b-8815" type="max" automatic="true"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="196d-e427-60d7-9cb9" name="Steed of Shadows" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -4228,7 +4228,7 @@
     </selectionEntry>
     <selectionEntry id="bc0d-47f8-7220-1e16" name="Lore of Death" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c5ef-d69a-b34d-e8bf" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c5ef-d69a-b34d-e8bf" type="max" automatic="true"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="fcda-0bcd-07ba-1f18" name="Life Leeching" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
