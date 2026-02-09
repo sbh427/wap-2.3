@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0f80-7664-66d2-45f8" name="Estalia WAP 1.21" revision="32" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0f80-7664-66d2-45f8" name="Estalia WAP 1.21" revision="33" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <profileTypes>
     <profileType id="8dcd-8c6c-b81d-ef64" name="Standard of Myrmidia bonuses">
@@ -5217,11 +5217,21 @@ The wielder of this weapon can re-roll all failed rolls To Hit in close combat.
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="b906-254a-7949-9e08" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="add" value="{this} is not allowed if not mounted" field="error">
                   <conditionGroups>
-                    <conditionGroup type="or">
+                    <conditionGroup type="and">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="b906-254a-7949-9e08" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="22c9-1606-58f8-2e60" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="989d-b2d2-bf57-8c70" shared="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                        <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -5847,13 +5857,6 @@ Place the small round template with its centre anywhere within range. If the at
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="ea31-b37a-b5d3-8605" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -5960,9 +5963,9 @@ Place the small round template with its centre anywhere within range. If the at
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Arcane Items (One use only)" id="7e86-85ed-4697-925c" hidden="false" sortIndex="5">
+        <selectionEntryGroup name="Arcane Items (One use only)" id="7e86-85ed-4697-925c" hidden="false" sortIndex="5" collapsible="true">
           <entryLinks>
-            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="388d-2565-4a90-72e4" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1"/>
+            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="388d-2565-4a90-72e4" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" flatten="true"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
