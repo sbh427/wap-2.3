@@ -153,8 +153,8 @@
       <modifiers>
         <modifier type="decrement" field="f412-f4d0-9f49-afab" value="1">
           <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0eb4-f376-7725-b05b" repeats="1" roundUp="false"/>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc26-7737-f7cb-8977" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0eb4-f376-7725-b05b" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fc26-7737-f7cb-8977" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
         <modifier type="increment" field="f412-f4d0-9f49-afab" value="1">
@@ -164,13 +164,13 @@
         </modifier>
         <modifier type="set" value="-1" field="d3e7-0fe2-0481-fbbd">
           <conditions>
-            <condition type="equalTo" value="-1" field="limit::points" scope="roster" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="equalTo" value="-1" field="limit::points" scope="force" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f412-f4d0-9f49-afab" type="min"/>
-        <constraint type="min" value="25" field="limit::points" scope="roster" shared="true" id="d3e7-0fe2-0481-fbbd" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
+        <constraint type="min" value="25" field="limit::points" scope="force" shared="true" id="d3e7-0fe2-0481-fbbd" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="d38a-73da-883b-bab9" name="Heroes" hidden="false">
@@ -189,8 +189,8 @@
       <modifiers>
         <modifier type="decrement" field="5e3c-b5d6-a059-b5ab" value="1">
           <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b876-2856-f1c2-c4f0" repeats="1" roundUp="false"/>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="0eb4-f376-7725-b05b" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b876-2856-f1c2-c4f0" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0eb4-f376-7725-b05b" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
         <modifier type="increment" field="5e3c-b5d6-a059-b5ab" value="1">
@@ -201,15 +201,15 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5e3c-b5d6-a059-b5ab" type="min"/>
-        <constraint type="max" value="50" field="limit::points" scope="roster" shared="true" id="97cf-276b-1458-7679" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
+        <constraint type="max" value="50" field="limit::points" scope="force" shared="true" id="97cf-276b-1458-7679" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="0eb4-f376-7725-b05b" name="Rare" hidden="false">
       <modifiers>
         <modifier type="decrement" field="e0d7-75ba-de98-e3ff" value="1">
           <repeats>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fc26-7737-f7cb-8977" repeats="1" roundUp="false"/>
-            <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b876-2856-f1c2-c4f0" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fc26-7737-f7cb-8977" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b876-2856-f1c2-c4f0" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
         <modifier type="increment" field="e0d7-75ba-de98-e3ff" value="1">
@@ -220,7 +220,7 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e0d7-75ba-de98-e3ff" type="min"/>
-        <constraint type="max" value="25" field="limit::points" scope="roster" shared="true" id="6b40-e45b-d1f9-37f5" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
+        <constraint type="max" value="25" field="limit::points" scope="force" shared="true" id="6b40-e45b-d1f9-37f5" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
       </constraints>
     </categoryEntry>
     <categoryEntry name="Mount" hidden="true" id="8b8a-34b1-ed30-df11"/>
