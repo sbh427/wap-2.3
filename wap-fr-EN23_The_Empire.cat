@@ -1261,6 +1261,7 @@
       <categoryLinks>
         <categoryLink id="5273-c73a-8053-b66d" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="3048-4e85-2620-c664" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="Trooper" hidden="false" id="e3c8-3af1-7d24-4d9a" targetId="31d1-8bce-6514-82bd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f3b7-d286-0a0e-c956" name="Halberdier" hidden="false" collective="false" import="true" type="model">
@@ -1409,17 +1410,25 @@
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="8112-163e-a6e5-df7b" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8112-163e-a6e5-df7b" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="Altdorf Company of Honor" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8433-cca6-f405-d2cd" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="b0fd-ed75-b1ea-30d8" name="Spearmen" hidden="false" collective="false" import="true" type="unit" sortIndex="13">
       <categoryLinks>
         <categoryLink id="fb60-ac65-d034-2493" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="3e6e-5927-eb35-1899" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="Trooper" hidden="false" id="eff9-15d1-e86e-226f" targetId="31d1-8bce-6514-82bd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="d773-1fcb-7a7b-93da" name="Spearman" hidden="false" collective="false" import="true" type="model">
@@ -1554,6 +1563,7 @@
       <categoryLinks>
         <categoryLink id="0b5b-c81a-788b-cd39" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="767c-634a-c535-2861" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="Trooper" hidden="false" id="b4ad-1493-63e1-6246" targetId="31d1-8bce-6514-82bd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2be5-3ea2-432d-cdf8" name="Swordsman" hidden="false" collective="false" import="true" type="model">
@@ -1701,11 +1711,19 @@
           </selectionEntries>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="Sword of Ulric" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="a8ba-75bf-a86d-e9ae" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="f149-1478-7255-9107" name="Handgunners" hidden="false" collective="false" import="true" type="unit" sortIndex="15">
       <categoryLinks>
         <categoryLink id="39e8-1448-332e-ab73" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="1287-b739-f42c-08f6" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="Trooper" hidden="false" id="467c-ea53-465a-befb" targetId="31d1-8bce-6514-82bd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Handgunner" hidden="false" id="309d-fc33-94ec-5ec2" collective="false">
@@ -1746,6 +1764,31 @@
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                 </entryLink>
+                <entryLink import="true" name="Medium Armour" hidden="false" id="93d9-de2e-b58c-0bb2" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="f0ee-9fb5-c78c-124e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="1" field="619b-a30b-c844-1a9d">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3560-ffcb-1e48-9e26" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="0" field="aaab-a191-d887-0e14">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="3560-ffcb-1e48-9e26" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="619b-a30b-c844-1a9d" includeChildSelections="false" automatic="true"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </entryLink>
           </entryLinks>
@@ -1757,6 +1800,7 @@
             <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="2665-de3e-05d2-e22d" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="53a5-7ffe-8950-276e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="2b98-9ecc-740b-c6e5" includeChildSelections="false" automatic="true"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Standard Bearer" id="358e-a5bc-5934-2846" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
@@ -1771,10 +1815,18 @@
                   </constraints>
                 </entryLink>
               </entryLinks>
+              <modifiers>
+                <modifier type="set" value="1" field="2b98-9ecc-740b-c6e5">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3560-ffcb-1e48-9e26" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="0fa3-93e1-2ced-010a" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="900d-740a-8933-6010" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9451-468f-e40b-2771" includeChildSelections="false" automatic="true"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Musician" id="9c27-3d7d-294f-c44c" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
@@ -1782,10 +1834,18 @@
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="1" field="9451-468f-e40b-2771">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3560-ffcb-1e48-9e26" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="2c4e-02d2-69bc-1d21">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c935-7edc-c821-fe31" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="eb89-14c5-f2aa-c849" includeChildSelections="false"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Leader" id="2352-eaea-a43d-14a9" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
@@ -1817,6 +1877,13 @@
                   </selectionEntries>
                 </entryLink>
               </entryLinks>
+              <modifiers>
+                <modifier type="set" value="0" field="c935-7edc-c821-fe31">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3560-ffcb-1e48-9e26" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1827,21 +1894,21 @@
       <entryLinks>
         <entryLink import="true" name="10. Unit Options" hidden="false" id="9282-974d-bf83-5da4" type="selectionEntryGroup" targetId="f3b6-5f5f-aac6-b1e1" sortIndex="1">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fireloques of Ferlangen" hidden="true" id="51e2-2d5b-03a1-0741">
+            <selectionEntry type="upgrade" import="true" name="Fireloques of Ferlangen" hidden="false" id="51e2-2d5b-03a1-0741">
               <modifiers>
                 <modifier type="increment" value="1" field="points">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" value="false" field="hidden">
+                <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="force" childId="1ac8-e348-e14e-6c5b" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="force" childId="1ac8-e348-e14e-6c5b" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="6c43-1696-e003-0ecd" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6c43-1696-e003-0ecd" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <rules>
                 <rule name="Fireloques of Ferlangen" id="39f3-39b2-1d00-5083" hidden="false" >
@@ -1851,6 +1918,26 @@
               <infoLinks>
                 <infoLink name="Stubborn" id="cc76-0c37-a071-8273" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
               </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Nuln Ironsides" hidden="false" id="3560-ffcb-1e48-9e26">
+              <modifiers>
+                <modifier type="increment" value="2" field="points">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="f0ee-9fb5-c78c-124e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Black Powder Discipline" id="076c-9b43-bcf6-8466" hidden="false" type="rule" targetId="2bbe-036f-85d6-1420"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d8ed-5ba3-81ec-cd0a" includeChildSelections="true"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </entryLink>
@@ -1877,11 +1964,32 @@
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="Fireloques of Ferlangen" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="51e2-2d5b-03a1-0741" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="The Nuln Ironsides" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3560-ffcb-1e48-9e26" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="59cc-b769-ae2c-01be">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f0ee-9fb5-c78c-124e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="59cc-b769-ae2c-01be" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="bcff-c212-91d2-9bfb" name="Crossbowmen" hidden="false" collective="false" import="true" type="unit" sortIndex="16">
       <categoryLinks>
         <categoryLink id="1b82-cc60-4bc7-0482" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="2a83-4a5f-1988-748e" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="Trooper" hidden="false" id="96e7-4959-b3db-8731" targetId="31d1-8bce-6514-82bd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2904-65e7-d368-24ba" name="Crossbowman" hidden="false" collective="false" import="true" type="model">
@@ -1995,6 +2103,7 @@
       <categoryLinks>
         <categoryLink id="8ae6-c4fc-f243-f277" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="f69b-ee70-232f-acc9" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="Trooper" hidden="false" id="b07a-80ef-839c-2c68" targetId="31d1-8bce-6514-82bd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="690e-28e0-0a24-e6fa" name="Archer" hidden="false" collective="false" import="true" type="model">
@@ -2259,13 +2368,6 @@
               </modifiers>
             </infoLink>
           </infoLinks>
-          <modifiers>
-            <modifier type="set" value="Witch Hunter Retinue" field="name">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="unit" childId="919e-1db8-6610-56c9" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2352,18 +2454,15 @@
       <modifiers>
         <modifier type="increment" value="1" field="da7f-e427-42b9-0ca0">
           <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="4083-55fe-7548-012f" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="b0fd-ed75-b1ea-30d8" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="002f-5a06-2b41-83a0" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="bcff-c212-91d2-9bfb" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="a4a1-ebdb-465e-00dd" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="f149-1478-7255-9107" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="2ad6-afb8-1b6a-1e5b" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="7c4c-be2b-d1f0-3791" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="31d1-8bce-6514-82bd" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="Witch Hunter Retinue" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="919e-1db8-6610-56c9" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
-      <comment>enter all statetroops to modifyer</comment>
     </selectionEntry>
     <selectionEntry id="824a-a69a-0b5c-650e" name="Pistoliers" hidden="false" collective="false" import="true" type="unit" sortIndex="19">
       <categoryLinks>
@@ -2524,6 +2623,7 @@
       <categoryLinks>
         <categoryLink id="78da-73c0-7f0f-ad68" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="1781-e228-2548-c7e1" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="Trooper" hidden="false" id="d42a-5765-5b9b-f6cd" targetId="31d1-8bce-6514-82bd" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="75b5-7fad-9136-053d" name="Greatsword" hidden="false" collective="false" import="true" type="model">
@@ -2642,7 +2742,7 @@
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="The Carroburg Greatswords" hidden="true" id="ef5a-1efd-a3b9-3cb3">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="219c-8ea4-edf6-f91d" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="219c-8ea4-edf6-f91d" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
@@ -2665,6 +2765,13 @@
           </selectionEntries>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="The Carroburg Greatswords" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ef5a-1efd-a3b9-3cb3" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="0e1a-8e09-fa5e-9bee" name="Huntsmen" hidden="false" collective="false" import="true" type="unit" sortIndex="27">
       <categoryLinks>
@@ -2770,7 +2877,7 @@
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="c058-c833-56e7-8eae" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c058-c833-56e7-8eae" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Wulfhart&apos;s hunters" hidden="false" id="08f8-5d25-c9a4-c040">
@@ -2787,7 +2894,7 @@
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="force" shared="true" id="f6aa-eb07-17b8-2955" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f6aa-eb07-17b8-2955" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Monster Hunter" id="7c1e-db70-a077-2c86" hidden="false" type="rule" targetId="7913-7420-3223-1aab"/>
@@ -2797,6 +2904,18 @@
           </selectionEntries>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="Hergig Jaegerkorps" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4890-815a-f161-c43b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Wulfhart&apos;s hunters" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="08f8-5d25-c9a4-c040" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="2938-63aa-2169-bc6f" name="Imperial Dwarfs" hidden="false" collective="false" import="true" type="unit" sortIndex="30">
       <categoryLinks>
@@ -4553,7 +4672,12 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
       <entryLinks>
         <entryLink import="true" name="Engineer Commander" hidden="false" id="24fe-5e67-b096-c2c8" type="selectionEntry" targetId="f3ed-7c52-8f3d-8571" sortIndex="2">
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="set" value="0" field="1846-e2d1-a3d4-678c">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="e0c7-f7c6-2a23-ef03" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="2c1b-67be-5790-7f07">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="e0c7-f7c6-2a23-ef03" shared="true" includeChildSelections="true"/>
               </conditions>
@@ -4612,94 +4736,6 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
           </profiles>
         </infoGroup>
       </infoGroups>
-    </selectionEntry>
-    <selectionEntry id="2ad6-afb8-1b6a-1e5b" name="The Nuln Ironsides" hidden="true" collective="false" import="true" type="unit" sortIndex="15.5">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="f0ee-9fb5-c78c-124e" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d8d9-d2b5-5f4a-258c" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="db1d-a7d8-95fd-a2b0" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="d64f-88b9-f0bc-f57c" targetId="22c9-1606-58f8-2e60" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Handgunner" hidden="false" id="8853-f371-0d59-f613" collective="false">
-          <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="2660-1581-2ac2-f41b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="State Troops" id="ba44-faba-9fee-ea77" hidden="false" targetId="a805-76db-d1fc-6a51" type="rule"/>
-            <infoLink name="Handgunner" id="e732-b373-fef7-007b" hidden="false" targetId="92a4-0648-2c2a-617f" type="profile"/>
-            <infoLink name="Black Powder Discipline" id="83a1-b65b-e847-b2de" hidden="false" type="rule" targetId="2bbe-036f-85d6-1420"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="1317-d114-02cf-274d" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7f7e-32dc-93ee-cf47"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Handgun" hidden="false" id="3d7f-eccb-fcce-c12f" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac93-148c-d5a8-9b10"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Medium Armour" hidden="false" id="d968-ff06-b716-e6f5" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6320-1388-2e0a-557d"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="331d-3845-fcb7-17f9" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="b087-02da-a196-5c8f" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="71bf-112f-8603-f934" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ac1-2c5d-3f1f-49fe"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Standard Bearer" id="ed8d-aaa0-4b2a-8f5d" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <entryLinks>
-                <entryLink import="true" name="Magic Standards" hidden="false" id="8da9-82c4-ae90-6acd" collective="false" targetId="7b9f-e8e7-574d-95a5" type="selectionEntryGroup">
-                  <constraints>
-                    <constraint type="max" value="25" field="points" scope="parent" shared="false" id="4bb8-6717-d5d0-b49a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="c0c1-a541-3a4f-9efe" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5f0e-806d-740c-8d8c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="822b-5e63-d0b8-f7d0"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Musician" id="1b89-feea-d5f7-cf3f" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="8b12-ba4b-5f1e-f631" name="Special Characters" hidden="false" collective="false" import="true" type="unit" subType="unit-group" sortIndex="98">
       <categoryLinks>
@@ -7482,7 +7518,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="2ad6-afb8-1b6a-1e5b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="3560-ffcb-1e48-9e26" shared="true" includeChildSelections="true" includeChildForces="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="f0ee-9fb5-c78c-124e" shared="true"/>
                       </conditions>
                     </conditionGroup>
@@ -8211,6 +8247,11 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="The Teutogen Guard" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cd21-fbbb-19e4-dcdd" shared="true" includeChildSelections="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -10379,7 +10420,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Engineer Commander" hidden="false" id="f3ed-7c52-8f3d-8571" collective="false" subType="crew">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1846-e2d1-a3d4-678c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1846-e2d1-a3d4-678c" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="2c1b-67be-5790-7f07" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
@@ -10389,23 +10430,40 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="76d2-2125-0d35-0889" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="acac-815b-ff79-0f31"/>
-          </constraints>
+        <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="b3a2-67e5-f113-539a" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+          <entryLinks>
+            <entryLink import="true" name="Repeater Pistol" hidden="false" id="6b12-118a-9f39-106e" type="selectionEntry" targetId="03d7-e75d-2d41-2cd3">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f14-d137-bba2-2feb-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f14-d137-bba2-2feb-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Repeater Pistol" hidden="false" id="6b12-118a-9f39-106e" type="selectionEntry" targetId="03d7-e75d-2d41-2cd3" sortIndex="2">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f14-d137-bba2-2feb-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f14-d137-bba2-2feb-max" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="Hochland Long Rifle" hidden="false" id="57bf-ada1-b9ed-4fc7" type="selectionEntry" targetId="7cfd-bf2c-f7f2-6c34" sortIndex="3">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="fd9c-abec-fd2d-6138" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="76d2-2125-0d35-0889" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="acac-815b-ff79-0f31"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="40. Tertiary Weapon" id="a819-1dbf-16fe-a5fb" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Hochland Long Rifle" hidden="false" id="57bf-ada1-b9ed-4fc7" type="selectionEntry" targetId="7cfd-bf2c-f7f2-6c34">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7eab-f48f-8da7-213e" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Man Catcher" hidden="false" id="2b42-79a0-aae9-6f3c" collective="true">
       <constraints>
@@ -14766,6 +14824,7 @@ A repeater pistol can be used in combination with a regular pistol as a brace o
     <categoryEntry name="Y Repeater Pistol" id="ff90-fe40-1386-8f3d" hidden="true"/>
     <categoryEntry name="Y Hochland Long Rifle" id="a319-792a-2876-256a" hidden="true"/>
     <categoryEntry name="Z Full Plate Armour" id="e4d2-4419-464f-fccb" hidden="true"/>
+    <categoryEntry name="Trooper" id="31d1-8bce-6514-82bd" hidden="true"/>
   </categoryEntries>
   <sharedInfoGroups>
     <infoGroup name="Battle Prayers of Ulric" id="a19c-dc75-9d60-11fb" hidden="false">
