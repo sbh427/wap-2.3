@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="24" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
+<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.61" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="24" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="a440-163d-31eb-cdf7" collective="true" sortIndex="0" subType="mount">
       <constraints>
@@ -36,21 +36,6 @@
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Skeleton Chariot" hidden="false" id="3ec1-e263-5371-742a" collective="true" subType="mount">
       <entryLinks>
-        <entryLink import="true" name="70. Mount" hidden="false" id="75c2-3a6b-f313-5f4a" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
-          <entryLinks>
-            <entryLink import="true" name="Skeletal Steed" hidden="false" id="a8f4-4808-6241-ce7e" type="selectionEntry" targetId="a440-163d-31eb-cdf7">
-              <modifiers>
-                <modifier type="set" value="2" field="b5af-59e8-85b8-1e2d"/>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a0b4-64eb-9f87-4dd1"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <modifiers>
-            <modifier type="set" value="2" field="7821-ebe3-f713-6916"/>
-          </modifiers>
-        </entryLink>
         <entryLink import="true" name="56. Upgrades" hidden="false" id="b60b-c073-a09f-ca66" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
           <entryLinks>
             <entryLink import="true" name="Scythes" hidden="false" id="845d-e1b3-2652-c342" type="selectionEntry" targetId="865f-edfe-e4fd-d28e">
@@ -66,7 +51,6 @@
                       <conditions>
                         <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
                         <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4a35-6e2e-dad9-7a37" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -78,11 +62,10 @@
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="Skeleton Chariot" hidden="false" id="6936-6150-cb8f-edd4" type="selectionEntryGroup" targetId="a1b6-cee5-aadc-c345" flatten="true"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Undead" id="2d24-6b11-0533-5369" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
-        <infoLink name="Skeleton Chariot " id="82ca-d97f-3224-0c72" hidden="false" type="profile" targetId="d2de-f5a2-d10e-a10d"/>
-        <infoLink name="Skeleton Chariot " id="ec7f-b53b-4df0-65c6" hidden="false" type="profile" targetId="0f95-ca53-690c-0478"/>
+        <infoLink name="Skeleton Chariot" id="3932-8b17-b064-5769" hidden="false" type="infoGroup" targetId="de1e-2cc6-5b35-7948"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Chariot" hidden="false" id="75ec-0ebd-06b5-209a" targetId="7224-b7fd-d652-3ff2" primary="false"/>
@@ -477,12 +460,6 @@
     <selectionEntry type="model" import="true" name="Casket of Souls" hidden="false" id="35ef-e7ca-0605-a361" subType="mount">
       <infoLinks>
         <infoLink name="Undead" id="453a-f10f-0d42-79b7" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
-        <infoLink name="Ward Save" id="3aa3-fcf3-df3a-c893" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
-          <modifiers>
-            <modifier type="set" value="Casket of Souls" field="name"/>
-            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Casket Guard" hidden="false" id="5c00-4be1-ea2b-5150" collapsible="false" sortIndex="3" subType="crew">
@@ -548,17 +525,16 @@
           <description>You may add 1 Power dice to your pool for each Casket of Souls in your army</description>
         </rule>
         <rule name="Vortex of Souls" id="5b50-4c84-d1f5-968c" hidden="false">
-          <description>The Casket of Souls can use one of the following abilities at the start of your Shooting phase as long as the Keeper of the Casket model is alive, and the Casket of Souls has not moved this turn.</description>
+          <description>The Casket of Souls can use one of the following abilities at the start of your Shooting phase as long as the Keeper of the Casket model is alive, is not engaged in close combat, and has not moved this turn.</description>
         </rule>
         <rule name="Unleashed Souls" id="b7c0-8041-ce66-f95e" hidden="false">
-          <description>If a Casket of Souls is destroyed, roll a D6 for every unit (friend or foe) within 12&quot; of the Casket before it is removed from play. On a roll of 4+, that unit immediately suffers D6 Strength 6 hits, with the Ignores Armour Saves and Magical Attacks special rule. After resolving the effects of Unleashed Souls, remove the Casket of Souls as normal.</description>
+          <description>If a Casket of Souls is destroyed, roll a D6 for every unit (friend or foe) within 12&quot; of the Casket before it is removed from play. On a roll of 4+, that unit immediately suffers D6 Strength 6 hits, with the Ignores Armour Saves and Magical Attacks special rule. After resolving the effects of Unleashed Souls, remove the Casket of Souls as normal. </description>
         </rule>
       </rules>
       <profiles>
         <profile name="Light of Death" typeId="7dc9-b90e-af31-4b2a" typeName="Vortex of Souls" hidden="false" id="7e2f-230d-bc63-91aa">
           <characteristics>
-            <characteristic name="Effect" typeId="890a-4b72-4016-c6de">Light of Death has a range of 36&quot;. One enemy unit within Line of Sight of the Casket must take a Leadership test on an additional D6, discarding the lowest result. For each point the test is failed by, it suffers an automatic Wound which Ignores Armour Saves. Once the Leadership test has been resolved, roll a D6: on a 3+, choose another enemy unit within Line of Sight of the Casket that is within 6&quot;
-of the initial target, which also suffers the effects of the Light of Death. Keep rolling for further victims (each within Line of Sight of the Casket and within 6&quot; of the last target struck), until the roll is failed or there are no more viable targets. A unit can only be the target of Light of Death once per Shooting phase.</characteristic>
+            <characteristic name="Effect" typeId="890a-4b72-4016-c6de">Light of Death has a range of 36&quot;. One unengaged enemy unit within Line of Sight of the Casket must take a Leadership test on an additional D6, discarding the lowest result. For each point the test is failed by, it suffers an automatic Wound with the Ignores Armour Saves and Magical Attacks special rules. Once the Leadership test has been resolved, roll a D6: on a 3+, choose another unengaged enemy unit within Line of Sight of the Casket that is within 6&quot; of the initial target, which also suffers the effects of the Light of Death. Keep rolling for further victims (each within Line of Sight of the Casket and within 6&quot; of the last target struck), until the roll is failed or there are no more viable targets. A unit can only be the target of Light of Death once per Shooting phase. </characteristic>
           </characteristics>
         </profile>
         <profile name="Light of Protection" typeId="7dc9-b90e-af31-4b2a" typeName="Vortex of Souls" hidden="false" id="f2d2-9b13-65e0-8dc4">
@@ -1253,13 +1229,12 @@ Once the final position of the marker is established, place the emerging unit i
 If you roll a misfire, or if for any reason some of the models in the unit cannot be placed, then the unit does not emerge. Instead, remove the marker and roll on the Mishap table. If a unit emerges successfully, it may act normally this turn.
 
 
-Only characters that have the Entombed Beneath the Sands special rule can be deployed within such units. If you have several units Entombed Beneath the Sands, then repeat this process, one unit at a time</description>
+If you have several units Entombed Beneath the Sands, then repeat this process, one unit at a time</description>
     </rule>
     <rule name="Curse of the Necropolis" id="799c-deaf-f39a-f777" hidden="false" publicationId="feeb-1927-4a99-f849" page="3">
       <description>If a model with this special rule is removed from play, then the enemy unit responsible – by inflicting the final wound, for example – will immediately suffer D6 Strength 5 hits (if the model was a Lord), D6 Strength 4 hits (if the model was a Hero) or D3 Strength 3 Hits (if the model was a rank-and-file model). Any Wounds caused have the Ignores Armour Saves special rule.
 
-
-In close combat, any Wounds inflicted count towards the combat result. If more than one unit is responsible for the destruction of the model with this special rule (it is destroyed by the combat result in a multiple combat due to its Unstable rule, for example), then all guilty units are affected. If the model is killed in a challenge, then only their opponent is cursed, and not the whole enemy unit</description>
+If more than one unit is responsible for the destruction of the model with this special rule (it is destroyed by the combat result in a multiple combat due to its Unstable rule, for example), then all guilty units are affected. If the model is killed by a character, then only that model is cursed, and not the whole enemy unit.</description>
     </rule>
     <rule name="My Will Be Done" id="fd3c-1603-bde9-9ee1" hidden="false" publicationId="feeb-1927-4a99-f849" page="4">
       <description>All models with the Undead special rule have the Animated Construct, Fear, and Unstable special rules. However, they may make march moves if they are within 6&quot; of the Hierophant or are joined by a character with the My Will Be Done special rule.
@@ -1293,6 +1268,9 @@ If, at the start of any of your turns following the death of the Hierophant, the
     </rule>
     <rule name="Undead" id="8786-eb6b-b0ac-a6d2" hidden="false" publicationId="feeb-1927-4a99-f849" page="4">
       <description>All models with the Undead special rule have the Animated Construct, Fear, and Unstable special rules. However, they may make march moves if they are within 6&quot; of the Hierophant or are joined by a character with the My Will Be Done special rule.</description>
+    </rule>
+    <rule name="Indomitable" id="05f8-2f1b-c273-a1d9" hidden="false">
+      <description>Models with this special rule suffer 1 Wound less than they normally would due to the Unstable special rule, or following the death of the army&apos;s Hierophant. </description>
     </rule>
   </sharedRules>
   <profileTypes>
@@ -1457,6 +1435,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <infoLink name="Flammable" id="51a6-52ec-cd75-c65b" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
         <infoLink name="My Will Be Done" id="a1d2-951f-aa99-6697" hidden="false" type="rule" targetId="fd3c-1603-bde9-9ee1"/>
         <infoLink name="Undead" id="3464-cf59-cf44-ecc5" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
+        <infoLink name="Indomitable" id="4465-e136-15e7-b5bd" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Liche High Priest" hidden="false" id="563f-9504-154a-44cd" sortIndex="2">
@@ -1519,6 +1498,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
       </entryLinks>
       <infoLinks>
         <infoLink name="Undead" id="2364-4139-476e-d467" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
+        <infoLink name="Indomitable" id="23fa-9b57-c8e9-b842" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink targetId="d280-b7df-c185-2ba5" id="dab9-79af-cd7b-f465" primary="true" name="Lords"/>
@@ -1580,6 +1560,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <infoLink name="Flammable" id="2394-f242-efa1-085d" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
         <infoLink name="My Will Be Done" id="3994-cee1-6279-7062" hidden="false" type="rule" targetId="fd3c-1603-bde9-9ee1"/>
         <infoLink name="Undead" id="9792-e2d1-a0a1-e623" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
+        <infoLink name="Indomitable" id="4d56-917f-fbba-e855" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="59a9-23cc-4d22-3cbc" type="selectionEntryGroup" targetId="4a6c-a780-b910-e3b8">
@@ -1714,6 +1695,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
       </entryLinks>
       <infoLinks>
         <infoLink name="Undead" id="b62e-4066-7749-fffc" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
+        <infoLink name="Indomitable" id="7f37-a38d-ee4e-eff6" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Heroes" hidden="false" id="919c-152f-c729-7368" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -1775,6 +1757,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <infoLink name="Killing Blow" id="a1a0-e26c-547b-85ae" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
         <infoLink name="Magical Attacks" id="241c-9303-76c7-6838" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
         <infoLink name="Sworn Bodyguard" id="950e-c07f-addd-6234" hidden="false" type="rule" targetId="dd98-af47-0867-0aa6"/>
+        <infoLink name="Indomitable" id="05de-4bb2-8088-17df" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="f07c-c175-9b6a-5ca1" type="selectionEntryGroup" targetId="4a6c-a780-b910-e3b8">
@@ -2019,7 +2002,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
             </entryLink>
           </entryLinks>
           <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="078e-2e4b-ea8c-22a6" includeChildSelections="false"/>
+            <constraint type="min" value="20" field="selections" scope="parent" shared="true" id="078e-2e4b-ea8c-22a6" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -2091,7 +2074,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Skeleton Archer" hidden="false" id="8bd4-42a7-74cb-d504" sortIndex="2">
           <costs>
-            <cost name="pts" typeId="points" value="8"/>
+            <cost name="pts" typeId="points" value="7"/>
           </costs>
           <profiles>
             <profile name="Skeleton Archer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6cce-3b27-eedc-a175">
@@ -2330,13 +2313,13 @@ If, at the start of any of your turns following the death of the Hierophant, the
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Skeleton Horseman" hidden="false" id="04b8-0602-38cf-6b36">
           <costs>
-            <cost name="pts" typeId="points" value="10"/>
+            <cost name="pts" typeId="points" value="11"/>
           </costs>
           <profiles>
             <profile name="Skeleton Horseman" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7fe4-4b98-8093-8d71">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
                 <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
                 <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
                 <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
@@ -2466,7 +2449,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Skeleton Horse Archer" hidden="false" id="80f2-eb0d-2afc-b0ef" sortIndex="2">
           <costs>
-            <cost name="pts" typeId="points" value="10"/>
+            <cost name="pts" typeId="points" value="11"/>
           </costs>
           <profiles>
             <profile name="Skeleton Horse Archer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="cebb-5047-d1fe-82a1">
@@ -2929,51 +2912,81 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Skeleton Chariot" hidden="false" id="db92-3ecc-273f-b313" type="selectionEntry" targetId="3ec1-e263-5371-742a">
-          <constraints>
-            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="36cf-6644-cfee-cd84" includeChildSelections="false"/>
-          </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries.recursive"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries.recursive"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Skeleton Chariot" hidden="false" id="14e8-4507-ea25-6889">
           <costs>
             <cost name="pts" typeId="points" value="60"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Skeleton Chariot" hidden="false" id="5711-ba58-5a78-d3d0" type="selectionEntryGroup" targetId="a1b6-cee5-aadc-c345" flatten="true"/>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="aff4-702d-c0d7-b3a0" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+              <entryLinks>
+                <entryLink import="true" name="Scythes" hidden="false" id="11cc-ee9c-86ed-a10b" type="selectionEntry" targetId="865f-edfe-e4fd-d28e">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Barding" hidden="false" id="c70f-f101-2d3f-cbb2" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="4"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
           <infoLinks>
-            <infoLink name="Undead" id="9466-9728-b05b-581a" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
+            <infoLink name="Skeleton Chariot" id="7e06-f476-c563-6f6d" hidden="false" type="infoGroup" targetId="de1e-2cc6-5b35-7948"/>
           </infoLinks>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="7439-3acc-0558-7442"/>
+          </constraints>
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Tomb Guard Charioteer" hidden="false" id="2801-6314-0040-1908" subType="crew" collective="true" sortIndex="3">
+            <selectionEntry type="model" import="true" name="Tomb Guard Charioteer" hidden="false" id="799c-e71b-bf05-95a8" subType="crew" collective="true">
               <constraints>
-                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a59f-74b3-4a66-17db" includeChildSelections="false" percentValue="false"/>
-                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f182-0bb4-e3fd-7bfe" includeChildSelections="false" percentValue="false"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="73ed-6320-8252-fe63" includeChildSelections="false" percentValue="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0571-3c21-1f58-fade" includeChildSelections="false" percentValue="false"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="668e-695c-8bb8-d63f" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="177d-ae6b-2aa9-5baa" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <entryLinks>
-                    <entryLink import="true" name="Light Armour" hidden="false" id="28c9-b54e-e21b-6241" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                    <entryLink import="true" name="Light Armour" hidden="false" id="73ed-f19c-c985-0bd8" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="54bc-0542-6e45-c80d" includeChildSelections="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b0d-023b-315e-3126" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="50. Handheld Armour" hidden="false" id="0f54-2c4d-af86-8380" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+                <entryLink import="true" name="50. Handheld Armour" hidden="false" id="9ebc-e223-9e6e-025b" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
                   <entryLinks>
-                    <entryLink import="true" name="Shield" hidden="false" id="8d98-3224-8502-bac5" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                    <entryLink import="true" name="Shield" hidden="false" id="606d-437f-9222-db53" type="selectionEntry" targetId="c068-0827-9931-d9bf">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7f34-e438-c66b-2681" includeChildSelections="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bd78-761a-3e24-10e9" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="bd82-202b-045d-fe62" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0044-6315-f651-8c4c" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
                   <entryLinks>
-                    <entryLink import="true" name="Polearm/Halberd" hidden="false" id="60d2-4116-1ddc-d5dd" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
+                    <entryLink import="true" name="Polearm/Halberd" hidden="false" id="a5c0-920b-8098-d5a3" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
                       <costs>
                         <cost name="pts" typeId="points" value="2"/>
                       </costs>
                     </entryLink>
-                    <entryLink import="true" name="Hand Weapon" hidden="false" id="ad5e-7b76-b364-5f38" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-                    <entryLink import="true" name="Light Lance" hidden="false" id="d835-5b43-53fb-1d05" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="2">
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="7507-d78d-6a04-8f58" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                    <entryLink import="true" name="Light Lance" hidden="false" id="eb09-a173-71ff-2427" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="2">
                       <costs>
                         <cost name="pts" typeId="points" value="2"/>
                       </costs>
@@ -2982,7 +2995,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 </entryLink>
               </entryLinks>
               <profiles>
-                <profile name="Tomb Guard Charioteer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5398-5852-a34c-b6fd">
+                <profile name="Tomb Guard Charioteer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="b344-cc02-0d55-a65e">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215"/>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -2990,7 +3003,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
                     <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
                     <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
                     <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
                     <characteristic name="Type" typeId="13f9-a26b-05af-3459">(Undead)</characteristic>
@@ -3011,12 +3024,12 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 </modifier>
               </modifiers>
               <infoLinks>
-                <infoLink name="Killing Blow" id="8eb1-e6bf-23e7-3ecc" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29">
+                <infoLink name="Killing Blow" id="eb12-cb52-4d4c-0ebd" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29">
                   <modifiers>
                     <modifier type="set" value="Charioteer only" field="annotation"/>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Magical Attacks" id="8d74-48df-4ab8-65ad" hidden="false" type="rule" targetId="03db-d81f-f264-84b8">
+                <infoLink name="Magical Attacks" id="59a6-eeb2-8acf-28b6" hidden="false" type="rule" targetId="03db-d81f-f264-84b8">
                   <modifiers>
                     <modifier type="set" value="Charioteer only" field="annotation"/>
                   </modifiers>
@@ -3035,23 +3048,9 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="points" affects="self.entries.recursive.17ec-ae05-605b-27ce"/>
           </modifiers>
-        </entryLink>
-      </entryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
-            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
-            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries.recursive"/>
-            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries.recursive"/>
-          </modifiers>
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Mummies" hidden="false" id="b00c-59e8-7c15-663b" sortIndex="16">
       <selectionEntries>
@@ -3114,6 +3113,9 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </conditions>
         </modifierGroup>
       </modifierGroups>
+      <infoLinks>
+        <infoLink name="Indomitable" id="ac33-6a13-3364-be2a" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Carrions" hidden="false" id="9ace-4ce2-d52e-22c2" sortIndex="18">
       <selectionEntries>
@@ -3218,7 +3220,8 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
                 <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
                 <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
-                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Ignores Armour saves, Killing Blow, Magical Attacks, When rolling To Wound, substitute the target&apos;s Toughness with its Initiative value. This attack does not suffer any To Hit penalties.</characteristic>
+                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Ignores Armour saves, Killing Blow, Magical Attacks, When rolling To Wound, Quick to Fire.
+When rolling To Wound, substitute the target&apos;s Toughness with its Initiative value. This attack does not suffer any To Hit penalties. </characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3247,7 +3250,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tomb Scorpion" hidden="false" id="17dc-43f7-2ea2-8e2b" sortIndex="20">
       <costs>
-        <cost name="pts" typeId="points" value="60"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
       <profiles>
         <profile name="Tomb Scorpion" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f727-9c90-b261-47da">
@@ -3257,7 +3260,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
             <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
             <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
             <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
@@ -3290,10 +3293,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
             <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Indomitable" id="32cc-d2d9-2d57-e27f" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="b4d1-9e8c-17dd-3782" targetId="fc26-7737-f7cb-8977" primary="true"/>
-        <categoryLink name="Monstrous Beasts" hidden="false" id="61aa-03a9-42b4-0e61" targetId="f98e-8d4f-7b1b-59cd" primary="false"/>
+        <categoryLink name="Monstrous Creature" hidden="false" id="db4f-1365-c4aa-a6f3" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
       </categoryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -3435,7 +3439,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Bone Thrower" hidden="false" id="bad7-64dd-dea6-c3e3" sortIndex="25">
+    <selectionEntry type="model" import="true" name="Bone Thrower" hidden="false" id="bad7-64dd-dea6-c3e3" sortIndex="24">
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="6420-2305-07bb-0f5a" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="War Machine" hidden="false" id="8292-fcbe-d79f-b5a5" targetId="d0ba-7b91-1049-d48b" primary="false"/>
@@ -3513,7 +3517,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Screaming Skull Catapult" hidden="false" id="c68d-6a6d-a03a-2751" sortIndex="26">
+    <selectionEntry type="model" import="true" name="Screaming Skull Catapult" hidden="false" id="c68d-6a6d-a03a-2751" sortIndex="25">
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="86d4-8a0c-8fd5-d061" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="War Machine" hidden="false" id="3730-5e09-806c-db1e" targetId="d0ba-7b91-1049-d48b" primary="false"/>
@@ -3612,7 +3616,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Necropolis Knights" hidden="false" id="6d29-a153-8503-73a4" sortIndex="27">
+    <selectionEntry type="unit" import="true" name="Necropolis Knights" hidden="false" id="6d29-a153-8503-73a4" sortIndex="26">
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="5ac3-824e-9a3c-4db9" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Monstrous Cavalry" hidden="false" id="4ea2-3f59-d3d9-c488" targetId="82d3-4589-72b4-b6ed" primary="false"/>
@@ -3811,6 +3815,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <infoLink name="Undead" id="f309-4028-5ee7-8c43" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
         <infoLink name="Fly (7)" id="046d-377e-a19a-73e3" hidden="false" type="rule" targetId="36ba-3349-99bd-1979"/>
         <infoLink name="Heroic Killing Blow" id="388c-c64e-efa2-544f" hidden="false" type="rule" targetId="4dc2-df44-cb9c-2c9b"/>
+        <infoLink name="Indomitable" id="ac5b-76e0-826e-1aba" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -3918,6 +3923,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
       <infoLinks>
         <infoLink name="Undead" id="e732-99db-20a1-0fa7" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
         <infoLink name="Arrows of Asaph" id="a91b-d447-39ae-0d25" hidden="false" type="rule" targetId="4503-7ae5-be26-e5b1"/>
+        <infoLink name="Indomitable" id="e7e7-7877-cf73-3b05" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
       </infoLinks>
       <rules>
         <rule name="Unstoppable Assault" id="65a2-317c-4a4b-ff8c" hidden="false">
@@ -3960,11 +3966,12 @@ If, at the start of any of your turns following the death of the Hierophant, the
       </profiles>
       <rules>
         <rule name="Spirit Conduit" id="1a63-d825-72b0-facd" hidden="false">
-          <description>Friendly Wizards within 12&quot; of one or more Hierotitans gains a +1 Casting bonus.</description>
+          <description>Friendly Wizards within 12&quot; of one or more Hierotitans gains a +1 casting bonus.</description>
         </rule>
       </rules>
       <infoLinks>
         <infoLink name="Undead" id="1987-2bf5-a469-e3ac" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
+        <infoLink name="Indomitable" id="8e53-85ba-5fec-1272" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="f4b6-b202-6680-ea37" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -4090,6 +4097,7 @@ Leech from the Lore of Death.</characteristic>
             <modifier type="set" value="Khemric Titan" field="annotation"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Indomitable" id="f07d-dd48-34bd-4155" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
       </infoLinks>
       <rules>
         <rule name="Curse of the Fallen" id="4f34-9b1d-f613-27b4" hidden="false">
@@ -4348,6 +4356,7 @@ Strength 2 hits which Ignores Armour saves</description>
                 <infoLink name="My Will Be Done" id="56c9-d270-5080-9020" hidden="false" type="rule" targetId="fd3c-1603-bde9-9ee1"/>
                 <infoLink name="Flammable" id="e565-b5cb-6060-a4f8" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
                 <infoLink name="Undead" id="95e6-4a1d-03be-9ef6" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
+                <infoLink name="Indomitable" id="72c7-15fc-300c-daa6" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
               </infoLinks>
               <rules>
                 <rule name="Settra the Great" id="75f3-e6cb-4d57-82e7" hidden="false">
@@ -4363,6 +4372,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <categoryLinks>
                 <categoryLink name="Chariot" hidden="false" id="e531-c3e6-4756-670f" targetId="7224-b7fd-d652-3ff2" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="set" value="Settra the Imperishable" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="High Queen Khalida Neferher" hidden="false" id="ee23-de55-b7e4-16c1" sortIndex="2">
               <costs>
@@ -4385,6 +4397,7 @@ Strength 2 hits which Ignores Armour saves</description>
                     <modifier type="set" value="High Queen Khalida Neferher" field="name"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Indomitable" id="b2ec-0a77-a698-9bfa" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
               </infoLinks>
               <rules>
                 <rule name="Blessing of Asaph" id="0ee2-f3fc-f5a7-fc99" hidden="false">
@@ -4463,6 +4476,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="d266-08ae-8740-c638" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="set" value="High Queen Khalida Neferher" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Grand Hierophant Khatep" hidden="false" id="219b-69c9-84ad-0ce7" sortIndex="3">
               <costs>
@@ -4587,12 +4603,16 @@ Strength 2 hits which Ignores Armour saves</description>
               <infoLinks>
                 <infoLink name="Undead" id="f076-9b77-168a-23ba" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
                 <infoLink name="Loremaster (Lore of Nehekhara)" id="d433-01ab-5fba-2871" hidden="false" type="rule" targetId="67cf-c767-bc85-2897"/>
+                <infoLink name="Indomitable" id="fec1-ad66-5ab0-69fa" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
               </infoLinks>
               <rules>
                 <rule name="Grand Hierophant of Khemri" id="07ef-387c-b03f-61bd" hidden="false">
                   <description>If you take Grand Hierophant Khatep, he must be your army&apos;s Hierophant. He gives his unit the Regeneration (5+) special rule rather than Regeneration (6+). Additionally, when using The Restless Dead Lore Attribute, Khatep restores 2D6 Wounds for Core Units (except Chariots), D6 Wounds for Special Units, Chariots and Monstrous Cavalry, and D3 Wounds for Rare Units</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Grand Hierophant Khatep" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Arkhan the Black" hidden="false" id="6e80-2602-2a35-92e3" sortIndex="4">
               <costs>
@@ -4966,6 +4986,12 @@ Strength 2 hits which Ignores Armour saves</description>
                   </selectionEntries>
                 </entryLink>
               </entryLinks>
+              <infoLinks>
+                <infoLink name="Indomitable" id="919c-ea95-b57c-7bf3" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="Arkhan the Black" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Sehenesmet" hidden="false" id="5a62-4fb2-10ff-2a36" sortIndex="5">
               <categoryLinks>
@@ -5014,6 +5040,7 @@ Strength 2 hits which Ignores Armour saves</description>
                     <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Indomitable" id="fc10-48bd-6ca6-7fe0" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
               </infoLinks>
               <rules>
                 <rule name="Master Stone Shaper" id="1d2e-5719-8ea4-b032" hidden="false">
@@ -5068,6 +5095,9 @@ Strength 2 hits which Ignores Armour saves</description>
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="set" value="Sehenesmet" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -5164,6 +5194,7 @@ Strength 2 hits which Ignores Armour saves</description>
                 <infoLink name="Curse of the Necropolis" id="e78e-9a11-1b4b-0d5d" hidden="false" type="rule" targetId="799c-deaf-f39a-f777"/>
                 <infoLink name="Flammable" id="89e9-8a53-1141-11b6" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
                 <infoLink name="My Will Be Done" id="1897-56e4-087b-d2fc" hidden="false" type="rule" targetId="fd3c-1603-bde9-9ee1"/>
+                <infoLink name="Indomitable" id="ae01-c2cd-4937-9d9d" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
               </infoLinks>
               <rules>
                 <rule name="Scythan Warriors" id="1655-8c52-95b4-ce5f" hidden="false">
@@ -5176,6 +5207,9 @@ Strength 2 hits which Ignores Armour saves</description>
                 <categoryLink name="Infantry" hidden="false" id="076a-9726-adac-44a5" targetId="22c9-1606-58f8-2e60" primary="false"/>
                 <categoryLink name="Z Armour" hidden="false" id="c44b-20b2-6d07-402b" targetId="387c-2b7c-0a30-7305" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="set" value="Prince Tutankhamut" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Prince Apophas " hidden="false" id="3819-6db1-329d-27e3">
               <profiles>
@@ -5243,6 +5277,8 @@ Strength 2 hits which Ignores Armour saves</description>
                     <modifier type="set" value="Prince Apophas " field="name"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Indomitable" id="1467-f3f5-7fd3-f3d1" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
+                <infoLink name="Indomitable" id="b06f-cdee-4daf-3f5f" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
               </infoLinks>
               <rules>
                 <rule name="Desert Revenant" id="e494-2288-2430-5b80" hidden="false">
@@ -5258,6 +5294,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="8b54-615a-7297-fbd3" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="set" value="Prince Apophas " field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="The Herald Nekaph" hidden="false" id="9db0-aee3-2dd6-c24a">
               <costs>
@@ -5309,12 +5348,12 @@ Strength 2 hits which Ignores Armour saves</description>
                         </entryLink>
                       </entryLinks>
                     </entryLink>
-                    <entryLink import="true" name="Skeleton Chariot" hidden="false" id="1724-afdc-7a5f-cf0b" type="selectionEntry" targetId="3ec1-e263-5371-742a" sortIndex="2">
+                    <entryLink import="true" name="Skeleton Chariot" hidden="false" id="1724-afdc-7a5f-cf0b" type="selectionEntry" targetId="3ec1-e263-5371-742a" sortIndex="3">
                       <costs>
-                        <cost name="pts" typeId="points" value="30"/>
+                        <cost name="pts" typeId="points" value="48"/>
                       </costs>
                     </entryLink>
-                    <entryLink import="true" name="Necroserpent" hidden="false" id="0b12-e678-6677-4228" type="selectionEntry" targetId="467c-c6c3-9482-9d5e" sortIndex="3">
+                    <entryLink import="true" name="Necroserpent" hidden="false" id="0b12-e678-6677-4228" type="selectionEntry" targetId="467c-c6c3-9482-9d5e" sortIndex="2">
                       <costs>
                         <cost name="pts" typeId="points" value="32"/>
                       </costs>
@@ -5371,6 +5410,7 @@ Strength 2 hits which Ignores Armour saves</description>
                     <modifier type="set" value="5+ when in a challange." field="bdf9-d73e-e13b-b0ce"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Indomitable" id="5e76-afb8-9b2c-a334" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Z Light Armour" hidden="false" id="602d-55f0-ee73-86ed" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
@@ -5378,6 +5418,9 @@ Strength 2 hits which Ignores Armour saves</description>
                 <categoryLink name="Infantry" hidden="false" id="e918-b03b-36dd-4b38" targetId="22c9-1606-58f8-2e60" primary="false"/>
                 <categoryLink name="Z Armour" hidden="false" id="4de6-54fc-c984-b6dc" targetId="387c-2b7c-0a30-7305" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="set" value="The Herald Nekaph" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Ramhotep the Visionary " hidden="false" id="055d-b069-c0bc-13d6">
               <costs>
@@ -5445,6 +5488,7 @@ Strength 2 hits which Ignores Armour saves</description>
                 <infoLink name="Undead" id="bd89-ae91-afde-affa" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
                 <infoLink name="Wrath of the Creator" id="52ff-ec60-4731-fc74" hidden="false" type="rule" targetId="8847-a7da-87d3-99c2"/>
                 <infoLink name="Stone Shaper" id="1d26-5773-797d-1add" hidden="false" type="rule" targetId="1171-78ec-f7ca-499c"/>
+                <infoLink name="Indomitable" id="ad38-6efc-b0cf-226a" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
               </infoLinks>
               <rules>
                 <rule name="Master Artisan" id="f6a4-2b96-d743-ec41" hidden="false">
@@ -5454,6 +5498,9 @@ Strength 2 hits which Ignores Armour saves</description>
                   <description>Ramhotep confers the Frenzy special rule onto the unit he accompanies. While he remains in the unit, the unit can never lose its Frenzy.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Ramhotep the Visionary " field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -5515,34 +5562,53 @@ Strength 2 hits which Ignores Armour saves</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Skeleton Chariot" hidden="false" id="d8db-128a-56c5-c383" type="selectionEntry" targetId="3ec1-e263-5371-742a">
-          <constraints>
-            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="19bb-92ef-beb1-252b"/>
-          </constraints>
+        <entryLink import="true" name="11. Unit Options" hidden="false" id="1890-6a00-b852-6448" type="selectionEntryGroup" targetId="920d-8a41-44b9-c364" sortIndex="1">
+          <entryLinks>
+            <entryLink import="true" name="Blessing of Asaph" hidden="false" id="6230-39fc-ad66-792d" type="selectionEntry" targetId="44a7-5981-d3a2-35f1"/>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries.recursive"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries.recursive"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Skeleton Chariot" hidden="false" id="ce9f-c85d-5003-91d1">
           <costs>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Skeleton Chariot" hidden="false" id="0e27-d8c3-6d6c-7a77" type="selectionEntryGroup" targetId="a1b6-cee5-aadc-c345" flatten="true"/>
+          </entryLinks>
           <infoLinks>
-            <infoLink name="Arrows of Asaph" id="23fb-f81c-40a9-8052" hidden="false" type="rule" targetId="4503-7ae5-be26-e5b1"/>
-            <infoLink name="Undead" id="2fd7-9cf8-363a-eeca" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
+            <infoLink name="Skeleton Chariot" id="48b5-ad9a-4fdf-2029" hidden="false" type="infoGroup" targetId="de1e-2cc6-5b35-7948"/>
           </infoLinks>
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Charioteer" hidden="false" id="79e5-cd80-e3ff-cebc" subType="crew" collective="true">
+            <selectionEntry type="model" import="true" name="Charioteer" hidden="false" id="eccf-ee6f-cb77-e732" subType="crew" collective="true">
               <constraints>
-                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="b38b-686f-ce10-b1ff" includeChildSelections="false" percentValue="false"/>
-                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="fdc6-0a56-e2dd-6c43" includeChildSelections="false" percentValue="false"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f9fb-0810-a3a9-400e" includeChildSelections="false" percentValue="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="169a-6497-87cb-ba32" includeChildSelections="false" percentValue="false"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="8731-f8e6-f180-f206" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="5c25-a49a-1dad-33d0" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
                   <entryLinks>
-                    <entryLink import="true" name="Bow" hidden="false" id="7ba3-f36d-c1e2-1ff1" type="selectionEntry" targetId="94ec-8421-59ea-a9d0">
+                    <entryLink import="true" name="Bow" hidden="false" id="a1d3-7ffd-8f6d-e5fb" type="selectionEntry" targetId="94ec-8421-59ea-a9d0">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="887c-f106-6a5d-af67" includeChildSelections="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9d64-a432-69a8-7bed" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
-                    <entryLink import="true" name="Javelins" hidden="false" id="a159-721d-3143-97fc" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c">
+                    <entryLink import="true" name="Javelins" hidden="false" id="a6b2-3cff-858b-a388" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="72c5-ea0d-13f0-e473" includeChildSelections="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0a42-a289-2310-4216" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -5551,30 +5617,30 @@ Strength 2 hits which Ignores Armour saves</description>
                     <modifier type="set" value="2" field="d000-627b-af39-4fd6"/>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="27ce-4ac2-8d78-139f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="228c-cfcb-766a-2158" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
                   <entryLinks>
-                    <entryLink import="true" name="Light Lance" hidden="false" id="ca4c-b405-1f55-d878" type="selectionEntry" targetId="d989-1124-0dea-ae27">
+                    <entryLink import="true" name="Light Lance" hidden="false" id="af61-8124-53b3-ab7a" type="selectionEntry" targetId="d989-1124-0dea-ae27">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4f1e-bb97-82d8-2dbe" includeChildSelections="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ba74-5144-c273-a731" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="9882-39b4-0e8b-94ef" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="d2bb-61cf-fa41-d9b9" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
                   <entryLinks>
-                    <entryLink import="true" name="Light Armour" hidden="false" id="f479-94be-02f4-2b53" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                    <entryLink import="true" name="Light Armour" hidden="false" id="4df4-ba39-ece3-a0ea" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
                       <costs>
                         <cost name="pts" typeId="points" value="4"/>
                       </costs>
                       <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b8dc-4a6c-50f1-b4b1" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb4c-5c74-42c6-db8c" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
               </entryLinks>
               <profiles>
-                <profile name="Charioteer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="4779-1146-e913-0004">
+                <profile name="Charioteer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0f6d-ee41-4d29-a278">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215"/>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -5596,6 +5662,9 @@ Strength 2 hits which Ignores Armour saves</description>
                   </conditions>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Arrows of Asaph" id="f333-bf3b-dfaa-8aa0" hidden="false" type="rule" targetId="4503-7ae5-be26-e5b1"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -5605,26 +5674,11 @@ Strength 2 hits which Ignores Armour saves</description>
               </conditions>
             </modifier>
           </modifiers>
-        </entryLink>
-        <entryLink import="true" name="11. Unit Options" hidden="false" id="1890-6a00-b852-6448" type="selectionEntryGroup" targetId="920d-8a41-44b9-c364" sortIndex="1">
-          <entryLinks>
-            <entryLink import="true" name="Blessing of Asaph" hidden="false" id="6230-39fc-ad66-792d" type="selectionEntry" targetId="44a7-5981-d3a2-35f1"/>
-          </entryLinks>
-        </entryLink>
-      </entryLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
-            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category"/>
-            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries.recursive"/>
-            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries.recursive"/>
-          </modifiers>
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="9199-bdd2-6d29-a156"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ushabti" hidden="false" id="c5db-de5b-7130-4ca6" sortIndex="17">
       <selectionEntries>
@@ -6029,7 +6083,7 @@ Strength 2 hits which Ignores Armour saves</description>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                     <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                     <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">If the wielder of this item successfully Hits an enemy unit one or more times in close combat, that unit suffers -1 to their armour saves for the duration of the game.</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">If the wielder of this item successfully Hits an enemy unit one or more times in close combat, that unit suffers -1 to their armour saves for the duration of the game. This is not cumulative. </characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7262,8 +7316,7 @@ Strength 2 hits which Ignores Armour saves</description>
           <profiles>
             <profile name="Icon of Rakaph" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="c159-5623-ed97-059b">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying the Icon of Rakaph may make a Swift Reform at the start of their Movement phase. The unit may then
-move as normal (including declaring charges).</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying the Icon of Rakaph may attempt to make a Swift Reform at the start of their Movement phase instead of the Remaining Moves sub-phase. The unit may then move as normal (including declaring charges).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7323,6 +7376,22 @@ move as normal (including declaring charges).</characteristic>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b28b-45f3-d78e-b217-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Skeleton Chariot" id="a1b6-cee5-aadc-c345" hidden="false">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Pullers" id="87ae-604f-13a1-c9d1" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Skeletal Steed" hidden="false" id="7cbf-033f-8ec4-6fd8" type="selectionEntry" targetId="a440-163d-31eb-cdf7">
+              <modifiers>
+                <modifier type="set" value="2" field="b5af-59e8-85b8-1e2d"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="7441-35ce-34af-bae8"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <entryLinks>
     <entryLink import="true" name="Khemrian Warsphinx " hidden="false" id="1b04-37e7-6cf7-cc85" type="selectionEntry" targetId="536c-6285-d0a4-6eb3" sortIndex="29">
@@ -7345,13 +7414,16 @@ move as normal (including declaring charges).</characteristic>
           </conditions>
         </modifierGroup>
       </modifierGroups>
+      <infoLinks>
+        <infoLink name="Indomitable" id="24a8-8729-e420-e56d" hidden="false" type="rule" targetId="05f8-2f1b-c273-a1d9"/>
+      </infoLinks>
     </entryLink>
-    <entryLink import="true" name="Tomb Barque of Usirian" hidden="false" id="f5d8-3045-8ac3-28fd" type="selectionEntry" targetId="9b70-c0b0-e261-8a04" sortIndex="24">
+    <entryLink import="true" name="Tomb Barque of Usirian" hidden="false" id="f5d8-3045-8ac3-28fd" type="selectionEntry" targetId="9b70-c0b0-e261-8a04" sortIndex="28">
       <costs>
         <cost name="pts" typeId="points" value="125"/>
       </costs>
       <categoryLinks>
-        <categoryLink name="Special" hidden="false" id="b4a9-f665-4e42-d21f" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Rare" hidden="false" id="10b3-da66-bc96-823f" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -7367,9 +7439,9 @@ move as normal (including declaring charges).</characteristic>
         </modifierGroup>
       </modifierGroups>
     </entryLink>
-    <entryLink import="true" name="Casket of Souls" hidden="false" id="c5c3-ac39-614d-0adf" type="selectionEntry" targetId="35ef-e7ca-0605-a361" sortIndex="28">
+    <entryLink import="true" name="Casket of Souls" hidden="false" id="c5c3-ac39-614d-0adf" type="selectionEntry" targetId="35ef-e7ca-0605-a361" sortIndex="27">
       <costs>
-        <cost name="pts" typeId="points" value="135"/>
+        <cost name="pts" typeId="points" value="125"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="0a45-b1d1-73e5-463e" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -7446,6 +7518,13 @@ move as normal (including declaring charges).</characteristic>
           </characteristics>
         </profile>
       </profiles>
+    </infoGroup>
+    <infoGroup name="Skeleton Chariot" id="de1e-2cc6-5b35-7948" hidden="false">
+      <infoLinks>
+        <infoLink name="Skeleton Chariot " id="32da-e608-8b58-f140" hidden="false" type="profile" targetId="d2de-f5a2-d10e-a10d"/>
+        <infoLink name="Skeleton Chariot " id="f25b-7aae-65bf-9e47" hidden="false" type="profile" targetId="0f95-ca53-690c-0478"/>
+        <infoLink name="Undead" id="17d5-f7bf-ca14-b4c4" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
+      </infoLinks>
     </infoGroup>
   </sharedInfoGroups>
 </catalogue>
