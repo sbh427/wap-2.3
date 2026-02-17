@@ -7134,8 +7134,8 @@
         <infoLink name="Loremaster" id="db31-1473-718a-a423" hidden="false" type="rule" targetId="4cc1-bc54-7778-c333"/>
       </infoLinks>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c605-baf4-bf9e-b43d-min"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c605-baf4-bf9e-b43d-max"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c605-baf4-bf9e-b43d-min" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c605-baf4-bf9e-b43d-max" automatic="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Skirmishers" hidden="false" id="468e-0a4a-682a-7de2" collective="true">
