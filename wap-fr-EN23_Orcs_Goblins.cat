@@ -11662,7 +11662,23 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
     <selectionEntry type="upgrade" import="true" name="Night Goblin" hidden="false" id="cd2b-976c-8770-3030" collective="true">
       <modifiers>
         <modifier type="replace" value="Night Goblin" field="13f9-a26b-05af-3459" scope="model" affects="self.entries.model.profiles.Model" arg="Goblin"/>
-        <modifier type="add" value="222a-078c-ce85-fb16" field="category" scope="root-entry" affects="self.entries.model"/>
+        <modifier type="add" value="222a-078c-ce85-fb16" field="category" scope="root-entry" affects="self.entries.model">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="model-or-unit" childId="d280-b7df-c185-2ba5" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model-or-unit" childId="d38a-73da-883b-bab9" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="1aae-2529-c509-7573" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <infoLinks>
         <infoLink name="Hatred (Dwarfs)" id="aa2c-19ff-7816-1450" hidden="false" type="rule" targetId="da8d-d10d-b525-a19a"/>
