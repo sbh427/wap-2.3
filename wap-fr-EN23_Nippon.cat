@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="e4db-e48a-8dd2-6452" name="Nippon WAP 1.3" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="75" revision="8" authorName="Leminge" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="e4db-e48a-8dd2-6452" name="Nippon WAP 1.31" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="75" revision="8" authorName="Leminge" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Armoury" id="50cd-73c9-337b-704e" targetId="522e-5e2a-d54c-4959"/>
     <catalogueLink type="catalogue" name="Bestiary" id="db68-e398-738d-deb1" targetId="1fc9-2903-cb19-5737"/>
   </catalogueLinks>
   <sharedRules>
     <rule name="Death Before Dishonour" id="eb00-8407-3635-9261" hidden="false">
-      <description>Whenever a unit comprised wholly of models with this special rule is required to take a Break Test, they may choose to do so using 3D6, discarding the highest dice. However, if this test is failed, you must remove the entire unit as a casualty. The enemy then cannot pursue or overrun, but may reform as normal</description>
+      <description>Whenever a unit comprised wholly of models with this special rule is required to take a Break Test, they may choose to do so using the Cold-blooded special rule. However, if this test is failed, you must remove the entire unit as a casualty. The enemy then cannot pursue or overrun, but may reform as normal.</description>
     </rule>
     <rule name="Way of the Warrior" id="28dd-2b0a-b009-9f2a" hidden="false">
-      <description>Models with this rule must always accept challenges and re-roll all failed Psychology tests. In addition, they ignore Panic caused by friendly units with the Loner special rule and with a lower unmodified Leadership value (excluding any characters) than them.</description>
+      <description>Models with this rule must always accept challenges. In addition, they ignore Panic caused by friendly units with the Loner special rule and with a lower unmodified Leadership value (excluding any characters) than them.</description>
     </rule>
     <rule name="Sworn Bodyguard" id="40b9-59de-cb15-5309" hidden="false">
       <description>If you have any Characters with the Way of the Warrior special rule (that are not Hatamoto) in your army, you may nominate one of them for the Hatamoto to protect at the start of the game. The same character may not be nominated by several Hatamoto. Whenever the nominated character suffers a Wound (before saves are taken) and the Hatamoto is in the same unit as them, roll a D6. On a 1, the Wound is resolved as normal, but on a 2+ the Wound is intercepted, and re- llocated to the Hatamoto. No more than one Wound can be re-allocated to each Hatamoto in each phase. Wounds in a challenge cannot be re-allocated.</description>
@@ -33,8 +33,13 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c81-c071-b6e4-433a" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Katana (Two Handed)" id="c181-995b-b8b0-331f" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27"/>
         <infoLink name="Katana (One Handed)" id="a577-94d1-92ed-a1ad" hidden="false" type="profile" targetId="3ab7-eb7a-cf33-e82e"/>
+        <infoLink name="Parry" id="1c96-d5b0-5642-f57d" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+          <modifiers>
+            <modifier type="set" value="Katana" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Horo Cloak" hidden="false" id="ea6b-8b2e-5e1c-a37a" collective="true">
@@ -60,20 +65,8 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="281a-4588-8cf3-0fb8" includeChildSelections="false" automatic="true" negative="false"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="5" field="points">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="1"/>
+        <cost name="pts" typeId="points" value="5"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mon of the Hattiga Clan" hidden="false" id="e48e-38a1-5b7d-313d" collective="true">
@@ -85,45 +78,21 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43c5-1bb1-d537-eb51" includeChildSelections="false" automatic="false"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="20" field="points">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="1"/>
+        <cost name="pts" typeId="points" value="20"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mon of the Dawate Clan" hidden="false" id="118f-7d91-db4d-d58d" collective="true">
       <rules>
         <rule name="Mon of the Dawate Clan" id="19eb-cb2f-856b-ca48" hidden="false">
-          <description>Models with this Mon do not suffer any penalties to their Initiative if armed with great weapons.</description>
+          <description>Models with great weapons only. Models with this Mon do not suffer any penalties to their Initiative if armed with great weapons. </description>
         </rule>
       </rules>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d64-9a14-46fa-8ca7" includeChildSelections="false" automatic="true"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="15" field="points">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="1"/>
+        <cost name="pts" typeId="points" value="15"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mon of the Shisuma Clan" hidden="false" id="7314-efb2-5a40-052b" collective="true">
@@ -135,33 +104,28 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="27a7-9747-127f-d63e" includeChildSelections="false" automatic="true"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="10" field="points">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="1"/>
+        <cost name="pts" typeId="points" value="10"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mon of the Odari Clan" hidden="false" id="1dbf-1ebe-5d1b-c32b" collective="true">
       <rules>
         <rule name="Mon of the Odari Clan" id="d8c8-01d1-284c-c491" hidden="false">
           <description>Models with this Mon gain +1 to their Leadership.</description>
+          <modifiers>
+            <modifier type="append" value="(already in profile)" field="description">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1dbf-1ebe-5d1b-c32b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </rule>
       </rules>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="01c5-dc72-4f29-5c41" includeChildSelections="false" automatic="true"/>
       </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="1"/>
+        <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mon of the Hojizu Clan" hidden="false" id="4e80-db65-bc71-5ca7" collective="true">
@@ -173,9 +137,6 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a9e-3260-5a0e-7971" includeChildSelections="false" automatic="true"/>
       </constraints>
-      <costs>
-        <cost name="pts" typeId="points" value="15"/>
-      </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mon of the Takai Clan" hidden="false" id="f6d2-44d5-d54d-f728" collective="true">
       <rules>
@@ -186,45 +147,21 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="86cc-e11a-1612-8871" includeChildSelections="false" automatic="true"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="10" field="points">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="1"/>
+        <cost name="pts" typeId="points" value="10"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mon of the Uesigo Clan" hidden="false" id="2e10-9422-ead4-c046" collective="true">
       <rules>
         <rule name="Mon of the Uesigo Clan" id="e1f7-3ef0-5e5f-8b94" hidden="false">
-          <description>Warrior Monks with this Clan Mon gain the Stubborn special rule. If they are already Stubborn, they instead become Unbreakable. Onmyoji add +1 to their casting result.</description>
+          <description>Warrior Monks with this Clan Mon gain the Stubborn special rule. Yamabushi may re-roll failed Leadership tests when using Prayers of the Kami. </description>
         </rule>
       </rules>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08c4-85c8-b653-3f58" includeChildSelections="false" automatic="true"/>
       </constraints>
-      <modifiers>
-        <modifier type="set" value="20" field="points">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
       <costs>
-        <cost name="pts" typeId="points" value="1"/>
+        <cost name="pts" typeId="points" value="15"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Komainu" hidden="false" id="1130-01f0-bc20-3ac7" subType="mount" collective="true">
@@ -247,7 +184,7 @@
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Chimeric)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -287,7 +224,7 @@
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Chimeric)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -420,7 +357,7 @@
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Dragon)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Draconid)</characteristic>
           </characteristics>
         </profile>
         <profile name="Poison Breath" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="9c4b-04cc-973a-446e">
@@ -633,17 +570,15 @@
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="d88f-2d8c-8b1b-2a10" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="dd60-2253-ed12-30e6" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="68a1-c28e-5641-4956" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
-            <entryLink import="true" name="Katana" hidden="false" id="f2d7-c58c-1055-50fc" type="selectionEntry" targetId="04a7-e5b9-407a-a686" sortIndex="1">
+            <entryLink import="true" name="Katana" hidden="false" id="f2d7-c58c-1055-50fc" type="selectionEntry" targetId="04a7-e5b9-407a-a686" sortIndex="-1">
               <modifiers>
                 <modifier type="set" value="1" field="54ba-0af7-544e-51a8">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="b785-38e4-3e4a-9385" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="7617-f4b5-02ac-3d15" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -653,20 +588,20 @@
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="54ba-0af7-544e-51a8" includeChildSelections="false" automatic="true"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Buckler" hidden="false" id="7a88-238f-eedd-4428" type="selectionEntry" targetId="b785-38e4-3e4a-9385" sortIndex="3"/>
-            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="d235-c957-3f48-5107" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2"/>
-            <entryLink import="true" name="Spear" hidden="false" id="902b-27ba-4402-3f93" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="4"/>
+            <entryLink import="true" name="Buckler" hidden="false" id="7a88-238f-eedd-4428" type="selectionEntry" targetId="b785-38e4-3e4a-9385" sortIndex="1"/>
+            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="d235-c957-3f48-5107" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="4"/>
+            <entryLink import="true" name="Spear" hidden="false" id="902b-27ba-4402-3f93" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="3"/>
             <entryLink import="true" name="Light Lance" hidden="false" id="ced4-fd35-e2ef-4bd8" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="4"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="78fa-9588-9861-ace3" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="6">
+            <entryLink import="true" name="Great Weapon" hidden="false" id="78fa-9588-9861-ace3" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="7">
               <costs>
-                <cost name="pts" typeId="points" value="4"/>
+                <cost name="pts" typeId="points" value="6"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="7101-aae5-8262-a19b" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="7">
+            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="7101-aae5-8262-a19b" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="4"/>
               </costs>
@@ -678,7 +613,6 @@
                 <conditionGroup type="or">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="b785-38e4-3e4a-9385" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7617-f4b5-02ac-3d15" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -729,7 +663,11 @@
         <entryLink import="true" name="90. Magic Items" hidden="false" id="da5b-c4dc-4686-d815" type="selectionEntryGroup" targetId="d0e7-e6e8-0e13-2946">
           <modifiers>
             <modifier type="increment" value="100" field="8842-f7c6-52b3-7698"/>
+            <modifier type="append" value="&amp; Clan Mons" field="name"/>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="dd60-2253-ed12-30e6" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <profiles>
@@ -786,7 +724,6 @@
           </modifiers>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="9b26-9cd1-0bde-affb" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="ccf7-50b2-1857-fca1" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="53d9-02c8-af1f-21cb" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="1d91-779f-5a43-9fbf" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
@@ -875,19 +812,15 @@
         <entryLink import="true" name="90. Magic Items" hidden="false" id="7fb9-8a97-b187-4c6a" type="selectionEntryGroup" targetId="d0e7-e6e8-0e13-2946">
           <modifiers>
             <modifier type="increment" value="50" field="8842-f7c6-52b3-7698"/>
+            <modifier type="append" value="&amp; Clan Mons" field="name"/>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="c44e-5fd6-d791-4491" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+          </entryLinks>
         </entryLink>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="895d-cbe1-ebd3-3642" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ebf6-f05a-c485-cad5" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Katana" hidden="false" id="2e00-f331-8c83-1fc8" type="selectionEntry" targetId="04a7-e5b9-407a-a686" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="1" field="7692-f633-c9b0-51f3">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7617-f4b5-02ac-3d15" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7692-f633-c9b0-51f3" includeChildSelections="false" automatic="true"/>
               </constraints>
@@ -895,24 +828,17 @@
             <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="829c-07f5-30be-4d4a" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2"/>
             <entryLink import="true" name="Spear" hidden="false" id="25c6-df6e-7e95-f6e5" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="3"/>
             <entryLink import="true" name="Light Lance" hidden="false" id="dec0-1687-4964-6c3e" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="4"/>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="fbe3-afb5-48b5-6bdf" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="5">
+            <entryLink import="true" name="Great Weapon" hidden="false" id="fbe3-afb5-48b5-6bdf" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="6">
               <costs>
-                <cost name="pts" typeId="points" value="3"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="bda0-2a8a-2c7a-cc2f" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="6">
+            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="bda0-2a8a-2c7a-cc2f" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="3"/>
               </costs>
             </entryLink>
           </entryLinks>
-          <modifiers>
-            <modifier type="set" value="2" field="fe22-ce5f-b23e-303d">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="7617-f4b5-02ac-3d15" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </entryLink>
         <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="1263-3bec-2085-d770" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
           <entryLinks>
@@ -1037,7 +963,11 @@
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="544c-3294-a259-081f" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="append" value="&amp; Clan Mons" field="name"/>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="f443-ab35-82dd-e59c" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+          </entryLinks>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="c06a-d657-9167-252f" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
           <entryLinks>
@@ -1054,17 +984,9 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf93-ef21-4a17-60e8" includeChildSelections="false"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="dcc6-2f42-d879-e4e5" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ffb6-929e-a8e3-6b94" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Katana" hidden="false" id="2d4e-5191-2149-9d12" type="selectionEntry" targetId="04a7-e5b9-407a-a686" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="1" field="d6d2-2b9c-07aa-acab">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7617-f4b5-02ac-3d15" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d6d2-2b9c-07aa-acab" includeChildSelections="false" automatic="true"/>
               </constraints>
@@ -1076,24 +998,17 @@
                 <cost name="pts" typeId="points" value="2"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="b1c7-e833-5473-d261" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="5">
+            <entryLink import="true" name="Great Weapon" hidden="false" id="b1c7-e833-5473-d261" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="6">
               <costs>
-                <cost name="pts" typeId="points" value="2"/>
+                <cost name="pts" typeId="points" value="3"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="e4c7-a0f9-8440-3402" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="6">
+            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="e4c7-a0f9-8440-3402" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="2"/>
               </costs>
             </entryLink>
           </entryLinks>
-          <modifiers>
-            <modifier type="set" value="2" field="fe22-ce5f-b23e-303d">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="7617-f4b5-02ac-3d15" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </entryLink>
         <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="9402-9b2f-0f73-fc49" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
           <entryLinks>
@@ -1193,7 +1108,6 @@
       </profiles>
       <entryLinks>
         <entryLink import="true" name="10. Character Options" hidden="false" id="4025-a217-a94a-fce6" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="fb2b-70de-eb84-78b9" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d59d-a78e-7369-ad3e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="3353-c8e8-8559-8587" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
@@ -1274,11 +1188,6 @@
             <modifier type="increment" value="50" field="8842-f7c6-52b3-7698"/>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="f8a1-61bd-3c63-bb2e" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.f6d2-44d5-d54d-f728"/>
-          </modifiers>
-        </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f732-9b3b-56d4-20d6" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Katana" hidden="false" id="bd04-8fff-215e-e52f" type="selectionEntry" targetId="04a7-e5b9-407a-a686">
@@ -1344,7 +1253,6 @@
       </profiles>
       <entryLinks>
         <entryLink import="true" name="10. Character Options" hidden="false" id="2c9c-bf8d-6a3d-e96e" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="68ac-3a02-93dc-b52a" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="208f-0560-d256-2326" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="66a1-da37-cac2-1231" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
@@ -1378,7 +1286,11 @@
         <entryLink import="true" name="90. Magic Items" hidden="false" id="db5d-089d-c294-227f" type="selectionEntryGroup" targetId="d0e7-e6e8-0e13-2946">
           <modifiers>
             <modifier type="increment" value="50" field="8842-f7c6-52b3-7698"/>
+            <modifier type="append" value="&amp; Clan Mons" field="name"/>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="f769-3e32-59fe-2bdf" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+          </entryLinks>
         </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4801-fd9a-bb97-cfc0" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
@@ -1387,7 +1299,7 @@
                 <cost name="pts" typeId="points" value="4"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="7bff-abe6-6984-4656" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
+            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="7bff-abe6-6984-4656" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="2"/>
               </costs>
@@ -1414,9 +1326,9 @@
                 <cost name="pts" typeId="points" value="3"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="59b4-83d3-8098-3655" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
+            <entryLink import="true" name="Great Weapon" hidden="false" id="59b4-83d3-8098-3655" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
               <costs>
-                <cost name="pts" typeId="points" value="2"/>
+                <cost name="pts" typeId="points" value="3"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -1547,7 +1459,6 @@
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="12. Clan Mons" hidden="false" id="e371-25e1-0a38-02ef" type="selectionEntryGroup" targetId="d329-0185-b911-6f90"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="474c-f7b1-0691-293b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="5514-1a6a-3720-1201" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
@@ -1569,7 +1480,11 @@
         <entryLink import="true" name="90. Magic Items" hidden="false" id="4e3d-d362-adb6-08c2" type="selectionEntryGroup" targetId="d0e7-e6e8-0e13-2946">
           <modifiers>
             <modifier type="increment" value="50" field="8842-f7c6-52b3-7698"/>
+            <modifier type="append" value="&amp; Clan Mons" field="name"/>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="454b-515d-854e-9bc2" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <selectionEntryGroups>
@@ -1666,17 +1581,21 @@
                 <entryLink import="true" name="Medium Armour" hidden="false" id="9f8a-7f62-ebdc-c1ff" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1"/>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="fe11-3a1e-76ed-e347" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="fe11-3a1e-76ed-e347" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b815-008d-73fb-0d9c" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="9481-b589-3030-9052" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
+                <entryLink import="true" name="Great Weapon" hidden="false" id="9481-b589-3030-9052" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
                   <costs>
-                    <cost name="pts" typeId="points" value="1"/>
+                    <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Katana" hidden="false" id="3e5a-2c42-fe58-6a11" type="selectionEntry" targetId="04a7-e5b9-407a-a686" sortIndex="1"/>
                 <entryLink import="true" name="Spear" hidden="false" id="f0ca-3b12-b3ac-72c5" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="2"/>
-                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="47b0-62a6-a874-40c7" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="4">
+                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="47b0-62a6-a874-40c7" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
@@ -1766,7 +1685,11 @@
             <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="b475-35e0-5ce1-2d18" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="7667-8a72-8172-813f" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="7667-8a72-8172-813f" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="637a-80ff-68c7-9fd2" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Katana" hidden="false" id="a698-b759-3b87-fc42" type="selectionEntry" targetId="04a7-e5b9-407a-a686" sortIndex="1">
@@ -1890,7 +1813,11 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="8ab3-3e4e-d1fc-f22d" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="8ab3-3e4e-d1fc-f22d" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="99ad-7eb9-0cb5-7ea3" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Longbow" hidden="false" id="1dac-891a-d146-902a" type="selectionEntry" targetId="f6cc-1342-64fe-6a3e" sortIndex="4">
@@ -2014,7 +1941,11 @@
             <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="5b9c-9050-ec02-1a72" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="9af0-d072-da8b-876b" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="9af0-d072-da8b-876b" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1064-700c-7197-ad12" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Katana" hidden="false" id="7cde-5a28-8d1f-5c78" type="selectionEntry" targetId="04a7-e5b9-407a-a686" sortIndex="1">
@@ -2118,7 +2049,11 @@
                 <entryLink import="true" name="Light Armour" hidden="false" id="1873-998b-16a3-9449" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1"/>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="8bbc-705f-a7e6-8a1a" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="8bbc-705f-a7e6-8a1a" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="532a-7d7a-4215-bbee" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Polearm/Halberd" hidden="false" id="905a-a583-5337-8e6e" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
@@ -2171,7 +2106,11 @@
             <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="3e11-1db7-84c2-030d" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="ede4-a365-f6f9-6ec2" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="ede4-a365-f6f9-6ec2" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d17b-e848-7c6d-ea6b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Katana" hidden="false" id="a5a0-3df5-f0bf-58a7" type="selectionEntry" targetId="04a7-e5b9-407a-a686" sortIndex="1">
@@ -2299,9 +2238,14 @@
                 <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Magical Attacks" id="ed95-d53c-eaed-6063" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="6ca6-19d6-e5bd-3368" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="6ca6-19d6-e5bd-3368" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e392-ac1d-c5f6-9d87" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Katana" hidden="false" id="8bb5-90cf-d0d3-cd3b" type="selectionEntry" targetId="04a7-e5b9-407a-a686">
@@ -2400,9 +2344,14 @@
                 <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Magical Attacks" id="f761-9e96-ec3c-fbb6" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="114a-2494-b08e-4290" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="114a-2494-b08e-4290" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="2092-62a7-d793-0d77" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Polearm/Halberd" hidden="false" id="306b-75f6-c6be-c615" type="selectionEntry" targetId="757a-ff3d-710c-2d8b">
@@ -2509,7 +2458,11 @@
                 <entryLink import="true" name="Light Armour" hidden="false" id="445a-e85f-93dc-fae0" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1"/>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="c377-7197-0712-ee6a" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="c377-7197-0712-ee6a" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="43ab-c0f1-2716-47b6" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Great Weapon" hidden="false" id="56a2-20fe-a0dd-7283" type="selectionEntry" targetId="0473-857e-78d9-cb7c">
@@ -2589,7 +2542,11 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="eb16-4724-f041-40ea" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="eb16-4724-f041-40ea" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="03ab-5a4e-edfe-f674" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Katana" hidden="false" id="5d73-fc81-1e57-84d1" type="selectionEntry" targetId="04a7-e5b9-407a-a686">
@@ -2798,7 +2755,11 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="008d-10be-d414-2337" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="008d-10be-d414-2337" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="673c-1d2b-0dba-9699" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Katana" hidden="false" id="5c65-efed-70df-1222" type="selectionEntry" targetId="04a7-e5b9-407a-a686">
@@ -2869,7 +2830,11 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="9ad5-ebb0-292c-13e7" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="9ad5-ebb0-292c-13e7" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="4310-b435-c4c2-aa55" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
                 <entryLink import="true" name="Heavy Armour" hidden="false" id="4b64-60bc-de29-4dae" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="2">
@@ -3045,7 +3010,11 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="a484-5617-b073-1b82" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="a484-5617-b073-1b82" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e426-1c2b-788a-ba12" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Katana" hidden="false" id="ef98-adf3-7391-2fae" type="selectionEntry" targetId="04a7-e5b9-407a-a686">
@@ -3227,7 +3196,11 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="12. Clan Mons" hidden="false" id="c12f-a5e6-abff-c843" type="selectionEntryGroup" targetId="d329-0185-b911-6f90"/>
+            <entryLink import="true" name="12. Clan Mons" hidden="false" id="c12f-a5e6-abff-c843" type="selectionEntryGroup" targetId="d329-0185-b911-6f90">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Skirmishers" id="1523-5864-7e28-651d" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
@@ -3334,7 +3307,11 @@
                 </selectionEntry>
               </selectionEntries>
             </entryLink>
-            <entryLink import="true" name="12. Clan Mons" hidden="false" id="2835-e236-1727-1f7c" type="selectionEntryGroup" targetId="d329-0185-b911-6f90"/>
+            <entryLink import="true" name="12. Clan Mons" hidden="false" id="2835-e236-1727-1f7c" type="selectionEntryGroup" targetId="d329-0185-b911-6f90">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -3525,7 +3502,11 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2de6-3dc4-fcd7-dc32" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="11. Clan Mons" hidden="false" id="663f-edfc-0e84-d019" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="11. Clan Mons" hidden="false" id="663f-edfc-0e84-d019" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+              <modifiers>
+                <modifier type="set" value="1" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="af15-70d5-fde7-6a3f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Polearm/Halberd" hidden="false" id="d43c-b49e-efab-f121" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
@@ -3622,7 +3603,6 @@
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="ac5b-5712-16da-4211" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d650-1430-3806-a242" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Polearm/Halberd" hidden="false" id="2d4c-a82e-3070-8a00" type="selectionEntry" targetId="757a-ff3d-710c-2d8b">
@@ -3637,7 +3617,7 @@
         <infoLink name="Immunity (Psychology)" id="1308-0ae8-833b-9e3e" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
         <infoLink name="Ward Save" id="ba30-eda8-ad87-5692" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
           <modifiers>
-            <modifier type="set" value="Mikoshi Shrine" field="name"/>
+            <modifier type="set" value="Protection of the Kami" field="name"/>
             <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
           </modifiers>
         </infoLink>
@@ -3761,7 +3741,7 @@
             </profile>
             <profile name="Strategy and Discipline" typeId="ab1f-8f31-93aa-152f" typeName="Rhythms" hidden="false" id="c59d-8e99-0b37-4454">
               <characteristics>
-                <characteristic name="Effect" typeId="2a77-89bd-c1d8-bb5a">The units may roll 3D6 for Leadership tests to Reform, Restrain from Pursuit and March, discarding the highest result.</characteristic>
+                <characteristic name="Effect" typeId="2a77-89bd-c1d8-bb5a">The units have the Cold-blooded special rule when taking tests to Reform, Restrain from Pursuit and March. </characteristic>
               </characteristics>
             </profile>
             <profile name="Charge!" typeId="ab1f-8f31-93aa-152f" typeName="Rhythms" hidden="false" id="8f0a-1a64-40e9-1f3e">
@@ -3777,9 +3757,6 @@
           <description>At the start of any of your Movement phases, you may choose to have your Taiko Drum give out one of the Rythms abilities to all friendly units within 18&quot; which lasts until the start of your next Movement phase:</description>
         </rule>
       </rules>
-      <entryLinks>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="4f34-a70e-5223-53c0" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581" sortIndex="1"/>
-      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mangonel" hidden="false" id="cc91-0d44-e4c2-893f" sortIndex="54">
       <categoryLinks>
@@ -3790,7 +3767,11 @@
         <cost name="pts" typeId="points" value="90"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="a8a9-ae46-bb6f-defc" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581" sortIndex="1"/>
+        <entryLink import="true" name="11. Clan Mons" hidden="false" id="a8a9-ae46-bb6f-defc" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581" sortIndex="1">
+          <modifiers>
+            <modifier type="set" value="15" field="points" affects="self.entries"/>
+          </modifiers>
+        </entryLink>
         <entryLink import="true" name="Crew" hidden="false" id="399b-637e-1984-370b" type="selectionEntry" targetId="fa63-b4d5-3340-5244" sortIndex="2">
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="1c86-dad6-6d34-f1ec-min" includeChildSelections="false"/>
@@ -3833,7 +3814,11 @@
         <cost name="pts" typeId="points" value="85"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="d3ee-abff-0af7-a02e" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581" sortIndex="1"/>
+        <entryLink import="true" name="11. Clan Mons" hidden="false" id="d3ee-abff-0af7-a02e" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581" sortIndex="1">
+          <modifiers>
+            <modifier type="set" value="15" field="points" affects="self.entries"/>
+          </modifiers>
+        </entryLink>
         <entryLink import="true" name="Crew" hidden="false" id="9144-baf4-2e33-6057" type="selectionEntry" targetId="fa63-b4d5-3340-5244" sortIndex="2">
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="1da5-873d-f650-2c21-min" includeChildSelections="false"/>
@@ -3871,7 +3856,11 @@
         <cost name="pts" typeId="points" value="65"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="2f27-29d2-a770-e903" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581" sortIndex="1"/>
+        <entryLink import="true" name="11. Clan Mons" hidden="false" id="2f27-29d2-a770-e903" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581" sortIndex="1">
+          <modifiers>
+            <modifier type="set" value="15" field="points" affects="self.entries"/>
+          </modifiers>
+        </entryLink>
         <entryLink import="true" name="Crew" hidden="false" id="7301-0ad6-07a6-6123" type="selectionEntry" targetId="fa63-b4d5-3340-5244" sortIndex="2">
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="059a-d64d-cdfe-73aa-min" includeChildSelections="false"/>
@@ -3937,7 +3926,7 @@
         <infoLink name="Scouts" id="52dd-444e-3bc2-6ba5" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
         <infoLink name="Ward Save" id="e885-b33f-56dc-afaf" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
           <modifiers>
-            <modifier type="set" value="Kitsune" field="name"/>
+            <modifier type="set" value="Spirit Shield" field="name"/>
             <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
           </modifiers>
         </infoLink>
@@ -3999,7 +3988,7 @@
                         <infoLink name="Heavy Armour" id="3ce0-8f2a-242b-64df" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
                           <modifiers>
                             <modifier type="set" value="Armour of Iron Resolve" field="annotation"/>
-                            <modifier type="append" value="The wearer gains a Ward save (3+) against mundane attacks, which becomes a Ward save (5+) against Magical Attacks.
+                            <modifier type="append" value="The wearer gains a 3+ Ward save against mundaneattacks, which becomes a 5+ Ward save against Magical Attacks. 
 " field="ff58-91e4-84d7-e6e4" join="
 
 "/>
@@ -4039,14 +4028,10 @@
                             <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
-                        <infoLink name="Katana (Two Handed)" id="ec41-7f0e-2df6-837c" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27">
+                        <infoLink name="Parry" id="a8ea-e566-18e9-0ec6" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
                           <modifiers>
-                            <modifier type="set" value="Blade of the Silver Moon" field="annotation"/>
-                            <modifier type="append" value="All attacks that Hit will Wound automatically and have the Multiple Wounds (D3) special rule.
-" field="de63-d6da-efa8-00ac" join="
-
-"/>
-                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="set" value="Katana" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4237,7 +4222,7 @@
                         <infoLink name="Heavy Armour" id="ddbb-50c6-d746-4d85" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
                           <modifiers>
                             <modifier type="set" value="Achala&apos;s Ward" field="annotation"/>
-                            <modifier type="append" value="Achala’s Ward grants the wearer a Ward save (4+) and the Immunity (Killing Blow) special rule.
+                            <modifier type="append" value="Achala’s Ward grants the wearer a 4+ Ward save  and the Immunity (Killing Blow) special rule.
 " field="ff58-91e4-84d7-e6e4" join="
 
 "/>
@@ -4273,14 +4258,10 @@
                             <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
-                        <infoLink name="Katana (Two Handed)" id="5728-450e-1deb-7a9c" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27">
+                        <infoLink name="Parry" id="e788-4e1e-f0df-5d45" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
                           <modifiers>
-                            <modifier type="set" value="Guard Breaker" field="annotation"/>
-                            <modifier type="append" value="Attacks made with Guard Breaker have the Ignores Armour saves special rule, and no Parry saves may be taken against it.
-" field="de63-d6da-efa8-00ac" join="
-
-"/>
-                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="set" value="Katana" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4516,7 +4497,7 @@
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="986e-1ba2-dad6-c9d9" includeChildSelections="true"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="175"/>
+                <cost name="pts" typeId="points" value="180"/>
               </costs>
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="a61f-c161-0834-294e" targetId="22c9-1606-58f8-2e60" primary="false"/>
@@ -4736,7 +4717,7 @@
                       <profiles>
                         <profile name="Chalice of Bishamonten" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="cdec-b433-70e9-5781">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Chalice of Bishamonten can be used at the start of any round of close combat. When used, Uesigo Norimasa gains +1 to his Weapon Skill, Strength, Toughness, Initiative and Attacks as well as a Ward save (5+) for the remainder of the turn.</characteristic>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Chalice of Bishamonten can be used at the start of any round of close combat. When used, Uesigo Norimasa gains +1 to his Weapon Skill, Strength, Toughness, Initiative and Attacks as well as a 5+ Ward save for the remainder of the turn.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4887,7 +4868,7 @@
                         <infoLink name="Medium Armour" id="e831-3e98-8e9a-1039" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
                           <modifiers>
                             <modifier type="set" value="Red Daemon Armour" field="annotation"/>
-                            <modifier type="append" value="The Red Daemon Armour gives Sanada Naomasa a Ward save (5+) and the Fear special rule. In addition, only one enemy in base contact (chosen by Naomasa) can choose to allocate their attacks against him in close combat.
+                            <modifier type="append" value="The Red Daemon Armour gives Sanada Naomasa a 5+ Ward save and the Fear special rule. In addition, only one enemy in base contact (chosen by Naomasa) can choose to allocate their attacks against him in close combat.
 " field="ff58-91e4-84d7-e6e4" join="
 
 "/>
@@ -5037,7 +5018,7 @@
                 <categoryLink name="X Great Weapon" hidden="false" id="3eda-82e3-54fd-a006" targetId="abcc-4aa7-4989-7189" primary="false"/>
               </categoryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="205"/>
+                <cost name="pts" typeId="points" value="210"/>
               </costs>
               <profiles>
                 <profile name="Akashi Sho" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="c936-1bbc-d609-7d61">
@@ -5116,7 +5097,7 @@
                       <profiles>
                         <profile name="Tsuna Belt" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="5ec3-54e5-0184-c5c4">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Tsuna Belt grants Akashi Sho a Ward save (5+) and the Magic Resistance (1) special rule.</characteristic>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Tsuna Belt grants Akashi Sho a 5+ Ward save and the Magic Resistance (1) special rule.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5448,7 +5429,7 @@
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="11. Clan Mons" id="3b57-19a7-13fc-9581" hidden="false" defaultSelectionEntryId="none">
       <entryLinks>
-        <entryLink import="true" name="Mon of the Uesigo Clan" hidden="false" id="574a-3081-3475-b559" type="selectionEntry" targetId="2e10-9422-ead4-c046">
+        <entryLink import="true" name="Mon of the Uesigo Clan" hidden="false" id="574a-3081-3475-b559" type="selectionEntry" targetId="2e10-9422-ead4-c046" sortIndex="2">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -5479,7 +5460,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5c27-d720-5329-09e3" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="1aae-2529-c509-7573" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="12e8-ccce-5ffd-ab4e" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -5489,14 +5470,14 @@
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d7bd-d740-4275-1e45" automatic="true"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="afae-0328-d4ad-9b6d" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4">
+        <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="afae-0328-d4ad-9b6d" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4" sortIndex="5">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="441e-1397-a268-8f67" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
-            <modifier type="add" value="{this} has no effect if not armed with Longbows" field="error">
+            <modifier type="add" value="{this} has no effect if not armed with Longbows" field="warning">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -5513,8 +5494,11 @@
               </conditions>
             </modifier>
           </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
         </entryLink>
-        <entryLink import="true" name="Mon of the Dawate Clan" hidden="false" id="19b4-4168-d2ba-5056" type="selectionEntry" targetId="118f-7d91-db4d-d58d">
+        <entryLink import="true" name="Mon of the Dawate Clan" hidden="false" id="19b4-4168-d2ba-5056" type="selectionEntry" targetId="118f-7d91-db4d-d58d" sortIndex="1">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -5533,15 +5517,10 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="add" value="{this} is not allowed if not armed with Great Weapons" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="19b4-4168-d2ba-5056" shared="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="0d64-9a14-46fa-8ca7">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -5553,7 +5532,7 @@
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b694-e634-2f0d-8de7" automatic="true"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Mon of the Hojizu Clan" hidden="false" id="a05b-1bfb-a3db-830c" type="selectionEntry" targetId="4e80-db65-bc71-5ca7">
+        <entryLink import="true" name="Mon of the Hojizu Clan" hidden="false" id="a05b-1bfb-a3db-830c" type="selectionEntry" targetId="4e80-db65-bc71-5ca7" sortIndex="6">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -5567,7 +5546,7 @@
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Mon of the Odari Clan" hidden="false" id="97c7-6dc0-0bb9-2c39" type="selectionEntry" targetId="1dbf-1ebe-5d1b-c32b">
+        <entryLink import="true" name="Mon of the Odari Clan" hidden="false" id="97c7-6dc0-0bb9-2c39" type="selectionEntry" targetId="1dbf-1ebe-5d1b-c32b" sortIndex="7">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -5596,7 +5575,7 @@
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a9d4-78fc-d58a-5f61" automatic="true"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Mon of the Shisuma Clan" hidden="false" id="666b-8b9e-9116-013c" type="selectionEntry" targetId="7314-efb2-5a40-052b">
+        <entryLink import="true" name="Mon of the Shisuma Clan" hidden="false" id="666b-8b9e-9116-013c" type="selectionEntry" targetId="7314-efb2-5a40-052b" sortIndex="3">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -5620,15 +5599,10 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="add" value="{this} is not allowed if mounted" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="666b-8b9e-9116-013c" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="27a7-9747-127f-d63e">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -5654,12 +5628,15 @@
             <infoLink name="Parry" id="dca9-a902-edeb-e8cf" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
               <modifiers>
                 <modifier type="set" value="Mon of the Shisuma Clan" field="name"/>
-                <modifier type="set" value="6+ if using a katana." field="bdf9-d73e-e13b-b0ce"/>
+                <modifier type="set" value="6+ if using a Katana." field="bdf9-d73e-e13b-b0ce"/>
               </modifiers>
             </infoLink>
           </infoLinks>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="758c-87d6-d956-a166" includeChildSelections="false" automatic="false"/>
+          </constraints>
         </entryLink>
-        <entryLink import="true" name="Mon of the Takai Clan" hidden="false" id="f53b-cc8b-6681-8fb0" type="selectionEntry" targetId="f6d2-44d5-d54d-f728">
+        <entryLink import="true" name="Mon of the Takai Clan" hidden="false" id="f53b-cc8b-6681-8fb0" type="selectionEntry" targetId="f6d2-44d5-d54d-f728" sortIndex="4">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -5703,11 +5680,10 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="add" value="{this} is only allowed vor Cavalry" field="error">
+            <modifier type="set" value="0" field="86cc-e11a-1612-8871">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f53b-cc8b-6681-8fb0" shared="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="1130-01f0-bc20-3ac7" shared="true" includeChildSelections="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4115-0961-cdb8-e85f" shared="true" includeChildSelections="true"/>
@@ -5748,12 +5724,10 @@
 "/>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Katana (Two Handed)" id="c7ed-454f-43d5-97f2" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27">
+                <infoLink name="Parry" id="e187-cad4-76fc-d5b6" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
                   <modifiers>
-                    <modifier type="append" value="All hits with this weapon automatically Wound. Armour saves are taken as normal." field="de63-d6da-efa8-00ac" join="
-
-"/>
-                    <modifier type="set" value="Divine Slashing Blade" field="annotation"/>
+                    <modifier type="set" value="Katana" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -5770,7 +5744,7 @@
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Grass-Cutting Sword" hidden="false" id="1ab9-262d-2ba4-e6f7" sortIndex="10">
               <costs>
-                <cost name="pts" typeId="points" value="55"/>
+                <cost name="pts" typeId="points" value="60"/>
               </costs>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ff83-3c0b-056b-09cd" includeChildSelections="true"/>
@@ -5807,12 +5781,10 @@
 "/>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Katana (Two Handed)" id="2c66-87e8-2684-95d2" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27">
+                <infoLink name="Parry" id="981f-bcb7-e9a9-e1bc" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
                   <modifiers>
-                    <modifier type="set" value="Cresent Moon Blade" field="annotation"/>
-                    <modifier type="append" value="The wielder always counts their Strength characteristic at least one higher than that of any enemy models in base contact. In addition, they have the Multiple Wounds (D3) special rule." field="de63-d6da-efa8-00ac" join="
-
-"/>
+                    <modifier type="set" value="Katana" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -5866,12 +5838,10 @@
 "/>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Katana (Two Handed)" id="67c7-9435-bce4-c0ed" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27">
+                <infoLink name="Parry" id="bd9b-1db1-adcb-9748" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
                   <modifiers>
-                    <modifier type="set" value="Deamon Cutter" field="annotation"/>
-                    <modifier type="append" value="No Ward saves can be taken against attacks made by this weapon." field="de63-d6da-efa8-00ac" join="
-
-"/>
+                    <modifier type="set" value="Katana" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -5927,12 +5897,10 @@
                     <modifier type="set" value="Dragonclaw Katana" field="annotation"/>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Katana (Two Handed)" id="6cc8-d41b-28e9-dd50" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27">
+                <infoLink name="Parry" id="1eb6-a85d-41d9-2006" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
                   <modifiers>
-                    <modifier type="set" value="Dragonclaw Katana" field="annotation"/>
-                    <modifier type="append" value="When fighting in challenges, the wielder gains the Killing Blow special rule and may re-roll all failed rolls To Hit and To Wound. In addition, for every point of unmodified Leadership that the wielder exceeds that of any one enemy model in base contact, they gain one additional Attack." field="de63-d6da-efa8-00ac" join="
-
-"/>
+                    <modifier type="set" value="Katana" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -6064,7 +6032,9 @@
                 <infoLink name="Heavy Armour" id="b9ef-c098-c7af-9de3" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
                   <modifiers>
                     <modifier type="set" value="Yoritomo&apos;s Armour" field="annotation"/>
-                    <modifier type="append" value="The wearer gains a Ward save (5+). In addition, if there are any other friendly characters within 12&quot; of the wearer, the wearer also add +1 to their Strength." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="The wearer gains a 5+ Ward save. In addition, if there are one or more friendly characters 
+within 12&quot; of the wearer, the wearer also gains +1 Strength.
+" field="ff58-91e4-84d7-e6e4"/>
                   </modifiers>
                 </infoLink>
                 <infoLink name="Ward Save" id="d377-42a8-2ef7-2d29" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
@@ -6220,7 +6190,7 @@
               <profiles>
                 <profile name="Bronze Token " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="c7c7-e75d-d2f3-b964">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The wearer gains a Ward save (4+) against Magical Attacks. In addition, the wearer may re-roll one failed armour save each turn.</characteristic>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The wearer gains a 4+ Ward save against Magical Attacks. In addition, the wearer may re-roll one failed armour save each turn.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6273,7 +6243,7 @@
               <profiles>
                 <profile name="Henshin&apos;s Amulet" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="1b81-5bab-c3f0-e991">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item gives the wearer a Ward save (6+). In addition, they may re-roll one dice to Hit, to Wound or a failed armour save each turn.</characteristic>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item gives the wearer a 6+ Ward save. In addition, they may re-roll one dice to Hit, to Wound or a failed armour save each turn. </characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6719,7 +6689,7 @@ Movement phase. In addition, they automatically pass any test to reform, march 
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="12. Clan Mons" id="acca-e5bb-5f72-31b6" hidden="false">
-      <comment>Special Characters</comment>
+      <comment>Empty</comment>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="70d6-f967-c726-bce5-min" includeChildSelections="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70d6-f967-c726-bce5-max" includeChildSelections="false"/>
@@ -6743,6 +6713,273 @@ Movement phase. In addition, they automatically pass any test to reform, march 
             <cost name="Hatttiga Bonus" typeId="8e33-3e1e-b2ae-dc26" value="0"/>
           </costs>
         </entryLink>
+        <entryLink import="true" name="Mon of the Dawate Clan" hidden="false" id="5bf5-7af2-9198-4a22" type="selectionEntry" targetId="118f-7d91-db4d-d58d">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7f0f-780c-eb63-8cfc" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="db4d-9c73-54e1-18f7">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d76c-3bdc-0f2e-ab45" shared="true" includeChildSelections="true" includeChildForces="true">
+                      <comment>Dawate Tadamune</comment>
+                    </condition>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0473-857e-78d9-cb7c" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="0" field="0d64-9a14-46fa-8ca7">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="abcc-4aa7-4989-7189" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="db4d-9c73-54e1-18f7" automatic="true"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Uesigo Clan" hidden="false" id="bd35-0ff5-179f-dd9f" type="selectionEntry" targetId="2e10-9422-ead4-c046">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="5585-264a-8c7f-fafa" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="4660-6d98-0728-0fa0">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="85c6-d552-eff3-be2c" shared="true" includeChildSelections="true" includeChildForces="true">
+                      <comment>Uesigo Norimasa</comment>
+                    </condition>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5c27-d720-5329-09e3" shared="true" includeChildSelections="false"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1aae-2529-c509-7573" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5c27-d720-5329-09e3" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="12e8-ccce-5ffd-ab4e" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4660-6d98-0728-0fa0" automatic="true"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Shisuma Clan" hidden="false" id="7509-44e8-2e96-4362" type="selectionEntry" targetId="7314-efb2-5a40-052b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ba4e-4bbd-213a-8767" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="0" field="27a7-9747-127f-d63e">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0bfc-67f6-5e48-cf01" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="{this} has no effect without a katana." field="warning">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7509-44e8-2e96-4362" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="04a7-e5b9-407a-a686" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="eaaf-d87f-04af-bbe9" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="c6e8-7408-ee7b-fbdd" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="31ed-0a55-2736-7ec1" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="c3ea-264a-8b25-64a3" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Parry" id="f833-05d4-bde4-dcab" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+              <modifiers>
+                <modifier type="set" value="Mon of the Shisuma Clan" field="name"/>
+                <modifier type="set" value="6+ if using a Katana." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="466f-8b2b-6a14-6e6c" includeChildSelections="false" automatic="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Takai Clan" hidden="false" id="0905-da5a-c358-f10f" type="selectionEntry" targetId="f6d2-44d5-d54d-f728">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1ad3-5e2e-2785-35e9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="5ebf-df47-707f-a21f">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="7b94-84c6-a64a-1c94" shared="true" includeChildSelections="true" includeChildForces="true">
+                      <comment>Takai Katsuyori</comment>
+                    </condition>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1130-01f0-bc20-3ac7" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4115-0961-cdb8-e85f" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="0" field="86cc-e11a-1612-8871">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="1130-01f0-bc20-3ac7" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4115-0961-cdb8-e85f" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="5ebf-df47-707f-a21f" automatic="true"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="2454-aeb0-f9d2-1354" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="441e-1397-a268-8f67" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="{this} has no effect if not armed with Longbows" field="warning">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="2454-aeb0-f9d2-1354" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="f6cc-1342-64fe-6a3e" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="83d3-c9ae-bc69-748c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="3ee8-1923-4565-e2b6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Hojizu Clan" hidden="false" id="612f-9bb1-420b-ca5e" type="selectionEntry" targetId="4e80-db65-bc71-5ca7">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cabe-1106-34fa-2aeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Odari Clan" hidden="false" id="2f56-d208-21fb-b1b3" type="selectionEntry" targetId="1dbf-1ebe-5d1b-c32b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7cb5-2bcc-b304-f320" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="1" field="b8a9-9bad-b721-f78c">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d854-81fe-3121-36e3" shared="true" includeChildSelections="true" includeChildForces="true">
+                      <comment>Odari Nobuhide</comment>
+                    </condition>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1ee4-f5b2-caf1-32b2" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="1ee4-f5b2-caf1-32b2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b8a9-9bad-b721-f78c" automatic="true"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -6752,28 +6989,13 @@ Movement phase. In addition, they automatically pass any test to reform, march 
     <categoryEntry name="Monk" id="5c27-d720-5329-09e3" hidden="true"/>
   </categoryEntries>
   <sharedProfiles>
-    <profile name="Katana (One Handed)" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="3ab7-eb7a-cf33-e82e" noindex="true">
+    <profile name="Katana" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="3ab7-eb7a-cf33-e82e" noindex="true">
       <characteristics>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
         <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
         <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Counts as hand weapon</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1), Parry (6+), Requires Two Hands</characteristic>
       </characteristics>
-    </profile>
-    <profile name="Katana (Two Handed)" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="9fae-d402-a9c7-8e27" noindex="true">
-      <characteristics>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hand. The extra Strength does not inflict any additional penalties on armour saves.</characteristic>
-      </characteristics>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </profile>
     <profile name="Samurai" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f599-b0a1-5214-8ad9" noindex="true">
       <characteristics>
