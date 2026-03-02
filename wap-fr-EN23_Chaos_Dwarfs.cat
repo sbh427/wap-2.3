@@ -254,7 +254,7 @@
             <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
             <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
             <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), Flaming Attacks, Magical Attacks.
-If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&apos; is rolled to hit, the thrower instead suffers a single automatic Wound with the Flaming Attacks and Magical Attacks special rules. This is a non-physical attack. </characteristic>
+If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&apos; is rolled to hit, the thrower instead suffers a single automatic Wound with the Flaming Attacks and Magical Attacks special rules. This is a non-physical attack.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -1585,7 +1585,7 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
       </categoryLinks>
       <rules>
         <rule name="Infernal Cohort" id="7777-6352-ec2d-3a95" hidden="false">
-          <description>You may upgrade one unit of Warriors with heavy armour for +1.5 points/model for each model with this special rule in your army. </description>
+          <description>You may upgrade one unit of Warriors with heavy armour for +1.5 points/model for each model with this special rule in your army.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -1643,7 +1643,7 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
           <entryLinks>
             <entryLink import="true" name="Palanquin" hidden="false" id="c085-aa41-a78f-c62f" type="selectionEntry" targetId="49f0-67b2-8e8d-f1af" sortIndex="1">
               <costs>
-                <cost name="pts" typeId="points" value="10"/>
+                <cost name="pts" typeId="points" value="25"/>
               </costs>
             </entryLink>
             <entryLink import="true" name="Great Taurus" hidden="false" id="b119-8045-88ae-a2ab" type="selectionEntry" targetId="31cf-80fb-699f-9d4e" sortIndex="2">
@@ -2171,7 +2171,15 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
                         </conditionGroup>
                       </conditionGroups>
                     </modifier>
+                    <modifier type="set" value="1" field="f545-22ba-a47b-8ec5">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="926f-a6d3-9b67-3b03" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f545-22ba-a47b-8ec5" includeChildSelections="false" automatic="true"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -2954,7 +2962,7 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
                 <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
                 <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
                 <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
@@ -4146,7 +4154,7 @@ While there are rank and file models left in the unit (except the Command Group)
       <selectionEntryGroups>
         <selectionEntryGroup name="Command Group" id="d713-aea2-be86-7608" hidden="false" sortIndex="2">
           <entryLinks>
-            <entryLink import="true" name="Hobgoblin Overseer" hidden="false" id="6870-c0ff-9d72-0564" type="selectionEntry" targetId="ef0a-ff6d-1ae1-70e8"/>
+            <entryLink import="true" name="Overseer" hidden="false" id="6870-c0ff-9d72-0564" type="selectionEntry" targetId="ef0a-ff6d-1ae1-70e8"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -4992,7 +5000,7 @@ All models in a unit suffering casualties from a Dreadquake Mortar in the previo
       </profiles>
       <rules>
         <rule name="Caged Fury" id="2574-3438-103a-34c4" hidden="false">
-          <description>At the beginning of your turn, if the Hellcannon is not in combat, take a Leadership test. If the test is failed, the Hellcannon is then subject to the Random Movement (3D6) special rule until the beginning of the next turn, and must move towards the nearest enemy unit. If the Hellcannon would get destroyed as a result of it being Unstable, treat this as rolling a 1 on the table below.</description>
+          <description>At the beginning of your turn, if the Hellcannon is not in combat, take a Leadership test. If the test is failed, the Hellcannon is then subject to the Random Movement (3D6) special rule until the beginning of the next turn, and must move towards the nearest enemy unit. If the Hellcannon would get destroyed as a result of it being Unstable, treat this as rolling a 1 on the Doomfire table.</description>
         </rule>
       </rules>
       <infoGroups>
@@ -5563,7 +5571,7 @@ Any unit that suffers one or more casualties from Doomfire must take a Panic te
         <infoGroup name="Siege Giant Special Attacks" id="891a-28e5-6193-5559" hidden="false">
           <rules>
             <rule name="Siege Giant Special Attacks" id="db55-fb09-b707-525b" hidden="false">
-              <description>Giants do not attack in the same way as other creatures. They are far too large and fractious to take orders and much too scatter-brained to have any sort of coherent plan. To determine what happens in each Close Combat phase, pick a unit in base contact with the Giant and roll a D6 on either the Man-Sized Things Chart or the Big Things Chart. Use the Man-Sized Things Chart when fighting Infantry, Cavalry, War Beasts or Swarms. Use the Big Things Chart when fighting Monsters, Monstrous Beasts, Monstrous Infantry, Monstrous Cavalry, Chariots, War Machines, and Shrines. If no suitable target is in base contact, roll again on the chart until you get another result.</description>
+              <description>Giants do not attack in the same way as other creatures. They are far too large and fractious to take orders and much too scatter-brained to have any sort of coherent plan. To determine what happens in each Close Combat phase, pick a unit in base contact with the Giant and roll a D6 on either the Man-Sized Things Chart or the Big Things Chart. Use the Man-Sized Things Chart when fighting Infantry, Cavalry, War Beasts or Swarms. Use the Big Things Chart when fighting Monsters, Monstrous Beasts, Monstrous Infantry, Monstrous Cavalry, Monstrous Creatures, Chariots, War Machines, and Shrines. If no suitable target is in base contact, roll again on the chart until you get another result.</description>
             </rule>
           </rules>
           <infoLinks>
@@ -5827,6 +5835,9 @@ Any unit that suffers one or more casualties from Doomfire must take a Panic te
                 <rule name="Boundless Cruelty" id="43e3-2efa-f029-fb59" hidden="false">
                   <description>All enemy units within 6&quot; of Zhatan suffer -1 to their Leadership. This has no effect on models with Immunity (Psychology).</description>
                 </rule>
+                <rule name="Infernal Cohort" id="30c9-a706-ecc5-a689" hidden="false">
+                  <description>You may upgrade one unit of Warriors with heavy armour for +1.5 points/model for each model with this special rule in your army.</description>
+                </rule>
               </rules>
               <infoLinks>
                 <infoLink name="Resolute" id="59ec-8ad2-c670-2e81" hidden="false" type="rule" targetId="c88d-5cb0-b4e7-7793"/>
@@ -5921,7 +5932,7 @@ Any unit that suffers one or more casualties from Doomfire must take a Panic te
                       <profiles>
                         <profile name="Daemonspite Crucible" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="fa4b-6c5f-6e15-0331">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">This item gives the bearer a +1 casting bonus. In addition, every time the bearer kills an enemy Wizard in close combat, the bonus increases by +1. </characteristic>
+                            <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">This item gives the bearer a +1 casting bonus. In addition, every time the bearer kills an enemy Wizard in close combat, the bonus increases by +1.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -6502,7 +6513,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                     <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                     <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Instead of fighting normally, the wielder may may make a special attack. If this attack hits, all models in one column in base contact with the wielder are automatically Hit.</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Instead of fighting normally, the wielder may make a special attack. If this attack hits, all models in one column in base contact with the wielder are automatically Hit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7428,7 +7439,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
               <profiles>
                 <profile name="Crucible of Spite" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="8e40-a6a2-8dd3-d1dc">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. This item can be used at the start of any round of Close Combat. The bearer gains +D3 Weapon Skill, Strength, Initiative and Attacks for the duration of this round. </characteristic>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. This item can be used at the start of any round of Close Combat. The bearer gains +D3 Weapon Skill, Strength, Initiative and Attacks for the duration of this round.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
