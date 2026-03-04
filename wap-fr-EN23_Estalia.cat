@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="0f80-7664-66d2-45f8" name="Estalia WAP 1.21" revision="33" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="0f80-7664-66d2-45f8" name="Estalia WAP 1.22" revision="33" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <profileTypes>
     <profileType id="8dcd-8c6c-b81d-ef64" name="Standard of Myrmidia bonuses">
@@ -544,6 +544,7 @@
             <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Magical Attacks" id="8eab-f646-7c16-88b4" hidden="false" targetId="03db-d81f-f264-84b8" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="bad9-dec7-b671-fb61" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -1361,7 +1362,7 @@
           <profiles>
             <profile id="5054-38da-c2b3-3ae2" name="War Dog" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
               <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
                 <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
                 <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
@@ -1849,7 +1850,7 @@
                         <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), Quick to Fire.
 
 
-Each Hit with a Grenade is multiplied into D6 Hits. However, if a 1 is rolled when rolling To Hit, the Grenadier suffers a single Strength 4 Armour Piercing (1) Hit himself instead.</characteristic>
+Each Hit with a Grenade is multiplied into D6 Hits. However, if a 1 is rolled when rolling To Hit, the Grenadier suffers a single Strength 4 Armour Piercing (1) Hit itself instead.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -1962,7 +1963,7 @@ Each Hit with a Grenade is multiplied into D6 Hits. However, if a 1 is rolled wh
                   </modifiers>
                   <rules>
                     <rule name="Knights of the Blazing Sun" id="2557-176f-3a54-903c" hidden="false">
-                      <description>Whenever a unit where the majority of models have this special rule declare a charge, roll a D6 (after the enemy has declared their charge reaction). A roll of the Blinding Light cannot be used this charge. On a 2+, the enemy unit being charged suffer -1 Weapon Skill and Ballistic Skill for the duration of the turn.</description>
+                      <description>The model must be armed with heavy lance, shield and barding. Whenever a unit where the majority of models have this special rule makes a successful charge, the enemy unit being charged suffer -1 Weapon Skill and Ballistic Skill for the duration of the turn.</description>
                     </rule>
                   </rules>
                 </selectionEntry>
@@ -2753,9 +2754,22 @@ The wearer and any unit they join have the Cold-Blooded special rule when taking
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="3ccf-e277-7d22-f428" name="Tactical Supremacy" hidden="false" targetId="988f-a5b4-56b9-dbcb" type="rule"/>
+                <infoLink id="3ccf-e277-7d22-f428" name="Magical Attacks" hidden="false" targetId="03db-d81f-f264-84b8" type="rule"/>
                 <infoLink id="f3b6-c5f1-ca90-3bea" name="Blessing of Myrmidia" hidden="false" targetId="80f2-5041-87e8-11b5" type="rule"/>
                 <infoLink id="5be5-9303-1968-6b79" name="Battle Prayers" hidden="false" targetId="659d-1537-180c-4696" type="rule"/>
+                <infoLink id="f77c-3ed3-06a6-ad6a" name="Tactical Supremacy" hidden="false" targetId="988f-a5b4-56b9-dbcb" type="rule"/>
+                <infoLink name="Magic Resistance" id="7b9a-30cb-2783-3adc" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Isabella Giovanna Luccelli" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="29e2-4311-93ce-bed0" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Isabella Giovanna Luccelli" field="name"/>
+                    <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="c952-585e-3fd2-3255" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -2838,7 +2852,7 @@ The wearer and any unit they join have the Cold-Blooded special rule when taking
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="285"/>
+                <cost name="pts" typeId="points" value="295"/>
               </costs>
               <infoGroups>
                 <infoGroup name="Battle Prayers of Myrmidia" id="0eaa-7041-4c6f-7569" hidden="false">
@@ -3773,7 +3787,7 @@ Units of Crossbowmen, Arquebusiers and Musketeers within 3&quot; of a unit of T
       </profiles>
       <infoLinks>
         <infoLink id="74b8-b8c9-7e94-5e36" name="Tactical Supremacy" hidden="false" targetId="988f-a5b4-56b9-dbcb" type="rule"/>
-        <infoLink id="218a-bad3-2358-0d15" name="Blessing of Myrmidia" hidden="false" targetId="80f2-5041-87e8-11b5" type="rule"/>
+        <infoLink id="218a-bad3-2358-0d15" name="Magical Attacks" hidden="false" targetId="03db-d81f-f264-84b8" type="rule"/>
         <infoLink id="3f4b-f143-f65a-5ec1" name="Skill of Combat" hidden="false" targetId="b967-9af7-b31b-9cf5" type="profile"/>
         <infoLink id="2a06-52e6-5262-cf0a" name="Shield of Myrmidia" hidden="false" targetId="c2b9-30a8-1efe-d5a7" type="profile"/>
         <infoLink id="2d45-bd07-f3cc-509d" name="Spear of Myrmidia" hidden="false" targetId="1423-aa45-d15f-5594" type="profile"/>
@@ -3790,6 +3804,7 @@ Units of Crossbowmen, Arquebusiers and Musketeers within 3&quot; of a unit of T
             <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
           </modifiers>
         </infoLink>
+        <infoLink id="7365-ca42-be29-cdbd" name="Blessing of Myrmidia" hidden="false" targetId="80f2-5041-87e8-11b5" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Lords" hidden="false" id="5399-e110-10a4-d6d5" targetId="d280-b7df-c185-2ba5" primary="true"/>
@@ -3896,44 +3911,6 @@ Units of Crossbowmen, Arquebusiers and Musketeers within 3&quot; of a unit of T
               </rules>
               <infoLinks>
                 <infoLink name="Line of Sight (4)" id="6a5b-08dc-0d56-2c17" hidden="false" targetId="8105-29db-5491-77cf" type="rule"/>
-                <infoLink name="Fear" id="8411-ef16-2f76-096f" hidden="false" type="rule" targetId="7bd0-8602-4375-a731">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="cef8-6425-ff37-bf9d" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
-                <infoLink name="Impact Hits (D6+2)" id="77fb-2ff3-1a58-3495" hidden="false" type="rule" targetId="d078-4dd8-8ffb-876a">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="6541-be4a-cd5e-13d7" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="6595-fd67-0e7b-204a" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                    <modifier type="replace" value="4" field="name" arg="2" position="1">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="model-or-unit" childId="6595-fd67-0e7b-204a" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
-                <infoLink name="Mighty Blow (1)" id="210e-9d07-566e-a1a4" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="cef8-6425-ff37-bf9d" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="Chariot only" field="annotation"/>
-                  </modifiers>
-                </infoLink>
                 <infoLink name="Ward Save" id="5246-8667-9694-d717" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
                   <modifiers>
                     <modifier type="set" value="Divine Protection" field="name"/>
@@ -3949,7 +3926,7 @@ Units of Crossbowmen, Arquebusiers and Musketeers within 3&quot; of a unit of T
                 <categoryLink name="Mount" hidden="false" id="aab5-c8a9-f0fd-66fb" targetId="8b8a-34b1-ed30-df11" primary="false"/>
               </categoryLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Beasts" id="496d-4176-4a11-99ce" hidden="false" collective="false" import="true">
+                <selectionEntryGroup name="Pullers" id="496d-4176-4a11-99ce" hidden="false" collective="false" import="true">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7c30-cd1a-cbba-c96d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
@@ -3957,6 +3934,12 @@ Units of Crossbowmen, Arquebusiers and Musketeers within 3&quot; of a unit of T
                     <selectionEntry type="upgrade" import="true" name="Aurochs" hidden="false" id="cef8-6425-ff37-bf9d" sortIndex="1">
                       <infoLinks>
                         <infoLink name="Aurochs" id="a3fb-099b-b20a-cb2e" hidden="false" targetId="59a3-6ec3-47aa-1fd9" type="profile"/>
+                        <infoLink name="Fear" id="8411-ef16-2f76-096f" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+                        <infoLink name="Mighty Blow (1)" id="210e-9d07-566e-a1a4" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe">
+                          <modifiers>
+                            <modifier type="set" value="Chariot only" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
                       </infoLinks>
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a765-5d29-cd6f-31af" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -3966,42 +3949,36 @@ Units of Crossbowmen, Arquebusiers and Musketeers within 3&quot; of a unit of T
                       </costs>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="2 Bulls" hidden="false" id="6541-be4a-cd5e-13d7" sortIndex="2">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Bull" hidden="false" id="085b-d87e-1784-8925">
-                          <constraints>
-                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="e066-7066-69b1-fef0-min"/>
-                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="e066-7066-69b1-fef0-max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink name="Bull" id="5cfe-77b6-811f-bf0f" hidden="false" type="profile" targetId="c43b-35bc-b8e3-c684"/>
-                          </infoLinks>
-                        </selectionEntry>
-                      </selectionEntries>
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c6e1-5d7b-58c1-1ead" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <costs>
                         <cost name="pts" typeId="points" value="15"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Bull" id="37c2-5932-e51a-bdb5" hidden="false" type="profile" targetId="c43b-35bc-b8e3-c684"/>
+                        <infoLink name="Bull" id="fcc1-fefb-9fa1-02f9" hidden="false" type="profile" targetId="c43b-35bc-b8e3-c684"/>
+                        <infoLink name="Impact Hits (D6+2)" id="73c6-1cbf-b9df-a25d" hidden="false" type="rule" targetId="d078-4dd8-8ffb-876a"/>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="4 Bulls" hidden="false" id="6595-fd67-0e7b-204a" sortIndex="3">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Bull" hidden="false" id="6a81-9001-0ea3-e14d">
-                          <constraints>
-                            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="aa53-136f-f47a-9803-min"/>
-                            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="aa53-136f-f47a-9803-max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink name="Bull" id="0a87-c25f-14bd-9de0" hidden="false" type="profile" targetId="c43b-35bc-b8e3-c684"/>
-                          </infoLinks>
-                        </selectionEntry>
-                      </selectionEntries>
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ad7d-1b16-878c-878c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <costs>
                         <cost name="pts" typeId="points" value="25"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Bull" id="8e39-d4a1-7cbe-f38b" hidden="false" type="profile" targetId="c43b-35bc-b8e3-c684"/>
+                        <infoLink name="Bull" id="8f8f-2356-1df3-7196" hidden="false" type="profile" targetId="c43b-35bc-b8e3-c684"/>
+                        <infoLink name="Bull" id="3583-fabc-4561-8a06" hidden="false" type="profile" targetId="c43b-35bc-b8e3-c684"/>
+                        <infoLink name="Bull" id="1de0-dc55-9aaa-5b99" hidden="false" type="profile" targetId="c43b-35bc-b8e3-c684"/>
+                        <infoLink name="Impact Hits (D6+2)" id="8cd0-8a6d-2ec4-25bd" hidden="false" type="rule" targetId="d078-4dd8-8ffb-876a">
+                          <modifiers>
+                            <modifier type="replace" value="4" field="name" arg="2" position="1"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -4273,7 +4250,8 @@ Units of Crossbowmen, Arquebusiers and Musketeers within 3&quot; of a unit of T
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Fast Cavalry" id="d913-9e56-71b9-76af" hidden="false" targetId="8877-a5de-cc9c-9142" type="rule"/>
+            <infoLink name="Tactical Supremacy" id="d913-9e56-71b9-76af" hidden="false" targetId="988f-a5b4-56b9-dbcb" type="rule"/>
+            <infoLink name="Fast Cavalry" id="ce3e-6294-515c-8967" hidden="false" targetId="8877-a5de-cc9c-9142" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="13"/>
@@ -6014,7 +5992,7 @@ Place the small round template with its centre anywhere within range. If the at
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="988f-a5b4-56b9-dbcb" name="Tactical Supremacy" hidden="false">
-      <description>Any unit with this rule has the Cold-Blooded special rule when taking tests to March, Reform, Redirect Charges and when using Support Fire.
+      <description>Any unit with this rule has the Cold-blooded special rule when taking tests to March, Reform, Redirect Charges, Restrain from Pursuit and when using Support Fire. 
 
 
 If the unit is charged during the Movement phase and chooses Hold as a charge reaction, it can attempt to change formation immediately before your opponent has moved any of their charging units, as long as it is not already engaged in close combat. To do so, the unit must take pass Leadership test – if successful, the unit can immediately make a swift reform as described in the Warhammer Rulebook.</description>
