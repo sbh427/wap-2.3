@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="b023-5d4d-836c-0750" name="Kingdoms of Ind WAP 1.2" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="88" revision="2" authorContact="contact me via Discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="b023-5d4d-836c-0750" name="Kingdoms of Ind WAP 1.21" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="88" revision="2" authorContact="contact me via Discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Armoury" id="0bb6-4dbc-db28-fc8b" targetId="522e-5e2a-d54c-4959"/>
   </catalogueLinks>
@@ -15,7 +15,7 @@
       <description>If a War Elephant suffers a wound from a missile attack, it must immediately take a Panic test. Any time a War Elephant fails a Panic or Break test it will Flee in a random direction, as determined by the Scatter dice. If it flees through any unit, it inflicts D6+1 Strength 5 hits.</description>
     </rule>
     <rule name="Beastmaster" id="9e5e-9d04-0229-fcaf" hidden="false">
-      <description>Any friendly Warbeast, Monstrous Beast, Monstrous Cavalry or Monster (except Devas) within 6&quot; of a Beastmaster may re-roll failed Leadership tests and gain the Stubborn special rule.</description>
+      <description>Any friendly War Beast, Monstrous Beast, Monstrous Cavalry or Monster (except Devas) within 6&quot; of a Beastmaster may re-roll failed Leadership tests and gain the Stubborn special rule. </description>
     </rule>
   </sharedRules>
   <sharedInfoGroups>
@@ -896,7 +896,7 @@
               <profiles>
                 <profile name="The Sun Jewel" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="5abd-6f46-5cb6-3d68">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 casting and dispelling bonus. If they have Good Karma and Miscast, they may ignore the roll on the miscast table on the D6 roll of 4+. However, if they have Bad Karma, they will Miscast on any roll of any double, instead of just double 1&apos;s.</characteristic>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 casting and dispelling bonus. If they have Good Karma and Miscast, they may ignore the roll on the miscast table on a D6 roll of 4+. However, if they have Bad Karma, they will Miscast on any roll of any double, instead of just double 1&apos;s.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -1189,7 +1189,7 @@
     <selectionEntryGroup name="56. Upgrades" id="91cb-3355-4a15-7594" hidden="false">
       <comment>Elephants</comment>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Mahout Expert" hidden="false" id="345d-bec0-3579-37ee" sortIndex="1" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Mahout Expert" hidden="false" id="345d-bec0-3579-37ee" sortIndex="2" collective="true">
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
@@ -1209,7 +1209,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b26c-590e-57c7-a88c"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Spike Chanis" hidden="false" id="0c67-0c0d-f2f3-6068" sortIndex="2" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Spike Chanis" hidden="false" id="0c67-0c0d-f2f3-6068" sortIndex="3" collective="true">
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
@@ -1220,7 +1220,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7fc-3d9f-44bb-b3da"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Spiked Tusks" hidden="false" id="e06c-6546-c8b2-22a8" sortIndex="3" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Spiked Tusks" hidden="false" id="e06c-6546-c8b2-22a8" sortIndex="4" collective="true">
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
@@ -1244,57 +1244,27 @@
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Armour Plates" hidden="false" id="377c-87d8-2022-a89a" sortIndex="4" collective="true">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Medium Armour" id="5c57-7db2-2508-129b" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
-              <modifiers>
-                <modifier type="set" value="War Elephant" field="annotation">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="221c-c231-e2c6-c7ea" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9e8-7f25-6e32-5130" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="Royal Elephant" field="annotation">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0e42-6962-d565-030d" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6735-05db-8186-fea3"/>
-          </constraints>
-        </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Barding" hidden="false" id="e69d-98e1-fe13-5e7b" type="selectionEntry" targetId="17ec-ae05-605b-27ce" sortIndex="1">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="5" field="points">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="221c-c231-e2c6-c7ea" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="War Elephant" id="c627-ceef-8c07-5e6a" hidden="false">
       <selectionEntryGroups>
         <selectionEntryGroup name="11. Crew" id="f187-00f3-e25d-a7a8" hidden="false">
           <entryLinks>
-            <entryLink import="true" name="Crew" hidden="false" id="8f83-a9f2-95a0-5e66" type="selectionEntry" targetId="feae-3c3b-03dd-adab">
-              <constraints>
-                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="2527-55b2-a42f-f569" automatic="true"/>
-              </constraints>
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="2" field="2527-55b2-a42f-f569"/>
-                    <modifier type="set" value="2" field="1435-3aee-292f-35be"/>
-                  </modifiers>
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="221c-c231-e2c6-c7ea" shared="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
-            </entryLink>
+            <entryLink import="true" name="Crew" hidden="false" id="7e62-0dc6-e571-36bb" type="selectionEntry" targetId="3c2f-1ae1-c045-b9f8"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -1694,11 +1664,18 @@
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="26d5-3634-1654-20b5"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="100"/>
+            <cost name="pts" typeId="points" value="85"/>
           </costs>
           <infoLinks>
             <infoLink name="War Elephant" id="3af9-09e1-e5c0-d47e" hidden="false" type="infoGroup" targetId="6640-b9d8-b2b6-795b"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="10" field="points">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="6bb1-79c9-4af5-ca72" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
@@ -1869,7 +1846,7 @@
             </entryLink>
             <entryLink import="true" name="War Elephant" hidden="false" id="6e4a-2e9e-b6ea-f4cf" type="selectionEntry" targetId="f9e8-7f25-6e32-5130" sortIndex="5">
               <costs>
-                <cost name="pts" typeId="points" value="100"/>
+                <cost name="pts" typeId="points" value="90"/>
               </costs>
             </entryLink>
             <entryLink import="true" name="Royal Chariot" hidden="false" id="4d59-8c42-6087-8818" type="selectionEntry" targetId="d593-d556-5b45-33c2" sortIndex="3">
@@ -4466,7 +4443,7 @@
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Elephantine-Crocodilian)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Chimeric)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4502,7 +4479,7 @@
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Elephantine-Leonine)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Chimeric)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4662,6 +4639,9 @@
               <costs>
                 <cost name="pts" typeId="points" value="300"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="Darahma" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Karishna" hidden="false" id="f140-1315-9eeb-4a93" sortIndex="2">
               <costs>
@@ -4752,12 +4732,15 @@
               <infoLinks>
                 <infoLink name="Deva" id="beb5-2aa6-9cb0-1c7b" hidden="false" type="infoGroup" targetId="33e3-4bce-cc2e-e78c"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="Karishna" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Special Character" hidden="false" id="38a6-f641-935a-c310" subType="unit-group">
+    <selectionEntry type="unit" import="true" name="Special Character" hidden="false" id="38a6-f641-935a-c310" subType="unit-group" sortIndex="402">
       <categoryLinks>
         <categoryLink targetId="d38a-73da-883b-bab9" id="3e0b-013c-7727-8a00" primary="true" name="Heroes"/>
       </categoryLinks>
@@ -4857,6 +4840,9 @@
                 <infoLink name="Sniper" id="3165-9c71-2b49-3b15" hidden="false" type="rule" targetId="8977-b58c-704d-705e"/>
                 <infoLink name="Karma" id="3b91-f1f6-dc71-159a" hidden="false" type="rule" targetId="060d-b89c-8279-8bb3"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="Urjana" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Parashuruma" hidden="false" id="5b71-9f5e-edcb-a5bf" sortIndex="2">
               <costs>
@@ -4943,6 +4929,9 @@
                   <description>Each time a model is slain by a Killing Blow, Parashuruma gains an additional +1 Combat Resolution bonus.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Parashuruma" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Mhogli" hidden="false" id="167e-1df5-c0b3-f073" sortIndex="3">
               <costs>
@@ -5043,6 +5032,9 @@
                 <infoLink name="Beastmaster" id="6101-0c31-e6d5-f155" hidden="false" type="rule" targetId="9e5e-9d04-0229-fcaf"/>
                 <infoLink name="Loner" id="6879-7752-d084-7772" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="set" value="Mhogli" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5108,6 +5100,7 @@
       <infoLinks>
         <infoLink name="Line of Sight (2)" id="3e17-5f74-5534-215d" hidden="false" type="rule" targetId="40b4-9828-f47e-28c9"/>
         <infoLink name="Unit Strength (5)" id="f4ae-47d5-98fb-ee6c" hidden="false" type="rule" targetId="cd03-1b6a-2a80-dd1a"/>
+        <infoLink name="Inspiring Presence (6)" id="39da-7ff8-8947-a438" hidden="false" type="rule" targetId="7687-32b8-13f1-97b4"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Bengal Tiger" hidden="false" id="3a6d-4d71-5d16-b783" sortIndex="3" subType="mount" collective="true">
@@ -5216,9 +5209,6 @@
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="42a7-d3f0-ca2f-e6ae"/>
-              </constraints>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -5240,6 +5230,11 @@
       </infoLinks>
       <modifiers>
         <modifier type="decrement" value="5" field="points"/>
+        <modifier type="increment" value="5" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="94ec-8421-59ea-a9d0" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="56. Upgrades" hidden="false" id="7210-61fb-3a19-b843" type="selectionEntryGroup" targetId="91cb-3355-4a15-7594"/>
@@ -5293,9 +5288,25 @@
         </entryLink>
         <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="392a-a53d-1696-5c67" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
           <entryLinks>
-            <entryLink import="true" name="Longbow" hidden="false" id="25e8-9a6a-3301-bec9" type="selectionEntry" targetId="f6cc-1342-64fe-6a3e">
+            <entryLink import="true" name="Shortbow" hidden="false" id="25e8-9a6a-3301-bec9" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="1">
               <modifiers>
-                <modifier type="set" value="1" field="adcf-3020-f884-af0f"/>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="221c-c231-e2c6-c7ea" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Bow" hidden="false" id="468a-80cb-e157-d451" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="221c-c231-e2c6-c7ea" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -5306,8 +5317,16 @@
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1435-3aee-292f-35be" automatic="true"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f3bc-b24c-96ba-0a46" includeChildSelections="false"/>
       </constraints>
-      <comment>Elephants</comment>
+      <comment>Royal Elephants</comment>
+      <modifiers>
+        <modifier type="decrement" value="5" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="94ec-8421-59ea-a9d0" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Charioteer" hidden="false" id="90d9-c58f-5c82-c5e2" subType="crew" collective="true" sortIndex="12">
       <comment>Royal Chariot</comment>
@@ -5349,14 +5368,14 @@
         </entryLink>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e1b3-a9bd-e794-b626" automatic="true"/>
+        <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="e1b3-a9bd-e794-b626" automatic="true"/>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8b88-cc53-be3f-f990" automatic="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
             <modifier type="set" value="2" field="8b88-cc53-be3f-f990"/>
-            <modifier type="set" value="4" field="e1b3-a9bd-e794-b626"/>
+            <modifier type="set" value="5" field="e1b3-a9bd-e794-b626"/>
           </modifiers>
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="0db0-edff-aa6d-c852" shared="true"/>
@@ -5380,7 +5399,7 @@
             <modifier type="set" value="Giant Bow" field="name"/>
             <modifier type="set" value="36&quot;" field="1c88-efb0-083f-b945"/>
             <modifier type="set" value="5" field="6ca0-d074-628f-e276"/>
-            <modifier type="set" value="Multiple Wounds (D3). Instead of firing another missile weapon in the Shooting phase, one of the Crew may fire the giant bow." field="d3a4-721b-f750-5564"/>
+            <modifier type="set" value="Multiple Wounds (D3), Slow to Fire. Instead of firing another missile weapon in the Shooting phase, one of the Crew may fire the giant bow." field="d3a4-721b-f750-5564"/>
           </modifiers>
         </infoLink>
         <infoLink name="Firing a Bolt Thrower" id="9956-66c0-0d14-d450" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
@@ -5432,6 +5451,11 @@
                 <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="0f6c-cba3-b213-c2f3" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="0" field="71c5-9037-5bd4-fae9">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="0f6c-cba3-b213-c2f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -5467,7 +5491,7 @@
             <modifier type="set" value="Jingal" field="name"/>
             <modifier type="set" value="48&quot;" field="1c88-efb0-083f-b945"/>
             <modifier type="set" value="6" field="6ca0-d074-628f-e276"/>
-            <modifier type="set" value="Armour Piercing (1), Multiple Wounds (D3). Instead of firing another missile weapon in the Shooting phase, one of the Crew may fire the jingal." field="d3a4-721b-f750-5564"/>
+            <modifier type="set" value="Armour Piercing (1), Multiple Wounds (D3), Slow to Fire. Instead of firing another missile weapon in the Shooting phase, one of the Crew may fire the jingal." field="d3a4-721b-f750-5564"/>
           </modifiers>
         </infoLink>
         <infoLink name="Firing a Cannon" id="3541-ae06-d3e2-e3dc" hidden="false" type="rule" targetId="1b5a-8c3a-7e3d-0e2e"/>
@@ -5495,7 +5519,7 @@
       </profiles>
       <rules>
         <rule name="Scare Horses" id="3fc3-a3a6-6556-699b" hidden="false">
-          <description>Models with this special rule has the Fear special rule when fighting Equines.</description>
+          <description>Models with this special rule have the Fear special rule when fighting Equines.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -5528,6 +5552,96 @@
           </entryLinks>
         </entryLink>
       </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Crew" hidden="false" id="3c2f-1ae1-c045-b9f8" subType="crew" collective="true" sortIndex="11">
+      <profiles>
+        <profile name="Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="3d07-cf52-5f51-5020">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Human</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4dbe-0e64-8911-ce5e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Light Lance" hidden="false" id="bc18-4b7a-aa62-359a" collective="true">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3d52-e738-53ee-c32e"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7d7c-0e65-0c90-f24f"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Light Lance" id="3c49-db49-12eb-6323" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+        <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="b457-a3f3-3ea9-996f" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+          <entryLinks>
+            <entryLink import="true" name="Longbow" hidden="false" id="3ce0-b902-73b8-7960" type="selectionEntry" targetId="f6cc-1342-64fe-6a3e" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="1" field="adcf-3020-f884-af0f"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="5031-6112-17d6-f0d0" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+          <entryLinks>
+            <entryLink import="true" name="Light Armour" hidden="false" id="abb3-cde6-4eb2-14dd" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="221c-c231-e2c6-c7ea" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Karma" id="b145-fdde-8dec-345e" hidden="false" type="rule" targetId="060d-b89c-8279-8bb3"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6f26-c863-e464-4b87" automatic="true"/>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="2356-9791-95ba-2bee" automatic="true"/>
+      </constraints>
+      <comment>War Elephants</comment>
+      <modifiers>
+        <modifier type="decrement" value="10" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="6bb1-79c9-4af5-ca72" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="5"/>
+      </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="increment" value="1" field="2356-9791-95ba-2bee"/>
+            <modifier type="increment" value="1" field="6f26-c863-e464-4b87"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="221c-c231-e2c6-c7ea" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <profileTypes>
