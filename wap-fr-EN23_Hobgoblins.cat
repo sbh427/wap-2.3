@@ -84,7 +84,7 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Dire Wolf" hidden="false" id="2136-bf5d-0da6-1885" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="2">
+            <entryLink import="true" name="Snarlfang" hidden="false" id="2136-bf5d-0da6-1885" type="selectionEntry" targetId="3dbc-8d54-547e-bff6" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="45"/>
               </costs>
@@ -240,7 +240,7 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Dire Wolf" hidden="false" id="a2ab-3cb1-ee3b-b6b5" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="2">
+            <entryLink import="true" name="Snarlfang" hidden="false" id="a2ab-3cb1-ee3b-b6b5" type="selectionEntry" targetId="3dbc-8d54-547e-bff6" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="45"/>
               </costs>
@@ -358,14 +358,14 @@
         <profile id="dce0-4ab2-b029-fbe7" name="Orlok" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
             <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
             <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
             <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Hobgoblin)</characteristic>
           </characteristics>
         </profile>
@@ -493,7 +493,7 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Dire Wolf" hidden="false" id="3359-e2ec-90b9-dede" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="2">
+            <entryLink import="true" name="Snarlfang" hidden="false" id="3359-e2ec-90b9-dede" type="selectionEntry" targetId="3dbc-8d54-547e-bff6" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -577,8 +577,52 @@
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="963f-0b82-0177-da8c" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="963f-0b82-0177-da8c" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="606c-43a6-f7d3-a55d" automatic="true"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="606c-43a6-f7d3-a55d">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="0ce3-a974-d7a4-d288" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Ranged" id="0ce3-a974-d7a4-d288" hidden="false" flatten="true" sortIndex="3">
+                  <entryLinks>
+                    <entryLink import="true" name="Bow" hidden="false" id="0459-a298-fbae-ae3b" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="2">
+                      <costs>
+                        <cost name="pts" typeId="points" value="2"/>
+                      </costs>
+                      <modifiers>
+                        <modifier type="set" value="replace Shield" field="annotation"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Shortbow" hidden="false" id="a0b9-ca9f-d7c5-5bd8" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="1">
+                      <costs>
+                        <cost name="pts" typeId="points" value="1"/>
+                      </costs>
+                      <modifiers>
+                        <modifier type="set" value="replace Shield" field="annotation"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="2" field="fe22-ce5f-b23e-303d"/>
+                    <modifier type="set" value="2" field="e941-9082-0af2-8b43"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="self" childId="0ce3-a974-d7a4-d288" shared="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="91df-d275-4b76-4c70" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
               <entryLinks>
@@ -602,10 +646,32 @@
               <entryLinks>
                 <entryLink import="true" name="Shield" hidden="false" id="ddd9-25ec-c9e2-03ec" type="selectionEntry" targetId="c068-0827-9931-d9bf">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="329b-4d9f-b7c2-8669"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="329b-4d9f-b7c2-8669" automatic="true"/>
                   </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="0" field="af56-60a7-18d1-6f4f"/>
+                        <modifier type="set" value="0" field="329b-4d9f-b7c2-8669"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="0ce3-a974-d7a4-d288" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
                 </entryLink>
               </entryLinks>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="0" field="3ea6-01bb-0b28-b780"/>
+                    <modifier type="set" value="0" field="7cef-e90c-ff74-4c59"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0ce3-a974-d7a4-d288" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -664,150 +730,6 @@
               </profiles>
               <infoLinks>
                 <infoLink id="c5f2-1698-7873-e792" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="db2a-81e7-eef6-588a" name="Archers" hidden="false" collective="false" import="true" type="unit" sortIndex="8">
-      <categoryLinks>
-        <categoryLink id="bd9c-5369-0f94-3776" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="e795-84f3-b438-8d0a" targetId="22c9-1606-58f8-2e60" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="a44b-0e4a-3663-bedb" name="Hobgoblin Archer" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8256-56aa-50fd-b3bb" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="8943-9e03-6c76-b7ce" name="Archer" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Hobgoblin)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="79b0-3cdf-4e18-e8c4" name="Treacherous Gits" hidden="false" targetId="a1cc-99cd-2020-0951" type="rule"/>
-            <infoLink id="1906-6213-c1a2-29d5" name="Backstabbers" hidden="false" targetId="6a7c-1561-9ac5-0549" type="rule"/>
-            <infoLink name="Cowardly Despoilers" hidden="false" id="54e6-7deb-5ad0-1c0b" targetId="506d-09a3-d6a7-da46" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="4"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="0964-b65f-c5d0-5aa6" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
-              <entryLinks>
-                <entryLink import="true" name="Bow" hidden="false" id="5d69-60be-adf3-ffd9" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Shortbow" hidden="false" id="4aa5-d078-b552-4e85" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="1"/>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0174-baa0-374a-cdc9" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-              <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="891f-54f1-7c03-5d07" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="07de-fc6a-aa09-0076"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="55. Equipment" hidden="false" id="49de-d7ce-00c2-10ca" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
-              <entryLinks>
-                <entryLink import="true" name="Throwing Weapons" hidden="false" id="9047-726d-16b9-4edf" type="selectionEntry" targetId="8013-6f6f-96e1-1acc">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c13-01a6-d04e-76d6"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="fde8-9735-6aaa-9bc0" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
-              <entryLinks>
-                <entryLink import="true" name="Light Armour" hidden="false" id="4d13-30ec-727c-d256" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-                  <costs>
-                    <cost name="pts" typeId="points" value="0.5"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="ea79-06bf-6668-3609" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="994b-3064-bd56-ac7b" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3c62-d7b7-fb9d-1e96" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Standard Bearer" id="cd03-6c69-037b-6415" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <entryLinks>
-                <entryLink import="true" name="Magic Standards" hidden="false" id="f085-8f37-1884-4192" type="selectionEntryGroup" targetId="856e-14b3-600e-fbcd">
-                  <constraints>
-                    <constraint type="max" value="25" field="points" scope="parent" shared="true" id="cd46-fe92-f6a4-30e2"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="3e14-bae3-4e67-d49a" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1e91-9b5f-a4e4-6f98" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Musician" id="4d09-d8af-8733-7996" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="1737-5a76-2ec8-2000" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e112-1c44-9c93-cad8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Hobyar" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="266d-ba38-0d26-4a7b">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">6</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry, Hobgoblin</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Leader" id="57b7-d308-eea9-5f29" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
@@ -1124,7 +1046,8 @@
     </selectionEntry>
     <selectionEntry id="096e-bb6b-6b30-b991" name="Hobhounds" hidden="false" collective="false" import="true" type="unit" sortIndex="11">
       <infoLinks>
-        <infoLink id="7e37-dc61-9230-2bb2" name="Mixed Unit" hidden="false" targetId="e00a-3a09-9b67-e994" type="rule"/>
+        <infoLink id="7e37-dc61-9230-2bb2" name="Frenzy" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
+        <infoLink id="b959-683d-dad3-1ee8" name="Mixed Unit" hidden="false" targetId="e00a-3a09-9b67-e994" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3216-fe4e-c12a-920e" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
@@ -1236,7 +1159,7 @@
             <infoLink name="Cowardly Despoilers" hidden="false" id="e19b-1322-9e1d-a91e" targetId="506d-09a3-d6a7-da46" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="10"/>
+            <cost name="pts" typeId="points" value="11"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="11. Unit Options" hidden="false" id="3b4e-b751-4e31-4145" type="selectionEntryGroup" targetId="920d-8a41-44b9-c364">
@@ -1467,7 +1390,7 @@
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="11. Unit Options" hidden="false" id="fa7f-1abf-55ad-5fe1" type="selectionEntryGroup" targetId="920d-8a41-44b9-c364">
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="fa7f-1abf-55ad-5fe1" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="55e0-6743-a470-bc75"/>
               </constraints>
@@ -1477,7 +1400,7 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="416d-eea3-cdbc-b790"/>
                   </constraints>
                   <costs>
-                    <cost name="pts" typeId="points" value="1"/>
+                    <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <infoLinks>
                     <infoLink name="Poisoned Attacks" id="39d8-1ad9-486a-6fb8" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
@@ -1677,7 +1600,7 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="11. Unit Options" hidden="false" id="dad7-0019-373b-f7ee" type="selectionEntryGroup" targetId="920d-8a41-44b9-c364">
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="dad7-0019-373b-f7ee" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Poisoned Attacks" hidden="false" id="e30e-bfc5-5259-4867" collective="true">
                   <constraints>
@@ -1687,8 +1610,15 @@
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Poisoned Attacks" id="ad27-79a3-16bd-1142" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
+                    <infoLink name="Poisoned Attacks" id="ad27-79a3-16bd-1142" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
+                      <modifiers>
+                        <modifier type="set" value="close combat only" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
+                  <modifiers>
+                    <modifier type="set" value="close combat only" field="annotation"/>
+                  </modifiers>
                 </selectionEntry>
               </selectionEntries>
               <constraints>
@@ -2454,7 +2384,7 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
                         </entryLink>
                       </entryLinks>
                     </entryLink>
-                    <entryLink import="true" name="Dire Wolf" hidden="false" id="1df5-4173-5c3b-ee7e" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="2">
+                    <entryLink import="true" name="Snarlfang" hidden="false" id="1df5-4173-5c3b-ee7e" type="selectionEntry" targetId="3dbc-8d54-547e-bff6" sortIndex="2">
                       <costs>
                         <cost name="pts" typeId="points" value="45"/>
                       </costs>
@@ -2503,7 +2433,7 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
                     <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Hobgoblin)</characteristic>
                   </characteristics>
                 </profile>
@@ -2623,7 +2553,7 @@ Once the final position of the template is determined, all models under the temp
                         </entryLink>
                       </entryLinks>
                     </entryLink>
-                    <entryLink import="true" name="Dire Wolf" hidden="false" id="35f7-f930-99c6-bed3" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="2">
+                    <entryLink import="true" name="Snarlfang" hidden="false" id="35f7-f930-99c6-bed3" type="selectionEntry" targetId="3dbc-8d54-547e-bff6" sortIndex="2">
                       <costs>
                         <cost name="pts" typeId="points" value="45"/>
                       </costs>
@@ -3057,7 +2987,7 @@ These weapons allow the wielder to re-roll To Hit and To Wound in close combat g
                         </entryLink>
                       </entryLinks>
                     </entryLink>
-                    <entryLink import="true" name="Dire Wolf" hidden="false" id="94cb-fe9e-d776-4e48" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="2">
+                    <entryLink import="true" name="Snarlfang" hidden="false" id="94cb-fe9e-d776-4e48" type="selectionEntry" targetId="3dbc-8d54-547e-bff6" sortIndex="2">
                       <costs>
                         <cost name="pts" typeId="points" value="18"/>
                       </costs>
@@ -3249,7 +3179,7 @@ These weapons allow the wielder to re-roll To Hit and To Wound in close combat g
         <cost name="pts" hidden="false" id="d56a-b80a-47e5-11b4" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Keshig Dire Wolf Riders" hidden="false" id="4a5a-4567-f0c1-64a9" collective="false" sortIndex="20">
+    <selectionEntry type="unit" import="true" name="Keshig Snarlfang Riders" hidden="false" id="4a5a-4567-f0c1-64a9" collective="false" sortIndex="20">
       <categoryLinks>
         <categoryLink targetId="0eb4-f376-7725-b05b" id="4e2d-6217-9e4a-ef09" primary="true" name="Rare"/>
         <categoryLink name="Monstrous Cavalry" hidden="false" id="31d6-fd64-e77a-92ef" targetId="82d3-4589-72b4-b6ed" primary="false"/>
@@ -3300,7 +3230,7 @@ These weapons allow the wielder to re-roll To Hit and To Wound in close combat g
             </entryLink>
             <entryLink import="true" name="70. Mount" hidden="false" id="eb13-e9cb-0c0d-0bc5" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
-                <entryLink import="true" name="Dire Wolf" hidden="false" id="1154-d00e-1627-8b90" type="selectionEntry" targetId="b89d-d9a4-7496-8611">
+                <entryLink import="true" name="Snarlfang" hidden="false" id="1154-d00e-1627-8b90" type="selectionEntry" targetId="3dbc-8d54-547e-bff6">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f65-ac3a-5299-9e3f"/>
                   </constraints>
@@ -4298,6 +4228,35 @@ Instead of firing another missile weapon in the Shooting phase, one of the Hobgo
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Snarlfang" hidden="false" id="3dbc-8d54-547e-bff6" subType="mount">
+      <categoryLinks>
+        <categoryLink targetId="8b8a-34b1-ed30-df11" id="5535-b8e9-b208-58ca" primary="false" name="Mount"/>
+        <categoryLink targetId="f98e-8d4f-7b1b-59cd" id="db4f-f939-a661-1b50" primary="false" name="Monstrous Beasts"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Snarlfang" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="cd2b-297f-e772-cc29">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">4</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Canine)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Barding" hidden="false" id="e295-686b-96e9-4f7c" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -5361,7 +5320,7 @@ called, every friendly Hobgoblin unit within 12&quot; add +D3&quot; to their ch
   <sharedProfiles>
     <profile id="8708-ac34-e8e6-adf3" name="Hobhound" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
       <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
         <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
         <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
@@ -5433,7 +5392,7 @@ called, every friendly Hobgoblin unit within 12&quot; add +D3&quot; to their ch
   </sharedProfiles>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Armoury" id="3457-df9f-16d4-d466" targetId="522e-5e2a-d54c-4959"/>
-    <catalogueLink type="catalogue" name="Bestiary" id="29a8-26b3-5307-25d4" targetId="1fc9-2903-cb19-5737"/>
+    <catalogueLink type="catalogue" name="Bestiary" id="3ea0-8353-0771-9f16" targetId="1fc9-2903-cb19-5737"/>
   </catalogueLinks>
   <entryLinks>
     <entryLink import="true" name="Giant" hidden="false" id="a93a-ad09-08a7-647c" type="selectionEntry" targetId="ff3c-af52-ca36-3847" sortIndex="26">
