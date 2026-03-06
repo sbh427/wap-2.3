@@ -2,7 +2,7 @@
 <catalogue library="false" id="d63c-bfc7-b3cb-5a6d" name="Zombie Pirates WAP 1.51" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="72" revision="8" authorName="xetolosch" authorContact="contact me on discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="The Red Thirst" id="bbaa-8771-dddb-7fe5" hidden="false">
-      <description>Roll a D6 at the end of each Close Combat phase in which one or more models was slain by a Vampire with this special rule. On a 5+, the Vampire recovers a single Wound, up to their starting value (excluding additional Wounds from mounts). This does not work against Animated Constructs, Daemons, Forest Spirits or Vampires. </description>
+      <description>Roll a D6 at the end of each Close Combat phase in which one or more models was slain by a Vampire with this special rule. On a 5+, the Vampire recovers a single Wound, up to their starting value (excluding additional Wounds from mounts). This does not work against Animated Constructs, Daemons, Forest Spirits or Vampires.</description>
     </rule>
     <rule name="Waterlogged Weapons" id="e286-937d-15d8-c079" hidden="false">
       <description>Models with this special rule must roll a D6 for every To Hit roll of 1 with missile weapons that they make. On a 1-3, resolve the Hit against the model itself. Artillery weapons deduct 1 from the result rolled on the Blackpowder Misfire Chart.</description>
@@ -1708,7 +1708,8 @@
             <modifier type="set" value="Queen Bess" field="name"/>
             <modifier type="set" value="12-72&quot;" field="1c88-efb0-083f-b945"/>
             <modifier type="replace" value="D6+1" field="d3a4-721b-f750-5564" arg="D6"/>
-            <modifier type="append" value="Place the small template where the cannon ball lands; then move the template the distance the cannon ball bounces. Any model under the hole suffers a Strength 10 Hit with the Multiple Wounds (D6+1) special rule. Other models touched by the template suffer a Strength 5 Hit. If a Misfire is rolled, add -1 to the result on the Black Powder Misfire Chart." field="d3a4-721b-f750-5564" arg="D6"/>
+            <modifier type="append" value="Place the small template where the cannon ball lands; then move the template the distance the cannon ball bounces. Any model under the hole suffers a Strength 10 Hit with the Multiple Wounds (D6+1) special rule. Other models touched by the template suffer a Strength 5 Hit.
+" field="d3a4-721b-f750-5564" arg="D6"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1782,9 +1783,9 @@
                     </entryLink>
                   </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="90. Vampiric Powers &amp; Magic Items" hidden="false" id="93c0-0b33-801b-b792" type="selectionEntryGroup" targetId="d673-44bc-8f02-faae">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="93c0-0b33-801b-b792" type="selectionEntryGroup" targetId="4a01-a2d6-3b7d-4b53">
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="Talismans" id="ace4-c47b-6bbf-1287" hidden="false" sortIndex="4">
+                    <selectionEntryGroup name="Talismans" id="ace4-c47b-6bbf-1287" hidden="false" sortIndex="4" collapsible="true">
                       <selectionEntries>
                         <selectionEntry type="upgrade" import="true" name="Slaan Gold" hidden="false" id="6f21-5cb4-ca5e-9ad9">
                           <constraints>
@@ -1819,26 +1820,39 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9bb8-8d33-349c-4b5c"/>
                       </constraints>
                     </selectionEntryGroup>
+                    <selectionEntryGroup name="Vampiric Powers" id="af05-6360-c6c6-1418" hidden="false" sortIndex="1" collapsible="true">
+                      <entryLinks>
+                        <entryLink import="true" name="Curse of the Revenant" hidden="false" id="34cc-bb71-965c-5c6b" type="selectionEntry" targetId="98b8-cb09-610b-f2de">
+                          <modifiers>
+                            <modifier type="set" value="1" field="375f-bf76-1b22-872e"/>
+                            <modifier type="set" value="0" field="points"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="Hornswaggle" hidden="false" id="50be-fff0-3773-3f78" type="selectionEntry" targetId="7d78-e10e-8442-33ab">
+                          <modifiers>
+                            <modifier type="set" value="1" field="50e4-ac1d-63cd-9862"/>
+                            <modifier type="set" value="0" field="points"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="Transfix" hidden="false" id="6600-3bd0-2259-a3b5" type="selectionEntry" targetId="00c5-f1c6-11f9-b65e">
+                          <modifiers>
+                            <modifier type="set" value="1" field="bd43-29aa-2df9-64d6"/>
+                            <modifier type="set" value="0" field="points"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="Unbending Willpower" hidden="false" id="18cd-7916-86d7-75f3" type="selectionEntry" targetId="bfd3-bed4-7c4c-2ecc">
+                          <modifiers>
+                            <modifier type="set" value="1" field="2521-019c-6120-3096"/>
+                            <modifier type="set" value="0" field="points"/>
+                          </modifiers>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntryGroup>
                   </selectionEntryGroups>
                   <modifiers>
-                    <modifier type="set" value="25" field="f23c-0cee-1d3f-c286"/>
-                    <modifier type="set" value="true" field="hidden" affects="self.entries.dddf-3c3f-36c8-96a8"/>
+                    <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.0aeb-c885-1411-27b5" scope="parent"/>
+                    <modifier type="increment" value="25" field="08d4-e38c-dcdd-6b1e"/>
                   </modifiers>
-                  <modifierGroups>
-                    <modifierGroup type="and">
-                      <comment>vampiric powers</comment>
-                      <modifiers>
-                        <modifier type="set" value="0" field="points" affects="self.entries.recursive.98b8-cb09-610b-f2de"/>
-                        <modifier type="set" value="1" field="375f-bf76-1b22-872e" affects="self.entries.recursive.98b8-cb09-610b-f2de"/>
-                        <modifier type="set" value="0" field="points" affects="self.entries.recursive.7d78-e10e-8442-33ab"/>
-                        <modifier type="set" value="1" field="50e4-ac1d-63cd-9862" affects="self.entries.recursive.7d78-e10e-8442-33ab"/>
-                        <modifier type="set" value="0" field="points" affects="self.entries.recursive.00c5-f1c6-11f9-b65e"/>
-                        <modifier type="set" value="1" field="bd43-29aa-2df9-64d6" affects="self.entries.recursive.00c5-f1c6-11f9-b65e"/>
-                        <modifier type="set" value="0" field="points" affects="self.entries.recursive.bfd3-bed4-7c4c-2ecc"/>
-                        <modifier type="set" value="1" field="2521-019c-6120-3096" affects="self.entries.recursive.bfd3-bed4-7c4c-2ecc"/>
-                      </modifiers>
-                    </modifierGroup>
-                  </modifierGroups>
                 </entryLink>
               </entryLinks>
               <profiles>
@@ -1943,9 +1957,9 @@
                   </entryLinks>
                 </entryLink>
                 <entryLink import="true" name="60. Wizard Level" hidden="false" id="7563-4e1b-9e66-1972" type="selectionEntryGroup" targetId="8e7d-af82-eb9b-19f2"/>
-                <entryLink import="true" name="90. Vampiric Powers &amp; Magic Items" hidden="false" id="e3a1-0c0e-cf10-09b1" type="selectionEntryGroup" targetId="d673-44bc-8f02-faae">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="e3a1-0c0e-cf10-09b1" type="selectionEntryGroup" targetId="4a01-a2d6-3b7d-4b53">
                   <selectionEntryGroups>
-                    <selectionEntryGroup name="Arcane Item" id="d054-5066-7617-2528" hidden="false" sortIndex="5">
+                    <selectionEntryGroup name="Arcane Item" id="d054-5066-7617-2528" hidden="false" sortIndex="5" collapsible="true">
                       <selectionEntries>
                         <selectionEntry type="upgrade" import="true" name="The Stone of Schwartzhafen" hidden="false" id="8af3-6540-8d3b-e65e">
                           <constraints>
@@ -1966,19 +1980,21 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6462-8351-7de8-7969"/>
                       </constraints>
                     </selectionEntryGroup>
+                    <selectionEntryGroup name="Vampiric Powers" id="2f48-5184-ecfa-2882" hidden="false" collapsible="true" sortIndex="-1">
+                      <entryLinks>
+                        <entryLink import="true" name="Fear Incarnate" hidden="false" id="08c4-a98a-60a9-9844" type="selectionEntry" targetId="8540-3088-223b-bbe3">
+                          <modifiers>
+                            <modifier type="set" value="1" field="1b59-aae5-d1ba-372f"/>
+                            <modifier type="set" value="0" field="points"/>
+                          </modifiers>
+                        </entryLink>
+                      </entryLinks>
+                    </selectionEntryGroup>
                   </selectionEntryGroups>
                   <modifiers>
-                    <modifier type="set" value="75" field="f23c-0cee-1d3f-c286"/>
-                    <modifier type="set" value="true" field="hidden" affects="self.entries.2bc4-94c7-1c28-fe5d"/>
+                    <modifier type="increment" value="75" field="08d4-e38c-dcdd-6b1e"/>
+                    <modifier type="set" value="true" field="hidden" affects="self.entries.e266-8f64-5d99-0987"/>
                   </modifiers>
-                  <modifierGroups>
-                    <modifierGroup type="and">
-                      <modifiers>
-                        <modifier type="set" value="0" field="points" affects="self.entries.recursive.8540-3088-223b-bbe3"/>
-                        <modifier type="set" value="1" field="1b59-aae5-d1ba-372f" affects="self.entries.recursive.8540-3088-223b-bbe3"/>
-                      </modifiers>
-                    </modifierGroup>
-                  </modifierGroups>
                 </entryLink>
                 <entryLink import="true" name="70. Mount" hidden="false" id="3d39-0af2-fcdf-dfca" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                   <entryLinks>
@@ -1999,7 +2015,7 @@
                         <entryLink import="true" name="0. Invocation of Nehek" hidden="false" id="2e07-1861-7ea5-0dbc" type="selectionEntry" targetId="3aef-3493-649d-4614" sortIndex="2"/>
                       </entryLinks>
                       <selectionEntryGroups>
-                        <selectionEntryGroup name="Spells from the Lore of Necromancy" id="ec4b-6df1-2cd9-eefd" hidden="false" sortIndex="3">
+                        <selectionEntryGroup name="Spells from the Lore of Necromancy" id="ec4b-6df1-2cd9-eefd" hidden="false" sortIndex="3" collapsible="true">
                           <entryLinks>
                             <entryLink import="true" name="2. Vanhel&apos;s Dance Macabre" hidden="false" id="6fb8-808f-2c45-2df8" type="selectionEntry" targetId="9219-9ee5-7476-5ed2" defaultAmount="1"/>
                             <entryLink import="true" name="1. Hand of Dust" hidden="false" id="a206-e664-fb2e-4c75" type="selectionEntry" targetId="cf77-4db3-8bda-2cb7" defaultAmount="1"/>
@@ -2020,7 +2036,7 @@
                         <entryLink import="true" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" id="9fcf-8d60-05d2-f6cb" type="selectionEntry" targetId="dba6-e588-0a5b-69a1" sortIndex="2"/>
                       </entryLinks>
                       <selectionEntryGroups>
-                        <selectionEntryGroup name="Spells from the Lore of Shadow" id="da0f-ea18-ee30-c197" hidden="false" sortIndex="3">
+                        <selectionEntryGroup name="Spells from the Lore of Shadow" id="da0f-ea18-ee30-c197" hidden="false" sortIndex="3" collapsible="true">
                           <entryLinks>
                             <entryLink import="true" name="8. Unseen Lurker" hidden="false" id="2735-0467-ad09-8ee0" type="selectionEntry" targetId="7a75-911e-4e04-ee42"/>
                             <entryLink import="true" name="1. Creeping Darkness" hidden="false" id="8af6-c557-1915-6527" type="selectionEntry" targetId="1881-7f35-6713-cba7"/>
@@ -3065,7 +3081,7 @@
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a spell from the Lore of Necromancy is successfully cast, all Undead units within 6&quot; of the caster regain 1 Wound (Core Units regain D3 Wounds) following the rules for Invocation of Nehek. </characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a spell from the Lore of Necromancy is successfully cast, all Undead units within 6&quot; of the caster regain 1 Wound (Core Units regain D3 Wounds) following the rules for Invocation of Nehek.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3421,7 +3437,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This Spell brings a unit of Zombies into play. Roll 2D6+3. This is how many models comprise the new unit. The caster can choose to summon 2D6+3 Skeleton Warriors with shields instead. If they do so, the casting value is increased to 12+. </characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This Spell brings a unit of Zombies into play. Roll 2D6+3. This is how many models comprise the new unit. The caster can choose to summon 2D6+3 Skeleton Warriors with shields instead. If they do so, the casting value is increased to 12+.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5799,7 +5815,7 @@
           <profiles>
             <profile name="Bloody Reaver Colours" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="2354-8776-a30b-f69a">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Depth Guard only. The unit carrying this standard has a 5+ Ward save against missile attacks and the Vanguard special rule. </characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Depth Guard only. The unit carrying this standard has a 5+ Ward save against missile attacks and the Vanguard special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
