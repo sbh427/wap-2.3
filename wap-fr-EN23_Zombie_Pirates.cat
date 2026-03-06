@@ -2,7 +2,7 @@
 <catalogue library="false" id="d63c-bfc7-b3cb-5a6d" name="Zombie Pirates WAP 1.51" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="72" revision="8" authorName="xetolosch" authorContact="contact me on discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="The Red Thirst" id="bbaa-8771-dddb-7fe5" hidden="false">
-      <description>Roll a D6 at the end of each Close Combat phase for every enemy model slain by a model with this special rule this round. On the roll of a 6+, the model recovers a single Wound lost earlier in the battle. This does not work against models with the Animated Construct, Daemonic, Forest Spirit or Vampiric special rules.</description>
+      <description>Roll a D6 at the end of each Close Combat phase in which one or more models was slain by a Vampire with this special rule. On a 5+, the Vampire recovers a single Wound, up to their starting value (excluding additional Wounds from mounts). This does not work against Animated Constructs, Daemons, Forest Spirits or Vampires. </description>
     </rule>
     <rule name="Waterlogged Weapons" id="e286-937d-15d8-c079" hidden="false">
       <description>Models with this special rule must roll a D6 for every To Hit roll of 1 with missile weapons that they make. On a 1-3, resolve the Hit against the model itself. Artillery weapons deduct 1 from the result rolled on the Blackpowder Misfire Chart.</description>
@@ -239,7 +239,7 @@
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Undead, Vampire)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Vampire)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -339,7 +339,7 @@
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Undead, Vampire)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Vampire)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -405,32 +405,17 @@
         </entryLink>
         <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="b091-1611-2fe1-4abd" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
           <entryLinks>
-            <entryLink import="true" name="Pistol" hidden="false" id="e25e-88a7-d218-4af0" type="selectionEntry" targetId="4883-fb9f-3893-0d9c" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Swivel Gun" hidden="false" id="4ea2-4375-6fe0-8b3e" type="selectionEntry" targetId="2e3a-3399-5a4c-b10d" sortIndex="5">
+            <entryLink import="true" name="Swivel Gun" hidden="false" id="4ea2-4375-6fe0-8b3e" type="selectionEntry" targetId="2e3a-3399-5a4c-b10d" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Blunderbuss" hidden="false" id="3788-d821-7242-7290" type="selectionEntry" targetId="dc92-514e-0596-fd55" sortIndex="2">
+            <entryLink import="true" name="Handgun" hidden="false" id="9163-9b8b-46fd-ad59" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3" sortIndex="1">
               <costs>
-                <cost name="pts" typeId="points" value="6"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Handgun" hidden="false" id="9163-9b8b-46fd-ad59" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="6"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Brace of Pistols" hidden="false" id="baef-4240-9c6d-c20c" type="selectionEntry" targetId="a574-f633-253c-b619" sortIndex="4">
-              <costs>
-                <cost name="pts" typeId="points" value="7"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Volley Gun" hidden="false" id="0ce0-176d-ad3e-796d" type="selectionEntry" targetId="750f-2c0d-6669-55a9" sortIndex="6">
+            <entryLink import="true" name="Volley Gun" hidden="false" id="0ce0-176d-ad3e-796d" type="selectionEntry" targetId="750f-2c0d-6669-55a9" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -576,7 +561,6 @@
         <categoryLink name="Infantry" hidden="false" id="17de-e49d-48a9-3546" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="5f2d-fe27-751b-c4c0" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="10fa-89ae-917c-8457" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="4ab6-dc57-6d74-7a76" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
@@ -599,17 +583,18 @@
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Undead, Ghost)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Undead, Spirit)</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Undead" id="3f6f-252f-9a92-ea5b" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
+        <infoLink name="Loner" id="3f6f-252f-9a92-ea5b" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
         <infoLink name="Syreen&apos;s Call" id="7aff-a73b-9171-fd1a" hidden="false" type="rule" targetId="9a32-9be2-26e5-e737"/>
         <infoLink name="Fly (6)" id="12cf-0391-7a3b-a396" hidden="false" type="rule" targetId="b830-fe6e-b461-0377"/>
         <infoLink name="Terror" id="049a-58ab-16d3-3952" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
         <infoLink name="Ethereal" id="d37d-3c2a-8960-09f9" hidden="false" type="rule" targetId="9e47-05bc-376a-7463"/>
         <infoLink name="Ethereal" id="0a8e-2c34-fad7-cdb8" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
+        <infoLink name="Undead" id="8f7d-ce38-e6cd-512d" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
       </infoLinks>
       <modifiers>
         <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
@@ -913,13 +898,13 @@
           <profiles>
             <profile name="Scurvy Dog" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="267d-6681-c1b9-0a4c">
               <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
                 <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
                 <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
                 <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
                 <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
                 <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
                 <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Undead, Canine)</characteristic>
@@ -1428,7 +1413,7 @@
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Carronade" hidden="false" id="343f-f2f3-6cf5-3b8a" sortIndex="205">
       <costs>
-        <cost name="pts" typeId="points" value="80"/>
+        <cost name="pts" typeId="points" value="85"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="149f-f65e-703a-2e99" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -1478,7 +1463,7 @@
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mortar" hidden="false" id="6265-9338-219d-fb7a" sortIndex="206">
       <costs>
-        <cost name="pts" typeId="points" value="95"/>
+        <cost name="pts" typeId="points" value="100"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="2756-2537-f49c-a036" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -1718,17 +1703,15 @@
         <infoLink name="Blackpowder Misfire Chart" id="7a4b-ea66-d9e4-0ea7" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
         <infoLink name="Waterlogged Weapons" id="3a4d-2436-8866-ca59" hidden="false" type="rule" targetId="e286-937d-15d8-c079"/>
         <infoLink name="Undead" id="3e47-bfcb-8c11-1627" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
+        <infoLink name="Great Cannon" id="8b3f-15f8-92f8-cb7a" hidden="false" type="profile" targetId="7e43-605b-bfde-13c3">
+          <modifiers>
+            <modifier type="set" value="Queen Bess" field="name"/>
+            <modifier type="set" value="12-72&quot;" field="1c88-efb0-083f-b945"/>
+            <modifier type="replace" value="D6+1" field="d3a4-721b-f750-5564" arg="D6"/>
+            <modifier type="append" value="Place the small template where the cannon ball lands; then move the template the distance the cannon ball bounces. Any model under the hole suffers a Strength 10 Hit with the Multiple Wounds (D6+1) special rule. Other models touched by the template suffer a Strength 5 Hit. If a Misfire is rolled, add -1 to the result on the Black Powder Misfire Chart." field="d3a4-721b-f750-5564" arg="D6"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
-      <profiles>
-        <profile name="Queen Bess" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="dbb3-4727-0d3b-ed42">
-          <characteristics>
-            <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Cannon</characteristic>
-            <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-72&quot;</characteristic>
-            <characteristic name="Strength" typeId="6ca0-d074-628f-e276">10</characteristic>
-            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Place the small template where the cannon ball lands; then move the template the distance the cannon ball bounces. Any model under the hole suffers a Strength 10 Hit with the Multiple Wounds (D6+1) special rule. Other models touched by the template suffer a Strength 5 Hit. If a Misfire is rolled, add -1 to the result on the Black Powder Misfire Chart.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <modifiers>
         <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
           <conditionGroups>
@@ -1880,7 +1863,7 @@
               </infoLinks>
               <rules>
                 <rule name="Magical Void" id="ddf3-a207-d8e9-64ac" hidden="false">
-                  <description>Luthor Harkon channels dispel dice like a Level 4 Wizard. In addition, he does so on a 5+ rather than a 6.</description>
+                  <description>Luthor Harkon channels dispel dice like a Level 4 Wizard. In addition, he does so on a 4+ rather than a 5.</description>
                 </rule>
               </rules>
               <infoGroups>
@@ -1927,6 +1910,9 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7174-6400-55ad-c63e" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="Luthor Harkon" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Count Noctilus" hidden="false" id="aa0c-04d6-170c-ad2d" sortIndex="2">
               <costs>
@@ -2096,6 +2082,9 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5b08-b607-02e7-9f2f" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="Count Noctilus" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Cylostra Direfin" hidden="false" id="3c34-6702-186d-6c9d" sortIndex="3">
               <costs>
@@ -2113,7 +2102,7 @@
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
                     <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Undead)</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Undead, Spirit)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2199,6 +2188,7 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" value="Cylostra Direfin" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -2436,6 +2426,9 @@
                   <description>If Drekla is in base contact with Luthor Harkon, Luthor gains a 3+ &apos;Look Out, Sir!&apos; save in close combat with any Hits being allocated against Drekla instead. If Luthor Harkon is slain, Drekla will be subject to the Hatred and Frenzy special rules for the remainder of the game.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Captain Drekla" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Black Jens" hidden="false" id="48ed-568e-cb35-7e6b" sortIndex="2">
               <costs>
@@ -2486,6 +2479,9 @@
                   <description>If Luthor Harkon is slain or currently subject to Brainlock, Black Jens will count as the Army General.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Black Jens" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Vangheist" hidden="false" id="d426-bfc2-5a39-13fc" sortIndex="3">
               <costs>
@@ -2594,6 +2590,7 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" value="Vangheist" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Skretch Half-Dead" hidden="false" id="db8e-907c-34c8-4854" sortIndex="4">
@@ -2699,6 +2696,7 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" value="Skretch Half-Dead" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Red Henri" hidden="false" id="44cf-be7b-d2c2-8380" sortIndex="5">
@@ -2795,6 +2793,7 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" value="Red Henri" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Keterlyn, the Brine Wife" hidden="false" id="3a14-5c05-00b0-3b69" sortIndex="6">
@@ -2871,6 +2870,7 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" value="Keterlyn, the Brine Wife" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -3065,7 +3065,7 @@
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a spell from the Lore of Necromancy is successfully cast, one Undead unit within 6&quot; of the caster regains 1 Wound (Core Units regain D3 Wounds) following the rules for Invocation of Nehek.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a spell from the Lore of Necromancy is successfully cast, all Undead units within 6&quot; of the caster regain 1 Wound (Core Units regain D3 Wounds) following the rules for Invocation of Nehek. </characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3079,7 +3079,7 @@
             <profile name="Invocation of Nehek" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="11b5-44ff-24d6-72b6">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It targets Undead. The target immediately regains a number of Wounds as follows: Core Units gain 2D6 Wounds; Special Units (except Cavalry) gain D6 Wounds. Characters, Special Units that are Cavalry and Rare Units regain D3 Wounds per successful casting. Models gained are distributed as a summoning spell. Any characters in a unit can only be healed if targeted separately from the rest of the unit, in which case only they are healed.</characteristic>
@@ -3421,7 +3421,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It brings a unit of Zombie Deckhands with bucklers into play. Roll 2D6+3. This is how many models comprise the new unit.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This Spell brings a unit of Zombies into play. Roll 2D6+3. This is how many models comprise the new unit. The caster can choose to summon 2D6+3 Skeleton Warriors with shields instead. If they do so, the casting value is increased to 12+. </characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5799,7 +5799,7 @@
           <profiles>
             <profile name="Bloody Reaver Colours" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="2354-8776-a30b-f69a">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The unit carrying this standard has Vanguard, and a 5+ Ward save against missile attacks.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Depth Guard only. The unit carrying this standard has a 5+ Ward save against missile attacks and the Vanguard special rule. </characteristic>
               </characteristics>
             </profile>
           </profiles>
