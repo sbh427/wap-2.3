@@ -15,7 +15,7 @@
       <description>If a War Elephant suffers a wound from a missile attack, it must immediately take a Panic test. Any time a War Elephant fails a Panic or Break test it will Flee in a random direction, as determined by the Scatter dice. If it flees through any unit, it inflicts D6+1 Strength 5 hits.</description>
     </rule>
     <rule name="Beastmaster" id="9e5e-9d04-0229-fcaf" hidden="false">
-      <description>Any friendly Warbeast, Monstrous Beast, Monstrous Cavalry or Monster (except Devas) within 6&quot; of a Beastmaster may re-roll failed Leadership tests and gain the Stubborn special rule.</description>
+      <description>Any friendly War Beast, Monstrous Beast, Monstrous Cavalry or Monster (except Devas) within 6&quot; of a Beastmaster may re-roll failed Leadership tests and gain the Stubborn special rule. </description>
     </rule>
   </sharedRules>
   <sharedInfoGroups>
@@ -1846,7 +1846,7 @@
             </entryLink>
             <entryLink import="true" name="War Elephant" hidden="false" id="6e4a-2e9e-b6ea-f4cf" type="selectionEntry" targetId="f9e8-7f25-6e32-5130" sortIndex="5">
               <costs>
-                <cost name="pts" typeId="points" value="100"/>
+                <cost name="pts" typeId="points" value="90"/>
               </costs>
             </entryLink>
             <entryLink import="true" name="Royal Chariot" hidden="false" id="4d59-8c42-6087-8818" type="selectionEntry" targetId="d593-d556-5b45-33c2" sortIndex="3">
@@ -5368,7 +5368,7 @@
         </entryLink>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e1b3-a9bd-e794-b626" automatic="true"/>
+        <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="e1b3-a9bd-e794-b626" automatic="true"/>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8b88-cc53-be3f-f990" automatic="true"/>
       </constraints>
       <modifierGroups>
@@ -5447,6 +5447,11 @@
           </entryLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="0f6c-cba3-b213-c2f3" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="71c5-9037-5bd4-fae9">
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="0f6c-cba3-b213-c2f3" shared="true" includeChildSelections="true"/>
               </conditions>
@@ -5597,6 +5602,13 @@
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="221c-c231-e2c6-c7ea" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -5605,8 +5617,8 @@
         <infoLink name="Karma" id="b145-fdde-8dec-345e" hidden="false" type="rule" targetId="060d-b89c-8279-8bb3"/>
       </infoLinks>
       <constraints>
-        <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="6f26-c863-e464-4b87" automatic="true"/>
-        <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="2356-9791-95ba-2bee" automatic="true"/>
+        <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6f26-c863-e464-4b87" automatic="true"/>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="2356-9791-95ba-2bee" automatic="true"/>
       </constraints>
       <comment>War Elephants</comment>
       <modifiers>
@@ -5619,6 +5631,17 @@
       <costs>
         <cost name="pts" typeId="points" value="5"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="increment" value="1" field="2356-9791-95ba-2bee"/>
+            <modifier type="increment" value="1" field="6f26-c863-e464-4b87"/>
+          </modifiers>
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="221c-c231-e2c6-c7ea" shared="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <profileTypes>
