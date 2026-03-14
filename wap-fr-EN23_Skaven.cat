@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="28da-4dfe-fb43-8a0c" name="Skaven WAP 1.92" revision="21" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="40" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="28da-4dfe-fb43-8a0c" name="Skaven WAP 1.93" revision="22" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="40" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <selectionEntries>
     <selectionEntry id="e7cc-2891-79c2-d6b3" name="Grey Seer" hidden="false" collective="false" import="true" type="model" sortIndex="1">
@@ -3797,7 +3797,7 @@ If you roll a misfire result something has gone awry. No more shots are fired th
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8dbe-d916-440e-d296" name="Special Characters" hidden="false" collective="false" import="true" type="unit" sortIndex="98">
+    <selectionEntry id="8dbe-d916-440e-d296" name="Special Characters" hidden="false" collective="false" import="true" type="unit" sortIndex="98" subType="unit-group">
       <categoryLinks>
         <categoryLink id="5e51-4a2a-421c-1f86" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="true"/>
         <categoryLink id="3a18-bca0-6636-d161" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
@@ -5014,12 +5014,13 @@ Models hit by the rod must pass a single T test (regardless of the number of hit
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Krittok Foulblade" hidden="false" id="1806-3961-eae1-a923" sortIndex="2.5">
               <costs>
-                <cost name="pts" typeId="points" value="175"/>
+                <cost name="pts" typeId="points" value="180"/>
               </costs>
               <categoryLinks>
                 <categoryLink name="Z Heavy Armour" hidden="false" id="ad69-efa9-3fdb-f90b" targetId="f667-6e97-ec08-38ea" primary="false"/>
                 <categoryLink name="Z Armour" hidden="false" id="ddc6-35da-697c-3621" targetId="387c-2b7c-0a30-7305" primary="false"/>
                 <categoryLink name="Infantry" hidden="false" id="3382-4f92-1c0a-88b6" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink targetId="bdff-f0df-2bd4-5bed" id="beb8-edfe-1daf-2ec7" primary="false" name="Y Warplock Pistol"/>
               </categoryLinks>
               <profiles>
                 <profile name="Krittok Foulblade" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="435d-e917-6796-b900">
@@ -5064,6 +5065,24 @@ Models hit by the rod must pass a single T test (regardless of the number of hit
                       </profiles>
                     </selectionEntry>
                   </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="1fcb-6644-a950-de6b" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Warplock Pistol" hidden="false" id="003b-8e7f-f223-7640" type="selectionEntry" targetId="2d6f-d5fa-12cd-172c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="af93-2ad7-7309-134b"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="1927-0430-6e3a-aaaa" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Heavy Armour" hidden="false" id="fa3a-a97d-4e90-8246" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
+                      <modifiers>
+                        <modifier type="set" value="1" field="2a65-3a21-af86-6ae3"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <infoLinks>
@@ -5144,7 +5163,7 @@ Models hit by the rod must pass a single T test (regardless of the number of hit
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="0980-62c1-a68b-52b9" name="Special Characters" hidden="false" collective="false" import="true" type="unit" sortIndex="99">
+    <selectionEntry id="0980-62c1-a68b-52b9" name="Special Characters" hidden="false" collective="false" import="true" type="unit" sortIndex="99" subType="unit-group">
       <categoryLinks>
         <categoryLink id="c536-3027-7e6f-f93c" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
       </categoryLinks>
@@ -5646,21 +5665,8 @@ Models hit by the rod must pass a single T test (regardless of the number of hit
                 <infoLink name="Fear" id="f6c9-e28f-c7e6-fd79" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="65. Lore of Magic" hidden="false" id="9df1-09f6-cfbd-b2df" type="selectionEntryGroup" targetId="758f-4e20-95b6-ffa5">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ee9e-4c2a-b8ce-4479-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee9e-4c2a-b8ce-4479-max"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink import="true" name="Lore of Plague" hidden="false" id="c1b0-42ab-ac48-dd81" type="selectionEntry" targetId="0fbe-0677-25c0-a75a">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2bea-42b8-f750-b0e9" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="346e-308c-a740-706b" type="selectionEntryGroup" targetId="5206-8fec-b734-4439"/>
-                <entryLink import="true" name="55. Equipment" hidden="false" id="f14f-f3ee-e556-bb11" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f14f-f3ee-e556-bb11" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Censer Mace" hidden="false" id="ef4b-60f3-58f6-5cd3" collective="false">
                       <constraints>
@@ -5684,15 +5690,9 @@ Models hit by the rod must pass a single T test (regardless of the number of hit
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
-                <entryLink import="true" name="60. Wizard Level" hidden="false" id="0a00-caf1-4078-502a" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="98e5-fe22-ac2a-48f4"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c07-b16d-8c51-b7fb"/>
-                  </constraints>
-                </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="125"/>
+                <cost name="pts" typeId="points" value="90"/>
               </costs>
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="638a-83b8-b085-fcd0" targetId="22c9-1606-58f8-2e60" primary="false"/>
@@ -5716,7 +5716,6 @@ Models hit by the rod must pass a single T test (regardless of the number of hit
         <categoryLink name="Infantry" hidden="false" id="49d3-eb89-9f92-3370" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Poisoned Wind Mortar" id="6ba7-96b9-c04f-2d52" hidden="false" targetId="fb41-22e1-85b1-9cb2" type="profile"/>
         <infoLink name="Weapon Team" id="ceda-0f8b-7c10-58eb" hidden="false" targetId="9a1c-90ac-a3ff-5ba0" type="profile"/>
         <infoLink name="Scurry Away!" id="ebd7-6801-af99-f4b5" hidden="false" targetId="45db-9bbc-8b3b-4865" type="rule"/>
         <infoLink name="Weapon team" id="e6f0-61dd-f300-f3ef" hidden="false" type="rule" targetId="409d-a7ab-f540-c35c"/>
@@ -5768,6 +5767,16 @@ Models hit by the rod must pass a single T test (regardless of the number of hit
           </profiles>
         </infoGroup>
       </infoGroups>
+      <profiles>
+        <profile name="Poisoned Wind Mortar" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="fb41-22e1-85b1-9cb2">
+          <characteristics>
+            <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Mortar</characteristic>
+            <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-36&quot;</characteristic>
+            <characteristic name="Strength" typeId="6ca0-d074-628f-e276"/>
+            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Magical Attacks. Ignores Armour saves. Move or Fire. Slow to Fire.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Doom-flayer" hidden="false" id="134e-a9c1-d9be-9f00" sortIndex="34">
       <selectionEntries>
@@ -8410,7 +8419,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
       </constraints>
       <rules>
         <rule name="Smoke Bombs" id="704f-9cc5-3947-3141" hidden="false">
-          <description>This item can be used if the bearer breaks from combat before the opponent has declared to pursue. Any units pursuing this model roll one D6 less than normal for their pursuit distance this turn.</description>
+          <description>A unit with Smoke Bombs may use them at the end of any Close Combat phase in which they take part. If they do so, the unit may disengage the combat by making a flee move. If they do so, the enemy cannot pursue them and they will rally automatically in their next turn.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -11107,7 +11116,7 @@ Note that a Skaven General confers his basic Ld and then units modify it with th
       <description>A Master Assassin may be the Army General despite being Hidden. However, he can only pass on his Leadership value to other units if he is not Hidden.</description>
     </rule>
     <rule id="b29b-75ba-9d82-c0e2" name="Leader of the Pack" hidden="false">
-      <description>Models with this special rule that are on foot may join units of Giant Rats or Rat Ogres and act as their handlers following the Mixed Units special rule, or be deployed in the front rank if they wish. All friendly Clan Moulder units within 6&quot; of a Hero or 12&quot; of a Lord with this special rule gain the Cold-blooded special rule.</description>
+      <description>Models with this special rule that are on foot may join units of Giant Rats or Rat Ogres and act as their handlers following the Mixed Units special rule, or be deployed in the front rank if they wish. In addition, all friendly Clan Moulder units within 6&quot; of a Hero or 12&quot; of a Lord with this special rule gain the Cold-blooded special rule.</description>
     </rule>
     <rule id="7a20-799e-3c0b-1ae6" name="Tunneler" hidden="false">
       <description>A unit that contains a model with Grinderfists, follows the rules for Ambushers. During deployment, but before Scouts are set up, place a tunnel marker anywhere on the battlefield that is not impassable terrain.
@@ -11210,14 +11219,6 @@ Roll an Artillery Dice to determine number of shots fired. After the first Artil
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">(Skaven, Clan Moulder)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="fb41-22e1-85b1-9cb2" name="Poisoned Wind Mortar" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
-      <characteristics>
-        <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Mortar</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">8-36&quot;</characteristic>
-        <characteristic name="Strength" typeId="6ca0-d074-628f-e276"/>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Magical Attacks. Ignores Armour saves. Move or Fire. Slow to Fire.</characteristic>
       </characteristics>
     </profile>
     <profile id="Warpfire Thrower (Boneripper)" name="Warpfire Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
