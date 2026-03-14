@@ -7454,6 +7454,9 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="607e-108e-2ecb-0d9f" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="Lord Mazdamundi" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Lord Kroak" hidden="false" id="ed0e-72d7-3173-5b92" sortIndex="2">
               <costs>
@@ -7646,6 +7649,9 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="set" value="Lord Kroak" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Kroq-Gar" hidden="false" id="482a-519f-2d8f-b10e" sortIndex="3">
               <costs>
@@ -7788,6 +7794,9 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                   <description>Kroq-Gar has a 5+ Ward save. If Kroq-Gar is wounded in close combat and does not pass his Ward save, then whoever struck the blow immediately suffers an automatic Strength 5 hit.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Kroq-Gar" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Tehenhauin" hidden="false" id="4ec4-a3ae-1dd7-7f00" sortIndex="4">
               <costs>
@@ -7927,6 +7936,9 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                   <description>If your army includes Tehenhauin, you may upgrade any units of Skink Cohorts, Skink Skirmishers, Raptadon Riders, Horned One Riders, Terradon Riders or Ripperdactyl Riders in your army to be Red Crested Skinks. Red Crested Skinks have +1 Weapon Skill, as well as the Devastating Charge, Hatred (Skaven) and Immunity (Poisoned Attacks) special rules for +2 points per model. They may not take any Sacred Spawning. In addition, Skink Cohorts with this upgrade may replace their shields with great weapons for +2 points per model.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Tehenhauin" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Tetto&apos;eko" hidden="false" id="ad33-60c8-6ab7-669e" sortIndex="5">
               <costs>
@@ -8042,6 +8054,9 @@ to see if the comet arrives.</characteristic>
                   <description>Tetto&apos;eko has a 5+ Ward Save.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Tetto&apos;eko" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -8283,6 +8298,9 @@ to see if the comet arrives.</characteristic>
                   <description>Chakax must always issue a challenge, and can never refuse one. When fighting in a challenge, Chakax re-rolls all failed rolls To Hit.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Chakax" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Gor-Rok" hidden="false" id="d8f9-c645-cd65-2761" sortIndex="2">
               <categoryLinks>
@@ -8371,6 +8389,9 @@ to see if the comet arrives.</characteristic>
                   <description>Any successful rolls To Wound roll against Gor-Rok must be re-rolled. In addition, Gor-Rok has the Immunity (Killing Blow) special rule.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Gor-Rok" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Nakai the Wanderer" hidden="false" id="0698-b9eb-08ef-e5bf" sortIndex="3">
               <costs>
@@ -8447,6 +8468,9 @@ to see if the comet arrives.</characteristic>
                   <description>Nakai always appears using the Ambushers special rule, with the following exception; he will always appear from a forest, marshland or river terrain feature rather than the table edge if able to. Any unit that kills Nakai in close combat may not overrun. If Nakai flees from combat, then the victorious unit may not pursue.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Nakai the Wanderer" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Tiktaq&apos;to" hidden="false" id="8203-41fe-f745-1166" sortIndex="4">
               <constraints>
@@ -8544,6 +8568,9 @@ to see if the comet arrives.</characteristic>
                   <description>If your army contains Tiktaq&apos;to, one unit of Terradon Riders may deploy using the Ambushers special rule.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Tiktaq&apos;to" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Tichi-Huichi" hidden="false" id="0288-6346-869f-8799" sortIndex="5">
               <profiles>
@@ -8636,6 +8663,19 @@ to see if the comet arrives.</characteristic>
                   <description>Enemies that Break Tichi-Huichi&apos;s Raiders in close combat will automatically counts as restraining from pursuit, even if they would normally be forced to pursue.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Tichi-Huichi" field="name" scope="root-entry"/>
+                <modifier type="add" value="{this} needs one more selection of Tichi-Huichi&apos;s Raiders" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0288-6346-869f-8799" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="594e-4b97-66c1-5875" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Oxyotl" hidden="false" id="0bd0-b850-257c-0f93" sortIndex="6">
               <constraints>
@@ -8721,6 +8761,9 @@ to see if the comet arrives.</characteristic>
                   <description>If Oxyotl remained stationary in his preceding Movement phase, enemies cannot draw Line of Sight to him unless they are within 6&quot;, and all shots made from the Golden Blowpipe of P&apos;Toohee may re- roll failed To Wound rolls. If an enemy unit would move through Oxyotl, simply move Oxyotl aside by the smallest amount possible to make room for the enemy unit.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Oxyotl" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -8772,9 +8815,9 @@ to see if the comet arrives.</characteristic>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
-                  <modifiers>
-                    <modifier type="set" value="1" field="dca5-b708-4c31-a96e"/>
-                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4798-3a85-d7a9-b78d"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -8834,7 +8877,8 @@ to see if the comet arrives.</characteristic>
         <entryLink import="true" name="11. Unit Options" hidden="false" id="72e2-a353-96a1-1e5f" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5"/>
       </entryLinks>
       <constraints>
-        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="ced1-ea44-eeb0-4ef2" includeChildSelections="true" automatic="true" includeChildForces="true"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="ced1-ea44-eeb0-4ef2" includeChildSelections="true" automatic="false" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c3f5-9fe6-ffae-740a" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
