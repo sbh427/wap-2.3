@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2572-4a7a-3823-e3b2" name="Vampire Counts WAP 1.73" revision="23" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2572-4a7a-3823-e3b2" name="Vampire Counts WAP 1.74" revision="24" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <profileTypes>
     <profileType id="21e6-6317-460c-b75f" name="Vampiric Power">
       <characteristicTypes>
@@ -808,7 +808,7 @@
             <infoLink id="8782-b15d-dc40-f911" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="5"/>
+            <cost name="pts" typeId="points" value="4"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="eed9-bd2d-7c8e-295e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -6174,7 +6174,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <infoLink id="18fe-ea63-abe1-7380" name="Fast Cavalry" hidden="false" targetId="8877-a5de-cc9c-9142" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="8"/>
+            <cost name="pts" typeId="points" value="9"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="50. Handheld Armour" hidden="false" id="6810-b1b9-cbe8-6f60" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
@@ -6634,7 +6634,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="decrement" value="5" field="points">
+        <modifier type="decrement" value="4" field="points">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="85ba-8af9-f170-2e85" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -6647,6 +6647,11 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
         <modifier type="decrement" value="2" field="points">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" value="8" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1466-db90-a8af-524b" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -6684,6 +6689,15 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
                     </entryLink>
                   </entryLinks>
                 </entryLink>
+                <entryLink import="true" name="50. Handheld Armour" hidden="false" id="e8f2-66c9-641b-f2ff" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
+                  <entryLinks>
+                    <entryLink import="true" name="Shield" hidden="false" id="1466-db90-a8af-524b" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                      <costs>
+                        <cost name="pts" typeId="points" value="8"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
@@ -6698,7 +6712,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
               <entryLinks>
                 <entryLink import="true" name="Barding" hidden="false" id="85ba-8af9-f170-2e85" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
                   <costs>
-                    <cost name="pts" typeId="points" value="5"/>
+                    <cost name="pts" typeId="points" value="4"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -10525,7 +10539,8 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
                 <modifierGroup type="and">
                   <modifiers>
                     <modifier type="set" value="Slitter" field="annotation"/>
-                    <modifier type="append" value="This adds one special attack. Roll a D3; if the result is higher than the Wound value of the target, the target is instantly slain with no saves allowed." field="de63-d6da-efa8-00ac" join="
+                    <modifier type="append" value="This adds one special attack after the wielder has made their normal attacks. Roll a D3; if the result is higher than the remaining number of Wounds of the target, the target is instantly slain with no saves allowed.
+" field="de63-d6da-efa8-00ac" join="
 
 "/>
                   </modifiers>
@@ -12261,7 +12276,7 @@ Characters and Units
 Characters who are not Undead may join Undead units despite not being Unstable themselves. Mounted Characters ignore the Undead special rule of the mount. If an Undead unit would get destroyed as a result of Unstable, any remaining character(s) will need to take a Break test as normal the same phase, using the Leadership modifier that they lost the combat by.</description>
     </rule>
     <rule id="fe0f-548f-c1a9-9edd" name="The Red Thirst" hidden="false">
-      <description>Roll a D6 at the end of each Close Combat phase in which one or more models was slain by a Vampire with this special rule. On a 5+, the Vampire recovers a single Wound, up to their starting value (excluding additional Wounds from mounts). This does not work against models with the Animated Construct, Daemonic, Forest Spirit or Vampiric special rules.</description>
+      <description>Roll a D6 at the end of each Close Combat phase in which one or more models was slain by a Vampire with this special rule. On a 5+, the Vampire recovers a single Wound, up to their starting value (excluding additional Wounds from mounts). This does not work against Animated Constructs, Daemons, Forest Spirits or Vampires.</description>
     </rule>
     <rule id="0f26-d445-00d9-2a92" name="Vampiric" hidden="false">
       <description>Models with the Vampiric special rule have the Fear and Immunity (Psychology) special rules. In addition, models suffer -1 To Wound rolls against them, unless they are using Magical Attacks or Flaming Attacks.</description>
@@ -12293,7 +12308,7 @@ To resolve a Ghostly Howl, roll 2D6+2. For each point by which the result exceed
       <description>All Wizards (friend or foe) within 12&quot; of one or more models with a Blasphemous Tome gain +2 to their casting result when casting spells from the Lore of Necromancy. If any Wizard miscasts within 12&quot; of one or more models with a Blasphemous Tome upgrade, they must roll twice on the Miscast table. The miscasting player&apos;s opponent chooses which result applies.</description>
     </rule>
     <rule id="65af-deb9-9d8b-bedf" name="Battle of Wills" hidden="false">
-      <description>Immediately before the first model in an enemy unit rolls To Hit against the Coven Throne (either in close combat or shooting), the opponent must roll a D6 and add it to his unit&apos;s Leadership (attacks that do not roll To Hit are exempt from this effect). Next, roll a D6 and add it to the Coven Throne&apos;s Leadership. To find the result of the Battle of Wills, subtract the enemy&apos;s total from the Coven Throne&apos;s total, and apply the result to the table below – the results last until the end of the turn.</description>
+      <description>Immediately before the first model in an enemy unit rolls To Hit against the Coven Throne (either in close combat or shooting), the opponent must roll a D6 and add it to their unit&apos;s Leadership. Next, roll a D6 and add it to the Coven Throne&apos;s Leadership. To find the result of the Battle of Wills, subtract the enemy&apos;s total from the Coven Throne&apos;s total, and apply the result to the table below – the results last until the end of the turn.</description>
     </rule>
     <rule id="515e-c009-6cec-66aa" name="Death Shriek" hidden="false">
       <description>A Death Shriek is a special attack that can be used against a single unit in the Shooting phase, even if the model has marched, charged, or the target is engaged in close combat. This attack has a range of 8&quot; and needs line of sight to its target. If the model is engaged in 
@@ -12663,12 +12678,12 @@ To resolve a Death Shriek, roll 2D6+3. For each point by which the result excee
     </profile>
     <profile id="f16c-8986-09f9-acbe" name="3-5 Bewitched" hidden="false" typeId="d09e-4f93-2fb7-83eb" typeName="Battle of Wills Table" noindex="true">
       <characteristics>
-        <characteristic name="Effect" typeId="3663-7341-2661-c967">The enemy must re-roll successful To Hit rolls.</characteristic>
+        <characteristic name="Effect" typeId="3663-7341-2661-c967">The enemy must re-roll successful To Hit rolls. Artillery weapons that do not roll to Hit must roll a 4+ to be able to fire.</characteristic>
       </characteristics>
     </profile>
     <profile id="e6ed-bac9-2143-77bf" name="1-2 Must... Resist..." hidden="false" typeId="d09e-4f93-2fb7-83eb" typeName="Battle of Wills Table" noindex="true">
       <characteristics>
-        <characteristic name="Effect" typeId="3663-7341-2661-c967">The enemy is at -1 Weapon Skill and -l Ballistic Skill.</characteristic>
+        <characteristic name="Effect" typeId="3663-7341-2661-c967">The enemy is at -1 Weapon Skill and -l Ballistic Skill. Artillery weapons that do not roll to Hit may be forced to re-roll the scatter dice.</characteristic>
       </characteristics>
     </profile>
     <profile id="a4ba-69ba-8de5-2c21" name="6+ Completely Enthralled" hidden="false" typeId="d09e-4f93-2fb7-83eb" typeName="Battle of Wills Table" noindex="true">
@@ -13923,18 +13938,8 @@ Characters who are not Undead may join Undead units despite not being Unstable 
             <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Battle of Wills" id="5ad3-fd75-e221-8375" hidden="false" type="infoGroup" targetId="fad5-91dc-990b-0371"/>
       </infoLinks>
-      <infoGroups>
-        <infoGroup name="Battle of Wills" id="fad5-91dc-990b-0371" hidden="false">
-          <infoLinks>
-            <infoLink name="0 or less, Back off, Devils!" id="efa5-f324-183e-83da" hidden="false" targetId="31d3-24fa-9e29-6b42" type="profile"/>
-            <infoLink name="1-2 Must... Resist..." id="3315-4dba-91ea-5808" hidden="false" targetId="e6ed-bac9-2143-77bf" type="profile"/>
-            <infoLink name="3-5 Bewitched" id="64ce-0b79-eb93-30a1" hidden="false" targetId="f16c-8986-09f9-acbe" type="profile"/>
-            <infoLink name="6+ Completely Enthralled" id="eada-0483-9e59-c312" hidden="false" targetId="a4ba-69ba-8de5-2c21" type="profile"/>
-            <infoLink name="Battle of Wills" id="8af9-a9dc-daa5-ac41" hidden="false" targetId="65af-deb9-9d8b-bedf" type="rule"/>
-          </infoLinks>
-        </infoGroup>
-      </infoGroups>
     </infoGroup>
     <infoGroup name="Corpse Cart" id="0cc4-41df-a726-c98b" hidden="false">
       <infoLinks>
@@ -13989,6 +13994,15 @@ Characters who are not Undead may join Undead units despite not being Unstable 
             <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
           </modifiers>
         </infoLink>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Battle of Wills" id="fad5-91dc-990b-0371" hidden="false">
+      <infoLinks>
+        <infoLink name="0 or less, Back off, Devils!" id="efa5-f324-183e-83da" hidden="false" targetId="31d3-24fa-9e29-6b42" type="profile"/>
+        <infoLink name="1-2 Must... Resist..." id="3315-4dba-91ea-5808" hidden="false" targetId="e6ed-bac9-2143-77bf" type="profile"/>
+        <infoLink name="3-5 Bewitched" id="64ce-0b79-eb93-30a1" hidden="false" targetId="f16c-8986-09f9-acbe" type="profile"/>
+        <infoLink name="6+ Completely Enthralled" id="eada-0483-9e59-c312" hidden="false" targetId="a4ba-69ba-8de5-2c21" type="profile"/>
+        <infoLink name="Battle of Wills" id="8af9-a9dc-daa5-ac41" hidden="false" targetId="65af-deb9-9d8b-bedf" type="rule"/>
       </infoLinks>
     </infoGroup>
   </sharedInfoGroups>
