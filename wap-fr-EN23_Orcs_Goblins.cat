@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins WAP 1.62" revision="65" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins WAP 1.63" revision="66" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <selectionEntries>
     <selectionEntry id="bcd3-0731-37ca-d244" name="Warchanter" hidden="false" collective="false" import="true" type="model" sortIndex="8">
@@ -7737,9 +7737,16 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           </profiles>
           <infoLinks>
             <infoLink name="Loner" id="d580-1ad4-2ecf-f4d0" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+            <infoLink name="Natural Armour" id="718f-2092-26ef-bcde" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="Ogre" field="annotation"/>
+                <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="27"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="1c54-679c-f1ce-1f7e" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
@@ -8250,9 +8257,9 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <cost name="pts" typeId="points" value="260"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Dire Wolf Riders" hidden="false" id="a5f7-5248-028c-173f" sortIndex="29.5">
+    <selectionEntry type="unit" import="true" name="Snarlfang Riders" hidden="false" id="a5f7-5248-028c-173f" sortIndex="29.5">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Dire Wolf Rider" hidden="false" id="4dc4-84a2-1b7b-96a8">
+        <selectionEntry type="model" import="true" name="Snarlfang Rider" hidden="false" id="4dc4-84a2-1b7b-96a8">
           <costs>
             <cost name="pts" typeId="points" value="44"/>
           </costs>
@@ -11208,7 +11215,11 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
             </modifierGroup>
           </modifierGroups>
         </infoLink>
-        <infoLink name="Tusker Charge" id="7695-1e33-42e2-44a0" hidden="false" type="rule" targetId="76c4-8e4c-7258-76ca"/>
+        <infoLink name="Tusker Charge" id="7695-1e33-42e2-44a0" hidden="false" type="rule" targetId="76c4-8e4c-7258-76ca">
+          <modifiers>
+            <modifier type="set" value="War Boar only" field="annotation"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Natural Armour" id="2b72-cb9f-d113-bf32" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
           <modifiers>
             <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
@@ -11264,7 +11275,11 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4426-4f02-9131-1006" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Tusker Charge" id="41eb-31ef-6a17-559b" hidden="false" type="rule" targetId="76c4-8e4c-7258-76ca"/>
+        <infoLink name="Tusker Charge" id="41eb-31ef-6a17-559b" hidden="false" type="rule" targetId="76c4-8e4c-7258-76ca">
+          <modifiers>
+            <modifier type="set" value="Grunta only" field="annotation"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Natural Armour" id="251b-46fe-cefa-5e88" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
           <modifiers>
             <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
@@ -12189,6 +12204,51 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Snarlfang" hidden="false" id="b89d-d9a4-7496-8611" subType="mount" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d300-a788-ddbc-64f0" includeChildSelections="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="90cd-c3cb-e0bf-b8d2" includeChildSelections="false"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Barding" hidden="false" id="161c-13f8-9bd1-7cba" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <profiles>
+        <profile name="Snarlfang" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6af6-844d-51fc-bade">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">4</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Canine)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Mount" hidden="false" id="b213-8b08-d571-0797" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+        <categoryLink name="Monstrous Cavalry" hidden="false" id="18e2-e3f9-8349-454f" targetId="82d3-4589-72b4-b6ed" primary="false"/>
+      </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -15338,7 +15398,7 @@ However, in case a Miscast is rolled when casting that spell, add 1 to the resu
                 </modifier>
               </modifiers>
               <infoLinks>
-                <infoLink name="Heavy Armour" id="3e52-deb3-8d52-ef45" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                <infoLink name="Medium Armour" id="3e52-deb3-8d52-ef45" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
                   <modifiers>
                     <modifier type="set" value="Evil Sun Armour" field="annotation"/>
                     <modifier type="append" value="This armour gives the wielder the Magic Resistance (2) special rule
@@ -15711,7 +15771,7 @@ Attacks. Models that already have Poisoned Attacks will automatically wound on T
       <description>If a model with this special rule has more than one weapon and/or a shield, they may choose which weapon combination they want to use at the start of each round of close combat.</description>
     </rule>
     <rule id="6eb2-2213-5721-ac9e" name="Quell Animosity" hidden="false">
-      <description>If a model with this special rule is in a unit that fails an Animosity test, they immediately inflicts D6 hits at their base Strength on their unit, distributed as shooting attacks. After removing casualties, the unit is treated as if the Animosity test was passed. These hits cannot be allocated to characters with this special rule, and do not cause a Panic test.</description>
+      <description>If a model with this special rule is in a unit that fails an Animosity test, they immediately inflict D6 hits at their base Strength on their unit, distributed as shooting attacks. After removing casualties, the unit is treated as if the Animosity test was passed. These hits cannot be allocated to characters with this special rule, and do not cause a Panic test.</description>
     </rule>
     <rule id="c0bd-0f1c-4859-1313" name="Wall-crawler" hidden="false">
       <description>Models with this rule have the Forest Strider and Obstacle Strider special rules. In addition, they treat ungarrisoned buildings as open terrain for the purposes of movement. They may not finish their movement inside or on top of an ungarrisoned building.</description>
@@ -15735,7 +15795,7 @@ Attacks. Models that already have Poisoned Attacks will automatically wound on T
       <description>Instead of attacking normally, this model can choose to vomit on the enemy. It inflicts D3 automatic S 5 hits which Ignores Armour Saves.</description>
     </rule>
     <rule name="Tusker Charge" id="76c4-8e4c-7258-76ca" hidden="false">
-      <description>Mounts with this special rule have the Mighty Blow (1) special rule in any turn that they charge.</description>
+      <description>Models with this special rule have the Mighty Blow (1) special rule in any turn that they charge.</description>
     </rule>
     <rule name="Waaagh!" id="72cd-f563-0e75-b280" hidden="false">
       <description>If a model with this special rule is your Army General, then once per game he may call a Waaagh! The Waaagh! may only be called if the model first declares a charge, and must be announced immediately after making the charge declaration, before any charge reaction takes place. In the turn a Waaagh! is called, every combat involving friendly Orc units within 12&quot; of the Army General adds +1 to its combat resolution for the rest of the player turn. The Army General himself, and any unit he joins, adds +D3 to their combat resolution instead. In addition, every friendly unit within 12&quot; of the Army General add their rank bonus to the result rolled on the Animosity table (to a maximum of 6).</description>
@@ -16282,7 +16342,7 @@ the caster&apos;s next Magic phase.</characteristic>
           <entryLinks>
             <entryLink import="true" name="Warpaint" hidden="false" id="ab44-630f-be24-5aa1" type="selectionEntry" targetId="f163-b15f-4f27-293a">
               <costs>
-                <cost name="pts" typeId="points" value="30"/>
+                <cost name="pts" typeId="points" value="50"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -16301,7 +16361,7 @@ the caster&apos;s next Magic phase.</characteristic>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Warpaint" hidden="false" id="f163-b15f-4f27-293a" collective="true">
               <costs>
-                <cost name="pts" typeId="points" value="20"/>
+                <cost name="pts" typeId="points" value="30"/>
               </costs>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="76be-5687-de4a-f2dc" includeChildSelections="false"/>
