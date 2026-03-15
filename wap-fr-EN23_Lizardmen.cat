@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="9001-ac7e-f2dc-87d4" name="Lizardmen WAP 1.64" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="71" revision="15" authorName="Leminge" battleScribeVersion="2.03" authorContact="Contact me via Discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="9001-ac7e-f2dc-87d4" name="Lizardmen WAP 1.65" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="71" revision="16" authorName="Leminge" battleScribeVersion="2.03" authorContact="Contact me via Discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Blood Frenzy" id="603f-57eb-52af-b7f5" hidden="false">
       <description>Once a model or unit with this special rule has inflicted  one or more unsaved Wounds, it immediately becomes subject to Frenzy until the end of the next turn.</description>
@@ -33,6 +33,12 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
       <description>When a Slann joins a unit whose front rank contains five or more models with the Guardians special rule, it must be placed in the second rank, rather than the first. If the unit&apos;s front rank is ever reduced to four or fewer models with the Guardians special rule, the Slann must immediately move to the front rank (displacing rank and file models if necessary). 
 
 A Slann who is in base contact with a model with the Guardians special rule is considered to be the same Troop Type as them for the purpose of resolving missile attacks. When casting a direct damage or magical vortex spell that originates from the Slann&apos;s base, draw this spell from the base of the model in front of the Slann instead.</description>
+    </rule>
+    <rule name="Magical Storm" id="da5b-f4a5-c4b7-fbd1" hidden="false">
+      <description>All missile fire directed at a Coatl suffers a -1 penalty to hit.</description>
+    </rule>
+    <rule name="Primeval Roar" id="479a-c7b9-d052-f3f2" hidden="false">
+      <description>Once per battle, at the start of any friendly Close Combat phase, a Troglodon can unleash its Primeval Roar. This affects the Troglodon, and all friendly units within 12&quot;. All models in these units that have the Predatory Fighter special rule gain an additional Attack on any successful To Hit roll of a 5+ until the end of the phase.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
@@ -131,7 +137,7 @@ A Slann who is in base contact with a model with the Guardians special rule is c
       <profiles>
         <profile name="Blessed Spawning of Tlazcotl" typeId="09ff-9e1e-b097-68c0" typeName="Blessed Spawning" hidden="false" id="1878-d133-43c8-c0ee">
           <characteristics>
-            <characteristic name="Effect" typeId="783d-025b-cfe0-ffa7">Models with this Blessed Spawning have the Immunity (Psychology) special rule.</characteristic>
+            <characteristic name="Effect" typeId="783d-025b-cfe0-ffa7">Models with this Blessed Spawning may re-roll failed Psychology tests.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -753,7 +759,7 @@ A Slann who is in base contact with a model with the Guardians special rule is c
       </constraints>
       <rules>
         <rule name="Mage-Priest Palanquin" id="f37e-4881-eca2-a085" hidden="false">
-          <description>The Palanquin gives the Slann Mage-Priest the Strider special rule. Additionally, while they have the troop type Monstrous Infantry, they are never considered to be ‘models on foot&apos; for the purposes of spells, magic items and special rules.</description>
+          <description>The Palanquin gives the Slann Mage-Priest the Inspiring Presence (6) and Strider special rules. Additionally, while they have the troop type Monstrous Infantry, they are never considered to be &apos;models on foot&apos; for the purposes of spells, magic items and special rules.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -783,7 +789,7 @@ A Slann who is in base contact with a model with the Guardians special rule is c
       <infoLinks>
         <infoLink name="Stubborn" id="4fa6-70f7-7303-7caf" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
         <infoLink name="Cold-Blooded" id="ecb3-e5c0-3e36-bf0c" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
-        <infoLink name="Predatory Fighter" id="527f-157f-ff1e-18bc" hidden="false" type="rule" targetId="2e69-70ed-4337-eaec"/>
+        <infoLink name="Inspiring Presence (6)" id="527f-157f-ff1e-18bc" hidden="false" type="rule" targetId="7687-32b8-13f1-97b4"/>
         <infoLink name="Natural Armour" id="50bb-46b3-2a92-8ecb" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
           <modifiers>
             <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
@@ -791,6 +797,7 @@ A Slann who is in base contact with a model with the Guardians special rule is c
             <modifier type="set" value="Temple Guard Palanquin" field="annotation"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Predatory Fighter" id="87e6-635c-07ae-b2b4" hidden="false" type="rule" targetId="2e69-70ed-4337-eaec"/>
       </infoLinks>
       <rules>
         <rule name="Unit Strength +4" id="b444-db2e-3b59-bd93" hidden="false"/>
@@ -1012,247 +1019,13 @@ A Slann who is in base contact with a model with the Guardians special rule is c
     <selectionEntry type="model" import="true" name="Stegadon" hidden="false" id="871c-e199-3713-d5b7" subType="mount">
       <categoryLinks>
         <categoryLink name="Monster" hidden="false" id="8273-3841-e544-63ac" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink targetId="8b8a-34b1-ed30-df11" id="07da-fe78-9d04-87c1" primary="false" name="Mount"/>
       </categoryLinks>
-      <profiles>
-        <profile name="Stegadon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="efcf-d49e-1b65-35fd">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Saurian)</characteristic>
-          </characteristics>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="increment" value="1" field="edd2-7979-54a4-6b35"/>
-                <modifier type="decrement" value="1" field="7cca-e51f-edc2-7322"/>
-                <modifier type="decrement" value="1" field="bfa2-d38d-7c93-d3f0"/>
-              </modifiers>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a1a7-5ef1-1177-89ab" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifierGroup>
-          </modifierGroups>
-        </profile>
-      </profiles>
       <infoLinks>
-        <infoLink name="Stubborn" id="bf88-5bb8-dec3-7cb4" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
-        <infoLink name="Cold-Blooded" id="cc70-611d-8cf9-566a" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
-        <infoLink name="Immunity (Psychology)" id="b582-0a9a-7654-bffa" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
-        <infoLink name="Impact Hits (D6+1)" id="8a5d-d987-f3e8-86ea" hidden="false" type="rule" targetId="a043-3e3c-9f8a-3661"/>
-        <infoLink name="Jungle Poisons" id="16bd-1d13-ad92-d6ff" hidden="false" type="rule" targetId="f932-079c-91ed-43b7"/>
-        <infoLink name="Natural Armour" id="2030-c703-6977-04fa" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
-          <modifiers>
-            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
-            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
-            <modifier type="set" value="Stegadon" field="annotation"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Stegadon" id="09f1-fe0f-f032-a826" hidden="false" type="infoGroup" targetId="4d44-faa8-e5ea-06e4"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="55. Equipment" hidden="false" id="b5e4-bc8c-d1fc-539c" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cdb7-f869-a2e3-18cc" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d3e-20d5-0c6a-464c" includeChildSelections="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Giant Bow" hidden="false" id="d7d8-3dcd-24b2-b860" collective="true" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b850-fd3b-05d1-24df" includeChildSelections="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Bolt Thrower" id="3799-c4a8-3de4-52ac" hidden="false" type="profile" targetId="2d26-2a21-00a2-685d">
-                  <modifiers>
-                    <modifier type="set" value="Multiple Wounds (D3), Poisoned Attacks. 
-Instead of firing another missile weapon in the Shooting phase, one of the Skink Crew may fire the giant bow." field="d3a4-721b-f750-5564"/>
-                    <modifier type="set" value="Giant Bow" field="name"/>
-                    <modifier type="set" value="36&quot;" field="1c88-efb0-083f-b945"/>
-                    <modifier type="set" value="5" field="6ca0-d074-628f-e276"/>
-                  </modifiers>
-                </infoLink>
-                <infoLink name="Firing a Bolt Thrower" id="7cbf-8a0d-e840-0a55" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
-              </infoLinks>
-              <rules>
-                <rule name="Giant Bow" id="abe9-a70d-959b-ba0e" hidden="false">
-                  <description>Instead of firing another missile weapon in the Shooting phase, one of the Skink Crew may fire the giant bow.</description>
-                </rule>
-              </rules>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4ec4-a3ae-1dd7-7f00" shared="true" includeChildSelections="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Giant Blowpipe" hidden="false" id="de70-151f-e53b-01f7" collective="true" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7102-0a73-7c23-beaf" includeChildSelections="false"/>
-              </constraints>
-              <rules>
-                <rule name="Giant Blowpipe" id="ae2a-542a-45d9-28ad" hidden="false">
-                  <description>Instead of firing another missile weapon in the Shooting phase, up to two of the Skink Crew may each fire a giant blowpipe.</description>
-                </rule>
-              </rules>
-              <profiles>
-                <profile name="Giant Blowpipe" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="cd95-ca76-77cf-fc64">
-                  <characteristics>
-                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">18&quot;</characteristic>
-                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
-                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2D6</characteristic>
-                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Poisoned Attacks</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4ec4-a3ae-1dd7-7f00" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Engine of the Gods" hidden="false" id="322c-0624-4b89-cce7" sortIndex="3" collective="true">
-              <costs>
-                <cost name="pts" typeId="points" value="50"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25ba-7885-ca31-35f5" includeChildSelections="false"/>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="747e-9a53-2cfa-b214" automatic="true"/>
-              </constraints>
-              <rules>
-                <rule name="Portent of Warding" id="78bc-80bc-daea-ce39" hidden="false">
-                  <description>The model and all friendly units within 6&quot; have a 6+ Ward save.</description>
-                </rule>
-                <rule name="Arcane Configuration" id="77e4-56e2-029d-756f" hidden="false">
-                  <description>If you have one or more Engines of the Gods on the battlefield at the start of your Magic phase, select one of the eight Lores of Battle Magic from the Warhammer rulebook. Until the start of your next Magic phase, the casting values for all spells from the selected lore are reduced by 1 (to a minimum of 3).</description>
-                </rule>
-              </rules>
-              <profiles>
-                <profile name="Engine of the Gods" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3bab-0859-3833-f127">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate bound spell</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">4D6&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell targets every enemy unit within range of the model&apos;s front arc. Each target suffers D6 Strength 4 hits with the Flaming Attacks special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="1" field="747e-9a53-2cfa-b214">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4ec4-a3ae-1dd7-7f00" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <infoLinks>
-                <infoLink name="Ward Save" id="1f27-919b-3fcd-ebb5" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
-                  <modifiers>
-                    <modifier type="set" value="Portent of Warding" field="name"/>
-                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </entryLink>
-        <entryLink import="true" name="56. Upgrades" hidden="false" id="6902-9440-ad94-5a70" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Ancient" hidden="false" id="a1a7-5ef1-1177-89ab" collective="true" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ba7-c1aa-c2a4-a8b4" includeChildSelections="false"/>
-              </constraints>
-              <rules>
-                <rule name="Ancient" id="5897-4ac0-d392-e1c1" hidden="false">
-                  <description>The Stegadon gains +1 Strength and the Natural Armour (6+) special rule. However, they suffer -1 Initiative and -1 Attacks.</description>
-                  <modifiers>
-                    <modifier type="append" value="(already in profile)" field="description">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="a1a7-5ef1-1177-89ab" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink name="Natural Armour" id="cb8f-d09f-8743-c12b" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
-                  <modifiers>
-                    <modifier type="set" value="Ancient" field="annotation"/>
-                    <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
-                    <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sharpened Horns" hidden="false" id="74e2-79d8-a437-5e46" collective="true" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f1f0-7e50-2f7c-bce9" includeChildSelections="false"/>
-              </constraints>
-              <rules>
-                <rule name="Sharpened Horns" id="57fd-315b-a590-8d9c" hidden="false">
-                  <description>The Stegadon&apos;s its Impact Hits gains the Multiple Wounds (D3) special rule.</description>
-                </rule>
-              </rules>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Unstoppable Stampede" hidden="false" id="24e7-0946-5b32-fc68" collective="true" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6938-ab86-eb28-d0a1" includeChildSelections="false"/>
-              </constraints>
-              <rules>
-                <rule name="Unstoppable Stampede" id="6a81-e313-67b3-e720" hidden="false">
-                  <description>The Stegadon gains the Devastating Charge special rule.</description>
-                </rule>
-              </rules>
-            </selectionEntry>
-          </selectionEntries>
-        </entryLink>
-        <entryLink import="true" name="Skink" hidden="false" id="92d1-c67a-3d83-ad45" type="selectionEntry" targetId="0261-e7e8-a184-8755">
-          <modifiers>
-            <modifier type="decrement" value="1" field="8da8-825c-6d7e-8c94">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="decrement" value="1" field="b280-46fa-54b9-1ce3">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="5" field="8da8-825c-6d7e-8c94"/>
-            <modifier type="set" value="5" field="b280-46fa-54b9-1ce3"/>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="Stegadon" hidden="false" id="e8be-78b3-0de4-1090" type="selectionEntryGroup" targetId="44f3-71da-d5f3-db2d"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bbf7-a758-d40c-6792" includeChildSelections="false"/>
@@ -1262,323 +1035,31 @@ Instead of firing another missile weapon in the Shooting phase, one of the Skink
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23cc-12ab-1430-8c59" includeChildSelections="false"/>
       </constraints>
-      <profiles>
-        <profile name="Spit Venom" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="7d3a-693a-a5f0-d501">
-          <characteristics>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
-            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Wounds (D3), Poisoned Attacks, Quick to Fire</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Troglodon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="26c6-ccf9-d9f1-a725">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Saurian)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Oracle" hidden="false" id="f81c-bf79-0966-e299" subType="crew">
-          <profiles>
-            <profile name="Oracle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="d7bf-0dd9-5ec0-a273">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Lizardman, Skink</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58fd-bdcb-fb8b-e03c-min" includeChildSelections="false" negative="false" automatic="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58fd-bdcb-fb8b-e03c-max" includeChildSelections="false" automatic="true"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Arcane Vassal" id="bca1-769f-18d7-97ec" hidden="false" type="rule" targetId="9d9e-2034-9863-9694"/>
-          </infoLinks>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="0" field="58fd-bdcb-fb8b-e03c-max"/>
-                <modifier type="set" value="true" field="hidden"/>
-                <modifier type="set" value="0" field="58fd-bdcb-fb8b-e03c-min"/>
-              </modifiers>
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true"/>
-              </conditions>
-            </modifierGroup>
-          </modifierGroups>
-        </selectionEntry>
-      </selectionEntries>
-      <rules>
-        <rule name="Primeval Roar" id="479a-c7b9-d052-f3f2" hidden="false">
-          <description>Once per battle, at the start of any friendly Close Combat phase, a Troglodon can unleash its Primeval Roar. This affects the Troglodon, and all friendly units within 12&quot;. All models in these units that have the Predatory Fighter special rule gain an additional Attack on any successful To Hit roll of a 5+ until the end of the phase.</description>
-        </rule>
-      </rules>
       <entryLinks>
-        <entryLink import="true" name="56. Upgrades" hidden="false" id="e184-53b2-6e95-3714" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Divining Rod" hidden="false" id="3102-767c-dfa8-f462" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f662-93e6-1c08-0424" includeChildSelections="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <rules>
-                <rule name="Divining Rod" id="668f-437b-ff5c-5880" hidden="false">
-                  <description>The model channels Power and Dispel dice as if they were a Level 1 Wizard.</description>
-                </rule>
-              </rules>
-            </selectionEntry>
-          </selectionEntries>
-        </entryLink>
+        <entryLink import="true" name="Troglodon" hidden="false" id="bc72-6fec-01f8-6d8e" type="selectionEntryGroup" targetId="eb98-1751-5fef-e1f7"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Aquatic" id="7c4d-a388-e6d6-c3bd" hidden="false" type="rule" targetId="3667-691b-abd9-7da6"/>
-        <infoLink name="Cold-Blooded" id="270c-4432-0391-3f85" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
-        <infoLink name="Jungle Poisons" id="5548-281a-5459-e9b5" hidden="false" type="rule" targetId="f932-079c-91ed-43b7"/>
-        <infoLink name="Poisoned Attacks" id="ef75-48a8-7101-e7de" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
-          <modifiers>
-            <modifier type="set" value="Troglodon only" field="annotation"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Predatory Fighter" id="5142-36d3-fc15-4044" hidden="false" type="rule" targetId="2e69-70ed-4337-eaec">
-          <modifiers>
-            <modifier type="set" value="Troglodon only" field="annotation"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Natural Armour" id="69f4-a605-1410-fc01" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
-          <modifiers>
-            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
-            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
-            <modifier type="set" value="Troglodon" field="annotation"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Troglodon" id="b1d2-cbbe-dfb1-293a" hidden="false" type="infoGroup" targetId="8b7c-195a-c34c-5b04"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="8b8a-34b1-ed30-df11" id="3a6f-f37e-d859-963b" primary="false" name="Mount"/>
+        <categoryLink targetId="e1a0-da31-05c5-9a15" id="10f8-3c19-f985-ba74" primary="false" name="Monster"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Coatl" hidden="false" id="e53c-11d7-ca69-9693" subType="mount">
       <categoryLinks>
         <categoryLink name="Monster" hidden="false" id="7934-6f7f-e3fe-8513" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink targetId="8b8a-34b1-ed30-df11" id="af4f-abfa-3d36-a56d" primary="false" name="Mount"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91ac-93c0-d782-8a83" includeChildSelections="false"/>
       </constraints>
-      <profiles>
-        <profile name="Guardian of the Sacred Places" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="19ae-e8bd-2030-30b2">
-          <characteristics>
-            <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate bound spell</characteristic>
-            <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Monster (Ophidian)</characteristic>
-            <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3</characteristic>
-            <characteristic name="Range" typeId="2954-76ea-decb-30ff">Infinite</characteristic>
-            <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Lizardmen player may reposition D3 pieces of forest terrain by D6&quot;, rolling the distance for each piece at a time.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Coatl" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6daf-31ff-1bb9-cc40">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Ophidian)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <entryLinks>
-        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="27ba-8c71-051d-717f" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Lore of Heavens" hidden="false" id="5bfe-c71e-d4ac-43a8">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Fantastic Foresight" hidden="false" id="29d7-b77d-29a1-20bc" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ed1f-5d56-3742-bdb7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="559d-e38b-3cf8-c0c6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Fantastic Foresight" id="328b-4074-ab3f-9fa4" hidden="false" targetId="64c1-2688-2cd5-b359" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="0. Harmonic Convergence" hidden="false" id="ac12-4810-f52c-5aa9" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d802-8f27-ec8d-f6a4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f95d-8dbc-9ff0-1bd3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Harmonic Convergence" id="47f2-7541-0d7f-ba4e" hidden="false" targetId="91df-517b-9d00-5628" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <comment>Coatl</comment>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Spells from the Lore of Heavens" id="f23f-323a-f848-26c4" hidden="false" collapsible="true">
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="1. Azur Blades" hidden="false" id="45e2-f2c0-3336-b851" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c958-700e-91e2-8ee9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink name="Azur Blades" id="220c-ec99-1392-e1f6" hidden="false" targetId="6803-b783-38e8-f03c" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="2. Star Tides Ebb" hidden="false" id="238b-3f0a-f90d-79e3" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c34c-bdd1-c3ea-839a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink name="Star Tides Ebb" id="e107-9db0-3e9b-21d5" hidden="false" targetId="5a3f-0100-e85d-447d" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="3. Cerulean Shield" hidden="false" id="6995-7b84-b603-a9bd" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7b63-118d-bfe3-b0b8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink name="Cerulean Shield" id="6f2e-3416-6ed6-21ae" hidden="false" targetId="7288-0be2-7efc-3db7" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="4. Sign of Amul" hidden="false" id="f386-7465-f46c-f0bd" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="987c-32f3-ed80-e34c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink name="Sign of Amul" id="1193-f649-023f-c523" hidden="false" targetId="dec0-3cf7-c1ed-4428" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="5. Crystal Prison" hidden="false" id="02b5-ca29-8500-5886" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cce1-65af-4a11-90b5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink name="Crystal Prison" id="04fe-0244-fa32-a16e" hidden="false" targetId="3ef9-0ce4-239d-2baf" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="6. Portent of Doom" hidden="false" id="2e58-b352-5d03-8e06" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3f9e-1220-af10-49b6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink name="Portent of Doom" id="0f3e-8363-66c2-2f60" hidden="false" targetId="7053-1cc0-e959-7b6a" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <constraints>
-                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="de84-2fb5-d5ae-b817"/>
-                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="92b4-6d22-6805-37c8"/>
-                  </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4f1f-301d-e266-7dcd-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f1f-301d-e266-7dcd-max" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </entryLink>
+        <entryLink import="true" name="Coatl" hidden="false" id="d6f4-0e22-d9ae-c528" type="selectionEntryGroup" targetId="165a-c15a-d881-9c38"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Cold-Blooded" id="2a46-bf98-a750-14b3" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
-        <infoLink name="Fly (8)" id="9156-e4d3-2f91-2f22" hidden="false" type="rule" targetId="0a9a-bfcb-1a9d-5609"/>
-        <infoLink name="Natural Armour" id="08e4-983b-a9fe-13c0" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
-          <modifiers>
-            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
-            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
-            <modifier type="set" value="Coatl" field="annotation"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Magic Resistance" id="0714-d8cd-f6b9-0a65" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-          <modifiers>
-            <modifier type="set" value="Coatl" field="name"/>
-            <modifier type="set" value="3" field="19f0-e982-f035-416c"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Magic Resistance" id="b48e-ec73-c800-a30a" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-          <modifiers>
-            <modifier type="set" value="Coatl" field="name"/>
-            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Coatl" id="66d8-dd98-827a-2f87" hidden="false" type="infoGroup" targetId="8f91-c18b-cf04-c648"/>
       </infoLinks>
-      <rules>
-        <rule name="Magical Storm" id="da5b-f4a5-c4b7-fbd1" hidden="false">
-          <description>All missile fire directed at a Coatl suffers a -1 penalty to hit.</description>
-        </rule>
-      </rules>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="60. Wizard Level" id="8551-db53-3585-5e00" hidden="false">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fdf1-d96e-b3dc-1dd7"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7984-3c97-5c96-3610"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Wizard Level 2" hidden="false" id="6e8f-bb50-6b39-26e8">
-              <profiles>
-                <profile name="Wizard Level 2" typeId="0ce6-a5f9-6184-218d" typeName="Wizard" hidden="false" id="a873-ba84-a9f3-a8bf">
-                  <characteristics>
-                    <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">2</characteristic>
-                    <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">3</characteristic>
-                    <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-2</characteristic>
-                    <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">3</characteristic>
-                    <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">1</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
-                <modifier type="set" value="Coatl" field="annotation" affects="self.entries.profiles.Wizard"/>
-              </modifiers>
-              <comment>Coatl Wizard level</comment>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f07-ef3f-617b-b822-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f07-ef3f-617b-b822-max" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Skink" hidden="false" id="0261-e7e8-a184-8755" subType="crew">
       <constraints>
@@ -1635,7 +1116,7 @@ Instead of firing another missile weapon in the Shooting phase, one of the Skink
         <categoryLink name="Cavalry" hidden="false" id="9066-3b0a-578d-bb24" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
       <profiles>
-        <profile name="Cold One" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="af7a-0b6e-ca83-85f5" >
+        <profile name="Cold One" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="af7a-0b6e-ca83-85f5">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -1785,6 +1266,77 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
     <profile name="Blessed Mark of the Old Ones" typeId="09ff-9e1e-b097-68c0" typeName="Blessed Spawning" hidden="false" id="d2cb-c0ae-e8fa-3038" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="783d-025b-cfe0-ffa7">The character may re-roll a total of 3 dice to either To Hit, To Wound, Armour saves or Ward saves during the game. This Blessed Spawning does not prevent the character from joining any other Blessed Spawning.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Coatl" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6daf-31ff-1bb9-cc40">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Ophidian)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Guardian of the Sacred Places" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="19ae-e8bd-2030-30b2">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate bound spell</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Monster (Ophidian)</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">Infinite</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Lizardmen player may reposition D3 pieces of forest terrain by D6&quot;, rolling the distance for each piece at a time.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Stegadon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="efcf-d49e-1b65-35fd">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Saurian)</characteristic>
+      </characteristics>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="increment" value="1" field="edd2-7979-54a4-6b35"/>
+            <modifier type="decrement" value="1" field="7cca-e51f-edc2-7322"/>
+            <modifier type="decrement" value="1" field="bfa2-d38d-7c93-d3f0"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="a1a7-5ef1-1177-89ab" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </profile>
+    <profile name="Spit Venom" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="7d3a-693a-a5f0-d501">
+      <characteristics>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
+        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Wounds (D3), Poisoned Attacks, Quick to Fire</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Troglodon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="26c6-ccf9-d9f1-a725">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Saurian)</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -2314,7 +1866,7 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
               <infoLinks>
                 <infoLink name="Shield" id="ee32-c694-2efd-b120" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                   <modifiers>
-                    <modifier type="append" value="Any magic missile that strikes the bearer this of armour or any unit they are with is reflected on the roll of 2+ on a D6. If the spell is reflected, the results of the magic missile are resolved against the caster of the spell and any unit they are with. 
+                    <modifier type="append" value="Any magic missile that strikes the bearer of this armour or any unit they are with is reflected on the roll of 2+ on a D6. If the spell is reflected, the results of the magic missile are resolved against the caster of the spell and any unit they are with. 
 " field="ff58-91e4-84d7-e6e4" join="
 
 "/>
@@ -2495,7 +2047,7 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
               <profiles>
                 <profile name="Incandescent Rectrices" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="317a-4962-faf1-07cd">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. If this model would be removed as a casualty, immediately roll a D6. On a 3+, the last Wound is ignored and the model remains with 1 Wound.</characteristic>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. If this model would be removed as a casualty, immediately roll a D6. On a 3+, the model remains with 1 Wound, and any additional Wounds suffered are ignored.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3271,7 +2823,7 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
               <profiles>
                 <profile name="Plaque of Fate" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="b3b6-85f3-06e5-fb9a">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer of this item may re-roll one roll To Hit, To Wound or when taking armour or Ward saves per turn.</characteristic>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer of this item may re-roll one roll To Hit, To Wound, armour or Ward save per turn.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3568,8 +3120,12 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 12&quot; in length, directly away from the caster. Each model in the way (determined using the line template) suffer a Strength 6 Hit with the Flaming Attacks special
-rule. This has a +1 bonus To Wound against Daemons, Undead and Vampires.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 12&quot; in length, directly away from the caster. Each model in the way (determined using the line template) suffers a Strength 6 Hit with the Flaming Attacks special rule. This has a +1 bonus To Wound against Daemons, Undead and Vampires.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Prism of Amyntok" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="1ee8-ddf9-d84c-fe40">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">This Item gives the wielder a bound spell.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4039,6 +3595,420 @@ Contemplations Discipline" field="error">
         </modifier>
       </modifiers>
     </selectionEntryGroup>
+    <selectionEntryGroup name="Coatl" id="165a-c15a-d881-9c38" hidden="false" sortIndex="11">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="60. Wizard Level" id="8551-db53-3585-5e00" hidden="false">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fdf1-d96e-b3dc-1dd7"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7984-3c97-5c96-3610"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Wizard Level 2" hidden="false" id="6e8f-bb50-6b39-26e8">
+              <profiles>
+                <profile name="Wizard Level 2" typeId="0ce6-a5f9-6184-218d" typeName="Wizard" hidden="false" id="a873-ba84-a9f3-a8bf">
+                  <characteristics>
+                    <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">2</characteristic>
+                    <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">3</characteristic>
+                    <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-2</characteristic>
+                    <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">3</characteristic>
+                    <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+                <modifier type="set" value="Coatl" field="annotation" affects="self.entries.profiles.Wizard"/>
+              </modifiers>
+              <comment>Coatl Wizard level</comment>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f07-ef3f-617b-b822-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f07-ef3f-617b-b822-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="27ba-8c71-051d-717f" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Lore of Heavens" hidden="false" id="5bfe-c71e-d4ac-43a8">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Fantastic Foresight" hidden="false" id="29d7-b77d-29a1-20bc" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ed1f-5d56-3742-bdb7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="559d-e38b-3cf8-c0c6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Fantastic Foresight" id="328b-4074-ab3f-9fa4" hidden="false" targetId="64c1-2688-2cd5-b359" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="0. Harmonic Convergence" hidden="false" id="ac12-4810-f52c-5aa9" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d802-8f27-ec8d-f6a4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f95d-8dbc-9ff0-1bd3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Harmonic Convergence" id="47f2-7541-0d7f-ba4e" hidden="false" targetId="91df-517b-9d00-5628" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <comment>Coatl</comment>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Spells from the Lore of Heavens" id="f23f-323a-f848-26c4" hidden="false" collapsible="true">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="1. Azur Blades" hidden="false" id="45e2-f2c0-3336-b851" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c958-700e-91e2-8ee9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Azur Blades" id="220c-ec99-1392-e1f6" hidden="false" targetId="6803-b783-38e8-f03c" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="2. Star Tides Ebb" hidden="false" id="238b-3f0a-f90d-79e3" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c34c-bdd1-c3ea-839a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Star Tides Ebb" id="e107-9db0-3e9b-21d5" hidden="false" targetId="5a3f-0100-e85d-447d" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="3. Cerulean Shield" hidden="false" id="6995-7b84-b603-a9bd" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7b63-118d-bfe3-b0b8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Cerulean Shield" id="6f2e-3416-6ed6-21ae" hidden="false" targetId="7288-0be2-7efc-3db7" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="4. Sign of Amul" hidden="false" id="f386-7465-f46c-f0bd" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="987c-32f3-ed80-e34c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Sign of Amul" id="1193-f649-023f-c523" hidden="false" targetId="dec0-3cf7-c1ed-4428" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="5. Crystal Prison" hidden="false" id="02b5-ca29-8500-5886" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cce1-65af-4a11-90b5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Crystal Prison" id="04fe-0244-fa32-a16e" hidden="false" targetId="3ef9-0ce4-239d-2baf" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="6. Portent of Doom" hidden="false" id="2e58-b352-5d03-8e06" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3f9e-1220-af10-49b6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Portent of Doom" id="0f3e-8363-66c2-2f60" hidden="false" targetId="7053-1cc0-e959-7b6a" type="profile"/>
+                      </infoLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="de84-2fb5-d5ae-b817"/>
+                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="92b4-6d22-6805-37c8"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4f1f-301d-e266-7dcd-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f1f-301d-e266-7dcd-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Stegadon" id="44f3-71da-d5f3-db2d" hidden="false" sortIndex="12">
+      <entryLinks>
+        <entryLink import="true" name="Skink" hidden="false" id="92d1-c67a-3d83-ad45" type="selectionEntry" targetId="0261-e7e8-a184-8755">
+          <modifiers>
+            <modifier type="decrement" value="1" field="8da8-825c-6d7e-8c94">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="b280-46fa-54b9-1ce3">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="5" field="8da8-825c-6d7e-8c94"/>
+            <modifier type="set" value="5" field="b280-46fa-54b9-1ce3"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="b5e4-bc8c-d1fc-539c" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cdb7-f869-a2e3-18cc" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d3e-20d5-0c6a-464c" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Giant Bow" hidden="false" id="d7d8-3dcd-24b2-b860" collective="true" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b850-fd3b-05d1-24df" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Bolt Thrower" id="3799-c4a8-3de4-52ac" hidden="false" type="profile" targetId="2d26-2a21-00a2-685d">
+                  <modifiers>
+                    <modifier type="set" value="Multiple Wounds (D3), Poisoned Attacks, Slow to Fire. 
+Instead of firing another missile weapon in the Shooting phase, one of the Skink Crew may fire the giant bow." field="d3a4-721b-f750-5564"/>
+                    <modifier type="set" value="Giant Bow" field="name"/>
+                    <modifier type="set" value="36&quot;" field="1c88-efb0-083f-b945"/>
+                    <modifier type="set" value="5" field="6ca0-d074-628f-e276"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Firing a Bolt Thrower" id="7cbf-8a0d-e840-0a55" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
+              </infoLinks>
+              <rules>
+                <rule name="Giant Bow" id="abe9-a70d-959b-ba0e" hidden="false">
+                  <description>Instead of firing another missile weapon in the Shooting phase, one of the Skink Crew may fire the giant bow.</description>
+                </rule>
+              </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4ec4-a3ae-1dd7-7f00" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Giant Blowpipe" hidden="false" id="de70-151f-e53b-01f7" collective="true" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7102-0a73-7c23-beaf" includeChildSelections="false"/>
+              </constraints>
+              <rules>
+                <rule name="Giant Blowpipe" id="ae2a-542a-45d9-28ad" hidden="false">
+                  <description>Instead of firing another missile weapon in the Shooting phase, up to two of the Skink Crew may each fire a giant blowpipe.</description>
+                </rule>
+              </rules>
+              <profiles>
+                <profile name="Giant Blowpipe" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="cd95-ca76-77cf-fc64">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">18&quot;</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2D6</characteristic>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Poisoned Attacks, Rapid Fire, Slow to Fire</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4ec4-a3ae-1dd7-7f00" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Engine of the Gods" hidden="false" id="322c-0624-4b89-cce7" sortIndex="3" collective="true">
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25ba-7885-ca31-35f5" includeChildSelections="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="747e-9a53-2cfa-b214" automatic="true"/>
+              </constraints>
+              <rules>
+                <rule name="Portent of Warding" id="78bc-80bc-daea-ce39" hidden="false">
+                  <description>The model and all friendly units within 6&quot; have a 6+ Ward save.</description>
+                </rule>
+                <rule name="Arcane Configuration" id="77e4-56e2-029d-756f" hidden="false">
+                  <description>If you have one or more Engines of the Gods on the battlefield at the start of your Magic phase, select one of the eight Lores of Battle Magic from the Warhammer rulebook. Until the start of your next Magic phase, the casting values for all spells from the selected lore are reduced by 1 (to a minimum of 3).</description>
+                </rule>
+              </rules>
+              <profiles>
+                <profile name="Engine of the Gods" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3bab-0859-3833-f127">
+                  <characteristics>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate bound spell</characteristic>
+                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3</characteristic>
+                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">4D6&quot;</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell targets every enemy unit within range of the model&apos;s front arc. Each target suffers D6 Strength 4 hits with the Flaming Attacks special rule.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="1" field="747e-9a53-2cfa-b214">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4ec4-a3ae-1dd7-7f00" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Ward Save" id="1f27-919b-3fcd-ebb5" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Portent of Warding" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+        <entryLink import="true" name="56. Upgrades" hidden="false" id="6902-9440-ad94-5a70" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Ancient" hidden="false" id="a1a7-5ef1-1177-89ab" collective="true" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ba7-c1aa-c2a4-a8b4" includeChildSelections="false"/>
+              </constraints>
+              <rules>
+                <rule name="Ancient" id="5897-4ac0-d392-e1c1" hidden="false">
+                  <description>The Stegadon gains +1 Strength and the Natural Armour (6+) special rule. However, they suffer -1 Initiative and -1 Attacks.</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="a1a7-5ef1-1177-89ab" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink name="Natural Armour" id="cb8f-d09f-8743-c12b" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="Ancient" field="annotation"/>
+                    <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sharpened Horns" hidden="false" id="74e2-79d8-a437-5e46" collective="true" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f1f0-7e50-2f7c-bce9" includeChildSelections="false"/>
+              </constraints>
+              <rules>
+                <rule name="Sharpened Horns" id="57fd-315b-a590-8d9c" hidden="false">
+                  <description>The Stegadon&apos;s its Impact Hits gains the Multiple Wounds (D3) special rule.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Unstoppable Stampede" hidden="false" id="24e7-0946-5b32-fc68" collective="true" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6938-ab86-eb28-d0a1" includeChildSelections="false"/>
+              </constraints>
+              <rules>
+                <rule name="Unstoppable Stampede" id="6a81-e313-67b3-e720" hidden="false">
+                  <description>The Stegadon gains the Devastating Charge special rule.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Troglodon" id="eb98-1751-5fef-e1f7" hidden="false" sortIndex="13">
+      <entryLinks>
+        <entryLink import="true" name="56. Upgrades" hidden="false" id="e184-53b2-6e95-3714" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Divining Rod" hidden="false" id="3102-767c-dfa8-f462" collective="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f662-93e6-1c08-0424" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+              <rules>
+                <rule name="Divining Rod" id="668f-437b-ff5c-5880" hidden="false">
+                  <description>The model channels Power and Dispel dice as if they were a Level 1 Wizard.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="55. Crew" id="a8b2-1469-b1b1-ed64" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Oracle" hidden="false" id="f81c-bf79-0966-e299" subType="crew">
+              <profiles>
+                <profile name="Oracle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="d7bf-0dd9-5ec0-a273">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Lizardman, Skink</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58fd-bdcb-fb8b-e03c-min" includeChildSelections="false" negative="false" automatic="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58fd-bdcb-fb8b-e03c-max" includeChildSelections="false" automatic="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Arcane Vassal" id="bca1-769f-18d7-97ec" hidden="false" type="rule" targetId="9d9e-2034-9863-9694"/>
+              </infoLinks>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="0" field="58fd-bdcb-fb8b-e03c-max"/>
+                    <modifier type="set" value="true" field="hidden"/>
+                    <modifier type="set" value="0" field="58fd-bdcb-fb8b-e03c-min"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <profileTypes>
     <profileType name="Blessed Spawning" id="09ff-9e1e-b097-68c0" hidden="false">
@@ -4055,7 +4025,7 @@ Contemplations Discipline" field="error">
   <selectionEntries>
     <selectionEntry type="model" import="true" name="Slann Mage Priest" hidden="false" id="1924-997e-685d-d45b" sortIndex="1">
       <costs>
-        <cost name="pts" typeId="points" value="340"/>
+        <cost name="pts" typeId="points" value="365"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Lords" hidden="false" id="9c45-b0b6-d0db-7535" targetId="d280-b7df-c185-2ba5" primary="true"/>
@@ -4148,7 +4118,7 @@ Contemplations Discipline" field="error">
           <entryLinks>
             <entryLink import="true" name="Temple Guard Palanquin" hidden="false" id="d4d8-1043-a7ed-16c7" type="selectionEntry" targetId="b06f-59b1-69dc-7e95" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="15"/>
+                <cost name="pts" typeId="points" value="25"/>
               </costs>
             </entryLink>
             <entryLink import="true" name="Mage-Priest Palanquin" hidden="false" id="80f8-7f99-3af6-b0de" type="selectionEntry" targetId="20a4-f96d-e9a6-bf35" sortIndex="1">
@@ -4492,7 +4462,8 @@ Contemplations Discipline" field="error">
             <entryLink import="true" name="Lore of Fire" hidden="false" id="1737-c796-4ff0-763b" type="selectionEntry" targetId="4d24-c803-7a05-0894"/>
             <entryLink import="true" name="Lore of Heavens" hidden="false" id="56ba-e0a4-f3c4-7e37" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
             <entryLink import="true" name="Lore of Beasts" hidden="false" id="62c8-5036-a581-f691" type="selectionEntry" targetId="b436-b410-dd41-304f"/>
-            <entryLink import="true" name="Lore of Life" hidden="false" id="138e-bf71-4bb8-3289" type="selectionEntry" targetId="968d-55ad-604c-f251"/>
+            <entryLink import="true" name="Lore of Light" hidden="false" id="138e-bf71-4bb8-3289" type="selectionEntry" targetId="c543-a893-3879-cf32"/>
+            <entryLink import="true" name="Lore of Life" hidden="false" id="3f0b-f296-67bd-16d4" type="selectionEntry" targetId="968d-55ad-604c-f251"/>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="8ab9-e1c8-b352-4062" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -4955,7 +4926,8 @@ Contemplations Discipline" field="error">
             <entryLink import="true" name="Lore of Fire" hidden="false" id="419e-2150-c7c5-06c4" type="selectionEntry" targetId="4d24-c803-7a05-0894"/>
             <entryLink import="true" name="Lore of Heavens" hidden="false" id="8ae8-b322-b1f5-e59a" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
             <entryLink import="true" name="Lore of Beasts" hidden="false" id="4602-e7d3-f194-0dfa" type="selectionEntry" targetId="b436-b410-dd41-304f"/>
-            <entryLink import="true" name="Lore of Life" hidden="false" id="c1a4-6f1c-0687-5b39" type="selectionEntry" targetId="968d-55ad-604c-f251"/>
+            <entryLink import="true" name="Lore of Light" hidden="false" id="c1a4-6f1c-0687-5b39" type="selectionEntry" targetId="c543-a893-3879-cf32"/>
+            <entryLink import="true" name="Lore of Life" hidden="false" id="c239-96f7-18a2-cae2" type="selectionEntry" targetId="968d-55ad-604c-f251"/>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="1687-7be9-93b1-4d12" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -5186,7 +5158,7 @@ Contemplations Discipline" field="error">
           </infoLinks>
           <rules>
             <rule name="Sacred Duty" id="7603-2bcb-321c-5ed8" hidden="false">
-              <description>Whilst they are part of a combined unit that has been joined by a model with the Mage-Priest Palanquin special rule or a Temple Guard Palaquin, all Temple Guard models in the combined unit have the Immunity (Psychology) special rules.</description>
+              <description>Whilst they are part of a combined unit that has been joined by a Slann, all Temple Guard models in the combined unit have the Immunity (Psychology) special rules.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -5946,7 +5918,7 @@ Contemplations Discipline" field="error">
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Kroxigor" hidden="false" id="03b9-3c29-4bf9-26c8">
           <costs>
-            <cost name="pts" typeId="points" value="50"/>
+            <cost name="pts" typeId="points" value="47"/>
           </costs>
           <profiles>
             <profile name="Kroxigor" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="cc36-13b4-f413-7989">
@@ -6605,7 +6577,7 @@ If the artillery dice result is a misfire, no shots are fired and D3 Skink handl
               </infoLinks>
               <rules>
                 <rule name="Instinctive Defence" id="c3f0-4bc2-e8ef-5069" hidden="false">
-                  <description>If charged, a Razordon must Stand and Shoot if it is able to do so. However, when calculating the number of shots fired, the Razordon can re-roll the artillery dice. In addition, it gains the Quick to Fire special rule and do not suffer To Hit penalties for Stand and Shoot.</description>
+                  <description>If charged, a Razordon must Stand and Shoot if it is able to do so. However, when calculating the number of shots fired, the Razordon can re-roll the artillery dice. In addition, it gains the Quick to Fire special rule and does not suffer To Hit penalties for Stand and Shoot.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -6962,19 +6934,18 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Stegadon" hidden="false" id="aa21-44d5-1958-de31" sortIndex="43">
       <entryLinks>
-        <entryLink import="true" name="Stegadon" hidden="false" id="a577-dc96-6ce3-8f21" type="selectionEntry" targetId="871c-e199-3713-d5b7">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f2eb-2149-fbc4-2fb5" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d608-b0a6-ff76-f6a7" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
+        <entryLink import="true" name="Stegadon" hidden="false" id="e757-1ee2-f5bd-12b7" type="selectionEntryGroup" targetId="44f3-71da-d5f3-db2d" flatten="true"/>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="3704-4fef-a90f-b390" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink targetId="e1a0-da31-05c5-9a15" id="05cd-919b-c440-840a" primary="false" name="Monster"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="215"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Stegadon" id="eb98-6055-e033-a088" hidden="false" type="infoGroup" targetId="4d44-faa8-e5ea-06e4"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Arcanadon" hidden="false" id="bb1a-ea66-db7d-43c9" sortIndex="44">
       <costs>
@@ -7057,12 +7028,11 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
         <categoryLink name="Monster" hidden="false" id="ee2f-273c-fb11-5d29" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Troglodon" hidden="false" id="921b-3956-91a5-3684" type="selectionEntry" targetId="408a-84ee-da36-e134">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="57ad-7488-5de3-5a01" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
+        <entryLink import="true" name="Troglodon" hidden="false" id="a197-0ba9-ec2c-7792" type="selectionEntryGroup" targetId="eb98-1751-5fef-e1f7" flatten="true"/>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="Troglodon" id="4480-857f-966a-e9f9" hidden="false" type="infoGroup" targetId="8b7c-195a-c34c-5b04"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Coatl" hidden="false" id="7141-5379-787c-dde3" sortIndex="46">
       <costs>
@@ -7073,12 +7043,11 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
         <categoryLink name="Monster" hidden="false" id="11d4-c5ca-df1a-77f7" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Coatl" hidden="false" id="f3e4-3943-2392-9aaf" type="selectionEntry" targetId="e53c-11d7-ca69-9693">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6ee4-af3a-0027-a536" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
+        <entryLink import="true" name="Coatl" hidden="false" id="dd6d-613e-9ab6-a069" type="selectionEntryGroup" targetId="165a-c15a-d881-9c38" flatten="true"/>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="Coatl" id="43ec-b900-dcc3-c411" hidden="false" type="infoGroup" targetId="8f91-c18b-cf04-c648"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Dread Saurian" hidden="false" id="01f3-f32b-6131-751d" sortIndex="47">
       <categoryLinks>
@@ -7447,10 +7416,13 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="607e-108e-2ecb-0d9f" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="Lord Mazdamundi" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Lord Kroak" hidden="false" id="ed0e-72d7-3173-5b92" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="500"/>
+                <cost name="pts" typeId="points" value="525"/>
               </costs>
               <categoryLinks>
                 <categoryLink name="Wizard" hidden="false" id="da90-3b71-b7ac-1682" targetId="1aae-2529-c509-7573" primary="false"/>
@@ -7473,7 +7445,6 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink import="true" name="10. Character Options" hidden="false" id="cc96-2704-1a04-2590" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                 <entryLink import="true" name="65. Lore of Magic" hidden="false" id="8522-412d-47ee-7e6d" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="The Deliverance of Itza" hidden="false" id="d2c4-1847-80e9-0f8f">
@@ -7527,19 +7498,6 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                         <profile name="Golden Death Mask" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="2ce1-1975-ab47-7a68">
                           <characteristics>
                             <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">All shooting or close combat attacks against Lord Kroak or any unit he joins suffer a -1 To Hit penalty.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Standard of the Sacred Serpent" hidden="false" id="448b-767e-471c-8f0b" collective="true">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5a5c-9b94-0fc8-8e31-min" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a5c-9b94-0fc8-8e31-max" includeChildSelections="false"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="Standard of the Sacred Serpent" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="c2a0-3d94-8c6c-8f81">
-                          <characteristics>
-                            <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">All enemy units in base contact with Lord Kroak or his unit takes D6 Strength 3 hits at the start of your Shooting phase.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -7621,7 +7579,7 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                   <description>If Lord Kroak joins a unit of Temple Guard, all models in the combined unit gain the Unbreakable special rule.</description>
                 </rule>
                 <rule name="First Generation Spawning" id="1a48-1d65-b184-0c17" hidden="false">
-                  <description>Lord Kroak can cast The Deliverance of Itza as many times per turn as he has sufficient power dice, and may use up to 6 Power Dice per casting attempt. If Lord Kroak miscasts, roll a D6; on 2+ he does not roll on the Miscast table but instead suffers a Strength 6 hit. On a roll of 1, Lord Kroak rolls on the Miscast table as normal. In either case, if the spell was cast through an Arcane Vassal, the Arcane Vassal also suffers a Strength 6 hit.</description>
+                  <description>Lord Kroak can cast The Deliverance of Itza as many times per turn as he has sufficient power dice, and may use up to 6 Power Dice per casting attempt. If Lord Kroak miscasts, roll a D6; on a 2+ he does not roll on the Miscast table but instead suffers a Strength 6 hit. On a roll of 1, Lord Kroak rolls on the Miscast table as normal. In either case, if the spell was cast through an Arcane Vassal, the Arcane Vassal also suffers a Strength 6 hit.</description>
                 </rule>
                 <rule name="The Spirit of Lord Kroak" id="9419-45b2-d536-f91a" hidden="false">
                   <description>Lord Kroak&apos;s Wizard level can never be reduced from Level 4.</description>
@@ -7630,6 +7588,35 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bc9e-8fb2-0203-5067" includeChildSelections="true"/>
               </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="10. Character Options" id="93bd-ee40-591a-a3ff" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Army Battle Standard" hidden="false" id="8358-c17c-00d8-af9b" type="selectionEntry" targetId="9519-df8f-0af4-1995">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Standard of the Sacred Serpent" hidden="false" id="448b-767e-471c-8f0b" collective="true">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5a5c-9b94-0fc8-8e31-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a5c-9b94-0fc8-8e31-max" includeChildSelections="false"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Standard of the Sacred Serpent" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="c2a0-3d94-8c6c-8f81">
+                              <characteristics>
+                                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">All enemy units in base contact with Lord Kroak or his unit takes D6 Strength 3 hits at the start of your Shooting phase.</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                      </selectionEntries>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf45-1775-02d1-5886"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <modifiers>
+                <modifier type="set" value="Lord Kroak" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Kroq-Gar" hidden="false" id="482a-519f-2d8f-b10e" sortIndex="3">
               <costs>
@@ -7772,6 +7759,9 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                   <description>Kroq-Gar has a 5+ Ward save. If Kroq-Gar is wounded in close combat and does not pass his Ward save, then whoever struck the blow immediately suffers an automatic Strength 5 hit.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Kroq-Gar" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Tehenhauin" hidden="false" id="4ec4-a3ae-1dd7-7f00" sortIndex="4">
               <costs>
@@ -7911,6 +7901,9 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                   <description>If your army includes Tehenhauin, you may upgrade any units of Skink Cohorts, Skink Skirmishers, Raptadon Riders, Horned One Riders, Terradon Riders or Ripperdactyl Riders in your army to be Red Crested Skinks. Red Crested Skinks have +1 Weapon Skill, as well as the Devastating Charge, Hatred (Skaven) and Immunity (Poisoned Attacks) special rules for +2 points per model. They may not take any Sacred Spawning. In addition, Skink Cohorts with this upgrade may replace their shields with great weapons for +2 points per model.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Tehenhauin" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Tetto&apos;eko" hidden="false" id="ad33-60c8-6ab7-669e" sortIndex="5">
               <costs>
@@ -8026,6 +8019,9 @@ to see if the comet arrives.</characteristic>
                   <description>Tetto&apos;eko has a 5+ Ward Save.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Tetto&apos;eko" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -8267,6 +8263,9 @@ to see if the comet arrives.</characteristic>
                   <description>Chakax must always issue a challenge, and can never refuse one. When fighting in a challenge, Chakax re-rolls all failed rolls To Hit.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Chakax" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Gor-Rok" hidden="false" id="d8f9-c645-cd65-2761" sortIndex="2">
               <categoryLinks>
@@ -8355,6 +8354,9 @@ to see if the comet arrives.</characteristic>
                   <description>Any successful rolls To Wound roll against Gor-Rok must be re-rolled. In addition, Gor-Rok has the Immunity (Killing Blow) special rule.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Gor-Rok" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Nakai the Wanderer" hidden="false" id="0698-b9eb-08ef-e5bf" sortIndex="3">
               <costs>
@@ -8431,6 +8433,9 @@ to see if the comet arrives.</characteristic>
                   <description>Nakai always appears using the Ambushers special rule, with the following exception; he will always appear from a forest, marshland or river terrain feature rather than the table edge if able to. Any unit that kills Nakai in close combat may not overrun. If Nakai flees from combat, then the victorious unit may not pursue.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Nakai the Wanderer" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Tiktaq&apos;to" hidden="false" id="8203-41fe-f745-1166" sortIndex="4">
               <constraints>
@@ -8528,6 +8533,9 @@ to see if the comet arrives.</characteristic>
                   <description>If your army contains Tiktaq&apos;to, one unit of Terradon Riders may deploy using the Ambushers special rule.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Tiktaq&apos;to" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Tichi-Huichi" hidden="false" id="0288-6346-869f-8799" sortIndex="5">
               <profiles>
@@ -8620,6 +8628,19 @@ to see if the comet arrives.</characteristic>
                   <description>Enemies that Break Tichi-Huichi&apos;s Raiders in close combat will automatically counts as restraining from pursuit, even if they would normally be forced to pursue.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Tichi-Huichi" field="name" scope="root-entry"/>
+                <modifier type="add" value="{this} needs one more selection of Tichi-Huichi&apos;s Raiders" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="0288-6346-869f-8799" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="594e-4b97-66c1-5875" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Oxyotl" hidden="false" id="0bd0-b850-257c-0f93" sortIndex="6">
               <constraints>
@@ -8705,6 +8726,9 @@ to see if the comet arrives.</characteristic>
                   <description>If Oxyotl remained stationary in his preceding Movement phase, enemies cannot draw Line of Sight to him unless they are within 6&quot;, and all shots made from the Golden Blowpipe of P&apos;Toohee may re- roll failed To Wound rolls. If an enemy unit would move through Oxyotl, simply move Oxyotl aside by the smallest amount possible to make room for the enemy unit.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="Oxyotl" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -8756,9 +8780,9 @@ to see if the comet arrives.</characteristic>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
-                  <modifiers>
-                    <modifier type="set" value="1" field="dca5-b708-4c31-a96e"/>
-                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4798-3a85-d7a9-b78d"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -8818,7 +8842,8 @@ to see if the comet arrives.</characteristic>
         <entryLink import="true" name="11. Unit Options" hidden="false" id="72e2-a353-96a1-1e5f" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5"/>
       </entryLinks>
       <constraints>
-        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="ced1-ea44-eeb0-4ef2" includeChildSelections="true" automatic="true" includeChildForces="true"/>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="ced1-ea44-eeb0-4ef2" includeChildSelections="true" automatic="false" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c3f5-9fe6-ffae-740a" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -8834,4 +8859,78 @@ to see if the comet arrives.</characteristic>
       </modifiers>
     </selectionEntry>
   </selectionEntries>
+  <sharedInfoGroups>
+    <infoGroup name="Coatl" id="8f91-c18b-cf04-c648" hidden="false">
+      <infoLinks>
+        <infoLink name="Magic Resistance" id="0714-d8cd-f6b9-0a65" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+          <modifiers>
+            <modifier type="set" value="Coatl" field="name"/>
+            <modifier type="set" value="3" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="b48e-ec73-c800-a30a" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Coatl" field="name"/>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour" id="08e4-983b-a9fe-13c0" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Coatl" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Cold-Blooded" id="2a46-bf98-a750-14b3" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+        <infoLink name="Magical Storm" id="9156-e4d3-2f91-2f22" hidden="false" type="rule" targetId="da5b-f4a5-c4b7-fbd1"/>
+        <infoLink name="Guardian of the Sacred Places" id="b436-c33a-2f43-99c7" hidden="false" type="profile" targetId="19ae-e8bd-2030-30b2"/>
+        <infoLink name="Coatl" id="6731-521f-cd2a-d9f5" hidden="false" type="profile" targetId="6daf-31ff-1bb9-cc40"/>
+        <infoLink name="Fly (8)" id="66bc-1f2e-59ef-b4e4" hidden="false" type="rule" targetId="0a9a-bfcb-1a9d-5609"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Stegadon" id="4d44-faa8-e5ea-06e4" hidden="false">
+      <infoLinks>
+        <infoLink name="Stegadon" id="2030-c703-6977-04fa" hidden="false" type="profile" targetId="efcf-d49e-1b65-35fd"/>
+        <infoLink name="Cold-Blooded" id="cc70-611d-8cf9-566a" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+        <infoLink name="Immunity (Psychology)" id="b582-0a9a-7654-bffa" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+        <infoLink name="Impact Hits (D6+1)" id="8a5d-d987-f3e8-86ea" hidden="false" type="rule" targetId="a043-3e3c-9f8a-3661"/>
+        <infoLink name="Jungle Poisons" id="16bd-1d13-ad92-d6ff" hidden="false" type="rule" targetId="f932-079c-91ed-43b7"/>
+        <infoLink name="Stubborn" id="bf88-5bb8-dec3-7cb4" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+        <infoLink name="Natural Armour" id="2847-4ad0-6a8b-f6ab" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Stegadon" field="annotation"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Troglodon" id="8b7c-195a-c34c-5b04" hidden="false">
+      <infoLinks>
+        <infoLink name="Troglodon" id="69f4-a605-1410-fc01" hidden="false" type="profile" targetId="26c6-ccf9-d9f1-a725"/>
+        <infoLink name="Aquatic" id="7c4d-a388-e6d6-c3bd" hidden="false" type="rule" targetId="3667-691b-abd9-7da6"/>
+        <infoLink name="Cold-Blooded" id="270c-4432-0391-3f85" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+        <infoLink name="Primeval Roar" id="5548-281a-5459-e9b5" hidden="false" type="rule" targetId="479a-c7b9-d052-f3f2"/>
+        <infoLink name="Poisoned Attacks" id="ef75-48a8-7101-e7de" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
+          <modifiers>
+            <modifier type="set" value="Troglodon only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Predatory Fighter" id="5142-36d3-fc15-4044" hidden="false" type="rule" targetId="2e69-70ed-4337-eaec">
+          <modifiers>
+            <modifier type="set" value="Troglodon only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour" id="6b6a-68a3-cc99-166d" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Troglodon" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Spit Venom" id="d059-a7cc-eb5a-a684" hidden="false" type="profile" targetId="7d3a-693a-a5f0-d501"/>
+        <infoLink name="Jungle Poisons" id="4faf-938a-c634-9032" hidden="false" type="rule" targetId="f932-079c-91ed-43b7"/>
+      </infoLinks>
+    </infoGroup>
+  </sharedInfoGroups>
 </catalogue>
