@@ -2091,6 +2091,7 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fbe7-9239-7d15-8eda" includeChildSelections="false"/>
                 <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="07f3-995f-9a31-9f64" includeChildSelections="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9748-96ff-b81f-6aa4" includeChildSelections="false"/>
               </constraints>
               <modifiers>
                 <modifier type="increment" value="1" field="07f3-995f-9a31-9f64">
@@ -2099,7 +2100,7 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
                     <repeat value="1" repeats="1" field="selections" scope="roster" childId="3bd0-3117-7b30-5250" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="fbe7-9239-7d15-8eda">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -2139,11 +2140,6 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
               <entryLinks>
                 <entryLink import="true" name="Medium Armour" hidden="false" id="6fbe-e704-affc-9fa7" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1">
                   <modifiers>
-                    <modifier type="set" value="1" field="80f0-b5fd-ae36-4ab6">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="926f-a6d3-9b67-3b03" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
                     <modifier type="set" value="0" field="aaab-a191-d887-0e14">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="926f-a6d3-9b67-3b03" shared="true" includeChildSelections="true"/>
@@ -2159,21 +2155,6 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
                     <modifier type="set" value="0" field="409c-38d4-353b-134c">
                       <conditions>
                         <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="926f-a6d3-9b67-3b03" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="9871-81c3-ad39-9a0a" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="3bd0-3117-7b30-5250" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                    <modifier type="set" value="1" field="f545-22ba-a47b-8ec5">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="926f-a6d3-9b67-3b03" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                   </modifiers>
