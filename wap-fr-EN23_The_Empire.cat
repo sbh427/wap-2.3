@@ -33,7 +33,7 @@
         <cost name="pts" typeId="points" value="120"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="75. Knightly Orders" hidden="false" id="ecdc-cd7e-b494-c919" type="selectionEntryGroup" targetId="8d18-9730-7685-8bec"/>
+        <entryLink import="true" name="11. Knightly Orders" hidden="false" id="ecdc-cd7e-b494-c919" type="selectionEntryGroup" targetId="8d18-9730-7685-8bec"/>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="e9c1-5681-05a7-44ff" type="selectionEntryGroup" targetId="b73b-2eee-3197-cb01">
           <modifiers>
             <modifier type="increment" value="100" field="eab2-4b06-bf7c-9abe"/>
@@ -82,7 +82,7 @@
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="9d06-7e59-075c-6815" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="9d06-7e59-075c-6815" type="selectionEntryGroup" targetId="f9ae-d1b2-440f-08b3"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="972e-fff6-2534-d55e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="ca33-db0f-36fd-417e" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
@@ -178,6 +178,13 @@
           </conditionGroups>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="add" value="{this} must either be armed with a hand weapon or the same equipment as the rest of their unit. " field="info">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="8d18-9730-7685-8bec" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="3eb3-140b-5ca1-670d" name="General" hidden="false" collective="false" import="true" type="model" sortIndex="1">
       <profiles>
@@ -4107,7 +4114,7 @@
             <constraint type="min" value="3" field="selections" scope="unit" shared="true" id="5dc2-66b6-a4ef-d0bd"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="75. Knightly Orders" hidden="false" id="e181-b504-ae51-6bd8" type="selectionEntryGroup" targetId="8d18-9730-7685-8bec" sortIndex="0"/>
+            <entryLink import="true" name="11. Knightly Orders" hidden="false" id="e181-b504-ae51-6bd8" type="selectionEntryGroup" targetId="8d18-9730-7685-8bec" sortIndex="0"/>
             <entryLink import="true" name="50. Handheld Armour" hidden="false" id="abeb-d8a8-cf32-352b" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
               <entryLinks>
                 <entryLink import="true" name="Shield" hidden="false" id="43e1-16ca-6b53-8797" type="selectionEntry" targetId="c068-0827-9931-d9bf">
@@ -4121,7 +4128,7 @@
               <entryLinks>
                 <entryLink import="true" name="Polearm/Halberd" hidden="false" id="7679-f5a9-5419-2b35" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="1">
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="86ad-a362-8a86-339c">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="62b0-1c10-9c20-ea9b" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -4133,7 +4140,7 @@
                     <cost name="pts" typeId="points" value="6"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="5868-c3d2-7e90-5ed0">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="62b0-1c10-9c20-ea9b" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -4143,6 +4150,11 @@
                 <entryLink import="true" name="Cavalry Hammer" hidden="false" id="1963-a80f-dd48-49d3" type="selectionEntry" targetId="7c74-3e61-9a55-53e0" defaultAmount="1" sortIndex="2">
                   <modifiers>
                     <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="0" field="ee9e-9f6b-a4c0-01a7">
                       <conditions>
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="62b0-1c10-9c20-ea9b" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -6633,7 +6645,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                 <infoLink name="Crush the Weak" id="25b0-79d3-678b-4100" hidden="false" type="rule" targetId="da9f-06eb-7dc7-d6e4"/>
               </infoLinks>
               <rules>
-                <rule name="he Teutogen Guard" id="ee02-290f-1977-78ea" hidden="false">
+                <rule name="The Teutogen Guard" id="ee02-290f-1977-78ea" hidden="false">
                   <description>If Emil Valgeir is included in your army, you may upgrade one unit of Imperial Foot Knights with the Knights of the White Wolf upgrade to the Teutogen Guard for +1 point per model. This unit gains the Immunity (Flaming Attacks) and Stubborn special rules.</description>
                 </rule>
                 <rule name="Strength in Faith, Faith in Strength" id="1b8e-bc96-5150-10f5" hidden="false">
@@ -7943,7 +7955,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
             <cost name="pts" typeId="points" value="18"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="75. Knightly Orders" hidden="false" id="11ed-d58a-4317-f223" type="selectionEntryGroup" targetId="8d18-9730-7685-8bec"/>
+            <entryLink import="true" name="11. Knightly Orders" hidden="false" id="11ed-d58a-4317-f223" type="selectionEntryGroup" targetId="8d18-9730-7685-8bec"/>
             <entryLink import="true" name="70. Mount" hidden="false" id="82a3-9cc4-bfd3-8ecb" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="186e-f9a7-b3be-0628" includeChildSelections="false"/>
@@ -7971,49 +7983,118 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
-                  <modifiers>
-                    <modifier type="set" value="0" field="02c9-7bef-7d65-80f8">
+                  <modifierGroups>
+                    <modifierGroup type="and">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="692b-e6a7-a1b3-63a1" shared="true" includeChildSelections="true"/>
                       </conditions>
-                    </modifier>
-                  </modifiers>
+                      <modifiers>
+                        <modifier type="set" value="0" field="02c9-7bef-7d65-80f8"/>
+                        <modifier type="set" value="Not allowed for Core Unit" field="annotation"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
                 </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="868e-cfba-e940-c019" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Cavalry Hammer" hidden="false" id="56b9-7354-e375-7ed1" type="selectionEntry" targetId="7c74-3e61-9a55-53e0" sortIndex="6">
+                <entryLink import="true" name="Cavalry Hammer" hidden="false" id="56b9-7354-e375-7ed1" type="selectionEntry" targetId="7c74-3e61-9a55-53e0" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
-                </entryLink>
-                <entryLink import="true" name="Flail" hidden="false" id="261b-531c-e6d0-6853" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="2">
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="cd78-9066-2028-a361" shared="true" includeChildSelections="true"/>
-                      </conditions>
+                    <modifier type="set" value="0" field="ee9e-9f6b-a4c0-01a7">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8d18-9730-7685-8bec" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="62b0-1c10-9c20-ea9b" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="904c-2169-490f-0b91" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </modifier>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="1399-5847-4b9e-98f8" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2"/>
-                <entryLink import="true" name="Heavy Lance" hidden="false" id="fc9e-3071-b0fc-1907" type="selectionEntry" targetId="0548-4aeb-a60c-b378" sortIndex="-1"/>
-                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="ff88-d66a-a339-49c2" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="4">
+                <entryLink import="true" name="Great Weapon" hidden="false" id="1399-5847-4b9e-98f8" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="82c1-00a7-80d9-fa3a" shared="true" includeChildSelections="true"/>
-                      </conditions>
+                    <modifier type="set" value="0" field="4fc2-f1e9-73bb-48d6">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8d18-9730-7685-8bec" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="904c-2169-490f-0b91" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="af6c-f51b-1aa6-0908" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </modifier>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="c9f7-117f-7aaa-252c" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="5">
+                <entryLink import="true" name="Heavy Lance" hidden="false" id="fc9e-3071-b0fc-1907" type="selectionEntry" targetId="0548-4aeb-a60c-b378" sortIndex="1">
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="9f0a-402e-84b7-7a2a" shared="true" includeChildSelections="true"/>
-                      </conditions>
+                    <modifier type="set" value="0" field="5868-c3d2-7e90-5ed0">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8d18-9730-7685-8bec" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="fcfc-1847-4faf-81b6" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="130c-3ba2-f0bb-8df7" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="dc9f-a022-e771-d648" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="904c-2169-490f-0b91" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="4904-0eb6-8fcf-d2dc" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="af6c-f51b-1aa6-0908" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="eb60-252d-b9ad-9269" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="c75f-f113-7acd-4a7e" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="df19-a65f-986a-af03" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="4">
+                  <modifiers>
+                    <modifier type="set" value="0" field="86ad-a362-8a86-339c">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="fcfc-1847-4faf-81b6" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="130c-3ba2-f0bb-8df7" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="dc9f-a022-e771-d648" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="4904-0eb6-8fcf-d2dc" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="eb60-252d-b9ad-9269" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="c75f-f113-7acd-4a7e" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="82c1-00a7-80d9-fa3a" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Flail" hidden="false" id="717c-fa47-1158-dfb1" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="5">
+                  <modifiers>
+                    <modifier type="set" value="0" field="9a62-6f2b-ec60-1573">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="cd78-9066-2028-a361" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="32e9-bc29-6073-d83c" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="5">
+                  <modifiers>
+                    <modifier type="set" value="0" field="f956-f565-3d36-b632">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="9f0a-402e-84b7-7a2a" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </modifier>
                   </modifiers>
                 </entryLink>
@@ -8032,22 +8113,31 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                       </conditions>
                     </modifier>
                     <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="0548-4aeb-a60c-b378" shared="true" includeChildSelections="true"/>
-                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="0548-4aeb-a60c-b378" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="130c-3ba2-f0bb-8df7" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="unit" childId="82c1-00a7-80d9-fa3a" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="130c-3ba2-f0bb-8df7" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="unit" childId="82c1-00a7-80d9-fa3a" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </modifier>
                   </modifiers>
                 </entryLink>
               </entryLinks>
             </entryLink>
           </entryLinks>
-          <modifiers>
-            <modifier type="append" value="(Inner Circle)" field="name" join=" ">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="unit" childId="b437-d479-1d1e-9566" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -8134,7 +8224,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="b437-d479-1d1e-9566" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="a0b3-5670-39e0-ebd6" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
                 <modifier type="set" value="Infantry (Human)" field="13f9-a26b-05af-3459"/>
@@ -8144,7 +8234,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="b437-d479-1d1e-9566" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a0b3-5670-39e0-ebd6" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
                 <modifier type="set" value="Infantry (Human)" field="13f9-a26b-05af-3459"/>
@@ -8155,7 +8245,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
             <cost name="pts" typeId="points" value="10"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="75. Knightly Orders" hidden="false" id="b72a-01f3-b042-36dc" type="selectionEntryGroup" targetId="8d18-9730-7685-8bec"/>
+            <entryLink import="true" name="11. Knightly Orders" hidden="false" id="b72a-01f3-b042-36dc" type="selectionEntryGroup" targetId="8d18-9730-7685-8bec"/>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="1562-ceb6-46f1-4c08" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
                 <entryLink import="true" name="Heavy Armour" hidden="false" id="c1bf-7e14-9c90-1dee" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="1"/>
@@ -8163,60 +8253,90 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="692b-e6a7-a1b3-63a1" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="set" value="0" field="02c9-7bef-7d65-80f8"/>
+                        <modifier type="set" value="Not allowed for Core Unit" field="annotation"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
                 </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6a1b-e108-6f22-0d09" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="215f-a27c-f883-f628" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="1"/>
-                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="a194-276e-ddb4-c710" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="2"/>
+                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="215f-a27c-f883-f628" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="1">
+                  <modifiers>
+                    <modifier type="set" value="0" field="6688-fbd9-3fae-e968">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8d18-9730-7685-8bec" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="fcfc-1847-4faf-81b6" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="a194-276e-ddb4-c710" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="2">
+                  <modifiers>
+                    <modifier type="set" value="0" field="86ad-a362-8a86-339c">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8d18-9730-7685-8bec" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="fcfc-1847-4faf-81b6" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="904c-2169-490f-0b91" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="0d1b-341f-fc90-6399" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
                 <entryLink import="true" name="Great Weapon" hidden="false" id="8c46-bf2d-9b4e-5583" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="4fc2-f1e9-73bb-48d6">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8d18-9730-7685-8bec" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="fcfc-1847-4faf-81b6" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
                 <entryLink import="true" name="Cavalry Hammer" hidden="false" id="cc94-9938-0f9d-0050" type="selectionEntry" targetId="7c74-3e61-9a55-53e0" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="ee9e-9f6b-a4c0-01a7">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8d18-9730-7685-8bec" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="fcfc-1847-4faf-81b6" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="62b0-1c10-9c20-ea9b" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
             </entryLink>
           </entryLinks>
-          <modifiers>
-            <modifier type="append" value="(Inner Circle)" field="name" join=" ">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="unit" childId="b437-d479-1d1e-9566" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Inner Circle Knight" hidden="false" id="b437-d479-1d1e-9566" sortIndex="2">
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="force" shared="true" id="bcd4-77ef-f7af-8f4f" includeChildSelections="true"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7469-a869-0cdb-a0eb"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="bcd4-77ef-f7af-8f4f">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="3a60-e57a-9cf2-54b3" shared="true" roundUp="false" includeChildSelections="true"/>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="4f5e-7e79-d329-bb9d" shared="true" roundUp="false" includeChildSelections="true"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="2" field="points">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="aa7e-8433-ed94-4601" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="decrement" value="1" field="bcd4-77ef-f7af-8f4f">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="7ceb-7056-7698-163a" shared="true" roundUp="false" includeChildSelections="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="points" value="4"/>
-          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -8297,7 +8417,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
         </modifier>
         <modifier type="set" value="The Teutogen Guard" field="name">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cd21-fbbb-19e4-dcdd" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cbb7-39c7-d058-6038" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -8305,40 +8425,47 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
         <constraint type="min" value="0" field="selections" scope="force" shared="true" id="4de2-3459-d9af-ecc7" includeChildSelections="true"/>
       </constraints>
       <entryLinks>
-        <entryLink import="true" name="10. Unit Options" hidden="false" id="8dec-28ef-1d66-722c" type="selectionEntryGroup" targetId="f3b6-5f5f-aac6-b1e1" sortIndex="1">
+        <entryLink import="true" name="10. Unit Options" hidden="false" id="0447-4472-c9d8-7369" type="selectionEntryGroup" targetId="6379-51f0-cd88-bfd8" sortIndex="-1">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="The Teutogen Guard" hidden="false" id="cd21-fbbb-19e4-dcdd">
+            <selectionEntry type="upgrade" import="true" name="The Teutogen Guard" hidden="false" id="cbb7-39c7-d058-6038">
               <modifiers>
+                <modifier type="increment" value="1" field="points">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="ef2f-d175-f5af-d3d5" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
-                <modifier type="increment" value="1" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
-                  </repeats>
-                </modifier>
-                <modifier type="add" value="{this} must be Knights of the White Wolf." field="error">
+                <modifier type="add" value="{this} must be Knights of the White Wolf " field="error">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="62b0-1c10-9c20-ea9b" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="cd21-fbbb-19e4-dcdd" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="62b0-1c10-9c20-ea9b" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cbb7-39c7-d058-6038" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
               <infoLinks>
-                <infoLink name="Stubborn" id="d4a7-f699-4d2c-2610" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
-                <infoLink name="Immunity (Flaming Attacks)" id="0907-1502-e411-80b1" hidden="false" type="rule" targetId="49c7-526e-cb3e-d7b7"/>
+                <infoLink name="Stubborn" id="811e-215d-e57c-2554" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+                <infoLink name="Immunity (Flaming Attacks)" id="3678-7c23-a9a0-3453" hidden="false" type="rule" targetId="49c7-526e-cb3e-d7b7"/>
               </infoLinks>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2b82-2bee-c3f0-d47d" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3a9c-edb5-c193-1c05" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="set" value="2" field="fa34-fe0c-c17d-740a">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cbb7-39c7-d058-6038" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -8361,7 +8488,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
         <cost name="pts" typeId="points" value="85"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="75. Knightly Orders" hidden="false" id="6a5d-1b0d-8c7a-c9b3" type="selectionEntryGroup" targetId="8d18-9730-7685-8bec"/>
+        <entryLink import="true" name="11. Knightly Orders" hidden="false" id="6a5d-1b0d-8c7a-c9b3" type="selectionEntryGroup" targetId="8d18-9730-7685-8bec"/>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="a3c9-e97b-9185-9bd5" type="selectionEntryGroup" targetId="b73b-2eee-3197-cb01">
           <modifiers>
             <modifier type="increment" value="50" field="eab2-4b06-bf7c-9abe"/>
@@ -8410,11 +8537,18 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <costs>
                 <cost name="pts" typeId="points" value="12"/>
               </costs>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="feae-2766-8463-e4ff" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4531-1347-76fb-4522" includeChildSelections="false"/>
+              </constraints>
             </entryLink>
             <entryLink import="true" name="Demigryph" hidden="false" id="cab5-9dfb-9272-32f2" type="selectionEntry" targetId="c20e-0cc6-b847-c2ad" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4866-0072-f745-b481" includeChildSelections="false"/>
+              </constraints>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -8453,9 +8587,9 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="a4fc-bf50-2042-5918" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
+        <entryLink import="true" name="10. Character Options" hidden="false" id="a4fc-bf50-2042-5918" type="selectionEntryGroup" targetId="f9ae-d1b2-440f-08b3">
           <entryLinks>
-            <entryLink import="true" name="Army Battle Standard" hidden="false" id="988a-7c25-eacd-fe8a" type="selectionEntry" targetId="9519-df8f-0af4-1995">
+            <entryLink import="true" name="Army Battle Standard" hidden="false" id="988a-7c25-eacd-fe8a" type="selectionEntry" targetId="9519-df8f-0af4-1995" sortIndex="2">
               <entryLinks>
                 <entryLink import="true" name="Magic Standards" hidden="false" id="88e6-85c1-dbd1-9c18" type="selectionEntryGroup" targetId="7b9f-e8e7-574d-95a5"/>
               </entryLinks>
@@ -8464,6 +8598,9 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               </costs>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f2a9-e361-b57b-c2ce" includeChildSelections="false"/>
+          </constraints>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -8524,6 +8661,13 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
           </conditionGroups>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="add" value="{this} must either be armed with a hand weapon or the same equipment as the rest of their unit. " field="info">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="8d18-9730-7685-8bec" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Celestial Hurricanum" hidden="false" id="d991-de1e-cd30-84a1" collective="false" sortIndex="40">
       <infoLinks>
@@ -9749,7 +9893,8 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Cavalry Hammer" hidden="false" id="7c74-3e61-9a55-53e0" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee9e-9f6b-a4c0-01a7"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee9e-9f6b-a4c0-01a7" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="bf5d-e983-f677-53d6" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
         <infoLink name="Cavalry Hammer" id="ef4b-3bb6-a3b4-7403" hidden="false" type="profile" targetId="64bd-6fe2-b07b-5e04"/>
@@ -10646,25 +10791,13 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
         <entryLink id="939c-3cc7-8923-7aed" name="Common Magic Standards" hidden="false" collective="false" import="true" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="91" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="75. Knightly Orders" id="8d18-9730-7685-8bec" hidden="false" collapsible="true">
+    <selectionEntryGroup name="11. Knightly Orders" id="8d18-9730-7685-8bec" hidden="false" collapsible="true">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Reiksguard Knights" hidden="false" id="fcfc-1847-4faf-81b6" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Reiksguard Knights" hidden="false" id="fcfc-1847-4faf-81b6" collective="true" sortIndex="1">
           <infoLinks>
             <infoLink name="Stubborn" id="5ac9-1b2c-28ca-6bb6" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
           </infoLinks>
           <modifiers>
-            <modifier type="add" value="Must take heavy lances or polearms if mounted." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="0548-4aeb-a60c-b378" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="fcfc-1847-4faf-81b6" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
             <modifier type="set" value="1" field="points">
               <conditionGroups>
                 <conditionGroup type="or">
@@ -10706,8 +10839,20 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
           <constraints>
             <constraint type="min" value="0" field="selections" scope="force" shared="true" id="69b3-9729-8c85-bb5d" includeChildSelections="true"/>
           </constraints>
+          <rules>
+            <rule name="Reiksguard Knights" id="e76a-22fc-d21a-2606" hidden="false">
+              <description>Must take heavy lances or polearms if mounted. The models have the Stubborn special rule. However, they may not take a regular Grand Master.</description>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="fcfc-1847-4faf-81b6" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </rule>
+          </rules>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Knights of the Blazing Sun" hidden="false" id="130c-3ba2-f0bb-8df7" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Knights of the Blazing Sun" hidden="false" id="130c-3ba2-f0bb-8df7" collective="true" sortIndex="2">
           <modifiers>
             <modifier type="set" value="1" field="points">
               <conditionGroups>
@@ -10723,36 +10868,10 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
                 <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="8ab3-de65-ec9d-09ba" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="add" value="Model must be mounted." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="130c-3ba2-f0bb-8df7" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must take heavy lance or polearm." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="130c-3ba2-f0bb-8df7" shared="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="0548-4aeb-a60c-b378" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
             <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
+              </conditions>
             </modifier>
             <modifier type="set" value="2" field="0d73-9f5d-8085-55dd">
               <conditionGroups>
@@ -10774,17 +10893,6 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="add" value="Model must take shield" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="130c-3ba2-f0bb-8df7" shared="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="c068-0827-9931-d9bf" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
           </modifiers>
           <rules>
             <rule name="Knights of the Blazing Sun" id="c2c8-efff-27bd-b40e" hidden="false">
@@ -10793,27 +10901,28 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
           </rules>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="force" shared="true" id="0d73-9f5d-8085-55dd" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f48c-d015-c09d-0e10" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f3d-3a94-9fc8-0077" includeChildSelections="false"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="1f3d-3a94-9fc8-0077"/>
+                <modifier type="set" value="Only Cavalry and Monstrous Cavalry" field="annotation"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Knights Panther" hidden="false" id="dc9f-a022-e771-d648" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Knights Panther" hidden="false" id="dc9f-a022-e771-d648" collective="true" sortIndex="3">
           <modifiers>
             <modifier type="set" value="1" field="points">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="2e50-5817-ab5a-4b67" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must take heavy lances or polearms." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="dc9f-a022-e771-d648" shared="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="0548-4aeb-a60c-b378" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10866,21 +10975,23 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
           </rules>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="force" shared="true" id="c97c-36da-08b9-411f" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e8c2-77cd-fbb8-4a73" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1e40-f73e-8fae-c373" includeChildSelections="false"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="1e40-f73e-8fae-c373"/>
+                <modifier type="set" value="Only Cavalry" field="annotation"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Knights of the White Wolf" hidden="false" id="62b0-1c10-9c20-ea9b" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Knights of the White Wolf" hidden="false" id="62b0-1c10-9c20-ea9b" collective="true" sortIndex="4">
           <modifiers>
-            <modifier type="add" value="Model must take a cavalry hammer." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="62b0-1c10-9c20-ea9b" shared="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="7c74-3e61-9a55-53e0" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
             <modifier type="set" value="1" field="points">
               <conditionGroups>
                 <conditionGroup type="or">
@@ -10945,24 +11056,12 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
             </infoLink>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Black Guard of Morr" hidden="false" id="904c-2169-490f-0b91" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Black Guard of Morr" hidden="false" id="904c-2169-490f-0b91" collective="true" sortIndex="5">
           <infoLinks>
             <infoLink name="Fear" id="c247-d869-8318-0947" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
             <infoLink name="Loner" id="caa0-d631-0b4a-eedd" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
           </infoLinks>
           <modifiers>
-            <modifier type="add" value="Model must take polearm when on foot." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="904c-2169-490f-0b91" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
             <modifier type="set" value="1" field="points">
               <conditionGroups>
                 <conditionGroup type="or">
@@ -11001,37 +11100,28 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
           </modifiers>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="force" shared="true" id="5874-12f0-0d0d-2c91" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="dacd-4750-23ea-974a" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f25c-c350-3bbc-4cb2" includeChildSelections="false"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c20e-0cc6-b847-c2ad" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="f25c-c350-3bbc-4cb2"/>
+                <modifier type="set" value="Only Infantry and Cavalry" field="annotation"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Knights Griffon" hidden="false" id="4904-0eb6-8fcf-d2dc" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Knights Griffon" hidden="false" id="4904-0eb6-8fcf-d2dc" collective="true" sortIndex="6">
           <modifiers>
             <modifier type="set" value="1" field="points">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="2e50-5817-ab5a-4b67" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must be mounted." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="4904-0eb6-8fcf-d2dc" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must take heavy lance or polearm." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="4904-0eb6-8fcf-d2dc" shared="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="0548-4aeb-a60c-b378" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11078,9 +11168,22 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
           </rules>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="force" shared="true" id="00e9-f27b-47a6-b531" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9bcc-ac8b-22ab-1375" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a231-5a39-7e53-5a8f" includeChildSelections="false"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="a231-5a39-7e53-5a8f"/>
+                <modifier type="set" value="Only Cavalry and Monstrous Cavalry" field="annotation"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Knights of the Everlasting Light" hidden="false" id="af6c-f51b-1aa6-0908" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Knights of the Everlasting Light" hidden="false" id="af6c-f51b-1aa6-0908" collective="true" sortIndex="7">
           <modifiers>
             <modifier type="set" value="1" field="points">
               <conditionGroups>
@@ -11105,30 +11208,8 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="8ab3-de65-ec9d-09ba" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="8ab3-de65-ec9d-09ba" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must ride a Warhorse." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="af6c-f51b-1aa6-0908" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must take heavy lance or great weapons." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="af6c-f51b-1aa6-0908" shared="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="0548-4aeb-a60c-b378" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11161,58 +11242,28 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
           </rules>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="force" shared="true" id="a5c2-09e6-46ad-e995" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="95f9-87ae-83fb-3c0e" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ca10-5369-513f-f75e" includeChildSelections="false"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="ca10-5369-513f-f75e"/>
+                <modifier type="set" value="Only Cavalry" field="annotation"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Knights of Sigmar&apos;s Blood" hidden="false" id="eb60-252d-b9ad-9269" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Knights of Sigmar&apos;s Blood" hidden="false" id="eb60-252d-b9ad-9269" collective="true" sortIndex="8">
           <modifiers>
             <modifier type="set" value="1" field="points">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="2e50-5817-ab5a-4b67" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="8ab3-de65-ec9d-09ba" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="{this} may not be upgraded to Inner Circle Knights" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="eb60-252d-b9ad-9269" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="7ceb-7056-7698-163a" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must ride a Warhorse." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="eb60-252d-b9ad-9269" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must take heavy lance or polearm." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="eb60-252d-b9ad-9269" shared="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="0548-4aeb-a60c-b378" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11237,44 +11288,54 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="8ab3-de65-ec9d-09ba" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <infoLinks>
             <infoLink name="Inspiring Presence (6)" id="e3ee-3e4e-1cac-0511" hidden="false" type="rule" targetId="7687-32b8-13f1-97b4"/>
           </infoLinks>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="force" shared="true" id="e9d6-df39-7c04-7666" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a77d-5cbd-cc3b-c171" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11ed-22e6-71c7-c671" includeChildSelections="false"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="11ed-22e6-71c7-c671"/>
+                <modifier type="set" value="Only Cavalry" field="annotation"/>
+              </modifiers>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="a0b3-5670-39e0-ebd6" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="11ed-22e6-71c7-c671"/>
+                <modifier type="set" value="Not allowed for Inner Circle Knights" field="annotation"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Knights of the Black Bear" hidden="false" id="c75f-f113-7acd-4a7e" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Knights of the Black Bear" hidden="false" id="c75f-f113-7acd-4a7e" collective="true" sortIndex="9">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="8ab3-de65-ec9d-09ba" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="8ab3-de65-ec9d-09ba" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must ride a Warhorse." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="c75f-f113-7acd-4a7e" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must take heavy lance or polearm." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="c75f-f113-7acd-4a7e" shared="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="0548-4aeb-a60c-b378" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11307,9 +11368,22 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
           </rules>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="force" shared="true" id="4b23-8b4b-4478-4499" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8113-4531-7d27-c49b" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c483-d254-7f62-4be1" includeChildSelections="false"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="c483-d254-7f62-4be1"/>
+                <modifier type="set" value="Only Cavalry" field="annotation"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Knights of the Twin-Tailed Orb" hidden="false" id="cd78-9066-2028-a361" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Knights of the Twin-Tailed Orb" hidden="false" id="cd78-9066-2028-a361" collective="true" sortIndex="10">
           <modifiers>
             <modifier type="set" value="2" field="points">
               <conditionGroups>
@@ -11334,29 +11408,8 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="8ab3-de65-ec9d-09ba" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="8ab3-de65-ec9d-09ba" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must ride a Warhorse." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="cd78-9066-2028-a361" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must take a flail." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="d509-46a8-2dc7-0eb9" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="cd78-9066-2028-a361" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11388,9 +11441,22 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
           </infoLinks>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="force" shared="true" id="2670-90fc-e606-69d4" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="2dc1-2a47-4186-0d82" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="72f9-d37e-9cad-7306" includeChildSelections="false"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="72f9-d37e-9cad-7306"/>
+                <modifier type="set" value="Only Cavalry" field="annotation"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Knights Encarmine" hidden="false" id="9f0a-402e-84b7-7a2a" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Knights Encarmine" hidden="false" id="9f0a-402e-84b7-7a2a" collective="true" sortIndex="11">
           <modifiers>
             <modifier type="set" value="10" field="points">
               <conditionGroups>
@@ -11406,29 +11472,8 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="8ab3-de65-ec9d-09ba" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="8ab3-de65-ec9d-09ba" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must ride a Warhorse." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="9f0a-402e-84b7-7a2a" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must take two hand weapons." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="9f0a-402e-84b7-7a2a" shared="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="7617-f4b5-02ac-3d15" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11453,7 +11498,7 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="false" field="hidden" affects="self.entries.recursive.profiles.Ward Saves" scope="root-entry"/>
+            <modifier type="set" value="false" field="hidden" affects="self.entries.recursive.7617-f4b5-02ac-3d15.profiles.Ward Saves" scope="root-entry"/>
           </modifiers>
           <rules>
             <rule name="Knights Encarmine" id="52ec-699d-6354-affe" hidden="false">
@@ -11462,9 +11507,22 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
           </rules>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="force" shared="true" id="2546-b3ae-8b53-6f71" includeChildSelections="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c8a9-58ee-6db8-22c3" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79c2-ec39-24a5-7f00" includeChildSelections="false"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="79c2-ec39-24a5-7f00"/>
+                <modifier type="set" value="Only Cavalry" field="annotation"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Sons of Manann" hidden="false" id="82c1-00a7-80d9-fa3a" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Sons of Manann" hidden="false" id="82c1-00a7-80d9-fa3a" collective="true" sortIndex="12">
           <modifiers>
             <modifier type="set" value="15" field="points">
               <conditionGroups>
@@ -11480,18 +11538,8 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="unit" childId="8ab3-de65-ec9d-09ba" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="8ab3-de65-ec9d-09ba" shared="true"/>
                     <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="add" value="Model must ride a Warhorse." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="82c1-00a7-80d9-fa3a" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11505,68 +11553,41 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="add" value="Model must take a polearm and a shield." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="82c1-00a7-80d9-fa3a" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="c068-0827-9931-d9bf" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
           </modifiers>
           <rules>
             <rule name="Sons of Manann" id="4887-9606-3701-5c17" hidden="false">
               <description>The models (but not their mounts) gain +1 To Hit in the first round of close combat.</description>
             </rule>
           </rules>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e9ad-be24-8f61-6014" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0541-13a3-005d-e482" includeChildSelections="false"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="0541-13a3-005d-e482"/>
+                <modifier type="set" value="Only Cavalry" field="annotation"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Knights of the Black Lynx" hidden="true" id="0d1b-341f-fc90-6399" collective="true">
+        <selectionEntry type="upgrade" import="true" name="Knights of the Black Lynx" hidden="false" id="0d1b-341f-fc90-6399" collective="true" sortIndex="13">
           <infoLinks>
             <infoLink name="Ambushers" id="18ac-7824-a237-ea23" hidden="false" type="rule" targetId="f366-0f91-841f-cf80"/>
           </infoLinks>
           <modifiers>
-            <modifier type="add" value="Must take heavy lances or polearms if mounted." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="0d1b-341f-fc90-6399" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="points">
+            <modifier type="set" value="1" field="points"/>
+            <modifier type="set" value="true" field="hidden">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="73d0-0699-09f7-1dc2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
                   </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="force" childId="73d0-0699-09f7-1dc2" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a28b-1d80-00f0-5b5f" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
@@ -14106,6 +14127,18 @@ Attacks and Immunity (Flaming Attacks) special rules.</characteristic>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="e537-0cb1-14a9-2687" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="Inner Circle" field="annotation" scope="root-entry" affects="recursive"/>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="3a60-e57a-9cf2-54b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4f5e-7e79-d329-bb9d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="e537-0cb1-14a9-2687" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Core Unit" hidden="false" id="692b-e6a7-a1b3-63a1">
@@ -14121,6 +14154,17 @@ Attacks and Immunity (Flaming Attacks) special rules.</characteristic>
                 <repeat value="1" repeats="1" field="selections" scope="force" childId="e537-0cb1-14a9-2687" shared="true" roundUp="false" includeChildSelections="true"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="3a60-e57a-9cf2-54b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4f5e-7e79-d329-bb9d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="e537-0cb1-14a9-2687" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
           <modifierGroups>
             <modifierGroup type="and">
@@ -14132,19 +14176,22 @@ Attacks and Immunity (Flaming Attacks) special rules.</characteristic>
           </modifierGroups>
         </selectionEntry>
       </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
+    </selectionEntryGroup>
+    <selectionEntryGroup name="10. Character Options" id="f9ae-d1b2-440f-08b3" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="a4c0-52e8-fc01-5f51" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1">
+          <modifiers>
+            <modifier type="set" value="0" field="7ba8-ad6a-3340-d09e">
               <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="3a60-e57a-9cf2-54b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="4f5e-7e79-d329-bb9d" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="e537-0cb1-14a9-2687" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="904c-2169-490f-0b91" shared="true" includeChildSelections="true"/>
               </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9202-0b92-fd4d-c6ad" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
