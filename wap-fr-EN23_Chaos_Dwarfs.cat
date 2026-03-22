@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a833-bc85-ca8c-442d" name="Chaos Dwarfs WAP 1.73" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="14" authorContact="xetolosch" authorName="contact via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a833-bc85-ca8c-442d" name="Chaos Dwarfs WAP 1.74" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="14" authorContact="xetolosch" authorName="contact via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Cowarldy Despoilers" id="8536-b279-7c0d-a0cb" hidden="false">
       <description>Models with this special rule gain +1 To Hit in the first round of combat if they successfully charge an enemy in the rear or flank.</description>
@@ -2091,6 +2091,7 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fbe7-9239-7d15-8eda" includeChildSelections="false"/>
                 <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="07f3-995f-9a31-9f64" includeChildSelections="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9748-96ff-b81f-6aa4" includeChildSelections="false"/>
               </constraints>
               <modifiers>
                 <modifier type="increment" value="1" field="07f3-995f-9a31-9f64">
@@ -2099,7 +2100,7 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
                     <repeat value="1" repeats="1" field="selections" scope="roster" childId="3bd0-3117-7b30-5250" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
                   </repeats>
                 </modifier>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="fbe7-9239-7d15-8eda">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -2139,11 +2140,6 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
               <entryLinks>
                 <entryLink import="true" name="Medium Armour" hidden="false" id="6fbe-e704-affc-9fa7" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1">
                   <modifiers>
-                    <modifier type="set" value="1" field="80f0-b5fd-ae36-4ab6">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="926f-a6d3-9b67-3b03" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
                     <modifier type="set" value="0" field="aaab-a191-d887-0e14">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="926f-a6d3-9b67-3b03" shared="true" includeChildSelections="true"/>
@@ -2159,21 +2155,6 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
                     <modifier type="set" value="0" field="409c-38d4-353b-134c">
                       <conditions>
                         <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="926f-a6d3-9b67-3b03" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="9871-81c3-ad39-9a0a" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                            <condition type="lessThan" value="1" field="selections" scope="roster" childId="3bd0-3117-7b30-5250" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                    <modifier type="set" value="1" field="f545-22ba-a47b-8ec5">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="926f-a6d3-9b67-3b03" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -2444,7 +2425,7 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Cutthroat" hidden="false" id="108f-6ba4-1059-4df4" sortIndex="1">
           <costs>
-            <cost name="pts" typeId="points" value="3"/>
+            <cost name="pts" typeId="points" value="3.5"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="50. Handheld Armour" hidden="false" id="1a0c-e63f-4649-b2a0" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
@@ -2502,43 +2483,7 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Bow" hidden="false" id="1cc2-d4d7-efd7-418d" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="4">
-                  <costs>
-                    <cost name="pts" typeId="points" value="2"/>
-                  </costs>
-                  <modifiers>
-                    <modifier type="set" value="Replace Shields" field="annotation">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="94ec-8421-59ea-a9d0" shared="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Shortbow" hidden="false" id="6d70-7864-f62d-a9d1" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="3">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                  <modifiers>
-                    <modifier type="set" value="Replace Shields" field="annotation">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="6d70-7864-f62d-a9d1" shared="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
               </entryLinks>
-              <modifiers>
-                <modifier type="set" value="2" field="fe22-ce5f-b23e-303d">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="b2c6-18cc-9482-8f48" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="94ec-8421-59ea-a9d0" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
             </entryLink>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="be82-3840-ed0a-8a71" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
               <entryLinks>
@@ -2591,7 +2536,7 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
         <categoryLink name="Hobgoblin" hidden="false" id="bd2d-4ee4-4d7d-4e15" targetId="aec6-79a1-d385-1c43" primary="false"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Hobgoblin Archers" hidden="false" id="3e30-f3bf-3eae-20f5" sortIndex="104">
+    <selectionEntry type="unit" import="true" name="Archers" hidden="false" id="3e30-f3bf-3eae-20f5" sortIndex="104">
       <categoryLinks>
         <categoryLink name="Core" hidden="false" id="ce86-b156-9ee7-9368" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="e728-c799-a4b0-6fdd" targetId="22c9-1606-58f8-2e60" primary="false"/>
@@ -2644,24 +2589,15 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
         </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Hobgoblin Archer" hidden="false" id="6038-306c-e59c-7314" sortIndex="1">
+        <selectionEntry type="model" import="true" name="Archer" hidden="false" id="6038-306c-e59c-7314" sortIndex="1">
           <costs>
-            <cost name="pts" typeId="points" value="4"/>
+            <cost name="pts" typeId="points" value="4.5"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0281-cbde-3e71-5601" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Shortbow" hidden="false" id="7e73-22b6-5097-8709" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="1"/>
                 <entryLink import="true" name="Bow" hidden="false" id="cd04-8fcd-6107-8ed7" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="5df9-df45-d949-c0bb" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
-              <entryLinks>
-                <entryLink import="true" name="Throwing Weapons" hidden="false" id="d645-34c7-bfc8-922c" type="selectionEntry" targetId="8013-6f6f-96e1-1acc">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
@@ -2679,10 +2615,10 @@ If the enemy unit is Hit, it suffers D3 Strength 3 Hits. However if a &apos;1&a
             </entryLink>
           </entryLinks>
           <constraints>
-            <constraint type="min" value="20" field="selections" scope="parent" shared="true" id="6d1e-4f62-01c7-d851"/>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="6d1e-4f62-01c7-d851"/>
           </constraints>
           <profiles>
-            <profile name="Hobgoblin Archer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ef81-a4ca-017b-ab46">
+            <profile name="Archer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ef81-a4ca-017b-ab46">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -6403,7 +6339,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
         <infoLink name="2 We&apos;ll get a better view from further back!" id="b8b8-0f7b-7230-ff23" hidden="false" type="profile" targetId="5f09-4f48-58a5-1b9b"/>
         <infoLink name="3-4 We Stayz &apos;Ere!" id="2a5f-4b16-ce62-da30" hidden="false" type="profile" targetId="c2fb-c9da-a1d7-f745"/>
         <infoLink name="5 Bloody Murder!" id="1289-ea88-60e6-c0d9" hidden="false" type="profile" targetId="fd4b-ceea-1463-a6ca"/>
-        <infoLink name="6 Hiiyaaarrghh!" id="87c7-355f-dd5d-0928" hidden="false" type="profile" targetId="a093-50e8-9977-d990"/>
+        <infoLink name="6 Cut &apos;em good!" id="87c7-355f-dd5d-0928" hidden="false" type="profile" targetId="a093-50e8-9977-d990"/>
       </infoLinks>
     </infoGroup>
     <infoGroup name="Animosity" id="ae03-7425-cef0-c209" hidden="false">
