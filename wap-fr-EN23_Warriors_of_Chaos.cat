@@ -1623,11 +1623,6 @@
           <infoLinks>
             <infoLink id="31a3-c043-bdcb-a8ec" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
             <infoLink name="Chaos Armour" id="0b57-5c33-d0a3-6bb2" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
-            <infoLink name="Mark of Nurgle" id="df42-5732-e378-17ce" hidden="false" type="rule" targetId="Mark of Nurgle">
-              <modifiers>
-                <modifier type="set" value="included in profile" field="annotation"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="34"/>
@@ -1670,6 +1665,21 @@
               </entryLinks>
             </entryLink>
           </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="10. Mark of Chaos" id="9b3c-68c5-0f38-0361" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Mark of Nurgle" hidden="false" id="d52d-4cad-238b-a4f4" type="selectionEntry" targetId="fce4-1eaa-170d-634c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cc2c-d13f-867f-a4be"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f58f-bbed-30a8-dd3b"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="included in profile" field="annotation" affects="rules"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1840,7 +1850,7 @@
                 </entryLink>
               </entryLinks>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="81ed-04bf-e855-c76e" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="81ed-04bf-e855-c76e" includeChildSelections="false" automatic="true"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -2253,7 +2263,7 @@
           <selectionEntryGroups>
             <selectionEntryGroup name="Mark of Chaos" id="3f0d-4217-94a9-f966" hidden="false">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Skin Wolves of Khorne" hidden="false" id="73a5-56b5-9df0-a0fc" collective="true">
+                <selectionEntry type="upgrade" import="true" name="Skin Wolves of Khorne" hidden="false" id="73a5-56b5-9df0-a0fc" collective="true" sortIndex="1">
                   <rules>
                     <rule name="Skin Wolves of Khorne" id="87d6-ac3e-2d77-d314" hidden="false">
                       <description>The model gains the Mighty Blow (1) special rule when charging.</description>
@@ -2263,7 +2273,7 @@
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Skin Wolves of Tzeentch" hidden="false" id="c4ad-cc86-a2bb-06ec" collective="true">
+                <selectionEntry type="upgrade" import="true" name="Skin Wolves of Tzeentch" hidden="false" id="c4ad-cc86-a2bb-06ec" collective="true" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="4.5"/>
                   </costs>
@@ -2276,7 +2286,7 @@
                     </infoLink>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Skin Wolves of Slaanesh" hidden="false" id="d646-f68d-dbd1-112d" collective="true">
+                <selectionEntry type="upgrade" import="true" name="Skin Wolves of Slaanesh" hidden="false" id="d646-f68d-dbd1-112d" collective="true" sortIndex="2">
                   <rules>
                     <rule name="Skin Wolves of Slaanesh" id="2c8a-0654-4806-66a9" hidden="false">
                       <description>The model gains gain the Always Strikes First special rule.</description>
@@ -2286,7 +2296,7 @@
                     <cost name="pts" typeId="points" value="4.5"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Skin Wolves of Nurgle" hidden="false" id="3ba9-124b-a224-033a" collective="true">
+                <selectionEntry type="upgrade" import="true" name="Skin Wolves of Nurgle" hidden="false" id="3ba9-124b-a224-033a" collective="true" sortIndex="4">
                   <rules>
                     <rule name="Skin Wolves of Nurgle" id="28a7-e294-313d-38d5" hidden="false">
                       <description>The model gains the Poisoned Attacks special rule.</description>
@@ -2395,7 +2405,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="pts" typeId="points" value="27"/>
+            <cost name="pts" typeId="points" value="30"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="3d5f-eade-25a8-a486" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
@@ -2698,7 +2708,7 @@
             </entryLink>
             <entryLink import="true" name="70. Mount" hidden="false" id="4950-9242-ff3d-1522" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6e76-49c1-fa8c-5398" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6e76-49c1-fa8c-5398" includeChildSelections="false" automatic="true"/>
               </constraints>
               <entryLinks>
                 <entryLink import="true" name="Juggernaut of Khorne" hidden="false" id="c941-508d-bffb-5855" type="selectionEntry" targetId="4c0a-27d1-5a06-bbe8">
@@ -2931,11 +2941,6 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
           <infoLinks>
             <infoLink id="5732-d402-4ead-c0da" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
             <infoLink name="Chaos Armour" id="295c-7b66-fafc-535e" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
-            <infoLink name="Mark of Nurgle" id="fd4e-9c02-102e-b8c0" hidden="false" type="rule" targetId="Mark of Nurgle">
-              <modifiers>
-                <modifier type="set" value="included in profile" field="annotation"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="66"/>
@@ -2984,14 +2989,31 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
             <entryLink import="true" name="70. Mount" hidden="false" id="64e4-9b3f-1960-3ee9" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
                 <entryLink import="true" name="Rot Fly of Nurgle" hidden="false" id="9f66-3528-21f2-272c" type="selectionEntry" targetId="3b62-252e-721b-1425">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a84f-d397-34cd-9f3a-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a84f-d397-34cd-9f3a-max"/>
-                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="0a30-ff56-151b-ac36"/>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ef2e-9a20-49f2-aa3d" automatic="true"/>
+              </constraints>
             </entryLink>
           </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="10. Mark of Chaos" id="99d0-9e20-9e25-1a13" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Mark of Nurgle" hidden="false" id="ce93-2799-92b1-d8fd" type="selectionEntry" targetId="fce4-1eaa-170d-634c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ba97-4b9f-a7de-fb6a"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b77c-6259-ab12-5910"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="included in profile" field="annotation" affects="rules"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -3640,11 +3662,6 @@ Use the Big Things Chart when fighting Monsters, Monstrous Creatures, Monstrous 
             <infoLink id="5b54-46c5-a902-62d0" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
             <infoLink name="Eye of the Gods" id="9d1c-3219-37b7-375f" hidden="false" type="rule" targetId="b167-39dc-6abe-179d"/>
             <infoLink name="Chaos Armour" id="689e-d7ed-7228-71fe" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
-            <infoLink name="Mark of Nurgle" id="e3cb-748c-45a4-050c" hidden="false" type="rule" targetId="Mark of Nurgle">
-              <modifiers>
-                <modifier type="set" value="included in profile" field="annotation"/>
-              </modifiers>
-            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="80"/>
@@ -3653,12 +3670,14 @@ Use the Big Things Chart when fighting Monsters, Monstrous Creatures, Monstrous 
             <entryLink import="true" name="70. Mount" hidden="false" id="fe55-21a1-6cb1-311e" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
                 <entryLink import="true" name="Rot Beast of Nurgle" hidden="false" id="b824-4a5d-30d0-a1e7" type="selectionEntry" targetId="114c-1ea0-c4d4-b734">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="883c-e90f-ff61-fb15-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="883c-e90f-ff61-fb15-max"/>
-                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="8dd1-bf2f-7cf8-ef74"/>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="638d-f976-2ada-5806" automatic="true"/>
+              </constraints>
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d9bf-d922-d1ee-3c3b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
@@ -3715,6 +3734,21 @@ Use the Big Things Chart when fighting Monsters, Monstrous Creatures, Monstrous 
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="10. Mark of Chaos" id="a467-067c-2007-b0b5" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Mark of Nurgle" hidden="false" id="9c9b-ec81-ac60-8fe9" type="selectionEntry" targetId="fce4-1eaa-170d-634c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c57f-9431-2d70-a2d7"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a39f-9b56-2370-f095"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="included in profile" field="annotation" affects="rules"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -5197,7 +5231,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">If an enemy character or monster is slain by the Sword of Change in close combat, roll a D6. On the roll of a 4+, the model is transformed into a Spawn of Chaos under the control of the owner of the Sword of Change. Place the model within 1&quot; of Mordrek. However, it is not worth any additional Victory Points. . If no Spawn model can be placed, the model is only removed as a casualty.</characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">If an enemy character or monster is slain by the Sword of Change in close combat, roll a D6. On the roll of a 4+, the model is transformed into a Spawn of Chaos under the control of the owner of the Sword of Change. Place the model within 1&quot; of Mordrek. However, it is not worth any additional Victory Points. If no Spawn model can be placed, the model is only removed as a casualty.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -8014,6 +8048,10 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                           </characteristics>
                         </profile>
                       </profiles>
+                      <categoryLinks>
+                        <categoryLink name="Monstrous Cavalry" hidden="false" id="1bc7-75b4-8e58-384d" targetId="82d3-4589-72b4-b6ed" primary="false"/>
+                        <categoryLink name="Mount" hidden="false" id="7723-0ad5-3c7e-ad14" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+                      </categoryLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -8791,7 +8829,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <entryLink import="true" name="11. Mark of Chaos" hidden="false" id="f92d-be4b-4a99-27fa" type="selectionEntryGroup" targetId="8c79-49e5-07fa-a8c0"/>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="215"/>
+        <cost name="pts" typeId="points" value="200"/>
       </costs>
       <categoryLinks>
         <categoryLink targetId="d280-b7df-c185-2ba5" id="fa18-0f49-3802-c454" primary="true" name="Lords"/>
@@ -8813,7 +8851,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
             <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
           </characteristics>
@@ -9060,7 +9098,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         </entryLink>
         <entryLink import="true" name="70. Mount" hidden="false" id="332a-aa10-de05-1959" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
-            <entryLink import="true" name="Warsteed" hidden="false" id="2940-1e58-b931-1f3e" type="selectionEntry" targetId="b00b-4a51-ae10-9998" sortIndex="1">
+            <entryLink import="true" name="Warsteed" hidden="false" id="2940-1e58-b931-1f3e" type="selectionEntry" targetId="b00b-4a51-ae10-9998" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="16"/>
               </costs>
@@ -9072,17 +9110,17 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Palanquin of Nurgle" hidden="false" id="896f-5afd-fa71-7d02" type="selectionEntry" targetId="8fe2-5f5f-dea0-6be0" sortIndex="2">
+            <entryLink import="true" name="Palanquin of Nurgle" hidden="false" id="896f-5afd-fa71-7d02" type="selectionEntry" targetId="8fe2-5f5f-dea0-6be0" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="32"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Steed of Slaanesh" hidden="false" id="e5e4-635b-b940-fff2" type="selectionEntry" targetId="57f0-0301-2544-4b78" sortIndex="3">
+            <entryLink import="true" name="Steed of Slaanesh" hidden="false" id="e5e4-635b-b940-fff2" type="selectionEntry" targetId="57f0-0301-2544-4b78" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="16"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Daemonic Steed" hidden="false" id="4f98-0049-8a6a-e19d" type="selectionEntry" targetId="53de-7f63-b47a-4c2d" sortIndex="4">
+            <entryLink import="true" name="Daemonic Steed" hidden="false" id="4f98-0049-8a6a-e19d" type="selectionEntry" targetId="53de-7f63-b47a-4c2d" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="24"/>
               </costs>
@@ -9094,12 +9132,12 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Rot Fly of Nurgle" hidden="false" id="9433-c224-ad51-50b4" type="selectionEntry" targetId="3b62-252e-721b-1425" sortIndex="5">
+            <entryLink import="true" name="Rot Fly of Nurgle" hidden="false" id="9433-c224-ad51-50b4" type="selectionEntry" targetId="3b62-252e-721b-1425" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="26"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Disc of Tzeentch" hidden="false" id="428f-bc6c-18a8-a84d" type="selectionEntry" targetId="628a-55ba-92d7-a406" sortIndex="6">
+            <entryLink import="true" name="Disc of Tzeentch" hidden="false" id="428f-bc6c-18a8-a84d" type="selectionEntry" targetId="628a-55ba-92d7-a406" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="28"/>
               </costs>
@@ -10666,7 +10704,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <categoryLink name="Monstrous Cavalry" hidden="false" id="98e3-aee9-f9c9-a9bd" targetId="82d3-4589-72b4-b6ed" primary="false"/>
       </categoryLinks>
       <constraints>
-        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8dd1-bf2f-7cf8-ef74" includeChildSelections="false"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8dd1-bf2f-7cf8-ef74" includeChildSelections="false" automatic="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2c56-b030-cbd5-60f3" includeChildSelections="false" automatic="true"/>
       </constraints>
     </selectionEntry>
@@ -16336,6 +16374,7 @@ If no eligible model is available or the possession attack fails, Tamurkhan is k
             <condition type="atLeast" value="1" field="selections" scope="parent" childId="0f14-68a2-5363-23df" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="true" field="hidden" affects="recursive.profiles.Armour"/>
       </modifiers>
     </entryLink>
     <entryLink import="true" name="Warhounds" hidden="false" id="a756-ee58-69e6-b792" type="selectionEntry" targetId="8cdb-f7a0-9ebc-1109" sortIndex="12"/>
