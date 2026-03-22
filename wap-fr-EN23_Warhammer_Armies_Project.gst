@@ -5626,7 +5626,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move suffer a Strength D6+1 hit (roll once for each unit and apply the result to all models in that unit) with the Flaming Attacks special rule.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move suffers a Strength D6+1 hit (roll once for each unit and apply the result to all models in that unit) with the Flaming Attacks special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6055,7 +6055,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template with the centre anywhere within this range; it scatters like a stone thrower. If a misfire is rolled, the caster suffers 1 Wound with the Ignores Armour Saves special rule. Any model hit suffer a Strength 1 Hit with the Ignores Armour Saves special rule.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template with the centre anywhere within this range; it scatters like a stone thrower. If a misfire is rolled, the caster suffers 1 Wound with the Ignores Armour Saves special rule. Any model hit suffers a Strength 1 Hit with the Ignores Armour Saves special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6481,7 +6481,7 @@
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 24&quot; in length, within the caster’s forward arc and directly from their base. Each model in the way (determined using the line template) suffer a Strength 4 hit with the Armour Piercing (1) special rule. Any unit that suffers a casualty from this spell may not march in its next Movement phase.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 24&quot; in length, within the caster’s forward arc and directly from their base. Each model in the way (determined using the line template) suffers a Strength 4 hit with the Armour Piercing (1) special rule. Any unit that suffers a casualty from this spell may not march in its next Movement phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6533,7 +6533,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target gains the Frenzy special rule (which is not lost if the unit is defeated in close combat) and suffer D6 Strength 3 hits at the end of each of the caster’s Magic phases.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target gains the Frenzy special rule (which is not lost if the unit is defeated in close combat) and suffers D6 Strength 3 hits at the end of each of the caster’s Magic phases.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -8686,24 +8686,16 @@ This rule is cumulative with other sources of Hold Your Ground. If the model ha
       <description>A Daemon of Tzeentch has the Hatred (Daemons of Nurgle) special rule and a 6+ Ward save. Wizards with the Daemon of Tzeentch upgrade can also re-roll channelling results of 1.</description>
     </rule>
     <rule name="Mark of Khorne" id="Mark of Khorne" hidden="false">
-      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
-
-Models with the Mark of Khorne have Frenzy.</description>
+      <description>Models with the Mark of Khorne have Frenzy.</description>
     </rule>
     <rule name="Mark of Nurgle" id="Mark of Nurgle" hidden="false">
-      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
-
-Models with the Mark of Nurgle add +1 to their T.</description>
+      <description>Models with the Mark of Nurgle add +1 to their T.</description>
     </rule>
     <rule name="Mark of Slaanesh" id="Mark of Slaanesh" hidden="false">
-      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
-
-Models with the Mark of Slaanesh have the Immunity (Psychology) special rule and may re-roll the lowest dice on their charge and pursuit distances.</description>
+      <description>Models with the Mark of Slaanesh have the Immunity (Psychology) special rule and may re-roll the lowest dice on their charge and pursuit distances.</description>
     </rule>
     <rule name="Mark of Tzeentch" id="Mark of Tzeentch" hidden="false">
-      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
-
-Models with the Mark of Tzeentch have Magic Resistance (1) and Ward Save (6+).</description>
+      <description>Models with the Mark of Tzeentch have Magic Resistance (1) and Ward Save (6+).</description>
     </rule>
     <rule id="92ff-eedb-a738-a73b" name="Ponderous" hidden="false">
       <description>Weapons with this rule suffer an additional -1 To Hit penalty if they move and shoot in the same turn.</description>
