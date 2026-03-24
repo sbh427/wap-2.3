@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="caec-1f3a-3b00-d13c" name="Norsca WAP 1.2" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="90" revision="1" authorContact="contact me via discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="caec-1f3a-3b00-d13c" name="Norsca WAP 1.21" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="90" revision="1" authorContact="contact me via discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Armoury" id="0cd7-f5ea-7d52-3586" targetId="522e-5e2a-d54c-4959"/>
   </catalogueLinks>
   <sharedRules>
     <rule name="Blood Rage" id="c41f-d1ee-2236-6359" hidden="false">
-      <description>Whenever a model with this special rule makes a successful charge (including Counter-Charge, Pursuit and Overrun), they are subject to Frenzy in the following round of close combat.</description>
+      <description>Whenever a model with this special rule makes a successful charge (including Counter-charge, Pursuit and Overrun), they are subject to Frenzy in the following round of close combat.</description>
     </rule>
-    <rule name="Counter-Charge" id="91b7-3709-a752-cceb" hidden="false">
-      <description>A unit where the majority of the models have this special rule can declare to use Counter-Charge as a charge reaction (including Frenzied units) if they are charged to the front by an enemy that is more than its Movement value away from the Norse unit. Before the enemy roll their charge distance, the Norse unit must take a Leadership test. If failed, treat the charge reaction as a Hold. If passed, the Norse unit moves 2D3&quot; forwards using the Random Movement special rule, but stopping within 1&quot; of any enemy unit. They may also use any Quick to Fire weapons they might have before they move. 
+    <rule name="Counter-charge" id="91b7-3709-a752-cceb" hidden="false">
+      <description>A unit where the majority of the models have this special rule can declare to use Counter-charge as a charge reaction (including Frenzied units) if they are charged to the front by an enemy that is more than its Movement value away from the Norse unit. Before the enemy roll their charge distance, the Norse unit must take a Leadership test. If failed, treat the charge reaction as a Hold. If passed, the Norse unit moves 2D3&quot; forwards using the Random Movement special rule, but stopping within 1&quot; of any enemy unit. They may also use any Quick to Fire weapons they might have before they move. 
 
 
 The enemy unit then rolls their charge distance and complete the charge as normal. If the charge is successful, then both units will count as charging in the ensuing combat phase. Note that a Counter-Charging unit does not get any bonuses associated with getting charged.</description>
@@ -75,6 +75,9 @@ The enemy unit then rolls their charge distance and complete the charge as norm
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="50a9-f008-a1d9-fe7f"/>
       </constraints>
+      <categoryLinks>
+        <categoryLink name="Monster" hidden="false" id="b5fc-3851-5bfd-567c" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="War Wolf Chariot" hidden="false" id="f052-2354-efeb-af48" sortIndex="2" subType="mount" collective="true">
       <infoLinks>
@@ -600,7 +603,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Tjald &amp; Sperra" hidden="false" id="9c86-0e68-e47e-da15" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Garmr &amp; Gormr" hidden="false" id="9c86-0e68-e47e-da15" sortIndex="5">
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
@@ -610,7 +613,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           <infoLinks>
             <infoLink name="Two/Additional Hand Weapons" id="8d3a-658a-2006-3a38" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
               <modifiers>
-                <modifier type="set" value="Tjald &amp; Sperra" field="annotation"/>
+                <modifier type="set" value="Garmr &amp; Gormr" field="annotation"/>
                 <modifier type="append" value="One enemy model of your choice in base contact with the wielder loses 1 Attack. In addition, a challenge issued by the wielder cannot be refused.
 " field="de63-d6da-efa8-00ac" join="
 
@@ -619,7 +622,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             </infoLink>
             <infoLink name="Two/Additional Hand Weapons" id="b1f5-6f7f-de2e-f70b" hidden="false" type="profile" targetId="48ad-587e-84ad-c237">
               <modifiers>
-                <modifier type="set" value="Tjald &amp; Sperra" field="annotation"/>
+                <modifier type="set" value="Garmr &amp; Gormr" field="annotation"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -1382,6 +1385,23 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup name="40. Suits of Armour" id="1e4d-e2e9-6f1f-7b86" hidden="false">
+          <comment>Don&apos;t link. Armour must stay selectable, if it is a mount and Character takes magic armour</comment>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Light Armour" hidden="false" id="98d3-19bc-698f-ae21" collective="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a78c-f32a-f683-8318" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e99d-b818-57e2-1598" includeChildSelections="false" automatic="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Light Armour" id="df7e-2ee4-8a1f-e1e5" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="War Wolf Chariot" id="1207-807b-459a-c5e2" hidden="false" sortIndex="102">
@@ -1401,11 +1421,8 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                 </entryLink>
                 <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="fdc6-0bd2-0170-4d65" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
                   <entryLinks>
-                    <entryLink import="true" name="Javelins" hidden="false" id="5b9c-f233-11c6-be29" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c">
-                      <modifiers>
-                        <modifier type="set" value="1" field="9748-3561-f636-ec08"/>
-                      </modifiers>
-                    </entryLink>
+                    <entryLink import="true" name="Javelins" hidden="false" id="5b9c-f233-11c6-be29" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c" sortIndex="1"/>
+                    <entryLink import="true" name="Throwing Axes" hidden="false" id="341c-6a7a-6adb-4c95" type="selectionEntry" targetId="4206-830c-785a-3707" sortIndex="2"/>
                   </entryLinks>
                 </entryLink>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="18a6-3b70-062f-45f5" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
@@ -1524,7 +1541,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
     </profileType>
   </profileTypes>
   <selectionEntries>
-    <selectionEntry type="unit" import="true" name="Reavers" hidden="false" id="fba8-3008-7152-ddc9" sortIndex="103">
+    <selectionEntry type="unit" import="true" name="Reavers" hidden="false" id="fba8-3008-7152-ddc9" sortIndex="104">
       <categoryLinks>
         <categoryLink targetId="b876-2856-f1c2-c4f0" id="977a-8c3a-e92d-9a8c" primary="true" name="Core"/>
         <categoryLink targetId="22c9-1606-58f8-2e60" id="035d-a966-287d-fe49" primary="false" name="Infantry"/>
@@ -1604,7 +1621,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Counter-Charge" id="0664-4d9a-a062-d3ae" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Counter-charge" id="0664-4d9a-a062-d3ae" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
             <infoLink name="Skirmishers" id="8668-3975-8195-8733" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
             <infoLink name="Blood Rage" id="f220-97a2-a237-d495" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
             <infoLink name="Ambushers" id="829c-1286-c384-c5f5" hidden="false" type="rule" targetId="f366-0f91-841f-cf80"/>
@@ -1654,7 +1671,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         <cost name="pts" typeId="points" value="80"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="King" hidden="false" id="d2a6-35c9-bbba-c517" sortIndex="1">
+    <selectionEntry type="model" import="true" name="Jarl" hidden="false" id="d2a6-35c9-bbba-c517" sortIndex="1">
       <categoryLinks>
         <categoryLink targetId="d280-b7df-c185-2ba5" id="247e-30d6-ffef-1e65" primary="true" name="Lords"/>
         <categoryLink targetId="d38a-73da-883b-bab9" id="91ce-2c82-86dd-46f0" primary="false" name="Heroes"/>
@@ -1669,12 +1686,13 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         <categoryLink targetId="222a-078c-ce85-fb16" id="a7e0-8762-8d40-c5fb" primary="false" name="Z Medium Armour"/>
         <categoryLink targetId="387c-2b7c-0a30-7305" id="4648-b4e3-1595-0e95" primary="false" name="Z Armour"/>
         <categoryLink targetId="0210-637d-ff12-a760" id="8955-41cc-658a-e25e" primary="false" name="Z Shield"/>
+        <categoryLink name="X Flail" hidden="false" id="e51d-f31c-b3a0-1d61" targetId="a86f-aab3-889c-0b6d" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
       </costs>
       <profiles>
-        <profile name="King" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7024-f50b-1625-42b3">
+        <profile name="Jarl" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7024-f50b-1625-42b3">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
@@ -1692,7 +1710,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
       <entryLinks>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="8eb7-0f53-a12f-c9d8" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="04ce-d65b-1e55-9431" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="5">
+            <entryLink import="true" name="Great Weapon" hidden="false" id="04ce-d65b-1e55-9431" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="12"/>
               </costs>
@@ -1711,6 +1729,11 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             <entryLink import="true" name="Light Lance" hidden="false" id="c248-cf9e-5d52-f2ea" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="4"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Flail" hidden="false" id="53e8-2d37-2374-16a3" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="5">
+              <costs>
+                <cost name="pts" typeId="points" value="8"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -1788,7 +1811,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Counter-Charge" id="de7d-31e7-383a-3e30" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+        <infoLink name="Counter-charge" id="de7d-31e7-383a-3e30" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
         <infoLink name="Blood Rage" id="49cb-2e72-7c9e-7de8" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
       </infoLinks>
     </selectionEntry>
@@ -1864,10 +1887,10 @@ The enemy unit then rolls their charge distance and complete the charge as norm
       </profiles>
       <infoLinks>
         <infoLink name="Blood Rage" id="faf4-336d-62d8-26b7" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-        <infoLink name="Counter-Charge" id="a612-cf9f-cc78-afd4" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+        <infoLink name="Counter-charge" id="a612-cf9f-cc78-afd4" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Jarl" hidden="false" id="0d2e-d511-831a-337d" sortIndex="11">
+    <selectionEntry type="model" import="true" name="Hersir" hidden="false" id="0d2e-d511-831a-337d" sortIndex="11">
       <costs>
         <cost name="pts" typeId="points" value="60"/>
       </costs>
@@ -1884,6 +1907,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         <categoryLink targetId="222a-078c-ce85-fb16" id="dafc-8c36-d06a-901e" primary="false" name="Z Medium Armour"/>
         <categoryLink targetId="387c-2b7c-0a30-7305" id="5df9-fe3b-6ee6-71ff" primary="false" name="Z Armour"/>
         <categoryLink targetId="0210-637d-ff12-a760" id="50f4-3d26-66ef-9fa8" primary="false" name="Z Shield"/>
+        <categoryLink name="X Flail" hidden="false" id="f0b3-284b-414b-65d8" targetId="a86f-aab3-889c-0b6d" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="10. Character Options" hidden="false" id="8960-4e40-c3a0-6882" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
@@ -1903,7 +1927,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c210-b37b-40ae-60e1" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="7825-7363-c164-685b" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="5">
+            <entryLink import="true" name="Great Weapon" hidden="false" id="7825-7363-c164-685b" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="9"/>
               </costs>
@@ -1922,6 +1946,11 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             <entryLink import="true" name="Light Lance" hidden="false" id="8749-1e3c-17c1-604e" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="3"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Flail" hidden="false" id="777c-f89a-c564-707d" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="5">
+              <costs>
+                <cost name="pts" typeId="points" value="6"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -1998,7 +2027,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         </entryLink>
       </entryLinks>
       <profiles>
-        <profile name="Jarl" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7611-9460-8e11-2196">
+        <profile name="Hersir" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7611-9460-8e11-2196">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
@@ -2015,7 +2044,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
       </profiles>
       <infoLinks>
         <infoLink name="Blood Rage" id="6714-32b0-315f-8d2a" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-        <infoLink name="Counter-Charge" id="c283-8715-821b-a864" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+        <infoLink name="Counter-charge" id="c283-8715-821b-a864" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Seer" hidden="false" id="dba4-5829-0aec-c108" sortIndex="12">
@@ -2086,7 +2115,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
       </profiles>
       <infoLinks>
         <infoLink name="Blood Rage" id="5249-77e8-27af-75c6" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-        <infoLink name="Counter-Charge" id="74f4-7fc3-4572-4c66" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+        <infoLink name="Counter-charge" id="74f4-7fc3-4572-4c66" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="65"/>
@@ -2192,7 +2221,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
       </profiles>
       <infoLinks>
         <infoLink name="Blood Rage" id="322a-9943-c3b7-817a" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-        <infoLink name="Counter-Charge" id="43c9-694d-384d-1306" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+        <infoLink name="Counter-charge" id="43c9-694d-384d-1306" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
         <infoLink name="Skald" id="f69e-b5ab-8e79-844e" hidden="false" type="infoGroup" targetId="be58-5d96-8209-443f"/>
         <infoLink name="Musician" id="de49-a66d-57c6-05ab" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
       </infoLinks>
@@ -2287,7 +2316,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
       <infoLinks>
         <infoLink name="Blood Rage" id="93a2-f4e0-af89-206d" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
         <infoLink name="Loner" id="11c0-748e-a225-d65d" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
-        <infoLink name="Counter-Charge" id="a773-9437-7f71-7009" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+        <infoLink name="Counter-charge" id="a773-9437-7f71-7009" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
       </infoLinks>
       <rules>
         <rule name="Beastmaster" id="7c41-e824-bb0d-cac4" hidden="false">
@@ -2346,7 +2375,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         <infoLink name="Blood Rage" id="b4e3-ecf8-4c49-d16b" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
         <infoLink name="Inspiring Presence (6)" id="39ef-74fe-16b7-7dd5" hidden="false" type="rule" targetId="7687-32b8-13f1-97b4"/>
         <infoLink name="Loner" id="2964-f4d4-b4d4-c90c" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
-        <infoLink name="Counter-Charge" id="89c7-7c1c-2e6a-dbbe" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+        <infoLink name="Counter-charge" id="89c7-7c1c-2e6a-dbbe" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
         <infoLink name="Fly (10)" id="23c9-2222-e2bc-9f4f" hidden="false" type="rule" targetId="953a-d5a4-ee81-4093"/>
         <infoLink name="Immunity (Psychology)" id="4713-16f7-3d6c-6909" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
       </infoLinks>
@@ -2375,17 +2404,6 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         <categoryLink targetId="d38a-73da-883b-bab9" id="58b3-4e7f-bbb2-8ab8" primary="true" name="Heroes"/>
         <categoryLink targetId="5fc5-b80a-115f-bca3" id="7109-6c12-43a2-b912" primary="false" name="Monstrous Infantry"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d7e1-2630-f284-0afa" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-          <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="3fc7-1ff8-0ffb-6347" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="1" field="443c-baf5-540a-c81e"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
-      </entryLinks>
       <profiles>
         <profile name="Ulfjarl" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5d0a-1065-6316-befa">
           <characteristics>
@@ -2398,13 +2416,13 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Character, Chaos Beast)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Character, Werecreature)</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Hidden" id="4c19-43f0-4715-d073" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
-        <infoLink name="Counter-Charge" id="c32d-4141-13c0-a988" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+        <infoLink name="Counter-charge" id="c32d-4141-13c0-a988" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
         <infoLink name="Frenzy" id="7bb3-38e8-03f3-7573" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
         <infoLink name="Regeneration" id="6c6e-093b-9a28-4f4d" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
           <modifiers>
@@ -2445,45 +2463,13 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="67d8-c505-fa58-703c" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="8e05-ad17-e5c8-1ebe" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="2"/>
-                <entryLink import="true" name="Bow" hidden="false" id="9eef-8bdf-3145-9b15" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="4">
-                  <costs>
-                    <cost name="pts" typeId="points" value="2"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Spear &amp; Shield" hidden="false" id="273c-5685-2524-ae1c" type="selectionEntry" targetId="aaa7-e3bd-6fea-79c2" sortIndex="3">
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="6825-7791-ed59-6551" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Spear" hidden="false" id="24f8-3184-acf1-6f15" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="6825-7791-ed59-6551" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d4a-dbf7-03f6-a94e" automatic="true"/>
-                  </constraints>
-                  <modifierGroups>
-                    <modifierGroup type="and">
-                      <modifiers>
-                        <modifier type="set" value="0" field="0e5a-c680-7fa4-685d"/>
-                        <modifier type="set" value="0" field="5d4a-dbf7-03f6-a94e"/>
-                      </modifiers>
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="9eef-8bdf-3145-9b15" shared="true"/>
-                      </conditions>
-                    </modifierGroup>
-                  </modifierGroups>
-                </entryLink>
               </entryLinks>
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="2" field="fe22-ce5f-b23e-303d"/>
-                    <modifier type="set" value="2" field="e941-9082-0af2-8b43"/>
-                  </modifiers>
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9eef-8bdf-3145-9b15" shared="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
             </entryLink>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="30f7-3413-7590-d933" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
               <entryLinks>
@@ -2500,6 +2486,15 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                   <costs>
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="4ba3-6241-f410-8e2e" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="4fdf-4c5d-28df-5684" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f648-3723-0e76-98aa" includeChildSelections="false"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -2521,10 +2516,10 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             </profile>
           </profiles>
           <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="b32a-b4c7-9d20-1b0a"/>
+            <constraint type="min" value="15" field="selections" scope="parent" shared="true" id="b32a-b4c7-9d20-1b0a"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Counter-Charge" id="99f1-5415-b0b2-1682" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Counter-charge" id="99f1-5415-b0b2-1682" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
             <infoLink name="Blood Rage" id="ae99-0a37-eeac-6f52" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
           </infoLinks>
         </selectionEntry>
@@ -2545,7 +2540,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         </entryLink>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Marauders" hidden="false" id="79e6-a3fc-6c8a-d34e" sortIndex="102">
+    <selectionEntry type="unit" import="true" name="Marauders" hidden="false" id="79e6-a3fc-6c8a-d34e" sortIndex="103">
       <categoryLinks>
         <categoryLink targetId="b876-2856-f1c2-c4f0" id="8d47-41cf-b6bc-6f42" primary="true" name="Core"/>
         <categoryLink targetId="22c9-1606-58f8-2e60" id="8e1b-3f51-ae52-67a1" primary="false" name="Infantry"/>
@@ -2672,7 +2667,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f5fb-f858-1ff7-3cc2" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="4ec6-4490-374a-a8bf" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
+                <entryLink import="true" name="Great Weapon" hidden="false" id="4ec6-4490-374a-a8bf" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="5">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
@@ -2711,6 +2706,18 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                   </costs>
                   <modifiers>
                     <modifier type="set" value="0" field="5a08-e3c6-6044-02f3">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d2fc-1856-e0dd-bc3d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Flail" hidden="false" id="cd92-a3d7-0863-1757" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="4">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="4fc2-f1e9-73bb-48d6">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d2fc-1856-e0dd-bc3d" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -2784,10 +2791,10 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           </entryLinks>
           <infoLinks>
             <infoLink name="Blood Rage" id="f4ce-ecc9-d399-a6cc" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-            <infoLink name="Counter-Charge" id="c1c1-54ac-eca9-ff13" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Counter-charge" id="c1c1-54ac-eca9-ff13" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
           </infoLinks>
           <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="6893-7300-ae1f-80ec" automatic="true"/>
+            <constraint type="min" value="15" field="selections" scope="parent" shared="true" id="6893-7300-ae1f-80ec" automatic="true"/>
           </constraints>
           <profiles>
             <profile name="Marauder" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="acfa-4fab-0f4d-b403">
@@ -2884,7 +2891,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Whalers" hidden="false" id="0177-84d8-1ac8-8985" sortIndex="104">
+    <selectionEntry type="unit" import="true" name="Whalers" hidden="false" id="0177-84d8-1ac8-8985" sortIndex="105">
       <categoryLinks>
         <categoryLink targetId="b876-2856-f1c2-c4f0" id="c064-3527-0520-a7c6" primary="true" name="Core"/>
         <categoryLink targetId="22c9-1606-58f8-2e60" id="9ff4-6ae1-c26c-03ec" primary="false" name="Infantry"/>
@@ -2947,7 +2954,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           </constraints>
           <infoLinks>
             <infoLink name="Blood Rage" id="dabb-021a-7de8-c569" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-            <infoLink name="Counter-Charge" id="51ec-9bb4-b3a7-e1f9" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Counter-charge" id="51ec-9bb4-b3a7-e1f9" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
             <infoLink name="Skirmishers" id="e7af-1067-0ccf-4144" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
           </infoLinks>
         </selectionEntry>
@@ -3001,9 +3008,14 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
+                <entryLink import="true" name="Flail" hidden="false" id="15b1-86d7-4afa-d839" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Ranged Weapons" id="ea84-1334-fc21-1bdc" hidden="false" flatten="true" sortIndex="3">
+                <selectionEntryGroup name="Ranged Weapons" id="ea84-1334-fc21-1bdc" hidden="false" flatten="true" sortIndex="4">
                   <entryLinks>
                     <entryLink import="true" name="Javelins" hidden="false" id="c3d5-ab88-69af-6475" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c" sortIndex="1">
                       <costs>
@@ -3091,12 +3103,19 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="36e4-2695-c8d8-4494" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="36e4-2695-c8d8-4494" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
               <entryLinks>
                 <entryLink import="true" name="Shield" hidden="false" id="8b98-8d9a-5697-4b55" type="selectionEntry" targetId="c068-0827-9931-d9bf">
                   <modifiers>
-                    <modifier type="set" value="1" field="3d59-dcea-ec30-dc28"/>
+                    <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d509-46a8-2dc7-0eb9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -3123,7 +3142,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           <infoLinks>
             <infoLink name="Blood Rage" id="628a-f127-8bd7-39a9" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
             <infoLink name="Fast Cavalry" id="e9a4-c44d-0295-df48" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
-            <infoLink name="Counter-Charge" id="ff41-0acf-5cdf-1d92" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Counter-charge" id="ff41-0acf-5cdf-1d92" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Warhird of Skeggi" hidden="false" id="3432-236a-aefd-a362" sortIndex="1">
@@ -3165,7 +3184,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Thralls" hidden="false" id="d746-06c5-3226-1f77" sortIndex="106">
+    <selectionEntry type="unit" import="true" name="Thralls" hidden="false" id="d746-06c5-3226-1f77" sortIndex="107">
       <categoryLinks>
         <categoryLink targetId="b876-2856-f1c2-c4f0" id="ee54-4c34-aba1-bf8f" primary="true" name="Core"/>
         <categoryLink targetId="22c9-1606-58f8-2e60" id="063d-99a3-791e-a0ae" primary="false" name="Infantry"/>
@@ -3384,7 +3403,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         <entryLink import="true" name="Expendable" hidden="false" id="28f3-9a7a-80cb-f841" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d" sortIndex="0"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="War Wolves" hidden="false" id="0a4d-ffa2-3190-dbdc" sortIndex="107">
+    <selectionEntry type="unit" import="true" name="War Wolves" hidden="false" id="0a4d-ffa2-3190-dbdc" sortIndex="108">
       <categoryLinks>
         <categoryLink targetId="b876-2856-f1c2-c4f0" id="90cd-cad5-7371-4a0d" primary="true" name="Core"/>
         <categoryLink targetId="5c5d-6944-cd09-0db8" id="bfec-9ffe-5fea-8782" primary="false" name="War Beast"/>
@@ -3392,13 +3411,13 @@ The enemy unit then rolls their charge distance and complete the charge as norm
       <selectionEntries>
         <selectionEntry type="model" import="true" name="War Wolf" hidden="false" id="f9c4-3db4-111a-5d0d">
           <costs>
-            <cost name="pts" typeId="points" value="6"/>
+            <cost name="pts" typeId="points" value="7"/>
           </costs>
           <infoLinks>
             <infoLink name="War Wolf" id="9629-f2f5-800f-2bf6" hidden="false" type="profile" targetId="b8f3-8d76-2e48-6b30"/>
           </infoLinks>
           <constraints>
-            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="364a-1ffb-9a9f-7df7"/>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="364a-1ffb-9a9f-7df7"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -3511,7 +3530,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           <infoLinks>
             <infoLink name="Stubborn" id="113d-dfed-80ad-a64d" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
             <infoLink name="Blood Rage" id="bca8-1109-9936-9b96" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-            <infoLink name="Counter-Charge" id="1876-aa98-240d-69fc" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Counter-charge" id="1876-aa98-240d-69fc" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
           </infoLinks>
           <rules>
             <rule name="Shieldwall" id="7f87-1e42-c93a-c082" hidden="false">
@@ -3598,7 +3617,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           </entryLinks>
           <infoLinks>
             <infoLink name="Frenzy" id="669f-a032-bf3a-32c9" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-            <infoLink name="Counter-Charge" id="bc57-bfe7-b752-e122" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Counter-charge" id="bc57-bfe7-b752-e122" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
             <infoLink name="Devastating Charge" id="49f5-a487-85ec-a0c4" hidden="false" type="rule" targetId="e025-10f3-f893-4bd7"/>
           </infoLinks>
         </selectionEntry>
@@ -3646,7 +3665,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             </profile>
           </profiles>
           <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="6fb1-68c2-209f-dea8"/>
+            <constraint type="min" value="15" field="selections" scope="parent" shared="true" id="6fb1-68c2-209f-dea8"/>
           </constraints>
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c0db-db47-7980-7459" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -3715,7 +3734,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Counter-Charge" id="0a65-ce08-3497-83af" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Counter-charge" id="0a65-ce08-3497-83af" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
             <infoLink name="Blood Rage" id="2121-03c9-b4d6-0d39" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
             <infoLink name="Parry" id="9e5b-f946-16f1-c0b8" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
               <modifiers>
@@ -3791,7 +3810,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           </entryLinks>
           <infoLinks>
             <infoLink name="Skirmishers" id="015c-9b0b-ddbe-fe96" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
-            <infoLink name="Counter-Charge" id="9f30-6010-c063-7231" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Counter-charge" id="9f30-6010-c063-7231" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
             <infoLink name="Blood Rage" id="fd3e-1d3d-5687-53e6" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
             <infoLink name="Scouts" id="b102-9a69-c119-5271" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
           </infoLinks>
@@ -3823,7 +3842,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                 <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
                 <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Werewolf)</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Werecreature)</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3843,7 +3862,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           </entryLinks>
           <infoLinks>
             <infoLink name="Swiftstride" id="8815-6bce-0447-08f5" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
-            <infoLink name="Counter-Charge" id="d9e6-6a5f-2288-402f" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Counter-charge" id="d9e6-6a5f-2288-402f" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
             <infoLink name="Fear" id="bb27-042a-103c-eab4" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
             <infoLink name="Frenzy" id="21d4-962c-aa4a-ee3b" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
             <infoLink name="Regeneration" id="0488-6658-dff6-5d1e" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
@@ -3894,7 +3913,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                 <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
                 <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Werewolf)</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Werecreature)</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3909,7 +3928,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               </modifiers>
             </infoLink>
             <infoLink name="Frenzy" id="8da0-4b7c-df20-e2f2" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-            <infoLink name="Counter-Charge" id="559e-b3ca-ee71-fc42" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Counter-charge" id="559e-b3ca-ee71-fc42" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -3936,7 +3955,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                 <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
                 <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Wolf)</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Canine)</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3990,7 +4009,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               <entryLinks>
                 <entryLink import="true" name="Great Weapon" hidden="false" id="d47f-642c-b27e-95a9" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
                   <costs>
-                    <cost name="pts" typeId="points" value="9"/>
+                    <cost name="pts" typeId="points" value="6"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="afbd-dc8a-962e-f9e5" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
@@ -4031,14 +4050,14 @@ The enemy unit then rolls their charge distance and complete the charge as norm
       <profiles>
         <profile name="Werebeast" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="238d-515c-ffbb-fb3f">
           <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
             <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
             <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Chaos Beast)</characteristic>
           </characteristics>
@@ -4162,7 +4181,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           <entryLinks>
             <entryLink import="true" name="Great Weapon" hidden="false" id="1d61-ee7a-14f6-ac2a" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
               <costs>
-                <cost name="pts" typeId="points" value="15"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="9c58-fc1e-4cc3-f9de" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
@@ -4249,6 +4268,48 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         </entryLink>
         <entryLink import="true" name="56. Upgrades" hidden="false" id="60a7-96e6-79e4-bd9a" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
           <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Gibberer" hidden="false" id="8c6e-fe99-78f1-9eb2">
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a03c-d230-0ae1-c5d4"/>
+              </constraints>
+              <rules>
+                <rule name="Gibberer" id="2576-081c-988b-ce77" hidden="false">
+                  <description>All enemy units within 8&quot; of the Cursed Ettin suffer -1 to their Leadership. This has no effect on models with Immunity (Psychology).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Scaled Horror" hidden="false" id="7906-2fad-07d4-1053">
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e8b0-7d18-fc25-c944"/>
+              </constraints>
+              <rules>
+                <rule name="Scaled Horror" id="12a8-7e0d-21b7-fc34" hidden="false">
+                  <description>The Cursed Ettin gains the Natural Armour (4+) special rule. In addition, whenever it suffers an unsaved Wound in close combat, the unit which inflicted the wound suffer D6 Strength 2 Hits with the Poisoned Attacks special rule.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink name="Natural Armour" id="fc7a-8aee-d8e5-bfce" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="Scaled Horror" field="annotation"/>
+                    <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="6c9c-e3b2-e94f-3d1f" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="54c9-b972-ec8b-d33c" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Man Scyther" hidden="false" id="a2ea-9450-d629-9881">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
@@ -4268,19 +4329,6 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a9b-fb84-cb83-035f"/>
               </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Gibberer" hidden="false" id="8c6e-fe99-78f1-9eb2">
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a03c-d230-0ae1-c5d4"/>
-              </constraints>
-              <rules>
-                <rule name="Gibberer" id="2576-081c-988b-ce77" hidden="false">
-                  <description>All enemy units within 8&quot; of the Cursed Ettin suffer -1 to their Leadership. This has no effect on models with Immunity (Psychology).</description>
-                </rule>
-              </rules>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Rune Caller" hidden="false" id="fa3d-5a25-7a2c-47e0">
               <costs>
@@ -4304,28 +4352,6 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                   </entryLinks>
                 </entryLink>
               </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Scaled Horror" hidden="false" id="7906-2fad-07d4-1053">
-              <costs>
-                <cost name="pts" typeId="points" value="25"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e8b0-7d18-fc25-c944"/>
-              </constraints>
-              <rules>
-                <rule name="Scaled Horror" id="12a8-7e0d-21b7-fc34" hidden="false">
-                  <description>The Cursed Ettin gains the Natural Armour (4+) special rule. In addition, whenever it suffers an unsaved Wound in close combat, the unit which inflicted the wound suffer D6 Strength 2 Hits with the Poisoned Attacks special rule.</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink name="Natural Armour" id="fc7a-8aee-d8e5-bfce" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
-                  <modifiers>
-                    <modifier type="set" value="Scaled Horror" field="annotation"/>
-                    <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
-                    <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </entryLink>
@@ -4411,7 +4437,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Dragon)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Draconid)</characteristic>
           </characteristics>
         </profile>
         <profile name="Ice Breath" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="2992-804a-9f6c-ba0e">
@@ -4521,7 +4547,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               </profiles>
               <infoLinks>
                 <infoLink name="Blood Rage" id="c8b4-6d41-2a00-cc12" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-                <infoLink name="Counter-Charge" id="f626-8893-2fa5-62fc" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="f626-8893-2fa5-62fc" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
               </infoLinks>
               <rules>
                 <rule name="Invocation of Thunder" id="b226-5df3-294a-068c" hidden="false">
@@ -4632,7 +4658,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                 <categoryLink targetId="22c9-1606-58f8-2e60" id="fdd7-6157-a079-8adf" primary="false" name="Infantry"/>
               </categoryLinks>
               <infoLinks>
-                <infoLink name="Counter-Charge" id="5920-865f-84ab-3324" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="5920-865f-84ab-3324" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
                 <infoLink name="Blood Rage" id="074d-0c87-0253-d49c" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
               </infoLinks>
               <selectionEntryGroups>
@@ -4744,7 +4770,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               </profiles>
               <infoLinks>
                 <infoLink name="Blood Rage" id="0385-cd29-7f21-cd21" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-                <infoLink name="Counter-Charge" id="0d07-866a-5e0a-803e" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="0d07-866a-5e0a-803e" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
               </infoLinks>
               <rules>
                 <rule name="Hymns of Malice" id="c9ee-70c9-a46e-f110" hidden="false">
@@ -4817,13 +4843,13 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
                     <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Special Character, Werewolf)</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Special Character, Werecreature)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <infoLinks>
                 <infoLink name="Frenzy" id="e0fe-f074-c16f-bd92" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-                <infoLink name="Counter-Charge" id="5c5c-b841-b985-89ef" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="5c5c-b841-b985-89ef" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
                 <infoLink name="Regeneration" id="c720-6f5c-5576-0788" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
                   <modifiers>
                     <modifier type="set" value="Fenrir Wolfclaw" field="name"/>
@@ -4836,7 +4862,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                   <description>At the start of each of your turns, Fenrir must take a Leadership test. If passed, Fenrir retains control over his mind and acts as normal this turn. If failed, he will automatically fail any Berserk Rage test he is required to make this turn, but he may also re-roll all failed rolls To Hit in close combat.</description>
                 </rule>
                 <rule name="King of the Wolfkin" id="3216-351d-43f9-3741" hidden="false">
-                  <description>If Fenrir is your Army General, Ulfwerenar counts as Core Units instead of Special Units. In addition, all friendly units of Ulfwerenar and Skin Wolves within 12&quot; of Fenrir may re-roll their charge distance results (including Counter-Charges).</description>
+                  <description>If Fenrir is your Army General, Ulfwerenar counts as Core Units instead of Special Units. In addition, all friendly units of Ulfwerenar and Skin Wolves within 12&quot; of Fenrir may re-roll their charge distance results (including Counter-charges).</description>
                 </rule>
               </rules>
               <constraints>
@@ -4845,6 +4871,94 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               <modifiers>
                 <modifier type="set" value="Fenrir Wolfclaw" field="name" scope="unit"/>
               </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Styrmir Rimefrost" hidden="false" id="4526-b097-3262-9866" sortIndex="5">
+              <costs>
+                <cost name="pts" typeId="points" value="465"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="Styrmir Rimefrost" field="name" scope="unit"/>
+              </modifiers>
+              <profiles>
+                <profile name="Styrmir Rimefrost" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="b396-276b-b45b-6ff3">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">7</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">7</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">6</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Special Character, Giant)</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Ice Breath" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e657-bfe6-e6fd-5758">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Ignores Armour saves, Ice Attacks.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink name="Monster" hidden="false" id="d061-409a-6e67-f75b" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+              </categoryLinks>
+              <entryLinks>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="b93c-5601-dd9c-06b0" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="3074-9532-b7fe-67ef" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Rixbrand" hidden="false" id="f1fb-0dac-25c9-4ab9">
+                      <infoLinks>
+                        <infoLink name="Great Weapon" id="8629-8511-0347-83db" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                          <modifiers>
+                            <modifier type="append" value="Rixbrand gives Styrmir the Heroic Killing Blow and Ice Attacks special rules.
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon
+" field="de63-d6da-efa8-00ac" join="
+"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3890-7975-b516-4314-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3890-7975-b516-4314-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="2155-cd57-015a-69ce" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Glacier Plates" hidden="false" id="0c2c-d00a-4761-c887">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="84ca-9ee2-2052-93f6-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="84ca-9ee2-2052-93f6-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Heavy Armour" id="5f61-2296-015b-1dba" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                          <modifiers>
+                            <modifier type="append" value="The Glacier Plates gives Styrmir a Ward save (4+) against allmissile attacks and Immunity (Ice Attacks).
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="set" value="Magic Armour
+" field="ff58-91e4-84d7-e6e4" join="
+"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Stubborn" id="f5fe-9a37-d8d2-958a" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+                <infoLink name="Immunity (Psychology)" id="5653-93c6-1e4d-087c" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4980,7 +5094,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               </profiles>
               <infoLinks>
                 <infoLink name="Blood Rage" id="240d-b264-fd5c-1954" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-                <infoLink name="Counter-Charge" id="a0db-d114-7422-eb03" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="a0db-d114-7422-eb03" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
               </infoLinks>
               <rules>
                 <rule name="Fearless" id="6ada-0c74-f4e0-e0ee" hidden="false">
@@ -5073,7 +5187,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               </profiles>
               <infoLinks>
                 <infoLink name="Blood Rage" id="b0f3-cd76-f367-c137" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-                <infoLink name="Counter-Charge" id="deaa-dc0a-677d-905c" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="deaa-dc0a-677d-905c" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="135"/>
@@ -5181,7 +5295,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                 </entryLink>
               </entryLinks>
               <infoLinks>
-                <infoLink name="Counter-Charge" id="164a-f9a1-4aaa-587d" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="164a-f9a1-4aaa-587d" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
                 <infoLink name="Blood Rage" id="57f6-5974-f6b3-c515" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
                 <infoLink name="Parry" id="630c-11b8-2e6d-fb15" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
                   <modifiers>
@@ -5330,7 +5444,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               <infoLinks>
                 <infoLink name="Sniper" id="5196-ecd1-5ec5-dc2e" hidden="false" type="rule" targetId="8977-b58c-704d-705e"/>
                 <infoLink name="Blood Rage" id="878d-cc81-355a-4ebf" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-                <infoLink name="Counter-Charge" id="6bc1-c511-8068-f52c" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="6bc1-c511-8068-f52c" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
                 <infoLink name="Hatred (Empire)" id="3ac4-19c9-3cd2-df6c" hidden="false" type="rule" targetId="1308-62b9-5692-6880"/>
                 <infoLink name="Scouts" id="7a90-b6f4-da14-b0db" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
               </infoLinks>
@@ -5401,7 +5515,6 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                         </selectionEntry>
                       </selectionEntries>
                     </entryLink>
-                    <entryLink import="true" name="10. Character Options" hidden="false" id="e818-5a5d-90ce-0194" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                   </entryLinks>
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Bjorn" hidden="false" id="f60e-468e-5298-ce03" sortIndex="2">
@@ -5427,7 +5540,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
                         <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Special Character, Warbear)</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Special Character, Werecreature)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5441,7 +5554,6 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                         </entryLink>
                       </entryLinks>
                     </entryLink>
-                    <entryLink import="true" name="10. Character Options" hidden="false" id="fe42-e182-081d-b422" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                   </entryLinks>
                   <infoLinks>
                     <infoLink name="Regeneration" id="8810-dbc2-9b93-5842" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
@@ -5456,7 +5568,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               <infoLinks>
                 <infoLink name="Skirmishers" id="004b-f5ad-0d24-fcfe" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
                 <infoLink name="Blood Rage" id="827b-7f6f-70b2-a192" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-                <infoLink name="Counter-Charge" id="8e6e-a36c-e35d-741e" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="8e6e-a36c-e35d-741e" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
               </infoLinks>
               <rules>
                 <rule name="Deep Bond" id="2f92-cd47-3012-4e01" hidden="false">
@@ -5523,7 +5635,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               </entryLinks>
               <infoLinks>
                 <infoLink name="Frenzy" id="72f1-1b65-e4c3-baac" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-                <infoLink name="Counter-Charge" id="54d9-88f0-86ce-48a5" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="54d9-88f0-86ce-48a5" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
                 <infoLink name="Regeneration" id="a600-7bd1-b6fa-e113" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
                   <modifiers>
                     <modifier type="set" value="Beorg Bearstruck" field="name"/>
@@ -5619,7 +5731,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                 </entryLink>
               </entryLinks>
               <infoLinks>
-                <infoLink name="Counter-Charge" id="2758-d930-5fca-e359" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="2758-d930-5fca-e359" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
                 <infoLink name="Blood Rage" id="3246-66ba-8ed6-cccc" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
                 <infoLink name="Skald" id="9db5-c0cd-3ec8-e574" hidden="false" type="infoGroup" targetId="be58-5d96-8209-443f"/>
               </infoLinks>
@@ -5711,7 +5823,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                 <infoLink name="Unbreakable" id="60b9-698e-c020-8363" hidden="false" type="rule" targetId="1c9d-2d99-6222-2853"/>
                 <infoLink name="Ambushers" id="b872-07a2-8a33-bd4c" hidden="false" type="rule" targetId="f366-0f91-841f-cf80"/>
                 <infoLink name="Blood Rage" id="03f6-4423-01b6-01b3" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
-                <infoLink name="Counter-Charge" id="e614-87c6-a762-4dae" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+                <infoLink name="Counter-charge" id="e614-87c6-a762-4dae" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
                 <infoLink name="Loner" id="7266-4010-968c-3d94" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
               </infoLinks>
               <rules>
@@ -5732,6 +5844,105 @@ In addition, roll a D6 at beginning of the Norse turn. On a roll of a 6 the Rave
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Bowmen" hidden="false" id="b9ca-7962-5ae5-c0e8" sortIndex="101">
+      <categoryLinks>
+        <categoryLink targetId="b876-2856-f1c2-c4f0" id="9c0f-91a6-cc0a-094c" primary="true" name="Core"/>
+        <categoryLink targetId="22c9-1606-58f8-2e60" id="eda3-6637-497a-b74f" primary="false" name="Infantry"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Bowman" hidden="false" id="0d69-3118-9d9b-0e79" sortIndex="1">
+          <costs>
+            <cost name="pts" typeId="points" value="6"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="9052-6b3f-ef50-a0b2" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="5a99-346e-812c-e07e" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f069-4425-0c8b-d5ce" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="a079-97d7-4e11-1ede" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="b4d4-c2d2-2875-aca5" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="55. Equipment" hidden="false" id="35ee-d8c8-2cfa-f8b1" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+              <entryLinks>
+                <entryLink import="true" name="Fur Cloak" hidden="false" id="717d-9a60-3a79-0de1" type="selectionEntry" targetId="bdb6-4145-1330-5077">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="e560-813f-037f-32d4" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Bow" hidden="false" id="a7fc-67d5-0619-486c" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8a2f-27b6-2054-f5fe" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+          <profiles>
+            <profile name="Bowman" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="338f-2e68-57ba-91d7">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="d6de-0e83-28b5-4cd5"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Counter-charge" id="da59-6347-9645-38cb" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+            <infoLink name="Blood Rage" id="7d6e-98da-80a9-bdde" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="99. Command Group" hidden="false" id="740b-a3e9-df60-829e" type="selectionEntryGroup" targetId="6d24-2d46-8718-0b8f">
+          <entryLinks>
+            <entryLink import="true" name="Standard Bearer" hidden="false" id="c3b9-6f04-7c17-0fdf" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f">
+              <entryLinks>
+                <entryLink import="true" name="Magic Standards" hidden="false" id="2fb4-dbca-4856-2e0f" type="selectionEntryGroup" targetId="ae84-4a17-f51a-b309">
+                  <constraints>
+                    <constraint type="max" value="25" field="points" scope="parent" shared="true" id="9368-e7e8-44cd-a292"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="8079-3917-512f-fd8f" includeChildSelections="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" value="1" field="8079-3917-512f-fd8f">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="force" childId="1fd3-1b1e-6f52-0e0c" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
   <sharedInfoGroups>
@@ -5754,7 +5965,7 @@ In addition, roll a D6 at beginning of the Norse turn. On a roll of a 6 the Rave
       </infoLinks>
       <rules>
         <rule name="Mammoth Attacks" id="e94c-7d7f-d068-bd28" hidden="false">
-          <description>When the War Mammoth attacks, roll on the appropriate table to determine its action. use the Man-sized Things Chart when fighting Infantry, Cavalry, War Beasts or Swarms. use the Big Things Chart when fighting Monsters, Monstrous Beasts, Monstrous Infantry, Monstrous Cavalry, Chariots, War Machines and Shrines. If no suitable target is in base contact, roll again on the chart until you get another result.</description>
+          <description>When the War Mammoth attacks, roll on the appropriate table to determine its action. use the Man-sized Things Chart when fighting Infantry, Cavalry, War Beasts or Swarms. use the Big Things Chart when fighting Monsters, Monstrous Creatures, Monstrous Beasts, Monstrous Infantry, Monstrous Cavalry, Chariots, War Machines and Shrines. If no suitable target is in base contact, roll again on the chart until you get another result.</description>
         </rule>
       </rules>
     </infoGroup>
@@ -5829,7 +6040,7 @@ In addition, roll a D6 at beginning of the Norse turn. On a roll of a 6 the Rave
     <infoGroup name="War Wolf Chariot" id="47a8-da79-8d8f-f7bd" hidden="false">
       <infoLinks>
         <infoLink name="War Wolf Chariot" id="0d31-bb10-3a88-5143" hidden="false" type="profile" targetId="0534-6adb-4377-2a8a"/>
-        <infoLink name="Counter-Charge" id="e5a9-f2ac-6422-f324" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
+        <infoLink name="Counter-charge" id="e5a9-f2ac-6422-f324" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
         <infoLink name="Blood Rage" id="89e0-49fa-3a7d-e549" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
         <infoLink name="War Wolf Chariot" id="c38b-07b2-1756-78c2" hidden="false" type="profile" targetId="c1df-05df-92ed-54fa"/>
       </infoLinks>
@@ -5871,7 +6082,7 @@ In addition, roll a D6 at beginning of the Norse turn. On a roll of a 6 the Rave
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">*</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Mammoth)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Elephantine)</characteristic>
       </characteristics>
     </profile>
     <profile name="Marauder Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2770-9de7-9c9a-e9fc">
@@ -5913,7 +6124,7 @@ In addition, roll a D6 at beginning of the Norse turn. On a roll of a 6 the Rave
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Wolf)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Canine)</characteristic>
       </characteristics>
     </profile>
     <profile name="War Wolf Chariot" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="c1df-05df-92ed-54fa">
