@@ -5287,7 +5287,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                 <infoLink id="b394-5b95-c4d1-4610" name="Leader of Men" hidden="false" targetId="d0ad-baad-f5c7-5fa9" type="rule"/>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="70. Mount" hidden="false" id="c225-0a4d-035f-ded1" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425" sortIndex="">
+                <entryLink import="true" name="70. Mount" hidden="false" id="c225-0a4d-035f-ded1" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                   <entryLinks>
                     <entryLink import="true" name="Warhorse" hidden="false" id="0b99-9cb2-5774-6c9f" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0" sortIndex="1">
                       <costs>
@@ -5348,7 +5348,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
-                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="93b7-a486-9a2c-5b3f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47" sortIndex="">
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="93b7-a486-9a2c-5b3f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Dragon Tooth, the Reikland Runefang" hidden="false" id="4299-d774-b6c7-4cf2" collective="false">
                       <constraints>
@@ -5374,7 +5374,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                     </entryLink>
                   </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="10. Character Options" hidden="false" id="0935-793d-16ac-f6e6" type="selectionEntryGroup" targetId="7853-6aa4-00e8-09e0" sortIndex=""/>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="0935-793d-16ac-f6e6" type="selectionEntryGroup" targetId="7853-6aa4-00e8-09e0"/>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="2f02-94a3-be9c-54c3" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="The Emperor&apos;s Armour" hidden="false" id="ae05-4ad0-4321-9682" collective="false">
@@ -6124,6 +6124,45 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
               <modifiers>
                 <modifier type="set" value="Kurt Helborg" field="name" scope="root-entry"/>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="add" value="You must include at least one unit of Knights with the same Troop Type" field="error"/>
+                  </modifiers>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="0" field="selections" scope="self" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="0" field="selections" scope="self" childId="c20e-0cc6-b847-c2ad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a28b-1d80-00f0-5b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="self" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="0" field="selections" scope="roster" childId="2e50-5817-ab5a-4b67" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="self" childId="c20e-0cc6-b847-c2ad" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="0" field="selections" scope="roster" childId="8ab3-de65-ec9d-09ba" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4f5e-7e79-d329-bb9d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
             <selectionEntry id="51cc-4386-fe9f-952f" name="Balthasar Gelt" hidden="false" collective="false" import="true" type="model" sortIndex="4">
               <constraints>
@@ -6659,6 +6698,45 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
               <modifiers>
                 <modifier type="set" value="Harald Gemunsen " field="name" scope="root-entry"/>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="add" value="You must include at least one unit of Knights with the same Troop Type" field="error"/>
+                  </modifiers>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="0" field="selections" scope="self" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="0" field="selections" scope="self" childId="c20e-0cc6-b847-c2ad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a28b-1d80-00f0-5b5f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="self" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="0" field="selections" scope="roster" childId="2e50-5817-ab5a-4b67" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="self" childId="c20e-0cc6-b847-c2ad" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="0" field="selections" scope="roster" childId="8ab3-de65-ec9d-09ba" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="4f5e-7e79-d329-bb9d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Emil Valgeir" hidden="false" id="ef2f-d175-f5af-d3d5" sortIndex="14">
               <costs>
@@ -7358,7 +7436,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                 </infoLink>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="e2d6-fbe5-d765-8220" type="selectionEntryGroup" targetId="b73b-2eee-3197-cb01" sortIndex="">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="e2d6-fbe5-d765-8220" type="selectionEntryGroup" targetId="b73b-2eee-3197-cb01">
                   <modifiers>
                     <modifier type="increment" value="25" field="eab2-4b06-bf7c-9abe"/>
                     <modifier type="set" value="true" field="hidden" scope="model-or-unit" affects="self.entries.recursive.284e-4851-02e6-1d3f"/>
