@@ -6566,7 +6566,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Dire Wolf" hidden="false" id="90e4-1e91-6b4f-e7ff" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="6">
+            <entryLink import="true" name="Snarlfang" hidden="false" id="90e4-1e91-6b4f-e7ff" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="45"/>
               </costs>
@@ -7065,7 +7065,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="36"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Dire Wolf" hidden="false" id="9367-dc02-a75a-8dc3" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="3">
+            <entryLink import="true" name="Snarlfang" hidden="false" id="9367-dc02-a75a-8dc3" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -8084,7 +8084,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           <entryLinks>
             <entryLink import="true" name="70. Mount" hidden="false" id="77c2-6164-d295-5723" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
-                <entryLink import="true" name="Dire Wolf" hidden="false" id="bcfa-1c47-2585-f0d2" type="selectionEntry" targetId="b89d-d9a4-7496-8611">
+                <entryLink import="true" name="Snarlfang" hidden="false" id="bcfa-1c47-2585-f0d2" type="selectionEntry" targetId="b89d-d9a4-7496-8611">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e26-8e92-f90e-ca65" includeChildSelections="false"/>
                   </constraints>
@@ -12585,9 +12585,14 @@ However, the bearer&apos;s Weapon Skill is lowered by an amount equal to half t
               </costs>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="model" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1aae-2529-c509-7573" shared="true" childName="Wizard"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
