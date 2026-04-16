@@ -8671,7 +8671,7 @@ If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</de
       <description>A model with Hold Your Ground allows all friendly units within a distance equal to the number in the brackets to re-roll failed Panic and Break tests. This ability cannot be used if the model with Hold Your Ground is also fleeing.
 
 
-This rule is cumulative with other sources of Hold Your Ground. If the model has a Line of Sight value of 4 or more, then the range of their Inspiring Presence rule is increased by 6.</description>
+This rule is cumulative with other sources of Hold Your Ground. If the model has a Line of Sight value of 4 or more, then the range of their Hold Your Ground rule is increased by 6.</description>
     </rule>
     <rule name="Daemon of Khorne" id="a356-05c9-d963-c1bb" hidden="false">
       <description>A Daemon of Khorne has Hatred (Daemons of Slaanesh), Magic Resistance (1) and Mighty Blow (1).</description>
