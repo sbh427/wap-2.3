@@ -152,24 +152,82 @@
             <condition type="equalTo" value="-1" field="limit::points" scope="force" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
+        <modifier type="increment" value="1" field="ef5b-b2f7-ef34-d4a2">
+          <repeats>
+            <repeat value="4" repeats="1" field="limit::points" scope="roster" childId="any" shared="false" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint type="min" value="25" field="limit::points" scope="force" shared="true" id="d3e7-0fe2-0481-fbbd" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
+        <constraint type="max" value="0" field="points" scope="root-entry" shared="false" id="ef5b-b2f7-ef34-d4a2"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="d38a-73da-883b-bab9" name="Characters" hidden="false">
+      <modifiers>
+        <modifier type="increment" value="1" field="3c06-5753-3f74-76a9">
+          <repeats>
+            <repeat value="4" repeats="1" field="limit::points" scope="roster" childId="any" shared="false" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint type="max" value="35" field="limit::points" scope="roster" shared="false" id="1ec9-e189-0563-2616" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+        <constraint type="max" value="0" field="points" scope="root-entry" shared="false" id="3c06-5753-3f74-76a9"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="fc26-7737-f7cb-8977" name="Special" hidden="false">
+      <modifiers>
+        <modifier type="decrement" field="5e3c-b5d6-a059-b5ab" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b876-2856-f1c2-c4f0" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0eb4-f376-7725-b05b" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="increment" field="5e3c-b5d6-a059-b5ab" value="1">
+          <repeats>
+            <repeat field="limit::points" scope="roster" value="500" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="any" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="increment" value="1" field="9eb4-bf99-a9e6-1982">
+          <repeats>
+            <repeat value="4" repeats="1" field="limit::points" scope="roster" childId="any" shared="false" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint type="max" value="50" field="limit::points" scope="force" shared="true" id="97cf-276b-1458-7679" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
+        <constraint type="max" value="0" field="points" scope="root-entry" shared="false" id="9eb4-bf99-a9e6-1982"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="0eb4-f376-7725-b05b" name="Rare" hidden="false">
+      <modifiers>
+        <modifier type="decrement" field="e0d7-75ba-de98-e3ff" value="1">
+          <repeats>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fc26-7737-f7cb-8977" repeats="1" roundUp="false"/>
+            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b876-2856-f1c2-c4f0" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="increment" field="e0d7-75ba-de98-e3ff" value="1">
+          <repeats>
+            <repeat field="limit::points" scope="roster" value="500" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="any" repeats="1" roundUp="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="increment" value="1" field="450a-fe62-b6c7-aa9d">
+          <repeats>
+            <repeat value="4" repeats="1" field="limit::points" scope="roster" childId="any" shared="false" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="divide" value="2" field="2add-f79a-2a00-97c0">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="b876-2856-f1c2-c4f0" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <constraints>
         <constraint type="max" value="25" field="limit::points" scope="force" shared="true" id="6b40-e45b-d1f9-37f5" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
+        <constraint type="max" value="0" field="points" scope="root-entry" shared="false" id="450a-fe62-b6c7-aa9d"/>
+        <constraint type="max" value="64" field="selections" scope="roster" shared="true" id="2add-f79a-2a00-97c0" includeChildSelections="true" includeChildForces="true" negative="false" automatic="false"/>
       </constraints>
     </categoryEntry>
     <categoryEntry name="Mount" hidden="true" id="8b8a-34b1-ed30-df11"/>
@@ -494,7 +552,7 @@
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
       <categoryLinks>
-        <categoryLink id="e3e8-f89d-a94a-776d" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
+        <categoryLink id="e3e8-f89d-a94a-776d" name="Characters" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
         <categoryLink id="ad45-e317-2036-b755" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="false"/>
         <categoryLink id="9241-6f7e-063e-d674" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="false"/>
         <categoryLink id="6655-f7c6-f26b-92b6" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="false"/>
