@@ -93,6 +93,7 @@
     <profileType name="Troop Type" id="3adc-2604-f88f-aa41" hidden="false">
       <characteristicTypes>
         <characteristicType name="Min. Files for Rank Bonus" id="e21c-5a94-1922-5dd8"/>
+        <characteristicType name="Fighting Rank" id="c3c4-4e59-56e4-c322"/>
         <characteristicType name="Max. Number of Supporting Attacks" id="882b-4e9f-a4d6-182a"/>
         <characteristicType name="Unit Strength" id="ec2f-bc98-8ff4-9997"/>
         <characteristicType name="Line of Sight" id="6fa1-9401-65a0-4327"/>
@@ -144,24 +145,8 @@
     </profileType>
   </profileTypes>
   <categoryEntries>
-    <categoryEntry id="d280-b7df-c185-2ba5" name="Lords" hidden="false">
-      <constraints>
-        <constraint type="max" value="25" field="limit::points" scope="roster" shared="false" id="8877-5cef-efc0-d65b" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-      </constraints>
-    </categoryEntry>
     <categoryEntry id="b876-2856-f1c2-c4f0" name="Core" hidden="false">
       <modifiers>
-        <modifier type="decrement" field="f412-f4d0-9f49-afab" value="1">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0eb4-f376-7725-b05b" repeats="1" roundUp="false"/>
-            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fc26-7737-f7cb-8977" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="f412-f4d0-9f49-afab" value="1">
-          <repeats>
-            <repeat field="limit::points" scope="roster" value="500" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="any" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
         <modifier type="set" value="-1" field="d3e7-0fe2-0481-fbbd">
           <conditions>
             <condition type="equalTo" value="-1" field="limit::points" scope="force" childId="any" shared="true" includeChildSelections="true" includeChildForces="true"/>
@@ -169,57 +154,21 @@
         </modifier>
       </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f412-f4d0-9f49-afab" type="min"/>
         <constraint type="min" value="25" field="limit::points" scope="force" shared="true" id="d3e7-0fe2-0481-fbbd" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="d38a-73da-883b-bab9" name="Heroes" hidden="false">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+    <categoryEntry id="d38a-73da-883b-bab9" name="Characters" hidden="false">
       <constraints>
         <constraint type="max" value="35" field="limit::points" scope="roster" shared="false" id="1ec9-e189-0563-2616" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="fc26-7737-f7cb-8977" name="Special" hidden="false">
-      <modifiers>
-        <modifier type="decrement" field="5e3c-b5d6-a059-b5ab" value="1">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b876-2856-f1c2-c4f0" repeats="1" roundUp="false"/>
-            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="0eb4-f376-7725-b05b" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="5e3c-b5d6-a059-b5ab" value="1">
-          <repeats>
-            <repeat field="limit::points" scope="roster" value="500" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="any" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5e3c-b5d6-a059-b5ab" type="min"/>
         <constraint type="max" value="50" field="limit::points" scope="force" shared="true" id="97cf-276b-1458-7679" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="0eb4-f376-7725-b05b" name="Rare" hidden="false">
-      <modifiers>
-        <modifier type="decrement" field="e0d7-75ba-de98-e3ff" value="1">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="fc26-7737-f7cb-8977" repeats="1" roundUp="false"/>
-            <repeat field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b876-2856-f1c2-c4f0" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="increment" field="e0d7-75ba-de98-e3ff" value="1">
-          <repeats>
-            <repeat field="limit::points" scope="roster" value="500" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="any" repeats="1" roundUp="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
       <constraints>
-        <constraint field="selections" scope="roster" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e0d7-75ba-de98-e3ff" type="min"/>
         <constraint type="max" value="25" field="limit::points" scope="force" shared="true" id="6b40-e45b-d1f9-37f5" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
       </constraints>
     </categoryEntry>
@@ -270,6 +219,7 @@
         </infoLink>
         <infoLink name="Terror" id="02ea-57d5-4bb7-bc2d" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
         <infoLink name="Swiftstride" id="9700-feb5-c942-f86e" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+        <infoLink name="Independent" id="49e0-9b63-fc15-1b21" hidden="false" type="rule" targetId="5c43-d3ff-6f23-d2a7"/>
       </infoLinks>
       <profiles>
         <profile name="Ridden Monster" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="9450-3d04-ce97-32bd">
@@ -306,23 +256,6 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink name="Impact Hits (1)" id="db0b-afa8-dc86-9375" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b">
-          <modifiers>
-            <modifier type="set" value="From Mount" field="annotation"/>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -341,11 +274,6 @@
     </categoryEntry>
     <categoryEntry name="Monstrous Cavalry" id="82d3-4589-72b4-b6ed" hidden="false">
       <infoLinks>
-        <infoLink name="Impact Hits (1)" id="7683-2a71-59fd-37ab" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b">
-          <modifiers>
-            <modifier type="set" value="From Mount" field="annotation"/>
-          </modifiers>
-        </infoLink>
         <infoLink name="Fear" id="c2b9-c3ec-39ff-2d86" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
         <infoLink name="Swiftstride" id="a92e-c732-6e1a-789f" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
       </infoLinks>
@@ -367,8 +295,9 @@
     <categoryEntry name="Swarm" id="f651-5580-8a7b-45eb" hidden="false">
       <infoLinks>
         <infoLink name="Expendable" id="288d-141a-981d-8b60" hidden="false" type="rule" targetId="b806-942b-15af-b309"/>
-        <infoLink name="Skirmishers" id="fef5-1906-e36f-2b82" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
         <infoLink name="Unstable" id="5367-b34c-298c-4436" hidden="false" type="rule" targetId="b779-6d7f-8298-7c82"/>
+        <infoLink name="Vanguard" id="d05a-e42d-a728-ff69" hidden="false" type="rule" targetId="38ba-d48a-be97-f830"/>
+        <infoLink name="Independent" id="a229-c5b0-8f4c-208b" hidden="false" type="rule" targetId="5c43-d3ff-6f23-d2a7"/>
       </infoLinks>
     </categoryEntry>
     <categoryEntry name="War Beast" id="5c5d-6944-cd09-0db8" hidden="false">
@@ -421,6 +350,22 @@
             </modifier>
           </modifiers>
         </infoLink>
+        <infoLink name="Independent" id="994a-202c-de5e-79de" hidden="false" type="rule" targetId="5c43-d3ff-6f23-d2a7">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -454,8 +399,9 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink name="Swiftstride" id="9454-a2e6-d8f9-f5fa" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+        <infoLink name="Independent" id="9454-a2e6-d8f9-f5fa" hidden="false" type="rule" targetId="5c43-d3ff-6f23-d2a7"/>
         <infoLink name="Terror" id="ee03-51b1-ba11-20ef" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
+        <infoLink name="Swiftstride" id="dd96-9c00-3b0d-34be" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
       </infoLinks>
       <modifiers>
         <modifier type="remove" value="22c9-1606-58f8-2e60" field="category" scope="root-entry" affects="self"/>
@@ -477,6 +423,7 @@
       <infoLinks>
         <infoLink name="Fear" id="bd5f-9083-7a7d-64de" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
         <infoLink name="Swiftstride" id="7733-1855-7ecf-09a5" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+        <infoLink name="Independent" id="5fae-9756-3802-ede8" hidden="false" type="rule" targetId="5c43-d3ff-6f23-d2a7"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -537,34 +484,6 @@
     </categoryEntry>
     <categoryEntry name="Handheld Armour" id="ba52-4f0c-71ae-b52d" hidden="true"/>
     <categoryEntry name="Suits of Armour" id="9a61-618b-519a-807c" hidden="true"/>
-    <categoryEntry name="Large Infantry" id="7a21-ba63-63e2-7d8e" hidden="false">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" includeChildForces="false"/>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </categoryEntry>
     <categoryEntry name="Chariot" id="1e5b-5ca1-fe5b-d82f" hidden="false">
       <comment>No Impact Hits</comment>
       <infoLinks>
@@ -575,7 +494,6 @@
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
       <categoryLinks>
-        <categoryLink id="331b-a879-f664-e74e" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="false"/>
         <categoryLink id="e3e8-f89d-a94a-776d" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
         <categoryLink id="ad45-e317-2036-b755" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="false"/>
         <categoryLink id="9241-6f7e-063e-d674" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="false"/>
@@ -761,26 +679,18 @@
             <profile name="Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="dcd0-af31-ae44-ecc9">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">5</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
               </characteristics>
             </profile>
-            <profile name="Large Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="3a82-c31d-f265-c34c">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">4</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
-              </characteristics>
-              <alias>Monsters</alias>
-            </profile>
             <profile name="Monstrous Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="4da4-43b4-2628-522e">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">3</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
@@ -790,72 +700,80 @@
             <profile name="Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="144b-c69f-fe6c-82c2">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1+1 (2 for non-split profiles)</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">5</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1 from rider</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (1), Swiftstride</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Swiftstride</characteristic>
               </characteristics>
             </profile>
             <profile name="Monstrous Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="334b-8b7c-45c4-bdef">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1+2 (3 for non-split profiles)</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1 from rider</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">3</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Impact Hits (1), Swiftstride</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
               </characteristics>
             </profile>
             <profile name="Swarms" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="16d3-292a-ce8e-e20f">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">3</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">5</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">3</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">0</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Skirmishers, Unstable</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Vanguard, Unstable, Independent.</characteristic>
               </characteristics>
             </profile>
             <profile name="War Beast" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="6f84-bd91-392c-3a1f">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">5</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Swiftstride, Vanguard</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Swiftstride, Vanguard, Independent.</characteristic>
               </characteristics>
               <alias>War Beasts</alias>
             </profile>
             <profile name="Monstrous Beasts" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="1e3f-80ca-0055-b088">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">3</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride, Independent.</characteristic>
               </characteristics>
             </profile>
             <profile name="Monstrous Creature" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="7942-0a77-4060-6438">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">-</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">4 (+1 for each rider)</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3 (or 4 if ridden)</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Swiftstride, Terror</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Swiftstride, Terror, Independent.</characteristic>
               </characteristics>
               <alias>Monstrous Creatures</alias>
             </profile>
             <profile name="Monsters" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="dc73-dcb7-9933-24d6">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">-</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Double Starting Wounds (+1 for each Rider)</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">5</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D6), Swiftstride, Terror</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D6), Swiftstride, Terror, Independent.</characteristic>
               </characteristics>
             </profile>
             <profile name="Chariots" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="e48b-2fab-06d5-90da">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">+D3 Impact hits to the chariots in the first rank.</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">5</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">0, +D3 Impact hits to the chariots in the first rank.</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds (+1 for each additional Crew &amp; Mount)</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (D6), Swiftstride</characteristic>
@@ -864,6 +782,7 @@
             <profile name="Shrines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="95ec-6037-f74a-d19f">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">-</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
@@ -874,6 +793,7 @@
             <profile name="War Machines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="3163-9fd3-3283-33a6">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">-</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
@@ -8978,6 +8898,12 @@ If a character with Magic Resistance joins a unit, all models in the unit benefi
     </rule>
     <rule name="Daemonic" id="6940-194d-860b-18d4" hidden="false">
       <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a Ward Save (5+) which gets reduced to a Ward Save (6+) against Magical Attacks.</description>
+    </rule>
+    <rule name="Independent" id="5c43-d3ff-6f23-d2a7" hidden="false">
+      <description>A character with this special rule cannot join a unit without this special rule. A unit with this special rule cannot be joined by a character without this special rule.
+
+
+In addition, they may never use the Inspiring Presence or Hold Your Ground special rules. Note that Characters, ridden models and Mixed Units that still have their Handlers ignore this special rule, unless specified.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
