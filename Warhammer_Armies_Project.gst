@@ -726,7 +726,6 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
               </characteristics>
-              <alias>Monstrous Beasts</alias>
             </profile>
             <profile name="Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="144b-c69f-fe6c-82c2">
               <characteristics>
@@ -758,7 +757,7 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Vanguard, Unstable, Independent.</characteristic>
               </characteristics>
             </profile>
-            <profile name="War Beast" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="6f84-bd91-392c-3a1f">
+            <profile name="War Beasts" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="6f84-bd91-392c-3a1f">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
                 <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">5</characteristic>
@@ -767,7 +766,7 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Swiftstride, Vanguard, Independent.</characteristic>
               </characteristics>
-              <alias>War Beasts</alias>
+              <alias>War Beast</alias>
             </profile>
             <profile name="Monstrous Beasts" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="1e3f-80ca-0055-b088">
               <characteristics>
@@ -778,8 +777,9 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride, Independent.</characteristic>
               </characteristics>
+              <alias>Monstrous Beast</alias>
             </profile>
-            <profile name="Monstrous Creature" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="7942-0a77-4060-6438">
+            <profile name="Monstrous Creatures" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="7942-0a77-4060-6438">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
                 <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">-</characteristic>
@@ -788,7 +788,7 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3 (or 4 if ridden)</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Swiftstride, Terror, Independent.</characteristic>
               </characteristics>
-              <alias>Monstrous Creatures</alias>
+              <alias>Monstrous Creature</alias>
             </profile>
             <profile name="Monsters" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="dc73-dcb7-9933-24d6">
               <characteristics>
@@ -809,6 +809,7 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (D6), Swiftstride</characteristic>
               </characteristics>
+              <alias>Chariot</alias>
             </profile>
             <profile name="Shrines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="95ec-6037-f74a-d19f">
               <characteristics>
@@ -819,7 +820,6 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
               </characteristics>
-              <alias>War Machines</alias>
             </profile>
             <profile name="War Machines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="3163-9fd3-3283-33a6">
               <characteristics>
@@ -7717,9 +7717,6 @@ declare charges or make a shooting attack. However, a unit that has failed a St
 
 Until they pass the Stupidity test again, models that have failed their Stupidity test have the Immunity (Psychology) and Random Movement (D6) special rule, except that they can only move directly forwards. They cannot choose to do a Combat Reform or choose any other Charge Reaction except Hold. In addition, Wizards cannot attempt to cast/dispel or channel power dice or dispel dice, nor may Bound Spells be used.</description>
     </rule>
-    <rule id="2e96-0439-2413-69d5" name="Strider (Swamp)" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
     <rule id="f366-0f91-841f-cf80" name="Ambushers" hidden="false">
       <description>Before starting deployment, a unit with the Ambushers special rule can choose to not deploy at the start of the battle. Instead, at the start of the Remaining Moves sub-phase of Turn 2 the controlling player rolls a D6 for each of their units of Ambushers. On a 3+, the unit arrives. If the unit does not arrive on Turn 2, roll another D6 at the start of the Remaining Moves sub-phase of Turn 3. On a 2+, the unit arrives. If the unit does not arrive on Turn 3, it will automatically arrive at the start of the Remaining Moves sub-phase of turn 4. 
 
@@ -7971,27 +7968,12 @@ As long as the unit (but not the handlers) have a Unit Strength of 5 or more, a
     <rule id="738b-aca4-740c-e425" name="Animated Construct" hidden="false">
       <description>Animated Constructs have the Unbreakable special rules. However, they may not march.</description>
     </rule>
-    <rule id="c270-3956-9b64-b587" name="Strider" hidden="false">
-      <description>Models with the Strider special rule are rare – normally, they will have a subset of Strider, such as Hill, Forest, Marshland or River Strider and the rule only applies in terrain of the specified type. Models 
-with the Strider rule treat that piece of terrain as Open Ground, meaning they ignore any combat and movement penalties or Dangerous Terrain tests otherwise caused by it.</description>
-    </rule>
-    <rule id="8d09-c701-2658-67e8" name="Strider (Forest)" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
+    <rule id="c270-3956-9b64-b587" name="Strider (*)" hidden="false">
+      <description>Models with the Strider special rule are rare – normally, they will have a subset of Strider, such as Hill, Forest, Marshland or River Strider and the rule only applies in terrain of the specified type. Models with the Strider rule treat that piece of terrain as Open Ground, meaning they ignore any combat and movement penalties or Dangerous Terrain tests otherwise caused by it.</description>
+      <alias>Strider</alias>
     </rule>
     <rule id="d896-d52f-cc64-ab43" name="Scythes" hidden="false">
       <description>Impact Hits (+1).</description>
-    </rule>
-    <rule id="48d5-6bee-c3f6-cec8" name="Strider (River)" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
-    <rule id="f099-a712-8bb3-8162" name="Strider (Obstacle)" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
-    <rule id="686b-8e1b-4d01-05ba" name="Strider (Marsh)" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
-    <rule id="2875-64e6-bb63-ac04" name="Strider (Hill)" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
     </rule>
     <rule id="73fd-d115-269d-bd0a" name="Ancestral Grudge" hidden="false">
       <description>Dwarfs have the Hatred (Orcs, Goblins, Skaven) special rule.</description>
