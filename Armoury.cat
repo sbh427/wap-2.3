@@ -394,26 +394,23 @@
       <infoLinks>
         <infoLink name="Pike" id="0b10-f04c-3911-929f" hidden="false" type="profile" targetId="2c1e-e11e-fadf-b4cf"/>
       </infoLinks>
-      <modifiers>
-        <modifier type="add" value="{this} is not allowed if mounted" field="error">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="085c-59a1-3255-ac35"/>
+            <modifier type="append" value="models on foot only" field="annotation"/>
+          </modifiers>
           <conditionGroups>
-            <conditionGroup type="and">
+            <conditionGroup type="or">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="e3de-a992-6a3e-5195" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
               </conditions>
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
             </conditionGroup>
           </conditionGroups>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="c068-0827-9931-d9bf" collective="true">
       <constraints>
