@@ -2080,7 +2080,7 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Quicksilver Sword" hidden="true" id="4216-1fb1-28ab-e3a7" collective="false">
+            <selectionEntry type="upgrade" import="true" name="11. Quicksilver Sword" hidden="true" id="4216-1fb1-28ab-e3a7" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1f8e-6c9d-0fe0-077c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -2098,7 +2098,7 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Meteoric Ironclad" hidden="true" id="04ff-d846-a62d-7e1a" collective="false">
+            <selectionEntry type="upgrade" import="true" name="10. Meteoric Ironclad" hidden="true" id="04ff-d846-a62d-7e1a" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2715-6db4-2a78-df5d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -3573,12 +3573,12 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Verdant Apotheosis" hidden="true" id="f4ad-1bb2-778a-4c03" collective="false">
+            <selectionEntry type="upgrade" import="true" name="6. Gift of Life" hidden="true" id="f4ad-1bb2-778a-4c03" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b988-8d10-705c-5ffc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Verdant Apotheosis" id="3d66-3b6b-6dd0-48c6" hidden="false" targetId="6c55-6914-3b3c-b2af" type="profile"/>
+                <infoLink name="Gift of Life" id="3d66-3b6b-6dd0-48c6" hidden="false" targetId="6c55-6914-3b3c-b2af" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
@@ -3811,7 +3811,7 @@
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. The Dance of Despair" hidden="true" id="7f94-f31d-f11b-a5c4" collective="false">
+            <selectionEntry type="upgrade" import="true" name="6. The Dance of Despair" hidden="true" id="7f94-f31d-f11b-a5c4" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4c8d-4bff-bfe0-21b8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -3835,7 +3835,7 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Horn of Andar" hidden="true" id="faa4-975e-020e-619f" collective="false">
+            <selectionEntry type="upgrade" import="true" name="4. Horn of Andar" hidden="true" id="faa4-975e-020e-619f" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e2c8-0427-662b-af15" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -3859,7 +3859,7 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. The Withering" hidden="true" id="9aaa-64d4-a24c-1c5c" collective="false">
+            <selectionEntry type="upgrade" import="true" name="5. The Withering" hidden="true" id="9aaa-64d4-a24c-1c5c" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6a80-65eb-f84b-9355" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -8408,6 +8408,22 @@ A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain 
     <rule id="03b5-5136-1ebb-dcfd" name="Line of Sight (*)" hidden="false">
       <description>Models with this rule have a Line of Sight of *.</description>
     </rule>
+    <rule name="Dangerous Terrain" id="2926-f724-304d-02c4" hidden="false">
+      <alias>Deadly Terrain</alias>
+      <description>Dangerous Terrain covers things like forests, rivers, marshes, etc. 
+
+When a model marches, charges, flees, overruns or pursues into or through an area of Dangerous Terrain, it is called upon to take a Dangerous Terrain test – roll a D6. If a 1 is rolled, the model suffers a wound with no armour saves allowed.
+
+Cavalry, Monstrous Cavalry, Chariots and Shrines treat all terrain other than open ground as being Dangerous 
+Terrain, as described above. A Chariot or Shrine that fails a Dangerous Terrain test suffers D6 Wounds instead of 1. 
+
+&lt;b&gt;Deadly Terrain&lt;/b&gt;
+Models moving through Deadly Terrain must take always Dangerous Terrain tests, even when making normal moves. 
+
+When a model marches, charges, flees, overruns or pursues into or through an area of Deadly Terrain, it fails the test on a roll of 1-2 rather than 1. 
+
+Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangerous Terrain as being Deadly Terrain. </description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="7e43-605b-bfde-13c3" name="Great Cannon" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -8464,7 +8480,7 @@ A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All of the spells in the Lore of Fire are Flaming Attacks. In addition, if a spell from the Lore of Fire inflicts hits on an enemy unit that has already been hit by a spell from the Lore of Fire in the same Magic phase (even if the spell was cast by a different Wizard) the spell inflicts an additional D6 Strength 4 hits on the unit.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All of the spells in the Lore of Fire are Flaming Attacks. In addition, if a spell from the Lore of Fire inflicts hits on an enemy unit that has already been hit by a spell from the Lore of Fire in the same Magic phase (even if the spell was cast by a different Wizard) the spell inflicts an additional D3 Strength 4 hits on the unit.</characteristic>
       </characteristics>
     </profile>
     <profile id="bc40-b619-0977-f8ad" name="Wyssan&apos;s Wildform" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8482,7 +8498,7 @@ A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">A Wizard casting a spell from the Lore of Beasts gains +1 to cast if the target(s) contain one or more War Beast, Cavalry, Monstrous Beast, Monstrous Cavalry, Monstrous Creature, Monster, Chariot (chariots that are not drawn are not included), Swarm (Animal) or Beastman.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">A Wizard casting a spell from the Lore of Beasts gains +1 to cast if the target(s) contains one or more War Beast, Cavalry, Monstrous Beast, Monstrous Cavalry, Monstrous Creature, Monster, Chariot (Chariots that are not drawn are not included), Swarm, or Beastman.</characteristic>
       </characteristics>
     </profile>
     <profile id="6e57-2cc3-96fc-7f01" name="Fireball" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8554,7 +8570,7 @@ A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">After a spell from the Lore of Shadow is successfully cast and resolved, the casting Wizard can choose to immediately make a move (but not march) using Fly (10) as if it were the Remaining Moves sub-phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">After a spell from the Lore of Shadow is successfully cast and resolved, the caster can choose to immediately make a normal move using the Fly special rule as if it were the Remaining Moves sub-phase. The Fly move is equal to 10 minus the model&apos;s Line of Sight value.</characteristic>
       </characteristics>
     </profile>
     <profile id="89e2-f22c-758d-a9d7" name="Melkoth&apos;s Mystifying Miasma" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8572,16 +8588,16 @@ A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Lore of Death spell is successfully cast, roll a D6 for each unsaved wound caused by the spell. For each 6+ rolled on these additional dice, the Wizard immediately adds a dice to their army&apos;s power pool (to a maximum of +3 dice per spell).</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Lore of Death spell is successfully cast, roll a D6 for each unsaved wound caused by the spell this turn. For each 6+ rolled on these additional dice, the Wizard immediately adds a dice to their army&apos;s power pool (to a maximum of +3 dice per spell).</characteristic>
       </characteristics>
     </profile>
     <profile id="a540-a939-e10c-27e0" name="Spirit Leech" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy Monstrous Creature, Monster or character (even in a unit). Both caster and target roll a D6 and add their respective Leadership values. If the caster scores higher, the target suffers a -1 penalty to their Strength and Toughness for the remainder of the battle.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy Monstrous Creature, Monster or character (even in a unit). Both caster and target roll a D6 and add their respective Leadership values. For each point the caster scores higher, the target suffers a -1 penalty to their Strength and Toughness (to a minimum of 1) for the remainder of the battle. </characteristic>
       </characteristics>
     </profile>
     <profile id="e634-3287-c556-2b80" name="Awakening of the Wood" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8632,10 +8648,10 @@ A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain 
     <profile id="d667-970a-a36d-c1de" name="Comet of Casandora" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">36&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place a suitable marker over the exact spot affected. Once cast, the comet cannot be dispelled. For as long as the spell lasts, the player rolls a D6 at the start of each player&apos;s following Magic phase. On a score of 1-3 nothing happens, but place another marker on the first. On the score of a 4-6 the comet strikes the spot. All units from either side that are within 2D6&quot; of the marker takes 2D6 Strength 4 Hits. Add the number of markers on the comet to the distance, hits and Strength. After the comet has struck, the markers are removed and the spell ends.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place a suitable marker over the target. Once cast, the comet cannot be dispelled. For as long as the spell lasts, the player rolls a D6 at the start of each player&apos;s following Magic phase. On a score of 1-3 nothing happens, but place another marker on the first. On the score of a 4-6 the comet strikes the spot. All units from either side that are within 2D6&quot; of the marker takes 2D6 Strength 4 Hits. Add the number of markers on the comet to the distance, hits and Strength. After the comet has struck, the markers are removed and the spell ends.</characteristic>
       </characteristics>
     </profile>
     <profile id="be0a-428f-10cd-647c" name="Curse of the Midnight Wind" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8677,10 +8693,11 @@ A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain 
     <profile id="77af-a090-ba85-99ce" name="Flame Storm" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within 18&quot; of the Wizard – it then moves D6&quot; in a random direction determined by the scatter dice. All models touched by the template from its starting point to its end point suffer a Strength 4 hit.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Small round template.
+Once placed, the template moves D6&quot; in a random direction determined by the scatter dice. All models touched by the template from its starting point to its end point suffer a Strength 4 hit.  </characteristic>
       </characteristics>
     </profile>
     <profile id="c40b-1df6-0cc6-5d0e" name="Flaming Sword of Rhuin" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8761,8 +8778,7 @@ A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target unit (except mounts) use their Leadership instead of Strength when rolling To Wound with all close combat attacks (any Strength bonuses from weapons are ignored).
-Armour saves are taken and modified by the Attack&apos;s actual Strength value.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target unit (except mounts) gain the Magical Attacks special rule and use their Leadership instead of Strength when rolling To Wound with all close combat attacks (any Strength bonuses from weapons are ignored). Armour saves are taken and modified by the Attack&apos;s actual Strength value.</characteristic>
       </characteristics>
     </profile>
     <profile id="639d-9501-0008-8def" name="Pann&apos;s Impenetrable Pelt" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8796,10 +8812,11 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
     <profile id="ecf9-c3f1-b183-c310" name="Pit of Shades" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within range – it then scatters D3&quot;. All models under the template must roll a D6 per Wound on their profile – for each roll of a 4+ they suffer a Wound which Ignores Armour Saves and Regeneration.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Small round template.
+All models under the template must roll a D6 per Wound on their profile – for each roll of a 4+ they suffer a Wound which Ignores Armour Saves and Regeneration.</characteristic>
       </characteristics>
     </profile>
     <profile id="79e8-aec9-6d8b-246c" name="Plague of Rust" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8844,16 +8861,17 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It inflicts a single Strength 7 hit with the Ignores Armour Saves and Multiple Wounds (D6) special rules that penetrates ranks in the same manner as a shot from a Bolt Thrower.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It inflicts a single Strength 7 hit with the Ignores Armour Saves and Multiple Wounds (D6) special rules that penetrates ranks in the same manner as a shot from a bolt thrower.</characteristic>
       </characteristics>
     </profile>
     <profile id="3e41-8ba5-25c4-e17c" name="The Burning Head" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 12&quot; in length, with its starting point anywhere within 18&quot; from the caster. Each model in the way (determined using the line template) suffers a Strength 4 hit. A unit that suffers one or more casualties from the Burning Head must take a Panic test.</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Line template.
+Place it 12&quot; in length, with its starting point anywhere within 18&quot; from the caster&apos;s front arc. Each model in the way suffers a Strength 4 hit. A unit that suffers one or more casualties from the spell must take a Panic test</characteristic>
       </characteristics>
     </profile>
     <profile id="eaec-4553-445b-fdc7" name="The Caress of Laniph" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8871,16 +8889,17 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers a -1 penalty to its To Hit rolls with both missile and close combat attacks until the start of the caster&apos;s next Magic phase. In addition, the unit treats all terrain (other than Impassable Terrain) as Dangerous Terrain. Tests in terrain that is already Dangerous Terrain will fail the tests on a 1 or 2, rather than a 1.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers a -1 penalty to its To Hit rolls with both missile and close combat attacks until the start of the caster&apos;s next Magic phase. In addition, the unit treats all terrain (other than Impassable Terrain) as Dangerous Terrain. Models already in Dangerous Terrain counts as moving through Deadly Terrain. </characteristic>
       </characteristics>
     </profile>
     <profile id="4ceb-4804-7497-c952" name="The Dwellers Below" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template anywhere within 18&quot; of the Wizard – it then scatters D6&quot;. All models under the template must pass a Strength test per Wound on their profile or suffer a Wound which Ignores Armour Saves and Regeneration.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Large round template.
+All models under the template must pass a Strength test per Wound on their profile or suffer a Wound which Ignores Armour Saves and Regeneration.</characteristic>
       </characteristics>
     </profile>
     <profile id="9fd1-5afd-d90c-3fdf" name="The Enfeebling Foe" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8898,7 +8917,8 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). The target suffers a number of hits equal to the model&apos;s current number of Wounds. Each hit Wound on a 4+ with the Ignores Armour Saves special rule.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. Targets a single enemy model (even a character in a unit). While the spell is in 
+effect, the target suffers a number of hits equal to the model&apos;s current number of Wounds at the end of each of Magic phase. Each hit Wound on a 4+ with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="82d2-edc6-e10f-ac00" name="The Flock of Doom" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8913,10 +8933,11 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
     <profile id="e002-fb6a-9442-ebcf" name="The Penumbral Pendulum" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 18&quot; in length, directly away from the caster. Each model in the way (determined using the line template) suffer a Strength 10 Hit with the Multiple Wounds (D3) special rule.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Line template.
+Place it 18&quot; in length, directly away from the caster&apos;s front arc. Each model in the way suffers a Strength 10 Hit with the Multiple Wounds (D3) special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="754f-f31e-7ccf-8253" name="The Purple Sun of Xereus" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8934,7 +8955,7 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Is cast on a character, Monstrous Creature or Monster, which can be the Wizard itself. The target model (but not any mount) gains +3 Strength and +3 Attacks until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Is cast on a Character, Monstrous Creature or Monster, which can be the Wizard itself. The target model gains +3 Strength and +3 Attacks until the start of the caster&apos;s next Magic phase. If a Character is mounted, you must choose if the rider or the mount is affected by the spell. For other ridden Monsters, the riders are never affected. </characteristic>
       </characteristics>
     </profile>
     <profile id="92a3-5235-890d-9fd3" name="The Speed of Light" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8963,13 +8984,12 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Is cast upon the Wizard. While the spell is in effect, the Wizard&apos;s castings of the following spells have the benefits given below instead of their normal values (it does not change the effects of spells that have already been cast):
 
-
 • Earth Blood grants Regeneration (5+).
 • Shield of Thorns causes Strength 4 hits.
 • Awakening of the Wood Hits causes Strength 5 hits.
 • Flesh to Stone grants +2 Toughness.
 • The Cloak of Dain ignores the first D6 hits.
-• Verdant Apotheosis restores D3+1 Wounds.
+• Gift of Life restores D3+1 Wounds.
 • Barkskin grants Natural Armour (4+).
 • Regrowth restores 2D6 Wound&apos;s worth of models.</characteristic>
       </characteristics>
@@ -9099,10 +9119,10 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
     <profile id="0946-a485-a467-18a8" name="Hunter&apos;s Moons" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment aura</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All friendly units in range gain the Swiftstride special rule and may re-roll any failed charge or pursuit roll until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All affected units gain the Swiftstride special rule and may re-roll any failed charge or pursuit roll until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="f3f3-e999-3138-089b" name="The Vengeful Hood" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9111,7 +9131,7 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains a Ward Save (6+) in close combat until the start of the caster&apos;s next Magic phase. For each successful Ward Save roll of 6, the attacking model/unit suffers a Wound themselves (saves taken as normal using the Strength of the attacking model).</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Magical Ward (6+) special rule in close combat until the start of the caster&apos;s next Magic phase. For each successful Magical Ward save roll of 6, the attacking model/unit suffers a Wound themselves which Ignores Armour Saves.</characteristic>
       </characteristics>
     </profile>
     <profile id="b430-484b-7538-1e90" name="The Beast Cowers" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9120,7 +9140,8 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If the target contains any models mentioned in Wildheart, those models suffer -1 to their Attack characteristic in close combat (only mounts are affected in the case of ridden models) and cannot declare charges or pursue until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If the target contains any models mentioned in Wildheart, those models suffer -1 to their Attack characteristic in close 
+combat (only mounts are affected in the case of ridden models) and cannot voluntarily move until the start of the caster&apos;s next Magic phase.  </characteristic>
       </characteristics>
     </profile>
     <profile id="12de-92c8-df66-6049" name="The Wolf Hunts" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9171,10 +9192,11 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
     <profile id="7d75-f077-ed39-2c85" name="Fiery Blast" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within 24&quot; of the Wizard – it then scatters D3&quot;. All models under the template suffer a Strength 4 hit.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Small round template.
+All models under the template suffer a Strength 4 hit. </characteristic>
       </characteristics>
     </profile>
     <profile id="7c8c-f08a-882a-b54e" name="Conflagration of Doom" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9238,9 +9260,9 @@ Piercing (1) special rule.</characteristic>
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a 4+ Ward Save until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains the Magical Ward (4+) special rule until the start of the caster&apos;s next Magic phase. </characteristic>
       </characteristics>
     </profile>
     <profile id="84c6-faad-709b-99ad" name="Quicksilver Sword" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9258,16 +9280,16 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Lore of Heavens is successfully cast, roll a D6; on a 4+ the Wizard can re-roll one dice to either change the casting result (including a miscast) or the number of Hits inflicted by a spell when they are casting further spells for the remainder of this Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Lore of Heavens spell is successfully cast, roll a D6; on a 4+ the Wizard can re-roll one dice to either change the casting result (including a miscast) or the number of Hits inflicted by a spell when they are casting further spells for the remainder of this Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="5a3f-0100-e85d-447d" name="Star Tides Ebb" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">hex area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Cast on the Wizard itself. Until the start of the caster&apos;s next magic phase, all spells that are not from the Lore of Heavens suffer a -2 penalty to cast within 24&quot; of the Wizard.</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next magic phase, all spells within range that are not from the Lore of Heavens suffer a -2 casting penalty. </characteristic>
       </characteristics>
     </profile>
     <profile id="7288-0be2-7efc-3db7" name="Cerulean Shield" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9276,7 +9298,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains a Ward Save (4+) against non-magical missile attacks until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Magical Ward (4+) special rule against non-magical missile attacks until the start of the caster&apos;s next Magic phase. </characteristic>
       </characteristics>
     </profile>
     <profile id="dec0-3cf7-c1ed-4428" name="Sign of Amul" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9285,14 +9307,14 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Cast on the Wizard itself. You may re-roll any 1 of your dice until the start of the caster&apos;s next magic phase. This bonus is lost if the Wizard is slain before the re-roll is used.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Cast on the Wizard itself. You may re-roll any one of your dice until the start of the caster&apos;s next magic phase. This bonus is lost if the Wizard is slain before the re-roll is used.</characteristic>
       </characteristics>
     </profile>
     <profile id="3ef9-0ce4-239d-2baf" name="Crystal Prison" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. Choose a single enemy character, even in a unit. While the spell is in effect, the target cannot be harmed by any means and is Unbreakable. However, they also cannot move, shoot, fight in close combat or cast spells. If they are in a unit, the unit may still break and flee as normal, while the target remains in combat.</characteristic>
       </characteristics>
@@ -9312,7 +9334,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is immediately picked up and removed from the battlefield. The next time a friendly Wizard casts this spell, the unit may emerge anywhere on the table, just like a summoning spell. If the unit has not emerged by the end of the game, it is removed as casualties.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is immediately picked up and removed from the battlefield. The unit will then emerge anywhere on the table at the start of your next Magic phase, just like a summoning spell.</characteristic>
       </characteristics>
     </profile>
     <profile id="54d1-69d4-e6f7-e475" name="Storm of Chronos" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9390,10 +9412,11 @@ Piercing (1) special rule.</characteristic>
     <profile id="3170-f07e-bb17-2707" name="Pillar of Radiance" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template anywhere within 24&quot; of the Wizard – it then scatters D6&quot;. All models under the template suffer a Strength 4 hit.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Large round template.
+All models under the template suffer a Strength 4 hit. </characteristic>
       </characteristics>
     </profile>
     <profile id="c012-31a2-4d4b-bc09" name="The Cloak of Dain" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9408,10 +9431,10 @@ Piercing (1) special rule.</characteristic>
     <profile id="a4ee-d6b5-362f-3b38" name="Leaf Fall" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment aura</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Cast on the Wizard itself. All missile attacks targeted against friendly units within 6&quot; of the caster suffer a -1 To Hit penalty until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All missile attacks targeting the affected units suffer a -1 To Hit penalty until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="6c55-6914-3b3c-b2af" name="Verdant Apotheosis" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9472,27 +9495,27 @@ Piercing (1) special rule.</characteristic>
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">While the spell is in effect, the target must move straight forward using the Random Movement (2D6) special rule.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target must move straight forward using the Random Movement (2D6) special rule. </characteristic>
       </characteristics>
     </profile>
     <profile id="987e-866a-ad4f-867a" name="Horn of Andar" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex aura</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all enemy units within 12&quot;. Each target suffers a -1 penalty to their Leadership until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each affected unit suffers a -1 penalty to its Leadership until the start of the caster&apos;s next Magic phase. </characteristic>
       </characteristics>
     </profile>
     <profile id="ef89-e72e-f79b-7bc3" name="Crown of Taidron" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex aura</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all enemy units within 12&quot;. Each target suffers D6 Strength 4 Hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each affected unit suffers D6 Strength 4 Hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="0c62-33f3-af2a-6b0f" name="Unseen Lurker" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9528,7 +9551,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, any model that is slain in close combat may immediately make an additional Attack, even if they have already attacked this turn.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target unit gains the Fear special rule. In addition, any model in the target unit that is slain in close combat may immediately make an additional Attack, even if they have already attacked this turn.</characteristic>
       </characteristics>
     </profile>
     <profile id="1fea-7441-0472-b626" name="The Chocking Foe" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9552,10 +9575,10 @@ Piercing (1) special rule.</characteristic>
     <profile id="90cc-1209-6eb5-4598" name="Drain Life" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage aura</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all enemy units within 12&quot;. Each target suffers D6 Strength 2 Hits with the Ignores Armour Saves special rule. For every unsaved To Wound roll of 6, the caster may restore 1 Wound lost earlier during the game.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each affected unit suffers D6 Strength 2 Hits with the Ignores Armour Saves special rule. For every unsaved To Wound roll of 6, the caster may restore 1 Wound lost earlier during the game. </characteristic>
       </characteristics>
     </profile>
     <profile id="c72d-5c12-7c36-3e9e" name="Scythe of Shyish" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9563,17 +9586,18 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each model in the unit&apos;s front rank suffers a Strength 5 Hit (&quot;Look Out Sir!&quot; may still be used).</characteristic>
       </characteristics>
     </profile>
     <profile id="fdd9-7a9d-0b64-eabb" name="Ashes and Dust" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within 18&quot; of the Wizard – it then scatters D3&quot;. All models under the template suffer a Strength 3 hit with the Ignores Armour Saves special rule.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Small round template.
+All models under the template must roll a D6 per Wound on their profile – for each roll of a 4+ they suffer a Wound which Ignores Armour Saves and Regeneration.</characteristic>
       </characteristics>
     </profile>
     <profile name="Warmachine" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="80b1-ed85-bde1-fa07">
