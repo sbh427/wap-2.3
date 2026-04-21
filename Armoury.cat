@@ -1167,6 +1167,7 @@ Mighty Blow (1), when chosen to use two handend. (Does not apply towards Infantr
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6b94-ec28-940c-54ad" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2c27-0dc3-2d98-ba76" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="58ba-ccde-541f-04ba" includeChildSelections="false"/>
           </constraints>
           <profiles>
             <profile name="Boots of Flight" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="8f84-e750-605e-17fb">
@@ -1178,6 +1179,45 @@ Mighty Blow (1), when chosen to use two handend. (Does not apply towards Infantr
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="2c27-0dc3-2d98-ba76"/>
+                <modifier type="set" value="Infantry only" field="annotation"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" childName="War Machine" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" childName="Monster" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" childName="Monstrous Cavalry" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f98e-8d4f-7b1b-59cd" shared="true" includeChildSelections="true" childName="Monstrous Beasts" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" childName="Monstrous Creature" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" childName="Chariot" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1e5b-5ca1-fe5b-d82f" shared="true" includeChildSelections="true" childName="Chariot" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true" childName="Shrine" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true" childName="Swarm" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5c5d-6944-cd09-0db8" shared="true" includeChildSelections="true" childName="War Beast" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true" childName="Swarm"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" childName="Monster"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" childName="War Machine"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" childName="Monstrous Cavalry"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5c5d-6944-cd09-0db8" shared="true" includeChildSelections="true" childName="War Beast"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f98e-8d4f-7b1b-59cd" shared="true" includeChildSelections="true" childName="Monstrous Beasts"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" childName="Monstrous Creature"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" childName="Chariot"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1e5b-5ca1-fe5b-d82f" shared="true" includeChildSelections="true" childName="Chariot"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true" childName="Shrine"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true" childName="Swarm"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true" childName="Cavalry" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5fc5-b80a-115f-bca3" shared="true" includeChildSelections="true" childName="Monstrous Infantry" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true" childName="Cavalry"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5fc5-b80a-115f-bca3" shared="true" includeChildSelections="true" childName="Monstrous Infantry"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Potion of Foolhardiness" hidden="false" id="1a39-ee3f-58d4-f19f" collective="false" sortIndex="1">
           <constraints>
@@ -1283,11 +1323,29 @@ Mighty Blow (1), when chosen to use two handend. (Does not apply towards Infantr
                 <modifier type="set" value="Infantry, Monstrous Infantry or Cavalry only" field="annotation"/>
               </modifiers>
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true" childName="Cavalry" includeChildForces="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="22c9-1606-58f8-2e60" shared="true" includeChildSelections="true" childName="Infantry" includeChildForces="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5fc5-b80a-115f-bca3" shared="true" includeChildSelections="true" childName="Monstrous Infantry" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" childName="War Machine" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" childName="Monster" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" childName="Monstrous Cavalry" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f98e-8d4f-7b1b-59cd" shared="true" includeChildSelections="true" childName="Monstrous Beasts" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" childName="Monstrous Creature" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" childName="Chariot" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1e5b-5ca1-fe5b-d82f" shared="true" includeChildSelections="true" childName="Chariot" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true" childName="Shrine" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true" childName="Swarm" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5c5d-6944-cd09-0db8" shared="true" includeChildSelections="true" childName="War Beast" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true" childName="Swarm"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" childName="Monster"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" childName="War Machine"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" childName="Monstrous Cavalry"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5c5d-6944-cd09-0db8" shared="true" includeChildSelections="true" childName="War Beast"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f98e-8d4f-7b1b-59cd" shared="true" includeChildSelections="true" childName="Monstrous Beasts"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" childName="Monstrous Creature"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" childName="Chariot"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1e5b-5ca1-fe5b-d82f" shared="true" includeChildSelections="true" childName="Chariot"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true" childName="Shrine"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true" childName="Swarm"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2476,6 +2534,7 @@ Mighty Blow (1), when chosen to use two handend. (Does not apply towards Infantr
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a495-d1d9-4b92-cf0f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="00ce-69b4-4e2a-4d2a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="bedc-e507-395d-caa2" includeChildSelections="false"/>
           </constraints>
           <profiles>
             <profile name="Dawnstone" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="283b-bcb5-7a79-c1bb">
@@ -2487,6 +2546,41 @@ Mighty Blow (1), when chosen to use two handend. (Does not apply towards Infantr
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="00ce-69b4-4e2a-4d2a"/>
+                <modifier type="set" value="Infantry, Monstrous Infantry or Cavalry only" field="annotation"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" childName="War Machine" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" childName="Monster" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" childName="Monstrous Cavalry" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f98e-8d4f-7b1b-59cd" shared="true" includeChildSelections="true" childName="Monstrous Beasts" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" childName="Monstrous Creature" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" childName="Chariot" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1e5b-5ca1-fe5b-d82f" shared="true" includeChildSelections="true" childName="Chariot" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true" childName="Shrine" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true" childName="Swarm" includeChildForces="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5c5d-6944-cd09-0db8" shared="true" includeChildSelections="true" childName="War Beast" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true" childName="Swarm"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" childName="Monster"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" childName="War Machine"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" childName="Monstrous Cavalry"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5c5d-6944-cd09-0db8" shared="true" includeChildSelections="true" childName="War Beast"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f98e-8d4f-7b1b-59cd" shared="true" includeChildSelections="true" childName="Monstrous Beasts"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" childName="Monstrous Creature"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" childName="Chariot"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1e5b-5ca1-fe5b-d82f" shared="true" includeChildSelections="true" childName="Chariot"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true" childName="Shrine"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true" childName="Swarm"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
