@@ -3578,7 +3578,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b988-8d10-705c-5ffc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Gift of Life" id="3d66-3b6b-6dd0-48c6" hidden="false" targetId="6c55-6914-3b3c-b2af" type="profile"/>
+                <infoLink name="Verdant Apotheosis" id="3d66-3b6b-6dd0-48c6" hidden="false" targetId="6c55-6914-3b3c-b2af" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
@@ -7610,6 +7610,12 @@
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="11. Unit Options" id="920d-8a41-44b9-c364" hidden="false"/>
+    <selectionEntryGroup name="5. Character Selection" id="405b-a985-02d7-eeff" hidden="false">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f4e-dd38-f94c-05f9" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90b6-fafd-be1d-9d36" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="6624-0b7b-c5b8-6397" name="Scouts" hidden="false">
@@ -8422,7 +8428,7 @@ Models moving through Deadly Terrain must take always Dangerous Terrain tests, 
 
 When a model marches, charges, flees, overruns or pursues into or through an area of Deadly Terrain, it fails the test on a roll of 1-2 rather than 1. 
 
-Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangerous Terrain as being Deadly Terrain. </description>
+Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangerous Terrain as being Deadly Terrain.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -8597,7 +8603,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy Monstrous Creature, Monster or character (even in a unit). Both caster and target roll a D6 and add their respective Leadership values. For each point the caster scores higher, the target suffers a -1 penalty to their Strength and Toughness (to a minimum of 1) for the remainder of the battle. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy Monstrous Creature, Monster or character (even in a unit). Both caster and target roll a D6 and add their respective Leadership values. For each point the caster scores higher, the target suffers a -1 penalty to their Strength and Toughness (to a minimum of 1) for the remainder of the battle.</characteristic>
       </characteristics>
     </profile>
     <profile id="e634-3287-c556-2b80" name="Awakening of the Wood" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8697,7 +8703,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Small round template.
-Once placed, the template moves D6&quot; in a random direction determined by the scatter dice. All models touched by the template from its starting point to its end point suffer a Strength 4 hit.  </characteristic>
+Once placed, the template moves D6&quot; in a random direction determined by the scatter dice. All models touched by the template from its starting point to its end point suffer a Strength 4 hit.</characteristic>
       </characteristics>
     </profile>
     <profile id="c40b-1df6-0cc6-5d0e" name="Flaming Sword of Rhuin" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8889,7 +8895,7 @@ Place it 12&quot; in length, with its starting point anywhere within 18&quot; f
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers a -1 penalty to its To Hit rolls with both missile and close combat attacks until the start of the caster&apos;s next Magic phase. In addition, the unit treats all terrain (other than Impassable Terrain) as Dangerous Terrain. Models already in Dangerous Terrain counts as moving through Deadly Terrain. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers a -1 penalty to its To Hit rolls with both missile and close combat attacks until the start of the caster&apos;s next Magic phase. In addition, the unit treats all terrain (other than Impassable Terrain) as Dangerous Terrain. Models already in Dangerous Terrain counts as moving through Deadly Terrain.</characteristic>
       </characteristics>
     </profile>
     <profile id="4ceb-4804-7497-c952" name="The Dwellers Below" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8955,7 +8961,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Is cast on a Character, Monstrous Creature or Monster, which can be the Wizard itself. The target model gains +3 Strength and +3 Attacks until the start of the caster&apos;s next Magic phase. If a Character is mounted, you must choose if the rider or the mount is affected by the spell. For other ridden Monsters, the riders are never affected. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Is cast on a Character, Monstrous Creature or Monster, which can be the Wizard itself. The target model gains +3 Strength and +3 Attacks until the start of the caster&apos;s next Magic phase. If a Character is mounted, you must choose if the rider or the mount is affected by the spell. For other ridden Monsters, the riders are never affected.</characteristic>
       </characteristics>
     </profile>
     <profile id="92a3-5235-890d-9fd3" name="The Speed of Light" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9141,7 +9147,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If the target contains any models mentioned in Wildheart, those models suffer -1 to their Attack characteristic in close 
-combat (only mounts are affected in the case of ridden models) and cannot voluntarily move until the start of the caster&apos;s next Magic phase.  </characteristic>
+combat (only mounts are affected in the case of ridden models) and cannot voluntarily move until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="12de-92c8-df66-6049" name="The Wolf Hunts" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9196,7 +9202,7 @@ combat (only mounts are affected in the case of ridden models) and cannot volun
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Small round template.
-All models under the template suffer a Strength 4 hit. </characteristic>
+All models under the template suffer a Strength 4 hit.</characteristic>
       </characteristics>
     </profile>
     <profile id="7c8c-f08a-882a-b54e" name="Conflagration of Doom" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9262,7 +9268,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains the Magical Ward (4+) special rule until the start of the caster&apos;s next Magic phase. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains the Magical Ward (4+) special rule until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="84c6-faad-709b-99ad" name="Quicksilver Sword" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9289,7 +9295,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">hex area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next magic phase, all spells within range that are not from the Lore of Heavens suffer a -2 casting penalty. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next magic phase, all spells within range that are not from the Lore of Heavens suffer a -2 casting penalty.</characteristic>
       </characteristics>
     </profile>
     <profile id="7288-0be2-7efc-3db7" name="Cerulean Shield" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9298,7 +9304,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Magical Ward (4+) special rule against non-magical missile attacks until the start of the caster&apos;s next Magic phase. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Magical Ward (4+) special rule against non-magical missile attacks until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="dec0-3cf7-c1ed-4428" name="Sign of Amul" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9416,7 +9422,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Large round template.
-All models under the template suffer a Strength 4 hit. </characteristic>
+All models under the template suffer a Strength 4 hit.</characteristic>
       </characteristics>
     </profile>
     <profile id="c012-31a2-4d4b-bc09" name="The Cloak of Dain" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9497,7 +9503,7 @@ All models under the template suffer a Strength 4 hit. </characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target must move straight forward using the Random Movement (2D6) special rule. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target must move straight forward using the Random Movement (2D6) special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="987e-866a-ad4f-867a" name="Horn of Andar" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9506,7 +9512,7 @@ All models under the template suffer a Strength 4 hit. </characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex aura</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each affected unit suffers a -1 penalty to its Leadership until the start of the caster&apos;s next Magic phase. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each affected unit suffers a -1 penalty to its Leadership until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="ef89-e72e-f79b-7bc3" name="Crown of Taidron" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -9578,7 +9584,7 @@ All models under the template suffer a Strength 4 hit. </characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage aura</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each affected unit suffers D6 Strength 2 Hits with the Ignores Armour Saves special rule. For every unsaved To Wound roll of 6, the caster may restore 1 Wound lost earlier during the game. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each affected unit suffers D6 Strength 2 Hits with the Ignores Armour Saves special rule. For every unsaved To Wound roll of 6, the caster may restore 1 Wound lost earlier during the game.</characteristic>
       </characteristics>
     </profile>
     <profile id="c72d-5c12-7c36-3e9e" name="Scythe of Shyish" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
