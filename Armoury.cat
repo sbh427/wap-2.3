@@ -1917,9 +1917,8 @@ Note that they may not choose any Arcane Items.</characteristic>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e8bf-02bf-4af7-5efa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Enchanted shield" hidden="false" id="eea1-981c-1270-d7ba" collective="false" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Enchanted Shield" hidden="false" id="eea1-981c-1270-d7ba" collective="false" sortIndex="3">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="20da-3f95-f54e-9d08" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="21eb-a66f-cd50-6bda" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <costs>
@@ -1931,7 +1930,7 @@ Note that they may not choose any Arcane Items.</characteristic>
           <infoLinks>
             <infoLink name="Shield" id="66e9-6798-b600-7613" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
               <modifiers>
-                <modifier type="set" value="Enchanted shield" field="annotation"/>
+                <modifier type="set" value="Enchanted Shield" field="annotation"/>
                 <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
                 <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
               </modifiers>
@@ -1950,13 +1949,14 @@ Note that they may not choose any Arcane Items.</characteristic>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2219-1a5b-1941-a8c8" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0b54-e129-3514-3d95" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b3e6-9aab-6725-1438" includeChildSelections="false"/>
           </constraints>
           <profiles>
             <profile name="Trickster&apos;s Helm" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="de13-7bdf-fcdf-ad13">
               <characteristics>
                 <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
                 <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
-                <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Model on foot only. Any successful roll to wound made against the wearer of the Trickster&apos;s Helm must be re-rolled.</characteristic>
+                <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Any successful roll To Wound made against the wearer of the Trickster&apos;s Helm must be re-rolled</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -1964,22 +1964,29 @@ Note that they may not choose any Arcane Items.</characteristic>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
           <modifiers>
-            <modifier type="add" value="{this} is not allowed if mounted" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="bdd6-bac4-600a-9d71" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="0b54-e129-3514-3d95"/>
+                <modifier type="set" value="Infantry, Monstrous Infantry or Cavalry only" field="annotation"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true" childName="Cavalry" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="22c9-1606-58f8-2e60" shared="true" includeChildSelections="true" childName="Infantry" includeChildForces="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5fc5-b80a-115f-bca3" shared="true" includeChildSelections="true" childName="Monstrous Infantry" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Dragonhelm" hidden="false" id="4808-e83d-ed68-7a23" collective="false" sortIndex="2">
           <constraints>
@@ -2006,35 +2013,7 @@ Note that they may not choose any Arcane Items.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Shield of Ptolos" hidden="false" id="9a5c-0e4d-2974-23d9" collective="false" sortIndex="9">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8732-7946-be62-b114" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="55ab-bfc9-ab83-2670" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <categoryLinks>
-            <categoryLink name="Handheld Armour" hidden="false" id="fa3d-93e1-7d7b-2963" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
-          </categoryLinks>
-          <infoLinks>
-            <infoLink name="Shield" id="de18-d36f-17e2-aa3e" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
-              <modifiers>
-                <modifier type="set" value="Shield of Ptolos" field="annotation"/>
-                <modifier type="set" value="1+" field="97ea-ecf7-8d24-b2ca"/>
-              </modifiers>
-            </infoLink>
-            <infoLink name="Parry (shield)" id="10fe-e7d8-3737-ebab" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0210-637d-ff12-a760" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Glittering Scales" hidden="false" id="fdc2-057c-715c-557a" collective="false" sortIndex="10">
+        <selectionEntry type="upgrade" import="true" name="Glittering Scales" hidden="false" id="fdc2-057c-715c-557a" collective="false" sortIndex="12">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0c85-0dcc-4c2d-d783" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="39f5-e577-e363-e6d3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -2058,8 +2037,6 @@ Note that they may not choose any Arcane Items.</characteristic>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2069,51 +2046,8 @@ Note that they may not choose any Arcane Items.</characteristic>
             <categoryLink name="Suits of Armour" hidden="false" id="0fd9-ec4f-5d93-a0ac" targetId="9a61-618b-519a-807c" primary="false"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Spellshield" hidden="false" id="d125-45e5-61e6-0926" collective="false" sortIndex="6">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6e48-aee7-31cd-f010" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="710a-3a50-aac9-4488" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Shield" id="ebee-eee3-db7f-efe6" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
-              <modifiers>
-                <modifier type="set" value="Spellshield" field="annotation"/>
-                <modifier type="append" value="The bearer gains Magic Resistance (1)." field="ff58-91e4-84d7-e6e4" join="
-
-"/>
-              </modifiers>
-            </infoLink>
-            <infoLink name="Parry (shield)" id="354c-9745-586c-bfa8" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
-            <infoLink name="Magic Resistance" id="d2d0-7286-deb9-b495" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-              <modifiers>
-                <modifier type="set" value="Spellshield" field="name"/>
-                <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
-              </modifiers>
-            </infoLink>
-            <infoLink name="Magic Resistance" id="d193-ed52-c647-36d0" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-              <modifiers>
-                <modifier type="set" value="Spellshield" field="name"/>
-                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0210-637d-ff12-a760" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <categoryLinks>
-            <categoryLink name="Handheld Armour" hidden="false" id="02af-9676-73e5-74ef" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
-          </categoryLinks>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Charmed Shield" hidden="false" id="8ceb-acc7-6436-3aef" collective="false" sortIndex="1">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f84b-8692-9712-1937" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1150-ec24-0bd8-f228" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <costs>
@@ -2123,7 +2057,7 @@ Note that they may not choose any Arcane Items.</characteristic>
             <infoLink name="Shield" id="3646-bd03-833f-ddff" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
               <modifiers>
                 <modifier type="set" value="Charmed Shield" field="annotation"/>
-                <modifier type="append" value="One use only. The first hit suffered by the bearer of the Charmed Shield is ignored on a roll of 2+." field="ff58-91e4-84d7-e6e4" join="
+                <modifier type="append" value="One use only. The first hit suffered by the bearer is ignored on a roll of 2+." field="ff58-91e4-84d7-e6e4" join="
 
 "/>
               </modifiers>
@@ -2141,13 +2075,13 @@ Note that they may not choose any Arcane Items.</characteristic>
             <categoryLink name="Handheld Armour" hidden="false" id="8d07-05b5-6abe-365d" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Gambler&apos;s Armour" hidden="false" id="ecd0-0bdb-3b07-1502" collective="false" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Gambler&apos;s Armour" hidden="false" id="ecd0-0bdb-3b07-1502" collective="false" sortIndex="8">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a389-51e9-f53f-20f0" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4d37-d30a-c1c3-d45a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="15"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
           <infoLinks>
             <infoLink name="Light Armour" id="e50f-5650-7bd5-dfa8" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
@@ -2171,8 +2105,6 @@ Note that they may not choose any Arcane Items.</characteristic>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2194,7 +2126,7 @@ Note that they may not choose any Arcane Items.</characteristic>
             <infoLink name="Medium Armour" id="0732-7763-ea52-ccc0" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
               <modifiers>
                 <modifier type="set" value="Armour of Fortune" field="annotation"/>
-                <modifier type="append" value="The wearer gains a Ward Save (5+)." field="ff58-91e4-84d7-e6e4" join="
+                <modifier type="append" value="The wearer gains a Magical Ward (5+)." field="ff58-91e4-84d7-e6e4" join="
 
 "/>
               </modifiers>
@@ -2212,7 +2144,6 @@ Note that they may not choose any Arcane Items.</characteristic>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2222,13 +2153,13 @@ Note that they may not choose any Arcane Items.</characteristic>
             <categoryLink name="Suits of Armour" hidden="false" id="453e-6708-eb58-ffb2" targetId="9a61-618b-519a-807c" primary="false"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Armour of Destiny" hidden="false" id="07d9-a853-ebb5-839c" collective="false" sortIndex="15">
+        <selectionEntry type="upgrade" import="true" name="Armour of Destiny" hidden="false" id="07d9-a853-ebb5-839c" collective="false" sortIndex="17">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d4ac-251a-e143-cdca" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f2fa-2ccf-29b3-5c2d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="50"/>
+            <cost name="pts" typeId="points" value="60"/>
           </costs>
           <categoryLinks>
             <categoryLink name="Suits of Armour" hidden="false" id="a243-65b6-f9f2-ef88" targetId="9a61-618b-519a-807c" primary="false"/>
@@ -2237,7 +2168,7 @@ Note that they may not choose any Arcane Items.</characteristic>
             <infoLink name="Heavy Armour" id="2842-d069-d895-7fab" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
               <modifiers>
                 <modifier type="set" value="Armour of Destiny" field="annotation"/>
-                <modifier type="append" value="The wearer gains a Ward Save (4+)." field="ff58-91e4-84d7-e6e4" join="
+                <modifier type="append" value="The wearer gains a Magical Ward (4+)." field="ff58-91e4-84d7-e6e4" join="
 
 "/>
               </modifiers>
@@ -2257,13 +2188,13 @@ Note that they may not choose any Arcane Items.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Armour of Resilience" hidden="false" id="a039-9655-2c7a-f788" collective="false" sortIndex="12">
+        <selectionEntry type="upgrade" import="true" name="Armour of Resilience" hidden="false" id="a039-9655-2c7a-f788" collective="false" sortIndex="15">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="24f2-1ce0-8c35-dd8a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2af3-2b92-e65d-0d3a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="40"/>
           </costs>
           <infoLinks>
             <infoLink name="Heavy Armour" id="1e18-b66f-6338-274b" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
@@ -2286,21 +2217,18 @@ Note that they may not choose any Arcane Items.</characteristic>
             <categoryLink name="Suits of Armour" hidden="false" id="ff2f-7a9e-5aa5-839c" targetId="9a61-618b-519a-807c" primary="false"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Armour of Silvered Steel" hidden="false" id="472c-90d3-fd34-9c83" collective="false" sortIndex="11">
+        <selectionEntry type="upgrade" import="true" name="Armour of Silvered Steel" hidden="false" id="472c-90d3-fd34-9c83" collective="false" sortIndex="16">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="04c8-4736-2d9b-20b7" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1b8f-25f0-ab4b-2d51" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="40"/>
           </costs>
           <infoLinks>
             <infoLink name="Heavy Armour" id="c32f-6fdd-1587-5c86" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
               <modifiers>
                 <modifier type="set" value="Armour of Silvered Steel" field="annotation"/>
-                <modifier type="append" value="This armour save cannot be improved by any means." field="ff58-91e4-84d7-e6e4" join="
-
-"/>
                 <modifier type="set" value="2+" field="168d-1cc2-66f3-e766"/>
                 <modifier type="set" value="2+" field="97ea-ecf7-8d24-b2ca"/>
               </modifiers>
@@ -2317,32 +2245,7 @@ Note that they may not choose any Arcane Items.</characteristic>
             <categoryLink name="Suits of Armour" hidden="false" id="327d-9f2e-bd37-75bb" targetId="9a61-618b-519a-807c" primary="false"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Helm of Discord" hidden="false" id="c6cc-112f-6b7f-8fd9" collective="false" sortIndex="8">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0238-f99e-92e2-c5e2" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fb84-d683-78c3-efa7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Helm of Discord" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="225f-e811-fae5-e4e7">
-              <characteristics>
-                <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
-                <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
-                <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">At the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the victim cannot make attacks and is hit automatically in this Close Combat round.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Shield of the Warrior True" hidden="false" id="dc0f-7c28-57c7-7a29" collective="false" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Shield of the Warrior True" hidden="false" id="dc0f-7c28-57c7-7a29" collective="false" sortIndex="4">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c005-eba9-0a20-7112" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="82eb-174d-8982-cae3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -2363,8 +2266,7 @@ Note that they may not choose any Arcane Items.</characteristic>
             <infoLink name="Magical Ward" id="c313-6a67-9822-4158" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
               <modifiers>
                 <modifier type="set" value="Shield of the Warrior True" field="name"/>
-                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
-                <modifier type="set" value="Only against  missile attacks. " field="84ea-8900-474d-6201"/>
+                <modifier type="set" value="5+, against missile attacks. " field="bdf9-d73e-e13b-b0ce"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -2401,6 +2303,68 @@ Note that they may not choose any Arcane Items.</characteristic>
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
               </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Alleviating Armour" hidden="false" id="99c8-5073-95b1-b254" sortIndex="6">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="84fa-092b-b8d0-c733" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b8d-3632-be14-3a26" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Medium Armour" id="b65b-45af-71c0-7555" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+              <modifiers>
+                <modifier type="set" value="Regeneration (6+)" field="ff58-91e4-84d7-e6e4"/>
+                <modifier type="set" value="Alleviating Armour" field="annotation"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Regeneration" id="8e0a-95a1-966d-0f83" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="Alleviating Armour" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Seamless Armour" hidden="false" id="eaa3-9a4b-35d7-4515" sortIndex="10">
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4af3-93c8-d77c-80c2" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f651-b7ae-62e7-0a30" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Medium Armour" id="a6d6-f207-907e-dc96" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+              <modifiers>
+                <modifier type="set" value="This armour ignores negative modifiers to its save, meaning it cannot be reduced below 5+. " field="ff58-91e4-84d7-e6e4"/>
+                <modifier type="set" value="Seamless Armour" field="annotation"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
