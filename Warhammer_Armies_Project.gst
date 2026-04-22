@@ -6977,9 +6977,9 @@
         <profile name="Wizard Level 1" typeId="0ce6-a5f9-6184-218d" typeName="Wizard" hidden="false" id="991e-cfb2-9471-2979">
           <characteristics>
             <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">1</characteristic>
-            <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">2</characteristic>
+            <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">1</characteristic>
             <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1</characteristic>
-            <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">2</characteristic>
+            <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">3</characteristic>
             <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">1</characteristic>
           </characteristics>
         </profile>
@@ -6993,9 +6993,9 @@
         <profile name="Wizard Level 2" typeId="0ce6-a5f9-6184-218d" typeName="Wizard" hidden="false" id="759e-d92c-ea8a-d68d">
           <characteristics>
             <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">2</characteristic>
-            <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">3</characteristic>
+            <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">2</characteristic>
             <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-2</characteristic>
-            <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">3</characteristic>
+            <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">4</characteristic>
             <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">1</characteristic>
           </characteristics>
         </profile>
@@ -7009,9 +7009,9 @@
         <profile name="Wizard Level 3" typeId="0ce6-a5f9-6184-218d" typeName="Wizard" hidden="false" id="f6a9-36b7-66f6-f8fb">
           <characteristics>
             <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">3</characteristic>
-            <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">4</characteristic>
+            <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">3</characteristic>
             <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-3</characteristic>
-            <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">4</characteristic>
+            <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">5</characteristic>
             <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">2</characteristic>
           </characteristics>
         </profile>
@@ -7025,9 +7025,9 @@
         <profile name="Wizard Level 4" typeId="0ce6-a5f9-6184-218d" typeName="Wizard" hidden="false" id="882a-d31d-8747-e383">
           <characteristics>
             <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">4</characteristic>
-            <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">5</characteristic>
+            <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">4</characteristic>
             <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-4</characteristic>
-            <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">5</characteristic>
+            <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">6</characteristic>
             <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">2</characteristic>
           </characteristics>
         </profile>
