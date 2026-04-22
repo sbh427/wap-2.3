@@ -8253,9 +8253,6 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.
       <description>If a model with this special rule is hit by a missile attack and is within 3&quot; of a friendly unit consisting of five or more rank and file models of the same troop type within 3&quot;, roll a D6. On a roll of 4+, the hit is 
 transferred to a model in the friendly unit (if there is more than one eligible unit within 3&quot;, the controlling player can decide which). Otherwise, the hit is resolved against the Weapon Team as normal.</description>
     </rule>
-    <rule name="Spawn of Slaanesh" id="4cca-bef4-9da0-60ee" hidden="false">
-      <description>A Spawn of Slaanesh rolls an additional D6 for their Random Movement result.</description>
-    </rule>
     <rule name="Storm Rage" id="9cd6-64c7-e7c5-4ef6" hidden="false">
       <description>Dragon Ogres have the Immunity (Lightning Attacks) special rule. In addition, if they are hit with a Lightning Attack, they immediately gain the Frenzy special rule.</description>
     </rule>
