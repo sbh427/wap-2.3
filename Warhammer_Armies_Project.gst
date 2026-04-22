@@ -1614,8 +1614,9 @@
     </selectionEntry>
     <selectionEntry id="9519-df8f-0af4-1995" name="Army Battle Standard" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9314-ebea-7d72-5d06" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="9314-ebea-7d72-5d06" type="max" automatic="true"/>
         <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="935b-efc3-2046-8bbe" type="max"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="5a0d-fc32-3313-3aee" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
         <infoLink name="The Battle Standard Bearer" id="f8c7-1bb6-935c-9d85" hidden="false" targetId="3f4a-7d94-afef-39ea" type="rule"/>
@@ -1924,7 +1925,7 @@
         </entryLink>
       </entryLinks>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b037-9419-a136-e1f4-min"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b037-9419-a136-e1f4-min" automatic="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b037-9419-a136-e1f4-max"/>
       </constraints>
     </selectionEntryGroup>
@@ -1946,8 +1947,8 @@
         </entryLink>
       </entryLinks>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8fb4-564a-87c3-1e3f-min"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fb4-564a-87c3-1e3f-max"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8fb4-564a-87c3-1e3f-min" automatic="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fb4-564a-87c3-1e3f-max" automatic="false"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="30. Secondary Weapon" id="9bf8-b456-dd2f-8826" hidden="false">
@@ -2198,6 +2199,13 @@
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f4e-dd38-f94c-05f9" includeChildSelections="false" automatic="true"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90b6-fafd-be1d-9d36" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="e8d9-6e70-0884-d2a7" hidden="false">
+      <comment>Empty</comment>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="066d-4bb7-ef46-a211" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ba0-5726-2665-d3aa"/>
       </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
