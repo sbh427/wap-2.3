@@ -875,7 +875,7 @@
         <categoryLink name="Configuration, Spells &amp; Rules" hidden="false" id="44c9-c94b-ee8e-3c1e" targetId="24a8-26fb-f384-3c30" primary="true"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Show used Lores" hidden="false" id="72b9-5bfb-763b-f3ad">
+    <selectionEntry type="upgrade" import="true" name="Used Lores of Magic" hidden="false" id="72b9-5bfb-763b-f3ad">
       <categoryLinks>
         <categoryLink name="Configuration, Spells &amp; Rules" hidden="false" id="1ae8-d5df-c11e-24af" targetId="24a8-26fb-f384-3c30" primary="true"/>
       </categoryLinks>
@@ -1334,7 +1334,7 @@
             <infoLink name="Curse of the Leper" id="e5b7-fa2e-ee50-79cf" hidden="false" type="profile" targetId="fbb1-8f89-5c13-7e2f"/>
             <infoLink name="Plague Squall" id="c44d-c59b-8d47-fcca" hidden="false" type="profile" targetId="a02a-991c-da4a-6222"/>
             <infoLink name="Rancid Visitations" id="fd13-1c30-6447-dd95" hidden="false" type="profile" targetId="c81e-308a-59a7-ef1f"/>
-            <infoLink name="Rot Bomb" id="9fc7-25f5-6d63-be6d" hidden="false" type="profile" targetId="fd54-b094-d95c-f818"/>
+            <infoLink name="Rotbomb" id="9fc7-25f5-6d63-be6d" hidden="false" type="profile" targetId="fd54-b094-d95c-f818"/>
             <infoLink name="Cloying Quagmire" id="6dcc-9c9b-b0c3-75fd" hidden="false" type="profile" targetId="39e4-e2c9-bd1e-90a9"/>
             <infoLink name="Fleshy Abundance" id="106a-5cab-a34d-ef69" hidden="false" type="profile" targetId="b1d7-463e-0d28-f772"/>
             <infoLink name="Grandfather Nurgle&apos;s Circle of Life" id="d77d-c901-0287-4fbc" hidden="false" type="profile" targetId="433b-f869-57e2-b297"/>
@@ -1829,6 +1829,16 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Tier 1 Character" hidden="false" id="bec4-b947-a609-684a">
+      <modifiers>
+        <modifier type="set" value="0" field="points" scope="root-entry"/>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Tier 2 Character" hidden="false" id="ffde-7800-8634-f4bc">
+      <modifiers>
+        <modifier type="set" value="0" field="points" scope="root-entry"/>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="50. Handheld Armour" id="9015-46da-282c-713d" hidden="false">
@@ -2197,16 +2207,94 @@
     <selectionEntryGroup name="11. Unit Options" id="920d-8a41-44b9-c364" hidden="false"/>
     <selectionEntryGroup name="5. Character Selection" id="405b-a985-02d7-eeff" hidden="false">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f4e-dd38-f94c-05f9" includeChildSelections="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9f4e-dd38-f94c-05f9" includeChildSelections="false" automatic="true"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="90b6-fafd-be1d-9d36" includeChildSelections="false"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="9f4e-dd38-f94c-05f9"/>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="60. Wizard Level" id="e8d9-6e70-0884-d2a7" hidden="false">
-      <comment>Empty</comment>
+      <comment>1-2 &amp; 3-4</comment>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="066d-4bb7-ef46-a211" automatic="true"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3ba0-5726-2665-d3aa"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="9d73-bb9d-5b5a-09c0" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3050-1288-ffab-5f50" includeChildSelections="false" automatic="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="bec4-b947-a609-684a" shared="true" childName="Tier 1 Character" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="3050-1288-ffab-5f50"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="59e5-e14c-7626-81fa" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a481-48cd-9ebb-72e3" includeChildSelections="false" automatic="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="bec4-b947-a609-684a" shared="true" childName="Tier 1 Character" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="a481-48cd-9ebb-72e3"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 3" hidden="false" id="02e2-b000-9e64-9431" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="72d7-592d-356e-3bf4" includeChildSelections="false" automatic="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="72d7-592d-356e-3bf4"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 4" hidden="false" id="9ca2-2f43-a6e8-553f" type="selectionEntry" targetId="5460-3929-58ef-71ba">
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bf03-15d7-b3e9-0719" includeChildSelections="false" automatic="true"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="0" field="bf03-15d7-b3e9-0719"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
@@ -4595,7 +4683,7 @@ All models under the template must roll a D6 per Wound on their profile – fo
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Wizard immediately gains D3+1 Power dice, that only they may use. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Wizard immediately gains D3+1 Power dice, that only they may use.</characteristic>
       </characteristics>
     </profile>
     <profile name="Bolt of Change" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1b9c-a354-14b0-c2ab">
@@ -4604,7 +4692,7 @@ All models under the template must roll a D6 per Wound on their profile – fo
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell inflicts a single Strength D6+4 hit with the Multiple Wounds (D3), Ignores Armour Saves and Flaming Attacks special rules, and then penetrates ranks in the same manner as a shot from a bolt thrower. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell inflicts a single Strength D6+4 hit with the Multiple Wounds (D3), Ignores Armour Saves and Flaming Attacks special rules, and then penetrates ranks in the same manner as a shot from a bolt thrower.</characteristic>
       </characteristics>
     </profile>
     <profile name="Bloated with Disease" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="09c4-8abf-48b3-8856">
@@ -4866,7 +4954,7 @@ All models under the template must roll a D6 per Wound on their profile – fo
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Large round template.
-All models hit by the template must pass a Weapon Skill test or suffer a Strength 4 hit. </characteristic>
+All models hit by the template must pass a Weapon Skill test or suffer a Strength 4 hit.</characteristic>
       </characteristics>
     </profile>
     <profile name="Doombolt of Kharaidon" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="83ce-8b5d-eef3-f48d" noindex="true">
@@ -4920,7 +5008,7 @@ All models hit by the template must pass a Weapon Skill test or suffer a Stren
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage aura</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each model (friend and foe, except the caster) within range (even if they are engaged in close combat) suffers a Strength 5 Hit. </characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each model (friend and foe, except the caster) within range (even if they are engaged in close combat) suffers a Strength 5 Hit.</characteristic>
       </characteristics>
     </profile>
     <profile name="Tenebrael Blades" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d49b-206b-19f8-c4df" noindex="true">

@@ -148,20 +148,7 @@
         <categoryLink name="Z Armour" hidden="false" id="bff2-b5be-61d6-39ee" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="90. Magic Items" hidden="false" id="491c-79d5-4ae8-a5db" type="selectionEntryGroup" targetId="e04a-3fa9-8b73-b6ff">
-          <modifiers>
-            <modifier type="increment" value="50" field="d2f8-929f-b3e7-a3f7">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="03d0-61a8-587c-23d2" shared="true" childName="Dreadmaster"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="100" field="d2f8-929f-b3e7-a3f7">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="99f6-97f2-3ad7-15b7" shared="true" childName="Dreadlord"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="90. Magic Items" hidden="false" id="491c-79d5-4ae8-a5db" type="selectionEntryGroup" targetId="e04a-3fa9-8b73-b6ff"/>
         <entryLink import="true" name="10. Character Options" hidden="false" id="b588-f53a-62d4-9457" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd2f-4fab-a408-3e98"/>
@@ -181,7 +168,7 @@
                     <modifier type="set" value="Dreadmaster only" field="annotation"/>
                   </modifiers>
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="03d0-61a8-587c-23d2" shared="true" childName="Dreadmaster" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="bec4-b947-a609-684a" shared="true" childName="Tier 1 Character" includeChildSelections="true"/>
                   </conditions>
                 </modifierGroup>
               </modifierGroups>
@@ -306,7 +293,7 @@
                     <modifier type="set" value="Dreadlord only" field="annotation"/>
                   </modifiers>
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="99f6-97f2-3ad7-15b7" shared="true" childName="Dreadlord" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
                   </conditions>
                 </modifierGroup>
               </modifierGroups>
@@ -325,7 +312,7 @@
                     <modifier type="set" value="Dreadlord only" field="annotation"/>
                   </modifiers>
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="99f6-97f2-3ad7-15b7" shared="true" childName="Dreadlord" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
                   </conditions>
                 </modifierGroup>
               </modifierGroups>
@@ -345,37 +332,14 @@
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="5. Character Selection" hidden="false" id="ea66-138b-9f48-88e0" type="selectionEntryGroup" targetId="405b-a985-02d7-eeff">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Dreadlord" hidden="false" id="99f6-97f2-3ad7-15b7" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="125"/>
-              </costs>
-              <profiles>
-                <profile name="Dreadlord" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6255-4d46-6277-b8b0">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">7</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">8</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dark Elf)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Tier 1 Character" hidden="false" id="f3be-278b-935b-2616" type="selectionEntry" targetId="bec4-b947-a609-684a">
               <modifiers>
-                <modifier type="set" value="Dreadlord" field="name" scope="root-entry"/>
+                <modifier type="set" value="Dreadmaster" field="name"/>
+                <modifier type="set" value="Dreadmaster" field="name" scope="root-entry"/>
               </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Dreadmaster" hidden="false" id="03d0-61a8-587c-23d2" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="55"/>
-              </costs>
               <profiles>
-                <profile name="Dreadmaster" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2455-63e5-b981-3d0c">
+                <profile name="Dreadmaster" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="8177-1727-6567-5710">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
@@ -390,11 +354,36 @@
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="55"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Tier 2 Character" hidden="false" id="98bb-da1c-7186-abbe" type="selectionEntry" targetId="ffde-7800-8634-f4bc">
               <modifiers>
-                <modifier type="set" value="Dreadmaster" field="name" scope="root-entry"/>
+                <modifier type="set" value="Dreadlord" field="name" scope="root-entry"/>
+                <modifier type="set" value="Dreadlord" field="name"/>
               </modifiers>
-            </selectionEntry>
-          </selectionEntries>
+              <profiles>
+                <profile name="Dreadlord" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1845-0085-a12c-3045">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">7</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">8</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dark Elf)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="125"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -432,20 +421,7 @@
             <entryLink import="true" name="Lore of Metal" hidden="false" id="d57a-3396-a094-fe29" type="selectionEntry" targetId="527f-89f1-1b92-a01d" sortIndex="8"/>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="90. Magic Items" hidden="false" id="e639-1f98-0147-64ee" type="selectionEntryGroup" targetId="e04a-3fa9-8b73-b6ff">
-          <modifiers>
-            <modifier type="increment" value="100" field="d2f8-929f-b3e7-a3f7">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a3a4-e21d-debe-4dd9" shared="true" childName="Supreme Sorceress"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="50" field="d2f8-929f-b3e7-a3f7">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="c393-b25b-e794-6a7b" shared="true" childName="Sorceress"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="90. Magic Items" hidden="false" id="e639-1f98-0147-64ee" type="selectionEntryGroup" targetId="e04a-3fa9-8b73-b6ff"/>
         <entryLink import="true" name="10. Character Options" hidden="false" id="9e8c-ff51-0f84-aa1a" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="70. Mount" hidden="false" id="92bc-2565-f9a6-10c3" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
@@ -478,7 +454,7 @@
                     <modifier type="set" value="Supreme Sorceress" field="annotation"/>
                   </modifiers>
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="a3a4-e21d-debe-4dd9" shared="true" childName="Supreme Sorceress" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
                   </conditions>
                 </modifierGroup>
               </modifierGroups>
@@ -497,7 +473,7 @@
                     <modifier type="set" value="Supreme Sorceress" field="annotation"/>
                   </modifiers>
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="a3a4-e21d-debe-4dd9" shared="true" childName="Supreme Sorceress" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
                   </conditions>
                 </modifierGroup>
               </modifierGroups>
@@ -508,11 +484,12 @@
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="5. Character Selection" hidden="false" id="2dcc-0203-fcf8-e31e" type="selectionEntryGroup" targetId="405b-a985-02d7-eeff">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Sorceress" hidden="false" id="c393-b25b-e794-6a7b" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="85"/>
-              </costs>
+          <entryLinks>
+            <entryLink import="true" name="Tier 1 Character" hidden="false" id="34d8-bac7-04bf-3e3e" type="selectionEntry" targetId="bec4-b947-a609-684a" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="Sorceress" field="name"/>
+                <modifier type="set" value="Sorceress" field="name" scope="root-entry"/>
+              </modifiers>
               <profiles>
                 <profile name="Sorceress" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6ad7-1b4e-9fe1-b074">
                   <characteristics>
@@ -529,14 +506,11 @@
                   </characteristics>
                 </profile>
               </profiles>
-              <modifiers>
-                <modifier type="set" value="Sorceress" field="name" scope="root-entry"/>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Supreme Sorceress" hidden="false" id="a3a4-e21d-debe-4dd9" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="185"/>
+                <cost name="pts" typeId="points" value="85"/>
               </costs>
+            </entryLink>
+            <entryLink import="true" name="Tier 2 Character" hidden="false" id="2ec8-ea26-d756-2c4d" type="selectionEntry" targetId="ffde-7800-8634-f4bc" sortIndex="2">
               <profiles>
                 <profile name="Supreme Sorceress" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1486-2614-c9e5-69be">
                   <characteristics>
@@ -555,56 +529,15 @@
               </profiles>
               <modifiers>
                 <modifier type="set" value="Supreme Sorceress" field="name" scope="root-entry"/>
+                <modifier type="set" value="Supreme Sorceress" field="name"/>
               </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-        </entryLink>
-        <entryLink import="true" name="60. Wizard Level" hidden="false" id="56ad-936d-302f-37ac" type="selectionEntryGroup" targetId="e8d9-6e70-0884-d2a7">
-          <entryLinks>
-            <entryLink import="true" name="Wizard Level 4" hidden="false" id="d5db-2cef-9dc9-bf4f" type="selectionEntry" targetId="5460-3929-58ef-71ba">
               <costs>
-                <cost name="pts" typeId="points" value="35"/>
+                <cost name="pts" typeId="points" value="185"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="a3a4-e21d-debe-4dd9" shared="true" childName="Supreme Sorceress"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Wizard Level 1" hidden="false" id="325c-2996-b894-3c0e" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="c393-b25b-e794-6a7b" shared="true" childName="Sorceress"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Wizard Level 2" hidden="false" id="68ba-38f5-e2b7-f7ec" type="selectionEntry" targetId="801a-bc0a-a767-61db">
-              <costs>
-                <cost name="pts" typeId="points" value="35"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="c393-b25b-e794-6a7b" shared="true" childName="Sorceress"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Wizard Level 3" hidden="false" id="83e8-4d76-dc7a-32b2" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="a3a4-e21d-debe-4dd9" shared="true" childName="Supreme Sorceress"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="56ad-936d-302f-37ac" type="selectionEntryGroup" targetId="e8d9-6e70-0884-d2a7"/>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="239c-2fef-67a6-6c12" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="abd3-a40a-ef98-4a67" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
@@ -778,20 +711,7 @@
         <categoryLink name="Z Armour" hidden="false" id="f902-8e53-5b3c-2903" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="90. Magic Items &amp; Gifts of Khaine" hidden="false" id="82b6-57ad-45cb-3695" type="selectionEntryGroup" targetId="7985-79f4-81f6-4db5">
-          <modifiers>
-            <modifier type="increment" value="100" field="7ace-31ce-dbd3-026e">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b956-2b77-eab6-5411" shared="true" childName="Hag Queen"/>
-              </conditions>
-            </modifier>
-            <modifier type="increment" value="50" field="7ace-31ce-dbd3-026e">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="306c-b634-ff56-2bcf" shared="true" childName="Death Hag"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="90. Magic Items &amp; Gifts of Khaine" hidden="false" id="82b6-57ad-45cb-3695" type="selectionEntryGroup" targetId="7985-79f4-81f6-4db5"/>
         <entryLink import="true" name="10. Character Options" hidden="false" id="702f-8e9e-fe4b-8569" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e3f3-1929-b370-187e"/>
@@ -811,7 +731,7 @@
                     <modifier type="set" value="Death Hag only" field="annotation"/>
                   </modifiers>
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="306c-b634-ff56-2bcf" shared="true" childName="Death Hag" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="bec4-b947-a609-684a" shared="true" childName="Tier 1 Character" includeChildSelections="true"/>
                   </conditions>
                 </modifierGroup>
               </modifierGroups>
@@ -852,11 +772,12 @@
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="5. Character Selection" hidden="false" id="c014-38c7-6fe1-d2a7" type="selectionEntryGroup" targetId="405b-a985-02d7-eeff">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Death Hag" hidden="false" id="306c-b634-ff56-2bcf" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="70"/>
-              </costs>
+          <entryLinks>
+            <entryLink import="true" name="Tier 1 Character" hidden="false" id="a6bd-6b9f-1eee-4338" type="selectionEntry" targetId="bec4-b947-a609-684a">
+              <modifiers>
+                <modifier type="set" value="Death Hag" field="name"/>
+                <modifier type="set" value="Death Hag" field="name" scope="root-entry"/>
+              </modifiers>
               <profiles>
                 <profile name="Death Hag" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2731-d3ab-9017-846e">
                   <characteristics>
@@ -873,14 +794,11 @@
                   </characteristics>
                 </profile>
               </profiles>
-              <modifiers>
-                <modifier type="set" value="Death Hag" field="name" scope="root-entry"/>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Hag Queen" hidden="false" id="b956-2b77-eab6-5411" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="140"/>
+                <cost name="pts" typeId="points" value="70"/>
               </costs>
+            </entryLink>
+            <entryLink import="true" name="Tier 2 Character" hidden="false" id="122d-878b-26bc-fab3" type="selectionEntry" targetId="ffde-7800-8634-f4bc">
               <profiles>
                 <profile name="Hag Queen" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="258e-84a7-17ea-8bbc">
                   <characteristics>
@@ -899,9 +817,13 @@
               </profiles>
               <modifiers>
                 <modifier type="set" value="Hag Queen" field="name" scope="root-entry"/>
+                <modifier type="set" value="Hag Queen" field="name"/>
               </modifiers>
-            </selectionEntry>
-          </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="points" value="140"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -3335,7 +3257,7 @@
                         <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04">12&quot;</characteristic>
                         <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">*</characteristic>
                         <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">*</characteristic>
-                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks, Quick Shot. (Both * values of this attack is equal to the War Hydra&apos;s remaining number of Wounds) </characteristic>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks, Quick Shot. (Both * values of this attack is equal to the War Hydra&apos;s remaining number of Wounds)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6114,6 +6036,16 @@ If a Monstrous Creature or Monster is Hit by this weapon but survives, it must i
         <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.a31f-8c65-324b-4b37.profiles.Armour Save"/>
         <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.9d45-9519-de85-24bc.profiles.Melee weapon"/>
         <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.9d45-9519-de85-24bc.profiles.Ranged Weapon"/>
+        <modifier type="increment" value="50" field="d2f8-929f-b3e7-a3f7">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bec4-b947-a609-684a" shared="true" childName="Tier 1 Character" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="100" field="d2f8-929f-b3e7-a3f7">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Magic Weapons" hidden="false" id="c5b0-ce03-376e-2a8d" type="selectionEntryGroup" targetId="9d45-9519-de85-24bc" sortIndex="1"/>
@@ -6365,6 +6297,16 @@ If a Monstrous Creature or Monster is Hit by this weapon but survives, it must i
         <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.a31f-8c65-324b-4b37.profiles.Armour Save"/>
         <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.9d45-9519-de85-24bc.profiles.Melee weapon"/>
         <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.9d45-9519-de85-24bc.profiles.Ranged Weapon"/>
+        <modifier type="increment" value="100" field="7ace-31ce-dbd3-026e">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="50" field="7ace-31ce-dbd3-026e">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bec4-b947-a609-684a" shared="true" childName="Tier 1 Character" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Magic Weapons" hidden="false" id="9715-a05b-5772-2f08" type="selectionEntryGroup" targetId="9d45-9519-de85-24bc" sortIndex="2"/>
