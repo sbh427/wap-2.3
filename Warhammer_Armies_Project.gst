@@ -2631,7 +2631,7 @@ A unit that flies can move over other units and terrain as it does so, treating
       <description>A complete rank is formed by as many models as indicated between brackets.</description>
     </rule>
     <rule id="c397-b441-9fd6-89bb" name="Unit Strength (*)" hidden="false">
-      <description>Models with this rule have a Unit Strength of *.</description>
+      <description>This model has a Unit Strength as indicated in the bracket.</description>
     </rule>
     <rule name="War Machine" id="9960-d3ce-efdf-06ae" hidden="false">
       <description>Line of Sight (1). Move or Fire.
@@ -2983,7 +2983,7 @@ A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain 
       <alias>Random Movement</alias>
     </rule>
     <rule id="03b5-5136-1ebb-dcfd" name="Line of Sight (*)" hidden="false">
-      <description>Models with this rule have a Line of Sight of *.</description>
+      <description>This model has a Line of Sight value as indicated in the bracket.</description>
     </rule>
     <rule name="Dangerous Terrain" id="2926-f724-304d-02c4" hidden="false">
       <alias>Deadly Terrain</alias>
