@@ -922,7 +922,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Fire" hidden="false" id="a8e2-320c-cd97-9dd4" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Lore of Fire" hidden="false" id="a8e2-320c-cd97-9dd4" sortIndex="5">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="17e2-8b76-2747-00b6-min" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="17e2-8b76-2747-00b6-max" includeChildSelections="true" automatic="true"/>
@@ -964,7 +964,7 @@
             <infoLink name="Flame Storm" id="592b-b805-07dc-43f5" hidden="false" targetId="77af-a090-ba85-99ce" type="profile"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Metal" hidden="false" id="57f2-4764-2e60-8608" sortIndex="8">
+        <selectionEntry type="upgrade" import="true" name="Lore of Metal" hidden="false" id="57f2-4764-2e60-8608" sortIndex="9">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="4911-35c0-a2b3-e153" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="a0b9-fe87-4f9e-9305" includeChildSelections="true" automatic="true"/>
@@ -1006,7 +1006,7 @@
             <infoLink name="Meteoric Ironclad" id="3360-0089-1b86-ec7a" hidden="false" targetId="283c-6023-f253-bf83" type="profile"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Heavens" hidden="false" id="b811-9e2b-48e0-68d9" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Lore of Heavens" hidden="false" id="b811-9e2b-48e0-68d9" sortIndex="6">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="265c-bf78-4d11-b561" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="48b1-d261-9008-9f63" includeChildSelections="true" automatic="true"/>
@@ -1048,7 +1048,7 @@
             <infoLink name="Thorsen&apos;s Thunderstorm" id="723f-6243-7ee3-efb0" hidden="false" targetId="bb40-5119-e4b8-f8c2" type="profile"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Light" hidden="false" id="1f65-56d7-87ee-3586" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="Lore of Light" hidden="false" id="1f65-56d7-87ee-3586" sortIndex="8">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="9810-4864-f3b8-13a0" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="cd62-622e-bb9c-38ce" includeChildSelections="true" automatic="true"/>
@@ -1090,7 +1090,7 @@
             <infoLink name="Pillar of Radiance" id="c199-f2b7-45ad-50d2" hidden="false" targetId="3170-f07e-bb17-2707" type="profile"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Life" hidden="false" id="5e06-89da-89c2-5e42" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Lore of Life" hidden="false" id="5e06-89da-89c2-5e42" sortIndex="7">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="a038-5ac7-d455-e5b6" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="5ae9-f4f7-22d5-b071" includeChildSelections="true" automatic="true"/>
@@ -1132,7 +1132,7 @@
             <infoLink name="The Dwellers Below" id="2fd7-1042-8be8-0136" hidden="false" targetId="4ceb-4804-7497-c952" type="profile"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Shadow" hidden="false" id="69bf-9c48-e495-d3bf" sortIndex="10">
+        <selectionEntry type="upgrade" import="true" name="Lore of Shadow" hidden="false" id="69bf-9c48-e495-d3bf" sortIndex="11">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="361b-9df3-2db8-2854" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="48dd-f6a2-0178-24c8" includeChildSelections="true" automatic="true"/>
@@ -1174,7 +1174,7 @@
             <infoLink name="Pit of Shades" id="d4d9-685b-8dcb-7aa3" hidden="false" targetId="ecf9-c3f1-b183-c310" type="profile"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Death" hidden="false" id="6da6-eca4-f9b7-bdaf" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Lore of Death" hidden="false" id="6da6-eca4-f9b7-bdaf" sortIndex="4">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="f4f7-6688-10c3-fbd1" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="3181-3684-b0d8-e3b1" includeChildSelections="true" automatic="true"/>
@@ -1258,7 +1258,7 @@
             <infoLink name="Vortex of Chaos" id="6875-7b63-0470-dd7a" hidden="false" type="profile" targetId="7345-83bf-cd72-cb4a"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Tzeentch" hidden="false" id="6b51-cf19-a01c-9ad6" sortIndex="12">
+        <selectionEntry type="upgrade" import="true" name="Lore of Tzeentch" hidden="false" id="6b51-cf19-a01c-9ad6" sortIndex="13">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="983d-4d89-826d-e760" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="75e5-19ee-4a3f-6b81" includeChildSelections="true" automatic="true"/>
@@ -1300,7 +1300,7 @@
             <infoLink name="Infernal Gateway" id="f9f0-5cc4-e1be-96ec" hidden="false" type="profile" targetId="e5e5-9f34-76f7-4c65"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Nurgle" hidden="false" id="29f4-8033-3b6a-2980" sortIndex="9">
+        <selectionEntry type="upgrade" import="true" name="Lore of Nurgle" hidden="false" id="29f4-8033-3b6a-2980" sortIndex="10">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="45c1-2709-6403-3b85" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="8d92-033f-44a0-ec6d" includeChildSelections="true" automatic="true"/>
@@ -1342,7 +1342,7 @@
             <infoLink name="Rot, Glorious Rot" id="5203-0bb3-034a-87af" hidden="false" type="profile" targetId="a5c5-fb8d-5541-172e"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Slaanesh" hidden="false" id="6ae3-79e0-0400-07b6" sortIndex="11">
+        <selectionEntry type="upgrade" import="true" name="Lore of Slaanesh" hidden="false" id="6ae3-79e0-0400-07b6" sortIndex="12">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="583e-bd98-c6cd-b34a" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="326e-b36f-90cb-f5e9" includeChildSelections="true" automatic="true"/>
@@ -1382,6 +1382,48 @@
             <infoLink name="Cacophonic Choir" id="4f1a-f255-29bc-dd99" hidden="false" type="profile" targetId="e57e-9b7d-9e22-b5f7"/>
             <infoLink name="Ecstatic Seizures" id="e5d1-6d4f-b3d7-2a82" hidden="false" type="profile" targetId="2d79-78cc-4e46-93ba"/>
             <infoLink name="Song of Seduction" id="eddd-05ef-74e7-e67c" hidden="false" type="profile" targetId="26e0-12f7-85bc-c19c"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Dark Magic" hidden="false" id="8857-87c6-0648-d416" sortIndex="3">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="d0db-bcb5-675b-b026" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="943a-8d5e-015e-b19c" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="d0db-bcb5-675b-b026">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2627-5189-8fe6-dfd3" shared="true" childName="Lore of Dark Magic" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="943a-8d5e-015e-b19c">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2627-5189-8fe6-dfd3" shared="true" childName="Lore of Dark Magic" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Spiteful Conjuration" id="d1a1-c231-b05b-23e4" hidden="false" type="profile" targetId="111d-86fc-0ac2-aa2e"/>
+            <infoLink name="Doombolt of Kharaidon" id="e820-cfcd-bbdd-a062" hidden="false" type="profile" targetId="83ce-8b5d-eef3-f48d"/>
+            <infoLink name="Death Spasm" id="da7b-c9de-b7fe-8332" hidden="false" type="profile" targetId="7a33-4deb-832b-a0c2"/>
+            <infoLink name="Nagaelythe the Chillwind" id="60a2-b6a2-eee2-2e7b" hidden="false" type="profile" targetId="6029-2904-b7c5-17fe"/>
+            <infoLink name="Shadow Daggers" id="f6da-4501-35e8-203d" hidden="false" type="profile" targetId="5c0f-e808-67ee-1864"/>
+            <infoLink name="Sap Strength" id="921c-07a3-a0e2-b43e" hidden="false" type="profile" targetId="dfd5-43dc-e656-0e34"/>
+            <infoLink name="Bladewind" id="1b30-c03c-5619-95fa" hidden="false" type="profile" targetId="c97c-7b02-3192-da50"/>
+            <infoLink name="Power of Darkness" id="5bdb-0d89-43a3-6078" hidden="false" type="profile" targetId="5346-38c9-7041-bdd8"/>
+            <infoLink name="Tenebrael Blades" id="ff66-c20a-ece3-a44a" hidden="false" type="profile" targetId="d49b-206b-19f8-c4df"/>
+            <infoLink name="Chroesh - Word of Pain" id="e78b-a603-896c-61f2" hidden="false" type="profile" targetId="5eed-29da-240a-e4f0"/>
+            <infoLink name="Shroud of Despair" id="6167-d4cc-d768-4323" hidden="false" type="profile" targetId="e25d-cae3-46e2-0cb7"/>
+            <infoLink name="Oblivion" id="50d1-67ce-5e9c-c1a9" hidden="false" type="profile" targetId="2a45-0195-fa0f-61b9"/>
+            <infoLink name="Anchan-Rogar the Soul Stealer" id="de7e-a725-aaa5-8d1c" hidden="false" type="profile" targetId="2a6c-20a9-1718-e49f"/>
+            <infoLink name="Arnzipal&apos;s Black Horror" id="9c9b-5bbc-cf05-6bb3" hidden="false" type="profile" targetId="fb00-bdd7-7146-e848"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -1777,6 +1819,14 @@
       <infoLinks>
         <infoLink name="Scouts" id="67e4-25e2-a92b-02ae" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of Dark Magic" hidden="false" id="2627-5189-8fe6-dfd3" collective="false" collapsible="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="14a7-c221-4ece-e6b7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -4781,6 +4831,133 @@ All models under the template must roll a D6 per Wound on their profile – fo
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit must pass a Strength test or suffer 1 Wound which Ignores Armour Saves.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Arnzipal&apos;s Black Horror" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fb00-bdd7-7146-e848" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move must pass a Strength test per Wound on their profile or suffer a Wound which Ignores Armour Saves and Regeneration.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Chroesh - Word of Pain" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5eed-29da-240a-e4f0" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains the Always Strikes Last special rule until the start of the caster&apos;s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bladewind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c97c-7b02-3192-da50" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Large round template.
+All models hit by the template must pass a Weapon Skill test or suffer a Strength 4 hit. </characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Doombolt of Kharaidon" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="83ce-8b5d-eef3-f48d" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 5 hits.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Power of Darkness" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5346-38c9-7041-bdd8" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit gain +1 Strength until the start of the caster&apos;s next Magic phase. In addition, add D3 power dice to your power pool. If a natural 6 is rolled when generating these power dice, the caster suffers a Wound which Ignores Armour saves.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Shroud of Despair" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e25d-cae3-46e2-0cb7" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex aura</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the targets cannot benefit from the Hold Your Ground or Inspiring Presence special rules. In addition, whenever a target unit fails a Break, Panic or Terror test, all target units suffer -1 to their Leadership (this effect is cumulative).</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Spiteful Conjuration" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="111d-86fc-0ac2-aa2e" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Wizard successfully casts a hex, magic missile or direct damage spell from this lore, and the casting roll contains any double, the spell&apos;s target suffers 2D6 Strength 2 hits with Armour Piercing (1). If the casting roll contains any treble, the spell&apos;s target instead suffers 3D6 hits instead.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Anchan-Rogar the Soul Stealer" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2a6c-20a9-1718-e49f" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">14+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the unit suffer a Wound on the roll of a 5+ which Ignores Armour Saves. Roll a D6 for each unsaved Wound inflicted by this spell. For each roll of 5+, the caster immediately gains a single Wound (to a maximum of 10).</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Oblivion" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2a45-0195-fa0f-61b9" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage aura</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each model (friend and foe, except the caster) within range (even if they are engaged in close combat) suffers a Strength 5 Hit. </characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Tenebrael Blades" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d49b-206b-19f8-c4df" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Armour Piercing (2) and Magical Attacks special rule until the start of the caster&apos;s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Sap Strength" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dfd5-43dc-e656-0e34" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit suffer -1 to their Strength (to a minimum of 1) until the start of the caster&apos;s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Shadow Daggers" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5c0f-e808-67ee-1864" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 3 Hits with the Armour Piercing (1) special rule on all enemy units in the caster&apos;s front arc.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Nagaelythe the Chillwind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6029-2904-b7c5-17fe" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 2 hits. If the target suffers any unsaved Wounds, all models in the unit suffer a -1 penalty to their BS until the start of the caster&apos;s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Death Spasm" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7a33-4deb-832b-a0c2" noindex="true">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). The target must take D3 Toughness tests. Each failed Toughness test causes a Wound which Ignores Armour Saves. In addition, all models in base contact with the target suffer a Hit at the target&apos;s base Strength.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
