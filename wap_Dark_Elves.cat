@@ -419,7 +419,19 @@
         <categoryLink name="Z Armour" hidden="false" id="27e4-1f10-4b42-774d" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="61. Lore of Magic" hidden="false" id="efbe-1def-e536-3342" type="selectionEntryGroup" targetId="d68b-5fef-ca68-dd26"/>
+        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="efbe-1def-e536-3342" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+          <entryLinks>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="6eb0-607e-8262-562b" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67" sortIndex="9"/>
+            <entryLink import="true" name="Lore of Dark Magic" hidden="false" id="9d2f-7648-6fd6-e7fb" type="selectionEntry" targetId="2627-5189-8fe6-dfd3" sortIndex="-1"/>
+            <entryLink import="true" name="Lore of Beasts" hidden="false" id="36af-e6bc-cf07-484d" type="selectionEntry" targetId="b436-b410-dd41-304f" sortIndex="1"/>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="0e57-f5e8-091d-e101" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="3"/>
+            <entryLink import="true" name="Lore of Fire" hidden="false" id="471d-e8c6-f1f0-839d" type="selectionEntry" targetId="4d24-c803-7a05-0894" sortIndex="4"/>
+            <entryLink import="true" name="Lore of Heavens" hidden="false" id="6611-b80f-0c34-9794" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" sortIndex="5"/>
+            <entryLink import="true" name="Lore of Life" hidden="false" id="fd53-a75e-19d0-f934" type="selectionEntry" targetId="968d-55ad-604c-f251" sortIndex="6"/>
+            <entryLink import="true" name="Lore of Light" hidden="false" id="50e8-9206-9998-814d" type="selectionEntry" targetId="c543-a893-3879-cf32" sortIndex="7"/>
+            <entryLink import="true" name="Lore of Metal" hidden="false" id="d57a-3396-a094-fe29" type="selectionEntry" targetId="527f-89f1-1b92-a01d" sortIndex="8"/>
+          </entryLinks>
+        </entryLink>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="e639-1f98-0147-64ee" type="selectionEntryGroup" targetId="e04a-3fa9-8b73-b6ff">
           <modifiers>
             <modifier type="increment" value="100" field="d2f8-929f-b3e7-a3f7">
@@ -3618,7 +3630,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2f90-0152-a7be-27a9" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="b324-7bc7-bcfc-7ce6" name="Tullaris Dreadbringer" hidden="false" collective="false" import="true" type="model" sortIndex="2">
+            <selectionEntry id="b324-7bc7-bcfc-7ce6" name="Tullaris Dreadbringer" hidden="false" collective="false" import="true" type="model" sortIndex="1">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d113-e545-2fab-c87e" type="max"/>
               </constraints>
@@ -3657,6 +3669,7 @@
                     <modifier type="replace" value="High Elves" field="name" arg="*"/>
                   </modifiers>
                 </infoLink>
+                <infoLink id="00c9-10c0-4171-4996" name="Frenzy" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="dbc3-5c30-9da9-b048" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -3678,7 +3691,7 @@
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="120"/>
+                <cost name="pts" typeId="points" value="130"/>
               </costs>
               <selectionEntryGroups>
                 <selectionEntryGroup name="90. Magic Items" id="0065-67ba-ca58-2e10" hidden="false">
@@ -3723,9 +3736,10 @@
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" value="Tullaris Dreadbringer" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
-            <selectionEntry id="df88-950f-b367-47f3" name="Kouran Darkhand" hidden="false" collective="false" import="true" type="model" sortIndex="3">
+            <selectionEntry id="df88-950f-b367-47f3" name="Kouran Darkhand" hidden="false" collective="false" import="true" type="model" sortIndex="2">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ac23-f18f-10f2-539f" type="max"/>
               </constraints>
@@ -3817,8 +3831,11 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="set" value="Kouran Darkhand" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry id="c58a-76bf-5d51-1f23" name="Lokhir Fellheart" hidden="false" collective="false" import="true" type="model" sortIndex="4">
+            <selectionEntry id="c58a-76bf-5d51-1f23" name="Lokhir Fellheart" hidden="false" collective="false" import="true" type="model" sortIndex="3">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="eaa2-f202-3321-17ea" type="max"/>
               </constraints>
@@ -3945,8 +3962,11 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="set" value="Tullaris Dreadbringer" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry id="9352-293d-887f-0f61" name="Shadowblade" hidden="false" collective="false" import="true" type="model" sortIndex="6">
+            <selectionEntry id="9352-293d-887f-0f61" name="Shadowblade" hidden="false" collective="false" import="true" type="model" sortIndex="5">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f4d8-39e4-66fb-decb" type="max"/>
               </constraints>
@@ -4066,84 +4086,11 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="set" value="Shadowblade" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry id="b773-e132-cfd5-0691" name="Mengil Manhide" hidden="false" collective="false" import="true" type="model" sortIndex="1">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="60f6-1aeb-3754-8f43" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="e6e1-55d2-dd58-2738" name="Mengil Manhide" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">6</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Dark Elf)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="0007-2180-f5d0-ac49" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
-                <infoLink name="The Manflayers" id="b140-3651-2ae4-6c00" hidden="false" type="rule" targetId="fb2e-eba1-ca03-a830"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="95"/>
-              </costs>
-              <entryLinks>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="9275-31cb-4931-818d" type="selectionEntryGroup" targetId="e04a-3fa9-8b73-b6ff">
-                  <modifiers>
-                    <modifier type="increment" value="50" field="d2f8-929f-b3e7-a3f7"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="79a9-4388-c33f-8efa" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-                  <entryLinks>
-                    <entryLink import="true" name="Great Weapon" hidden="false" id="aeed-08e1-73a7-d690" type="selectionEntry" targetId="0473-857e-78d9-cb7c">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c710-497e-ae73-d0d1"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
-                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="675b-a9d3-a6d9-c30c" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
-                  <entryLinks>
-                    <entryLink import="true" name="Medium Armour" hidden="false" id="e7d1-b9a4-0648-02a7" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="89e5-77ce-0609-7cea"/>
-                      </constraints>
-                      <modifiers>
-                        <modifier type="set" value="1" field="80f0-b5fd-ae36-4ab6">
-                          <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
-                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="6864-8576-fc13-d6f8" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
-                  <entryLinks>
-                    <entryLink import="true" name="Repeater Handbow" hidden="false" id="4ed5-7d02-fbee-9777" type="selectionEntry" targetId="1dee-3556-3dfb-9cf0">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b99-5eff-e88f-9e2e"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
-              </entryLinks>
-              <categoryLinks>
-                <categoryLink name="X Great Weapon" hidden="false" id="8a51-d886-016e-fa85" targetId="abcc-4aa7-4989-7189" primary="false"/>
-                <categoryLink name="Y Repeater Handbow" hidden="false" id="9eba-c90a-c5f9-ff24" targetId="bbb9-c2b6-d5b1-ade9" primary="false"/>
-                <categoryLink name="Z Medium Armour" hidden="false" id="f725-d9b2-3c23-8af9" targetId="222a-078c-ce85-fb16" primary="false"/>
-                <categoryLink name="Infantry" hidden="false" id="16e2-4b5c-146f-dde4" targetId="22c9-1606-58f8-2e60" primary="false"/>
-                <categoryLink name="Z Armour" hidden="false" id="c1d5-7fe8-8270-48ff" targetId="387c-2b7c-0a30-7305" primary="false"/>
-              </categoryLinks>
-            </selectionEntry>
-            <selectionEntry type="model" import="true" name="Malekith" hidden="false" id="1161-1d69-3563-4036" collective="false" sortIndex="11">
+            <selectionEntry type="model" import="true" name="Malekith" hidden="false" id="1161-1d69-3563-4036" collective="false" sortIndex="10">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="2044-3907-606c-ceb9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
@@ -4329,7 +4276,7 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="65bc-73d4-2bd9-6285"/>
                       </constraints>
                       <costs>
-                        <cost name="pts" typeId="points" value="24"/>
+                        <cost name="pts" typeId="points" value="20"/>
                       </costs>
                       <entryLinks>
                         <entryLink import="true" name="Barding" hidden="false" id="356b-fc87-07ed-c3cb" type="selectionEntry" targetId="17ec-ae05-605b-27ce"/>
@@ -4353,8 +4300,11 @@
                 <categoryLink name="Infantry" hidden="false" id="68a9-977e-e8b1-6fe3" targetId="22c9-1606-58f8-2e60" primary="false"/>
                 <categoryLink name="Z Armour" hidden="false" id="0ff2-220b-c07b-a185" targetId="387c-2b7c-0a30-7305" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="set" value="Malekith" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Morathi" hidden="false" id="4e20-0a3c-9fe5-97af" collective="false" sortIndex="9">
+            <selectionEntry type="model" import="true" name="Morathi" hidden="false" id="4e20-0a3c-9fe5-97af" collective="false" sortIndex="8">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="15cd-60fe-9381-5479" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
@@ -4392,7 +4342,7 @@
                 <infoLink name="Magical Ward" id="f170-83e7-da25-597c" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
                   <modifiers>
                     <modifier type="set" value="A Thousand and One Dark Blessings" field="name"/>
-                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
                   </modifiers>
                 </infoLink>
                 <infoLink name="Magic Resistance" id="df70-245a-7a45-76cb" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
@@ -4431,87 +4381,34 @@
                   </entryLinks>
                 </entryLink>
                 <entryLink import="true" name="60. Wizard Level" hidden="false" id="1389-6e9a-b8d3-ffa8" type="selectionEntryGroup" targetId="e548-6739-0537-5d95"/>
+                <entryLink import="true" name="65. Lore of Magic" hidden="false" id="54fa-f413-6b02-ce07" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Dark Magic" hidden="false" id="2435-4e1f-e9b0-3738" type="selectionEntry" targetId="2627-5189-8fe6-dfd3">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b65d-ad4e-3ecf-85f0" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Lore of Death" hidden="false" id="d483-d6da-abaa-c060" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4671-e763-5741-596e" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Lore of Shadow" hidden="false" id="9b74-c33c-fded-8791" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cbf3-c2b7-7327-cee6" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <modifiers>
+                    <modifier type="set" value="3" field="495e-ce6f-a51c-e06f-min"/>
+                    <modifier type="set" value="3" field="495e-ce6f-a51c-e06f-max"/>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="380"/>
               </costs>
               <selectionEntryGroups>
-                <selectionEntryGroup name="61. Lore of Magic" id="b115-be70-d65b-aef6" hidden="false" collapsible="true">
-                  <selectionEntryGroups>
-                    <selectionEntryGroup name="Lore of Death, Lore of Shadow &amp; Lore of Dark Magic" id="6060-50f3-7def-3386" hidden="false">
-                      <entryLinks>
-                        <entryLink import="true" name="Spiteful Conjuration" hidden="false" id="f44f-a999-3a45-58b7" type="selectionEntry" targetId="b361-72b8-cd95-dd61" sortIndex="2"/>
-                        <entryLink import="true" name="Life Leeching" hidden="false" id="d62b-5f91-7f3f-a4b5" type="selectionEntry" targetId="fcda-0bcd-07ba-1f18" sortIndex="1"/>
-                        <entryLink import="true" name="Steed of Shadows" hidden="false" id="2420-f6f1-c713-6f85" type="selectionEntry" targetId="196d-e427-60d7-9cb9" sortIndex="3"/>
-                      </entryLinks>
-                      <selectionEntryGroups>
-                        <selectionEntryGroup name="Spells" id="4d14-f1fb-22e5-8819" hidden="false" sortIndex="5">
-                          <entryLinks>
-                            <entryLink import="true" name="11. Anchan-Rogar the Soul Stealer" hidden="false" id="fa57-d533-e145-617f" type="selectionEntry" targetId="3803-6c0d-c341-9192" sortIndex="31"/>
-                            <entryLink import="true" name="2. Nagaelythe the Chillwind" hidden="false" id="cc89-8503-24be-35e1" type="selectionEntry" targetId="8a0c-5b44-c508-1760" sortIndex="4"/>
-                            <entryLink import="true" name="3. Shadow Daggers" hidden="false" id="eaa6-59ba-29a9-0412" type="selectionEntry" targetId="f39d-b4ae-ce73-52db" sortIndex="8"/>
-                            <entryLink import="true" name="4. Sap Strength" hidden="false" id="013c-29c0-2178-73e0" type="selectionEntry" targetId="dc24-53c7-5de9-87d5" sortIndex="10"/>
-                            <entryLink import="true" name="5. Bladewind" hidden="false" id="636c-df92-a598-bb8c" type="selectionEntry" targetId="d42a-aa73-4761-7282" sortIndex="13"/>
-                            <entryLink import="true" name="6. Power of Darkness" hidden="false" id="91c6-e974-050c-3c2c" type="selectionEntry" targetId="320d-913e-e165-4017" sortIndex="17"/>
-                            <entryLink import="true" name="10. Oblivion" hidden="false" id="2992-531a-f382-3a9d" type="selectionEntry" targetId="0f8c-3bd2-6dfb-e7e2" sortIndex="28"/>
-                            <entryLink import="true" name="12. Arnzipal&apos;s Black Horror" hidden="false" id="1947-48f6-d7a2-850f" type="selectionEntry" targetId="72cb-4a48-f986-15de" sortIndex="34"/>
-                            <entryLink import="true" name="8. Chroesh - Word of Pain" hidden="false" id="3cd6-842f-c7ca-f9c8" type="selectionEntry" targetId="62bb-d30b-bdda-7279" sortIndex="22"/>
-                            <entryLink import="true" name="7. Tenebrael Blades" hidden="false" id="a776-451e-1e26-264a" type="selectionEntry" targetId="58fd-3f4c-0e45-a32a" sortIndex="21"/>
-                            <entryLink import="true" name="9. Shroud of Despair" hidden="false" id="6bb0-00c2-50c5-7ca3" type="selectionEntry" targetId="4ef0-00bf-bd4c-1da0" sortIndex="27"/>
-                            <entryLink import="true" name="1. Death Spasm" hidden="false" id="f9ed-4000-95e8-e725" type="selectionEntry" targetId="7d86-c7a2-4327-9dea" sortIndex="3"/>
-                            <entryLink import="true" name="1. Death Dealer" hidden="false" id="7c44-2a88-5f9a-612e" type="selectionEntry" targetId="462b-0dd2-392c-2439" sortIndex="2"/>
-                            <entryLink import="true" name="2. The Caress of Laniph" hidden="false" id="5f10-37af-9d4f-fb56" type="selectionEntry" targetId="a5c5-fce0-7c91-d277" sortIndex="5"/>
-                            <entryLink import="true" name="5. Wind of Death" hidden="false" id="4d0e-cafc-a2ea-cf1c" type="selectionEntry" targetId="4bb9-9a38-d14b-704b" sortIndex="15"/>
-                            <entryLink import="true" name="6. Drain Life" hidden="false" id="0dc4-0dc3-30a7-1a5c" type="selectionEntry" targetId="9d97-9779-f34b-d55f" sortIndex="16"/>
-                            <entryLink import="true" name="4. The Chocking Foe" hidden="false" id="387b-1a8b-2041-f002" type="selectionEntry" targetId="5431-c193-b838-59c6" sortIndex="11"/>
-                            <entryLink import="true" name="12. The Purple Sun of Xereus" hidden="false" id="a42b-f8cf-ae54-a286" type="selectionEntry" targetId="64f8-69f4-ffb0-f045" sortIndex="36"/>
-                            <entryLink import="true" name="11. Soulblight" hidden="false" id="2468-0ded-8de1-5a57" type="selectionEntry" targetId="c35c-68ba-9c98-0f8b" sortIndex="32"/>
-                            <entryLink import="true" name="9. Ashes and Dust" hidden="false" id="cb5e-d3c8-babe-ab48" type="selectionEntry" targetId="d988-9e19-8f71-7bd5" sortIndex="25"/>
-                            <entryLink import="true" name="8. Doom and Darkness" hidden="false" id="5bdf-2837-4da3-1432" type="selectionEntry" targetId="e92b-a44d-158c-35df" sortIndex="23"/>
-                            <entryLink import="true" name="3. Spirit Leech" hidden="false" id="2ca1-0d5f-0e51-17de" type="selectionEntry" targetId="7a63-500c-5cfb-4a00" sortIndex="9"/>
-                            <entryLink import="true" name="10. The Fate of Bjuna" hidden="false" id="4dae-79ea-0493-a692" type="selectionEntry" targetId="dba5-c13c-0904-18bf" sortIndex="30"/>
-                            <entryLink import="true" name="7. Scythe of Shyish" hidden="false" id="f93a-d9a6-2515-6ab4" type="selectionEntry" targetId="9661-bf81-68fa-c59b" sortIndex="20"/>
-                            <entryLink import="true" name="10. Okkam&apos;s Mindrazor" hidden="false" id="b2f5-942d-da8f-ae1a" type="selectionEntry" targetId="5bdb-de2d-a849-33cc" sortIndex="29"/>
-                            <entryLink import="true" name="11. The Penumbral Pendulum" hidden="false" id="5303-299f-b1a6-5293" type="selectionEntry" targetId="e6ef-76a2-469b-cb24" sortIndex="33"/>
-                            <entryLink import="true" name="9. Bridge of Shadows" hidden="false" id="14e3-5a1b-1c4c-f639" type="selectionEntry" targetId="c322-a0c4-15a3-f6ed" sortIndex="26"/>
-                            <entryLink import="true" name="8. Unseen Lurker" hidden="false" id="f871-a09a-8b1b-58ca" type="selectionEntry" targetId="7a75-911e-4e04-ee42" sortIndex="24"/>
-                            <entryLink import="true" name="7. Crown of Taidron" hidden="false" id="222d-66c2-ff24-bdc9" type="selectionEntry" targetId="687b-6040-7e9f-d142" sortIndex="19"/>
-                            <entryLink import="true" name="5. The Withering" hidden="false" id="b9e1-9f4f-80c8-5ca7" type="selectionEntry" targetId="9aaa-64d4-a24c-1c5c" sortIndex="18"/>
-                            <entryLink import="true" name="1. Creeping Darkness" hidden="false" id="0c64-b8e6-16ed-ca53" type="selectionEntry" targetId="1881-7f35-6713-cba7" sortIndex="1"/>
-                            <entryLink import="true" name="6. The Dance of Despair" hidden="false" id="6679-cbf5-fb14-d0aa" type="selectionEntry" targetId="7f94-f31d-f11b-a5c4" sortIndex="12"/>
-                            <entryLink import="true" name="2. The Enfeebling Foe" hidden="false" id="0250-103d-f558-5fbb" type="selectionEntry" targetId="579c-cdd9-614c-8b33" sortIndex="6"/>
-                            <entryLink import="true" name="4. Horn of Andar" hidden="false" id="7056-1ef6-4577-c4ea" type="selectionEntry" targetId="faa4-975e-020e-619f" sortIndex="14"/>
-                            <entryLink import="true" name="12. Pit of Shades" hidden="false" id="4846-b85c-777c-45ab" type="selectionEntry" targetId="3381-0a9e-89d1-461b" sortIndex="35"/>
-                            <entryLink import="true" name="3. Cloak of Midnight" hidden="false" id="6666-7ac0-1ff3-d9c6" type="selectionEntry" targetId="a6b4-9378-c3b6-2553" sortIndex="7"/>
-                          </entryLinks>
-                          <constraints>
-                            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="074a-31a4-fb84-bbd0"/>
-                            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="bef3-299b-4ab1-3242"/>
-                          </constraints>
-                        </selectionEntryGroup>
-                        <selectionEntryGroup name="Signature Spells" id="dd2d-7a30-7b32-7cb1" hidden="false" sortIndex="4">
-                          <entryLinks>
-                            <entryLink import="true" name="0. Dark Hand of Death" hidden="false" id="5c0a-c792-c95e-3f2a" type="selectionEntry" targetId="3b38-7f74-f979-94f4" sortIndex="2">
-                              <modifiers>
-                                <modifier type="set" value="0" field="63cb-a6db-9494-90d7"/>
-                              </modifiers>
-                            </entryLink>
-                            <entryLink import="true" name="0. Doombolt of Kharaidon" hidden="false" id="1784-7dda-2782-b701" type="selectionEntry" targetId="0633-1428-57be-1f34" sortIndex="1"/>
-                            <entryLink import="true" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" id="3a1b-07e1-62d1-9b23" type="selectionEntry" targetId="dba6-e588-0a5b-69a1" sortIndex="3">
-                              <modifiers>
-                                <modifier type="set" value="0" field="5cd7-39f6-1064-bdc3"/>
-                              </modifiers>
-                            </entryLink>
-                          </entryLinks>
-                          <constraints>
-                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="5e1b-bf41-7111-15f3-min" automatic="true"/>
-                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5e1b-bf41-7111-15f3-max" automatic="true"/>
-                          </constraints>
-                        </selectionEntryGroup>
-                      </selectionEntryGroups>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                </selectionEntryGroup>
                 <selectionEntryGroup name="90. Magic Items" id="6296-334a-da52-06c0" hidden="false">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Heartrender and the Darksword" hidden="false" id="1f66-d5c2-fcee-a3ee" collective="false">
@@ -4526,7 +4423,7 @@
                         <infoLink name="Light Lance" id="8769-e7cb-2306-6127" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
                           <modifiers>
                             <modifier type="set" value="Heartrender and the Darksword" field="annotation"/>
-                            <modifier type="append" value="Hits from this weapon have the Killing Blow special rule in the turn Morathi charges. In addition, for each Hit a Monstrous Creature, Monster or character take from these weapons they suffer -1 to their Strength, Toughness and Attack characteristics (to a minimum of 1) for the remainder of the close combat phase." field="de63-d6da-efa8-00ac" join="
+                            <modifier type="append" value="Hits from this weapon have the Killing Blow special rule in the turn Morathi charges. In addition, for each Hit a Monstrous Creature, Monster or character suffers from these weapons they suffer -1 to their Strength, Toughness and Attack characteristics (to a minimum of 1) for the remainder of the close combat phase." field="de63-d6da-efa8-00ac" join="
 
 "/>
                             <modifier type="prepend" value="Magic Weapon" field="de63-d6da-efa8-00ac"/>
@@ -4554,8 +4451,11 @@
                 <categoryLink name="X Light Lance" hidden="false" id="74d0-08db-dbde-af33" targetId="7a83-6b11-9174-d3b2" primary="false"/>
                 <categoryLink name="Infantry" hidden="false" id="884a-9bbf-57f6-3d85" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="set" value="Morathi" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Malus Darkblade" hidden="false" id="34d4-7ceb-4ec1-3784" collective="false" sortIndex="5">
+            <selectionEntry type="model" import="true" name="Malus Darkblade" hidden="false" id="34d4-7ceb-4ec1-3784" collective="false" sortIndex="4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="e0ed-5dd4-82fe-946f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
@@ -4583,7 +4483,7 @@
 
 • Malus Darkblade gains +1 WS, +1 S, +2 T and +1 I. However, friendly units can no longer use his Ld.
 
-• Each time Malus Darkblade makes a To Hit roll of 1, a friendly model in base contact (of your choice) is struck by Malus attack instead. Roll to Wound as normal.</description>
+• Each time Malus Darkblade makes a To Hit roll of 1, a friendly model in base contact (of your choice) is struck by the attack instead. Roll to Wound as normal.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -4641,6 +4541,13 @@
                           <description>Any unit of Cold One Knights joined by Spite are not subject to their normal Stupidity.</description>
                         </rule>
                       </rules>
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="3d95-a162-822b-324a" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a587-33e6-9f04-b2da" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -4668,7 +4575,7 @@
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The Warpsword of Khaine allow Malus to re-roll failed rolls To Wound and Ignores Armour saves.</characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The Warpsword of Khaine allows Malus to re-roll failed rolls To Wound and Ignores Armour saves.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4679,8 +4586,11 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="set" value="Malus Darkblade" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Crone Hellebron" hidden="false" id="457e-0ff7-f43b-a787" collective="false" sortIndex="7">
+            <selectionEntry type="model" import="true" name="Crone Hellebron" hidden="false" id="457e-0ff7-f43b-a787" collective="false" sortIndex="6">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="6c50-82b5-5529-2cea" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
@@ -4808,8 +4718,11 @@
                 <categoryLink name="Infantry" hidden="false" id="e1f3-3305-b5da-eaa0" targetId="22c9-1606-58f8-2e60" primary="false"/>
                 <categoryLink name="Z Armour" hidden="false" id="21e4-5ba4-148d-33c5" targetId="387c-2b7c-0a30-7305" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="set" value="Crone Hellebron" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Rakarth" hidden="false" id="c895-6164-b5cf-817e" collective="false" sortIndex="10">
+            <selectionEntry type="model" import="true" name="Rakarth" hidden="false" id="c895-6164-b5cf-817e" collective="false" sortIndex="9">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="1726-b51f-e351-4d41" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
@@ -4831,7 +4744,7 @@
               </profiles>
               <rules>
                 <rule name="Beastlord" id="f32d-aa8a-823d-7989" hidden="false">
-                  <description>Any friendly Monster within 12&quot; of Rakarth treat him as having the Hold Your Ground! special rule.</description>
+                  <description>Any friendly Monster within 12&quot; of Rakarth treat him as having the Hold Your Ground! special rule. In addition, his Beastslaver special rule affects Bracchus. </description>
                 </rule>
                 <rule name="Ravagers of Rakarth" id="fe59-ce39-84e5-474b" hidden="false">
                   <description>If Rakarth is included in your army, you may upgrade any Scourgerunner Chariots to the Ravagers of Rakarth for a cost of +5 points per model. These models gain the Poisoned Attacks special rule.</description>
@@ -4918,8 +4831,11 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="set" value="Rakarth" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Krethusa the Croneseer" hidden="false" id="76d7-3cc7-e722-b818" collective="false" sortIndex="8">
+            <selectionEntry type="model" import="true" name="Krethusa the Croneseer" hidden="false" id="76d7-3cc7-e722-b818" collective="false" sortIndex="7">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="e846-f193-eeb5-a738" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
@@ -4964,12 +4880,7 @@
               </rules>
               <infoLinks>
                 <infoLink name="Murderous Prowess" id="450d-b522-8f4f-ba3a" hidden="false" targetId="1451-9754-507c-44a8" type="rule"/>
-                <infoLink name="The Flock of Doom" id="ebcf-8272-2e08-341e" hidden="false" targetId="82d2-edc6-e10f-ac00" type="profile">
-                  <modifiers>
-                    <modifier type="set" value="Innate Bound Spell" field="576b-eaa1-0bd1-3f7a"/>
-                    <modifier type="set" value="4+" field="d6bf-647e-ba69-e8a0"/>
-                  </modifiers>
-                </infoLink>
+                <infoLink name="The Flock of Doom" id="ebcf-8272-2e08-341e" hidden="false" targetId="82d2-edc6-e10f-ac00" type="profile"/>
                 <infoLink name="Hekarti&apos;s Blessing" id="4477-800e-af1d-ea0b" hidden="false" type="rule" targetId="15e3-496f-0c02-d0a3"/>
                 <infoLink name="Magical Ward" id="0269-1888-626a-88b1" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
                   <modifiers>
@@ -5009,6 +4920,9 @@
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="set" value="Krethusa the Croneseer" field="name" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5335,121 +5249,6 @@
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="7aab-ebd2-b67f-e0e0" name="Manflayers" hidden="true" collective="false" import="true" type="unit" sortIndex="43">
-      <modifiers>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="b773-e132-cfd5-0691" type="equalTo"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="17ac-c567-e7b2-96bd" value="1">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="b773-e132-cfd5-0691" type="equalTo"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1cf7-5b2b-bd35-52ff" type="max"/>
-        <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="17ac-c567-e7b2-96bd" type="min"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="af61-126f-85e2-a34b" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="2ee8-75b4-ebcf-b6d0" targetId="22c9-1606-58f8-2e60" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="2058-6268-75ae-b965" name="Manflayers" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b982-99e8-07c8-72c2" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="1d74-a015-603c-d361" name="Murderous Prowess" hidden="false" targetId="1451-9754-507c-44a8" type="rule"/>
-            <infoLink id="612d-dafd-e73b-a7af" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
-            <infoLink id="1334-b109-a88f-331a" name="Scouts" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
-            <infoLink id="eae1-647a-fa8c-6f13" name="Poisoned Attacks" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
-            <infoLink name="The Manflayers" id="7983-fef1-5b72-27d6" hidden="false" type="rule" targetId="fb2e-eba1-ca03-a830"/>
-            <infoLink name="Shade" id="59b4-8d1e-6c6d-7b96" hidden="false" type="profile" targetId="7620-4b4a-e5fb-efeb"/>
-            <infoLink name="Elven Grace" id="901a-eb4e-78bc-bfff" hidden="false" targetId="b697-4417-5f4b-5140" type="infoGroup"/>
-            <infoLink name="Hatred (*)" id="c1c4-f41b-ec68-3b2d" hidden="false" targetId="1f0a-79e9-85a8-9659" type="rule">
-              <modifiers>
-                <modifier type="replace" value="High Elves" field="name" arg="*"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="22"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="781c-98f0-b630-e09b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-              <entryLinks>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="fc81-b1ae-ab7b-a671" type="selectionEntry" targetId="0473-857e-78d9-cb7c">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f8e8-7626-870f-f991"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="7921-d7f9-6e14-8638" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
-              <entryLinks>
-                <entryLink import="true" name="Deathrain Crossbow" hidden="false" id="a875-642e-112d-c11e" type="selectionEntry" targetId="f145-882a-3705-d674">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e8c8-6967-cc8e-5ce6"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="546a-38a2-0771-cfef" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
-              <entryLinks>
-                <entryLink import="true" name="Medium Armour" hidden="false" id="c06e-eeff-bea9-de89" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db30-b823-3b95-f5d2"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="feba-d52c-20bb-25e4" name="Command Group" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="f9c8-482e-02cf-d1ef" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="37d9-6590-1091-b277" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ee21-c7ee-5150-9786"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Musician" id="89c4-fa1d-6a57-f206" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="bf32-6584-2813-b489" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="525a-d2c8-0dd4-9b64" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ebf6-be13-a921-e776"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Standard Bearer" id="0980-3cd8-2ae2-8a2b" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <profiles>
-                <profile name="Banner of Kalad" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="9cb1-524d-6b30-ca6d">
-                  <characteristics>
-                    <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">Any unit wishing to target Mengil&apos;s Manflayers with missile attacks suffer -1 to hit. This is increased to -2 if the Manflayers are more than 12&quot; away from the shooters.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -6325,23 +6124,6 @@ If a Monstrous Creature or Monster is Hit by this weapon but survives, it must i
         <entryLink import="true" name="Charms" hidden="false" id="8267-49da-86d4-71a5" type="selectionEntryGroup" targetId="6402-035a-c7a7-1b8c" sortIndex="6"/>
         <entryLink import="true" name="Relics" hidden="false" id="9158-fc0f-ece0-cbec" type="selectionEntryGroup" targetId="f51a-f015-cfff-7938" sortIndex="7"/>
       </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="61. Lore of Magic" id="d68b-5fef-ca68-dd26" hidden="false">
-      <entryLinks>
-        <entryLink import="true" name="Lore of Beasts" hidden="false" id="36af-e6bc-cf07-484d" type="selectionEntry" targetId="b436-b410-dd41-304f" sortIndex="1"/>
-        <entryLink import="true" name="Lore of Death" hidden="false" id="0e57-f5e8-091d-e101" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="2"/>
-        <entryLink import="true" name="Lore of Fire" hidden="false" id="471d-e8c6-f1f0-839d" type="selectionEntry" targetId="4d24-c803-7a05-0894" sortIndex="3"/>
-        <entryLink import="true" name="Lore of Heavens" hidden="false" id="6611-b80f-0c34-9794" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" sortIndex="4"/>
-        <entryLink import="true" name="Lore of Life" hidden="false" id="fd53-a75e-19d0-f934" type="selectionEntry" targetId="968d-55ad-604c-f251" sortIndex="5"/>
-        <entryLink import="true" name="Lore of Metal" hidden="false" id="d57a-3396-a094-fe29" type="selectionEntry" targetId="527f-89f1-1b92-a01d" sortIndex="7"/>
-        <entryLink import="true" name="Lore of Shadow" hidden="false" id="6eb0-607e-8262-562b" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67" sortIndex="8"/>
-        <entryLink import="true" name="Lore of Light" hidden="false" id="50e8-9206-9998-814d" type="selectionEntry" targetId="c543-a893-3879-cf32" sortIndex="6"/>
-        <entryLink import="true" name="Lore of Dark Magic" hidden="false" id="9d2f-7648-6fd6-e7fb" type="selectionEntry" targetId="2627-5189-8fe6-dfd3" sortIndex="0"/>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c83d-3f5b-d270-97a9"/>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3cb8-ee62-a0bc-1ad8"/>
-      </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="90. Magic Items &amp; Gifts of Khaine" id="7985-79f4-81f6-4db5" hidden="false">
       <selectionEntryGroups>
