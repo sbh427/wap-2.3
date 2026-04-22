@@ -521,10 +521,12 @@
         <infoLink name="Swiftstride" id="9275-171e-cda6-36a1" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
       </infoLinks>
     </categoryEntry>
+    <categoryEntry name="Configuration, Spells &amp; Rules" id="24a8-26fb-f384-3c30" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
       <categoryLinks>
+        <categoryLink name="Configuration, Spells &amp; Rules" hidden="false" id="24dd-1401-4a15-bbd1" targetId="24a8-26fb-f384-3c30"/>
         <categoryLink id="e3e8-f89d-a94a-776d" name="Characters" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
         <categoryLink id="ad45-e317-2036-b755" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="false"/>
         <categoryLink id="9241-6f7e-063e-d674" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="false"/>
@@ -602,31 +604,6 @@
               </characteristics>
             </profile>
           </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Minimum Units" hidden="false" id="7fcc-68a5-3a08-941c" collective="false">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="force" shared="false" id="f169-3a49-b864-af03" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Minimum Unit Requirement" typeId="121a-930d-b248-ee3e" typeName="Minimum Units" hidden="false" id="2099-fb98-e433-bc47">
-              <characteristics>
-                <characteristic name="0-500 pts" typeId="5f2a-99ce-f8a3-eac9">1</characteristic>
-                <characteristic name="501-1000 pts" typeId="221f-5ad7-8b1c-4337">2</characteristic>
-                <characteristic name="1001-1500 pts" typeId="b079-6a7a-787c-584d">3</characteristic>
-                <characteristic name="1501-2000 pts" typeId="c5dd-526f-37a8-3c15">4</characteristic>
-                <characteristic name="2001-2500 pts" typeId="415d-0476-97ff-9680">5</characteristic>
-                <characteristic name="Each +500" typeId="5e64-d73e-fa3a-3c61">+1</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules>
-            <rule name="Minimum Unit Requirement" id="241f-72a2-9188-b2b7" hidden="false">
-              <description>An army just isn&apos;t an army unless it has plenty of warriors in its ranks. An army must contain at least one Core, Special or Rare unit for every 500 points played. So, at 750 points you need two units, at 1250 points you need three units, at 2500 points you need 5 units and so on.</description>
-            </rule>
-          </rules>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -894,6 +871,523 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Configuration, Spells &amp; Rules" hidden="false" id="44c9-c94b-ee8e-3c1e" targetId="24a8-26fb-f384-3c30" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Show used Lores" hidden="false" id="72b9-5bfb-763b-f3ad">
+      <categoryLinks>
+        <categoryLink name="Configuration, Spells &amp; Rules" hidden="false" id="1ae8-d5df-c11e-24af" targetId="24a8-26fb-f384-3c30" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Lore of Beasts" hidden="false" id="97c3-2cd0-19f3-c6e9" sortIndex="1">
+          <infoLinks>
+            <infoLink name="Wildheart" id="c253-1606-c0e1-1f3c" hidden="false" targetId="7c9a-10fe-33ee-5112" type="profile"/>
+            <infoLink name="Wyssan&apos;s Wildform" id="76c6-d12c-a2d5-453c" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
+            <infoLink name="Merciw&apos;s Monstrous Regiment" id="3fa2-8f05-56c3-0c55" hidden="false" targetId="623a-6f29-e0a6-385b" type="profile"/>
+            <infoLink name="The Flock of Doom" id="5525-92dd-4d40-fccb" hidden="false" targetId="82d2-edc6-e10f-ac00" type="profile"/>
+            <infoLink name="The Ox Stands" id="ee07-7d5f-7e0c-16df" hidden="false" targetId="ddfb-d346-ab58-19b4" type="profile"/>
+            <infoLink name="Pann&apos;s Impenetrable Pelt" id="92b0-b5a3-9693-5b4b" hidden="false" targetId="639d-9501-0008-8def" type="profile"/>
+            <infoLink name="The Eagle&apos;s Cry" id="c37a-57ac-6acb-6f62" hidden="false" targetId="bd05-6040-b879-d61a" type="profile"/>
+            <infoLink name="Hunter&apos;s Moons" id="8523-deae-39ed-447e" hidden="false" targetId="0946-a485-a467-18a8" type="profile"/>
+            <infoLink name="The Vengeful Hood" id="56a2-764f-00fb-cf07" hidden="false" targetId="f3f3-e999-3138-089b" type="profile"/>
+            <infoLink name="The Curse of Anraheir" id="8e30-e6a0-292f-75f5" hidden="false" targetId="feb7-72b6-1721-2a1c" type="profile"/>
+            <infoLink name="The Savage Beast of Horros" id="d5be-9e2a-34a9-1633" hidden="false" targetId="2886-1c9b-c241-1093" type="profile"/>
+            <infoLink name="The Beast Cowers" id="59d1-cfed-c6d7-3f7b" hidden="false" targetId="b430-484b-7538-1e90" type="profile"/>
+            <infoLink name="The Amber Spear" id="847a-0328-d43a-6771" hidden="false" targetId="5a5d-30a8-b377-cad8" type="profile"/>
+            <infoLink name="The Wolf Hunts" id="7415-5b22-96dc-574d" hidden="false" targetId="12de-92c8-df66-6049" type="profile"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="984e-8962-5ba0-05e9-min" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="984e-8962-5ba0-05e9-max" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="984e-8962-5ba0-05e9-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b436-b410-dd41-304f" shared="true" childName="Lore of Beasts" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="984e-8962-5ba0-05e9-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b436-b410-dd41-304f" shared="true" childName="Lore of Beasts" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Fire" hidden="false" id="a8e2-320c-cd97-9dd4" sortIndex="4">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="17e2-8b76-2747-00b6-min" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="17e2-8b76-2747-00b6-max" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="17e2-8b76-2747-00b6-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d24-c803-7a05-0894" shared="true" childName="Lore of Fire" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="17e2-8b76-2747-00b6-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d24-c803-7a05-0894" shared="true" childName="Lore of Fire" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Kindleflame" id="ec7f-7749-be93-24a2" hidden="false" targetId="c198-878a-0683-0889" type="profile"/>
+            <infoLink name="Fireball" id="b529-7b9f-c015-c23b" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
+            <infoLink name="Magma Storm" id="f0ed-357f-fb42-fa13" hidden="false" targetId="77f7-17f3-1c78-efc4" type="profile"/>
+            <infoLink name="Cascading Fire-Cloak" id="09f5-50df-3fe4-36f3" hidden="false" targetId="ee0b-0214-556a-a7f0" type="profile"/>
+            <infoLink name="Breathe Fire" id="ba49-c852-53a0-e243" hidden="false" targetId="87b7-7b50-7c7e-c392" type="profile"/>
+            <infoLink name="Flaming Sword of Rhuin" id="af85-6213-7399-b91f" hidden="false" targetId="c40b-1df6-0cc6-5d0e" type="profile"/>
+            <infoLink name="Fires of U&apos;Zhul" id="3eb9-f714-0f85-f489" hidden="false" targetId="f5da-92b4-41fb-cad8" type="profile"/>
+            <infoLink name="Sweltering Heat" id="9373-c6ca-71d9-5fb1" hidden="false" targetId="2f8f-6377-5c15-49b6" type="profile"/>
+            <infoLink name="The Burning Head" id="62b5-ac63-4488-dfe4" hidden="false" targetId="3e41-8ba5-25c4-e17c" type="profile"/>
+            <infoLink name="Fiery Blast" id="9546-b910-aa6c-ac4b" hidden="false" targetId="7d75-f077-ed39-2c85" type="profile"/>
+            <infoLink name="Piercing Bolts of Burning" id="2191-719d-3a43-a0cf" hidden="false" targetId="daee-0de8-0bbb-9063" type="profile"/>
+            <infoLink name="Fulminating Flame Cage" id="3de4-a251-bc71-6708" hidden="false" targetId="9526-a4e9-7b88-9276" type="profile"/>
+            <infoLink name="Conflagration of Doom" id="c696-243d-e6d9-e943" hidden="false" targetId="7c8c-f08a-882a-b54e" type="profile"/>
+            <infoLink name="Flame Storm" id="592b-b805-07dc-43f5" hidden="false" targetId="77af-a090-ba85-99ce" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Metal" hidden="false" id="57f2-4764-2e60-8608" sortIndex="8">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="4911-35c0-a2b3-e153" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="a0b9-fe87-4f9e-9305" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="4911-35c0-a2b3-e153">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="527f-89f1-1b92-a01d" shared="true" childName="Lore of Metal" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="a0b9-fe87-4f9e-9305">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="527f-89f1-1b92-a01d" shared="true" childName="Lore of Metal" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Metallic Attraction" id="4368-5853-2770-a2c0" hidden="false" targetId="0958-a1b9-1238-c0e7" type="profile"/>
+            <infoLink name="Glittering Robe" id="ed2f-544f-d616-bbad" hidden="false" targetId="3c85-1552-3323-c4d3" type="profile"/>
+            <infoLink name="Final Transmutation" id="738e-efaa-38e7-7234" hidden="false" targetId="5fbf-bbf2-03d3-17d3" type="profile"/>
+            <infoLink name="Searing Doom" id="8da6-52e4-519c-01a9" hidden="false" targetId="6bd0-6da5-dee9-b098" type="profile"/>
+            <infoLink name="Law of Gold" id="e965-f1e1-7ecd-38c8" hidden="false" targetId="9a24-30f9-2c95-cffd" type="profile"/>
+            <infoLink name="Plague of Rust" id="3a48-0659-2c07-94a8" hidden="false" targetId="79e8-aec9-6d8b-246c" type="profile"/>
+            <infoLink name="Commandment of Brass" id="b563-4dc2-a28e-4b1e" hidden="false" targetId="bb8b-c8fa-45ca-bed6" type="profile"/>
+            <infoLink name="Silver Arrows of Arha" id="4b14-a42b-7fdf-f7b4" hidden="false" targetId="937a-bc1d-46ea-65e0" type="profile"/>
+            <infoLink name="Enchanted Blades of Aiban" id="acb6-7199-33c3-fe2a" hidden="false" targetId="bdf2-5d59-034f-39d3" type="profile"/>
+            <infoLink name="Gehenna&apos;s Golden Hounds" id="bc89-811b-8909-5ac1" hidden="false" targetId="48c6-38af-6000-a450" type="profile"/>
+            <infoLink name="Transmutation of Lead" id="9fbf-a136-75d5-9113" hidden="false" targetId="51f1-f0f3-356e-2520" type="profile"/>
+            <infoLink name="The Gilded Cage" id="c57e-c671-ce43-0aa0" hidden="false" targetId="0b05-4983-c1bf-a836" type="profile"/>
+            <infoLink name="Quicksilver Sword" id="95ff-3ba2-c6ea-22e1" hidden="false" targetId="84c6-faad-709b-99ad" type="profile"/>
+            <infoLink name="Meteoric Ironclad" id="3360-0089-1b86-ec7a" hidden="false" targetId="283c-6023-f253-bf83" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Heavens" hidden="false" id="b811-9e2b-48e0-68d9" sortIndex="5">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="265c-bf78-4d11-b561" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="48b1-d261-9008-9f63" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="265c-bf78-4d11-b561">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e64b-e6a1-58ba-0aee" shared="true" childName="Lore of Heavens" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="48b1-d261-9008-9f63">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e64b-e6a1-58ba-0aee" shared="true" childName="Lore of Heavens" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Fantastic Foresight" id="21c8-77cd-8293-6608" hidden="false" type="profile" targetId="64c1-2688-2cd5-b359"/>
+            <infoLink name="Harmonic Convergence" id="cbf1-aadc-0126-1e40" hidden="false" targetId="91df-517b-9d00-5628" type="profile"/>
+            <infoLink name="Azur Blades" id="eff0-bbbe-16f8-7746" hidden="false" targetId="6803-b783-38e8-f03c" type="profile"/>
+            <infoLink name="Star Tides Ebb" id="e7cd-1875-75d5-e207" hidden="false" targetId="5a3f-0100-e85d-447d" type="profile"/>
+            <infoLink name="Cerulean Shield" id="75f1-27fc-c191-722a" hidden="false" targetId="7288-0be2-7efc-3db7" type="profile"/>
+            <infoLink name="Sign of Amul" id="f8df-18b1-1220-8d6b" hidden="false" targetId="dec0-3cf7-c1ed-4428" type="profile"/>
+            <infoLink name="Crystal Prison" id="6439-92de-f652-2913" hidden="false" targetId="3ef9-0ce4-239d-2baf" type="profile"/>
+            <infoLink name="Portent of Doom" id="3469-e075-86d7-f586" hidden="false" targetId="7053-1cc0-e959-7b6a" type="profile"/>
+            <infoLink name="The Sapphire Arch" id="25bb-fa98-a588-5431" hidden="false" targetId="a252-c31c-32b5-ee80" type="profile"/>
+            <infoLink name="Storm of Chronos" id="aba6-a174-5863-27a1" hidden="false" targetId="54d1-69d4-e6f7-e475" type="profile"/>
+            <infoLink name="Urannon&apos;s Thunderbolt" id="30a6-0611-63d7-ce93" hidden="false" targetId="8bc4-459f-268d-0259" type="profile"/>
+            <infoLink name="Comet of Casandora" id="b6e9-fb0e-64aa-9bdc" hidden="false" targetId="d667-970a-a36d-c1de" type="profile"/>
+            <infoLink name="Chain Lightning" id="523a-cb87-f103-96d8" hidden="false" targetId="cf74-1c98-bc63-8ea6" type="profile"/>
+            <infoLink name="Thorsen&apos;s Thunderstorm" id="723f-6243-7ee3-efb0" hidden="false" targetId="bb40-5119-e4b8-f8c2" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Light" hidden="false" id="1f65-56d7-87ee-3586" sortIndex="7">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="9810-4864-f3b8-13a0" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="cd62-622e-bb9c-38ce" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="9810-4864-f3b8-13a0">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c543-a893-3879-cf32" shared="true" childName="Lore of Light" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="cd62-622e-bb9c-38ce">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c543-a893-3879-cf32" shared="true" childName="Lore of Light" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Focus Energy" id="c578-b859-d96c-a0f8" hidden="false" targetId="cd1f-0bc5-ab83-af06" type="profile"/>
+            <infoLink name="Shem&apos;s Burning Gaze" id="52e5-b413-718d-cb3b" hidden="false" targetId="6508-2de1-8be5-0a2f" type="profile"/>
+            <infoLink name="Dazzling Brightness" id="21a7-67d9-a510-8384" hidden="false" targetId="3767-fe2b-56db-5058" type="profile"/>
+            <infoLink name="Healing Energy" id="fe47-c1f6-b85d-eaec" hidden="false" targetId="0616-5eb8-ec8b-71b8" type="profile"/>
+            <infoLink name="Pha&apos;s Protection" id="2bc6-a75c-2c9a-eea4" hidden="false" targetId="1088-006a-47db-14f3" type="profile"/>
+            <infoLink name="Birona&apos;s Timewarp" id="c972-52d7-7909-ae49" hidden="false" targetId="3667-afc7-2861-4d54" type="profile"/>
+            <infoLink name="The Claw of Apek" id="dc13-3c20-6126-b45a" hidden="false" targetId="abf4-ac24-19ee-502f" type="profile"/>
+            <infoLink name="The Speed of Light" id="7963-043b-aa47-af54" hidden="false" targetId="92a3-5235-890d-9fd3" type="profile"/>
+            <infoLink name="Cleansing Flare" id="55dd-b754-c604-f7e1" hidden="false" targetId="935a-38e9-9eb5-c9f7" type="profile"/>
+            <infoLink name="Light of Battle" id="58cf-cef6-3cc5-de4a" hidden="false" targetId="f6dd-6551-997a-83b4" type="profile"/>
+            <infoLink name="Banishment" id="e3a7-2226-7741-acf4" hidden="false" targetId="2edd-04e5-9a13-d757" type="profile"/>
+            <infoLink name="Net of Amyntok" id="a49e-7885-aa98-bd33" hidden="false" targetId="2eb0-98f2-3158-46ee" type="profile"/>
+            <infoLink name="Time Amok" id="acac-f7c5-3e9c-e9fe" hidden="false" targetId="3a34-ed1d-4a98-2574" type="profile"/>
+            <infoLink name="Pillar of Radiance" id="c199-f2b7-45ad-50d2" hidden="false" targetId="3170-f07e-bb17-2707" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Life" hidden="false" id="5e06-89da-89c2-5e42" sortIndex="6">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="a038-5ac7-d455-e5b6" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="5ae9-f4f7-22d5-b071" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="a038-5ac7-d455-e5b6">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="968d-55ad-604c-f251" shared="true" childName="Lore of Life" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="5ae9-f4f7-22d5-b071">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="968d-55ad-604c-f251" shared="true" childName="Lore of Life" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Lifebloom" id="9c70-1414-0b03-068e" hidden="false" targetId="655d-ede0-9e85-a1ad" type="profile"/>
+            <infoLink name="Earth Blood" id="c000-a773-491a-28ef" hidden="false" targetId="c7c1-2e60-4710-1a6a" type="profile"/>
+            <infoLink name="Shield of Thorns" id="31ad-86d5-4b86-322e" hidden="false" targetId="73e5-14c3-e54b-2c31" type="profile"/>
+            <infoLink name="Awakening of the Wood" id="ef1c-d1a7-6fc8-9f11" hidden="false" targetId="e634-3287-c556-2b80" type="profile"/>
+            <infoLink name="The Cloak of Dain" id="724a-0ce8-786c-0dd0" hidden="false" targetId="c012-31a2-4d4b-bc09" type="profile"/>
+            <infoLink name="Flesh to Stone" id="568b-1f05-7e7d-13b7" hidden="false" targetId="2e0a-69a8-1ef0-5f2d" type="profile"/>
+            <infoLink name="Leaf Fall" id="b6ff-bd07-8eb4-0c1f" hidden="false" targetId="a4ee-d6b5-362f-3b38" type="profile"/>
+            <infoLink name="Verdant Apotheosis" id="3d66-3b6b-6dd0-48c6" hidden="false" targetId="6c55-6914-3b3c-b2af" type="profile"/>
+            <infoLink name="Throne of Vines" id="2a31-611c-5c20-cf07" hidden="false" targetId="1635-78a9-dace-f919" type="profile"/>
+            <infoLink name="Barkskin" id="6100-facc-e730-5241" hidden="false" targetId="6cca-3729-5ee4-ee9e" type="profile"/>
+            <infoLink name="Mistress of the Marsh" id="41fb-84a4-08c4-375e" hidden="false" targetId="5c24-c18f-b641-36a0" type="profile"/>
+            <infoLink name="Paranoth&apos;s Pathway" id="7dad-5329-1c05-6f81" hidden="false" targetId="61d7-7c67-c837-e5d8" type="profile"/>
+            <infoLink name="Regrowth" id="47bb-0aa7-e5e7-3de4" hidden="false" targetId="5606-7317-734a-4381" type="profile"/>
+            <infoLink name="The Dwellers Below" id="2fd7-1042-8be8-0136" hidden="false" targetId="4ceb-4804-7497-c952" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Shadow" hidden="false" id="69bf-9c48-e495-d3bf" sortIndex="10">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="361b-9df3-2db8-2854" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="48dd-f6a2-0178-24c8" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="361b-9df3-2db8-2854">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6c88-e0ab-2ca2-7e67" shared="true" childName="Lore of Shadow" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="48dd-f6a2-0178-24c8">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6c88-e0ab-2ca2-7e67" shared="true" childName="Lore of Shadow" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Steed of Shadows" id="da3d-2e82-240e-c51d" hidden="false" type="profile" targetId="4fcb-a016-2721-ff01"/>
+            <infoLink name="Melkoth&apos;s Mystifying Miasma" id="a5be-c21d-86ae-dc8f" hidden="false" type="profile" targetId="89e2-f22c-758d-a9d7"/>
+            <infoLink name="Creeping Darkness" id="c54e-9acb-a665-0969" hidden="false" targetId="74f3-9fa8-cd36-0a08" type="profile"/>
+            <infoLink name="The Enfeebling Foe" id="421f-09f0-cf3a-b88a" hidden="false" targetId="9fd1-5afd-d90c-3fdf" type="profile"/>
+            <infoLink name="Cloak of Midnight" id="6b97-ac35-233f-4636" hidden="false" targetId="bee4-a421-c89e-0b00" type="profile"/>
+            <infoLink name="Horn of Andar" id="5c29-576b-d249-1c28" hidden="false" targetId="987e-866a-ad4f-867a" type="profile"/>
+            <infoLink name="The Withering" id="3f08-c35a-dae2-2ddb" hidden="false" targetId="37c7-763b-0d45-9041" type="profile"/>
+            <infoLink name="The Dance of Despair" id="09d4-3bd0-a3df-7fc9" hidden="false" targetId="1569-bc93-1bc6-3e2e" type="profile"/>
+            <infoLink name="Crown of Taidron" id="4048-a94d-4e55-0ca7" hidden="false" targetId="ef89-e72e-f79b-7bc3" type="profile"/>
+            <infoLink name="Unseen Lurker" id="3b04-778e-5134-66e1" hidden="false" targetId="0c62-33f3-af2a-6b0f" type="profile"/>
+            <infoLink name="Bridge of Shadows" id="26b5-eb7e-0807-7293" hidden="false" targetId="646f-db0e-4745-ae93" type="profile"/>
+            <infoLink name="Okkam&apos;s Mindrazor" id="fbc4-d3a2-0ac0-c78c" hidden="false" targetId="2e7f-7e2c-e4e0-a10a" type="profile"/>
+            <infoLink name="The Penumbral Pendulum" id="39da-91ed-27cf-29c9" hidden="false" targetId="e002-fb6a-9442-ebcf" type="profile"/>
+            <infoLink name="Pit of Shades" id="d4d9-685b-8dcb-7aa3" hidden="false" targetId="ecf9-c3f1-b183-c310" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Death" hidden="false" id="6da6-eca4-f9b7-bdaf" sortIndex="3">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="f4f7-6688-10c3-fbd1" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="3181-3684-b0d8-e3b1" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="f4f7-6688-10c3-fbd1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bc0d-47f8-7220-1e16" shared="true" childName="Lore of Death" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="3181-3684-b0d8-e3b1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bc0d-47f8-7220-1e16" shared="true" childName="Lore of Death" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Life Leeching" id="5acc-f990-ca5d-e139" hidden="false" targetId="2c43-e445-f916-eae9" type="profile"/>
+            <infoLink name="Dark Hand of Death" id="52c5-9a25-91a8-d42a" hidden="false" targetId="f560-2bd9-89c7-28bd" type="profile"/>
+            <infoLink name="Death Dealer" id="edcf-c5f1-824f-8297" hidden="false" targetId="28ca-81e0-f99c-c4f5" type="profile"/>
+            <infoLink name="The Caress of Laniph" id="dc3b-e67f-64c4-c17a" hidden="false" targetId="eaec-4553-445b-fdc7" type="profile"/>
+            <infoLink name="Spirit Leech" id="f8d9-0cf5-606a-feb9" hidden="false" targetId="a540-a939-e10c-27e0" type="profile"/>
+            <infoLink name="The Chocking Foe" id="feb7-955d-bd76-22cc" hidden="false" targetId="1fea-7441-0472-b626" type="profile"/>
+            <infoLink name="Wind of Death" id="1791-a018-1593-2d56" hidden="false" targetId="5b23-3e43-d010-d9ac" type="profile"/>
+            <infoLink name="Drain Life" id="2e38-d0ae-0031-2fc3" hidden="false" targetId="90cc-1209-6eb5-4598" type="profile"/>
+            <infoLink name="Scythe of Shyish" id="dc67-13c2-dd3e-ca90" hidden="false" targetId="c72d-5c12-7c36-3e9e" type="profile"/>
+            <infoLink name="Doom and Darkness" id="4fad-70f8-0495-4ff3" hidden="false" targetId="c44d-cc21-607b-0911" type="profile"/>
+            <infoLink name="Ashes and Dust" id="768b-3ecf-6eb5-d189" hidden="false" targetId="fdd9-7a9d-0b64-eabb" type="profile"/>
+            <infoLink name="The Fate of Bjuna" id="0424-a4b9-b242-29f9" hidden="false" targetId="9fd3-2187-1379-dcdb" type="profile"/>
+            <infoLink name="Soulblight" id="a702-a84a-8ad1-5ed9" hidden="false" targetId="a37e-0482-9785-ba81" type="profile"/>
+            <infoLink name="The Purple Sun of Xereus" id="bb33-adb7-d8a2-b46a" hidden="false" targetId="754f-f31e-7ccf-8253" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Chaos" hidden="false" id="671c-16d9-4fbb-8510" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="aa28-20da-8c31-503c" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="f9ab-7a40-8e53-de14" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="aa28-20da-8c31-503c">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="785b-99a7-f641-d552" shared="true" childName="Lore of Chaos" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="f9ab-7a40-8e53-de14">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="785b-99a7-f641-d552" shared="true" childName="Lore of Chaos" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Boon of Chaos" id="6f30-f04c-6224-cda2" hidden="false" type="profile" targetId="3087-60d2-6a0c-1ced"/>
+            <infoLink name="The Summoning" id="9c56-f841-4628-94c7" hidden="false" type="profile" targetId="e1d0-95b6-2dd9-4e7c"/>
+            <infoLink name="Daemonic Familiars" id="f580-d188-61f8-7392" hidden="false" type="profile" targetId="f048-59fe-1b2c-3111"/>
+            <infoLink name="Gift of Chaos" id="ea9e-2f15-2e78-9891" hidden="false" type="profile" targetId="7531-303f-2f63-e0c3"/>
+            <infoLink name="Winds of Chaos" id="8ad2-199b-0db6-704e" hidden="false" type="profile" targetId="0050-e5ca-1070-ce77"/>
+            <infoLink name="Veil of Gloom" id="4078-dca9-2634-0c60" hidden="false" type="profile" targetId="2ae0-8c82-a580-953e"/>
+            <infoLink name="Vision of Torment" id="a0ea-6189-bf6d-a22f" hidden="false" type="profile" targetId="cd74-0608-23e4-f68d"/>
+            <infoLink name="Binding Damnation" id="d781-f2a0-125f-6aed" hidden="false" type="profile" targetId="d01c-93f6-a111-5388"/>
+            <infoLink name="Mask of Darkness" id="ae47-5401-eac5-906a" hidden="false" type="profile" targetId="e819-9f1c-7221-3a1a"/>
+            <infoLink name="Veil of Corruption" id="172d-d7a4-c236-a46c" hidden="false" type="profile" targetId="2532-9940-2fb9-a745"/>
+            <infoLink name="Ruinous Vigour" id="bde3-f36c-8dfe-a529" hidden="false" type="profile" targetId="cc89-3736-7d30-fdc7"/>
+            <infoLink name="Chaotic Conduit" id="ea6e-a17a-74f5-05ca" hidden="false" type="profile" targetId="6452-9c57-de52-d735"/>
+            <infoLink name="Spite-Tongue Curse" id="590c-688b-671b-e973" hidden="false" type="profile" targetId="dad2-11da-d44f-06b6"/>
+            <infoLink name="Vortex of Chaos" id="6875-7b63-0470-dd7a" hidden="false" type="profile" targetId="7345-83bf-cd72-cb4a"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Tzeentch" hidden="false" id="6b51-cf19-a01c-9ad6" sortIndex="12">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="983d-4d89-826d-e760" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="75e5-19ee-4a3f-6b81" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="983d-4d89-826d-e760">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="446a-99ef-5aad-d30a" shared="true" childName="Lore of Tzeentch" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="75e5-19ee-4a3f-6b81">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="446a-99ef-5aad-d30a" shared="true" childName="Lore of Tzeentch" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Boon of Magic" id="5077-2a91-f9fd-7d90" hidden="false" type="profile" targetId="6882-88e4-9cfc-032b"/>
+            <infoLink name="Blue Fire of Tzeentch" id="45a2-ac73-fb96-c747" hidden="false" type="profile" targetId="7845-5681-3481-438c"/>
+            <infoLink name="Baleful Transmogrification" id="8dae-8b6f-4ad3-79b1" hidden="false" type="profile" targetId="f20e-8766-c419-c2ad"/>
+            <infoLink name="Boon of Tzeentch" id="3f82-d808-b439-beb8" hidden="false" type="profile" targetId="4079-fa2a-808b-227c"/>
+            <infoLink name="Pandemonium" id="1bbe-e943-9eb1-f658" hidden="false" type="profile" targetId="ccd5-d605-6f13-4a38"/>
+            <infoLink name="Pink Fire of Tzeentch" id="e4e3-ffab-220d-43ea" hidden="false" type="profile" targetId="7a4e-4ca2-b50c-c914"/>
+            <infoLink name="Bolt of Change" id="416b-16fa-8f10-3f1e" hidden="false" type="profile" targetId="1b9c-a354-14b0-c2ab"/>
+            <infoLink name="Shield of Fate" id="5682-514e-27d0-bb2f" hidden="false" type="profile" targetId="bbd9-0a68-0b25-c60a"/>
+            <infoLink name="Fold Reality" id="b13a-a261-69e1-fc90" hidden="false" type="profile" targetId="808a-3a12-23b8-1a49"/>
+            <infoLink name="Glean Magic" id="ea91-c544-2f8f-0da1" hidden="false" type="profile" targetId="e323-2852-8d12-7766"/>
+            <infoLink name="Tzeentch&apos;s Firestorm" id="696d-27c2-de92-962b" hidden="false" type="profile" targetId="07c0-7aef-b57a-9072"/>
+            <infoLink name="Daemonfire Vortex" id="24c1-0eea-4db8-957f" hidden="false" type="profile" targetId="70bd-2415-8b44-a217"/>
+            <infoLink name="Treason of Tzeentch" id="a0e9-44d9-f89d-5fcc" hidden="false" type="profile" targetId="de5f-761e-51df-3d34"/>
+            <infoLink name="Infernal Gateway" id="f9f0-5cc4-e1be-96ec" hidden="false" type="profile" targetId="e5e5-9f34-76f7-4c65"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Nurgle" hidden="false" id="29f4-8033-3b6a-2980" sortIndex="9">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="45c1-2709-6403-3b85" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="8d92-033f-44a0-ec6d" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="45c1-2709-6403-3b85">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a4ce-5b63-a11d-6b22" shared="true" childName="Lore of Nurgle" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="8d92-033f-44a0-ec6d">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a4ce-5b63-a11d-6b22" shared="true" childName="Lore of Nurgle" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Bloated with Disease" id="e29d-ea94-0628-c8ea" hidden="false" type="profile" targetId="09c4-8abf-48b3-8856"/>
+            <infoLink name="Stream of Corruption" id="cf1e-8942-1e38-a9c2" hidden="false" type="profile" targetId="38cc-a143-05b4-b5ca"/>
+            <infoLink name="Miasma of Pestilence" id="0d90-652f-86a9-0bb6" hidden="false" type="profile" targetId="b0d3-925e-faba-34e3"/>
+            <infoLink name="Blades of Putrefaction" id="c2b3-f109-b7bc-ca9d" hidden="false" type="profile" targetId="b7a2-667a-5bcb-c96b"/>
+            <infoLink name="Magnificent Buboes" id="31c0-f285-b73d-7d51" hidden="false" type="profile" targetId="dcd7-a1e7-2788-4c8b"/>
+            <infoLink name="Curse of the Leper" id="e5b7-fa2e-ee50-79cf" hidden="false" type="profile" targetId="fbb1-8f89-5c13-7e2f"/>
+            <infoLink name="Plague Squall" id="c44d-c59b-8d47-fcca" hidden="false" type="profile" targetId="a02a-991c-da4a-6222"/>
+            <infoLink name="Rancid Visitations" id="fd13-1c30-6447-dd95" hidden="false" type="profile" targetId="c81e-308a-59a7-ef1f"/>
+            <infoLink name="Rot Bomb" id="9fc7-25f5-6d63-be6d" hidden="false" type="profile" targetId="fd54-b094-d95c-f818"/>
+            <infoLink name="Cloying Quagmire" id="6dcc-9c9b-b0c3-75fd" hidden="false" type="profile" targetId="39e4-e2c9-bd1e-90a9"/>
+            <infoLink name="Fleshy Abundance" id="106a-5cab-a34d-ef69" hidden="false" type="profile" targetId="b1d7-463e-0d28-f772"/>
+            <infoLink name="Grandfather Nurgle&apos;s Circle of Life" id="d77d-c901-0287-4fbc" hidden="false" type="profile" targetId="433b-f869-57e2-b297"/>
+            <infoLink name="Plague Wind" id="84a7-1f73-6c41-25d1" hidden="false" type="profile" targetId="e269-e479-1725-0ed9"/>
+            <infoLink name="Rot, Glorious Rot" id="5203-0bb3-034a-87af" hidden="false" type="profile" targetId="a5c5-fb8d-5541-172e"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Slaanesh" hidden="false" id="6ae3-79e0-0400-07b6" sortIndex="11">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="583e-bd98-c6cd-b34a" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="326e-b36f-90cb-f5e9" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="1" field="583e-bd98-c6cd-b34a">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="16cc-0573-bda7-993c" shared="true" childName="Lore of Slaanesh" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="1" field="326e-b36f-90cb-f5e9">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="16cc-0573-bda7-993c" shared="true" childName="Lore of Slaanesh" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Bliss in Torment" id="b754-ae0f-cdc9-d437" hidden="false" type="profile" targetId="d7a7-bdf8-fb11-8ed0"/>
+            <infoLink name="Lash of Slaanesh" id="c4f0-fbe4-45b3-43e7" hidden="false" type="profile" targetId="48c5-8240-00a5-18d2"/>
+            <infoLink name="Hysterical Frenzy" id="ea9e-92a4-4827-166e" hidden="false" type="profile" targetId="b175-19b0-9497-36df"/>
+            <infoLink name="Pavane of Slaanesh" id="5b83-959e-846c-bf35" hidden="false" type="profile" targetId="5338-8b26-f6be-4c74"/>
+            <infoLink name="Succour of Chaos" id="e5bf-7056-be03-c079" hidden="false" type="profile" targetId="fbf7-97d5-c7cd-58b0"/>
+            <infoLink name="Titillating Delusions" id="c3bd-3f55-11a1-53b7" hidden="false" type="profile" targetId="02da-c6d5-f2bd-e798"/>
+            <infoLink name="Slothful Stupor" id="97e9-384d-b451-1351" hidden="false" type="profile" targetId="b167-24a9-b0f7-b191"/>
+            <infoLink name="Acquiescence" id="ecd8-dc63-65e4-d811" hidden="false" type="profile" targetId="a42c-8d8d-62bf-e130"/>
+            <infoLink name="Delicious Excruciation" id="2bbd-9003-f7ff-3935" hidden="false" type="profile" targetId="314b-8c7d-9aaa-5b41"/>
+            <infoLink name="Slicing Shards" id="eabd-090b-fa9f-1ee0" hidden="false" type="profile" targetId="be04-9edd-1a24-bfab"/>
+            <infoLink name="Phantasmagoria" id="9b9d-99d2-e34d-2389" hidden="false" type="profile" targetId="4718-9ffa-ee9d-6c40"/>
+            <infoLink name="Cacophonic Choir" id="4f1a-f255-29bc-dd99" hidden="false" type="profile" targetId="e57e-9b7d-9e22-b5f7"/>
+            <infoLink name="Ecstatic Seizures" id="e5d1-6d4f-b3d7-2a82" hidden="false" type="profile" targetId="2d79-78cc-4e46-93ba"/>
+            <infoLink name="Song of Seduction" id="eddd-05ef-74e7-e67c" hidden="false" type="profile" targetId="26e0-12f7-85bc-c19c"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="b37e-7f30-8e10-1400" includeChildSelections="true" automatic="false"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -917,6060 +1411,100 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="b436-b410-dd41-304f" name="Lore of Beasts" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cf51-c3e7-8561-ffe5" type="max" automatic="true"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="3ce9-08d9-0e1a-1e25" name="Wildheart" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e03d-f483-de7e-8144" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ca93-92c1-680c-5858" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="c253-1606-c0e1-1f3c" name="Wildheart" hidden="false" targetId="7c9a-10fe-33ee-5112" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0096-7e25-66b4-9cad" name="0. Wyssan&apos;s Wildform" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9d2e-a707-e845-f673" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5986-e58b-7345-9a05" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="76c6-d12c-a2d5-453c" name="Wyssan&apos;s Wildform" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Beasts" id="8f9a-aac2-7174-578c" hidden="false" sortIndex="3" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Merciw&apos;s Monstrous Regiment" hidden="true" id="5715-a0fb-3e52-ae60" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4395-1cf4-4d8d-b079" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Merciw&apos;s Monstrous Regiment" id="3fa2-8f05-56c3-0c55" hidden="false" targetId="623a-6f29-e0a6-385b" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. The Flock of Doom" hidden="false" id="0465-fa36-e7c8-9c79" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c44a-a4cf-adc2-b7b3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Flock of Doom" id="5525-92dd-4d40-fccb" hidden="false" targetId="82d2-edc6-e10f-ac00" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. The Ox Stands" hidden="false" id="dd76-faf9-80fd-4382" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2ac1-ee21-6f6a-60e4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Ox Stands" id="ee07-7d5f-7e0c-16df" hidden="false" targetId="ddfb-d346-ab58-19b4" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Pann&apos;s Impenetrable Pelt" hidden="false" id="8142-6684-5e96-a011" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="01c5-c717-0796-6a41" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Pann&apos;s Impenetrable Pelt" id="92b0-b5a3-9693-5b4b" hidden="false" targetId="639d-9501-0008-8def" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. The Eagle&apos;s Cry" hidden="true" id="337f-5884-42a1-0a99" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d84a-8140-2a5d-8b13" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Eagle&apos;s Cry" id="c37a-57ac-6acb-6f62" hidden="false" targetId="bd05-6040-b879-d61a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Hunter&apos;s Moons" hidden="true" id="30a9-c8bf-084e-f29e" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="eb8d-bbff-679e-20f1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Hunter&apos;s Moons" id="8523-deae-39ed-447e" hidden="false" targetId="0946-a485-a467-18a8" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. The Vengeful Hood" hidden="true" id="389d-8c97-abca-196e" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="56b0-9617-f699-cf9d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Vengeful Hood" id="56a2-764f-00fb-cf07" hidden="false" targetId="f3f3-e999-3138-089b" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. The Curse of Anraheir" hidden="true" id="02fd-58a3-ac53-71c9" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9897-ef82-d0b7-0177" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Curse of Anraheir" id="8e30-e6a0-292f-75f5" hidden="false" targetId="feb7-72b6-1721-2a1c" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. The Savage Beast of Horros" hidden="true" id="20d7-6a64-ed72-0214" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d2f7-d477-cc57-6288" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Savage Beast of Horros" id="d5be-9e2a-34a9-1633" hidden="false" targetId="2886-1c9b-c241-1093" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. The Beast Cowers" hidden="true" id="43aa-674b-329a-3cd4" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7d94-26ea-8a3c-303c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Beast Cowers" id="59d1-cfed-c6d7-3f7b" hidden="false" targetId="b430-484b-7538-1e90" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. The Amber Spear" hidden="true" id="2ee5-76cd-f744-2f8c" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="69aa-c9e9-8f76-632b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Amber Spear" id="847a-0328-d43a-6771" hidden="false" targetId="5a5d-30a8-b377-cad8" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. The Wolf Hunts" hidden="true" id="9b4b-59e7-2801-fa72" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="13ad-17a1-fa35-c6c3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Wolf Hunts" id="7415-5b22-96dc-574d" hidden="false" targetId="12de-92c8-df66-6049" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="e4fb-7467-2e3f-b4dd"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="108d-f349-1a8a-41dc"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="e4fb-7467-2e3f-b4dd">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="108d-f349-1a8a-41dc">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="e4fb-7467-2e3f-b4dd">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="108d-f349-1a8a-41dc">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="e4fb-7467-2e3f-b4dd">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="108d-f349-1a8a-41dc">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="e4fb-7467-2e3f-b4dd">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="108d-f349-1a8a-41dc">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="e4fb-7467-2e3f-b4dd">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="108d-f349-1a8a-41dc">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="e4fb-7467-2e3f-b4dd">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="108d-f349-1a8a-41dc">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fc0-77ba-50dc-ad10" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="4d24-c803-7a05-0894" name="Lore of Fire" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1c55-bc61-cc88-d303" type="max" automatic="true"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="fff3-d6d4-bcac-0a6a" name="Kindleflame" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2de0-13cf-b9e7-7b95" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="287e-af4d-7c6e-89ae" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="ec7f-7749-be93-24a2" name="Kindleflame" hidden="false" targetId="c198-878a-0683-0889" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e899-1538-32f0-e469" name="0. Fireball" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="02e8-8d20-0e85-81b1" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32ee-149d-e11a-225b" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="b529-7b9f-c015-c23b" name="Fireball" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Fire" id="70ea-cfeb-a8a4-e2d7" hidden="false" sortIndex="3" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Magma Storm" hidden="true" id="ac7c-f6c7-747b-9610" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="46e0-cfe5-af1b-57e6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Magma Storm" id="f0ed-357f-fb42-fa13" hidden="false" targetId="77f7-17f3-1c78-efc4" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Cascading Fire-Cloak" hidden="false" id="c52e-1f2f-ab75-6f3c" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6ea9-74d6-1706-1d91" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Cascading Fire-Cloak" id="09f5-50df-3fe4-36f3" hidden="false" targetId="ee0b-0214-556a-a7f0" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. Breathe Fire" hidden="false" id="b2d8-b581-0ada-df2d" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="016b-a3bb-55fc-8f14" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Breathe Fire" id="ba49-c852-53a0-e243" hidden="false" targetId="87b7-7b50-7c7e-c392" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Flaming Sword of Rhuin" hidden="false" id="f722-5b25-3d5c-45d4" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ed07-f05c-901e-6fe9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Flaming Sword of Rhuin" id="af85-6213-7399-b91f" hidden="false" targetId="c40b-1df6-0cc6-5d0e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Fires of U&apos;Zhul" hidden="true" id="624c-9f38-a879-acd8" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3b0e-d4f1-2e02-818e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Fires of U&apos;Zhul" id="3eb9-f714-0f85-f489" hidden="false" targetId="f5da-92b4-41fb-cad8" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Sweltering Heat" hidden="true" id="dffb-84ee-d672-c05a" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="50f4-1b7c-1999-a4d1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Sweltering Heat" id="9373-c6ca-71d9-5fb1" hidden="false" targetId="2f8f-6377-5c15-49b6" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. The Burning Head" hidden="true" id="9460-0886-9812-ad0f" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="02cd-0806-7b61-5bf1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Burning Head" id="62b5-ac63-4488-dfe4" hidden="false" targetId="3e41-8ba5-25c4-e17c" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Fiery Blast" hidden="true" id="1695-eb1c-f399-ff9d" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2980-fde9-7816-898b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Fiery Blast" id="9546-b910-aa6c-ac4b" hidden="false" targetId="7d75-f077-ed39-2c85" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Piercing Bolts of Burning" hidden="true" id="fa16-9446-c1b5-f8a9" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4a1c-3a10-4713-5092" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Piercing Bolts of Burning" id="2191-719d-3a43-a0cf" hidden="false" targetId="daee-0de8-0bbb-9063" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Fulminating Flame Cage" hidden="true" id="fa93-90f8-737d-16fb" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0ce9-47f6-a404-c642" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Fulminating Flame Cage" id="3de4-a251-bc71-6708" hidden="false" targetId="9526-a4e9-7b88-9276" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Conflagration of Doom" hidden="true" id="45d6-95ac-b00d-6778" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0b15-f7d5-063c-2f61" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Conflagration of Doom" id="c696-243d-e6d9-e943" hidden="false" targetId="7c8c-f08a-882a-b54e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Flame Storm" hidden="true" id="901e-94ed-8153-6668" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9fb9-438d-e83b-f4e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Flame Storm" id="592b-b805-07dc-43f5" hidden="false" targetId="77af-a090-ba85-99ce" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="e8c7-5804-05b1-94a4"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="af56-a72f-738b-5f2e"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="e8c7-5804-05b1-94a4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="af56-a72f-738b-5f2e">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="e8c7-5804-05b1-94a4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="af56-a72f-738b-5f2e">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="e8c7-5804-05b1-94a4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="af56-a72f-738b-5f2e">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="e8c7-5804-05b1-94a4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="af56-a72f-738b-5f2e">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="e8c7-5804-05b1-94a4">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="af56-a72f-738b-5f2e">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="e8c7-5804-05b1-94a4">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="af56-a72f-738b-5f2e">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="698f-4b26-f7c7-e7bb" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="527f-89f1-1b92-a01d" name="Lore of Metal" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6cdd-e249-97f2-2c76" type="max" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e3e6-353b-b61f-8f6a" includeChildSelections="false"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="6387-34cd-3446-5e8d" name="Metallic Attraction" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1df9-2b53-b082-3665" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4395-afc3-ac52-c546" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="4368-5853-2770-a2c0" name="Metallic Attraction" hidden="false" targetId="0958-a1b9-1238-c0e7" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2fbe-0ca5-12f1-b74b" name="0. Glittering Robe" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ee6c-72c0-e856-cf04" type="max"/>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f44d-ed4e-5ce8-62b4"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="ed2f-544f-d616-bbad" name="Glittering Robe" hidden="false" targetId="3c85-1552-3323-c4d3" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Metal" id="1c34-f45c-13cf-4c2a" hidden="false" sortIndex="3" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Final Transmutation" hidden="true" id="e962-f920-5b72-267c" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cd1b-f383-30fe-71a6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Final Transmutation" id="738e-efaa-38e7-7234" hidden="false" targetId="5fbf-bbf2-03d3-17d3" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Searing Doom" hidden="false" id="644b-e439-7b01-d620" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1a68-8380-9275-6741" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Searing Doom" id="8da6-52e4-519c-01a9" hidden="false" targetId="6bd0-6da5-dee9-b098" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. Law of Gold" hidden="false" id="80cb-0b29-5a85-f396" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3547-fb30-3190-2749" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Law of Gold" id="e965-f1e1-7ecd-38c8" hidden="false" targetId="9a24-30f9-2c95-cffd" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Plague of Rust" hidden="false" id="6590-69a5-61a4-46f1" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a7b6-44a3-2851-e724" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Plague of Rust" id="3a48-0659-2c07-94a8" hidden="false" targetId="79e8-aec9-6d8b-246c" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Commandment of Brass" hidden="true" id="2c73-d588-908f-7159" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="179c-202e-69d7-65d3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Commandment of Brass" id="b563-4dc2-a28e-4b1e" hidden="false" targetId="bb8b-c8fa-45ca-bed6" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Silver Arrows of Arha" hidden="true" id="09e9-fc69-949c-bc8c" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ccbf-3520-fc4e-093e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Silver Arrows of Arha" id="4b14-a42b-7fdf-f7b4" hidden="false" targetId="937a-bc1d-46ea-65e0" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Enchanted Blades of Aiban" hidden="true" id="5882-bd16-ef23-762d" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c5cd-3213-78c2-4ba6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Enchanted Blades of Aiban" id="acb6-7199-33c3-fe2a" hidden="false" targetId="bdf2-5d59-034f-39d3" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Gehenna&apos;s Golden Hounds" hidden="true" id="f54f-26f0-0ba3-a965" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="da67-86a7-e17b-995e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Gehenna&apos;s Golden Hounds" id="bc89-811b-8909-5ac1" hidden="false" targetId="48c6-38af-6000-a450" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Transmutation of Lead" hidden="true" id="b7b6-db55-64d0-8b6e" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2df2-c362-c005-dd5b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Transmutation of Lead" id="9fbf-a136-75d5-9113" hidden="false" targetId="51f1-f0f3-356e-2520" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. The Gilded Cage" hidden="true" id="13fb-d282-bb3a-dac5" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9263-a5b4-8ffc-5e58" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Gilded Cage" id="c57e-c671-ce43-0aa0" hidden="false" targetId="0b05-4983-c1bf-a836" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Quicksilver Sword" hidden="true" id="4216-1fb1-28ab-e3a7" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1f8e-6c9d-0fe0-077c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Quicksilver Sword" id="95ff-3ba2-c6ea-22e1" hidden="false" targetId="84c6-faad-709b-99ad" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Meteoric Ironclad" hidden="true" id="04ff-d846-a62d-7e1a" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2715-6db4-2a78-df5d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Meteoric Ironclad" id="3360-0089-1b86-ec7a" hidden="false" targetId="283c-6023-f253-bf83" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6e39-09b1-5cf4-fd78-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6e39-09b1-5cf4-fd78-max"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="6e39-09b1-5cf4-fd78-min">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="6e39-09b1-5cf4-fd78-max">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="6e39-09b1-5cf4-fd78-min">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="6e39-09b1-5cf4-fd78-max">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="6e39-09b1-5cf4-fd78-min">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="6e39-09b1-5cf4-fd78-max">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="6e39-09b1-5cf4-fd78-min">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="6e39-09b1-5cf4-fd78-max">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="6e39-09b1-5cf4-fd78-min">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="6e39-09b1-5cf4-fd78-max">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="6e39-09b1-5cf4-fd78-min">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="6e39-09b1-5cf4-fd78-max">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="e64b-e6a1-58ba-0aee" name="Lore of Heavens" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5c00-7f3a-b515-7521" type="max" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e6ba-abc0-3739-5b5a" includeChildSelections="false"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="0a9f-7dc6-486b-092d" name="Fantastic Foresight" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5425-622c-447f-c7e4" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4f9d-02c0-4c80-0d25" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="9537-28e0-62a9-c6d4" name="Fantastic Foresight" hidden="false" targetId="64c1-2688-2cd5-b359" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e9eb-1db7-772d-1bb5" name="0. Harmonic Convergence" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2423-1705-455e-b313" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6b8b-86fe-e6f0-3c09" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="cbf1-aadc-0126-1e40" name="Harmonic Convergence" hidden="false" targetId="91df-517b-9d00-5628" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Heavens" id="1c5c-7a73-f0af-937f" hidden="false" sortIndex="3" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Thorsen&apos;s Thunderstorm" hidden="true" id="9dfc-19fa-7a64-b7dd" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d9e4-25d2-eb8d-24a0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Thorsen&apos;s Thunderstorm" id="723f-6243-7ee3-efb0" hidden="false" targetId="bb40-5119-e4b8-f8c2" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Azur Blades" hidden="false" id="b19b-8399-0f8c-85b7" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d413-a7ed-6587-edd3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Azur Blades" id="eff0-bbbe-16f8-7746" hidden="false" targetId="6803-b783-38e8-f03c" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. Star Tides Ebb" hidden="false" id="681c-5eda-22cf-6fe5" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="435a-98fe-3d4c-e88b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Star Tides Ebb" id="e7cd-1875-75d5-e207" hidden="false" targetId="5a3f-0100-e85d-447d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Cerulean Shield" hidden="false" id="17f8-8cd0-4dc5-2b57" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d96b-e072-acff-d65e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Cerulean Shield" id="75f1-27fc-c191-722a" hidden="false" targetId="7288-0be2-7efc-3db7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Sign of Amul" hidden="true" id="366f-d3ae-995e-bbc0" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d996-4028-61e7-14be" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Sign of Amul" id="f8df-18b1-1220-8d6b" hidden="false" targetId="dec0-3cf7-c1ed-4428" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Crystal Prison" hidden="true" id="e2d0-9b28-3129-643f" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a254-45c4-7f07-839c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Crystal Prison" id="6439-92de-f652-2913" hidden="false" targetId="3ef9-0ce4-239d-2baf" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Portent of Doom" hidden="true" id="ea1f-329a-5a5a-a847" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7323-ade4-47c0-41fe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Portent of Doom" id="3469-e075-86d7-f586" hidden="false" targetId="7053-1cc0-e959-7b6a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. The Sapphire Arch" hidden="true" id="1b5d-9623-bac6-ff83" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ed0d-3798-51fc-3478" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Sapphire Arch" id="25bb-fa98-a588-5431" hidden="false" targetId="a252-c31c-32b5-ee80" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Storm of Chronos" hidden="true" id="fabd-e8e2-203c-c93f" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="922c-3089-ea7b-9646" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Storm of Chronos" id="aba6-a174-5863-27a1" hidden="false" targetId="54d1-69d4-e6f7-e475" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Urannon&apos;s Thunderbolt" hidden="true" id="74e8-620f-553d-0b22" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f874-ed1d-2f69-dc96" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Urannon&apos;s Thunderbolt" id="30a6-0611-63d7-ce93" hidden="false" targetId="8bc4-459f-268d-0259" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Comet of Casandora" hidden="true" id="7704-3122-9918-abfb" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8338-e3db-b99c-4290" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Comet of Casandora" id="b6e9-fb0e-64aa-9bdc" hidden="false" targetId="d667-970a-a36d-c1de" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Chain Lightning" hidden="true" id="2c4a-5c62-3156-ef7f" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b154-adb1-91bd-1958" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Chain Lightning" id="523a-cb87-f103-96d8" hidden="false" targetId="cf74-1c98-bc63-8ea6" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4143-1279-9c92-4a31"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="17b3-e3d4-a420-e5d3"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="4143-1279-9c92-4a31">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="17b3-e3d4-a420-e5d3">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="4143-1279-9c92-4a31">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="17b3-e3d4-a420-e5d3">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="4143-1279-9c92-4a31">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="17b3-e3d4-a420-e5d3">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="4143-1279-9c92-4a31">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="17b3-e3d4-a420-e5d3">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="4143-1279-9c92-4a31">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="17b3-e3d4-a420-e5d3">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="4143-1279-9c92-4a31">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="17b3-e3d4-a420-e5d3">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="c543-a893-3879-cf32" name="Lore of Light" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d548-2594-8049-83ce" type="max" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3dd5-2f4c-9898-b580" includeChildSelections="false"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="35f9-a846-5d77-2266" name="Focus Energy" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7665-d46e-e12d-a6cd" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6717-0cde-7582-5291" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="c578-b859-d96c-a0f8" name="Focus Energy" hidden="false" targetId="cd1f-0bc5-ab83-af06" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6287-ea6c-c498-b86a" name="0. Shem&apos;s Burning Gaze" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="783a-8408-bd4e-5a2b" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4929-1d6b-41d4-2c15" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="52e5-b413-718d-cb3b" name="Shem&apos;s Burning Gaze" hidden="false" targetId="6508-2de1-8be5-0a2f" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Light" id="ca43-e62e-0cd5-034d" hidden="false" sortIndex="3" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Pillar of Radiance" hidden="true" id="00c0-adb6-2f54-a354" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8201-c0ee-2676-a23f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Pillar of Radiance" id="c199-f2b7-45ad-50d2" hidden="false" targetId="3170-f07e-bb17-2707" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Dazzling Brightness" hidden="false" id="6d9e-7cb4-b203-883b" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="30c1-0001-9e17-bf9f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Dazzling Brightness" id="21a7-67d9-a510-8384" hidden="false" targetId="3767-fe2b-56db-5058" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. Healing Energy" hidden="false" id="1177-7eab-d7d8-07a7" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7b9f-605a-bffb-dbc1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Healing Energy" id="fe47-c1f6-b85d-eaec" hidden="false" targetId="0616-5eb8-ec8b-71b8" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Pha&apos;s Protection" hidden="false" id="6bb3-22d6-bb06-1d9e" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8dc5-9b68-6c2e-3629" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Pha&apos;s Protection" id="2bc6-a75c-2c9a-eea4" hidden="false" targetId="1088-006a-47db-14f3" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Birona&apos;s Timewarp" hidden="true" id="4b95-68ae-3761-dc0a" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="64ae-fa85-379a-5602" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Birona&apos;s Timewarp" id="c972-52d7-7909-ae49" hidden="false" targetId="3667-afc7-2861-4d54" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. The Claw of Apek" hidden="true" id="6e6a-3c30-9898-c258" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3719-57db-b4f1-0d06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Claw of Apek" id="dc13-3c20-6126-b45a" hidden="false" targetId="abf4-ac24-19ee-502f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. The Speed of Light" hidden="true" id="e948-66c4-7d67-8406" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ceb3-c824-9db1-f38a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Speed of Light" id="7963-043b-aa47-af54" hidden="false" targetId="92a3-5235-890d-9fd3" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Cleansing Flare" hidden="true" id="c68d-7b99-1c1a-e21a" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e480-f71f-85cd-1055" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Cleansing Flare" id="55dd-b754-c604-f7e1" hidden="false" targetId="935a-38e9-9eb5-c9f7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Light of Battle" hidden="true" id="cc36-c886-a545-0ce6" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="df37-97b8-04b7-459e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Light of Battle" id="58cf-cef6-3cc5-de4a" hidden="false" targetId="f6dd-6551-997a-83b4" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Banishment" hidden="true" id="df21-a83c-61db-1f1b" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c25e-b5cb-02b8-5853" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Banishment" id="e3a7-2226-7741-acf4" hidden="false" targetId="2edd-04e5-9a13-d757" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Net of Amyntok" hidden="true" id="1675-5d01-5897-46d7" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6293-af33-e6bf-897d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Net of Amyntok" id="a49e-7885-aa98-bd33" hidden="false" targetId="2eb0-98f2-3158-46ee" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Time Amok" hidden="true" id="f961-36e0-d913-1743" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1c2b-21fc-e3cc-5948" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Time Amok" id="acac-f7c5-3e9c-e9fe" hidden="false" targetId="3a34-ed1d-4a98-2574" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3bec-93a6-fc5b-f936"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a833-26ed-7ae3-6a89"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="3bec-93a6-fc5b-f936">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="a833-26ed-7ae3-6a89">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="3bec-93a6-fc5b-f936">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="a833-26ed-7ae3-6a89">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="3bec-93a6-fc5b-f936">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="a833-26ed-7ae3-6a89">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="3bec-93a6-fc5b-f936">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="a833-26ed-7ae3-6a89">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="3bec-93a6-fc5b-f936">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="a833-26ed-7ae3-6a89">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="3bec-93a6-fc5b-f936">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="a833-26ed-7ae3-6a89">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="968d-55ad-604c-f251" name="Lore of Life" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1cdb-4c36-5076-244c" type="max" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f5d-8164-6e7c-4382" includeChildSelections="false"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="7f68-7905-ad21-9d6d" name="Lifebloom" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b57c-cbb9-763c-adb2" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e085-7c39-a569-564b" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="9c70-1414-0b03-068e" name="Lifebloom" hidden="false" targetId="655d-ede0-9e85-a1ad" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="413a-6e59-0fd2-16a8" name="0. Earth Blood" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="235f-7494-0f56-bad8" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8fb9-7f73-c665-8c43" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="c000-a773-491a-28ef" name="Earth Blood" hidden="false" targetId="c7c1-2e60-4710-1a6a" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Life" id="5376-05d7-fd54-9e38" hidden="false" sortIndex="3" collapsible="true">
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="ca7f-ccc1-104d-2ada"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0b32-6c3c-78d3-dee6"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="ca7f-ccc1-104d-2ada">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="0b32-6c3c-78d3-dee6">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="ca7f-ccc1-104d-2ada">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="0b32-6c3c-78d3-dee6">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="ca7f-ccc1-104d-2ada">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="0b32-6c3c-78d3-dee6">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="ca7f-ccc1-104d-2ada">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="0b32-6c3c-78d3-dee6">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="ca7f-ccc1-104d-2ada">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="0b32-6c3c-78d3-dee6">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="ca7f-ccc1-104d-2ada">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="0b32-6c3c-78d3-dee6">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="1. Shield of Thorns" hidden="false" id="b18a-83fa-c4a2-4b24" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4aa2-610e-84ec-2b3f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Shield of Thorns" id="31ad-86d5-4b86-322e" hidden="false" targetId="73e5-14c3-e54b-2c31" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. Awakening of the Wood" hidden="false" id="301e-8db5-9663-51dc" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="55fa-c276-6789-b54f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Awakening of the Wood" id="ef1c-d1a7-6fc8-9f11" hidden="false" targetId="e634-3287-c556-2b80" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. The Cloak of Dain" hidden="false" id="2d6a-65ae-5cc6-7e71" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="11f7-1a84-9b49-c7b9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Cloak of Dain" id="724a-0ce8-786c-0dd0" hidden="false" targetId="c012-31a2-4d4b-bc09" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Flesh to Stone" hidden="true" id="e6fe-3f35-5bb3-a549" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9e84-4df4-6488-3572" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Flesh to Stone" id="568b-1f05-7e7d-13b7" hidden="false" targetId="2e0a-69a8-1ef0-5f2d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Leaf Fall" hidden="true" id="1e07-1f9a-417f-9a12" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1c71-b5b2-e79d-c907" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Leaf Fall" id="b6ff-bd07-8eb4-0c1f" hidden="false" targetId="a4ee-d6b5-362f-3b38" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Gift of Life" hidden="true" id="f4ad-1bb2-778a-4c03" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b988-8d10-705c-5ffc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Verdant Apotheosis" id="3d66-3b6b-6dd0-48c6" hidden="false" targetId="6c55-6914-3b3c-b2af" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Throne of Vines" hidden="true" id="0c5b-ba01-f4db-033a" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9c4f-4010-9984-15b7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Throne of Vines" id="2a31-611c-5c20-cf07" hidden="false" targetId="1635-78a9-dace-f919" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Barkskin" hidden="true" id="2310-8d0e-b6e0-ca2e" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="80be-0b21-68a0-4e91" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Barkskin" id="6100-facc-e730-5241" hidden="false" targetId="6cca-3729-5ee4-ee9e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Mistress of the Marsh" hidden="true" id="7728-899d-dea5-6ae5" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4d6d-1cf1-3a54-940f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Mistress of the Marsh" id="41fb-84a4-08c4-375e" hidden="false" targetId="5c24-c18f-b641-36a0" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Paranoth&apos;s Pathway" hidden="true" id="e15b-bc76-d85a-52ab" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f24f-6e91-b426-32d0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Paranoth&apos;s Pathway" id="7dad-5329-1c05-6f81" hidden="false" targetId="61d7-7c67-c837-e5d8" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Regrowth" hidden="true" id="6d2a-ecd5-4bfa-5dfd" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6a88-3b7e-fb57-7d3b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Regrowth" id="47bb-0aa7-e5e7-3de4" hidden="false" targetId="5606-7317-734a-4381" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="12. The Dwellers Below" hidden="true" id="9c75-1ba8-2ceb-4bb9" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8d68-26f0-515e-ec51" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Dwellers Below" id="2fd7-1042-8be8-0136" hidden="false" targetId="4ceb-4804-7497-c952" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="6c88-e0ab-2ca2-7e67" name="Lore of Shadow" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9021-6a37-aa7b-8815" type="max" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12ba-5d43-0896-6c0a" includeChildSelections="false"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="196d-e427-60d7-9cb9" name="Steed of Shadows" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1652-a952-4662-f527" type="min"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6b65-52ec-e1a9-cd25" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="a826-87e2-0f22-b6da" name="Steed of Shadows" hidden="false" targetId="4fcb-a016-2721-ff01" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="dba6-e588-0a5b-69a1" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4e9e-0d3a-56a0-356a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5cd7-39f6-1064-bdc3" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="4cfd-748e-ffb7-de71" name="Melkoth&apos;s Mystifying Miasma" hidden="false" targetId="89e2-f22c-758d-a9d7" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Shadow" id="3de4-d82e-f3ec-8038" hidden="false" sortIndex="3" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Pit of Shades" hidden="true" id="3381-0a9e-89d1-461b" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3e80-8e86-149e-7490" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Pit of Shades" id="d4d9-685b-8dcb-7aa3" hidden="false" targetId="ecf9-c3f1-b183-c310" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Creeping Darkness" hidden="false" id="1881-7f35-6713-cba7" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cfea-ca42-4bd0-a555" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Creeping Darkness" id="c54e-9acb-a665-0969" hidden="false" targetId="74f3-9fa8-cd36-0a08" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. The Enfeebling Foe" hidden="false" id="579c-cdd9-614c-8b33" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e9d9-7847-e111-8bd9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Enfeebling Foe" id="421f-09f0-cf3a-b88a" hidden="false" targetId="9fd1-5afd-d90c-3fdf" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Cloak of Midnight" hidden="false" id="a6b4-9378-c3b6-2553" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="93d8-6487-f9d5-a296" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Cloak of Midnight" id="6b97-ac35-233f-4636" hidden="false" targetId="bee4-a421-c89e-0b00" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. The Dance of Despair" hidden="true" id="7f94-f31d-f11b-a5c4" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4c8d-4bff-bfe0-21b8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Dance of Despair" id="09d4-3bd0-a3df-7fc9" hidden="false" targetId="1569-bc93-1bc6-3e2e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Horn of Andar" hidden="true" id="faa4-975e-020e-619f" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e2c8-0427-662b-af15" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Horn of Andar" id="5c29-576b-d249-1c28" hidden="false" targetId="987e-866a-ad4f-867a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. The Withering" hidden="true" id="9aaa-64d4-a24c-1c5c" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6a80-65eb-f84b-9355" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Withering" id="3f08-c35a-dae2-2ddb" hidden="false" targetId="37c7-763b-0d45-9041" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Crown of Taidron" hidden="true" id="687b-6040-7e9f-d142" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b1bf-831f-7551-aaa4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Crown of Taidron" id="4048-a94d-4e55-0ca7" hidden="false" targetId="ef89-e72e-f79b-7bc3" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Unseen Lurker" hidden="true" id="7a75-911e-4e04-ee42" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7527-4a5b-a30f-c1c1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Unseen Lurker" id="3b04-778e-5134-66e1" hidden="false" targetId="0c62-33f3-af2a-6b0f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Bridge of Shadows" hidden="true" id="c322-a0c4-15a3-f6ed" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b5ec-16b5-725e-ab30" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Bridge of Shadows" id="26b5-eb7e-0807-7293" hidden="false" targetId="646f-db0e-4745-ae93" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Okkam&apos;s Mindrazor" hidden="true" id="5bdb-de2d-a849-33cc" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7068-d9ce-6bbd-4f0c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Okkam&apos;s Mindrazor" id="fbc4-d3a2-0ac0-c78c" hidden="false" targetId="2e7f-7e2c-e4e0-a10a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. The Penumbral Pendulum" hidden="true" id="e6ef-76a2-469b-cb24" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="307c-b392-ac8a-f56e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Penumbral Pendulum" id="39da-91ed-27cf-29c9" hidden="false" targetId="e002-fb6a-9442-ebcf" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8e14-1cf3-f31e-5028"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0d7c-f48f-e4ac-9442"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="8e14-1cf3-f31e-5028">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="0d7c-f48f-e4ac-9442">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="8e14-1cf3-f31e-5028">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="0d7c-f48f-e4ac-9442">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="8e14-1cf3-f31e-5028">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="0d7c-f48f-e4ac-9442">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="8e14-1cf3-f31e-5028">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="0d7c-f48f-e4ac-9442">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="8e14-1cf3-f31e-5028">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="0d7c-f48f-e4ac-9442">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="8e14-1cf3-f31e-5028">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="0d7c-f48f-e4ac-9442">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="bc0d-47f8-7220-1e16" name="Lore of Death" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c5ef-d69a-b34d-e8bf" type="max" automatic="true"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c5ef-d69a-b34d-e8bf" type="max" automatic="false"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="fcda-0bcd-07ba-1f18" name="Life Leeching" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d2b-207f-1723-47ea" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9683-7ccd-b0b9-21ed" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="5acc-f990-ca5d-e139" name="Life Leeching" hidden="false" targetId="2c43-e445-f916-eae9" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3b38-7f74-f979-94f4" name="0. Dark Hand of Death" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b8f-1af5-8b9a-0565" type="max"/>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="63cb-a6db-9494-90d7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="52c5-9a25-91a8-d42a" name="Dark Hand of Death" hidden="false" targetId="f560-2bd9-89c7-28bd" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Death" id="fcc3-c3ee-49af-ce8d" hidden="false" sortIndex="3" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. The Purple Sun of Xereus" hidden="true" id="64f8-69f4-ffb0-f045" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d8f7-408a-dfeb-e1ba" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Purple Sun of Xereus" id="bb33-adb7-d8a2-b46a" hidden="false" targetId="754f-f31e-7ccf-8253" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Death Dealer" hidden="false" id="462b-0dd2-392c-2439" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1289-de71-0207-4556" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Death Dealer" id="edcf-c5f1-824f-8297" hidden="false" targetId="28ca-81e0-f99c-c4f5" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. The Caress of Laniph" hidden="false" id="a5c5-fce0-7c91-d277" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d024-2ae1-27a2-13e8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Caress of Laniph" id="dc3b-e67f-64c4-c17a" hidden="false" targetId="eaec-4553-445b-fdc7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Spirit Leech" hidden="false" id="7a63-500c-5cfb-4a00" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5379-46e8-b571-e45b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Spirit Leech" id="f8d9-0cf5-606a-feb9" hidden="false" targetId="a540-a939-e10c-27e0" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. The Chocking Foe" hidden="true" id="5431-c193-b838-59c6" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e81d-44a4-aa2b-4c8e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Chocking Foe" id="feb7-955d-bd76-22cc" hidden="false" targetId="1fea-7441-0472-b626" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Wind of Death" hidden="true" id="4bb9-9a38-d14b-704b" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="746d-d17b-5c09-3d44" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Wind of Death" id="1791-a018-1593-2d56" hidden="false" targetId="5b23-3e43-d010-d9ac" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Drain Life" hidden="true" id="9d97-9779-f34b-d55f" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7444-cb82-29f9-38b4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Drain Life" id="2e38-d0ae-0031-2fc3" hidden="false" targetId="90cc-1209-6eb5-4598" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Scythe of Shyish" hidden="true" id="9661-bf81-68fa-c59b" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="aca1-ae4a-7588-5cca" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Scythe of Shyish" id="dc67-13c2-dd3e-ca90" hidden="false" targetId="c72d-5c12-7c36-3e9e" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Doom and Darkness" hidden="true" id="e92b-a44d-158c-35df" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1e93-3e23-4fec-3b83" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Doom and Darkness" id="4fad-70f8-0495-4ff3" hidden="false" targetId="c44d-cc21-607b-0911" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Ashes and Dust" hidden="true" id="d988-9e19-8f71-7bd5" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ae9e-d178-6f6a-8341" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Ashes and Dust" id="768b-3ecf-6eb5-d189" hidden="false" targetId="fdd9-7a9d-0b64-eabb" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. The Fate of Bjuna" hidden="true" id="dba5-c13c-0904-18bf" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f67e-905b-b011-6ce3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="The Fate of Bjuna" id="0424-a4b9-b242-29f9" hidden="false" targetId="9fd3-2187-1379-dcdb" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Soulblight" hidden="true" id="c35c-68ba-9c98-0f8b" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f188-a52f-f72d-d655" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Soulblight" id="a702-a84a-8ad1-5ed9" hidden="false" targetId="a37e-0482-9785-ba81" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6ebe-a018-5cee-bc29"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="074b-bb5e-a14c-844e"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="6ebe-a018-5cee-bc29">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="074b-bb5e-a14c-844e">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="6ebe-a018-5cee-bc29">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="074b-bb5e-a14c-844e">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="6ebe-a018-5cee-bc29">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="074b-bb5e-a14c-844e">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="6ebe-a018-5cee-bc29">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="074b-bb5e-a14c-844e">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="6ebe-a018-5cee-bc29">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="074b-bb5e-a14c-844e">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="6ebe-a018-5cee-bc29">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="074b-bb5e-a14c-844e">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="785b-99a7-f641-d552" name="Lore of Chaos" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2d0b-2ea7-607f-6c07" type="max"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79ce-fd75-86c7-a23d" includeChildSelections="false"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="7d54-1b9b-c891-71e5" name="Boon of Chaos" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="db46-e7ad-0cb3-65a8" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ce84-dddd-334a-5387" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <profiles>
-            <profile name="Boon of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5659-baa4-a84a-0ece">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a Wizard successfully cast a spell from the Lore of Chaos, the Wizard’s Weapon Skill, Toughness and Leadership are increased by 1 until the start of their next Magic phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry id="3127-141a-5d90-ce77" name="0. The Summoning" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eafb-1a9e-548a-f2ca" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a9f-12f4-f242-f52e" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="The Summoning" id="9c56-f841-4628-94c7" hidden="false" type="profile" targetId="e1d0-95b6-2dd9-4e7c"/>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Chaos" id="1c75-2182-f79a-8f54" hidden="false" sortIndex="3" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Vortex of Chaos" hidden="true" id="b54d-be44-e21e-5c93" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7d49-fc12-ec6a-ad11" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Vortex of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6cf3-9a28-9084-e829">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the large round template. Any model touched by the template at any point during its move suffer a Strength 4 hit.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Daemonic Familiars" hidden="false" id="55fd-085f-8282-34ad" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9095-73ef-1269-437d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Daemonic Familiars" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="11ee-f17c-3e48-f662">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">Contact</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets one unit in base contact with the Wizard. The target suffer 2D6 Strength 2 hits with the Ignores Armour saves special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. Gift of Chaos" hidden="false" id="d304-ad1a-14a5-14f6" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5f24-048c-0ac5-0626" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Gift of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0944-9adf-b3e7-e9bd">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all enemy units within 12&quot;. Each target suffers D6 Strength 3 Hits.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Winds of Chaos" hidden="true" id="bccf-908d-d55a-5aa0" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f21d-67ca-eaaf-35e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Winds of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f9a4-6e0a-f330-078e">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers -2 to their Movement until the start of the caster&apos;s next turn.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Veil of Gloom" hidden="false" id="0148-a357-c74c-afc3" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8201-7440-06a2-7baa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Veil of Gloom" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f027-e68a-9eee-cf7f">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a 5+ Ward save against missile attacks until the start of your next Magic phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Vision of Torment" hidden="true" id="ecd8-43ad-f80a-dabd" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8dbb-4e77-92fe-7579" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Vision of Torment" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7468-09c3-807d-6760">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target must pass a Psychology test or be unable to voluntarily move or shoot until the start of the caster&apos;s next turn.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Binding Damnation" hidden="true" id="353c-a842-62c3-b15d" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5c6e-1080-8374-f1a2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Binding Damnation" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f06b-29f3-2d56-0cdd">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers -3 to their Weapon Skill and Ballistic Skill (to a minimum of 1) until the start of the caster&apos;s next turn.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Mask of Darkness" hidden="true" id="4cac-9347-9732-e3ab" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3200-7dcf-80c7-65fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Mask of Darkness" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="51f7-f10c-9efd-bdff">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is immediately picked up and may be moved to any point on the battlefield within 12&quot; of its original position, just like a summoning spell.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Veil of Corruption" hidden="true" id="7861-035e-1be2-b735" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="609f-c7a0-bf36-6bde" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Veil of Corruption" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1cc8-ebda-078f-5175">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template anywhere within 24&quot; – it then scatters D6&quot;. All models hit by the template suffer a Strength 3 hit.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Ruinous Vigour" hidden="true" id="1acb-3044-c1de-b14b" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="08dd-9960-6faf-5665" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Ruinous Vigour" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="07bf-7445-cf67-5d96">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains +1 Movement, Toughness and Initiative until the start of the caster’s next Magic phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Chaotic Conduit" hidden="true" id="f581-f9c0-da09-f156" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b2d6-af94-e94d-78e9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Chaotic Conduit" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="18d1-dbd0-b0e3-5080">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains +1 To Hit and To Wound in close combat until the start of the caster’s next Magic phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Spite-Tongue Curse" hidden="true" id="44c2-621c-a9c9-f11f" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e96d-0794-3558-c6f9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Spite-Tongue Curse" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ceb5-3dd9-6d17-27d6">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 3D6 Strength 5 hits. However, if the spell fails to reach its casting value, the caster suffers 1 Wound with the Ignores Armour Saves special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6e40-7f34-58d1-5cc6"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9533-2571-ab0f-be1d"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="6e40-7f34-58d1-5cc6">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="9533-2571-ab0f-be1d">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="6e40-7f34-58d1-5cc6">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="9533-2571-ab0f-be1d">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="6e40-7f34-58d1-5cc6">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="9533-2571-ab0f-be1d">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="6e40-7f34-58d1-5cc6">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="9533-2571-ab0f-be1d">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="6e40-7f34-58d1-5cc6">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="9533-2571-ab0f-be1d">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="6e40-7f34-58d1-5cc6">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="9533-2571-ab0f-be1d">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="446a-99ef-5aad-d30a" name="Lore of Tzeentch" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c04e-4b85-d3ea-d076" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="5fb0-8579-7b4d-6645" name="Boon of Magic" hidden="false" collective="true" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="db50-881a-83f3-45d1" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79dd-1569-e042-db2b" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <profiles>
-            <profile name="Boon of Magic" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dcb9-fd80-3b1c-1fcd">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a spell from the Lore of Tzeentch is successfully cast you may add a Power Dice to your pool for each natural 6 that was rolled to cast the spell, after resolving the spell&apos;s effect(s).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry id="0d5c-1131-1f1d-b764" name="0. Blue Fire of Tzeentch" hidden="false" collective="true" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f538-b753-e850-bd08" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5fde-7c63-b3ec-789f" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <profiles>
-            <profile name="Blue Fire of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7845-5681-3481-438c">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength D6+1 hits with the Flaming Attacks special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Tzeentch" id="f53a-7223-a0d1-e317" hidden="false" sortIndex="3" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Infernal Gateway" hidden="true" id="e756-09f0-58ca-ed4b" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="881e-a12c-d730-f046" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Infernal Gateway" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e5e5-9f34-76f7-4c65">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers 2D6 Strength 2D6 hits with the Flaming Attacks special rule. Roll for the Strength first. If an 11 or 12 is rolled when determining the spell’s Strength value, the hits are resolved at Strength 10, and the unit suffers 3D6 hits rather than 2D6.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Baleful Transmogrification" hidden="false" id="ae47-8dc9-06f3-f02a" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a6f3-cbb9-49f4-cbc6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Baleful Transmogrification" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f20e-8766-c419-c2ad">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers D3 Strength D6 Hits with the Ignores Armour Saves special rule. If a 3 is rolled for the number of Hits, it suffers an additional D3 hits.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. Boon of Tzeentch" hidden="false" id="a55d-a382-a231-2a40" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c0ce-77e1-483d-5eaa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Boon of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6457-a736-7ec4-cbe9">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Cast on the Wizard itself. The Wizard immediately gains D3+1 Power dice, that only they may use.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Pandemonium" hidden="false" id="02c1-4a4f-e80a-1322" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4410-69c2-8b60-fd72" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Pandemonium" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ccd5-d605-6f13-4a38">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster’s next Magic phase, the target unit must use the lowest Leadership value in the unit (including that of mounts) and cannot benefit from the Inspiring Presence or Hold Your Ground! abilities.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Pink Fire of Tzeentch" hidden="true" id="7c79-2381-5249-2bac" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8900-afed-4621-1122" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Pink Fire of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7a4e-4ca2-b50c-c914">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">Flame-Template</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the teardrop-shaped template with its narrow end touching the front of the Wizard’s base and the large end aimed at the target. Roll 2D6 and move the template directly forwards the number of inches indicated. All models underneath the template suffer a Strength D6+1 hit (roll once and apply the result to all models) with the Flaming Attacks special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Blot of Change" hidden="true" id="aa4b-20b0-bae9-f228" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="547e-d96a-395b-9b34" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Blot of Change" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a5ec-478a-3431-76b3">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It inflicts a single Strength D6+4 hit with the Multiple Wounds (D3), Ignores Armour Saves and Flaming Attacks special rules, and then penetrates ranks in the same manner as a shot from a bolt thrower.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Shield of Fate" hidden="true" id="0995-b7f1-e8b3-d64a" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1fa6-f93d-ec2d-b1df" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Shield of Fate" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="bbd9-0a68-0b25-c60a">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target may re-roll armour and Ward Save rolls of 1 until the start of the caster’s next Magic phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Fold Reality" hidden="true" id="a989-6c66-a6da-fbcc" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0c85-cf76-80ce-8388" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Fold Reality" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="808a-3a12-23b8-1a49">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit instantly recovers D3+1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell. However, if a 1 is rolled, the target suffers D3+1 Wounds with no saves allowed instead.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Glean Magic" hidden="true" id="9016-5753-d9e8-26e7" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c4ad-9d19-fd4b-a49a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Glean Magic" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e323-2852-8d12-7766">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell targets a single enemy Wizard. The caster and the target both roll a D6 and add their Wizard level to the score. If the caster rolls higher, the target suffers a Strength 4 hit with the Flaming Attacks special rule and loses one Wizard level (along with one spell). The caster gains access to this spell (unless it is a summoning spell) and can cast it themselves for the remainder of the game (using Boon of Magic as the Lore Attribute)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Tzeentch&apos;s Firestorm" hidden="true" id="2f0a-33ed-5dbb-2ada" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="82a4-fa81-2d39-016c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Tzeentch&apos;s Firestorm" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="07c0-7aef-b57a-9072">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within Range – it then scatters D3&quot;. All models hit by the template suffer a Strength D6+1 hit (roll once and apply the result to all models) with the Flaming Attacks special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Daemonfire Vortex" hidden="true" id="fe59-5f58-f0fb-e061" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f362-6689-2c0a-71b1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Daemonfire Vortex" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="70bd-2415-8b44-a217">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move suffers a Strength D6+1 hit (roll once for each unit and apply the result to all models in that unit) with the Flaming Attacks special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Treason of Tzeentch" hidden="true" id="8129-8b1b-cd1a-c273" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bc7c-34de-3dc9-f4af" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Treason of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="de5f-761e-51df-3d34">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">14+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the unit immediately make a number of close combat attacks equal to the models&apos; Attack characteristic (in addition to any extra Attacks from weapons) against the unit itself. Roll To Hit, To Wound and take saves as normal. The caster may choose which of the unit&apos;s weapons is used for these attacks. Parry or Dodge save does not apply, and neither do any special rules that only applies in the first round of close combat.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="71f0-c206-0b30-a9f4"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0917-7b72-3519-52fc"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="71f0-c206-0b30-a9f4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="0917-7b72-3519-52fc">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="71f0-c206-0b30-a9f4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="0917-7b72-3519-52fc">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="71f0-c206-0b30-a9f4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="0917-7b72-3519-52fc">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="71f0-c206-0b30-a9f4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="0917-7b72-3519-52fc">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="71f0-c206-0b30-a9f4">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="0917-7b72-3519-52fc">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="71f0-c206-0b30-a9f4">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="0917-7b72-3519-52fc">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="a4ce-5b63-a11d-6b22" name="Lore of Nurgle" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2c24-8830-fc65-9d73" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="af11-5691-e999-6e4c" name="Bloated with Disease" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="55e5-304d-bbf4-425b" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4db5-c8f7-78ba-fc50" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <profiles>
-            <profile name="Bloated with Disease" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a9f5-d1bb-6bfc-9349">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a Wizard successfully cast a spell from the Lore of Nurgle, roll a D6 after resolving the spell&apos;s effect(s). On the roll of a 6, the Wizard or one friendly Character within 6&quot; gain +1 Wound for the remainder of the game.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry id="2159-60b2-e898-87e2" name="0. Stream of Corruption" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5cf5-b298-ed1f-4513" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1e04-387b-7e88-98e4" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <profiles>
-            <profile name="Stream of Corruption" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b599-1636-1bc5-d0c8">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The caster makes a Breath Weapon Attack. This may be cast in close combat, following the normal rules for Breath Weapons. All models Hit must pass a Toughness test or suffer a Wound with the Ignores Armour saves special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Nurgle" id="7f7c-e15f-b8e8-d1af" hidden="false" sortIndex="3" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Rot, Glorious Rot" hidden="true" id="629e-6a0d-216f-a8a9" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fdef-3503-e143-b4d1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Rot, Glorious Rot" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e2cc-2d23-24a5-f67d">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each target suffers D6 Strength 3 Hits with the Ignores Armour Saves special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Miasma of Pestilence" hidden="false" id="d528-f18f-2c55-0db3" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1b22-8046-3a40-8a2d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Miasma of Pestilence" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="bb27-94fe-5901-236e">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster’s next Magic phase, all enemy units in base contact with the target unit reduce their Weapon Skill and Initiative by 1 (to a minimum of 1).</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. Blades of Putrefaction" hidden="false" id="3fae-0d80-4fbd-8647" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="302b-8b25-e83e-3fb4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Blades of Putrefaction" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="8748-8367-c636-9685">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit’s close combat attacks gain the Poisoned Attacks special rule until the start of the caster’s next Magic phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Magnificent Buboes" hidden="false" id="1513-3e6c-e605-dbff" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9862-866c-a757-8fd8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Magnificent Buboes" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f6b0-7857-6fbf-deb2">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). The target suffers one Wound which Ignores Armour saves.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Curse of the Leper" hidden="true" id="973f-9384-b099-5010" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="39f4-75be-c8e8-efe8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Curse of the Leper" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d641-1957-d512-b11b">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If cast on a friendly unit, it increases the target unit’s Toughness by 1 until the start of the caster&apos;s next Magic phase. If cast on an enemy unit, it reduces the target unit’s Toughness by 1 (to a minimum of 1) until the start of the caster’s next Magic phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Plague Squall" hidden="true" id="cbd6-5b68-f980-b875" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="89cf-de82-7c96-2d55" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Plague Squall" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3edf-16c8-ac9b-b2e1">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template with the centre anywhere within this range; it scatters like a stone thrower. If a misfire is rolled, the caster suffers 1 Wound with the Ignores Armour Saves special rule. Any model hit suffers a Strength 1 Hit with the Ignores Armour Saves special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Rancid Visitations" hidden="true" id="126c-cf22-6784-0ee1" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f734-3b74-a1a8-7ef1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Rancid Visitations" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dd75-a148-9eb7-b964">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 Strength 5 hits. The target unit must then immediately pass a Toughness test or suffer a further D6 hits. The target must keep taking Toughness tests until it passes, or is removed as a casualty.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Rot Bomb" hidden="true" id="90d7-adad-edda-6a66" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b755-67f8-ac52-77f7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Rot Bomb" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9f6c-ed73-0f3f-a947">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target&apos;s armour save is lowered by two points for the rest of the game. Rotbomb can be repeatedly cast on the same target, reducing its armour save by a further -2 each time.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Cloying Quagmire" hidden="true" id="4267-e247-899c-6b07" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2a30-d99c-6329-b7f8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Cloying Quagmire" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2bb2-d641-24a3-7ffc">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the unit must take an Initiative test. Those that fail must then take an armour save. If passed, they are removed as casualties, with no saves allowed. Models without armour count as passing on a 6. This spell has no effect on models with the Fly, Ethereal or Strider special rules.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Fleshy Abundance" hidden="true" id="43ff-626b-9d8a-89a5" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5c6b-8400-7c07-1dc1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Fleshy Abundance" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7d34-6d66-3b9a-7f69">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster’s next Magic phase, the target has the Regeneration (5+) special rule (to a maximum of a 3+ save for Daemons of Nurgle).</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Grandfather Nurgle&apos;s Circle of Life" hidden="true" id="52ee-6660-1c48-9c87" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3067-a0b5-b824-9c72" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Grandfather Nurgle&apos;s Circle of Life" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6b0f-b3a1-3d19-8ed5">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell causes D6 hits that wound on a 4+ with the Ignores Armour Saves special rule. For each unsaved Wound caused, one friendly unit within 6&quot; of the caster instantly recovers 1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Plague Wind" hidden="true" id="6ca7-a875-4668-70d7" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="82d8-4a6a-c6de-e422" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Plague Wind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b2ff-05aa-9c1a-17a6">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Uses the small round template. Any model touched by the template at any point during its move must pass a Toughness test or suffer a single Wound with the Ignores Armour Saves special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3331-782a-c40c-615a"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="21a9-05c9-48bd-113d"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="3331-782a-c40c-615a">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="21a9-05c9-48bd-113d">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="3331-782a-c40c-615a">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="21a9-05c9-48bd-113d">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="3331-782a-c40c-615a">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="21a9-05c9-48bd-113d">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="3331-782a-c40c-615a">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="21a9-05c9-48bd-113d">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="3331-782a-c40c-615a">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="21a9-05c9-48bd-113d">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="3331-782a-c40c-615a">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="21a9-05c9-48bd-113d">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry id="16cc-0573-bda7-993c" name="Lore of Slaanesh" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c5eb-06a3-84ea-aeaa" type="max"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="23bd-6e35-5744-64ca" name="Bliss in Torment" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="03a1-234f-9490-5007" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51be-0b3f-1ccd-1f70" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <profiles>
-            <profile name="Bliss in Torment" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7d5c-147b-03f5-4f01">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a Wizard successfully cast a spell from the Lore of Slaanesh on an enemy unit, the target suffers D6 Strength 3 Hits after resolving all effects of the spell.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-        <selectionEntry id="5bf9-1462-bfad-4206" name="0. Lash of Slaanesh" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c6e8-65c9-5b27-7f6d" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e55d-98f9-aa3e-bf5a" type="min"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <profiles>
-            <profile name="Lash of Slaanesh" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9026-6c97-dd9a-5ea7">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 24&quot; in length, within the caster’s forward arc and directly from their base. Each model in the way (determined using the line template) suffers a Strength 4 hit with the Armour Piercing (1) special rule. Any unit that suffers a casualty from this spell may not march in its next Movement phase.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Slaanesh" id="d5a8-14e5-85b4-b777" hidden="false" sortIndex="3" collapsible="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Song of Seduction" hidden="true" id="3608-64a5-f3d8-40ae" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d161-23ed-57f8-d99b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Song of Seduction" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="281a-f2ab-e1a8-4a08">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, this unit is wholly under the caster&apos;s control. It may move and shoot (but not charge, cast spells or channel dice) during the enemy&apos;s turn as if it were your own unit. At the end of each subsequent Magic phase, the unit must take a Leadership test. If passed, the spell is dispelled. The spell is immediately dispelled if the unit becomes engaged in close combat.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Hysterical Frenzy" hidden="false" id="4857-01c2-032a-8fca" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="26ef-e95b-9e5c-a2eb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Hysterical Frenzy" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4364-abf2-72ec-e940">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target gains the Frenzy special rule (which is not lost if the unit is defeated in close combat) and suffers D6 Strength 3 hits at the end of each of the caster’s Magic phases.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. Pavane of Slaanesh" hidden="false" id="e224-ccc6-d885-15b1" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1f6e-4a89-daa6-81aa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Pavane of Slaanesh" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ab11-62f6-e085-9ddf">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). If successfully cast, the target must pass a Leadership test on their own unmodified Leadership or suffer 1 Wound which Ignores Armour Saves for every point they failed the test by.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Succour of Chaos" hidden="false" id="6631-2fa0-6526-f891" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b141-f5e3-ae55-4587" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Succour of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a579-00f6-0a1c-418e">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Always Strikes First special rule until the start of the caster&apos;s next Magic phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Titillating Delusions" hidden="true" id="0cf8-9452-b042-6f84" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2354-d44b-19eb-7fba" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Titillating Delusions" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7a8e-bdd6-fdaa-f46b">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Place a marker (this has a Line of Sight value of 1) within 24&quot;. While the spell is in effect, the target must pass a Leadership test at the start of each of their Movement phases or be forced to move towards the target as quickly as possible. The spell is automatically dispelled as soon as the unit reaches the marker or loses Line of Sight to it.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Slothful Stupor" hidden="true" id="fe2c-3a98-9471-fcc2" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2c29-fdb5-3a49-0102" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Slothful Stupor" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c3cf-3d10-7c83-373f">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers -2 Leadership and gains the Stupidity special rule until the start of the caster’s next Magic phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Acquiescence" hidden="true" id="63e9-43a3-3fb7-2f5e" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="df5e-7500-4477-f93d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Acquiescence" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6d6e-d45e-cd3a-710e">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit is subject to the Always Strikes Last and Random Movement (D6) special rules until the start of the caster’s next Magic phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Delicious Excruciation" hidden="true" id="65d2-a282-49da-708e" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0b81-5add-cc61-fb0a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Delicious Excruciation" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="09fc-a511-9b6d-953f">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, all models in the target are automatically Hit in close combat and gain the Unbreakable special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Slicing Shards" hidden="true" id="a712-dc5a-2d39-0123" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="50a2-1768-1a44-6eb4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Slicing Shards" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b356-bbe4-ba4e-5ceb">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 Strength 4 hits with the Armour Piercing (1) special rule. The target must then immediately pass a Leadership test or suffer a further D6 hits. The target must keep taking Leadership tests until it passes, or is removed as a casualty.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Phantasmagoria" hidden="true" id="e6c6-62d8-3d8d-7490" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="09b7-1525-9d0e-f96c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Phantasmagoria" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a208-59d0-05a1-4194">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster’s next Magic phase, the target unit must roll an additional D6 whenever it takes a Leadership test, discarding the lowest result rolled.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Cacophonic Choir" hidden="true" id="2d05-f0f0-5bbc-9b4d" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="feb6-907e-2955-4ef0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Cacophonic Choir" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="12d1-d7ac-e3f4-2c4a">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target takes 3D6 hits that wound on a 4+ which Ignores Armour saves. If at least one unsaved Wound is caused, the target is subject to the Always Strikes Last and Random Movement (D6) special rules until the start of the caster’s next Magic phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Ecstatic Seizures" hidden="true" id="f566-5eae-38ca-7953" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="79bf-3e19-bdd5-e774" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Ecstatic Seizures" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1115-caad-872f-14dc">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit must pass a Strength test or suffer 1 Wound which Ignores Armour Saves.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="bf2e-8253-1edd-bfe4"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9adf-f077-9f02-90a0"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="3" field="bf2e-8253-1edd-bfe4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="9adf-f077-9f02-90a0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="bf2e-8253-1edd-bfe4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="4" field="9adf-f077-9f02-90a0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="bf2e-8253-1edd-bfe4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="5" field="9adf-f077-9f02-90a0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="bf2e-8253-1edd-bfe4">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="9" field="9adf-f077-9f02-90a0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="bf2e-8253-1edd-bfe4">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="12" field="9adf-f077-9f02-90a0">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="bf2e-8253-1edd-bfe4">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="6" field="9adf-f077-9f02-90a0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 1" hidden="false" id="745f-c8e7-be1d-a4d8">
       <profiles>
@@ -9015,15 +3549,6 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit is subject to Always Strikes Last and Random Movement (D6) until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
-    <profile id="884b-d4e2-a581-531b" name="Blue Fire of Tzeentch" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+/8+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/48&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength D6+1 hits with Flaming Attacks.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="6882-88e4-9cfc-032b" name="Boon of Magic" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
@@ -9040,15 +3565,6 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). If successfully cast, the target must pass a Leadership test on 3D6. If failed, the target suffers 1 Wound which Ignores Armour saves for every point they failed the Leadership test by.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="75f5-0942-b785-d105" name="Pink Fire of Tzeentch" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the teardrop-shaped template with its narrow end touching the front of the Wizard&apos;s base and the large end aimed at the target. Roll 2D6 and move the template directly forwards the number of inches indicated. All models underneath the template suffer a Strength D6+1 hit with Flaming Attacks (roll once for the Strength and use that value for all hits).</characteristic>
       </characteristics>
     </profile>
     <profile id="a0a6-193b-9eb5-ffe9" name="Organ Gun" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -9788,6 +4304,483 @@ All models under the template must roll a D6 per Wound on their profile – fo
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). The target suffers D3 Strength 10 hits.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Boon of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3087-60d2-6a0c-1ced">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a Wizard successfully cast a spell from the Lore of Chaos, the Wizard’s Weapon Skill, Toughness and Leadership are increased by 1 until the start of their next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Vortex of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7345-83bf-cd72-cb4a">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the large round template. Any model touched by the template at any point during its move suffer a Strength 4 hit.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Daemonic Familiars" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f048-59fe-1b2c-3111">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">Contact</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets one unit in base contact with the Wizard. The target suffer 2D6 Strength 2 hits with the Ignores Armour saves special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Gift of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7531-303f-2f63-e0c3">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all enemy units within 12&quot;. Each target suffers D6 Strength 3 Hits.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Winds of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0050-e5ca-1070-ce77">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers -2 to their Movement until the start of the caster&apos;s next turn.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Veil of Gloom" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2ae0-8c82-a580-953e">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a 5+ Ward save against missile attacks until the start of your next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Vision of Torment" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="cd74-0608-23e4-f68d">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target must pass a Psychology test or be unable to voluntarily move or shoot until the start of the caster&apos;s next turn.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Binding Damnation" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d01c-93f6-a111-5388">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers -3 to their Weapon Skill and Ballistic Skill (to a minimum of 1) until the start of the caster&apos;s next turn.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Mask of Darkness" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e819-9f1c-7221-3a1a">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is immediately picked up and may be moved to any point on the battlefield within 12&quot; of its original position, just like a summoning spell.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Veil of Corruption" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2532-9940-2fb9-a745">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template anywhere within 24&quot; – it then scatters D6&quot;. All models hit by the template suffer a Strength 3 hit.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Ruinous Vigour" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="cc89-3736-7d30-fdc7">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains +1 Movement, Toughness and Initiative until the start of the caster’s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Spite-Tongue Curse" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dad2-11da-d44f-06b6">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 3D6 Strength 5 hits. However, if the spell fails to reach its casting value, the caster suffers 1 Wound with the Ignores Armour Saves special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Chaotic Conduit" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6452-9c57-de52-d735">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains +1 To Hit and To Wound in close combat until the start of the caster’s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Blue Fire of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7845-5681-3481-438c">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength D6+1 hits with the Flaming Attacks special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Treason of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="de5f-761e-51df-3d34">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">14+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the unit immediately make a number of close combat attacks equal to the models&apos; Attack characteristic (in addition to any extra Attacks from weapons) against the unit itself. Roll To Hit, To Wound and take saves as normal. The caster may choose which of the unit&apos;s weapons is used for these attacks. Parry or Dodge save does not apply, and neither do any special rules that only applies in the first round of close combat.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Daemonfire Vortex" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="70bd-2415-8b44-a217">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move suffers a Strength D6+1 hit (roll once for each unit and apply the result to all models in that unit) with the Flaming Attacks special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Tzeentch&apos;s Firestorm" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="07c0-7aef-b57a-9072">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within Range – it then scatters D3&quot;. All models hit by the template suffer a Strength D6+1 hit (roll once and apply the result to all models) with the Flaming Attacks special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Glean Magic" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e323-2852-8d12-7766">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell targets a single enemy Wizard. The caster and the target both roll a D6 and add their Wizard level to the score. If the caster rolls higher, the target suffers a Strength 4 hit with the Flaming Attacks special rule and loses one Wizard level (along with one spell). The caster gains access to this spell (unless it is a summoning spell) and can cast it themselves for the remainder of the game (using Boon of Magic as the Lore Attribute)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Fold Reality" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="808a-3a12-23b8-1a49">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit instantly recovers D3+1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell. However, if a 1 is rolled, the target suffers D3+1 Wounds with no saves allowed instead.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Shield of Fate" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="bbd9-0a68-0b25-c60a">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target may re-roll armour and Ward Save rolls of 1 until the start of the caster’s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Blot of Change" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a5ec-478a-3431-76b3">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It inflicts a single Strength D6+4 hit with the Multiple Wounds (D3), Ignores Armour Saves and Flaming Attacks special rules, and then penetrates ranks in the same manner as a shot from a bolt thrower.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Pink Fire of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7a4e-4ca2-b50c-c914">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">Flame-Template</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the teardrop-shaped template with its narrow end touching the front of the Wizard’s base and the large end aimed at the target. Roll 2D6 and move the template directly forwards the number of inches indicated. All models underneath the template suffer a Strength D6+1 hit (roll once and apply the result to all models) with the Flaming Attacks special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Pandemonium" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ccd5-d605-6f13-4a38">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster’s next Magic phase, the target unit must use the lowest Leadership value in the unit (including that of mounts) and cannot benefit from the Inspiring Presence or Hold Your Ground! abilities.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Baleful Transmogrification" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f20e-8766-c419-c2ad">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers D3 Strength D6 Hits with the Ignores Armour Saves special rule. If a 3 is rolled for the number of Hits, it suffers an additional D3 hits.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Infernal Gateway" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e5e5-9f34-76f7-4c65">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers 2D6 Strength 2D6 hits with the Flaming Attacks special rule. Roll for the Strength first. If an 11 or 12 is rolled when determining the spell’s Strength value, the hits are resolved at Strength 10, and the unit suffers 3D6 hits rather than 2D6.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Boon of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4079-fa2a-808b-227c">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Wizard immediately gains D3+1 Power dice, that only they may use. </characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bolt of Change" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1b9c-a354-14b0-c2ab">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell inflicts a single Strength D6+4 hit with the Multiple Wounds (D3), Ignores Armour Saves and Flaming Attacks special rules, and then penetrates ranks in the same manner as a shot from a bolt thrower. </characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bloated with Disease" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="09c4-8abf-48b3-8856">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a Wizard successfully cast a spell from the Lore of Nurgle, roll a D6 after resolving the spell&apos;s effect(s). On the roll of a 6, the Wizard or one friendly Character within 6&quot; gain +1 Wound for the remainder of the game.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Stream of Corruption" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="38cc-a143-05b4-b5ca">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The caster makes a Breath Weapon Attack. This may be cast in close combat, following the normal rules for Breath Weapons. All models Hit must pass a Toughness test or suffer a Wound with the Ignores Armour saves special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Plague Wind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e269-e479-1725-0ed9">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Uses the small round template. Any model touched by the template at any point during its move must pass a Toughness test or suffer a single Wound with the Ignores Armour Saves special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Grandfather Nurgle&apos;s Circle of Life" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="433b-f869-57e2-b297">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell causes D6 hits that wound on a 4+ with the Ignores Armour Saves special rule. For each unsaved Wound caused, one friendly unit within 6&quot; of the caster instantly recovers 1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Fleshy Abundance" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b1d7-463e-0d28-f772">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster’s next Magic phase, the target has the Regeneration (5+) special rule (to a maximum of a 3+ save for Daemons of Nurgle).</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Cloying Quagmire" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="39e4-e2c9-bd1e-90a9">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the unit must take an Initiative test. Those that fail must then take an armour save. If passed, they are removed as casualties, with no saves allowed. Models without armour count as passing on a 6. This spell has no effect on models with the Fly, Ethereal or Strider special rules.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rotbomb" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fd54-b094-d95c-f818">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target&apos;s armour save is lowered by two points for the rest of the game. Rotbomb can be repeatedly cast on the same target, reducing its armour save by a further -2 each time.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rancid Visitations" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c81e-308a-59a7-ef1f">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 Strength 5 hits. The target unit must then immediately pass a Toughness test or suffer a further D6 hits. The target must keep taking Toughness tests until it passes, or is removed as a casualty.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Plague Squall" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a02a-991c-da4a-6222">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template with the centre anywhere within this range; it scatters like a stone thrower. If a misfire is rolled, the caster suffers 1 Wound with the Ignores Armour Saves special rule. Any model hit suffers a Strength 1 Hit with the Ignores Armour Saves special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Curse of the Leper" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fbb1-8f89-5c13-7e2f">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If cast on a friendly unit, it increases the target unit’s Toughness by 1 until the start of the caster&apos;s next Magic phase. If cast on an enemy unit, it reduces the target unit’s Toughness by 1 (to a minimum of 1) until the start of the caster’s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Magnificent Buboes" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dcd7-a1e7-2788-4c8b">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). The target suffers one Wound which Ignores Armour saves.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Miasma of Pestilence" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b0d3-925e-faba-34e3">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster’s next Magic phase, all enemy units in base contact with the target unit reduce their Weapon Skill and Initiative by 1 (to a minimum of 1).</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Blades of Putrefaction" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b7a2-667a-5bcb-c96b">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit’s close combat attacks gain the Poisoned Attacks special rule until the start of the caster’s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rot, Glorious Rot" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a5c5-fb8d-5541-172e">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each target suffers D6 Strength 3 Hits with the Ignores Armour Saves special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bliss in Torment" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d7a7-bdf8-fb11-8ed0">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a Wizard successfully cast a spell from the Lore of Slaanesh on an enemy unit, the target suffers D6 Strength 3 Hits after resolving all effects of the spell.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Lash of Slaanesh" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="48c5-8240-00a5-18d2">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 24&quot; in length, within the caster’s forward arc and directly from their base. Each model in the way (determined using the line template) suffers a Strength 4 hit with the Armour Piercing (1) special rule. Any unit that suffers a casualty from this spell may not march in its next Movement phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Song of Seduction" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="26e0-12f7-85bc-c19c">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, this unit is wholly under the caster&apos;s control. It may move and shoot (but not charge, cast spells or channel dice) during the enemy&apos;s turn as if it were your own unit. At the end of each subsequent Magic phase, the unit must take a Leadership test. If passed, the spell is dispelled. The spell is immediately dispelled if the unit becomes engaged in close combat.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Hysterical Frenzy" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b175-19b0-9497-36df">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target gains the Frenzy special rule (which is not lost if the unit is defeated in close combat) and suffers D6 Strength 3 hits at the end of each of the caster’s Magic phases.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Succour of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fbf7-97d5-c7cd-58b0">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Always Strikes First special rule until the start of the caster&apos;s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Titillating Delusions" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="02da-c6d5-f2bd-e798">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Place a marker (this has a Line of Sight value of 1) within 24&quot;. While the spell is in effect, the target must pass a Leadership test at the start of each of their Movement phases or be forced to move towards the target as quickly as possible. The spell is automatically dispelled as soon as the unit reaches the marker or loses Line of Sight to it.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Slothful Stupor" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b167-24a9-b0f7-b191">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers -2 Leadership and gains the Stupidity special rule until the start of the caster’s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Delicious Excruciation" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="314b-8c7d-9aaa-5b41">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, all models in the target are automatically Hit in close combat and gain the Unbreakable special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Slicing Shards" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="be04-9edd-1a24-bfab">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 Strength 4 hits with the Armour Piercing (1) special rule. The target must then immediately pass a Leadership test or suffer a further D6 hits. The target must keep taking Leadership tests until it passes, or is removed as a casualty.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Phantasmagoria" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4718-9ffa-ee9d-6c40">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster’s next Magic phase, the target unit must roll an additional D6 whenever it takes a Leadership test, discarding the lowest result rolled.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Cacophonic Choir" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e57e-9b7d-9e22-b5f7">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target takes 3D6 hits that wound on a 4+ which Ignores Armour saves. If at least one unsaved Wound is caused, the target is subject to the Always Strikes Last and Random Movement (D6) special rules until the start of the caster’s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Ecstatic Seizures" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2d79-78cc-4e46-93ba">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit must pass a Strength test or suffer 1 Wound which Ignores Armour Saves.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
