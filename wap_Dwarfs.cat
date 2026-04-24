@@ -84,23 +84,7 @@
     </profileType>
   </profileTypes>
   <selectionEntries>
-    <selectionEntry id="baad-1342-6be4-72d7" name="High Thane" hidden="false" collective="false" import="true" type="model" sortIndex="1">
-      <profiles>
-        <profile id="a268-bb73-e504-5767" name="High Thane" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+    <selectionEntry id="baad-1342-6be4-72d7" name="Lords" hidden="false" collective="false" import="true" type="model" sortIndex="1">
       <infoLinks>
         <infoLink id="e5ad-8806-f34c-eef5" name="Resolute" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
         <infoLink id="e0a4-bb37-5a0f-6a1b" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
@@ -133,7 +117,29 @@
         <categoryLink name="Characters" hidden="false" id="ae01-384c-df28-8667" targetId="d38a-73da-883b-bab9" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="75f8-039c-faf8-bda2" collective="false" targetId="35f1-2fc8-9817-3171" type="selectionEntryGroup"/>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="75f8-039c-faf8-bda2" collective="false" targetId="35f1-2fc8-9817-3171" type="selectionEntryGroup">
+          <entryLinks>
+            <entryLink import="true" name="Army Battle Standard" hidden="false" id="2bfb-d4ae-bc06-26a1" type="selectionEntry" targetId="9519-df8f-0af4-1995">
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="0" field="9314-ebea-7d72-5d06"/>
+                    <modifier type="set" value="Thane only" field="annotation"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="080c-9b08-daee-6b8a" shared="true" childName="Tier 1 Character"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
+              <entryLinks>
+                <entryLink import="true" name="Magic Standards &amp; Banner Runes" hidden="false" id="de22-6aff-8ea5-cd68" collective="false" targetId="d116-5914-dd74-4a4d" type="selectionEntryGroup"/>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4665-25fb-bbc9-dd27" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="5525-33f0-a53e-9393" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
@@ -144,36 +150,40 @@
             </entryLink>
             <entryLink import="true" name="Great Weapon" hidden="false" id="db27-663e-baea-6ac9" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
               <costs>
-                <cost name="pts" typeId="points" value="12"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Pistol" hidden="false" id="f024-79b5-d165-9423" type="selectionEntry" targetId="4883-fb9f-3893-0d9c" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
+                <cost name="pts" typeId="points" value="15"/>
               </costs>
             </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="f252-baf7-83e7-b07d" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
           <entryLinks>
-            <entryLink import="true" name="Crossbow" hidden="false" id="579a-12fa-b5ad-a07a" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="1">
+            <entryLink import="true" name="Dwarfen Pistol" hidden="false" id="579a-12fa-b5ad-a07a" type="selectionEntry" targetId="de7b-1fca-e751-47e4" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Dwarfen Crossbow" hidden="false" id="3694-cc2f-10a0-89ca" type="selectionEntry" targetId="c494-ba92-e96e-c0c3" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="7"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Handgun" hidden="false" id="32a5-ca3f-c4aa-01f4" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3" sortIndex="2">
+            <entryLink import="true" name="Dwarfen Handgun" hidden="false" id="a12c-d6f0-72f8-3726" type="selectionEntry" targetId="1933-f438-5b41-3a97" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="7"/>
               </costs>
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="257a-a4d9-6822-3601" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="257a-a4d9-6822-3601" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
-            <entryLink import="true" name="Medium Armour" hidden="false" id="0a87-e264-6e65-0a76" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1"/>
+            <entryLink import="true" name="Medium Armour" hidden="false" id="0a87-e264-6e65-0a76" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="18"/>
+              </costs>
+            </entryLink>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="9732-c509-946a-2009" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="12"/>
+                <cost name="pts" typeId="points" value="27"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -182,69 +192,128 @@
           <entryLinks>
             <entryLink import="true" name="Shield" hidden="false" id="39fe-8b72-2ff4-8eee" type="selectionEntry" targetId="c068-0827-9931-d9bf">
               <costs>
-                <cost name="pts" typeId="points" value="3"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="0389-25c3-de4d-2d09" type="selectionEntryGroup" targetId="bd9d-1c7a-5b9f-a25d">
-          <modifiers>
-            <modifier type="increment" value="100" field="37c7-650a-1ac9-ed76"/>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="0389-25c3-de4d-2d09" type="selectionEntryGroup" targetId="bd9d-1c7a-5b9f-a25d"/>
         <entryLink import="true" name="70. Mount" hidden="false" id="8a28-a29e-2b0a-327b" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
             <entryLink import="true" name="Shieldbearers" hidden="false" id="8317-e00d-65d4-b0a0" type="selectionEntry" targetId="af5b-af77-fac7-5790">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="0" field="933d-363e-6718-9332"/>
+                    <modifier type="set" value="King only" field="annotation"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
             <entryLink import="true" name="Oathstone" hidden="false" id="199f-f82d-d973-91d7" type="selectionEntry" targetId="4c9f-cf5f-ef78-482e"/>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="5. Character Selection" hidden="false" id="87dc-5e90-f82e-53ec" type="selectionEntryGroup" targetId="405b-a985-02d7-eeff">
+          <entryLinks>
+            <entryLink import="true" name="Tier 2 Character" hidden="false" id="5b29-ee5f-9124-9abf" type="selectionEntry" targetId="ffde-7800-8634-f4bc">
+              <costs>
+                <cost name="pts" typeId="points" value="125"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="King" field="name"/>
+                <modifier type="set" value="King" field="name" scope="root-entry"/>
+              </modifiers>
+              <profiles>
+                <profile name="King" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a268-bb73-e504-5767" noindex="true">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </entryLink>
+            <entryLink import="true" name="Tier 1 Character" hidden="false" id="080c-9b08-daee-6b8a" type="selectionEntry" targetId="bec4-b947-a609-684a">
+              <costs>
+                <cost name="pts" typeId="points" value="65"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="Thane" field="name"/>
+                <modifier type="set" value="Thane" field="name" scope="root-entry"/>
+              </modifiers>
+              <profiles>
+                <profile name="Thane" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a0b0-d453-2257-1eb2" noindex="true">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="140"/>
+        <cost name="pts" typeId="points" value="65"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="5393-e864-e228-e66e" name="Runelord" hidden="false" collective="false" import="true" type="model" sortIndex="2">
-      <profiles>
-        <profile id="14a0-2f86-8df3-97d0" name="Runelord" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+    <selectionEntry id="5393-e864-e228-e66e" name="Runesmiths" hidden="false" collective="false" import="true" type="model" sortIndex="2">
       <infoLinks>
         <infoLink id="c264-1077-c007-8856" name="Resolute" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
         <infoLink id="1308-53fb-cbd9-ee02" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
         <infoLink id="16f8-f883-b80c-9297" name="Rune Lore" hidden="false" targetId="c330-dbcf-ff35-0037" type="infoGroup"/>
         <infoLink id="3d08-580d-2a7a-4de5" name="Forgefire" hidden="false" targetId="bb72-6ff9-97d0-2b93" type="rule"/>
-        <infoLink name="Rune of Hearth and Hold" id="f126-47b3-da7e-febe" hidden="false" type="profile" targetId="0e84-b78f-cc00-ea9f"/>
-        <infoLink name="Rune of Stone and Steel" id="8334-157c-adcc-44c2" hidden="false" type="profile" targetId="b11d-7500-8513-8992"/>
-        <infoLink name="Rune of Wrath and Ruin" id="120a-4582-3134-cf22" hidden="false" type="profile" targetId="8204-ac4d-f1bb-94c0"/>
-        <infoLink name="Rune of Oath and Honour" id="ba22-23f4-2eac-f37d" hidden="false" type="profile" targetId="429f-5cde-eca4-0163"/>
         <infoLink id="f794-b182-a549-845b" name="Ancestral Grudge" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
         <infoLink name="Gromril Armour" id="31b6-ac4e-2de8-34a5" hidden="false" type="profile" targetId="6f82-ea15-712f-4ee5"/>
         <infoLink name="Magic Resistance" id="607e-c84a-bc4c-a8fa" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
           <modifiers>
-            <modifier type="set" value="Dwarf" field="name"/>
-            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+            <modifier type="set" value="Runesmith" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d035-c831-3467-0f23" shared="true" childName="Tier 1 Character" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+            <modifier type="set" value="Runelord" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </infoLink>
         <infoLink name="Magic Resistance" id="2d28-5f90-998f-7bc0" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
           <modifiers>
-            <modifier type="set" value="Dwarf" field="name"/>
-            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="Runesmith" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d035-c831-3467-0f23" shared="true" childName="Tier 1 Character" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Runelord" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -263,9 +332,9 @@
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4ec1-c917-5c8a-7198" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="0bc8-fa7e-e1ea-326f" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="d591-ab36-6ce3-652e" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
+            <entryLink import="true" name="Great Weapon" hidden="false" id="d591-ab36-6ce3-652e" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="6"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -284,7 +353,7 @@
             </entryLink>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="0bdd-add4-65ad-6739" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="3">
               <costs>
-                <cost name="pts" typeId="points" value="30"/>
+                <cost name="pts" typeId="points" value="27"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -293,7 +362,7 @@
           <entryLinks>
             <entryLink import="true" name="Shield" hidden="false" id="6a92-ce0b-6362-bacf" type="selectionEntry" targetId="c068-0827-9931-d9bf">
               <costs>
-                <cost name="pts" typeId="points" value="3"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -307,40 +376,84 @@
               <categoryLinks>
                 <categoryLink name="War Machine" hidden="false" id="7496-d598-dd73-b75c" targetId="d0ba-7b91-1049-d48b" primary="false"/>
               </categoryLinks>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="0" field="ab44-f532-2ec2-395a"/>
+                    <modifier type="set" value="Runelord only" field="annotation"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="d117-3d75-19c1-d94a" type="selectionEntryGroup" targetId="bd9d-1c7a-5b9f-a25d">
-          <modifiers>
-            <modifier type="increment" value="100" field="37c7-650a-1ac9-ed76"/>
-          </modifiers>
+        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="d117-3d75-19c1-d94a" type="selectionEntryGroup" targetId="bd9d-1c7a-5b9f-a25d"/>
+        <entryLink import="true" name="5. Character Selection" hidden="false" id="4692-f010-77d8-997d" type="selectionEntryGroup" targetId="405b-a985-02d7-eeff">
+          <entryLinks>
+            <entryLink import="true" name="Tier 2 Character" hidden="false" id="c4c5-6756-597b-fca6" type="selectionEntry" targetId="ffde-7800-8634-f4bc">
+              <costs>
+                <cost name="pts" typeId="points" value="150"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="Runelord" field="name"/>
+                <modifier type="set" value="Runelord" field="name" scope="root-entry"/>
+              </modifiers>
+              <profiles>
+                <profile name="Runelord" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="14a0-2f86-8df3-97d0" noindex="true">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </entryLink>
+            <entryLink import="true" name="Tier 1 Character" hidden="false" id="d035-c831-3467-0f23" type="selectionEntry" targetId="bec4-b947-a609-684a">
+              <costs>
+                <cost name="pts" typeId="points" value="90"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="Runesmith" field="name"/>
+                <modifier type="set" value="Runesmith" field="name" scope="root-entry"/>
+              </modifiers>
+              <profiles>
+                <profile name="Runesmith" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="8a5d-8a43-49a0-7a47" noindex="true">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="160"/>
+        <cost name="pts" typeId="points" value="90"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="a79c-83d6-72f9-1063" name="Daemon Slayer" hidden="false" collective="false" import="true" type="model" sortIndex="3">
-      <profiles>
-        <profile id="b3b5-4cca-95b0-c7bd" name="Daemon Slayer" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+    <selectionEntry id="a79c-83d6-72f9-1063" name="Slayers of Legend" hidden="false" collective="false" import="true" type="model" sortIndex="3">
       <infoLinks>
         <infoLink id="ec27-6b87-5724-fc66" name="Ancestral Grudge" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
         <infoLink id="3286-5bf8-4741-a7ff" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
-        <infoLink id="971c-a0f3-263b-7789" name="Daemon Slayer" hidden="false" targetId="96e9-1cf9-efcf-5b46" type="rule"/>
         <infoLink id="2eae-dd0b-bdfc-dcc1" name="Deathblow" hidden="false" targetId="1707-3abf-d5c8-97c0" type="rule"/>
         <infoLink id="4a3b-c973-cf21-9643" name="Unbreakable" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
         <infoLink name="Magic Resistance" id="95d0-f492-31fc-62f1" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
@@ -370,21 +483,17 @@
             <entryLink import="true" name="Hand Weapon" hidden="false" id="2404-aea4-eb3f-0603" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
             <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="7cf7-d92e-8674-f2c8" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="3"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </entryLink>
             <entryLink import="true" name="Great Weapon" hidden="false" id="1170-c1cd-13ba-96bc" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
               <costs>
-                <cost name="pts" typeId="points" value="12"/>
+                <cost name="pts" typeId="points" value="15"/>
               </costs>
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="cb78-9b6f-e3fe-7c4f" type="selectionEntryGroup" targetId="6b70-24fa-4904-2a68">
-          <modifiers>
-            <modifier type="set" value="100" field="82ea-0409-b407-04fa"/>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="cb78-9b6f-e3fe-7c4f" type="selectionEntryGroup" targetId="6b70-24fa-4904-2a68"/>
         <entryLink import="true" name="56. Upgrades" hidden="false" id="6bd3-03fc-d526-926a" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
           <entryLinks>
             <entryLink import="true" name="80. Wards of Grimnir" hidden="false" id="262d-a925-240b-7835" type="selectionEntry" targetId="b45c-b63d-5aff-5003">
@@ -394,253 +503,74 @@
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="5. Character Selection" hidden="false" id="5ebc-9641-793b-9bcb" type="selectionEntryGroup" targetId="405b-a985-02d7-eeff">
+          <entryLinks>
+            <entryLink import="true" name="Tier 2 Character" hidden="false" id="4417-f20d-8a79-baae" type="selectionEntry" targetId="ffde-7800-8634-f4bc">
+              <costs>
+                <cost name="pts" typeId="points" value="140"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="Daemon Slayer" field="name"/>
+                <modifier type="set" value="Daemon Slayer" field="name" scope="root-entry"/>
+              </modifiers>
+              <profiles>
+                <profile name="Daemon Slayer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="b3b5-4cca-95b0-c7bd" noindex="true">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Daemon Slayer" id="971c-a0f3-263b-7789" hidden="false" targetId="96e9-1cf9-efcf-5b46" type="rule"/>
+              </infoLinks>
+            </entryLink>
+            <entryLink import="true" name="Tier 1 Character" hidden="false" id="707b-2d83-4ec2-a3b9" type="selectionEntry" targetId="bec4-b947-a609-684a">
+              <costs>
+                <cost name="pts" typeId="points" value="70"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="Dragon Slayer" field="name"/>
+                <modifier type="set" value="Dragon Slayer" field="name" scope="root-entry"/>
+              </modifiers>
+              <profiles>
+                <profile name="Dragon Slayer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="d68b-dacc-f4dc-d32e" noindex="true">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Dragon Slayer" id="9fa7-72db-8937-8608" hidden="false" targetId="106b-08dd-8397-3a53" type="rule"/>
+              </infoLinks>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="140"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="7f37-a58a-850a-60bd" name="Thane" hidden="false" collective="false" import="true" type="model" sortIndex="5">
-      <profiles>
-        <profile id="a0b0-d453-2257-1eb2" name="Thane" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="e0f7-5312-abdf-95ca" name="Resolute" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
-        <infoLink id="89e0-f714-2139-8381" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
-        <infoLink id="ea89-0723-8d5b-6772" name="Ancestral Grudge" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
-        <infoLink name="Gromril Armour" id="5682-131b-3cd1-0dff" hidden="false" type="profile" targetId="6f82-ea15-712f-4ee5"/>
-        <infoLink name="Magic Resistance" id="b143-8ec9-79d7-2cad" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-          <modifiers>
-            <modifier type="set" value="Dwarf" field="name"/>
-            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Magic Resistance" id="a3e7-20a6-b9d5-4858" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-          <modifiers>
-            <modifier type="set" value="Dwarf" field="name"/>
-            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="f733-114c-c00e-6f0e" name="Characters" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="3196-f34c-ca92-550d" targetId="22c9-1606-58f8-2e60" primary="false"/>
-        <categoryLink name="X Additional Hand Weapon" hidden="false" id="0f86-b15c-7304-ab35" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
-        <categoryLink name="X Great Weapon" hidden="false" id="b18c-c876-44a0-3460" targetId="abcc-4aa7-4989-7189" primary="false"/>
-        <categoryLink name="Y Crossbow" hidden="false" id="a9d7-5630-dc43-109a" targetId="7f3e-8bc2-6bb3-4aae" primary="false"/>
-        <categoryLink name="Y Pistol" hidden="false" id="7513-4b0b-c034-0efe" targetId="28bf-f07c-9e13-4dd7" primary="false"/>
-        <categoryLink name="Y Handgun" hidden="false" id="a517-6ddf-6770-ff00" targetId="6404-4b9f-1ab4-df17" primary="false"/>
-        <categoryLink name="Z Heavy Armour" hidden="false" id="df47-7746-b139-403c" targetId="f667-6e97-ec08-38ea" primary="false"/>
-        <categoryLink name="Z Medium Armour" hidden="false" id="0630-c7e9-9bf7-b825" targetId="222a-078c-ce85-fb16" primary="false"/>
-        <categoryLink name="Z Shield" hidden="false" id="e72f-bc25-003f-4578" targetId="0210-637d-ff12-a760" primary="false"/>
-        <categoryLink name="Z Armour" hidden="false" id="f7dc-19ba-d35b-25fe" targetId="387c-2b7c-0a30-7305" primary="false"/>
-      </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="70"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="8d50-631c-7df9-c346" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-          <entryLinks>
-            <entryLink import="true" name="Army Battle Standard" hidden="false" id="a7c2-f6b8-6b6a-a95e" type="selectionEntry" targetId="9519-df8f-0af4-1995">
-              <entryLinks>
-                <entryLink import="true" name="Magic Standards &amp; Banner Runes" hidden="false" id="fa63-8995-57c5-1c09" collective="false" targetId="d116-5914-dd74-4a4d" type="selectionEntryGroup"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="25"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="567c-6ea8-f877-40ab" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-          <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="4efd-bb1f-9790-1bc6" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="bae4-93c0-c65f-74d6" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="e42e-be4b-2089-531b" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
-              <costs>
-                <cost name="pts" typeId="points" value="9"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Pistol" hidden="false" id="3afb-d55f-6046-c834" type="selectionEntry" targetId="4883-fb9f-3893-0d9c" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="f83b-c0d5-aacc-db79" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
-          <entryLinks>
-            <entryLink import="true" name="Crossbow" hidden="false" id="d854-44c2-376e-f81a" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="7"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Handgun" hidden="false" id="9b16-c54f-ddf7-6240" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="7"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="d686-4967-3ca0-47f4" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
-          <entryLinks>
-            <entryLink import="true" name="Medium Armour" hidden="false" id="6cb3-8afe-f143-0333" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1"/>
-            <entryLink import="true" name="Heavy Armour" hidden="false" id="fad8-901f-c2de-f434" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="8"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="50. Handheld Armour" hidden="false" id="8132-a014-3c12-8039" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
-          <entryLinks>
-            <entryLink import="true" name="Shield" hidden="false" id="8f35-e64f-b3f2-8ad8" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="70. Mount" hidden="false" id="5671-88f1-f594-a4bf" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
-          <entryLinks>
-            <entryLink import="true" name="Oathstone" hidden="false" id="7561-f482-e715-631e" type="selectionEntry" targetId="4c9f-cf5f-ef78-482e"/>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="5b5b-d51f-e3e7-ab5a" type="selectionEntryGroup" targetId="bd9d-1c7a-5b9f-a25d">
-          <modifiers>
-            <modifier type="increment" value="50" field="37c7-650a-1ac9-ed76">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="model" childId="fa63-8995-57c5-1c09" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="25" field="37c7-650a-1ac9-ed76">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model" childId="fa63-8995-57c5-1c09" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry id="417a-b014-9a92-e506" name="Runesmith" hidden="false" collective="false" import="true" type="model" sortIndex="6">
+    <selectionEntry id="137f-2c0b-6d58-32ac" name="Master Engineers" hidden="false" collective="false" import="true" type="model" sortIndex="8">
       <profiles>
-        <profile id="8a5d-8a43-49a0-7a47" name="Runesmith" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="0493-a9f8-0c94-85ea" name="Resolute" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
-        <infoLink id="ab5b-2ea1-6b36-1903" name="Ancestral Grudge" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
-        <infoLink id="995c-ad2a-623d-705b" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
-        <infoLink id="8cd0-6658-7662-67d8" name="Rune Lore" hidden="false" targetId="c330-dbcf-ff35-0037" type="infoGroup"/>
-        <infoLink id="2140-ef5c-403a-cfd6" name="Forgefire" hidden="false" targetId="bb72-6ff9-97d0-2b93" type="rule"/>
-        <infoLink name="Rune of Hearth and Hold" id="950e-c2f3-9e0a-60ce" hidden="false" type="profile" targetId="0e84-b78f-cc00-ea9f"/>
-        <infoLink name="Rune of Oath and Honour" id="7225-2876-aafd-a5d0" hidden="false" type="profile" targetId="429f-5cde-eca4-0163"/>
-        <infoLink name="Rune of Stone and Steel" id="36e8-1b3e-2bf3-7e9d" hidden="false" type="profile" targetId="b11d-7500-8513-8992"/>
-        <infoLink name="Rune of Wrath and Ruin" id="5d8b-6e2b-cb2e-8e95" hidden="false" type="profile" targetId="8204-ac4d-f1bb-94c0"/>
-        <infoLink name="Gromril Armour" id="0608-aaa0-d8c8-327a" hidden="false" type="profile" targetId="6f82-ea15-712f-4ee5"/>
-        <infoLink name="Magic Resistance" id="7492-fa1a-0ba3-2c1a" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-          <modifiers>
-            <modifier type="set" value="Dwarf" field="name"/>
-            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Magic Resistance" id="1887-ac07-44ef-a87a" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-          <modifiers>
-            <modifier type="set" value="Dwarf" field="name"/>
-            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="a2e6-9a16-059d-1847" name="Characters" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="a6d8-d9ff-bf36-de40" targetId="22c9-1606-58f8-2e60" primary="false"/>
-        <categoryLink name="X Great Weapon" hidden="false" id="baf5-ebdd-d008-ddd8" targetId="abcc-4aa7-4989-7189" primary="false"/>
-        <categoryLink name="Z Light Armour" hidden="false" id="dbb6-f254-67a7-26d8" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
-        <categoryLink name="Z Medium Armour" hidden="false" id="b6ce-19ec-bbbe-1e6a" targetId="222a-078c-ce85-fb16" primary="false"/>
-        <categoryLink name="Z Shield" hidden="false" id="85ba-1971-1fc8-23b2" targetId="0210-637d-ff12-a760" primary="false"/>
-        <categoryLink name="Z Armour" hidden="false" id="5369-5231-70eb-c8f3" targetId="387c-2b7c-0a30-7305" primary="false"/>
-        <categoryLink targetId="f667-6e97-ec08-38ea" id="8e09-f8fd-6015-f491" primary="false" name="Z Heavy Armour"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="ab40-f7e9-0fc7-b0dd" collective="false" targetId="35f1-2fc8-9817-3171" type="selectionEntryGroup"/>
-        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1752-0bb2-d2d9-c41e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-          <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="882f-f652-d64d-a3bd" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="1d7c-e9fb-9324-e614" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
-              <costs>
-                <cost name="pts" typeId="points" value="6"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="c0ca-568f-023e-1a6b" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
-          <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="baf2-c287-b3e0-e6dc" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="6"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Medium Armour" hidden="false" id="2cea-4b12-0065-68ce" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="12"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Heavy Armour" hidden="false" id="2f66-39dc-9d25-9481" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="50. Handheld Armour" hidden="false" id="cad3-9e11-6c0c-772b" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
-          <entryLinks>
-            <entryLink import="true" name="Shield" hidden="false" id="b0e0-88f2-155e-2765" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-              <costs>
-                <cost name="pts" typeId="points" value="3"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="8f09-1ed2-c278-c3a5" type="selectionEntryGroup" targetId="bd9d-1c7a-5b9f-a25d">
-          <modifiers>
-            <modifier type="increment" value="50" field="37c7-650a-1ac9-ed76"/>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="100"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="137f-2c0b-6d58-32ac" name="Master Engineer" hidden="false" collective="false" import="true" type="model" sortIndex="8">
-      <profiles>
-        <profile id="837a-6818-91cf-8b68" name="Master Engineer" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+        <profile id="837a-6818-91cf-8b68" name="Master Engineer" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -689,29 +619,11 @@
       <entryLinks>
         <entryLink import="true" name="10. Character Options" hidden="false" id="47b4-65ed-8e23-132b" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d2c4-f4dc-f4df-36c7" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-          <modifiers>
-            <modifier type="set" value="-1" field="fe22-ce5f-b23e-303d"/>
-          </modifiers>
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="2085-9396-a86b-2325" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
             <entryLink import="true" name="Great Weapon" hidden="false" id="0baf-86c2-7cbe-2fc2" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="6"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Handgun" hidden="false" id="1662-6f95-5829-90b6" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3" sortIndex="4">
-              <costs>
-                <cost name="pts" typeId="points" value="7"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Pistol" hidden="false" id="9334-a403-1df6-4d70" type="selectionEntry" targetId="4883-fb9f-3893-0d9c" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="6"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Brace of Pistols" hidden="false" id="d435-45e9-aa9d-995f" type="selectionEntry" targetId="a574-f633-253c-b619" sortIndex="5">
-              <costs>
-                <cost name="pts" typeId="points" value="8"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -720,29 +632,44 @@
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="d683-b1f5-4891-9d97" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
               <costs>
-                <cost name="pts" typeId="points" value="2"/>
+                <cost name="pts" typeId="points" value="3"/>
               </costs>
             </entryLink>
             <entryLink import="true" name="Medium Armour" hidden="false" id="a06d-54dd-b8a9-d689" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="6"/>
+                <cost name="pts" typeId="points" value="9"/>
               </costs>
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="a578-75a0-3e7f-0bd1" type="selectionEntryGroup" targetId="bd9d-1c7a-5b9f-a25d">
-          <modifiers>
-            <modifier type="increment" value="50" field="37c7-650a-1ac9-ed76"/>
-          </modifiers>
+        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="a578-75a0-3e7f-0bd1" type="selectionEntryGroup" targetId="bd9d-1c7a-5b9f-a25d"/>
+        <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="71e7-b650-36ac-b6ea" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
+          <entryLinks>
+            <entryLink import="true" name="Dwarfen Pistol" hidden="false" id="6e62-ceaf-f124-5f95" type="selectionEntry" targetId="de7b-1fca-e751-47e4" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Dwarfen Crossbow" hidden="false" id="cc41-f4ef-612f-0aa2" type="selectionEntry" targetId="c494-ba92-e96e-c0c3" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="7"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Dwarfen Handgun" hidden="false" id="5a59-cc70-0152-c916" type="selectionEntry" targetId="1933-f438-5b41-3a97" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="7"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="60"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="363e-67b3-11fa-cb51" name="Brewmaster" hidden="false" collective="false" import="true" type="model" sortIndex="7">
+    <selectionEntry id="363e-67b3-11fa-cb51" name="Brewmasters" hidden="false" collective="false" import="true" type="model" sortIndex="7">
       <profiles>
-        <profile id="accf-44c4-8b88-e61a" name="Brewmaster" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+        <profile id="accf-44c4-8b88-e61a" name="Brewmaster" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -810,7 +737,7 @@
             <entryLink import="true" name="Hand Weapon" hidden="false" id="96f2-5474-ec43-f86f" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
             <entryLink import="true" name="Great Weapon" hidden="false" id="a16d-d1dd-035d-5161" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
               <costs>
-                <cost name="pts" typeId="points" value="6"/>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
           </entryLinks>
@@ -819,21 +746,17 @@
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="78cc-4f64-3edf-ddb2" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
               <costs>
-                <cost name="pts" typeId="points" value="2"/>
+                <cost name="pts" typeId="points" value="3"/>
               </costs>
             </entryLink>
             <entryLink import="true" name="Medium Armour" hidden="false" id="8b96-1257-0daf-f698" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="6"/>
+                <cost name="pts" typeId="points" value="9"/>
               </costs>
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="1d5e-58a4-57aa-5643" type="selectionEntryGroup" targetId="bd9d-1c7a-5b9f-a25d">
-          <modifiers>
-            <modifier type="increment" value="50" field="37c7-650a-1ac9-ed76"/>
-          </modifiers>
-        </entryLink>
+        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="1d5e-58a4-57aa-5643" type="selectionEntryGroup" targetId="bd9d-1c7a-5b9f-a25d"/>
         <entryLink import="true" name="70. Mount" hidden="false" id="84cf-3dbb-e844-057d" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Beer Cart" hidden="false" id="7029-1720-20b8-42f5" subType="mount">
@@ -881,85 +804,6 @@
               </rules>
             </selectionEntry>
           </selectionEntries>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="70"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="d7d0-7a64-77b7-d863" name="Dragon Slayer" hidden="false" collective="false" import="true" type="model" sortIndex="9">
-      <profiles>
-        <profile id="d68b-dacc-f4dc-d32e" name="Dragon Slayer" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="d5d3-8689-2ea9-57b7" name="Ancestral Grudge" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
-        <infoLink id="0bfd-8474-736e-bb5f" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
-        <infoLink id="9fa7-72db-8937-8608" name="Dragon Slayer" hidden="false" targetId="106b-08dd-8397-3a53" type="rule"/>
-        <infoLink id="66fb-9396-968f-a567" name="Deathblow" hidden="false" targetId="1707-3abf-d5c8-97c0" type="rule"/>
-        <infoLink id="70ae-3d83-046a-e308" name="Unbreakable" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
-        <infoLink name="Magic Resistance" id="c03e-4404-1925-29a9" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-          <modifiers>
-            <modifier type="set" value="Dwarf" field="name"/>
-            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Magic Resistance" id="e072-95b1-44c1-a17f" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-          <modifiers>
-            <modifier type="set" value="Dwarf" field="name"/>
-            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="9268-53ae-efc8-5bc9" name="Characters" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="5aae-0370-8adb-ca34" targetId="22c9-1606-58f8-2e60" primary="false"/>
-        <categoryLink name="X Additional Hand Weapon" hidden="false" id="dee2-e62f-deaf-9b8e" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
-        <categoryLink name="X Great Weapon" hidden="false" id="2972-bbf2-4b07-3e8f" targetId="abcc-4aa7-4989-7189" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="928f-eda3-49af-d221" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
-        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="5f56-0c7e-659c-33ac" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-          <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="0e3c-959d-c044-76c5" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="d068-a9da-bee4-d7bd" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="81f0-07ae-e802-8e56" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="9"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="70. Slayer Skills" hidden="false" id="5f23-3f60-719a-52d7" collective="false" targetId="dee5-1fbe-cd79-6245" type="selectionEntryGroup"/>
-        <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="f43b-ba79-e612-d0bf" type="selectionEntryGroup" targetId="6b70-24fa-4904-2a68">
-          <modifiers>
-            <modifier type="set" value="50" field="82ea-0409-b407-04fa"/>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="56. Upgrades" hidden="false" id="9ece-796c-a2a5-79b0" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
-          <entryLinks>
-            <entryLink import="true" name="80. Wards of Grimnir" hidden="false" id="4983-5f63-3a45-fbed" type="selectionEntry" targetId="b45c-b63d-5aff-5003">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -3930,7 +3774,7 @@ If a Gyrocopter Dive Bombs, it cannot make any other shooting attacks in that tu
         <entryLink import="true" name="Dwarf Pilot" hidden="false" id="6277-3228-1dbb-6ffe" type="selectionEntry" targetId="b173-3352-dece-3e0e"/>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry id="ec1e-b691-1651-3ede" name="Special Characters" hidden="false" collective="false" import="true" type="unit" sortIndex="4">
+    <selectionEntry id="ec1e-b691-1651-3ede" name="Special Characters" hidden="false" collective="false" import="true" type="unit" sortIndex="99">
       <categoryLinks>
         <categoryLink id="7b75-de48-add3-1f54" name="Characters" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="7d82-e4af-aee2-900f" targetId="22c9-1606-58f8-2e60" primary="false"/>
@@ -3942,7 +3786,7 @@ If a Gyrocopter Dive Bombs, it cannot make any other shooting attacks in that tu
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f0ff-04ca-229f-78cf" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="c2e2-c793-e3e9-f083" name="Thorek Ironbrow" hidden="false" collective="false" import="true" type="model" sortIndex="5">
+            <selectionEntry id="c2e2-c793-e3e9-f083" name="Thorek Ironbrow" hidden="false" collective="false" import="true" type="model" sortIndex="11">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="eba4-db75-e439-9453" type="max"/>
               </constraints>
@@ -4090,7 +3934,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 <modifier type="set" value="Thorek Ironbrow" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
-            <selectionEntry id="506f-adb1-4d36-2c7f" name="Ungrim Ironfist" hidden="false" collective="false" import="true" type="model" sortIndex="4">
+            <selectionEntry id="506f-adb1-4d36-2c7f" name="Ungrim Ironfist" hidden="false" collective="false" import="true" type="model" sortIndex="10">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6d11-108e-d9f1-0a43" type="max"/>
               </constraints>
@@ -4239,7 +4083,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 <modifier type="set" value="Ungrim Ironfist" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
-            <selectionEntry id="bc52-2977-c2f0-8356" name="Thorgrim Grudgebearer" hidden="false" collective="false" import="true" type="model" sortIndex="8">
+            <selectionEntry id="bc52-2977-c2f0-8356" name="Thorgrim Grudgebearer" hidden="false" collective="false" import="true" type="model" sortIndex="14">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c33f-cb78-e33e-475a" type="max"/>
               </constraints>
@@ -4448,7 +4292,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 <modifier type="set" value="Thorgrim Grudgebearer" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
-            <selectionEntry id="3e81-bec4-2313-74e3" name="Alrik Ranulfsson" hidden="false" collective="false" import="true" type="model" sortIndex="6">
+            <selectionEntry id="3e81-bec4-2313-74e3" name="Alrik Ranulfsson" hidden="false" collective="false" import="true" type="model" sortIndex="12">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d7ed-a124-7ff4-c7b2" type="max"/>
               </constraints>
@@ -4633,7 +4477,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 <modifier type="set" value="Alrik Ranulfsson" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
-            <selectionEntry id="4b4c-49fa-4671-3c50" name="Belegar Ironhammer" hidden="false" collective="false" import="true" type="model" sortIndex="3">
+            <selectionEntry id="4b4c-49fa-4671-3c50" name="Belegar Ironhammer" hidden="false" collective="false" import="true" type="model" sortIndex="9">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="076e-da78-2050-4feb" type="max"/>
               </constraints>
@@ -4757,7 +4601,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 <modifier type="set" value="Belegar Ironhammer" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
-            <selectionEntry id="e8aa-f62a-c6c0-74e9" name="Kazador Thunderhorn" hidden="false" collective="false" import="true" type="model" sortIndex="2">
+            <selectionEntry id="e8aa-f62a-c6c0-74e9" name="Kazador Thunderhorn" hidden="false" collective="false" import="true" type="model" sortIndex="8">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3ab3-35e5-a7b3-35bb" type="max"/>
               </constraints>
@@ -4883,7 +4727,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 <modifier type="set" value="Kazador Thunderhorn" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
-            <selectionEntry id="5cf6-fbd2-b85c-fe04" name="Grombrindal" hidden="false" collective="false" import="true" type="model" sortIndex="7">
+            <selectionEntry id="5cf6-fbd2-b85c-fe04" name="Grombrindal" hidden="false" collective="false" import="true" type="model" sortIndex="13">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="fd4e-d65b-8205-a8c3" type="max"/>
               </constraints>
@@ -5219,84 +5063,133 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 <modifier type="set" value="Gotrek &amp; Felix" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="b9d4-7195-145c-a1a0" name="Special Characters" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
-      <categoryLinks>
-        <categoryLink id="df0a-9bfb-a773-a98f" name="Characters" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="f61c-3209-4179-443b" targetId="22c9-1606-58f8-2e60" primary="false"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="44bc-3cb0-e31c-e000" name="Character" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b049-b107-3577-843e" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9ded-cf62-8a14-db58" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="cedd-1d60-cd3a-abec" name="Josef Bugman" hidden="false" collective="false" import="true" type="model" sortIndex="6">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="374a-4b88-fa74-7fef" type="max"/>
-              </constraints>
+            <selectionEntry type="model" import="true" name="Long Drong Slayer" hidden="false" id="78fe-ea46-1c40-1802" sortIndex="2">
               <profiles>
-                <profile id="524a-5e3c-f4ff-a91d" name="Josef Bugman" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                <profile name="Long Drong Slayer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0b7a-718e-b213-f6d7">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
                     <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
                     <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
                     <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Dwarf)</characteristic>
                   </characteristics>
                 </profile>
-                <profile id="a665-e178-3801-f735" name="1" hidden="false" typeId="0a1b-c67c-10d3-713e" typeName="Liquid Fortification">
-                  <characteristics>
-                    <characteristic name="Result" typeId="a586-177e-1b4d-a3b6">Bad Brew: The unit gains Flammable until the start of the next friendly turn.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="afe6-50b2-5d1a-46f4" name="02-04" hidden="false" typeId="0a1b-c67c-10d3-713e" typeName="Liquid Fortification">
-                  <characteristics>
-                    <characteristic name="Result" typeId="a586-177e-1b4d-a3b6">Belligerent: The unit gains Stubborn until the start of the next friendly turn.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="2b71-7e59-6e58-bde1" name="05-06" hidden="false" typeId="0a1b-c67c-10d3-713e" typeName="Liquid Fortification">
-                  <characteristics>
-                    <characteristic name="Result" typeId="a586-177e-1b4d-a3b6">Leathered: Each member of the unit gains +1 Toughness until the start of the next friendly turn.</characteristic>
-                  </characteristics>
-                </profile>
               </profiles>
-              <rules>
-                <rule id="5dee-0234-0d4d-a6b5" name="Liquid Fortification" hidden="false">
-                  <description>As long as Bugman is alive, roll a D6 at the start of each friendly turn and consult the Liquid Fortification chart to see what effects his draughts have upon himself and any unit he has currently joined.</description>
-                </rule>
-                <rule id="d340-7a60-63f9-2060" name="Bugman&apos;s Rangers" hidden="false">
-                  <description>Josef Bugman must be accompanied by a unit of Rangers chosen from the army list at a cost of 17 points per model. This unit has Strength 4 and are equipped with great weapons, crossbows, medium armour and shields. Josef Bugman may never choose to leave this unit.</description>
-                </rule>
-                <rule id="b90f-a438-4177-c24e" name="Stout Courage" hidden="false">
-                  <description>Bugman and any unit he joins have Immunity (Fear/Terror) as long as he remains with the unit.</description>
-                </rule>
-              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="70"/>
+              </costs>
               <infoLinks>
-                <infoLink id="9c94-e097-ab1e-cd00" name="Resolute" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
-                <infoLink id="af2c-be34-fa20-1631" name="Ancestral Grudge" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
-                <infoLink id="49e8-a432-f1ad-e34d" name="Scouts" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
-                <infoLink id="c145-717f-1860-4ba9" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
-                <infoLink name="Gromril Armour" id="b484-5137-1a83-4240" hidden="false" type="profile" targetId="6f82-ea15-712f-4ee5"/>
-                <infoLink name="Magic Resistance" id="1c6c-320e-ee5f-a956" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                <infoLink name="Slayer" id="5bc2-6480-1043-a8d7" hidden="false" targetId="4740-7f33-d5b8-5563" type="rule"/>
+                <infoLink name="Relentless" id="6b0f-888e-86be-3950" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
+                <infoLink name="Unbreakable" id="5e35-72dc-8d55-a2aa" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
+                <infoLink name="Ancestral Grudge" id="41e1-f5bd-f149-7636" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
+                <infoLink name="Deathblow" id="8f64-a38b-e1b5-28b8" hidden="false" targetId="1707-3abf-d5c8-97c0" type="rule"/>
+                <infoLink name="Magic Resistance" id="aedd-e955-3484-3c43" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
                   <modifiers>
                     <modifier type="set" value="Dwarf" field="name"/>
                     <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Magic Resistance" id="ef02-1641-786d-d7e9" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                <infoLink name="Magic Resistance" id="4682-5456-d71e-f522" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Dwarf" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="Brace of Pistols" hidden="false" id="14d3-2b73-259f-682e" type="selectionEntry" targetId="a574-f633-253c-b619" sortIndex="2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2783-6bdd-7a17-97c9"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="General" hidden="false" id="db0f-3404-6ba8-3a0b" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
+                <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="f2f8-adae-979a-ab21" type="selectionEntryGroup" targetId="6b70-24fa-4904-2a68">
+                  <modifiers>
+                    <modifier type="set" value="50" field="82ea-0409-b407-04fa"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <rules>
+                <rule name="Slayer Pirates" id="5c99-780a-9b8d-311f" hidden="false">
+                  <description>Long Drong must be accompanied by a unit of Troll Slayers chosen from the army list at a cost of 12 points per model. This unit is equipped with a brace of pistols instead of two hand weapons and great weapons and has the Dwarf Rum special rule. Long Drong is the unit&apos;s Leader and may never choose to leave this unit.</description>
+                </rule>
+                <rule name="Dwarf Rum" id="d093-aaaa-a3c4-47c3" hidden="false">
+                  <description>Enemy models in base contact with models with this special rule suffer -1 to their Weapon Skill in Close Combat. This does not affect Undead, Daemons or followers of Nurgle. The Slayer Pirates may not be deployed closer than 6&quot; to any other unit in the army at the start of the battle.</description>
+                </rule>
+              </rules>
+              <modifiers>
+                <modifier type="add" value="Long Drong must be accompanied by a unit of Pirate Slayers." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="5b65-8d45-c08e-40fe" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="force" childId="78fe-ea46-1c40-1802" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="Long Drong Slayer" field="name" scope="root-entry"/>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Grimm Burloksson" hidden="false" id="c48d-7ee8-fcab-5a28" collective="false" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="dd87-39a5-971d-af21" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Grimm Burloksson" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="77a3-4dad-0863-2c3d">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Dwarf)</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Artillery Adjustment" typeId="0029-c268-b3eb-a723" typeName="Master of Accuracy rules" hidden="false" id="ad60-9608-18f4-7849">
+                  <characteristics>
+                    <characteristic name="Effect" typeId="7854-28b1-bbf5-4462">A war machine can use Grimm’s BS or re-roll one artillery dice. This can be the dice that determines the distance a cannonball bounces or a Flame Cannon’s burst of flame moves.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Increased Range" typeId="0029-c268-b3eb-a723" typeName="Master of Accuracy rules" hidden="false" id="8a56-771a-112a-3dbc">
+                  <characteristics>
+                    <characteristic name="Effect" typeId="7854-28b1-bbf5-4462">The unit’s Dwarf crossbows and Dwarf handguns increase their maximum range by 6&quot;.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Superior Volley" typeId="0029-c268-b3eb-a723" typeName="Master of Accuracy rules" hidden="false" id="c05e-698c-252f-0df3">
+                  <characteristics>
+                    <characteristic name="Effect" typeId="7854-28b1-bbf5-4462">Models in the unit get +1 to Hit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule name="Master of Accuracy" id="b027-c293-f566-3e45" hidden="false">
+                  <description>At the start of each friendly Shooting phase, Grimm can bestow one of the Master of Accuracy rules on a single friendly unit within 3&quot; for the duration of that Shooting phase, though he does not gain any bonuses for it himself.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink name="&quot;Stand Back Sir!&quot;" id="a471-da9b-6f67-3f42" hidden="false" targetId="0330-d489-f016-299a" type="rule"/>
+                <infoLink name="Relentless" id="e9c4-f42c-5a53-1ed5" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
+                <infoLink name="Resolute" id="33a5-0687-f7b7-82d5" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
+                <infoLink name="Entrenchment" id="4bff-8901-a9f1-3d8b" hidden="false" targetId="88eb-899c-6317-34ea" type="rule"/>
+                <infoLink name="Ancestral Grudge" id="0eff-bbe2-7ec7-04fa" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
+                <infoLink name="Magic Resistance" id="2226-f417-dd16-86eb" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Dwarf" field="name"/>
+                    <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="0304-674f-c9bc-b271" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
                   <modifiers>
                     <modifier type="set" value="Dwarf" field="name"/>
                     <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
@@ -5304,46 +5197,38 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 </infoLink>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="4649-3964-398b-ec2f" name="Ol&apos; Trustworthy" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
+                <selectionEntry type="upgrade" import="true" name="Grudge-Raker" hidden="false" id="71ac-fbca-d8e5-4be4" collective="false" sortIndex="3">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="36a3-de10-ba3a-b790" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8b1c-5ca0-bad0-9be5" type="max"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="63ee-fed3-3fae-e017" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="819f-0e84-cb39-4a5d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile id="d1e7-3a17-6d31-09cc" name="Ol&apos; Trustworthy" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon">
+                    <profile name="Grudge-Raker" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="a996-118b-2c74-da45">
                       <characteristics>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Ol&apos; Trustworthy is inscribed with two Runes of Cleaving and a Rune of Fury.</characteristic>
+                        <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
+                        <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04"/>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2D3</characteristic>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Armour Piercing (1).</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
-                  <entryLinks>
-                    <entryLink import="true" name="Rune of Fury (x1)" hidden="false" id="cd40-58aa-e3df-351e" type="selectionEntry" targetId="bb28-45f3-0037-68f8">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2540-c8dc-3535-f6fc"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Rune of Cleaving (x2)" hidden="false" id="ec69-5305-edee-bcaf" type="selectionEntry" targetId="fca0-2b1f-419f-8943">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5497-1b0e-fc08-80b0"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
                 </selectionEntry>
-                <selectionEntry id="331e-e379-fe99-cf52" name="Bugman&apos;s Tankard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
+                <selectionEntry type="upgrade" import="true" name="Cog Axe" hidden="false" id="fdce-92c9-8fdb-ad44" collective="false" sortIndex="2">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fddc-d3b6-9940-4c43" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f2d8-5d6d-8b10-634a" type="max"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="75ef-a805-5da8-fb9e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c293-ef3e-6aae-4cfa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile id="dfce-52f0-73eb-c050" name="Bugman&apos;s Tankard" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+                    <profile name="Cog Axe" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="480f-a364-165e-ce06">
                       <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Bugman, or a single model in the same unit, can drink from Bugman’s Tankard at the start of any friendly turn. The imbiber immediately recovers 1 Wound lost previously during the battle.</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Armour Piercing (1). If Grimm scores one or more hits in close combat against a model using a magic weapon, roll a D6; on a 5+, that weapon is immediately destroyed and cannot be used further in this game.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5353,41 +5238,21 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="eef1-7984-4504-7707" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink import="true" name="Crossbow" hidden="false" id="d788-90b5-6566-a934" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="3">
-                  <costs>
-                    <cost name="pts" typeId="points" value="7"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Medium Armour" hidden="false" id="ff84-a1ca-764d-1dfa" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ba86-055d-5800-3961"/>
-                  </constraints>
-                </entryLink>
+                <entryLink import="true" name="General" hidden="false" id="bda6-b4af-84ff-1cab" collective="false" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="185"/>
+                <cost name="pts" typeId="points" value="95"/>
               </costs>
               <modifiers>
-                <modifier type="add" value="Josef Bugman must be accompanied by a unit of Bugman&apos;s Rangers." field="error">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="force" childId="ebef-0c28-ad41-de3d" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="force" childId="cedd-1d60-cd3a-abec" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="Josef Bugman" field="name" scope="root-entry"/>
+                <modifier type="set" value="Grimm Burloksson" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
-            <selectionEntry id="4e1b-9170-bcfb-2922" name="Burlok Damminson" hidden="false" collective="false" import="true" type="model" sortIndex="3">
+            <selectionEntry type="model" import="true" name="Burlok Damminson" hidden="false" id="4e1b-9170-bcfb-2922" collective="false" sortIndex="4">
               <constraints>
-                <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a3ed-3b7d-9785-dedc" type="max"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="a3ed-3b7d-9785-dedc" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile id="ea4f-1dba-e81a-1662" name="Burlok Damminson" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                <profile name="Burlok Damminson" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ea4f-1dba-e81a-1662">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
@@ -5403,12 +5268,12 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="2a11-de48-92db-ecaa" name="&quot;Stand Back Sir!&quot;" hidden="false" targetId="0330-d489-f016-299a" type="rule"/>
-                <infoLink id="759d-e41a-a0ef-9753" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
-                <infoLink id="b3c6-aee6-6434-c49f" name="Resolute" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
-                <infoLink id="1daa-bceb-5327-9ad9" name="Entrenchment" hidden="false" targetId="88eb-899c-6317-34ea" type="rule"/>
-                <infoLink id="5daf-1087-6572-1ec4" name="Artillery Master" hidden="false" targetId="3f1d-5a74-f98c-bf18" type="rule"/>
-                <infoLink id="526a-1797-f412-126a" name="Ancestral Grudge" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
+                <infoLink name="&quot;Stand Back Sir!&quot;" id="2a11-de48-92db-ecaa" hidden="false" targetId="0330-d489-f016-299a" type="rule"/>
+                <infoLink name="Relentless" id="759d-e41a-a0ef-9753" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
+                <infoLink name="Resolute" id="b3c6-aee6-6434-c49f" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
+                <infoLink name="Entrenchment" id="1daa-bceb-5327-9ad9" hidden="false" targetId="88eb-899c-6317-34ea" type="rule"/>
+                <infoLink name="Artillery Master" id="5daf-1087-6572-1ec4" hidden="false" targetId="3f1d-5a74-f98c-bf18" type="rule"/>
+                <infoLink name="Ancestral Grudge" id="526a-1797-f412-126a" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
                 <infoLink name="Magic Resistance" id="1f65-8dd1-570e-fa05" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
                   <modifiers>
                     <modifier type="set" value="Dwarf" field="name"/>
@@ -5423,7 +5288,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 </infoLink>
               </infoLinks>
               <entryLinks>
-                <entryLink id="df75-0fda-ee7d-3e78" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
+                <entryLink import="true" name="General" hidden="false" id="df75-0fda-ee7d-3e78" collective="false" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
                 <entryLink import="true" name="56. Upgrades" hidden="false" id="9f57-992e-a87c-d29c" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb1f-f55a-5565-6dcf-min"/>
@@ -5537,277 +5402,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 <modifier type="set" value="Burlok Damminson" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
-            <selectionEntry id="c48d-7ee8-fcab-5a28" name="Grimm Burloksson" hidden="false" collective="false" import="true" type="model" sortIndex="2">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="dd87-39a5-971d-af21" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="77a3-4dad-0863-2c3d" name="Grimm Burloksson" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Dwarf)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="ad60-9608-18f4-7849" name="Artillery Adjustment" hidden="false" typeId="0029-c268-b3eb-a723" typeName="Master of Accuracy rules">
-                  <characteristics>
-                    <characteristic name="Effect" typeId="7854-28b1-bbf5-4462">A war machine can use Grimm’s BS or re-roll one artillery dice. This can be the dice that determines the distance a cannonball bounces or a Flame Cannon’s burst of flame moves.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="8a56-771a-112a-3dbc" name="Increased Range" hidden="false" typeId="0029-c268-b3eb-a723" typeName="Master of Accuracy rules">
-                  <characteristics>
-                    <characteristic name="Effect" typeId="7854-28b1-bbf5-4462">The unit’s Dwarf crossbows and Dwarf handguns increase their maximum range by 6&quot;.</characteristic>
-                  </characteristics>
-                </profile>
-                <profile id="c05e-698c-252f-0df3" name="Superior Volley" hidden="false" typeId="0029-c268-b3eb-a723" typeName="Master of Accuracy rules">
-                  <characteristics>
-                    <characteristic name="Effect" typeId="7854-28b1-bbf5-4462">Models in the unit get +1 to Hit.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <rules>
-                <rule id="b027-c293-f566-3e45" name="Master of Accuracy" hidden="false">
-                  <description>At the start of each friendly Shooting phase, Grimm can bestow one of the Master of Accuracy rules on a single friendly unit within 3&quot; for the duration of that Shooting phase, though he does not gain any bonuses for it himself.</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="a471-da9b-6f67-3f42" name="&quot;Stand Back Sir!&quot;" hidden="false" targetId="0330-d489-f016-299a" type="rule"/>
-                <infoLink id="e9c4-f42c-5a53-1ed5" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
-                <infoLink id="33a5-0687-f7b7-82d5" name="Resolute" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
-                <infoLink id="4bff-8901-a9f1-3d8b" name="Entrenchment" hidden="false" targetId="88eb-899c-6317-34ea" type="rule"/>
-                <infoLink id="0eff-bbe2-7ec7-04fa" name="Ancestral Grudge" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
-                <infoLink name="Magic Resistance" id="2226-f417-dd16-86eb" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-                  <modifiers>
-                    <modifier type="set" value="Dwarf" field="name"/>
-                    <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
-                  </modifiers>
-                </infoLink>
-                <infoLink name="Magic Resistance" id="0304-674f-c9bc-b271" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-                  <modifiers>
-                    <modifier type="set" value="Dwarf" field="name"/>
-                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry id="71ac-fbca-d8e5-4be4" name="Grudge-Raker" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="63ee-fed3-3fae-e017" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="819f-0e84-cb39-4a5d" type="max"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="a996-118b-2c74-da45" name="Grudge-Raker" hidden="false" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon">
-                      <characteristics>
-                        <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
-                        <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04"/>
-                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
-                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2D3</characteristic>
-                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Armour Piercing (1).</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="fdce-92c9-8fdb-ad44" name="Cog Axe" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75ef-a805-5da8-fb9e" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c293-ef3e-6aae-4cfa" type="max"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="480f-a364-165e-ce06" name="Cog Axe" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon">
-                      <characteristics>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Armour Piercing (1). If Grimm scores one or more hits in close combat against a model using a magic weapon, roll a D6; on a 5+, that weapon is immediately destroyed and cannot be used further in this game.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <entryLinks>
-                <entryLink id="bda6-b4af-84ff-1cab" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-              </entryLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="95"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="Grimm Burloksson" field="name" scope="root-entry"/>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry id="710d-22eb-13ae-f324" name="Garagrim Ironfist" hidden="false" collective="false" import="true" type="model" sortIndex="5">
-              <constraints>
-                <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8099-083f-a58c-a2a5" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="5cea-1268-2a08-d531" name="Garagrim Ironfist" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Dwarf)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <rules>
-                <rule id="aedb-ffa2-f414-4955" name="The War-Mourner" hidden="false">
-                  <description>Each Wound inflicted by Garagrim counts double towards that round&apos;s Combat Resolution. Against enemies with Toughness 5 or higher, Garagrim causes Multiple Wounds (D6). However, Garagrim may never be the Army General.</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink id="b7e8-f54b-1534-4ac7" name="Ancestral Grudge" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
-                <infoLink id="8591-cfd3-4021-0107" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
-                <infoLink id="2a7b-5c7c-001f-3d2e" name="Unbreakable" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
-                <infoLink id="e04d-b0df-b602-9f60" name="Deathblow" hidden="false" targetId="1707-3abf-d5c8-97c0" type="rule"/>
-                <infoLink id="2ef7-dfab-1775-39ed" name="Dragon Slayer" hidden="false" targetId="106b-08dd-8397-3a53" type="rule"/>
-                <infoLink name="Magic Resistance" id="7e6a-6f0a-6857-f39f" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-                  <modifiers>
-                    <modifier type="set" value="Dwarf" field="name"/>
-                    <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
-                  </modifiers>
-                </infoLink>
-                <infoLink name="Magic Resistance" id="d84f-792b-4d4a-49a1" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-                  <modifiers>
-                    <modifier type="set" value="Dwarf" field="name"/>
-                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry id="81b4-acce-a0bc-2aa7" name="Axes of Kadrin" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="744d-1574-3ebb-8b59" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e53b-a2ed-2872-be74" type="max"/>
-                  </constraints>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                  <entryLinks>
-                    <entryLink import="true" name="Master Rune of Skalf Blackhammer" hidden="false" id="2820-0e25-a000-6217" type="selectionEntry" targetId="31c7-671a-98d9-0d59">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0880-23bd-b82f-1cc1"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Grudge Rune" hidden="false" id="4536-86ea-510b-d2da" type="selectionEntry" targetId="267a-259a-3431-e17b">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="56e6-b2c0-d3e2-ee71"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <infoLinks>
-                    <infoLink name="Two/Additional Hand Weapons" id="59d1-a17e-0e40-74d7" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
-                      <modifiers>
-                        <modifier type="set" value="Axes of Kadrin" field="annotation"/>
-                        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
-                        <modifier type="append" value="The Axes of Kadrin are inscribed with the Master Rune of Skalf Blackhammer and a Grudge Rune. In addition, when Garagrim charges, he causes an Impact Hit on every model in base contact with him. These Impact Hits follow all the rules for his normal attacks." field="de63-d6da-efa8-00ac" join="
-
-"/>
-                      </modifiers>
-                    </infoLink>
-                    <infoLink name="Two/Additional Hand Weapons" id="b823-1724-856f-0218" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
-                  </infoLinks>
-                </selectionEntry>
-              </selectionEntries>
-              <costs>
-                <cost name="pts" typeId="points" value="185"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="Garagrim Ironfist" field="name" scope="root-entry"/>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="model" import="true" name="Long Drong Slayer" hidden="false" id="78fe-ea46-1c40-1802" sortIndex="1">
-              <profiles>
-                <profile name="Long Drong Slayer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0b7a-718e-b213-f6d7">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Dwarf)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="70"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Slayer" id="5bc2-6480-1043-a8d7" hidden="false" targetId="4740-7f33-d5b8-5563" type="rule"/>
-                <infoLink name="Relentless" id="6b0f-888e-86be-3950" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
-                <infoLink name="Unbreakable" id="5e35-72dc-8d55-a2aa" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
-                <infoLink name="Ancestral Grudge" id="41e1-f5bd-f149-7636" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
-                <infoLink name="Deathblow" id="8f64-a38b-e1b5-28b8" hidden="false" targetId="1707-3abf-d5c8-97c0" type="rule"/>
-                <infoLink name="Magic Resistance" id="aedd-e955-3484-3c43" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-                  <modifiers>
-                    <modifier type="set" value="Dwarf" field="name"/>
-                    <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
-                  </modifiers>
-                </infoLink>
-                <infoLink name="Magic Resistance" id="4682-5456-d71e-f522" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-                  <modifiers>
-                    <modifier type="set" value="Dwarf" field="name"/>
-                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <entryLinks>
-                <entryLink import="true" name="Brace of Pistols" hidden="false" id="14d3-2b73-259f-682e" type="selectionEntry" targetId="a574-f633-253c-b619" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2783-6bdd-7a17-97c9"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="General" hidden="false" id="db0f-3404-6ba8-3a0b" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-                <entryLink import="true" name="90. Magic &amp; Runic Items" hidden="false" id="f2f8-adae-979a-ab21" type="selectionEntryGroup" targetId="6b70-24fa-4904-2a68">
-                  <modifiers>
-                    <modifier type="set" value="50" field="82ea-0409-b407-04fa"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-              <rules>
-                <rule name="Slayer Pirates" id="5c99-780a-9b8d-311f" hidden="false">
-                  <description>Long Drong must be accompanied by a unit of Troll Slayers chosen from the army list at a cost of 12 points per model. This unit is equipped with a brace of pistols instead of two hand weapons and great weapons and has the Dwarf Rum special rule. Long Drong is the unit&apos;s Leader and may never choose to leave this unit.</description>
-                </rule>
-                <rule name="Dwarf Rum" id="d093-aaaa-a3c4-47c3" hidden="false">
-                  <description>Enemy models in base contact with models with this special rule suffer -1 to their Weapon Skill in Close Combat. This does not affect Undead, Daemons or followers of Nurgle. The Slayer Pirates may not be deployed closer than 6&quot; to any other unit in the army at the start of the battle.</description>
-                </rule>
-              </rules>
-              <modifiers>
-                <modifier type="add" value="Long Drong must be accompanied by a unit of Pirate Slayers." field="error">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="force" childId="5b65-8d45-c08e-40fe" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="force" childId="78fe-ea46-1c40-1802" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="Long Drong Slayer" field="name" scope="root-entry"/>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="unit" import="true" name="Malakai Makaisson" hidden="false" id="5be2-0e9d-aeea-eb58" sortIndex="4">
+            <selectionEntry type="unit" import="true" name="Malakai Makaisson" hidden="false" id="5be2-0e9d-aeea-eb58" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="175"/>
               </costs>
@@ -5932,10 +5527,240 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 </infoLink>
               </infoLinks>
               <categoryLinks>
-                <categoryLink targetId="d0ba-7b91-1049-d48b" id="1df3-ecd1-a2e2-8777" primary="false" name="War Machine"/>
+                <categoryLink name="War Machine" hidden="false" id="1df3-ecd1-a2e2-8777" targetId="d0ba-7b91-1049-d48b" primary="false"/>
               </categoryLinks>
               <modifiers>
                 <modifier type="set" value="Malakai Makaisson" field="name" scope="root-entry"/>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Garagrim Ironfist" hidden="false" id="710d-22eb-13ae-f324" collective="false" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="8099-083f-a58c-a2a5" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Garagrim Ironfist" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5cea-1268-2a08-d531">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Dwarf)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule name="The War-Mourner" id="aedb-ffa2-f414-4955" hidden="false">
+                  <description>Each Wound inflicted by Garagrim counts double towards that round&apos;s Combat Resolution. Against enemies with Toughness 5 or higher, Garagrim causes Multiple Wounds (D6). However, Garagrim may never be the Army General.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink name="Ancestral Grudge" id="b7e8-f54b-1534-4ac7" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
+                <infoLink name="Relentless" id="8591-cfd3-4021-0107" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
+                <infoLink name="Unbreakable" id="2a7b-5c7c-001f-3d2e" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
+                <infoLink name="Deathblow" id="e04d-b0df-b602-9f60" hidden="false" targetId="1707-3abf-d5c8-97c0" type="rule"/>
+                <infoLink name="Dragon Slayer" id="2ef7-dfab-1775-39ed" hidden="false" targetId="106b-08dd-8397-3a53" type="rule"/>
+                <infoLink name="Magic Resistance" id="7e6a-6f0a-6857-f39f" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Dwarf" field="name"/>
+                    <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="d84f-792b-4d4a-49a1" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Dwarf" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Axes of Kadrin" hidden="false" id="81b4-acce-a0bc-2aa7" collective="false">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="744d-1574-3ebb-8b59" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e53b-a2ed-2872-be74" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Master Rune of Skalf Blackhammer" hidden="false" id="2820-0e25-a000-6217" type="selectionEntry" targetId="31c7-671a-98d9-0d59">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0880-23bd-b82f-1cc1"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Grudge Rune" hidden="false" id="4536-86ea-510b-d2da" type="selectionEntry" targetId="267a-259a-3431-e17b">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="56e6-b2c0-d3e2-ee71"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <infoLinks>
+                    <infoLink name="Two/Additional Hand Weapons" id="59d1-a17e-0e40-74d7" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                      <modifiers>
+                        <modifier type="set" value="Axes of Kadrin" field="annotation"/>
+                        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                        <modifier type="append" value="The Axes of Kadrin are inscribed with the Master Rune of Skalf Blackhammer and a Grudge Rune. In addition, when Garagrim charges, he causes an Impact Hit on every model in base contact with him. These Impact Hits follow all the rules for his normal attacks." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Two/Additional Hand Weapons" id="b823-1724-856f-0218" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <costs>
+                <cost name="pts" typeId="points" value="185"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="Garagrim Ironfist" field="name" scope="root-entry"/>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Josef Bugman" hidden="false" id="cedd-1d60-cd3a-abec" collective="false" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="374a-4b88-fa74-7fef" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Josef Bugman" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="524a-5e3c-f4ff-a91d">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Dwarf)</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="1" typeId="0a1b-c67c-10d3-713e" typeName="Liquid Fortification" hidden="false" id="a665-e178-3801-f735">
+                  <characteristics>
+                    <characteristic name="Result" typeId="a586-177e-1b4d-a3b6">Bad Brew: The unit gains Flammable until the start of the next friendly turn.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="02-04" typeId="0a1b-c67c-10d3-713e" typeName="Liquid Fortification" hidden="false" id="afe6-50b2-5d1a-46f4">
+                  <characteristics>
+                    <characteristic name="Result" typeId="a586-177e-1b4d-a3b6">Belligerent: The unit gains Stubborn until the start of the next friendly turn.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="05-06" typeId="0a1b-c67c-10d3-713e" typeName="Liquid Fortification" hidden="false" id="2b71-7e59-6e58-bde1">
+                  <characteristics>
+                    <characteristic name="Result" typeId="a586-177e-1b4d-a3b6">Leathered: Each member of the unit gains +1 Toughness until the start of the next friendly turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule name="Liquid Fortification" id="5dee-0234-0d4d-a6b5" hidden="false">
+                  <description>As long as Bugman is alive, roll a D6 at the start of each friendly turn and consult the Liquid Fortification chart to see what effects his draughts have upon himself and any unit he has currently joined.</description>
+                </rule>
+                <rule name="Bugman&apos;s Rangers" id="d340-7a60-63f9-2060" hidden="false">
+                  <description>Josef Bugman must be accompanied by a unit of Rangers chosen from the army list at a cost of 17 points per model. This unit has Strength 4 and are equipped with great weapons, crossbows, medium armour and shields. Josef Bugman may never choose to leave this unit.</description>
+                </rule>
+                <rule name="Stout Courage" id="b90f-a438-4177-c24e" hidden="false">
+                  <description>Bugman and any unit he joins have Immunity (Fear/Terror) as long as he remains with the unit.</description>
+                </rule>
+              </rules>
+              <infoLinks>
+                <infoLink name="Resolute" id="9c94-e097-ab1e-cd00" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
+                <infoLink name="Ancestral Grudge" id="af2c-be34-fa20-1631" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
+                <infoLink name="Scouts" id="49e8-a432-f1ad-e34d" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
+                <infoLink name="Relentless" id="c145-717f-1860-4ba9" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
+                <infoLink name="Gromril Armour" id="b484-5137-1a83-4240" hidden="false" type="profile" targetId="6f82-ea15-712f-4ee5"/>
+                <infoLink name="Magic Resistance" id="1c6c-320e-ee5f-a956" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Dwarf" field="name"/>
+                    <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="ef02-1641-786d-d7e9" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Dwarf" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Ol&apos; Trustworthy" hidden="false" id="4649-3964-398b-ec2f" collective="false" sortIndex="2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="36a3-de10-ba3a-b790" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8b1c-5ca0-bad0-9be5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Ol&apos; Trustworthy" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="d1e7-3a17-6d31-09cc">
+                      <characteristics>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Ol&apos; Trustworthy is inscribed with two Runes of Cleaving and a Rune of Fury.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Rune of Fury (x1)" hidden="false" id="cd40-58aa-e3df-351e" type="selectionEntry" targetId="bb28-45f3-0037-68f8">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2540-c8dc-3535-f6fc"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Rune of Cleaving (x2)" hidden="false" id="ec69-5305-edee-bcaf" type="selectionEntry" targetId="fca0-2b1f-419f-8943">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5497-1b0e-fc08-80b0"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Bugman&apos;s Tankard" hidden="false" id="331e-e379-fe99-cf52" collective="false" sortIndex="4">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="fddc-d3b6-9940-4c43" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f2d8-5d6d-8b10-634a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Bugman&apos;s Tankard" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="dfce-52f0-73eb-c050">
+                      <characteristics>
+                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Bugman, or a single model in the same unit, can drink from Bugman’s Tankard at the start of any friendly turn. The imbiber immediately recovers 1 Wound lost previously during the battle.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+              <entryLinks>
+                <entryLink import="true" name="General" hidden="false" id="eef1-7984-4504-7707" collective="false" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
+                <entryLink import="true" name="Crossbow" hidden="false" id="d788-90b5-6566-a934" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="7"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Medium Armour" hidden="false" id="ff84-a1ca-764d-1dfa" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="3">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ba86-055d-5800-3961"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="185"/>
+              </costs>
+              <modifiers>
+                <modifier type="add" value="Josef Bugman must be accompanied by a unit of Bugman&apos;s Rangers." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="ebef-0c28-ad41-de3d" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="force" childId="cedd-1d60-cd3a-abec" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="Josef Bugman" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -6420,6 +6245,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
       </costs>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ab44-f532-2ec2-395a"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="35ce-0d3c-6133-ccef" includeChildSelections="false"/>
       </constraints>
       <profiles>
         <profile name="01 (Failed Rune Table)" typeId="3dae-a2c8-a747-11f5" typeName="Failed Rune Table" hidden="false" id="afcb-1d5c-dbcd-034f">
@@ -6624,6 +6450,7 @@ In addition, his troop type changes to War Machine and he counts as being part o
     <selectionEntry type="model" import="true" name="Shieldbearers" hidden="false" id="af5b-af77-fac7-5790" collective="false" subType="mount">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="933d-363e-6718-9332" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="78fd-aae3-c468-4aff" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
         <infoLink name="Line of Sight (*)" id="fdde-a1f4-bcd7-4ded" hidden="false" targetId="03b5-5136-1ebb-dcfd" type="rule">
@@ -7039,7 +6866,6 @@ In addition, his troop type changes to War Machine and he counts as being part o
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="417a-b014-9a92-e506" shared="true"/>
                 <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="5393-e864-e228-e66e" shared="true"/>
               </conditions>
             </conditionGroup>
@@ -7981,7 +7807,7 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
         </modifier>
       </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup id="dee5-1fbe-cd79-6245" name="70. Slayer Skills" hidden="false" collective="false" import="true" collapsible="true">
+    <selectionEntryGroup id="dee5-1fbe-cd79-6245" name="70. Slayer Skills" hidden="false" collective="false" import="true">
       <selectionEntries>
         <selectionEntry id="468a-7d54-bc22-c5b6" name="Skaven Slayer" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
@@ -8126,6 +7952,22 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
         <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.958e-21b4-ca1f-538b.profiles.Armour Save"/>
         <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.2ba9-c430-47e9-a80c.profiles.Melee weapon"/>
         <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.2ba9-c430-47e9-a80c.profiles.Ranged Weapon"/>
+        <modifier type="increment" value="50" field="37c7-650a-1ac9-ed76">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bec4-b947-a609-684a" shared="true" includeChildSelections="true" childName="Tier 1 Character"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="363e-67b3-11fa-cb51" shared="true" includeChildSelections="true" childName="Brewmasters"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="137f-2c0b-6d58-32ac" shared="true" includeChildSelections="true" childName="Master Engineers"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" value="100" field="37c7-650a-1ac9-ed76">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ffde-7800-8634-f4bc" shared="true" includeChildSelections="true" childName="Tier 2 Character"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="10. Magic Weapons &amp; Weapon Runes" id="2ba9-c430-47e9-a80c" hidden="false" collective="false" import="true" collapsible="true">
@@ -9329,7 +9171,6 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                           <conditionGroups>
                             <conditionGroup type="and">
                               <conditions>
-                                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="417a-b014-9a92-e506" shared="true"/>
                                 <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="5393-e864-e228-e66e" shared="true"/>
                               </conditions>
                             </conditionGroup>
@@ -9418,7 +9259,6 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                       <conditionGroups>
                         <conditionGroup type="and">
                           <conditions>
-                            <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="417a-b014-9a92-e506" shared="true"/>
                             <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="5393-e864-e228-e66e" shared="true"/>
                           </conditions>
                         </conditionGroup>
@@ -9626,6 +9466,16 @@ Any additional runes on the weapon will also take effect. After this, the weapon
         <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.958e-21b4-ca1f-538b.profiles.Armour Save"/>
         <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.2ba9-c430-47e9-a80c.profiles.Melee weapon"/>
         <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.2ba9-c430-47e9-a80c.profiles.Ranged Weapon"/>
+        <modifier type="increment" value="50" field="82ea-0409-b407-04fa">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bec4-b947-a609-684a" shared="true" includeChildSelections="true" childName="Tier 1 Character"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="100" field="82ea-0409-b407-04fa">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ffde-7800-8634-f4bc" shared="true" includeChildSelections="true" childName="Tier 2 Character"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="50. Runic Tattoos" id="cb02-6b7f-5111-ffd2" hidden="false" collapsible="true">
@@ -9786,7 +9636,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="bb72-6ff9-97d0-2b93" name="Forgefire" hidden="false">
-      <description>A Runesmith and Runelord, and all friendly infantry models in a unit joined by one or more of them, gain Armour Piercing (1) for as long as they remain with the unit.</description>
+      <description> Models with this special rule and any unit they join gain the Armour Piercing (1) special rule.</description>
     </rule>
     <rule id="3f1d-5a74-f98c-bf18" name="Artillery Master" hidden="false">
       <description>One war machine that is within 3&quot; of a Master Engineer can use his Ballistic Skill or re-roll one artillery dice or scatter dice during each Shooting phase. This cannot be the artillery dice that determines the distance a cannonball bounces. You must nominate which weapon, if any, will be using this special rule at the start of each Shooting phase, before any such weapons within 3&quot; of the Master Engineer are fired.</description>
@@ -9993,60 +9843,17 @@ After resolving the damage caused by a grudge buster bomb, roll a D6. On a 4+, t
     <infoGroup name="Rune Lore" id="c330-dbcf-ff35-0037" hidden="false">
       <rules>
         <rule name="Rune Lore" id="b4d4-5518-1f6b-cbfe" hidden="false">
-          <description>Lords with this special rule follow the rules for a Level 4 Wizard for the purposes of channelling dispel dice and dispelling, and have the Magic Resistance (2) special rule.
-Heroes with this special rule follow the rules for a Level 2 Wizard for the purposes of channelling dispel dice and dispelling, and have the Magic Resistance (1) special rule.
-In addition, a model with this special rule has the four Runes listed below. They may attempt to use one at the start of each of your turns by taking a Leadership test on their own unmodified Leadership. If passed, the Rune is struck and takes immediate effect. A unit can only be under the effect of one Rune at a time.</description>
+          <description>Runelords follow the rules for Level 4 Wizards for the purposes of channelling dispel dice and dispelling. Runesmiths follow the rules for Level 2 Wizards for the purposes of channelling dispel dice and dispelling. 
+
+
+In addition, a model with this special rule has four Runes. They may attempt to use one at the start of each of your turns by taking a Leadership test on their own unmodified Leadership. If passed, the Rune is struck and takes immediate effect. A unit can only be under the effect of one Rune at a time.</description>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink name="Magic Resistance" id="d725-afd6-4d32-4036" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-          <modifiers>
-            <modifier type="set" value="Rune Lore" field="name"/>
-            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <comment>Lords</comment>
-        </infoLink>
-        <infoLink name="Magic Resistance" id="0752-73ea-7dd7-012b" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-          <modifiers>
-            <modifier type="set" value="Rune Lore" field="name"/>
-            <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <comment>Lords</comment>
-        </infoLink>
-        <infoLink name="Magic Resistance" id="e82b-ec05-ea6d-da1d" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-          <modifiers>
-            <modifier type="set" value="Rune Lore" field="name"/>
-            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <comment>Heroes</comment>
-        </infoLink>
-        <infoLink name="Magic Resistance" id="6898-b34d-39a4-74ca" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-          <modifiers>
-            <modifier type="set" value="Rune Lore" field="name"/>
-            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <comment>Heroes</comment>
-        </infoLink>
+        <infoLink name="Rune of Wrath and Ruin" id="fc24-d0a4-cbfa-a8f5" hidden="false" type="profile" targetId="8204-ac4d-f1bb-94c0"/>
+        <infoLink name="Rune of Hearth and Hold" id="7342-01c6-ee11-f895" hidden="false" type="profile" targetId="0e84-b78f-cc00-ea9f"/>
+        <infoLink name="Rune of Oath and Honour" id="73e3-83a0-0a92-2210" hidden="false" type="profile" targetId="429f-5cde-eca4-0163"/>
+        <infoLink name="Rune of Stone and Steel" id="d254-c7de-0b3d-50f1" hidden="false" type="profile" targetId="b11d-7500-8513-8992"/>
       </infoLinks>
     </infoGroup>
   </sharedInfoGroups>
