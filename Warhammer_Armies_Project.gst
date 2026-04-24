@@ -2707,9 +2707,6 @@ As long as the unit (but not the handlers) have a Unit Strength of 5 or more, a
     <rule id="73fd-d115-269d-bd0a" name="Ancestral Grudge" hidden="false">
       <description>Dwarfs have the Hatred (Orcs, Goblins, Skaven) special rule.</description>
     </rule>
-    <rule id="db34-00cf-d5b6-9a4d" name="Relentless" hidden="false">
-      <description>Units entirely composed of models with this special rule do not need to pass a Leadership test in order to march, regardless of the proximity of enemy units.</description>
-    </rule>
     <rule id="4a8b-1056-0bcd-e293" name="Fall Over" hidden="false">
       <description>A Giant must test to see whether it falls over if any of the following apply:
 - If it is beaten in close combat. Test once results are established but before taking a Break test.
@@ -2731,9 +2728,6 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     </rule>
     <rule id="bf11-9a5f-fe2f-28d8" name="Zealotry" hidden="false">
       <description>Models with this rule add their combat resolution score to their Unit Strength value when determining if they are Steadfast. In addition, in the first round of combat, they always take their Break tests using 3D6, discarding the highest result.</description>
-    </rule>
-    <rule id="7da8-9e3b-77c9-cc8a" name="Resolute" hidden="false">
-      <description>When taking Break tests, models with this rule count as having lost the combat with 1 point fewer than they actually have.</description>
     </rule>
     <rule id="74ff-21a4-9c8c-8156" name="Martial Prowess" hidden="false">
       <description>Models with this special rule may re-roll all To Hit rolls of 1 when making close combat attacks.</description>
