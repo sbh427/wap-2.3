@@ -5105,6 +5105,12 @@ All models hit by the template must pass a Weapon Skill test or suffer a Stren
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). The target must take D3 Toughness tests. Each failed Toughness test causes a Wound which Ignores Armour Saves. In addition, all models in base contact with the target suffer a Hit at the target&apos;s base Strength.</characteristic>
       </characteristics>
     </profile>
+    <profile name="Invulnerable" typeId="54b0-94fc-eb1e-8e37" typeName="Invulnerable save" hidden="false" id="a5cd-bf6c-a415-ab5f" noindex="true">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Invulnerable</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedInfoGroups>
     <infoGroup name="Stone Thrower Misfire Chart" id="f6f0-bb1f-f863-3e81" hidden="false">
