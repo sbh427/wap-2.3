@@ -872,7 +872,7 @@
         <categoryLink name="Configuration, Spells &amp; Rules" hidden="false" id="1ae8-d5df-c11e-24af" targetId="24a8-26fb-f384-3c30" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="unit" import="true" name="Lore of Beasts" hidden="false" id="97c3-2cd0-19f3-c6e9" sortIndex="1">
+        <selectionEntry type="unit" import="true" name="Lore of Beasts" hidden="false" id="97c3-2cd0-19f3-c6e9" sortIndex="2">
           <infoLinks>
             <infoLink name="Wildheart" id="c253-1606-c0e1-1f3c" hidden="false" targetId="7c9a-10fe-33ee-5112" type="profile"/>
             <infoLink name="Wyssan&apos;s Wildform" id="76c6-d12c-a2d5-453c" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
@@ -918,7 +918,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Fire" hidden="false" id="a8e2-320c-cd97-9dd4" sortIndex="5">
+        <selectionEntry type="unit" import="true" name="Lore of Fire" hidden="false" id="a8e2-320c-cd97-9dd4" sortIndex="6">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="cfda-26f9-3890-f6c5" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="97b9-1b5a-d378-12db" includeChildSelections="true" automatic="true"/>
@@ -958,13 +958,14 @@
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="4d24-c803-7a05-0894" shared="true" childName="Lore of Fire" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="06db-d555-db31-ae4a" shared="true" childName="Lore of High Magic, Life &amp; Light" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Metal" hidden="false" id="57f2-4764-2e60-8608" sortIndex="9">
+        <selectionEntry type="unit" import="true" name="Lore of Metal" hidden="false" id="57f2-4764-2e60-8608" sortIndex="11">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="8c2b-6571-64ff-e4b9" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cc0b-b513-f12d-5ed1" includeChildSelections="true" automatic="true"/>
@@ -1010,7 +1011,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Heavens" hidden="false" id="b811-9e2b-48e0-68d9" sortIndex="6">
+        <selectionEntry type="unit" import="true" name="Lore of Heavens" hidden="false" id="b811-9e2b-48e0-68d9" sortIndex="7">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="5a7b-0fab-6a91-1e71" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7ec8-0b42-16dc-5787" includeChildSelections="true" automatic="true"/>
@@ -1056,7 +1057,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Light" hidden="false" id="1f65-56d7-87ee-3586" sortIndex="8">
+        <selectionEntry type="unit" import="true" name="Lore of Light" hidden="false" id="1f65-56d7-87ee-3586" sortIndex="10">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="d98c-e5b4-1c38-c71a" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="959a-bcfa-3e58-73f5" includeChildSelections="true" automatic="true"/>
@@ -1102,7 +1103,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Life" hidden="false" id="5e06-89da-89c2-5e42" sortIndex="7">
+        <selectionEntry type="unit" import="true" name="Lore of Life" hidden="false" id="5e06-89da-89c2-5e42" sortIndex="9">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="9642-c565-6056-f4c8" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="eb00-af83-203b-fdc1" includeChildSelections="true" automatic="true"/>
@@ -1142,13 +1143,14 @@
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="968d-55ad-604c-f251" shared="true" childName="Lore of Life" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="06db-d555-db31-ae4a" shared="true" childName="Lore of High Magic, Life &amp; Light" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Shadow" hidden="false" id="69bf-9c48-e495-d3bf" sortIndex="11">
+        <selectionEntry type="unit" import="true" name="Lore of Shadow" hidden="false" id="69bf-9c48-e495-d3bf" sortIndex="13">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="ef06-016c-5e4b-56da" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="db52-46da-dd01-bfbe" includeChildSelections="true" automatic="true"/>
@@ -1194,7 +1196,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Death" hidden="false" id="6da6-eca4-f9b7-bdaf" sortIndex="4">
+        <selectionEntry type="unit" import="true" name="Lore of Death" hidden="false" id="6da6-eca4-f9b7-bdaf" sortIndex="5">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="68f4-7031-0031-8134" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fafc-7bd7-289e-4193" includeChildSelections="true" automatic="true"/>
@@ -1240,7 +1242,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Chaos" hidden="false" id="671c-16d9-4fbb-8510" sortIndex="2">
+        <selectionEntry type="unit" import="true" name="Lore of Chaos" hidden="false" id="671c-16d9-4fbb-8510" sortIndex="3">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="bf1d-07fc-7345-2cd1" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1f88-03cc-c312-07f9" includeChildSelections="true" automatic="true"/>
@@ -1286,7 +1288,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Tzeentch" hidden="false" id="6b51-cf19-a01c-9ad6" sortIndex="13">
+        <selectionEntry type="unit" import="true" name="Lore of High Magic" hidden="false" id="6b51-cf19-a01c-9ad6" sortIndex="8">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="80a9-b905-9b5f-1f43" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="668e-605d-ab8b-0f50" includeChildSelections="true" automatic="true"/>
@@ -1298,22 +1300,6 @@
               </conditions>
             </modifier>
           </modifiers>
-          <infoLinks>
-            <infoLink name="Boon of Magic" id="5077-2a91-f9fd-7d90" hidden="false" type="profile" targetId="6882-88e4-9cfc-032b"/>
-            <infoLink name="Blue Fire of Tzeentch" id="45a2-ac73-fb96-c747" hidden="false" type="profile" targetId="7845-5681-3481-438c"/>
-            <infoLink name="Baleful Transmogrification" id="8dae-8b6f-4ad3-79b1" hidden="false" type="profile" targetId="f20e-8766-c419-c2ad"/>
-            <infoLink name="Boon of Tzeentch" id="3f82-d808-b439-beb8" hidden="false" type="profile" targetId="4079-fa2a-808b-227c"/>
-            <infoLink name="Pandemonium" id="1bbe-e943-9eb1-f658" hidden="false" type="profile" targetId="ccd5-d605-6f13-4a38"/>
-            <infoLink name="Pink Fire of Tzeentch" id="e4e3-ffab-220d-43ea" hidden="false" type="profile" targetId="7a4e-4ca2-b50c-c914"/>
-            <infoLink name="Bolt of Change" id="416b-16fa-8f10-3f1e" hidden="false" type="profile" targetId="1b9c-a354-14b0-c2ab"/>
-            <infoLink name="Shield of Fate" id="5682-514e-27d0-bb2f" hidden="false" type="profile" targetId="bbd9-0a68-0b25-c60a"/>
-            <infoLink name="Fold Reality" id="b13a-a261-69e1-fc90" hidden="false" type="profile" targetId="808a-3a12-23b8-1a49"/>
-            <infoLink name="Glean Magic" id="ea91-c544-2f8f-0da1" hidden="false" type="profile" targetId="e323-2852-8d12-7766"/>
-            <infoLink name="Tzeentch&apos;s Firestorm" id="696d-27c2-de92-962b" hidden="false" type="profile" targetId="07c0-7aef-b57a-9072"/>
-            <infoLink name="Daemonfire Vortex" id="24c1-0eea-4db8-957f" hidden="false" type="profile" targetId="70bd-2415-8b44-a217"/>
-            <infoLink name="Treason of Tzeentch" id="a0e9-44d9-f89d-5fcc" hidden="false" type="profile" targetId="de5f-761e-51df-3d34"/>
-            <infoLink name="Infernal Gateway" id="f9f0-5cc4-e1be-96ec" hidden="false" type="profile" targetId="e5e5-9f34-76f7-4c65"/>
-          </infoLinks>
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
@@ -1325,14 +1311,144 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="6b51-cf19-a01c-9ad6" shared="true" childName="Lore of Tzeentch" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="42e7-cbd3-5a8c-ab18" shared="true" childName="Lore of High Magic" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="06db-d555-db31-ae4a" shared="true" childName="Lore of High Magic, Life &amp; Light" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifierGroup>
           </modifierGroups>
+          <profiles>
+            <profile name="Shield of Saphery" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="cc28-bbfb-1804-27f7">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each time a spell from the Lore of High Magic is successfully cast, the caster and their unit immediately gain a Magical Ward (6+) until the beginning of the caster&apos;s next Magic phase. This bonus is cumulative.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Drain Magic" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ba64-8efc-b222-08b1">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If the target is a friendly unit, Drain Magic is an augment spell. If the target is an enemy unit, Drain Magic is a hex spell. In either case, all Remains in Play spells affecting the unit are immediately dispelled, and spells lasting to the caster&apos;s next Magic phase immediately come to an end.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Apotheosis" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e4e2-5037-44ca-a2db">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single model within 18&quot;. The target immediately regains a single lost Wound and gains the Fear special rule until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Hand of Glory" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e5f6-b867-7deb-6315">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target&apos;s Weapon Skill, Ballistic Skill, Initiative or Movement (choose one) is increased by D3 until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Fortune is Fickle" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d669-5abf-e378-42c1">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets an enemy wizard. Until the start of the caster&apos;s next Magic phase, whenever the targets roll a double when casting spells, that counts as a Miscast.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Curse of Arrow Attraction" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b8e8-6ab2-5de2-ed1b">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Any missile attacks against the target may re-roll To Hit until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Fury of Khaine" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6d99-61cc-a3c7-a52d">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic missile</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It causes 2D6 Strength 4 hits.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Courage of Aenarion" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7836-8a33-efd9-e523">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, all affected units gain the Stubborn special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Glamour of Teclis" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9a8f-1f71-ec9e-f980">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. While the spell is in play, the target unit must pass a Leadership test with an additional D6 (discarding the lowest result) if they attempt to move in their Movement phase. If the test is failed, the casting player may move the unit using the Random Movement (D6) special rule instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Coruscation of Finreir" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="62f4-07ea-7fa4-9af2">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">self</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell isin effect, the Wizard adds 12&quot; to the casting range of all their spells (excluding auras), can draw Line of Sight in any direction and counts as having a Line of Sight value of 5.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Walk Between Worlds" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b60d-7a5e-9ee9-08bb">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Ethereal special rule until the end of the phase and can immediately move up to 10&quot; as if it were the Remaining Moves sub-phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Tempest" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c62e-2a1b-22e6-229e">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Large round template.
+All models hit by the template suffer a Strength 3 hit (models with the Fly special rule suffer a Strength 4 hit instead). Any unit under the template suffers a -1 modifier to all To Hit rolls (both shooting and close combat) until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Vaul&apos;s Unmaking" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fba6-0bdb-9ea9-f00b">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). The target suffers a single Wound which Ignores Armour Saves on a dice roll greater than or equal to the model&apos;s unmodified armour save (excluding Natural Armour, models without an armour save cannot be wounded). The owning player must then reveal to the caster all the magic items possessed by the target (if any). One item of your choice is destroyed and cannot be used for the rest of the game.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Flames of the Phoenix" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9400-727c-c686-f67e">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. Every model in the target unit takes a Strength 3 hit with the Flaming Attacks special rule. At the end of every subsequent Magic phase, every model in the target unit suffers another hit with the Flaming Attacks special rule, with the Strength of each Hit increasing by 1 every time.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Nurgle" hidden="false" id="29f4-8033-3b6a-2980" sortIndex="10">
+        <selectionEntry type="unit" import="true" name="Lore of Nurgle" hidden="false" id="29f4-8033-3b6a-2980" sortIndex="12">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="27bf-ca1e-3269-0827" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5c4f-587b-aaaa-6404" includeChildSelections="true" automatic="true"/>
@@ -1378,7 +1494,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Slaanesh" hidden="false" id="6ae3-79e0-0400-07b6" sortIndex="12">
+        <selectionEntry type="unit" import="true" name="Lore of Slaanesh" hidden="false" id="6ae3-79e0-0400-07b6" sortIndex="14">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="38f9-3bcc-e89d-54a5" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6a12-758b-74a8-f861" includeChildSelections="true" automatic="true"/>
@@ -1424,7 +1540,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Dark Magic" hidden="false" id="8857-87c6-0648-d416" sortIndex="3">
+        <selectionEntry type="unit" import="true" name="Lore of Dark Magic" hidden="false" id="8857-87c6-0648-d416" sortIndex="4">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="4b78-5604-3083-0009" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1b06-b1a6-6d76-5dcf" includeChildSelections="true" automatic="true"/>
@@ -1474,6 +1590,100 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="43df-f883-b67b-da4c" includeChildSelections="true"/>
           </constraints>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Lore of Tzeentch" hidden="false" id="cd65-6728-cffa-67f8" sortIndex="15">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="877a-88d2-61a4-03be" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1330-a2c5-2dfe-8665" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="877a-88d2-61a4-03be">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Boon of Magic" id="10b3-728d-9746-9ce6" hidden="false" type="profile" targetId="6882-88e4-9cfc-032b"/>
+            <infoLink name="Blue Fire of Tzeentch" id="41e5-5e50-1bcb-710e" hidden="false" type="profile" targetId="7845-5681-3481-438c"/>
+            <infoLink name="Baleful Transmogrification" id="5fd7-f36f-f4a1-6e55" hidden="false" type="profile" targetId="f20e-8766-c419-c2ad"/>
+            <infoLink name="Boon of Tzeentch" id="344e-66ce-d60a-342b" hidden="false" type="profile" targetId="4079-fa2a-808b-227c"/>
+            <infoLink name="Pandemonium" id="dde9-ea33-2f11-94f4" hidden="false" type="profile" targetId="ccd5-d605-6f13-4a38"/>
+            <infoLink name="Pink Fire of Tzeentch" id="e67a-0ccf-e233-44e9" hidden="false" type="profile" targetId="7a4e-4ca2-b50c-c914"/>
+            <infoLink name="Bolt of Change" id="60f8-82ac-8018-4e3c" hidden="false" type="profile" targetId="1b9c-a354-14b0-c2ab"/>
+            <infoLink name="Shield of Fate" id="4bc2-9e28-6373-8d6e" hidden="false" type="profile" targetId="bbd9-0a68-0b25-c60a"/>
+            <infoLink name="Fold Reality" id="534f-63af-e2d6-f28d" hidden="false" type="profile" targetId="808a-3a12-23b8-1a49"/>
+            <infoLink name="Glean Magic" id="62c6-b9f5-c4fc-aa2b" hidden="false" type="profile" targetId="e323-2852-8d12-7766"/>
+            <infoLink name="Tzeentch&apos;s Firestorm" id="3f99-b54d-b0cd-b660" hidden="false" type="profile" targetId="07c0-7aef-b57a-9072"/>
+            <infoLink name="Daemonfire Vortex" id="90bb-c6cc-0445-5c8b" hidden="false" type="profile" targetId="70bd-2415-8b44-a217"/>
+            <infoLink name="Treason of Tzeentch" id="7edf-941d-a595-253d" hidden="false" type="profile" targetId="de5f-761e-51df-3d34"/>
+            <infoLink name="Infernal Gateway" id="74bc-037d-0476-5a8e" hidden="false" type="profile" targetId="e5e5-9f34-76f7-4c65"/>
+          </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="877a-88d2-61a4-03be"/>
+                <modifier type="set" value="0" field="1330-a2c5-2dfe-8665"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="446a-99ef-5aad-d30a" shared="true" childName="Lore of Tzeentch" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Base Lore Signature Spells" hidden="false" id="2665-4865-998c-c606" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="2e09-7d67-fed1-8daa" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="33dc-9f24-a37a-2867" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="2e09-7d67-fed1-8daa">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Kindleflame" id="7219-dd1d-6ea1-a3f1" hidden="false" targetId="c198-878a-0683-0889" type="profile"/>
+            <infoLink name="Fireball" id="ad7a-f248-58d6-455b" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
+            <infoLink name="Wildheart" id="b35c-2421-1086-1328" hidden="false" targetId="7c9a-10fe-33ee-5112" type="profile"/>
+            <infoLink name="Wyssan&apos;s Wildform" id="bb6b-4654-105e-9698" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
+            <infoLink name="Life Leeching" id="2fc7-2bcb-b83e-413e" hidden="false" targetId="2c43-e445-f916-eae9" type="profile"/>
+            <infoLink name="Dark Hand of Death" id="09cc-51fc-59fc-348d" hidden="false" targetId="f560-2bd9-89c7-28bd" type="profile"/>
+            <infoLink name="Fantastic Foresight" id="fd9b-2821-2476-01a4" hidden="false" type="profile" targetId="64c1-2688-2cd5-b359"/>
+            <infoLink name="Harmonic Convergence" id="8803-3758-2b05-797f" hidden="false" targetId="91df-517b-9d00-5628" type="profile"/>
+            <infoLink name="Lifebloom" id="fd39-c18b-0d95-720f" hidden="false" targetId="655d-ede0-9e85-a1ad" type="profile"/>
+            <infoLink name="Earth Blood" id="b487-9683-ae3b-1aec" hidden="false" targetId="c7c1-2e60-4710-1a6a" type="profile"/>
+            <infoLink name="Focus Energy" id="8395-3bb8-9b15-cc86" hidden="false" targetId="cd1f-0bc5-ab83-af06" type="profile"/>
+            <infoLink name="Shem&apos;s Burning Gaze" id="268c-0a02-07ad-4956" hidden="false" targetId="6508-2de1-8be5-0a2f" type="profile"/>
+            <infoLink name="Metallic Attraction" id="0fa1-5c5c-f7cf-95df" hidden="false" targetId="0958-a1b9-1238-c0e7" type="profile"/>
+            <infoLink name="Glittering Robe" id="d568-62ce-f752-307d" hidden="false" targetId="3c85-1552-3323-c4d3" type="profile"/>
+            <infoLink name="Steed of Shadows" id="b79c-4f19-f91a-d5c9" hidden="false" type="profile" targetId="4fcb-a016-2721-ff01"/>
+            <infoLink name="Melkoth&apos;s Mystifying Miasma" id="4273-5779-0c86-2229" hidden="false" type="profile" targetId="89e2-f22c-758d-a9d7"/>
+          </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="2e09-7d67-fed1-8daa"/>
+                <modifier type="set" value="0" field="33dc-9f24-a37a-2867"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="ce12-69b6-8862-848d" shared="true" childName="Base Lore Signature Spells" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -1887,6 +2097,24 @@
       <modifiers>
         <modifier type="set" value="0" field="points" scope="root-entry"/>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of High Magic" hidden="false" id="42e7-cbd3-5a8c-ab18" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="10dc-c769-1f83-a06a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of High Magic, Life &amp; Light" hidden="false" id="06db-d555-db31-ae4a">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b8d1-7937-6888-229e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Base Lore Signature Spells" hidden="false" id="ce12-69b6-8862-848d">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="783f-fc4e-cf02-5718" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
