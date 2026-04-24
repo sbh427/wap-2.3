@@ -772,7 +772,7 @@
             <profile name="Chariots" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="e48b-2fab-06d5-90da">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
-                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">5</characteristic>
+                <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">3</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">0, +D3 Impact hits to the chariots in the first rank.</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds (+1 for each additional Crew &amp; Mount)</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
