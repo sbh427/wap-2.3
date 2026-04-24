@@ -243,22 +243,6 @@
         <infoLink name="Swiftstride" id="9700-feb5-c942-f86e" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
         <infoLink name="Independent" id="49e0-9b63-fc15-1b21" hidden="false" type="rule" targetId="5c43-d3ff-6f23-d2a7"/>
       </infoLinks>
-      <profiles>
-        <profile name="Ridden Monster" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="9450-3d04-ce97-32bd">
-          <characteristics>
-            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">Limit 2+</characteristic>
-            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">Limit 2+</characteristic>
-            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
-          </characteristics>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-      </profiles>
     </categoryEntry>
     <categoryEntry name="Cavalry" id="bdee-b168-38ba-7d3c" hidden="false">
       <infoLinks>
