@@ -2273,6 +2273,7 @@
         <entryLink import="true" name="Wizard Level 1" hidden="false" id="9d73-bb9d-5b5a-09c0" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3050-1288-ffab-5f50" includeChildSelections="false" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d4b1-1924-1f74-a1da" includeChildSelections="false"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
@@ -2281,7 +2282,6 @@
               </conditions>
               <modifiers>
                 <modifier type="set" value="0" field="3050-1288-ffab-5f50"/>
-                <modifier type="set" value="true" field="hidden"/>
               </modifiers>
             </modifierGroup>
           </modifierGroups>
@@ -2292,6 +2292,7 @@
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a481-48cd-9ebb-72e3" includeChildSelections="false" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8113-7ecd-ebf6-7c69" includeChildSelections="false"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
@@ -2300,7 +2301,6 @@
               </conditions>
               <modifiers>
                 <modifier type="set" value="0" field="a481-48cd-9ebb-72e3"/>
-                <modifier type="set" value="true" field="hidden"/>
               </modifiers>
             </modifierGroup>
           </modifierGroups>
@@ -2311,6 +2311,7 @@
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="72d7-592d-356e-3bf4" includeChildSelections="false" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4c3c-e73f-b06e-d300" includeChildSelections="false"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
@@ -2319,7 +2320,6 @@
               </conditions>
               <modifiers>
                 <modifier type="set" value="0" field="72d7-592d-356e-3bf4"/>
-                <modifier type="set" value="true" field="hidden"/>
               </modifiers>
             </modifierGroup>
           </modifierGroups>
@@ -2330,6 +2330,7 @@
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bf03-15d7-b3e9-0719" includeChildSelections="false" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b276-05e4-0145-f8d1" includeChildSelections="false"/>
           </constraints>
           <modifierGroups>
             <modifierGroup type="and">
@@ -2338,7 +2339,6 @@
               </conditions>
               <modifiers>
                 <modifier type="set" value="0" field="bf03-15d7-b3e9-0719"/>
-                <modifier type="set" value="true" field="hidden"/>
               </modifiers>
             </modifierGroup>
           </modifierGroups>
