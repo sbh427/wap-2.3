@@ -875,16 +875,15 @@
         <categoryLink name="Configuration, Spells &amp; Rules" hidden="false" id="44c9-c94b-ee8e-3c1e" targetId="24a8-26fb-f384-3c30" primary="true"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Used Lores of Magic" hidden="false" id="72b9-5bfb-763b-f3ad">
+    <selectionEntry type="unit" import="true" name="Lores of Magic" hidden="false" id="72b9-5bfb-763b-f3ad" subType="unit-group">
       <categoryLinks>
         <categoryLink name="Configuration, Spells &amp; Rules" hidden="false" id="1ae8-d5df-c11e-24af" targetId="24a8-26fb-f384-3c30" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Lore of Beasts" hidden="false" id="97c3-2cd0-19f3-c6e9" sortIndex="1">
+        <selectionEntry type="unit" import="true" name="Lore of Beasts" hidden="false" id="97c3-2cd0-19f3-c6e9" sortIndex="1">
           <infoLinks>
             <infoLink name="Wildheart" id="c253-1606-c0e1-1f3c" hidden="false" targetId="7c9a-10fe-33ee-5112" type="profile"/>
             <infoLink name="Wyssan&apos;s Wildform" id="76c6-d12c-a2d5-453c" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
-            <infoLink name="Merciw&apos;s Monstrous Regiment" id="3fa2-8f05-56c3-0c55" hidden="false" targetId="623a-6f29-e0a6-385b" type="profile"/>
             <infoLink name="The Flock of Doom" id="5525-92dd-4d40-fccb" hidden="false" targetId="82d2-edc6-e10f-ac00" type="profile"/>
             <infoLink name="The Ox Stands" id="ee07-7d5f-7e0c-16df" hidden="false" targetId="ddfb-d346-ab58-19b4" type="profile"/>
             <infoLink name="Pann&apos;s Impenetrable Pelt" id="92b0-b5a3-9693-5b4b" hidden="false" targetId="639d-9501-0008-8def" type="profile"/>
@@ -896,61 +895,52 @@
             <infoLink name="The Beast Cowers" id="59d1-cfed-c6d7-3f7b" hidden="false" targetId="b430-484b-7538-1e90" type="profile"/>
             <infoLink name="The Amber Spear" id="847a-0328-d43a-6771" hidden="false" targetId="5a5d-30a8-b377-cad8" type="profile"/>
             <infoLink name="The Wolf Hunts" id="7415-5b22-96dc-574d" hidden="false" targetId="12de-92c8-df66-6049" type="profile"/>
+            <infoLink name="Merciw&apos;s Monstrous Regiment" id="3fa2-8f05-56c3-0c55" hidden="false" targetId="623a-6f29-e0a6-385b" type="profile"/>
           </infoLinks>
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="984e-8962-5ba0-05e9-min" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="984e-8962-5ba0-05e9-max" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="984e-8962-5ba0-05e9-min" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="984e-8962-5ba0-05e9-max" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="984e-8962-5ba0-05e9-min">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b436-b410-dd41-304f" shared="true" childName="Lore of Beasts" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="984e-8962-5ba0-05e9-max">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b436-b410-dd41-304f" shared="true" childName="Lore of Beasts" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="984e-8962-5ba0-05e9-min">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="984e-8962-5ba0-05e9-min"/>
+                <modifier type="set" value="0" field="984e-8962-5ba0-05e9-max"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="b436-b410-dd41-304f" shared="true" childName="Lore of Beasts" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Fire" hidden="false" id="a8e2-320c-cd97-9dd4" sortIndex="5">
+        <selectionEntry type="unit" import="true" name="Lore of Fire" hidden="false" id="a8e2-320c-cd97-9dd4" sortIndex="5">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="17e2-8b76-2747-00b6-min" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="17e2-8b76-2747-00b6-max" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="cfda-26f9-3890-f6c5" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="97b9-1b5a-d378-12db" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="17e2-8b76-2747-00b6-min">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d24-c803-7a05-0894" shared="true" childName="Lore of Fire" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="17e2-8b76-2747-00b6-max">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="4d24-c803-7a05-0894" shared="true" childName="Lore of Fire" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="cfda-26f9-3890-f6c5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
             <infoLink name="Kindleflame" id="ec7f-7749-be93-24a2" hidden="false" targetId="c198-878a-0683-0889" type="profile"/>
             <infoLink name="Fireball" id="b529-7b9f-c015-c23b" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
-            <infoLink name="Magma Storm" id="f0ed-357f-fb42-fa13" hidden="false" targetId="77f7-17f3-1c78-efc4" type="profile"/>
             <infoLink name="Cascading Fire-Cloak" id="09f5-50df-3fe4-36f3" hidden="false" targetId="ee0b-0214-556a-a7f0" type="profile"/>
             <infoLink name="Breathe Fire" id="ba49-c852-53a0-e243" hidden="false" targetId="87b7-7b50-7c7e-c392" type="profile"/>
             <infoLink name="Flaming Sword of Rhuin" id="af85-6213-7399-b91f" hidden="false" targetId="c40b-1df6-0cc6-5d0e" type="profile"/>
@@ -962,37 +952,41 @@
             <infoLink name="Fulminating Flame Cage" id="3de4-a251-bc71-6708" hidden="false" targetId="9526-a4e9-7b88-9276" type="profile"/>
             <infoLink name="Conflagration of Doom" id="c696-243d-e6d9-e943" hidden="false" targetId="7c8c-f08a-882a-b54e" type="profile"/>
             <infoLink name="Flame Storm" id="592b-b805-07dc-43f5" hidden="false" targetId="77af-a090-ba85-99ce" type="profile"/>
+            <infoLink name="Magma Storm" id="f0ed-357f-fb42-fa13" hidden="false" targetId="77f7-17f3-1c78-efc4" type="profile"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="cfda-26f9-3890-f6c5"/>
+                <modifier type="set" value="0" field="97b9-1b5a-d378-12db"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="4d24-c803-7a05-0894" shared="true" childName="Lore of Fire" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Metal" hidden="false" id="57f2-4764-2e60-8608" sortIndex="9">
+        <selectionEntry type="unit" import="true" name="Lore of Metal" hidden="false" id="57f2-4764-2e60-8608" sortIndex="9">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="4911-35c0-a2b3-e153" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="a0b9-fe87-4f9e-9305" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="8c2b-6571-64ff-e4b9" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cc0b-b513-f12d-5ed1" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="4911-35c0-a2b3-e153">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="527f-89f1-1b92-a01d" shared="true" childName="Lore of Metal" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="a0b9-fe87-4f9e-9305">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="527f-89f1-1b92-a01d" shared="true" childName="Lore of Metal" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="8c2b-6571-64ff-e4b9">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
             <infoLink name="Metallic Attraction" id="4368-5853-2770-a2c0" hidden="false" targetId="0958-a1b9-1238-c0e7" type="profile"/>
             <infoLink name="Glittering Robe" id="ed2f-544f-d616-bbad" hidden="false" targetId="3c85-1552-3323-c4d3" type="profile"/>
-            <infoLink name="Final Transmutation" id="738e-efaa-38e7-7234" hidden="false" targetId="5fbf-bbf2-03d3-17d3" type="profile"/>
             <infoLink name="Searing Doom" id="8da6-52e4-519c-01a9" hidden="false" targetId="6bd0-6da5-dee9-b098" type="profile"/>
             <infoLink name="Law of Gold" id="e965-f1e1-7ecd-38c8" hidden="false" targetId="9a24-30f9-2c95-cffd" type="profile"/>
             <infoLink name="Plague of Rust" id="3a48-0659-2c07-94a8" hidden="false" targetId="79e8-aec9-6d8b-246c" type="profile"/>
@@ -1004,31 +998,36 @@
             <infoLink name="The Gilded Cage" id="c57e-c671-ce43-0aa0" hidden="false" targetId="0b05-4983-c1bf-a836" type="profile"/>
             <infoLink name="Quicksilver Sword" id="95ff-3ba2-c6ea-22e1" hidden="false" targetId="84c6-faad-709b-99ad" type="profile"/>
             <infoLink name="Meteoric Ironclad" id="3360-0089-1b86-ec7a" hidden="false" targetId="283c-6023-f253-bf83" type="profile"/>
+            <infoLink name="Final Transmutation" id="738e-efaa-38e7-7234" hidden="false" targetId="5fbf-bbf2-03d3-17d3" type="profile"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="8c2b-6571-64ff-e4b9"/>
+                <modifier type="set" value="0" field="cc0b-b513-f12d-5ed1"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="527f-89f1-1b92-a01d" shared="true" childName="Lore of Metal" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Heavens" hidden="false" id="b811-9e2b-48e0-68d9" sortIndex="6">
+        <selectionEntry type="unit" import="true" name="Lore of Heavens" hidden="false" id="b811-9e2b-48e0-68d9" sortIndex="6">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="265c-bf78-4d11-b561" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="48b1-d261-9008-9f63" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="5a7b-0fab-6a91-1e71" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7ec8-0b42-16dc-5787" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="265c-bf78-4d11-b561">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e64b-e6a1-58ba-0aee" shared="true" childName="Lore of Heavens" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="48b1-d261-9008-9f63">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="e64b-e6a1-58ba-0aee" shared="true" childName="Lore of Heavens" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="5a7b-0fab-6a91-1e71">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -1047,30 +1046,34 @@
             <infoLink name="Chain Lightning" id="523a-cb87-f103-96d8" hidden="false" targetId="cf74-1c98-bc63-8ea6" type="profile"/>
             <infoLink name="Thorsen&apos;s Thunderstorm" id="723f-6243-7ee3-efb0" hidden="false" targetId="bb40-5119-e4b8-f8c2" type="profile"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="5a7b-0fab-6a91-1e71"/>
+                <modifier type="set" value="0" field="7ec8-0b42-16dc-5787"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="e64b-e6a1-58ba-0aee" shared="true" childName="Lore of Heavens" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Light" hidden="false" id="1f65-56d7-87ee-3586" sortIndex="8">
+        <selectionEntry type="unit" import="true" name="Lore of Light" hidden="false" id="1f65-56d7-87ee-3586" sortIndex="8">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="9810-4864-f3b8-13a0" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="cd62-622e-bb9c-38ce" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="d98c-e5b4-1c38-c71a" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="959a-bcfa-3e58-73f5" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="9810-4864-f3b8-13a0">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c543-a893-3879-cf32" shared="true" childName="Lore of Light" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="cd62-622e-bb9c-38ce">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="c543-a893-3879-cf32" shared="true" childName="Lore of Light" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="d98c-e5b4-1c38-c71a">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -1089,30 +1092,34 @@
             <infoLink name="Time Amok" id="acac-f7c5-3e9c-e9fe" hidden="false" targetId="3a34-ed1d-4a98-2574" type="profile"/>
             <infoLink name="Pillar of Radiance" id="c199-f2b7-45ad-50d2" hidden="false" targetId="3170-f07e-bb17-2707" type="profile"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="d98c-e5b4-1c38-c71a"/>
+                <modifier type="set" value="0" field="959a-bcfa-3e58-73f5"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="c543-a893-3879-cf32" shared="true" childName="Lore of Light" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Life" hidden="false" id="5e06-89da-89c2-5e42" sortIndex="7">
+        <selectionEntry type="unit" import="true" name="Lore of Life" hidden="false" id="5e06-89da-89c2-5e42" sortIndex="7">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="a038-5ac7-d455-e5b6" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="5ae9-f4f7-22d5-b071" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="9642-c565-6056-f4c8" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="eb00-af83-203b-fdc1" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="a038-5ac7-d455-e5b6">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="968d-55ad-604c-f251" shared="true" childName="Lore of Life" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="5ae9-f4f7-22d5-b071">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="968d-55ad-604c-f251" shared="true" childName="Lore of Life" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="9642-c565-6056-f4c8">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -1131,30 +1138,34 @@
             <infoLink name="Regrowth" id="47bb-0aa7-e5e7-3de4" hidden="false" targetId="5606-7317-734a-4381" type="profile"/>
             <infoLink name="The Dwellers Below" id="2fd7-1042-8be8-0136" hidden="false" targetId="4ceb-4804-7497-c952" type="profile"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="9642-c565-6056-f4c8"/>
+                <modifier type="set" value="0" field="eb00-af83-203b-fdc1"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="968d-55ad-604c-f251" shared="true" childName="Lore of Life" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Shadow" hidden="false" id="69bf-9c48-e495-d3bf" sortIndex="11">
+        <selectionEntry type="unit" import="true" name="Lore of Shadow" hidden="false" id="69bf-9c48-e495-d3bf" sortIndex="11">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="361b-9df3-2db8-2854" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="48dd-f6a2-0178-24c8" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="ef06-016c-5e4b-56da" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="db52-46da-dd01-bfbe" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="361b-9df3-2db8-2854">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6c88-e0ab-2ca2-7e67" shared="true" childName="Lore of Shadow" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="48dd-f6a2-0178-24c8">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="6c88-e0ab-2ca2-7e67" shared="true" childName="Lore of Shadow" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="ef06-016c-5e4b-56da">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -1173,30 +1184,34 @@
             <infoLink name="The Penumbral Pendulum" id="39da-91ed-27cf-29c9" hidden="false" targetId="e002-fb6a-9442-ebcf" type="profile"/>
             <infoLink name="Pit of Shades" id="d4d9-685b-8dcb-7aa3" hidden="false" targetId="ecf9-c3f1-b183-c310" type="profile"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="ef06-016c-5e4b-56da"/>
+                <modifier type="set" value="0" field="db52-46da-dd01-bfbe"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="6c88-e0ab-2ca2-7e67" shared="true" childName="Lore of Shadow" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Death" hidden="false" id="6da6-eca4-f9b7-bdaf" sortIndex="4">
+        <selectionEntry type="unit" import="true" name="Lore of Death" hidden="false" id="6da6-eca4-f9b7-bdaf" sortIndex="4">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="f4f7-6688-10c3-fbd1" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="3181-3684-b0d8-e3b1" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="68f4-7031-0031-8134" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fafc-7bd7-289e-4193" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="f4f7-6688-10c3-fbd1">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bc0d-47f8-7220-1e16" shared="true" childName="Lore of Death" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="3181-3684-b0d8-e3b1">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="bc0d-47f8-7220-1e16" shared="true" childName="Lore of Death" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="68f4-7031-0031-8134">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -1215,30 +1230,34 @@
             <infoLink name="Soulblight" id="a702-a84a-8ad1-5ed9" hidden="false" targetId="a37e-0482-9785-ba81" type="profile"/>
             <infoLink name="The Purple Sun of Xereus" id="bb33-adb7-d8a2-b46a" hidden="false" targetId="754f-f31e-7ccf-8253" type="profile"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="68f4-7031-0031-8134"/>
+                <modifier type="set" value="0" field="fafc-7bd7-289e-4193"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="bc0d-47f8-7220-1e16" shared="true" childName="Lore of Death" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Chaos" hidden="false" id="671c-16d9-4fbb-8510" sortIndex="2">
+        <selectionEntry type="unit" import="true" name="Lore of Chaos" hidden="false" id="671c-16d9-4fbb-8510" sortIndex="2">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="aa28-20da-8c31-503c" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="f9ab-7a40-8e53-de14" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="bf1d-07fc-7345-2cd1" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1f88-03cc-c312-07f9" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="aa28-20da-8c31-503c">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="785b-99a7-f641-d552" shared="true" childName="Lore of Chaos" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="f9ab-7a40-8e53-de14">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="785b-99a7-f641-d552" shared="true" childName="Lore of Chaos" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="bf1d-07fc-7345-2cd1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -1246,8 +1265,8 @@
             <infoLink name="The Summoning" id="9c56-f841-4628-94c7" hidden="false" type="profile" targetId="e1d0-95b6-2dd9-4e7c"/>
             <infoLink name="Daemonic Familiars" id="f580-d188-61f8-7392" hidden="false" type="profile" targetId="f048-59fe-1b2c-3111"/>
             <infoLink name="Gift of Chaos" id="ea9e-2f15-2e78-9891" hidden="false" type="profile" targetId="7531-303f-2f63-e0c3"/>
-            <infoLink name="Winds of Chaos" id="8ad2-199b-0db6-704e" hidden="false" type="profile" targetId="0050-e5ca-1070-ce77"/>
             <infoLink name="Veil of Gloom" id="4078-dca9-2634-0c60" hidden="false" type="profile" targetId="2ae0-8c82-a580-953e"/>
+            <infoLink name="Winds of Chaos" id="8ad2-199b-0db6-704e" hidden="false" type="profile" targetId="0050-e5ca-1070-ce77"/>
             <infoLink name="Vision of Torment" id="a0ea-6189-bf6d-a22f" hidden="false" type="profile" targetId="cd74-0608-23e4-f68d"/>
             <infoLink name="Binding Damnation" id="d781-f2a0-125f-6aed" hidden="false" type="profile" targetId="d01c-93f6-a111-5388"/>
             <infoLink name="Mask of Darkness" id="ae47-5401-eac5-906a" hidden="false" type="profile" targetId="e819-9f1c-7221-3a1a"/>
@@ -1257,30 +1276,34 @@
             <infoLink name="Spite-Tongue Curse" id="590c-688b-671b-e973" hidden="false" type="profile" targetId="dad2-11da-d44f-06b6"/>
             <infoLink name="Vortex of Chaos" id="6875-7b63-0470-dd7a" hidden="false" type="profile" targetId="7345-83bf-cd72-cb4a"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="bf1d-07fc-7345-2cd1"/>
+                <modifier type="set" value="0" field="1f88-03cc-c312-07f9"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="785b-99a7-f641-d552" shared="true" childName="Lore of Chaos" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Tzeentch" hidden="false" id="6b51-cf19-a01c-9ad6" sortIndex="13">
+        <selectionEntry type="unit" import="true" name="Lore of Tzeentch" hidden="false" id="6b51-cf19-a01c-9ad6" sortIndex="13">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="983d-4d89-826d-e760" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="75e5-19ee-4a3f-6b81" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="80a9-b905-9b5f-1f43" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="668e-605d-ab8b-0f50" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="983d-4d89-826d-e760">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="446a-99ef-5aad-d30a" shared="true" childName="Lore of Tzeentch" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="75e5-19ee-4a3f-6b81">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="446a-99ef-5aad-d30a" shared="true" childName="Lore of Tzeentch" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="80a9-b905-9b5f-1f43">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -1299,30 +1322,34 @@
             <infoLink name="Treason of Tzeentch" id="a0e9-44d9-f89d-5fcc" hidden="false" type="profile" targetId="de5f-761e-51df-3d34"/>
             <infoLink name="Infernal Gateway" id="f9f0-5cc4-e1be-96ec" hidden="false" type="profile" targetId="e5e5-9f34-76f7-4c65"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="80a9-b905-9b5f-1f43"/>
+                <modifier type="set" value="0" field="668e-605d-ab8b-0f50"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="6b51-cf19-a01c-9ad6" shared="true" childName="Lore of Tzeentch" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Nurgle" hidden="false" id="29f4-8033-3b6a-2980" sortIndex="10">
+        <selectionEntry type="unit" import="true" name="Lore of Nurgle" hidden="false" id="29f4-8033-3b6a-2980" sortIndex="10">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="45c1-2709-6403-3b85" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="8d92-033f-44a0-ec6d" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="27bf-ca1e-3269-0827" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5c4f-587b-aaaa-6404" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="45c1-2709-6403-3b85">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a4ce-5b63-a11d-6b22" shared="true" childName="Lore of Nurgle" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="8d92-033f-44a0-ec6d">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a4ce-5b63-a11d-6b22" shared="true" childName="Lore of Nurgle" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="27bf-ca1e-3269-0827">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -1341,41 +1368,45 @@
             <infoLink name="Plague Wind" id="84a7-1f73-6c41-25d1" hidden="false" type="profile" targetId="e269-e479-1725-0ed9"/>
             <infoLink name="Rot, Glorious Rot" id="5203-0bb3-034a-87af" hidden="false" type="profile" targetId="a5c5-fb8d-5541-172e"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="27bf-ca1e-3269-0827"/>
+                <modifier type="set" value="0" field="5c4f-587b-aaaa-6404"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="a4ce-5b63-a11d-6b22" shared="true" childName="Lore of Nurgle" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Slaanesh" hidden="false" id="6ae3-79e0-0400-07b6" sortIndex="12">
+        <selectionEntry type="unit" import="true" name="Lore of Slaanesh" hidden="false" id="6ae3-79e0-0400-07b6" sortIndex="12">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="583e-bd98-c6cd-b34a" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="326e-b36f-90cb-f5e9" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="38f9-3bcc-e89d-54a5" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6a12-758b-74a8-f861" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="583e-bd98-c6cd-b34a">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="16cc-0573-bda7-993c" shared="true" childName="Lore of Slaanesh" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="326e-b36f-90cb-f5e9">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="16cc-0573-bda7-993c" shared="true" childName="Lore of Slaanesh" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="38f9-3bcc-e89d-54a5">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
             <infoLink name="Bliss in Torment" id="b754-ae0f-cdc9-d437" hidden="false" type="profile" targetId="d7a7-bdf8-fb11-8ed0"/>
             <infoLink name="Lash of Slaanesh" id="c4f0-fbe4-45b3-43e7" hidden="false" type="profile" targetId="48c5-8240-00a5-18d2"/>
             <infoLink name="Hysterical Frenzy" id="ea9e-92a4-4827-166e" hidden="false" type="profile" targetId="b175-19b0-9497-36df"/>
-            <infoLink name="Pavane of Slaanesh" id="5b83-959e-846c-bf35" hidden="false" type="profile" targetId="5338-8b26-f6be-4c74"/>
             <infoLink name="Succour of Chaos" id="e5bf-7056-be03-c079" hidden="false" type="profile" targetId="fbf7-97d5-c7cd-58b0"/>
+            <infoLink name="Acquiescence" id="ecd8-dc63-65e4-d811" hidden="false" type="profile" targetId="a42c-8d8d-62bf-e130"/>
+            <infoLink name="Pavane of Slaanesh" id="5b83-959e-846c-bf35" hidden="false" type="profile" targetId="5338-8b26-f6be-4c74"/>
             <infoLink name="Titillating Delusions" id="c3bd-3f55-11a1-53b7" hidden="false" type="profile" targetId="02da-c6d5-f2bd-e798"/>
             <infoLink name="Slothful Stupor" id="97e9-384d-b451-1351" hidden="false" type="profile" targetId="b167-24a9-b0f7-b191"/>
-            <infoLink name="Acquiescence" id="ecd8-dc63-65e4-d811" hidden="false" type="profile" targetId="a42c-8d8d-62bf-e130"/>
             <infoLink name="Delicious Excruciation" id="2bbd-9003-f7ff-3935" hidden="false" type="profile" targetId="314b-8c7d-9aaa-5b41"/>
             <infoLink name="Slicing Shards" id="eabd-090b-fa9f-1ee0" hidden="false" type="profile" targetId="be04-9edd-1a24-bfab"/>
             <infoLink name="Phantasmagoria" id="9b9d-99d2-e34d-2389" hidden="false" type="profile" targetId="4718-9ffa-ee9d-6c40"/>
@@ -1383,30 +1414,34 @@
             <infoLink name="Ecstatic Seizures" id="e5d1-6d4f-b3d7-2a82" hidden="false" type="profile" targetId="2d79-78cc-4e46-93ba"/>
             <infoLink name="Song of Seduction" id="eddd-05ef-74e7-e67c" hidden="false" type="profile" targetId="26e0-12f7-85bc-c19c"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="38f9-3bcc-e89d-54a5"/>
+                <modifier type="set" value="0" field="6a12-758b-74a8-f861"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="16cc-0573-bda7-993c" shared="true" childName="Lore of Slaanesh" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Dark Magic" hidden="false" id="8857-87c6-0648-d416" sortIndex="3">
+        <selectionEntry type="unit" import="true" name="Lore of Dark Magic" hidden="false" id="8857-87c6-0648-d416" sortIndex="3">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="d0db-bcb5-675b-b026" includeChildSelections="true" automatic="true"/>
-            <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="943a-8d5e-015e-b19c" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="4b78-5604-3083-0009" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1b06-b1a6-6d76-5dcf" includeChildSelections="true" automatic="true"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="1" field="d0db-bcb5-675b-b026">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2627-5189-8fe6-dfd3" shared="true" childName="Lore of Dark Magic" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="943a-8d5e-015e-b19c">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="2627-5189-8fe6-dfd3" shared="true" childName="Lore of Dark Magic" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="0" field="4b78-5604-3083-0009">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -1425,6 +1460,28 @@
             <infoLink name="Anchan-Rogar the Soul Stealer" id="de7e-a725-aaa5-8d1c" hidden="false" type="profile" targetId="2a6c-20a9-1718-e49f"/>
             <infoLink name="Arnzipal&apos;s Black Horror" id="9c9b-5bbc-cf05-6bb3" hidden="false" type="profile" targetId="fb00-bdd7-7146-e848"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="4b78-5604-3083-0009"/>
+                <modifier type="set" value="0" field="1b06-b1a6-6d76-5dcf"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2627-5189-8fe6-dfd3" shared="true" childName="Lore of Dark Magic" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Manual Selection" hidden="false" id="d52c-1a3d-404a-6772" sortIndex="-1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="43df-f883-b67b-da4c" includeChildSelections="true"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -3690,8 +3747,8 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+/11+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/48&quot;</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit is subject to Always Strikes Last and Random Movement (D6) until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
