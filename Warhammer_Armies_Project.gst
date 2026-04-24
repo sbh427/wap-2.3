@@ -159,8 +159,8 @@
         </modifier>
       </modifiers>
       <constraints>
-        <constraint type="min" value="25" field="limit::points" scope="force" shared="true" id="d3e7-0fe2-0481-fbbd" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
-        <constraint type="max" value="0" field="points" scope="root-entry" shared="false" id="ef5b-b2f7-ef34-d4a2"/>
+        <constraint type="min" value="25" field="limit::points" scope="force" shared="true" id="d3e7-0fe2-0481-fbbd" includeChildSelections="true" includeChildForces="true" percentValue="true" message="**This Army** requires {difference}pts more in {primary-category}. Min {total}pts required. (25% of Total pts)"/>
+        <constraint type="max" value="0" field="points" scope="root-entry" shared="false" id="ef5b-b2f7-ef34-d4a2" message="{this} cost {difference}pts too much. Max {total}pts allowed. (25% of Total pts)"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="d38a-73da-883b-bab9" name="Characters" hidden="false">
@@ -172,8 +172,8 @@
         </modifier>
       </modifiers>
       <constraints>
-        <constraint type="max" value="35" field="limit::points" scope="roster" shared="false" id="1ec9-e189-0563-2616" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
-        <constraint type="max" value="0" field="points" scope="root-entry" shared="false" id="3c06-5753-3f74-76a9"/>
+        <constraint type="max" value="35" field="limit::points" scope="roster" shared="false" id="1ec9-e189-0563-2616" percentValue="true" includeChildSelections="true" includeChildForces="false" message="**This Army** requires {difference}pts less in {primary-category}. Max {total}pts allowed. (35% of Total pts)"/>
+        <constraint type="max" value="0" field="points" scope="root-entry" shared="false" id="3c06-5753-3f74-76a9" message="{this} costs {difference}pts too much. Max {total}pts allowed. (25% of Total pts)"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="fc26-7737-f7cb-8977" name="Special" hidden="false">
@@ -185,21 +185,13 @@
         </modifier>
       </modifiers>
       <constraints>
-        <constraint type="max" value="50" field="limit::points" scope="force" shared="true" id="97cf-276b-1458-7679" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
-        <constraint type="max" value="0" field="points" scope="root-entry" shared="false" id="9eb4-bf99-a9e6-1982"/>
+        <constraint type="max" value="50" field="limit::points" scope="force" shared="true" id="97cf-276b-1458-7679" includeChildSelections="true" includeChildForces="true" percentValue="true" message="**This Army** requires {difference}pts less in {primary-category}. Max {total}pts allowed. (50% of Total pts)"/>
+        <constraint type="max" value="0" field="points" scope="root-entry" shared="false" id="9eb4-bf99-a9e6-1982" message="{this} cost {difference}pts too much. Max {total}pts allowed. (25% of Total pts)"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="0eb4-f376-7725-b05b" name="Rare" hidden="false">
-      <modifiers>
-        <modifier type="increment" value="1" field="450a-fe62-b6c7-aa9d">
-          <repeats>
-            <repeat value="4" repeats="1" field="limit::points" scope="roster" childId="any" shared="false" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-          </repeats>
-        </modifier>
-      </modifiers>
       <constraints>
-        <constraint type="max" value="25" field="limit::points" scope="force" shared="true" id="6b40-e45b-d1f9-37f5" includeChildSelections="true" includeChildForces="true" percentValue="true"/>
-        <constraint type="max" value="0" field="points" scope="root-entry" shared="false" id="450a-fe62-b6c7-aa9d"/>
+        <constraint type="max" value="25" field="limit::points" scope="force" shared="true" id="6b40-e45b-d1f9-37f5" includeChildSelections="true" includeChildForces="true" percentValue="true" message="**This Army** requires {difference}pts less in {primary-category}. Max {total}pts allowed. (50% of Total pts)"/>
       </constraints>
     </categoryEntry>
     <categoryEntry name="Mount" hidden="true" id="8b8a-34b1-ed30-df11"/>
@@ -1750,7 +1742,7 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0f10-36b8-bbc4-d6c9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="174a-9599-d701-9a75" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="e43c-0af0-b8a2-9769" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="e43c-0af0-b8a2-9769" percentValue="false" includeChildSelections="true" includeChildForces="false" message="**This Army** requires {difference} more non-Expendable {primary-category} Units."/>
       </constraints>
       <infoLinks>
         <infoLink name="Expendable" id="b75d-90e3-ae12-2b23" hidden="false" targetId="b806-942b-15af-b309" type="rule"/>
@@ -2510,7 +2502,7 @@ Fleeing/Pursuing: 3D6 (discard the lowest)</description>
     <rule id="b806-942b-15af-b309" name="Expendable" hidden="false" type="upgrade">
       <description>Models with this special rule do not cause Panic to friendly units that are not Expendable themselves. Characters may not join a unit with this rule, unless specified. Likewise, an Expendable character may not join a unit that is not Expendable. 
 
-For every Core unit with the Expendable special rule in your army, you are required to include at least one other Core Unit without the Expendable rule. For more information on this, see the Choosing Your Army chapter.</description>
+For every Core unit with the Expendable special rule in your army, you are required to include at least one other Core Unit without the Expendable rule.</description>
     </rule>
     <rule id="668c-19e8-b764-8549" name="Stomp" hidden="false">
       <description>A model with this special rule can make a Stomp in addition to its other close combat attacks (including Breath Weapons). A Stomp has the Always Strikes Last special rule and inflicts a number of automatic hits as indicated in the brackets. These are resolved at the model&apos;s Strength against a single enemy unit that consists of models with a Line of Sight value of 1 or less. If the model is a Monster, it may also Stomp models with a Line of Sight value of 3 or less. Unless specified, any special rules that apply to the model’s normal attacks do not apply to its Stomps.
