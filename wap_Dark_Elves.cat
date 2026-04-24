@@ -6076,6 +6076,7 @@ If a Monstrous Creature or Monster is Hit by this weapon but survives, it must i
             <selectionEntry type="upgrade" import="true" name="Dance of Doom" hidden="false" id="72e3-1e93-053a-664a" collective="false" sortIndex="12">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1610-7a4a-8cb8-e2fa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d43b-481a-ad9e-a38a" includeChildSelections="false"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Dance of Doom" id="09d3-5a63-9659-a095" hidden="false" targetId="8039-a314-6e46-454f" type="profile"/>
@@ -6083,18 +6084,17 @@ If a Monstrous Creature or Monster is Hit by this weapon but survives, it must i
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
-              <modifiers>
-                <modifier type="add" value="{this} is not allowed if mounted" field="error">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="72e3-1e93-053a-664a" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="Model on foot only" field="annotation"/>
+                    <modifier type="set" value="0" field="1610-7a4a-8cb8-e2fa"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Touch of Death" hidden="false" id="a9c1-b857-f9f2-d6e1" collective="false" sortIndex="8">
               <constraints>
@@ -6362,6 +6362,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1eb2-7e3e-4d4f-3996" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f159-c879-b4f4-1afb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="18ae-f161-68ca-cca3" includeChildSelections="false"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="45"/>
@@ -6377,16 +6378,6 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="add" value="{this} is not allowed if mounted" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ec42-03ed-acb7-1385" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
           </modifiers>
           <infoLinks>
             <infoLink name="Great Weapon" id="e9a8-ca8f-07cd-6629" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
@@ -6398,6 +6389,17 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
               </modifiers>
             </infoLink>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="Infantry only" field="annotation"/>
+                <modifier type="set" value="0" field="1eb2-7e3e-4d4f-3996"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Heartseeker" hidden="false" id="9a77-10f8-15e9-dbcb" collective="false" sortIndex="4">
           <constraints>
@@ -6622,22 +6624,11 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2a95-8f78-4376-f7e4" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4243-6df2-2ed5-d1df" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7af0-4d43-dc8c-e815" includeChildSelections="false"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
-          <modifiers>
-            <modifier type="add" value="{this} is not allowed if mounted" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="2317-907a-fe32-5844" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <infoLinks>
             <infoLink name="Great Weapon" id="3f8e-7ef9-6b76-ff68" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
               <modifiers>
@@ -6649,6 +6640,17 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
               </modifiers>
             </infoLink>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="Model on foot only" field="annotation"/>
+                <modifier type="set" value="0" field="2a95-8f78-4376-f7e4"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Blade of Spite" hidden="false" id="ba21-577d-9907-1446" collective="false" sortIndex="6">
           <constraints>
@@ -7161,7 +7163,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
                 <modifier type="set" value="Model on foot only" field="annotation"/>
               </modifiers>
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifierGroup>
           </modifierGroups>
@@ -7730,6 +7732,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5a8b-b333-34fc-bdea" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8bae-b267-c77d-f67e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8a09-3e34-9fe8-4eac" includeChildSelections="false"/>
           </constraints>
           <profiles>
             <profile name="Sevenfold Shadow" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="0be4-4319-0abf-3e00">
@@ -7741,18 +7744,17 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
-          <modifiers>
-            <modifier type="add" value="{this} is not allowed if mounted" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="72e3-1e93-053a-664a" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="8bae-b267-c77d-f67e"/>
+                <modifier type="set" value="Model on foot only" field="annotation"/>
+              </modifiers>
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
