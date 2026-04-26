@@ -1295,6 +1295,7 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="446a-99ef-5aad-d30a" shared="true" childName="Lore of Tzeentch" includeChildSelections="true" includeChildForces="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="42e7-cbd3-5a8c-ab18" shared="true" childName="Lore of High Magic" includeChildSelections="true" includeChildForces="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="06db-d555-db31-ae4a" shared="true" childName="Lore of High Magic, Life &amp; Light" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
@@ -1574,6 +1575,164 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="43df-f883-b67b-da4c" includeChildSelections="true"/>
           </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Lore of Athel Loren" hidden="false" id="c85f-c430-1e4c-fc64">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="cca2-8839-29b6-f4ca" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1228-2368-1cbd-7bcd" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="cca2-8839-29b6-f4ca">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Glamourweaving" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ab05-026e-2346-d031">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self (6&quot;)</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from the Lore of Athel Loren is successfully cast, all enemy units suffer a -3&quot; penalty to their spell and weapon ranges in their next turn when targeting all friendly units within 6&quot; of the Wizard. This is a cumulative effect.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Tree Singing" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0537-9093-2be4-8b20">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Tree Singing is a special type of spell which targets a single forest within 24&quot; of the caster. The target immediately moves up to D6+1&quot; in a direction of your choice. A forest cannot move to within 1&quot; of other terrain features.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Fury of the Forest" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c897-2c77-9fa1-4d61">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If the target is within 6&quot; of a forest it suffers 2D6 Strength 4 hits. If the target is partially or wholly within a forest it suffers 3D6 Strength 4 hits.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Durthu&apos;s Wrath" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fbdc-3595-c21b-14dd">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">Combat</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the front rank of any unit in base contact with the caster must pass an Initiative test or suffer a Strength 4 hit with the Ignores Armour Saves and Multiple Wounds (D3) special rules.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="The Twilight Host" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dca1-9979-5d31-2a53">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Fear special rule until the start of the caster&apos;s next Magic phase. In addition, the target will count as having twice the Unit Strength and number of ranks it really has for the purpose of determining Outnumber and Steadfast.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="The Hidden Path" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="78a4-b8be-3852-9e9e">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The unit gains the Ethereal special rule until the start of the caster&apos;s next Magic phase. If the unit becomes engaged in close combat, the spell instantly ends.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Spiteful Torrent" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="826e-9667-7fa8-9a01">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move suffers a Strength 2 hit with the Armour Piercing (1) special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Aspect of Athel Loren" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="41e2-0d03-5873-6081">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, all affected units gain the Magical Ward (6+) special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Madrigal of Greening" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5868-59a6-b989-0946">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell summons a forest of your choosing no more than 12&quot; in diameter.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Sapping Blight" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a3e2-1bdf-49bf-e8e3">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target has -1 Strength and -1 Toughness (to a minimum of 1).</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Cage of Thorns" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5ab7-fdeb-5948-1fcc">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target unit halves all their Movement (rounding up). In addition, the target suffer D6 Strength 3 Hits any time it moves.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="The Call of the Hunt" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9e64-4449-3e19-44ee">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target immediately moves forward towards the closest enemy unit within line of sight using the Random Movement (2D6) special rule. If no enemy unit is in line of sight, the unit will move directly forwards. In addition, the unit gains +1 Attack (except mounts) until the start of the caster’s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Verdurous Harmony" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6e50-be24-dc85-a4eb">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All targets instantly recover D3 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Ariel&apos;s Blessing" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="11ae-3287-1116-ab44">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Regeneration (4+) special rule until the start of the caster&apos;s next Magic phase</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="cca2-8839-29b6-f4ca"/>
+                <modifier type="set" value="0" field="1228-2368-1cbd-7bcd"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d420-fa0a-e841-9cdb" shared="true" childName="Lore of Athel Loren" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
         <selectionEntry type="unit" import="true" name="Lore of Tzeentch" hidden="false" id="cd65-6728-cffa-67f8" sortIndex="15">
           <constraints>
@@ -2081,6 +2240,14 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
       <modifiers>
         <modifier type="set" value="0" field="points" scope="root-entry"/>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry id="d420-fa0a-e841-9cdb" name="Lore of Athel Loren" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8cb8-9023-6f7e-be0c" type="max"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Lore of High Magic" hidden="false" id="42e7-cbd3-5a8c-ab18" collective="false">
       <constraints>
@@ -4554,7 +4721,7 @@ All models under the template must roll a D6 per Wound on their profile – fo
     </profile>
     <profile name="Magical Ward" typeId="54b0-94fc-eb1e-8e37" typeName="Invulnerable save" hidden="false" id="0ea4-277a-19d5-3635" noindex="true">
       <characteristics>
-        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Magical Ward</characteristic>
         <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
       </characteristics>
     </profile>
