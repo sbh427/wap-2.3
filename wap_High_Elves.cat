@@ -541,7 +541,18 @@
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="11e9-fd7e-e1eb-7a39" automatic="true"/>
               </constraints>
               <modifiers>
-                <modifier type="set" value="0" field="9559-88dd-7e44-87f4">
+                <modifier type="set" value="1" field="11e9-fd7e-e1eb-7a39">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f719-2063-240e-d151" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="0" field="9559-88dd-7e44-87f4"/>
+                    <modifier type="append" value="Not allowed with the selected Elven Honour" field="annotation"/>
+                  </modifiers>
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -556,13 +567,8 @@
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-                <modifier type="set" value="1" field="11e9-fd7e-e1eb-7a39">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f719-2063-240e-d151" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
             <entryLink import="true" name="Pegasus" hidden="false" id="bb59-4771-ff07-2006" type="selectionEntry" targetId="d20f-1d88-e354-53ec" sortIndex="2">
               <costs>
@@ -571,8 +577,12 @@
               <constraints>
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4797-81bd-710d-8d61" automatic="true"/>
               </constraints>
-              <modifiers>
-                <modifier type="set" value="0" field="78bc-7fab-0e4b-9efc">
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="0" field="78bc-7fab-0e4b-9efc"/>
+                    <modifier type="append" value="Not allowed with the selected Elven Honour" field="annotation"/>
+                  </modifiers>
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -589,8 +599,8 @@
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-              </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
             <entryLink import="true" name="Great Eagle" hidden="false" id="24af-71ec-88f8-3787" type="selectionEntry" targetId="30eb-6ec3-3c2e-24bb" sortIndex="3">
               <costs>
@@ -599,8 +609,8 @@
               <constraints>
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ff6a-decc-3057-2088" automatic="true"/>
               </constraints>
-              <modifiers>
-                <modifier type="set" value="0" field="039b-3cb1-288e-31d9">
+              <modifierGroups>
+                <modifierGroup type="and">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -617,8 +627,12 @@
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-              </modifiers>
+                  <modifiers>
+                    <modifier type="set" value="0" field="039b-3cb1-288e-31d9"/>
+                    <modifier type="append" value="Not allowed with the selected Elven Honour" field="annotation"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
             <entryLink import="true" name="Tiranoc Chariot" hidden="false" id="e5af-3ddf-0b6e-6a66" type="selectionEntry" targetId="6f07-71ce-ab5c-9ec9" sortIndex="5">
               <costs>
@@ -633,7 +647,13 @@
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="a8e7-ed55-7f6c-d55c" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" value="0" field="0681-f0d4-7639-74bc">
+              </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="append" value="Not allowed with the selected Elven Honour" field="annotation"/>
+                    <modifier type="set" value="0" field="0681-f0d4-7639-74bc"/>
+                  </modifiers>
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -649,8 +669,8 @@
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-              </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
             <entryLink import="true" name="Lion Chariot of Chrace" hidden="false" id="3cc8-32ac-94b2-1764" type="selectionEntry" targetId="ecb7-3add-14ec-d6f7" sortIndex="6">
               <costs>
@@ -678,8 +698,21 @@
               <constraints>
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="51aa-47ef-a307-7820" automatic="true"/>
               </constraints>
-              <modifiers>
-                <modifier type="set" value="0" field="3dea-274c-7355-f32e">
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="0" field="3dea-274c-7355-f32e"/>
+                    <modifier type="set" value="Prince only" field="annotation"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
+                  </conditions>
+                </modifierGroup>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="append" value="Not allowed with the selected Elven Honour" field="annotation"/>
+                    <modifier type="set" value="0" field="3dea-274c-7355-f32e"/>
+                  </modifiers>
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -696,17 +729,6 @@
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-              </modifiers>
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="0" field="51aa-47ef-a307-7820"/>
-                    <modifier type="set" value="Prince only" field="annotation"/>
-                  </modifiers>
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
-                  </conditions>
                 </modifierGroup>
               </modifierGroups>
             </entryLink>
@@ -717,8 +739,21 @@
               <constraints>
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="6000-39d1-5066-f733" automatic="true"/>
               </constraints>
-              <modifiers>
-                <modifier type="set" value="0" field="6110-24d2-89f5-145f">
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="0" field="6110-24d2-89f5-145f"/>
+                    <modifier type="set" value="Prince only" field="annotation"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
+                  </conditions>
+                </modifierGroup>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="append" value="Not allowed with the selected Elven Honour" field="annotation"/>
+                    <modifier type="set" value="0" field="6110-24d2-89f5-145f"/>
+                  </modifiers>
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -734,17 +769,6 @@
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
-                </modifier>
-              </modifiers>
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="0" field="6110-24d2-89f5-145f"/>
-                    <modifier type="set" value="Prince only" field="annotation"/>
-                  </modifiers>
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
-                  </conditions>
                 </modifierGroup>
               </modifierGroups>
             </entryLink>
@@ -1889,7 +1913,7 @@
                     <condition type="equalTo" value="0" field="selections" scope="unit" childId="1a51-a12b-2482-1dec" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
-                <modifier type="replace" value="" field="name" arg="(*)"/>
+                <modifier type="replace" field="name" arg="(*)"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -3460,7 +3484,7 @@
               </profiles>
               <rules>
                 <rule id="e972-32ba-a049-f850" name="Favour of Destiny" hidden="false">
-                  <description>Roll a D3 at the start of the game; this is the number of dice that Phytrion may re-roll of either To Hit, To Wound, armour saves or invulnerable saves during the course of the game. </description>
+                  <description>Roll a D3 at the start of the game; this is the number of dice that Phytrion may re-roll of either To Hit, To Wound, armour saves or invulnerable saves during the course of the game.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -4942,7 +4966,7 @@
                           <characteristics>
                             <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
                             <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
-                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Magic Armour. The Helm of Yvresse grants Eltharion the Magical Ward (5+) special rule. In addition, Eltharion may re-roll any failed Leadership test. </characteristic>
+                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Magic Armour. The Helm of Yvresse grants Eltharion the Magical Ward (5+) special rule. In addition, Eltharion may re-roll any failed Leadership test.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5249,7 +5273,7 @@
                       <profiles>
                         <profile name="Stone of Midnight" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="a049-a1d8-c077-6b86">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Stone of Midnight grants Alith Anar the Magical Ward (4+) special rule. In addition, enemies suffer -1 To Hit when shooting at Alith Anar or any unit he has joined. </characteristic>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Stone of Midnight grants Alith Anar the Magical Ward (4+) special rule. In addition, enemies suffer -1 To Hit when shooting at Alith Anar or any unit he has joined.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -8861,7 +8885,7 @@ Strength penalty.</characteristic>
       <description>A Wizard with this special rule gains +1 dispel bonus.</description>
     </rule>
     <rule id="ea79-55a0-67b0-08eb" name="Curse of Aenarion" hidden="false">
-      <description>As soon as a model with this special rule is reduced to 1 Wound they gain a 3+ invulnerable save for the rest of the battle. This has no effect on attacks that would outright kill them before they are reduced to 1 Wound, like a spell or attack with the Multiple Wounds special rule. If they were to suffer multiple Wounds in a single phase, roll one save at a time (if they have any) for each Wound suffered until the invulnerable save takes effect. </description>
+      <description>As soon as a model with this special rule is reduced to 1 Wound they gain a 3+ invulnerable save for the rest of the battle. This has no effect on attacks that would outright kill them before they are reduced to 1 Wound, like a spell or attack with the Multiple Wounds special rule. If they were to suffer multiple Wounds in a single phase, roll one save at a time (if they have any) for each Wound suffered until the invulnerable save takes effect.</description>
     </rule>
     <rule id="bb58-1b96-8bbd-4333" name="Attuned to Magic" hidden="false">
       <description>After rolling for the Winds of Magics each turn, divide the result by the number of 1000 points played, rounding up (so at 2000 or more points, divide the result by 2; at 3000 or more points, divide the result by 3; and so on). Then consult the Attuned to Magic table to see what effect it will have until the start of the next Magic phase.</description>
@@ -9040,7 +9064,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
     </profile>
     <profile id="a346-af97-40ee-3ee9" name="2 Magical Dearth" hidden="false" typeId="d410-463a-8132-795f" typeName="Attuned to Magic table" noindex="true">
       <characteristics>
-        <characteristic name="Result" typeId="2e65-d5dd-5c91-e3eb">The Phoenix&apos;s suffers a -1 penalty to its Magical Ward. </characteristic>
+        <characteristic name="Result" typeId="2e65-d5dd-5c91-e3eb">The Phoenix&apos;s suffers a -1 penalty to its Magical Ward.</characteristic>
       </characteristics>
     </profile>
     <profile id="ae17-8ceb-385d-4da9" name="3 Ebbing Zephyr" hidden="false" typeId="d410-463a-8132-795f" typeName="Attuned to Magic table" noindex="true">
@@ -9965,7 +9989,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
       <profiles>
         <profile name="Armour of Mathlann" typeId="4608-9b35-b7dc-202d" typeName="Prayer" hidden="false" id="795b-6e57-a76a-c7da">
           <characteristics>
-            <characteristic name="Effect" typeId="1f79-8144-edd6-8b51">The model and any unit they are with gain the Magical Ward (6+) special rule until the start of your next turn. </characteristic>
+            <characteristic name="Effect" typeId="1f79-8144-edd6-8b51">The model and any unit they are with gain the Magical Ward (6+) special rule until the start of your next turn.</characteristic>
           </characteristics>
         </profile>
         <profile name="Mistress of the Deep" typeId="4608-9b35-b7dc-202d" typeName="Prayer" hidden="false" id="1858-92c7-681f-e421">
