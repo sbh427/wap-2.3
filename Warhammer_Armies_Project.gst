@@ -1838,8 +1838,8 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
     <selectionEntry id="d322-3c7a-6d1e-7dc2" name="General" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="7ba8-ad6a-3340-d09e" type="max"/>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a8ed-b72e-312d-b6cc" type="max"/>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5967-bcf3-59e0-b382" type="min"/>
+        <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="a8ed-b72e-312d-b6cc" type="max" message="**This Army** has too many {this}**s**"/>
+        <constraint field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5967-bcf3-59e0-b382" type="min" message="**This Army** requires a {this}"/>
       </constraints>
       <infoLinks>
         <infoLink id="e66b-79a1-e39c-e75a" name="General" hidden="false" targetId="fcc3-a722-a9e4-9c94" type="rule"/>
