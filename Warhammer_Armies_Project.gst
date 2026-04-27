@@ -1576,7 +1576,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="43df-f883-b67b-da4c" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Lore of Athel Loren" hidden="false" id="c85f-c430-1e4c-fc64">
+        <selectionEntry type="unit" import="true" name="Lore of Athel Loren" hidden="false" id="c85f-c430-1e4c-fc64">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="cca2-8839-29b6-f4ca" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1228-2368-1cbd-7bcd" includeChildSelections="true" automatic="true"/>
@@ -2900,6 +2900,7 @@ If a unit wishes to declare a charge against an enemy that causes Terror, it mu
       <description>Models with this special rule inflict a -1 penalty to Magical Wards. Unless otherwise stated, a model with this special rule has both Magical shooting and close combat attacks (though any special attacks are unaffected). 
 
 All attacks made by spells and magic items are Magical Attacks. Shots fired from magical items are also considered to be Magical Attacks, unless their description specifically states otherwise. Hits inflicted by rolls on the Miscast table are treated as Magical Attacks. Note that spells are never considered to be physical attacks.</description>
+      <alias>Magical Attack</alias>
     </rule>
     <rule id="38ba-d48a-be97-f830" name="Vanguard" hidden="false">
       <description>After both sides have deployed all their other forces (including Scouts), but before the roll to see who gets the first turn is made, units containing only models with Vanguard can immediately make a move up to 6&quot; (12&quot; in case they move using Swiftstride) move regardless of their M value (they cannot march and are affected by terrain as normal). This cannot be used to move the Vanguard troops within 12&quot; of the enemy. A Vanguard move does not count as moving for the purpose of shooting in the first turn.
@@ -3510,6 +3511,9 @@ Models moving through Deadly Terrain must take always Dangerous Terrain tests, 
 When a model marches, charges, flees, overruns or pursues into or through an area of Deadly Terrain, it fails the test on a roll of 1-2 rather than 1. 
 
 Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangerous Terrain as being Deadly Terrain.</description>
+    </rule>
+    <rule name="Magical Ward" id="1bcb-4546-7f87-9b62" hidden="false">
+      <description>Models with this rule gain an invulnerable save as indicated in the brackets. This  invulnerable save receives a -1 penalty against wounds caused by Magical Attacks.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
