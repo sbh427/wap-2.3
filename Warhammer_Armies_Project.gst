@@ -241,7 +241,7 @@
         </infoLink>
         <infoLink name="Terror" id="02ea-57d5-4bb7-bc2d" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
         <infoLink name="Swiftstride" id="9700-feb5-c942-f86e" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
-        <infoLink name="Independent" id="49e0-9b63-fc15-1b21" hidden="false" type="rule" targetId="5c43-d3ff-6f23-d2a7"/>
+        <infoLink name="Independent" id="49e0-9b63-fc15-1b21" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
       </infoLinks>
     </categoryEntry>
     <categoryEntry name="Cavalry" id="bdee-b168-38ba-7d3c" hidden="false">
@@ -303,7 +303,7 @@
         <infoLink name="Expendable" id="288d-141a-981d-8b60" hidden="false" type="rule" targetId="b806-942b-15af-b309"/>
         <infoLink name="Unstable" id="5367-b34c-298c-4436" hidden="false" type="rule" targetId="b779-6d7f-8298-7c82"/>
         <infoLink name="Vanguard" id="d05a-e42d-a728-ff69" hidden="false" type="rule" targetId="38ba-d48a-be97-f830"/>
-        <infoLink name="Independent" id="a229-c5b0-8f4c-208b" hidden="false" type="rule" targetId="5c43-d3ff-6f23-d2a7"/>
+        <infoLink name="Independent" id="a229-c5b0-8f4c-208b" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
       </infoLinks>
     </categoryEntry>
     <categoryEntry name="War Beast" id="5c5d-6944-cd09-0db8" hidden="false">
@@ -356,7 +356,7 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink name="Independent" id="994a-202c-de5e-79de" hidden="false" type="rule" targetId="5c43-d3ff-6f23-d2a7">
+        <infoLink name="Independent" id="994a-202c-de5e-79de" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
@@ -405,7 +405,7 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink name="Independent" id="9454-a2e6-d8f9-f5fa" hidden="false" type="rule" targetId="5c43-d3ff-6f23-d2a7"/>
+        <infoLink name="Independent" id="9454-a2e6-d8f9-f5fa" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
         <infoLink name="Terror" id="ee03-51b1-ba11-20ef" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
         <infoLink name="Swiftstride" id="dd96-9c00-3b0d-34be" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
       </infoLinks>
@@ -429,7 +429,7 @@
       <infoLinks>
         <infoLink name="Fear" id="bd5f-9083-7a7d-64de" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
         <infoLink name="Swiftstride" id="7733-1855-7ecf-09a5" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
-        <infoLink name="Independent" id="5fae-9756-3802-ede8" hidden="false" type="rule" targetId="5c43-d3ff-6f23-d2a7"/>
+        <infoLink name="Independent" id="5fae-9756-3802-ede8" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1845,7 +1845,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
         <infoLink id="e66b-79a1-e39c-e75a" name="General" hidden="false" targetId="fcc3-a722-a9e4-9c94" type="rule"/>
         <infoLink name="Inspiring Presence (*)" id="7174-7cd7-232f-55e5" hidden="false" type="rule" targetId="1c71-6c8f-f47a-0a91">
           <modifiers>
-            <modifier type="append" value=" (12)" field="name"/>
+            <modifier type="replace" value=" 12" field="name" arg="*"/>
             <modifier type="set" value="General" field="annotation"/>
           </modifiers>
         </infoLink>
@@ -3314,8 +3314,11 @@ Other than the aforementioned inaccuracy of the scatter, an indirect shot from 
     <rule name="Troll Vomit" id="42ef-fb9e-e70b-55e0" hidden="false">
       <description>In addition to their normal Attacks, models with this special rule inflicts one automatic Strength 4 hit which Ignores Armour Saves after resolving all their normal Attacks. This cannot be used with supporting attacks.</description>
     </rule>
-    <rule name="Loner" id="32b6-55f6-6cc6-8fc4" hidden="false">
-      <description>A character with this special rule cannot be your Army General and cannot join a unit without this special rule. A unit with this special rule cannot be joined by a character without this special rule.</description>
+    <rule name="Independent" id="32b6-55f6-6cc6-8fc4" hidden="false">
+      <description>A character with this special rule cannot join a unit without this special rule. A unit with this special rule cannot be joined by a character without this special rule.
+
+
+In addition, they may never use the Inspiring Presence or Hold Your Ground special rules. Note that Characters, ridden models and Mixed Units that still have their Handlers ignore this special rule, unless specified.</description>
     </rule>
     <rule id="4cc1-bc54-7778-c333" name="Loremaster (*)" hidden="false">
       <description>A Wizard with the Loremaster special rule knows all the available spells from their chosen Lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of the Loremaster special rule. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -3438,11 +3441,6 @@ Magic Resistance from multiple sources combine to a maximum of Magic Resistance
     </rule>
     <rule name="Daemonic" id="6940-194d-860b-18d4" hidden="false">
       <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a Ward Save (5+) which gets reduced to a Ward Save (6+) against Magical Attacks.</description>
-    </rule>
-    <rule name="Independent" id="5c43-d3ff-6f23-d2a7" hidden="false">
-      <description>A character with this special rule cannot join a unit without this special rule. A unit with this special rule cannot be joined by a character without this special rule.
-
-In addition, they may never use the Inspiring Presence or Hold Your Ground special rules. Note that Characters, ridden models and Mixed Units that still have their Handlers ignore this special rule, unless specified.</description>
     </rule>
     <rule name="Cumbersome" id="7ef7-e8ef-ce58-8c93" hidden="false">
       <description>Weapons with the Cumbersome special rule cannot be used to Stand and Shoot.</description>
