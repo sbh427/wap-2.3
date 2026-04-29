@@ -4852,10 +4852,10 @@ All models under the template must roll a D6 per Wound on their profile – fo
     <profile name="Sneaky Distraction" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3469-9817-72e7-5a3a">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex aura</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all enemy units within 12&quot; of the caster. The targets suffer -1 ToHit with missile attacks and in close combat until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The targets suffer -1 ToHit with missile attacks and in close combat until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile name="The Great Green Spite" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2a88-9d4c-4352-0891">
