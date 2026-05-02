@@ -1875,8 +1875,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target cannot choose to charge, cast spells or shoot at the Wizard or any unit they are with until the start of
-the caster&apos;s next Magic phase.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target cannot choose to charge, cast spells or shoot at the Wizard or any unit they are with until the start of the caster&apos;s next Magic phase.</characteristic>
               </characteristics>
             </profile>
             <profile name="Nik Magic" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d58c-c129-7beb-497c">
@@ -3258,7 +3257,7 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
     </selectionEntryGroup>
     <selectionEntryGroup name="65. Lore of Magic" id="6704-e54c-3f8f-1d32" hidden="false">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="495e-ce6f-a51c-e06f-min" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="495e-ce6f-a51c-e06f-min" includeChildSelections="false" automatic="true"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="495e-ce6f-a51c-e06f-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntryGroup>
@@ -4268,7 +4267,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
     <profile id="2d26-2a21-00a2-685d" name="Bolt Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">48&quot;</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">32/48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">6</characteristic>
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Armour Piercing (1). Slow to Fire.</characteristic>
       </characteristics>
@@ -4890,7 +4889,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
     <profile id="9765-f312-5a8b-5cb8" name="Repeater Bolt Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">48&quot;</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">32/48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Shots (6). Armour Piercing (1). Slow to Fire. Rapid Fire.</characteristic>
       </characteristics>
