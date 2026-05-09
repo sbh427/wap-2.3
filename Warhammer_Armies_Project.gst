@@ -752,6 +752,7 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">5</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D6), Swiftstride, Terror, Independent.</characteristic>
               </characteristics>
+              <alias>Monster</alias>
             </profile>
             <profile name="Chariots" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="e48b-2fab-06d5-90da">
               <characteristics>
@@ -856,7 +857,7 @@
         <categoryLink name="Configuration, Spells &amp; Rules" hidden="false" id="1ae8-d5df-c11e-24af" targetId="24a8-26fb-f384-3c30" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="unit" import="true" name="Lore of Beasts" hidden="false" id="97c3-2cd0-19f3-c6e9" sortIndex="2">
+        <selectionEntry type="unit" import="true" name="Lore of Beasts" hidden="false" id="97c3-2cd0-19f3-c6e9" sortIndex="3">
           <infoLinks>
             <infoLink name="Wildheart" id="c253-1606-c0e1-1f3c" hidden="false" targetId="7c9a-10fe-33ee-5112" type="profile"/>
             <infoLink name="Wyssan&apos;s Wildform" id="76c6-d12c-a2d5-453c" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
@@ -902,7 +903,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Fire" hidden="false" id="a8e2-320c-cd97-9dd4" sortIndex="6">
+        <selectionEntry type="unit" import="true" name="Lore of Fire" hidden="false" id="a8e2-320c-cd97-9dd4" sortIndex="12">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="cfda-26f9-3890-f6c5" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="97b9-1b5a-d378-12db" includeChildSelections="true" automatic="true"/>
@@ -949,7 +950,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Metal" hidden="false" id="57f2-4764-2e60-8608" sortIndex="11">
+        <selectionEntry type="unit" import="true" name="Lore of Metal" hidden="false" id="57f2-4764-2e60-8608" sortIndex="17">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="8c2b-6571-64ff-e4b9" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cc0b-b513-f12d-5ed1" includeChildSelections="true" automatic="true"/>
@@ -995,7 +996,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Heavens" hidden="false" id="b811-9e2b-48e0-68d9" sortIndex="7">
+        <selectionEntry type="unit" import="true" name="Lore of Heavens" hidden="false" id="b811-9e2b-48e0-68d9" sortIndex="13">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="5a7b-0fab-6a91-1e71" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7ec8-0b42-16dc-5787" includeChildSelections="true" automatic="true"/>
@@ -1041,7 +1042,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Light" hidden="false" id="1f65-56d7-87ee-3586" sortIndex="10">
+        <selectionEntry type="unit" import="true" name="Lore of Light" hidden="false" id="1f65-56d7-87ee-3586" sortIndex="16">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="d98c-e5b4-1c38-c71a" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="959a-bcfa-3e58-73f5" includeChildSelections="true" automatic="true"/>
@@ -1087,7 +1088,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Life" hidden="false" id="5e06-89da-89c2-5e42" sortIndex="9">
+        <selectionEntry type="unit" import="true" name="Lore of Life" hidden="false" id="5e06-89da-89c2-5e42" sortIndex="15">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="9642-c565-6056-f4c8" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="eb00-af83-203b-fdc1" includeChildSelections="true" automatic="true"/>
@@ -1134,7 +1135,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Shadow" hidden="false" id="69bf-9c48-e495-d3bf" sortIndex="13">
+        <selectionEntry type="unit" import="true" name="Lore of Shadow" hidden="false" id="69bf-9c48-e495-d3bf" sortIndex="19">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="ef06-016c-5e4b-56da" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="db52-46da-dd01-bfbe" includeChildSelections="true" automatic="true"/>
@@ -1180,7 +1181,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Death" hidden="false" id="6da6-eca4-f9b7-bdaf" sortIndex="5">
+        <selectionEntry type="unit" import="true" name="Lore of Death" hidden="false" id="6da6-eca4-f9b7-bdaf" sortIndex="11">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="68f4-7031-0031-8134" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fafc-7bd7-289e-4193" includeChildSelections="true" automatic="true"/>
@@ -1226,7 +1227,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Chaos" hidden="false" id="671c-16d9-4fbb-8510" sortIndex="3">
+        <selectionEntry type="unit" import="true" name="Lore of Chaos" hidden="false" id="671c-16d9-4fbb-8510" sortIndex="4">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="bf1d-07fc-7345-2cd1" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1f88-03cc-c312-07f9" includeChildSelections="true" automatic="true"/>
@@ -1272,7 +1273,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of High Magic" hidden="false" id="6b51-cf19-a01c-9ad6" sortIndex="8">
+        <selectionEntry type="unit" import="true" name="Lore of High Magic" hidden="false" id="6b51-cf19-a01c-9ad6" sortIndex="14">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="80a9-b905-9b5f-1f43" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="668e-605d-ab8b-0f50" includeChildSelections="true" automatic="true"/>
@@ -1433,7 +1434,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Nurgle" hidden="false" id="29f4-8033-3b6a-2980" sortIndex="12">
+        <selectionEntry type="unit" import="true" name="Lore of Nurgle" hidden="false" id="29f4-8033-3b6a-2980" sortIndex="18">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="27bf-ca1e-3269-0827" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5c4f-587b-aaaa-6404" includeChildSelections="true" automatic="true"/>
@@ -1479,7 +1480,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Slaanesh" hidden="false" id="6ae3-79e0-0400-07b6" sortIndex="14">
+        <selectionEntry type="unit" import="true" name="Lore of Slaanesh" hidden="false" id="6ae3-79e0-0400-07b6" sortIndex="20">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="38f9-3bcc-e89d-54a5" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6a12-758b-74a8-f861" includeChildSelections="true" automatic="true"/>
@@ -1525,7 +1526,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Dark Magic" hidden="false" id="8857-87c6-0648-d416" sortIndex="4">
+        <selectionEntry type="unit" import="true" name="Lore of Dark Magic" hidden="false" id="8857-87c6-0648-d416" sortIndex="10">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="4b78-5604-3083-0009" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1b06-b1a6-6d76-5dcf" includeChildSelections="true" automatic="true"/>
@@ -1576,7 +1577,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="43df-f883-b67b-da4c" includeChildSelections="true"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Athel Loren" hidden="false" id="c85f-c430-1e4c-fc64">
+        <selectionEntry type="unit" import="true" name="Lore of Athel Loren" hidden="false" id="c85f-c430-1e4c-fc64" sortIndex="2">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="cca2-8839-29b6-f4ca" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1228-2368-1cbd-7bcd" includeChildSelections="true" automatic="true"/>
@@ -1734,7 +1735,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Tzeentch" hidden="false" id="cd65-6728-cffa-67f8" sortIndex="15">
+        <selectionEntry type="unit" import="true" name="Lore of Tzeentch" hidden="false" id="cd65-6728-cffa-67f8" sortIndex="22">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="877a-88d2-61a4-03be" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1330-a2c5-2dfe-8665" includeChildSelections="true" automatic="true"/>
@@ -1828,6 +1829,698 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Lore of da Bad Moon" hidden="false" id="859a-a34c-5318-71ae" sortIndex="5">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="1cd2-478b-4706-627b" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b29a-cc18-375d-138f" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="1cd2-478b-4706-627b">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Sneaky Stealin&apos;" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="cd11-af81-31d7-6299">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Spell of this lore is successfully cast, and after its effects have been resolved, roll a D6. On a 6 you may take one dispel dice from the opponent&apos;s dispel pool and add it to your power pool. If there are no dice left in the opponent&apos;s dispel pool, then this lore attribute has no effect.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Spore Maws" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="13d9-14d5-4a6b-3315">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Each enemy unit in base contact with the target unit immediately suffers 3D6 Strength 3 hits at the end of each Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Squig Lure" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a274-d403-b481-40b1">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets Squigs. The target immediately makes a Random Move (2D6) straight forward.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Mesmerise" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0eca-4525-3fb3-de18">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target cannot choose to charge, cast spells or shoot at the Wizard or any unit they are with until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Nik Magic" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d58c-c129-7beb-497c">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single Wizard, even if in a unit. Choose one spell the target knows and roll a D6; on 1-4 they cannot use that spell in their next Magic Phase, on a 5-6 they cannot attempt to cast this spell for the remainder of the game.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Face of da Bad Moon" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="499e-69ef-2764-9296">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">self</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Cast on the Wizard itself. While the spell is in effect, the Wizard gains the Terror special rule and all enemy units with Line of Sight to it suffer -1 Leadership.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Bad Moon Rizin&apos;" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9959-ff78-9718-2b03">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit is subject to the Always Strikes Last special rule until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Call da Moon" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b3e6-2107-1887-251c">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">36&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Small round template.
+It scatters and inflicts damage like a Stone Thrower. If a misfire is rolled, centre the template over the caster instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Night Shroud" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ab75-a6af-d2fe-2336">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All missile attacks targeted against friendly units within range suffer a -1 penalty To Hit until the start of the caster&apos;s next Magic phase. In addition, all models in any enemy unit that charges into base contact with the Wizard or the unit they are with while the spell is in effect must take a Dangerous Terrain test.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Curse of da Bad Moon" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2d1e-6bff-d457-56ea">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Uses the small round template. Any model touched by the template at any point during its move must pass a Characteristic test or suffer a Wound which Ignores Armour Saves. The type of Characteristic test is determined by rolling on the Curse of da Bad Moon chart. Roll once each Magic phase, just before moving the template, and apply the result to all models affected by the curse in that Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="1cd2-478b-4706-627b"/>
+                <modifier type="set" value="0" field="b29a-cc18-375d-138f"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="1447-f3da-8c84-6b13" shared="true" childName="Lore of da Bad Moon" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Lore of da Big Waaagh!" hidden="false" id="e4e7-bf45-74e5-8087" sortIndex="6">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="685b-cb35-607f-f50c" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e092-a78a-15f0-b992" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="685b-cb35-607f-f50c">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="685b-cb35-607f-f50c"/>
+                <modifier type="set" value="0" field="e092-a78a-15f0-b992"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="eaef-eb9d-bf97-8d39" shared="true" childName="Lore of da Big Waaagh!" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+          <profiles>
+            <profile name="Power of da Waaagh!" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="775f-d84c-937e-e88e">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">A Wizard using this lore gains +1 to cast spells for each friendly Orc unit within 24&quot; that is in close combat and has a Unit Strength of 10 of more. Conversely, a Wizard using this lore suffers -1 to cast spells for each friendly Orc unit within 24&quot; that is fleeing and has a Unit Strength of 10 or more.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Wrath of Gork" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2b37-9f3d-d364-4c74">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D3+1 Strength 4 hits for every friendly unit of 10 or more Orc models within 6&quot; of the caster.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Bash &apos;Em Ladz" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="45fd-9130-b51c-72e1">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit may re-roll To Hit rolls in close combat until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Fists of Gork" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9b46-084d-7c60-5cfa">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">self</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the Wizard gains +2 Strength and +3 Attacks.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="&apos;Ard As Nails" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4bea-1861-80e4-fa60">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All successful To Wound rolls against the target must be re-rolled until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Big Green Choppa" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d2d6-11ef-856a-e6e0">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains +1 Strength until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="&apos;Ere we go!" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e410-13ab-9f90-fd55">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The targets add +D6&quot; to their charge distance until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Green Puke" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ccf0-aac3-b8bd-8d61">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The caster makes a Breath Weapon attack. This may be cast in close combat, following the normal rules for Breath Weapons. All models hit suffer a Strength 3 hit with the Armour Piercing (2) special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Gaze of Mork" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="97f4-329c-7b78-b434">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Line Template.
+Place it directly away from the caster&apos;s front arc. Any model whose base falls under the line suffers a Strength 5 hit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="&apos;Eadbutt" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="516d-3849-e58b-a7c9">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Choose a single enemy model, even a character in a unit (&quot;Look Out, Sir!&quot; cannot be used). The target suffers a Strength 4 hit with the Ignores Armour Saves and Multiple Wounds (D3) special rules.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Raise Great Idol" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9326-14be-ea7d-60fd">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell summons an Idol of Gork (or possibly Mork). Units that start the turn within 6&quot; of the Idol can re-roll failed charge distance rolls. In addition, friendly units of Orcs within 6&quot; may reroll failed To Hit rolls.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="WAAAGH!" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="396e-d31a-1b2c-d496">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all Orc units within 12&quot;. The target units will immediately make a move using the Random Movement (2D6) special rule towards the nearest enemy unit within each unit&apos;s Line of Sight. If no enemy units are within Line of Sight, they will move directly forward instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Wallopin&apos; krunch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="eda2-08b7-bb27-580b">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">14+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Small round template.
+All models hit by the template suffer a Strength 6 hit with the Multiple Wounds (D3) special rule. In addition, all units within 3&quot; of the template suffer D6 Strength 3 hits.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Foot of Gork" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="372d-8cd8-8710-abb7">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Small round template.
+All models hit by the template suffer a Strength 5 hit with the Multiple Wounds (D3) special rule. After resolving the effects of the spell, roll a D6 and consult the Foot of Gork table.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoGroups>
+            <infoGroup name="Foot of Gork Table" id="ffc3-e962-cb69-d893" hidden="false">
+              <profiles>
+                <profile name="1" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="7be6-bd34-5722-61bd">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Your opponent places the template anywhere on the table and resolves the effect of the spell again. The spell then ends.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="2-3" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="b01e-5010-d4ad-3d11">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The spell ends without further effect.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="4-6" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="9afd-fbc6-3895-0e6c">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Place the template and resolve the effect of the spell again. After resolving the effects of this stomp, roll again on this table.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </infoGroup>
+          </infoGroups>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Lore of da Savage Waaagh!" hidden="false" id="783d-821d-25e5-678a" sortIndex="8">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="46f3-4c67-c838-157a" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2391-0e26-1ae0-8eff" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="46f3-4c67-c838-157a">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="46f3-4c67-c838-157a"/>
+                <modifier type="set" value="0" field="2391-0e26-1ae0-8eff"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="0b51-23dc-1f3e-e71b" shared="true" childName="Lore of da Savage Waaagh!" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+          <profiles>
+            <profile name="Power of da Waaagh!" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fa2a-9043-da62-9b72">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">A Wizard using this lore gains +1 to cast spells for each friendly Orc unit within 24&quot; that is in close combat and has a Unit Strength of 10 of more. Conversely, a Wizard using this lore suffers -1 to cast spells for each friendly Orc unit within 24&quot; that is fleeing and has a Unit Strength of 10 or more.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Brutal Beast Spirits" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="41e3-ce8d-668f-eef0">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets Orcs. The unit gains +1 To Hit in close combat and may re-roll their pursuit distance until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Kunnin&apos; Beast Spirits" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f01e-d8e7-9a31-0a72">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets Orcs. Your opponent must re-roll all To Hit rolls of 6 that target the unit with missile attacks and in close combat until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Glowy Green Tusks" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="8904-d7dd-d1a0-f25e">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Ttargets Orcs and their mounts. The target gains the Frenzy and Magical Attacks special rules until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Breath of Mork" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="18ca-015d-4aa9-fbec">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target immediately makes a normal Fly (10) move (not march) as if it was the Remaining Moves phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Fallin&apos; Fists" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e4ed-20aa-7aa0-2c15">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers 3D6 Attacks with Weapon Skill 3 and Strength 4, resolved as close combat attacks.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Bone Krusha" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1282-6192-4fdb-574d">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The closer the target is to the caster, the more powerful the attack will be: if the target is within 12&quot; of the caster, it suffers 2D6 Strength 5 Hits; if the target is between 12&quot; and 18&quot; away, it instead suffers D6 Strength 5 Hits; if the target is more than 18&quot; away, it only suffers D3 Strength 5 Hits.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Squiggly Curse" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0e92-ad86-78e2-930d">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Roll a D6; on a 1 it has no effect, on a 2 to 3 that model suffers one Wound, on a 4 to 5 it suffers D3 Wounds and on a 6 it suffers D6 Wounds. These Wounds have Ignores Armour Saves. Each time a model is slain by Squiggly Curse, you can add +D3 to any further casting attempts made by the caster this Magic Phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Gork&apos;s War Cry" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7432-c7ca-3682-cbb3">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers D6 Strength 5 which Ignores Armour Saves. In addition, the target halves all their Movement and is subject to the Always Strikes Last special rule until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="The Evil Sun" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6573-de5e-415d-cf65">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by
+the template at any point during its move suffers a Strength 5 hit. In addition, friendly units of Savage Orcs within 6&quot; of the Evil Sun template may re-roll To Hit rolls of 1.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Lore of da Little Waaagh!" hidden="false" id="7d80-d72e-7026-4291" sortIndex="7">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="9d9b-0c6c-7466-f624" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7d58-5839-cab0-2cea" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="9d9b-0c6c-7466-f624">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="9d9b-0c6c-7466-f624"/>
+                <modifier type="set" value="0" field="7d58-5839-cab0-2cea"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="165f-dae3-800c-5d28" shared="true" childName="Lore of da Little Waaagh!" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+          <infoLinks>
+            <infoLink name="Sneaky Stealin&apos;" id="fbca-7cb6-6d84-5024" hidden="false" targetId="c448-a828-b69c-be59" type="profile"/>
+            <infoLink name="Vindictive Glare" id="d9b1-c9f8-00bf-14b3" hidden="false" targetId="f2fe-7a32-6f5a-cd9f" type="profile"/>
+            <infoLink name="Oi! Geroff!" id="12f5-401b-fe48-1501" hidden="false" targetId="ffaf-9052-2b3a-6fb2" type="profile"/>
+            <infoLink name="Sneaky Stabbin&apos;" id="5819-d05b-d26b-ece4" hidden="false" targetId="552e-e369-af03-6e30" type="profile"/>
+            <infoLink name="Brain Bursta" id="7af2-e4ec-c123-539a" hidden="false" targetId="3860-7301-7e83-915c" type="profile"/>
+            <infoLink name="Gaze of Gork" id="813b-7dcf-ceb3-1aec" hidden="false" targetId="40dc-f03a-a858-cfd0" type="profile"/>
+            <infoLink name="Gork&apos;ll Fix It" id="fdda-7561-763b-c2e9" hidden="false" targetId="2658-ded0-df1d-a593" type="profile"/>
+            <infoLink name="The Hand of Gork" id="175d-4936-432d-5b25" hidden="false" targetId="9859-fa75-d2ca-98a0" type="profile"/>
+            <infoLink name="Itchy Nuisance" id="d980-71f0-75a6-d229" hidden="false" targetId="b2ee-7e31-8219-fbf8" type="profile"/>
+            <infoLink name="Sneaky Distraction" id="759f-2915-d7f8-27e9" hidden="false" targetId="3469-9817-72e7-5a3a" type="profile"/>
+            <infoLink name="Nikkit! Nikkit!" id="a1fa-9161-b3e7-d816" hidden="false" targetId="b19a-411f-5214-3ea4" type="profile"/>
+            <infoLink name="Mork Save Uz!" id="d480-df05-40b2-a902" hidden="false" targetId="f260-3d30-b1ed-195a" type="profile"/>
+            <infoLink name="The Great Green Spite" id="c20e-46a6-3494-aace" hidden="false" targetId="2a88-9d4c-4352-0891" type="profile"/>
+            <infoLink name="Mork Wants Ya!" id="ded8-fe37-02fb-d37e" hidden="false" targetId="6026-6522-6ee6-8a59" type="profile"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Lore of da Spider God" hidden="false" id="ee0a-7548-7988-b240" sortIndex="9">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="c188-8cf7-0f95-41b2" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8d57-25ea-f6e6-fc37" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="c188-8cf7-0f95-41b2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="c188-8cf7-0f95-41b2"/>
+                <modifier type="set" value="0" field="8d57-25ea-f6e6-fc37"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="a03a-1619-cb53-4547" shared="true" childName="Lore of da Spider God" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+          <profiles>
+            <profile name="Sneaky Stealin&apos;" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b8a5-6591-40d6-72d0">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Spell of this lore is successfully cast, and after its effects have been resolved, roll a D6. On a 6 you may take one dispel dice from the opponent&apos;s dispel pool and add it to your power pool. If there are no dice left in the opponent&apos;s dispel pool, then this lore attribute has no effect.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Venomous Spiderlings" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4a87-e829-e1bb-9b0e">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers 2D6 Strength 1 Hits with the Poisoned Attacks special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Chitinous Armour" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="642e-37f1-4267-d332">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Natural Armour (6+) special rule until the start of the caster&apos;s next magic phase. If the target is a Forest Goblin, they gain Natural Armour (5+) instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Speed of da Spider God" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="134e-6393-7d7f-7948">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets Goblins. The target gains the Always Strikes First and Wall-crawler special rules until the start of the caster&apos;s next Magic phase. If the target already has the Wall-crawler special rule, they gain +1 Movement instead.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Deadly Webbing" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="141c-27b8-8877-50d5">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target treats all terrain as Dangerous Terrain for all Movement and cannot march until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Scuttling Terrors" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1771-3868-0636-6c83">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets Goblins. The target unit may immediately make a Move as if it were the Remaining Moves phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Web of Fear" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7ca6-2ec2-8273-aa84">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the targets treats all Ararchnids as causing Fear, and must re-roll successful Terror tests from Arachnarok Spiders.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Gift of the Spider God" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b7b4-2391-d939-39d4">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets Goblins and their mounts. The target gains the Poisoned Attacks and Regeneration (6+) special rules until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Curse of da Spider God" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="bb3c-89ab-138c-1a05">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit must re-roll successful To Hit rolls (in shooting and close combat) and armour saves until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Scuttletide" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="8091-61e0-9056-a1e9">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. Uses the large round template. Any model touched by the template at any point during its move suffers a Strength 2 Hit with the Poisoned Attacks special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Lore of Troll Magic" hidden="false" id="ff0e-b338-06dd-06d2" sortIndex="21">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="0247-423a-2b6f-fa71" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bf3b-c55b-4d69-318a" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="0247-423a-2b6f-fa71">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="0247-423a-2b6f-fa71"/>
+                <modifier type="set" value="0" field="bf3b-c55b-4d69-318a"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="8b46-aebb-97be-ab84" shared="true" childName="Lore of Troll Magic" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+          <profiles>
+            <profile name="Big Smartz" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="8e88-70e5-7e65-bf5d">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">While the spell is in effect, all friendly units of Trolls within range may re-roll failed Stupidity tests.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Troll brainz" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5a37-e589-b37c-91bd">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target unit gains the Stupidity special rule and suffers -1 to its Leadership.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Foetid Whirlpool" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6f27-519c-64c2-f4a8">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Uses the small round template. Any model touched by the template at any point during its move must take a Dangerous Terrain test.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Ravenous Recourse" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1476-3dac-4b6f-f0d4">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All friendly units of Trolls within range gain +2 to their Movement until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Rapid Regeneration" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ffab-5b3c-7467-1b4a">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains the Regeneration (5+) special rule until the start of the caster&apos;s next Magic phase. Models that already have Regeneration (4+) or better may instead re-roll failed Regeneration saves.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Torent of Filth" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0f6d-8f38-e306-b906">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The caster makes a Breath Weapon attack. This may be cast in close combat, following the normal rules for Breath Weapons. All models Hit suffer a Strength 4 hit with the Ignores Armour Saves special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Acidic Bile" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d3c1-5e0d-28d5-8396">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Small round Template.
+All models under the template suffer a Strength 4 hit with the Ignores Armour Saves special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="b37e-7f30-8e10-1400" includeChildSelections="true" automatic="false"/>
@@ -1845,7 +2538,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
         <infoLink id="e66b-79a1-e39c-e75a" name="General" hidden="false" targetId="fcc3-a722-a9e4-9c94" type="rule"/>
         <infoLink name="Inspiring Presence (*)" id="7174-7cd7-232f-55e5" hidden="false" type="rule" targetId="1c71-6c8f-f47a-0a91">
           <modifiers>
-            <modifier type="replace" value=" 12" field="name" arg="*"/>
+            <modifier type="replace" value="12" field="name" arg="*"/>
             <modifier type="set" value="General" field="annotation"/>
           </modifiers>
         </infoLink>
@@ -2267,6 +2960,54 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="783f-fc4e-cf02-5718" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of da Bad Moon" hidden="false" id="1447-f3da-8c84-6b13" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4e37-38dd-a181-f8be" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of da Big Waaagh!" hidden="false" id="eaef-eb9d-bf97-8d39" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="559d-f111-608a-0745" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of da Savage Waaagh!" hidden="false" id="0b51-23dc-1f3e-e71b" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a746-b0b9-cc90-8db2" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of da Little Waaagh!" hidden="false" id="165f-dae3-800c-5d28" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="eba6-db44-9e71-84a7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of da Spider God" hidden="false" id="a03a-1619-cb53-4547" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fe6f-bb2b-9968-e5b2" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of Troll Magic" hidden="false" id="8b46-aebb-97be-ab84" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="826f-2cfe-4a00-4731" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="50. Handheld Armour" id="9015-46da-282c-713d" hidden="false">
@@ -2516,7 +3257,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
     </selectionEntryGroup>
     <selectionEntryGroup name="65. Lore of Magic" id="6704-e54c-3f8f-1d32" hidden="false">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="495e-ce6f-a51c-e06f-min" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="495e-ce6f-a51c-e06f-min" includeChildSelections="false" automatic="true"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="495e-ce6f-a51c-e06f-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntryGroup>
@@ -3526,7 +4267,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
     <profile id="2d26-2a21-00a2-685d" name="Bolt Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">48&quot;</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">32/48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">6</characteristic>
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Armour Piercing (1). Slow to Fire.</characteristic>
       </characteristics>
@@ -4148,7 +4889,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
     <profile id="9765-f312-5a8b-5cb8" name="Repeater Bolt Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">48&quot;</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">32/48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Shots (6). Armour Piercing (1). Slow to Fire. Rapid Fire.</characteristic>
       </characteristics>
@@ -4807,10 +5548,11 @@ All models under the template must roll a D6 per Wound on their profile – fo
     <profile name="Gaze of Gork" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="40dc-f03a-a858-cfd0">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage area</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 24&quot; in length, within the caster&apos;s forward arc and directly away from his base. Any model whose base falls under the line suffers a Strength 3 hit with the Ignores Armour Saves special rule.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Line template.
+Extend a straight line directly away from the caster&apos;s forward arc. Any model whose base falls under the line suffers a Strength 3 hit with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
     <profile name="Brain Bursta" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3860-7301-7e83-915c">
@@ -4852,10 +5594,10 @@ All models under the template must roll a D6 per Wound on their profile – fo
     <profile name="Sneaky Distraction" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3469-9817-72e7-5a3a">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex aura</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all enemy units within 12&quot; of the caster. The targets suffer -1 ToHit with missile attacks and in close combat until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The targets suffer -1 ToHit with missile attacks and in close combat until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile name="The Great Green Spite" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2a88-9d4c-4352-0891">
