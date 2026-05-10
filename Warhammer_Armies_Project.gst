@@ -4881,9 +4881,9 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
     <profile id="a0a6-193b-9eb5-ffe9" name="Organ Gun" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Organ Gun</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">24&quot;</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12&quot;/24&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1), Multiple Shots (Artillery Dice + D6), Rapid Fire, Slow to Fire</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Shots (Artillery Dice + 3D6), Rapid Fire.</characteristic>
       </characteristics>
     </profile>
     <profile id="9765-f312-5a8b-5cb8" name="Repeater Bolt Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
