@@ -143,6 +143,11 @@
         <characteristicType name="Result" id="6b93-2bec-91c5-e695"/>
       </characteristicTypes>
     </profileType>
+    <profileType name="Stupidity" id="3ee1-110f-0169-f651" hidden="false" kind="ability">
+      <characteristicTypes>
+        <characteristicType name="Result" id="0abf-6d22-2e56-4550"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="b876-2856-f1c2-c4f0" name="Core" hidden="false">
@@ -687,7 +692,7 @@
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1 from rider</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Swiftstride</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80"/>
               </characteristics>
             </profile>
             <profile name="Monstrous Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="334b-8b7c-45c4-bdef">
@@ -697,7 +702,7 @@
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1 from rider</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">3</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear</characteristic>
               </characteristics>
             </profile>
             <profile name="Swarms" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="16d3-292a-ce8e-e20f">
@@ -717,7 +722,7 @@
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Swiftstride, Vanguard, Independent.</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Vanguard, Independent.</characteristic>
               </characteristics>
               <alias>War Beast</alias>
             </profile>
@@ -728,7 +733,7 @@
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">3</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride, Independent.</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Independent.</characteristic>
               </characteristics>
               <alias>Monstrous Beast</alias>
             </profile>
@@ -739,7 +744,7 @@
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">4 (+1 for each rider)</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3 (or 4 if ridden)</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Swiftstride, Terror, Independent.</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Terror, Independent.</characteristic>
               </characteristics>
               <alias>Monstrous Creature</alias>
             </profile>
@@ -750,7 +755,7 @@
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Double Starting Wounds (+1 for each Rider)</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">5</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D6), Swiftstride, Terror, Independent.</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D6), Terror, Independent.</characteristic>
               </characteristics>
               <alias>Monster</alias>
             </profile>
@@ -761,7 +766,7 @@
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">0, +D3 Impact hits to the chariots in the first rank.</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds (+1 for each additional Crew &amp; Mount)</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (D6), Swiftstride</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (D6)</characteristic>
               </characteristics>
               <alias>Chariot</alias>
             </profile>
@@ -782,7 +787,7 @@
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Move or Fire</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Cumbersome, Move or Fire</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3501,7 +3506,7 @@ Skirmishers may turn without losing any movement, redress the ranks for a quart
 A unit of Skirmishers armed with missile weapons that chooses Flee as a Charge Reaction can choose to fire their weapons first. If it chooses to do so, the unit will first fire upon the target following the rules for Stand &amp; Shoot (this also counts as moving and shooting for the purposes of shooting modifiers). After this, the unit makes a flee move, rolling one D6 less than normal.
 
 &lt;b&gt;Feigned Flight &lt;/b&gt;
-A unit of Skirmishers that chooses Flee as a Charge Reaction does not cause Panic from fleeing through friendly units and may re-roll failed Rally tests in its next Compulsory Movement Phase (unless it is forced to Flee again from another source). In addition, it is then also free to move during the remaining moves part of the Movement phase. The unit is also free to shoot as normal (but always counts as having moved). Note that if the flee move of the Skirmishers do not take them beyond the charge reach of their enemies, the unit suffers casualties as normal. 
+A unit of Skirmishers that chooses Flee or Fire &amp; Flee as a charge reaction does not cause Panic from fleeing through friendly units and may re-roll failed Rally tests in its next Compulsory Movement Phase (unless it is forced to Flee again from another source). In addition, it is then also free to move during the remaining moves part of the Movement phase. The unit is also free to shoot as normal (but always counts as having moved).
 
 &lt;b&gt;Characters &lt;/b&gt;
 A Character model that joins a unit of Skirmishers gains the Skirmishers special rule as long as they stay with the unit. Characters may only join Skirmishers with the same troop type (explained in the troop types chapter) as them.
@@ -3558,14 +3563,6 @@ Models with this rule have the Magical Attacks, Magical Ward (3+) and Unstable 
 
 Characters that are not themselves Ethereal are not permitted to join units that are (even if they become temporarily Ethereal for some reason).</description>
     </rule>
-    <rule id="755c-61c2-fa25-f4ce" name="Stupidity" hidden="false">
-      <description>Provided that they are not engaged in close combat, a unit that contains one or more models with the Stupidity special rule must take a Leadership test at the start of its Movement phase. If the test is passed, the unit will act normally this turn.
-
-If the test is failed, it moves directly forwards using the Random Movement (D6) special rule in the Compulsory Movement sub-phase. The Stupid unit cannot take any further action that turn, so cannot 
-declare charges or make a shooting attack. However, a unit that has failed a Stupidity test can still be forced to move, or perform any other action, by a spell, or other special rule/magic item. 
-
-Until they pass the Stupidity test again, models that have failed their Stupidity test have the Immunity (Psychology) and Random Movement (D6) special rule, except that they can only move directly forwards. They cannot choose to do a Combat Reform or choose any other Charge Reaction except Hold. In addition, Wizards cannot attempt to cast/dispel or channel power dice or dispel dice, nor may Bound Spells be used.</description>
-    </rule>
     <rule id="f366-0f91-841f-cf80" name="Ambushers" hidden="false">
       <description>Before starting deployment, a unit with the Ambushers special rule can choose to not deploy at the start of the battle. Instead, at the start of the Remaining Moves sub-phase of Turn 2 the controlling player rolls a D6 for each of their units of Ambushers. On a 3+, the unit arrives. If the unit does not arrive on Turn 2, roll another D6 at the start of the Remaining Moves sub-phase of Turn 3. On a 2+, the unit arrives. If the unit does not arrive on Turn 3, it will automatically arrive at the start of the Remaining Moves sub-phase of turn 4. 
 
@@ -3605,19 +3602,7 @@ If a model has the Fear special rule from two or more different sources (such a
 If the majority of the models in a unit cause Fear, they also gain the Immunity (Fear) special rule, and thus the Combat Resolution bonus of their Fear-causing enemies is ignored for that unit.</description>
     </rule>
     <rule id="fdd9-fa75-5594-d363" name="Swiftstride" hidden="false">
-      <description>When charging, units entirely made of models with the Swiftstride special rule and Movement 7 or higher roll 3D6, discard the lowest result, and add the result to their Movement value. When fleeing or pursuing, they roll 3D6, and discard the lowest result. 
-
-When charging, units entirely made of models with the Swiftstride special rule and Movement 6 or lower roll 2D6, and add the result to their Movement value. When fleeing or pursuing, they roll 2D6. 
-
-&lt;b&gt;Swiftstride M6 or lower&lt;/b&gt;
-Charging: M + 2D6
-Failed Charge: 2D6
-Fleeing/Pursuing: 2D6
-
-&lt;b&gt;Swiftstride M7 or more&lt;/b&gt;
-Charging: M + 3D6 (discard the lowest)
-Failed Charge: 3D6 (discard the lowest)
-Fleeing/Pursuing: 3D6 (discard the lowest)</description>
+      <description>When charging, fleeing and pursuing, units entirely made of models with the Swiftstride special rule may re-roll the lowest dice.</description>
     </rule>
     <rule id="b806-942b-15af-b309" name="Expendable" hidden="false" type="upgrade">
       <description>Models with this special rule do not cause Panic to friendly units that are not Expendable themselves. Characters may not join a unit with this rule, unless specified. Likewise, an Expendable character may not join a unit that is not Expendable. 
@@ -3644,13 +3629,13 @@ All attacks made by spells and magic items are Magical Attacks. Shots fired fro
       <alias>Magical Attack</alias>
     </rule>
     <rule id="38ba-d48a-be97-f830" name="Vanguard" hidden="false">
-      <description>After both sides have deployed all their other forces (including Scouts), but before the roll to see who gets the first turn is made, units containing only models with Vanguard can immediately make a move up to 6&quot; (12&quot; in case they move using Swiftstride) move regardless of their M value (they cannot march and are affected by terrain as normal). This cannot be used to move the Vanguard troops within 12&quot; of the enemy. A Vanguard move does not count as moving for the purpose of shooting in the first turn.
+      <description>When starting deployment, all units that choose to Vanguard must be deployed first. The players take it in turns to place their vanguards until they are finished. After this, all other units may be deployed as normal.
 
-If both players&apos; armies contain Vanguard troops, players should roll off. The players then alternate moving their Vanguard units one at a time, starting with the player who won the roll-off.
 
-Units that have made a Vanguard move cannot declare a charge in the first turn if their army goes first. This also includes charging in the Magic phase.
+Models with this special rule may deploy up to a distance equal to their Movement characteristic (or 2D6&quot; in case they have Random Movement) beyond their deployment zone. However, this cannot be used to deploy a unit within 12&quot; of the enemy. Units that deploy this way cannot declare a charge in the first turn if their army goes first.
 
-If a character is deployed as part of a unit with Vanguard, that unit can still make its Vanguard move if the character in question has Vanguard or is a model on foot. Otherwise the character’s presence prevents the unit from using Vanguard.</description>
+
+Note that a character may only join a unit deploying with the Vanguard special rule if they also have the same rule.</description>
     </rule>
     <rule id="8877-a5de-cc9c-9142" name="Fast Cavalry" hidden="false">
       <description>Fast Cavalry have the following rules: 
@@ -3662,10 +3647,13 @@ Fast Cavalry automatically have the Vanguard deployment special rule. 
 Fast Cavalry may turn without losing any movement, redress the ranks for a quarter of their movement and reform for half their movement. In addition, they may perform two manoeuvres during their move (even while marching), and still shoot after reforming. 
 
 &lt;b&gt;Fire &amp; Flee&lt;/b&gt;
-A unit of Fast Cavalry armed with missile weapons that chooses Flee as a Charge Reaction can choose to fire their weapons first. If it chooses to do so, the unit will first fire upon the target following the rules for Stand &amp; Shoot (this also counts as moving and shooting for the purposes of shooting modifiers). After this, the unit makes a flee move, rolling one D6 less than normal.
+A unit of Fast Cavalry armed with missile weapons that chooses Flee as a Charge Reaction can choose to fire their weapons first (unless they are within the enemy&apos;s minimum charge range or Ponderous). If it chooses to do so, the unit will first fire upon the target. After this, 
+the unit makes a flee move.
+Any shots fired in this manner suffer a -1 To Hit penalty. This may cause a Panic test following the rules for Heavy Casualties as normal.
+
 
 &lt;b&gt;Feigned Flight&lt;/b&gt;
-A unit of Fast Cavalry that chooses Flee or Fire &amp; Flee as a charge reaction does not cause Panic from fleeing through friendly units and may re-roll failed Rally tests in its next Compulsory Movement Phase (unless it is forced to Flee again from another source). In addition, it is then also free to move during the remaining moves part of the Movement phase. The unit is also free to shoot as normal (but always counts as having moved). Note that if the flee move of the Fast Cavalry does not take them beyond the charge reach of their enemies, the unit suffers casualties as normal.
+A unit of Fast Cavalry that chooses Flee or Fire &amp; Flee as a charge reaction does not cause Panic from fleeing through friendly units and may re-roll failed Rally tests in its next Compulsory Movement Phase (unless it is forced to Flee again from another source). In addition, it is then also free to move during the remaining moves part of the Movement phase. The unit is also free to shoot as normal (but always counts as having moved). 
 
 &lt;b&gt;Characters&lt;/b&gt;
 A Character that joins a unit of Fast Cavalry gains the Fast Cavalry special rule as long as they stay with the unit. Characters may only join Fast Cavalry with the same troop type (explained in the troop types chapter) as them. 
@@ -3733,7 +3721,7 @@ Hidden models may be revealed at the beginning of any of your Movement phases, 
 A model with this special rule cannot be your Army General. Furthermore, other units can never use their Leadership value.</description>
     </rule>
     <rule id="fa30-0410-43da-e1d7" name="Ice Attacks" hidden="false">
-      <description>Models with the Ice Attacks special rule cause all enemy models in base contact with them to be subject to the Always Strikes Last special rule. Spells or missile attacks that are Ice Attacks cause the enemy to be subject to the Always Strikes Last special rule until the start of your next turn if they are successfully cast or Hit. Models with Ice Attacks have Immunity (Ice Attacks)
+      <description>Models with the Ice Attacks special rule cause all enemy models in base contact with them to be subject to the Always Strikes Last special rule. Spells or missile attacks that are Ice Attacks cause the enemy unit to be subject to the Always Strikes Last special rule until the start of your next turn if they are successfully cast or Hit. Models with Ice Attacks have Immunity (Ice Attacks)
 
 Unless otherwise stated, a model with this special rule has Ice Attacks for both shooting and close combat, (though any spells cast by the model or special attacks are unaffected).</description>
     </rule>
@@ -3743,7 +3731,7 @@ Unless otherwise stated, a model with this special rule has Ice Attacks for bot
 Unless otherwise stated, a model with this special rule has both Lightning shooting and close combat attacks (though any spells cast by the model or special attacks are unaffected).</description>
     </rule>
     <rule id="37a5-2f70-159f-adfd" name="Move or Fire" hidden="false">
-      <description>A model or weapon with the Move or Fire special rule cannot fire a weapon or be fired (respectively) in the Shooting phase if the model moved earlier in the turn, including rallying, reforming and pivoting on the spot (except for Lone Models, who can pivot and fire in the same turn). This even applies if the model in question was forced to move as the result of a spell or other such compulsory action.</description>
+      <description>A model or weapon with the Move or Fire special rule cannot fire a weapon or be fired (respectively) in the Shooting phase if the model moved earlier in the turn, including rallying, reforming and pivoting on the spot. This even applies if the model in question was forced to move as the result of a spell or other such compulsory action.</description>
     </rule>
     <rule id="0a0c-35fd-e8ef-5f4e" name="Multiple Shots" hidden="false">
       <description>A weapon with this special rule enables its wielder to fire several shots at a time, rather than a single shot. The number of shots the weapon can fire is normally given as part of its description in the brackets. Such weapons can either fire once without penalty, or as many times as indicated in their rules with a -1 To Hit penalty (in addition to any other modifiers To Hit). 
@@ -3758,10 +3746,10 @@ Unless otherwise stated, a model with this special rule has both Poisoned shoot
 If a model has the Poisoned Attacks special rule from two or more different sources (such as a combination of different special rules, spells or magic items), it may also re-roll failed To Wound rolls.</description>
     </rule>
     <rule id="2c6d-374e-56ca-ce87" name="Quick Shot" hidden="false">
-      <description>Models or weapons with this special rule ignore penalties for Moving &amp; Shooting (unless they also March). In addition, they can always Stand &amp; Shoot, 
+      <description>Models or weapons with this special rule ignore penalties for Moving &amp; Shooting (unless they also March). In addition, they can always Stand &amp; Shoot or Fire &amp; Flee (see Formation Special rules),  
 even if that enemy would normally be too close for such a charge reaction to be declared.
 
-Furthermore, Quick Shot may be used once per turn when declaring a charge, immediately after rolling for your charge distance. If the charging unit has enough Movement to enter the maximum range of its missile weapons, resolve the shooting attacks for each weapon as if the charging unit had just entered that weapon’s range. If the enemy unit chose to Stand &amp; Shoot or Fire &amp; Flee, both units will fire at the same time. Any shots fired in this manner suffer a -1 To Hit penalty, but ignore penalties to long range.</description>
+Furthermore, Quick Shot may be used once per turn when declaring a charge, immediately after rolling for your charge distance. If the charging unit has enough Movement to enter the maximum range of its missile weapons, resolve the shooting attacks for each weapon as if the charging unit had just entered that weapon’s range. If the enemy unit chose to Stand &amp; Shoot or Fire &amp; Flee, both units will fire at the same time. Any shots fired in this manner suffer a -1 To Hit penalty, but ignore penalties to long range.  This may cause a Panic test following the rules for Heavy Casualties as normal.</description>
     </rule>
     <rule id="554e-99aa-3930-447f" name="Requires Two Hands" hidden="false">
       <description>If a weapon has this rule, it is not possible for a model to use a shield or buckler alongside it in close combat (although a shield can still be used against wounds caused by shooting or magic). In addition, missile weapons with this special rule cannot use Quick Shot when charging.</description>
@@ -3816,7 +3804,7 @@ rules, this also applies to the Handlers. 
 As long as the unit (but not the handlers) have a Unit Strength of 5 or more, any missile hits are resolved against the unit itself. At less than Unit Strength 5, there is a chance that any handlers in the unit could be hit – the controlling player decides who is hit, but must allocate one hit on each model before they can add a second hit on a model; they must allocate two hits on each model before they can allocate a third, and so on. Hits from templates are resolved against the handlers as normal. In close combat, the handlers can only be attacked by models who are in base contact with them.</description>
     </rule>
     <rule id="738b-aca4-740c-e425" name="Animated Construct" hidden="false">
-      <description>Animated Constructs have the Unbreakable special rules. However, they may not march.</description>
+      <description>Animated Constructs have the Unbreakable special rule. However, they may not march.</description>
     </rule>
     <rule id="c270-3956-9b64-b587" name="Strider (*)" hidden="false">
       <description>Models with the Strider special rule are rare – normally, they will have a subset of Strider, such as Hill, Forest, Marshland or River Strider and the rule only applies in terrain of the specified type. Models with the Strider rule treat that piece of terrain as Open Ground, meaning they ignore any combat and movement penalties or Dangerous Terrain tests otherwise caused by it.</description>
@@ -3872,11 +3860,13 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
       <description>Slayers always Wound on a To Wound roll of 4+ in close combat, unless they would need a lower result. Use the Slayer&apos;s Strength to determine the armour save modifier for any successful Wounds.</description>
     </rule>
     <rule id="7a27-4cc5-bde-2d7f" name="Fly (*)" hidden="false">
-      <description>Flying models follow the rules for Swiftstride. In addition, flying units containing two or more models follow the following rules for Skirmishers: Loose Formation, Skirmishers &amp; Combat, Free Turn. 
+      <description>Units made up entirely of models that can Fly can choose to either use their normal Movement, or instead choose to Fly (including when using Vanguard). The distance the model can fly is listed in the brackets. Any modifiers to the model&apos;s Movement also affects its Fly move.
 
-Units made up entirely of models that can Fly can move or charge normally on the ground, using their Movement value, or instead choose to Fly. The distance the model can fly is listed in the brackets. Any modifiers to the model&apos;s Movement also affects its Fly move. 
 
-A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in Impassable Terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. Flying units may march as normal.</description>
+A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in Impassable Terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. Flying units may march as normal.
+
+
+In addition, flying units containing two or more models follow the following rules for Skirmishers: Loose Formation, Skirmishers &amp; Combat, Free Turn.</description>
       <alias>Fly</alias>
     </rule>
     <rule name="Complete Ranks" id="0a17-1f20-86b0-bded" hidden="false">
@@ -3951,11 +3941,7 @@ Resolving Hits
 If the target is a unit of five or more ranked-up models, the bolt will always strike a regular trooper (as opposed to a character in the unit) in the unit&apos;s first rank if the bolt thrower is in the unit&apos;s front arc, or the last rank if the bolt thrower is in the unit&apos;s rear arc. If the bolt thrower is in the target unit&apos;s flank, the target&apos;s files count as ranks for the purposes of resolving the shot.
 
 
-If the shot hits, resolve damage against the target using the bolt thrower&apos;s full Strength of 6. The bolt then hits one of the warriors in the rank behind with -1 Strength (normally Strength 5). A model in the next rank is hit at -2 Strength (normally Strength 4) and so on, until the unit runs out of ranks.
-
-
-If the rank hit by the bolt is made entirely of characters, or if the total number of rank and file models in the unit is less than five, it will be necessary to randomise which model in the rank is hit.
-
+If the shot hits, resolve damage against the target using the bolt thrower&apos;s full Strength of 6. The bolt then hits one of the warriors in the rank behind with -1 Strength (normally Strength 5). A model in the next rank is hit at -2 Strength (normally Strength 4) and so on, until the unit runs out of ranks or the hit is reduced to Strength 0. 
 
 Note that repeating bolts do not pierce ranks.</description>
       <alias>Bolt Thrower</alias>
@@ -3971,7 +3957,7 @@ Assuming that a misfire did not occur, roll to hit the target with a number of 
       <description>To fire a cannon, first pivot to face the target following the normal rules for war machines. Then, nominate a model or building within the cannon&apos;s line of sight, outside of its minimum range and within its maximum range.
 
 
-When you have chosen your target, place a small marker over your target as a reminder of where the shot is intended to land.
+When you have chosen your target, place a small marker over the center of your target as a reminder of where the shot is intended to land.
 
 
 Once the marker has been placed, roll for scatter using a scatter dice and an artillery dice. Assuming that you didn&apos;t roll a misfire on the artillery dice, it&apos;s now time to find out whether or not your shot was on target.
@@ -4026,10 +4012,10 @@ Damage
 Regardless of whether or not your shot landed exactly where you intended, it&apos;s time to see who&apos;s been flattened by it.
 
 
-The model (if there is one) under the template&apos;s central hole take an automatic hit at the higher of the stone thrower&apos;s two Strengths (if they have one listed). If the template has scattered, there&apos;s a good chance the centre hole will lie over two or more models. Nonetheless, only one can be hit by the higher Strength, so select one randomly.
+The model (if there is one) under the template&apos;s central hole take an automatic hit at the higher of the weapon&apos;s two Strengths (if they have one listed). If the template has scattered, there&apos;s a good chance the centre hole will lie over two or more models. Nonetheless, only one can be hit by the higher Strength, so select one randomly.
 
 
-Other models wholly or partially beneath the template are hit automatically at the stone thrower&apos;s lower Strength (normally 4).
+Other models wholly or partially beneath the template are hit automatically at the weapon&apos;s lower Strength (normally 4).
 
 
 The stone thrower&apos;s Multiple Wounds (D3) special rule applies only to the high-Strength hit caused against the model under the template&apos;s central hole – unsaved wounds from the low Strength hit are not multiplied.
@@ -4062,7 +4048,7 @@ Other than the aforementioned inaccuracy of the scatter, an indirect shot from 
 In addition, they may never use the Inspiring Presence or Hold Your Ground special rules. Note that Characters, ridden models and Mixed Units that still have their Handlers ignore this special rule, unless specified.</description>
     </rule>
     <rule id="4cc1-bc54-7778-c333" name="Loremaster (*)" hidden="false">
-      <description>A Wizard with the Loremaster special rule knows all the available spells from their chosen Lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of the Loremaster special rule. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
+      <description>A Wizard with the Loremaster special rule knows all the available spells from their chosen Lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of the Loremaster special rule. If a model knows spells from multiple Lores, then Loremaster only applies to one of the Lores normally available to them (player&apos;s choice).</description>
       <alias>Loremaster</alias>
     </rule>
     <rule name="Inspiring Presence (*)" id="1c71-6c8f-f47a-0a91" hidden="false">
@@ -4089,7 +4075,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     </rule>
     <rule id="a4e2-d94c-e906-a868" name="Multiple Wounds (*)" hidden="false">
       <description>Each wound inflicted by an attack with the Multiple Wounds special rule (after saves) is multiplied into more than one wound (remember that a model cannot suffer more wounds than it has on its profile). The exact number of wounds caused will vary from model to model and weapon to weapon, but will normally be shown in brackets as part of the special rule. For example, Multiple Wounds (2) would mean that each unsaved wound would multiply to 2 wounds, whilst Multiple Wounds (D6) would mean that each unsaved wound would multiply to D6 wounds. If a model is 
-granted two sets of Multiple Wounds (like D3 and D6), use only the highest set before rolling.
+granted two sets of Multiple Wounds (like D3 and D6), use only the highest possible set before rolling.
 
 Where the number of Multiple Wounds is generated by a dice roll, roll a dice separately for each unsaved wound and use the total of all the dice rolled for the final number of wounds inflicted. 
 
@@ -4169,13 +4155,13 @@ Sometimes a model has both an armour save and an invulnerable save. Where this 
 Some models may be allowed to re-roll an invulnerable save from a specific source. In that case, the re-roll will only apply to that specific invulnerable save, and not the model&apos;s total invulnerable save.</description>
     </rule>
     <rule id="fabd-07ef-35b4-adf9" name="Magic Resistance" hidden="false">
-      <description>Enemy spells that target a model or unit with Magic Resistance suffer a casting penalty equal to the number shown in brackets after the Magic Resistance special rule. So, Magic Resistance (1) would give a -1 casting penalty, Magic Resistance (2) would give a -2 casting penalty, and Magic Resistance (3) would give a -3 casting penalty, and so on. 
+      <description>Enemy spells that target a unit containing one or more models with Magic Resistance suffer a casting penalty equal to the number as indicated in the brackets. So, Magic Resistance (1) would give a -1 casting penalty, Magic Resistance (2) would give a -2 casting penalty, and Magic Resistance (3) would give a -3 casting penalty, and so on.  
 
 This casting penalty also applies to aura and area spells, if the model would be within the aura&apos;s range or under the area&apos;s effect when initially cast. 
 
 In addition, models with Magic resistance gain an invulnerable save against all spells based on the number in the brackets. So, Magic Resistance (1) would give a 6+ invulnerable save, Magic Resistance (2) would give a 5+ invulnerable save, and Magic Resistance (3) would give a 4+ invulnerable save, and so on. Note that Magic resistance does not offer protection against Miscasts. 
 
-Magic Resistance from multiple sources combine to a maximum of Magic Resistance (3), unless specified.</description>
+Note that this special rule is not cumulative. If two or more models in a unit have this special rule, use the highest modifier.</description>
     </rule>
     <rule name="Elven Grace" id="b726-c451-19d2-7658" hidden="false">
       <description>Models with this rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
@@ -4184,7 +4170,7 @@ Magic Resistance from multiple sources combine to a maximum of Magic Resistance
       <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a Ward Save (5+) which gets reduced to a Ward Save (6+) against Magical Attacks.</description>
     </rule>
     <rule name="Cumbersome" id="7ef7-e8ef-ce58-8c93" hidden="false">
-      <description>Weapons with the Cumbersome special rule cannot be used to Stand and Shoot.</description>
+      <description>Models or Weapons with the Cumbersome special rule cannot be used to Stand and Shoot.</description>
     </rule>
     <rule name="Disciplined" id="ef48-342b-0591-24a6" hidden="false">
       <description>Whenever a unit where the majority of the models have this special rule takes a Leadership test that is not a Psychology or Break test, it rolls an additional dice and discards the highest result.</description>
@@ -4201,7 +4187,7 @@ If a model has the Hatred special rule from two or more different sources (such
     <rule id="2214-09a9-225d-a274" name="Impact Hits (*)" hidden="false">
       <description>The number of Impact Hits caused is shown in brackets after the special rule. If a model is granted two sets of Impact Hits, normally because its troop type and special rules both bestow Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits (such as D6), always roll separately for each model.
 
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
+Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, distribute the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
 
 Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. 
 
@@ -4221,10 +4207,9 @@ Unless specified, any special rules or bonuses that apply to the model’s norm
 Models with Random Movement cannot declare charges, can only choose Hold as a charge reaction, and must always move in the Compulsory Moves subphase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random 
 Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made. 
 
-There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with the Random Movement special rule.
+There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with the Random Movement special rule. For the purpose of avoiding disordered charges, models with Random Movement must move at least 3&quot; for each D6 they roll.
 
-If the random move brings the unit to within 1&quot; of a friendly unit or Impassable Terrain, it stops immediately and cannot move further during that 
-Movement phase. 
+If the random move brings the unit to within 1&quot; of a friendly unit or Impassable Terrain, it stops immediately and cannot move further during that Movement phase. 
 
 A character with this special rule cannot join a unit without this special rule. A unit with this special rule cannot be joined by a character without this special 
 rule. If a character in the unit has a different Random Movement value, use the slowest for the entire unit. 
@@ -6239,7 +6224,7 @@ All models hit by the template must pass a Weapon Skill test or suffer a Stren
         </profile>
         <profile name="2-3 Disabled" typeId="ac64-eee9-c4ac-3056" typeName="Stone Thrower Misfire Chart" hidden="false" id="b7a8-f42f-997c-7958">
           <characteristics>
-            <characteristic name="Result" typeId="e2ee-1671-62ca-fc4a">The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
+            <characteristic name="Result" typeId="e2ee-1671-62ca-fc4a"> The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn. Either turn the war machine around or place a marker of some kind to indicate this. </characteristic>
           </characteristics>
         </profile>
         <profile name="4-6 May not Shoot" typeId="ac64-eee9-c4ac-3056" typeName="Stone Thrower Misfire Chart" hidden="false" id="cf7e-50c9-f10c-da28">
@@ -6258,12 +6243,12 @@ All models hit by the template must pass a Weapon Skill test or suffer a Stren
         </profile>
         <profile name="3-4 Malfunction" typeId="fdfe-c06f-1bf8-2262" typeName="Blackpowder Misfire Chart" hidden="false" id="1adf-38fa-f9cd-97c8">
           <characteristics>
-            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
+            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine cannot fire this turn or in the controlling player&apos;s next turn. Place a marker of some kind to indicate this. </characteristic>
           </characteristics>
         </profile>
         <profile name="5-6 May not Shoot" typeId="fdfe-c06f-1bf8-2262" typeName="Blackpowder Misfire Chart" hidden="false" id="c47b-e500-a5b2-5143">
           <characteristics>
-            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
+            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine is unharmed and can shoot as normal again in the controlling player&apos;s next turn. </characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6284,6 +6269,31 @@ All models hit by the template must pass a Weapon Skill test or suffer a Stren
         <infoLink name="Daemonic" id="5840-89e3-85aa-a46b" hidden="false" type="profile" targetId="377d-1fae-4a56-de9e"/>
         <infoLink name="Daemonic" id="01cb-230c-673c-8c44" hidden="false" type="rule" targetId="6940-194d-860b-18d4"/>
       </infoLinks>
+    </infoGroup>
+    <infoGroup name="Stupidity" id="755c-61c2-fa25-f4ce" hidden="false">
+      <profiles>
+        <profile name="1 Me Head Hurts" typeId="3ee1-110f-0169-f651" typeName="Stupidity" hidden="false" id="df96-a527-61fd-acd7">
+          <characteristics>
+            <characteristic name="Result" typeId="0abf-6d22-2e56-4550">The model and any unit they are with must move directly forwards using the Random Movement (D6) special rule, can only choose Hold as a charge reaction and cannot use combat reform. In 
+addition, the model gains the Immunity (Psychology) special rule, may not cast spells or channel dice, shoot or use any other optional special rules. Note that in case only a mount has Stupidity, the rider is not affected by the penalties to shooting, casting or channelling.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2-3 Unfocused" typeId="3ee1-110f-0169-f651" typeName="Stupidity" hidden="false" id="bcd3-3d4d-c68e-b670">
+          <characteristics>
+            <characteristic name="Result" typeId="0abf-6d22-2e56-4550">The model suffers a -1 penalty to its Weapon Skill, Ballistic Skill, Leadership, casting and dispelling, and only channel dice on the roll of a 6. This does not affect any riders if only the mount has Stupidity.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4-6 Clear-headed" typeId="3ee1-110f-0169-f651" typeName="Stupidity" hidden="false" id="3411-e791-3228-f8d5">
+          <characteristics>
+            <characteristic name="Result" typeId="0abf-6d22-2e56-4550">The model acts as normal.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Stupidity" id="3c39-7f47-e470-df38" hidden="false">
+          <description>Provided that they are not engaged in close combat, a unit that contains one or more models with the Stupidity special rule must roll a D6 at the start of its Compulsory Movement sub-phase and consult the Stupidity table to see what effect it has until the start of your next turn</description>
+        </rule>
+      </rules>
     </infoGroup>
   </sharedInfoGroups>
   <infoLinks>
