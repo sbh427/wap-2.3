@@ -3602,7 +3602,7 @@ If a model has the Fear special rule from two or more different sources (such a
 If the majority of the models in a unit cause Fear, they also gain the Immunity (Fear) special rule, and thus the Combat Resolution bonus of their Fear-causing enemies is ignored for that unit.</description>
     </rule>
     <rule id="fdd9-fa75-5594-d363" name="Swiftstride" hidden="false">
-      <description>When charging, fleeing and pursuing, units entirely made of models with the Swiftstride special rule may re-roll the lowest dice.</description>
+      <description>When charging, fleeing and pursuing, units entirely made of models with the Swiftstride special rule may re-roll 1&apos;s when determining the result of the distance they move. </description>
     </rule>
     <rule id="b806-942b-15af-b309" name="Expendable" hidden="false" type="upgrade">
       <description>Models with this special rule do not cause Panic to friendly units that are not Expendable themselves. Characters may not join a unit with this rule, unless specified. Likewise, an Expendable character may not join a unit that is not Expendable. 
@@ -3866,7 +3866,7 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
 A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in Impassable Terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. Flying units may march as normal.
 
 
-In addition, flying units containing two or more models follow the following rules for Skirmishers: Loose Formation, Skirmishers &amp; Combat, Free Turn.</description>
+In addition, flying units containing two or more models follow the following rules for Skirmishers: Loose Formation, Skirmishers &amp; Combat, Swift Manoeuvre</description>
       <alias>Fly</alias>
     </rule>
     <rule name="Complete Ranks" id="0a17-1f20-86b0-bded" hidden="false">
@@ -4207,14 +4207,17 @@ Unless specified, any special rules or bonuses that apply to the model’s norm
 Models with Random Movement cannot declare charges, can only choose Hold as a charge reaction, and must always move in the Compulsory Moves subphase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random 
 Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made. 
 
-There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with the Random Movement special rule. For the purpose of avoiding disordered charges, models with Random Movement must move at least 3&quot; for each D6 they roll.
+There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with the Random Movement special rule.
 
-If the random move brings the unit to within 1&quot; of a friendly unit or Impassable Terrain, it stops immediately and cannot move further during that Movement phase. 
+
+If the random move brings the unit to within 1&quot; of a friendly unit or Impassable Terrain, it stops immediately and cannot move further during that Movement phase.
+
+
+A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type. 
 
 A character with this special rule cannot join a unit without this special rule. A unit with this special rule cannot be joined by a character without this special 
 rule. If a character in the unit has a different Random Movement value, use the slowest for the entire unit. 
-
-A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
+</description>
       <alias>Random Movement</alias>
     </rule>
     <rule id="03b5-5136-1ebb-dcfd" name="Line of Sight (*)" hidden="false">
@@ -6224,7 +6227,7 @@ All models hit by the template must pass a Weapon Skill test or suffer a Stren
         </profile>
         <profile name="2-3 Disabled" typeId="ac64-eee9-c4ac-3056" typeName="Stone Thrower Misfire Chart" hidden="false" id="b7a8-f42f-997c-7958">
           <characteristics>
-            <characteristic name="Result" typeId="e2ee-1671-62ca-fc4a"> The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn. Either turn the war machine around or place a marker of some kind to indicate this. </characteristic>
+            <characteristic name="Result" typeId="e2ee-1671-62ca-fc4a">The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn. Either turn the war machine around or place a marker of some kind to indicate this.</characteristic>
           </characteristics>
         </profile>
         <profile name="4-6 May not Shoot" typeId="ac64-eee9-c4ac-3056" typeName="Stone Thrower Misfire Chart" hidden="false" id="cf7e-50c9-f10c-da28">
@@ -6243,12 +6246,12 @@ All models hit by the template must pass a Weapon Skill test or suffer a Stren
         </profile>
         <profile name="3-4 Malfunction" typeId="fdfe-c06f-1bf8-2262" typeName="Blackpowder Misfire Chart" hidden="false" id="1adf-38fa-f9cd-97c8">
           <characteristics>
-            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine cannot fire this turn or in the controlling player&apos;s next turn. Place a marker of some kind to indicate this. </characteristic>
+            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine cannot fire this turn or in the controlling player&apos;s next turn. Place a marker of some kind to indicate this.</characteristic>
           </characteristics>
         </profile>
         <profile name="5-6 May not Shoot" typeId="fdfe-c06f-1bf8-2262" typeName="Blackpowder Misfire Chart" hidden="false" id="c47b-e500-a5b2-5143">
           <characteristics>
-            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine is unharmed and can shoot as normal again in the controlling player&apos;s next turn. </characteristic>
+            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine is unharmed and can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
