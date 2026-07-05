@@ -1140,7 +1140,7 @@
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Shadow" hidden="false" id="69bf-9c48-e495-d3bf" sortIndex="19">
+        <selectionEntry type="unit" import="true" name="Lore of Shadow" hidden="false" id="69bf-9c48-e495-d3bf" sortIndex="20">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="ef06-016c-5e4b-56da" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="db52-46da-dd01-bfbe" includeChildSelections="true" automatic="true"/>
@@ -1439,7 +1439,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Nurgle" hidden="false" id="29f4-8033-3b6a-2980" sortIndex="18">
+        <selectionEntry type="unit" import="true" name="Lore of Nurgle" hidden="false" id="29f4-8033-3b6a-2980" sortIndex="19">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="27bf-ca1e-3269-0827" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5c4f-587b-aaaa-6404" includeChildSelections="true" automatic="true"/>
@@ -1485,7 +1485,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Slaanesh" hidden="false" id="6ae3-79e0-0400-07b6" sortIndex="20">
+        <selectionEntry type="unit" import="true" name="Lore of Slaanesh" hidden="false" id="6ae3-79e0-0400-07b6" sortIndex="21">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="38f9-3bcc-e89d-54a5" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6a12-758b-74a8-f861" includeChildSelections="true" automatic="true"/>
@@ -1577,7 +1577,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Manual Selection" hidden="false" id="d52c-1a3d-404a-6772" sortIndex="-1">
+        <selectionEntry type="upgrade" import="true" name="Manual Selection" hidden="false" id="d52c-1a3d-404a-6772" sortIndex="24">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="43df-f883-b67b-da4c" includeChildSelections="true"/>
           </constraints>
@@ -1740,7 +1740,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             </modifierGroup>
           </modifierGroups>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Tzeentch" hidden="false" id="cd65-6728-cffa-67f8" sortIndex="22">
+        <selectionEntry type="unit" import="true" name="Lore of Tzeentch" hidden="false" id="cd65-6728-cffa-67f8" sortIndex="23">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="877a-88d2-61a4-03be" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1330-a2c5-2dfe-8665" includeChildSelections="true" automatic="true"/>
@@ -2430,7 +2430,7 @@ the template at any point during its move suffers a Strength 5 hit. In addition
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="unit" import="true" name="Lore of Troll Magic" hidden="false" id="ff0e-b338-06dd-06d2" sortIndex="21">
+        <selectionEntry type="unit" import="true" name="Lore of Troll Magic" hidden="false" id="ff0e-b338-06dd-06d2" sortIndex="22">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="0247-423a-2b6f-fa71" includeChildSelections="true" automatic="true"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bf3b-c55b-4d69-318a" includeChildSelections="true" automatic="true"/>
@@ -2525,6 +2525,164 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
               </characteristics>
             </profile>
           </profiles>
+        </selectionEntry>
+        <selectionEntry type="unit" import="true" name="Lore of Nehekhara" hidden="false" id="0779-440c-f407-02b8" sortIndex="18">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="4ebd-d19c-8454-6506" includeChildSelections="true" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="208a-c1c0-eecf-7b9c" includeChildSelections="true" automatic="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Djaf&apos;s Incantation of Cursed Blades" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0d3b-24f4-8b87-e867">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit&apos;s close combat Attacks gain the Killing Blow special rule until the start of your next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Djedra&apos;s Incantation of the Eternal Dead" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="675a-06e4-22b7-2283">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While this spell is in effect, add +1 to the result of all Wounds recovered from the The Restless Dead due to spells being cast by this Wizard. (This can trigger The Restless Dead for any unitthey are with)</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Khsar&apos;s Incantation of the Desert Wind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2df4-cfc3-0ca2-8639">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target can immediately make a normal move as if it were the Remaining Moves sub-phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Mankara&apos;s Incantation of Urgency" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="95c5-0f4c-7376-aeaf">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target can immediately move using the Random Movement (3D6) special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Merneptah&apos;s Scroll of the Scarab Song" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6a59-f746-1727-b220">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Damage area</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Uses the large round template. All models under the template suffer a Strength 1 hit with the Poisoned Attacks special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Neferre&apos;s Incantation of Quaking Horror" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d3ac-0808-5f03-3f8f">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target halves their Leadership (after modifiers, rounding up) until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Neru&apos;s Incantation of Protection" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="08a1-5fca-46f7-3350">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a Magical Ward (5+) until the start of the caster&apos;s Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Ptra&apos;s Incantation of Righteous Smiting" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="41b2-3409-0231-afa3">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit gain +1 Attack and may fire an additional shot with missile weapons (excluding artillery) until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Return of the Golden Age" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b114-cc6d-4e97-7d4c">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains +1 Weapon Skill, Strength and Initiative until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Sakhmet&apos;s Incantation of the Skullstorm" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5330-362a-cefa-2b5e">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move suffers a Strength 5 hit. Any unit that suffers one or more casualties must take an immediate Panic test.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Sekhubi&apos;s Incantation of Retribution" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="075b-03cf-7b8a-0df3">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Target enemy Unit suffers D6 Strength 4 hits.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="The Restless Dead" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7b71-8279-0de0-c1f3">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each time a Wizard successfully casts an augment or conveyance spell from the Lore of Nehekhara, the target of the spell immediately recovers a number of Wounds&apos; worth of models, just like a summoning spell. Core Units (except Chariots) recover D6+1 Wounds. Special Units, Chariots and Monstrous Cavalry recover D3 Wounds. All other units recover 1 Wound.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Usekhp&apos;s Incantation of Desiccation" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9a51-9d71-c7d6-5561">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit has -1 Strength and -1 Toughness (to a minimum of 1) until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Usirian&apos;s Incantation of Vengeance" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6e30-f3df-96d1-2c98">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers -D3 to its Movement characteristic (to a minimum of 1) and treats all terrain (even open ground) as Dangerous Terrain, testing every time it moves (including when charging, fleeing, pursuing, moving compulsorily, etc.) until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="4ebd-d19c-8454-6506"/>
+                <modifier type="set" value="0" field="208a-c1c0-eecf-7b9c"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="02ef-be7b-aca4-b07a" shared="true" childName="Lore of Nehekkhara" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier type="set" value="0" field="4ebd-d19c-8454-6506">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -3008,6 +3166,14 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
     <selectionEntry type="upgrade" import="true" name="Lore of Troll Magic" hidden="false" id="8b46-aebb-97be-ab84" collective="false">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="826f-2cfe-4a00-4731" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="02ef-be7b-aca4-b07a" name="Lore of Nehekkhara" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0f3b-9a47-c26d-4e46" type="max"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -3602,7 +3768,7 @@ If a model has the Fear special rule from two or more different sources (such a
 If the majority of the models in a unit cause Fear, they also gain the Immunity (Fear) special rule, and thus the Combat Resolution bonus of their Fear-causing enemies is ignored for that unit.</description>
     </rule>
     <rule id="fdd9-fa75-5594-d363" name="Swiftstride" hidden="false">
-      <description>When charging, fleeing and pursuing, units entirely made of models with the Swiftstride special rule may re-roll 1&apos;s when determining the result of the distance they move. </description>
+      <description>When charging, fleeing and pursuing, units entirely made of models with the Swiftstride special rule may re-roll 1&apos;s when determining the result of the distance they move.</description>
     </rule>
     <rule id="b806-942b-15af-b309" name="Expendable" hidden="false" type="upgrade">
       <description>Models with this special rule do not cause Panic to friendly units that are not Expendable themselves. Characters may not join a unit with this rule, unless specified. Likewise, an Expendable character may not join a unit that is not Expendable. 
@@ -4216,8 +4382,7 @@ If the random move brings the unit to within 1&quot; of a friendly unit or Impa
 A Random Move counts as a ‘normal’ move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type. 
 
 A character with this special rule cannot join a unit without this special rule. A unit with this special rule cannot be joined by a character without this special 
-rule. If a character in the unit has a different Random Movement value, use the slowest for the entire unit. 
-</description>
+rule. If a character in the unit has a different Random Movement value, use the slowest for the entire unit.</description>
       <alias>Random Movement</alias>
     </rule>
     <rule id="03b5-5136-1ebb-dcfd" name="Line of Sight (*)" hidden="false">
