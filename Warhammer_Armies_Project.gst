@@ -1226,6 +1226,7 @@
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="bc0d-47f8-7220-1e16" shared="true" childName="Lore of Death" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="8fea-7dc3-3324-2007" shared="true" childName="Lore of Death &amp; Nehekhara" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -2671,6 +2672,7 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="d52c-1a3d-404a-6772" shared="true" childName="Manual Selection" includeChildSelections="true" includeChildForces="true"/>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="02ef-be7b-aca4-b07a" shared="true" childName="Lore of Nehekkhara" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="8fea-7dc3-3324-2007" shared="true" childName="Lore of Death &amp; Nehekhara" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -3178,6 +3180,11 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of Death &amp; Nehekhara" hidden="false" id="8fea-7dc3-3324-2007">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d82-4817-4004-1fdc" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
