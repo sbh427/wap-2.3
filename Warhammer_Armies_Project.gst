@@ -3185,7 +3185,7 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
       <comment>Min 1</comment>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ea6-01bb-0b28-b780" includeChildSelections="false" automatic="true"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cef-e90c-ff74-4c59" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cef-e90c-ff74-4c59" includeChildSelections="false" automatic="false"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -3202,7 +3202,7 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
     <selectionEntryGroup name="50. Handheld Armour" id="0420-92ca-bbfc-b5f2" hidden="false">
       <comment>Min 0</comment>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b127-dfd3-1284-6bb1" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b127-dfd3-1284-6bb1" includeChildSelections="false" automatic="false"/>
         <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1cb3-34b8-5a5b-e470" includeChildSelections="false"/>
       </constraints>
       <modifierGroups>
@@ -3220,7 +3220,7 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
       <comment>Min 1</comment>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71c5-9037-5bd4-fae9" includeChildSelections="false" automatic="true"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5b7-0be5-74d6-45b2" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5b7-0be5-74d6-45b2" includeChildSelections="false" automatic="false"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -3237,7 +3237,7 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
     <selectionEntryGroup name="40. Suits of Armour" id="f56d-df75-2d0b-ce09" hidden="false">
       <comment>Min 0</comment>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3e8-624f-92d7-7b5b" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3e8-624f-92d7-7b5b" includeChildSelections="false" automatic="false"/>
         <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4347-5ff6-2917-e511" includeChildSelections="false" automatic="true"/>
       </constraints>
       <modifierGroups>
@@ -3261,7 +3261,7 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
       <comment>Min 1</comment>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e941-9082-0af2-8b43" includeChildSelections="false" automatic="true"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe22-ce5f-b23e-303d" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe22-ce5f-b23e-303d" includeChildSelections="false" automatic="false"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="60. Wizard Level" id="6921-bd2a-e7cb-9029" hidden="false">
@@ -3283,7 +3283,7 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
       <comment>Min 1</comment>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d91-5217-36bf-adeb" includeChildSelections="false" automatic="true"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d000-627b-af39-4fd6" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d000-627b-af39-4fd6" includeChildSelections="false" automatic="false"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="60. Wizard Level" id="d1c2-3512-e5b6-7616" hidden="false">
@@ -3304,12 +3304,12 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
     <selectionEntryGroup name="30. Secondary Weapon" id="9bf8-b456-dd2f-8826" hidden="false">
       <comment>Min 0</comment>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94cf-8482-9a4d-8204" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94cf-8482-9a4d-8204" includeChildSelections="false" automatic="false"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="70. Mount" id="d3f4-2566-96e2-e425" hidden="false">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7821-ebe3-f713-6916" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7821-ebe3-f713-6916" includeChildSelections="false" automatic="false"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="10. Character Options" id="7853-6aa4-00e8-09e0" hidden="false">
