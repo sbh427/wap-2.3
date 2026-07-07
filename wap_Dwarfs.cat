@@ -265,7 +265,7 @@
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
                     <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Dwarf)</characteristic>
                   </characteristics>
                 </profile>
@@ -568,7 +568,7 @@
         <cost name="pts" typeId="points" value="70"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="137f-2c0b-6d58-32ac" name="Master Engineers" hidden="false" collective="false" import="true" type="model" sortIndex="8">
+    <selectionEntry id="137f-2c0b-6d58-32ac" name="Master Engineer" hidden="false" collective="false" import="true" type="model" sortIndex="8">
       <profiles>
         <profile id="837a-6818-91cf-8b68" name="Master Engineer" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
           <characteristics>
@@ -667,7 +667,7 @@
         <cost name="pts" typeId="points" value="60"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="363e-67b3-11fa-cb51" name="Brewmasters" hidden="false" collective="false" import="true" type="model" sortIndex="7">
+    <selectionEntry id="363e-67b3-11fa-cb51" name="Brewmaster" hidden="false" collective="false" import="true" type="model" sortIndex="7">
       <profiles>
         <profile id="accf-44c4-8b88-e61a" name="Brewmaster" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
           <characteristics>
@@ -789,7 +789,7 @@
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
                     <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Dwarf)</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Equine)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -799,7 +799,7 @@
               </infoLinks>
               <rules>
                 <rule name="Beer Cart" id="3b06-7043-20f2-7b8e" hidden="false">
-                  <description>A Beer Cart allows the Brewmaster&apos;s Beer Casks special rule to affect all friendly units within 6&quot;, rather than just the unit they are with.</description>
+                  <description>A Beer Cart allows the Brewmaster&apos;s Beer Casks special rule to affect all friendly units within 6&quot;.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -818,8 +818,8 @@
       <selectionEntries>
         <selectionEntry id="8405-78a3-22c9-4f9d" name="Warrior" hidden="false" collective="false" import="true" type="model">
           <constraints>
-            <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abc9-8679-def4-6a37" type="min"/>
-            <constraint field="selections" scope="parent" value="30" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e178-4e62-950c-b013" type="max"/>
+            <constraint field="selections" scope="parent" value="15" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="abc9-8679-def4-6a37" type="min"/>
+            <constraint field="selections" scope="parent" value="45" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e178-4e62-950c-b013" type="max"/>
           </constraints>
           <profiles>
             <profile id="cafe-2e35-701a-a602" name="Warrior" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -1105,7 +1105,7 @@
               <entryLinks>
                 <entryLink import="true" name="Shield" hidden="false" id="754d-7c65-ceb3-82d8" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="2">
                   <costs>
-                    <cost name="pts" typeId="points" value="1"/>
+                    <cost name="pts" typeId="points" value="1.5"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Great Weapon" hidden="false" id="dfc4-20db-0e0f-b99f" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
@@ -1562,6 +1562,17 @@
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries.recursive"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3e81-bec4-2313-74e3" shared="true" childName="Alrik Ranulfsson" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="0c2e-44ef-a938-7c0e" name="Hammerers" hidden="false" collective="false" import="true" type="unit" sortIndex="24">
       <categoryLinks>
@@ -1597,7 +1608,7 @@
           </rules>
           <infoLinks>
             <infoLink id="880a-3271-eebe-9fe0" name="Ancestral Grudge" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
-            <infoLink id="94e1-8d01-5081-8f4f" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
+            <infoLink id="94e1-8d01-5081-8f4f" name="Resolute" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
             <infoLink id="9a2d-3b55-a2cc-4f07" name="Stubborn" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
             <infoLink name="Armour Piercing" id="22b8-000c-097b-d3e6" hidden="false" type="rule" targetId="bf4e-212e-fe1d-20c6">
               <modifiers>
@@ -1616,6 +1627,7 @@
                 <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
               </modifiers>
             </infoLink>
+            <infoLink id="e911-5421-4045-5938" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="18"/>
@@ -1940,7 +1952,7 @@
               <description>Miners have the Ambushers special rule, with the following exceptions.
 
 
-When they enter the battle in the Remaining Moves sub-phase, they do not move onto the board as reinforcements in the normal way. Instead, when a unit of Miners enters the battle, place a small marker (such as a coin) anywhere on the battlefield, but not in impassable terrain or within 1&quot; of a deployed unit.
+When they enter the battle in the Remaining Moves sub-phase, they do not move onto the board as reinforcements in the normal way. Instead, when a unit of Miners enters the battle, place a small marker (no more than 1&quot; in diamater) anywhere on the battlefield, but not in impassable terrain or within 1&quot; of a deployed unit.
 
 
 Roll a scatter dice and an artillery dice. If you roll a Hit on the scatter dice, the marker stays in place. If you roll an arrow, move the marker the number, in inches, indicated by the artillery dice in the direction shown. If the marker is under a friendly unit, impassable terrain or a building, place it 1&quot; away from the closest edge of the unit/terrain.
@@ -2125,7 +2137,7 @@ If you have several units of Miners, then repeat this process, one unit at a tim
                   </profiles>
                   <rules>
                     <rule name="Miner&apos;s Cart" id="194a-66f8-6fd2-8ab0" hidden="false">
-                      <description>A Miner&apos;s Cart is a Shrine which is placed in the second rank of the unit rather than the first. A unit with a Miner&apos;s Cart can use Blasting Charges every turn rather than just once. However, if the Miner&apos;s Cart is destroyed from a close combat or missile attack, place the large round template on top of it before removing it. All models under the template suffer a Strength 4 Hit with the Armour Piercing (1) and Flaming Attacks special rules.</description>
+                      <description>A Miner&apos;s Cart is a Shrine drawn by a Draft Pony. It may not choose to leave the unit. A unit with a Miner&apos;s Cart can use Blasting Charges every turn rather than just once. However, if the Miner&apos;s Cart is destroyed from a close combat or missile attack, place the centre of the large round template on top of it before removing it. All models under the template suffer a Strength 4 Hit with the Armour Piercing (1) and Flaming Attacks special rules.  </description>
                     </rule>
                   </rules>
                   <categoryLinks>
@@ -2338,12 +2350,12 @@ If you have several units of Miners, then repeat this process, one unit at a tim
           <selectionEntryGroups>
             <selectionEntryGroup name="25. Equipment" id="f4f9-65be-5ac5-3cb7" hidden="false">
               <entryLinks>
-                <entryLink import="true" name="Dwarfen Crossbow" hidden="false" id="7199-cb0b-44f2-3cc9" type="selectionEntry" targetId="c494-ba92-e96e-c0c3" sortIndex="3">
+                <entryLink import="true" name="Dwarfen Crossbow" hidden="false" id="7199-cb0b-44f2-3cc9" type="selectionEntry" targetId="c494-ba92-e96e-c0c3" sortIndex="2">
                   <costs>
-                    <cost name="pts" typeId="points" value="5"/>
+                    <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="0119-e824-1440-f19b" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
+                <entryLink import="true" name="Great Weapon" hidden="false" id="0119-e824-1440-f19b" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
@@ -2640,7 +2652,7 @@ If you have several units of Miners, then repeat this process, one unit at a tim
           <description>The Deathroller has an armour save of 3+ against all models attacking from the front.</description>
         </rule>
         <rule id="e03c-270e-36fb-d784" name="Over-Pressured Boiler" hidden="false">
-          <description>If two or more 1&apos;s are rolled when rolling for its movement, you need to roll another D6 and consult the Boiler Incident Table. The driver can take the risk and increase the pressure of the steam boiler before choosing to move the Deathroller. This gives the Deathroller Random Movement (3D6) rule.</description>
+          <description>If two or more 1&apos;s are rolled when rolling for its movement, you need to roll another D6 and consult the Boiler Incident Table. The driver can take the risk and increase the pressure of the steam boiler before choosing to move the Deathroller. This gives the Deathroller Random Movement (3D6) rule for the rest of this turn.</description>
         </rule>
         <rule id="6b62-26a0-4bb8-08d9" name="Grinding Attack" hidden="false">
           <description>In addition to its normal Impact Hits when charging, the Deathroller inflicts D6 Impact Hits at the start of each close combat round. If you roll a 6 when determining the number of Impact Hits, the driver has pushed the boiler beyond his limits. Roll a D6 and consult the Boiler Incident Table.</description>
@@ -2883,6 +2895,17 @@ If you have several units of Miners, then repeat this process, one unit at a tim
           </entryLinks>
         </entryLink>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries.recursive"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3e81-bec4-2313-74e3" shared="true" childName="Alrik Ranulfsson" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="b715-e1f3-1e5f-2df4" name="Irondrakes" hidden="false" collective="false" import="true" type="unit" sortIndex="25">
       <categoryLinks>
@@ -3253,7 +3276,7 @@ In close combat, a pistol counts as an additional hand weapon that does not give
           <modifiers>
             <modifier type="set" value="Flame Cannon" field="name"/>
             <modifier type="set" value="6&quot;" field="1c88-efb0-083f-b945"/>
-            <modifier type="append" value="Cumbersome, Multiple Wounds (D3)." field="d3a4-721b-f750-5564"/>
+            <modifier type="append" value=", Multiple Wounds (D3)." field="d3a4-721b-f750-5564"/>
           </modifiers>
         </infoLink>
         <infoLink name="Blackpowder Misfire Chart" id="4c47-22f4-458f-f6f4" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
@@ -3552,7 +3575,7 @@ In close combat, a pistol counts as an additional hand weapon that does not give
           <description>If the Thunderbarge is destroyed it scatters 3D6&quot; in a random direction and then crashes to the ground. Place the large template with the hole under its final position. Any model touched by the template suffers a Strength 6 hit.</description>
         </rule>
         <rule id="b70a-630d-cc2c-b393" name="Thunderbarge Cannon" hidden="false">
-          <description>The Thunderbarge is armed with a Cannon, which cannot fire grapeshot. The cannon can be fired even if the Thunderbarge marches. If the cannon misfires and roll a &quot;Destroyed!&quot; result, then the Thunderarge suffers D3 Wounds with no saves allowed, and the weapon may no longer be used for the remainder of the game. Other misfires are resolved as normal.</description>
+          <description>The Thunderbarge is armed with a Cannon, which cannot fire grapeshot. The cannon can be fired even if the Thunderbarge marches. If the cannon misfires and rolls a &quot;Destroyed!&quot; result, then the Thunderarge suffers D3 Wounds with no saves allowed, and the weapon may no longer be used for the remainder of the game. Other misfires are resolved as normal.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -3721,7 +3744,7 @@ In close combat, a pistol counts as an additional hand weapon that does not give
         <rule id="c862-6489-bf61-dbcf" name="Dive Bomb" hidden="false">
           <description>Once per game, during the Remaining Moves sub-phase, models with this special rule may drop bombs unless they are fleeing.
 
-To Dive Bomb, select one unengaged enemy unit that the Gyrocopter moved over in that turn. To determine the damage caused by the bombs, roll an artillery dice; this is the number of hits inflicted. If a misfire is rolled, the Gyrocopter takes a single Wound with no armour save allowed.
+To Dive Bomb, select one unengaged enemy unit that the Gyrocopter moved over in that turn. To determine the damage caused by the bombs, roll an artillery dice; this is the number of hits inflicted as missile attacks from the rear. If a misfire is rolled, the Gyrocopter takes a single Wound with no armour save allowed.
 
 If a Gyrocopter Dive Bombs, it cannot make any other shooting attacks in that turn.</description>
         </rule>
@@ -3759,6 +3782,17 @@ If a Gyrocopter Dive Bombs, it cannot make any other shooting attacks in that tu
         <entryLink import="true" name="Primary Weapons" hidden="false" id="f619-a70f-942f-222b" type="selectionEntryGroup" targetId="e878-d8d4-6883-8769"/>
         <entryLink import="true" name="Dwarf Pilot" hidden="false" id="6277-3228-1dbb-6ffe" type="selectionEntry" targetId="b173-3352-dece-3e0e"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries.recursive"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="3e81-bec4-2313-74e3" shared="true" childName="Alrik Ranulfsson" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="ec1e-b691-1651-3ede" name="Special Characters" hidden="false" collective="false" import="true" type="unit" sortIndex="99">
       <categoryLinks>
@@ -3793,13 +3827,13 @@ If a Gyrocopter Dive Bombs, it cannot make any other shooting attacks in that tu
                 </profile>
                 <profile name="Rune of Doom" typeId="9dd3-c649-5416-b44f" typeName="Rune" hidden="false" id="93db-cffd-8ea9-f71f">
                   <characteristics>
-                    <characteristic name="Details" typeId="ec93-9bb1-8e60-51a9">Until the start of the next friendly Magic phase, all friendly Dwarf units within 18&quot; gains the Fear special rule.</characteristic>
+                    <characteristic name="Details" typeId="ec93-9bb1-8e60-51a9">Until the start of the next friendly Magic phase, all friendly Dwarf units within 18&quot; gain the Fear special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <rules>
                 <rule id="d2f2-4a3c-3df4-f7cf" name="Master of Ancient Lore" hidden="false">
-                  <description>Thorek may roll an additional dice for his Leadership tests when attempting to Strike to Runes and discard the highest result.</description>
+                  <description>Thorek may roll an additional dice for his Leadership tests when attempting to Strike the Runes and discard the highest result.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -4094,7 +4128,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                   <description>Thorgrim must be the army General. Furthermore, if he is slain, all friendly models from Warhammer: Dwarfs immediately gain Frenzy.</description>
                 </rule>
                 <rule id="9909-dd20-02b7-eaa8" name="The Throne of Power" hidden="false">
-                  <description>The Throne of Power adds +4 to Thorgrim&apos;s Wounds (included in his profile), gives him Unit Strength (5) and Line of Sight (2). In addition, the Throne gives him the Inspiring Presence (6) special rule. However, if Thorgrim joins a unit, he does not benefit from the &quot;Look Out Sir!&quot; rule.</description>
+                  <description>The Throne of Power adds +4 to Thorgrim&apos;s Wounds (included in his profile), gives him Unit Strength (5) and Line of Sight (2). In addition, the Throne gives Thorgrim the Inspiring Presence (6) special rule. However, if Thorgrim joins a unit, he does not benefit from the &quot;Look Out Sir!&quot; rule.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -4300,7 +4334,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
               </profiles>
               <rules>
                 <rule id="b843-9006-86cb-2461" name="Traditional Army" hidden="false">
-                  <description>If Alrik is in your army then Irondrakes, Firethrowers, Gyrocopters, Flame Cannons, Organ Guns, Thunderbarges and Grudgebreakers counts as 2 units for the purpose of duplicate choices that are allowed. In addition, your army cannot have more models of Thunderers than Quarrellers.</description>
+                  <description>If Alrik is in your army, then Thunderers counts as Special Units, Firethrowers and Gyrocopters counts as Rare Units, and Irondrakes, Flame Cannons, Organ Guns, Thunderbarges and Grudgebreakers counts as 2 units for the purpose of duplicate choices that are allowed. </description>
                 </rule>
                 <rule id="1481-2567-656e-63b4" name="Lord of the Hold" hidden="false">
                   <description>If Alrik is included in your army he must be your army General (unless Thorgrim Grudgebearer is also included).</description>
@@ -4738,7 +4772,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                   <description>The White Dwarf is Unbreakable. If his chosen unit breaks and flees, for any reason, he will always stand his ground. If the unit was engaged in combat, he will stand firm and continue to fight while his unit flees, denying the foe the chance to pursue. Grombrindal can even join a unit that is not Unbreakable, this is an exception to the normal Unbreakable rules.</description>
                 </rule>
                 <rule id="9648-3228-83a2-057a" name="Disguised" hidden="false">
-                  <description>The White Dwarf has Hidden. However, if the unit he is Hidden in is wiped out or flees then the White Dwarf will be revealed, and will stand his ground even though the rest of the unit may be fleeing or slain. Place the model in the middle of the front rank of the unit, then move/remove the rest of the unit as normal. The White Dwarf will then operative as a lone character as normal. The White Dwarf may never be the army&apos;s General, but units he joins may still use his Leadership once he is no longer Hidden.</description>
+                  <description>The White Dwarf has Hidden. However, if the unit he is Hidden in is wiped out or flees then the White Dwarf will be revealed, and will stand his ground even though the rest of the unit may be fleeing or slain. Place the model in the middle of the front rank of the unit, then move/remove the rest of the unit as normal. The White Dwarf will then operate as a lone character as normal. The White Dwarf may never be the army&apos;s General, but units he joins may still use his Leadership once he is no longer Hidden.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -4766,7 +4800,7 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                   <profiles>
                     <profile id="ff01-2a40-9d48-38fd" name="Rune Helm of Zhufbar" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
                       <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Any fleeing unit of Dwarfs will pass Rally tests automatically if they are attempting to rally within 12&quot; of the Rune Helm of Zhufbar.</characteristic>
+                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Any fleeing unit of Dwarfs will pass Rally tests automatically if they are attempting to rally within 12&quot; of Grombrindal.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4857,198 +4891,6 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                 <modifier type="set" value="Grombrindal" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Gotrek &amp; Felix" hidden="false" id="061c-3497-b5f6-7f21" sortIndex="1">
-              <categoryLinks>
-                <categoryLink name="Infantry" hidden="false" id="513c-8f8d-2da0-a595" targetId="22c9-1606-58f8-2e60" primary="false"/>
-              </categoryLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9ccd-3d11-0007-5e46" includeChildSelections="true" includeChildForces="true"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Independent" id="c971-0717-6a5e-152d" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
-                <infoLink name="Invulnerable" id="dabb-017d-6aaa-10c5" hidden="false" type="profile" targetId="a5cd-bf6c-a415-ab5f">
-                  <modifiers>
-                    <modifier type="set" value="Gotrek&apos;s Doom" field="name"/>
-                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
-                  </modifiers>
-                </infoLink>
-                <infoLink name="Magic Resistance" id="16a5-0ee0-486e-f69b" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-                  <modifiers>
-                    <modifier type="set" value="Gotrek&apos;s Doom" field="name"/>
-                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
-                  </modifiers>
-                </infoLink>
-                <infoLink name="Magic Resistance" id="7b0d-cc62-28b3-84ed" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-                  <modifiers>
-                    <modifier type="set" value="Gotrek&apos;s Doom" field="name"/>
-                    <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry type="model" import="true" name="Gotrek Gurnisson" hidden="false" id="b537-efd7-8c7b-9e23" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="04ad-4677-a8bd-4c23"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ded-0b99-431e-e49f"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Gotrek Gurnisson" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a6ba-b917-5a8c-4b03">
-                      <characteristics>
-                        <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-                        <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
-                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-                        <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Dwarf)</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="270"/>
-                    <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
-                  </costs>
-                  <entryLinks>
-                    <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d86a-4bc0-d907-2081" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Az-Dreugidum, the Waraxe of Doom" hidden="false" id="268d-fcb9-6e96-5b7c">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c95f-a054-38eb-0821"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8c8-3443-fcaf-e903"/>
-                          </constraints>
-                          <profiles>
-                            <profile name="Az-Dreugidum, the Waraxe of Doom" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="e39f-5554-8e25-2149">
-                              <characteristics>
-                                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-                                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. For each of Gotrek&apos;s initial Attacks that Hit, he gains one extra Attack. In addition, Gotrek&apos;s axe also has the Ignore Armour saves special rule, and against enemies with Toughness 5 or more he may re-roll failed rolls To Wound.</characteristic>
-                              </characteristics>
-                              <modifiers>
-                                <modifier type="set" value="Gotrek Gurnisson" field="annotation"/>
-                              </modifiers>
-                            </profile>
-                          </profiles>
-                        </selectionEntry>
-                      </selectionEntries>
-                    </entryLink>
-                  </entryLinks>
-                  <infoLinks>
-                    <infoLink name="Hatred (*)" id="4b28-053c-38b3-7664" hidden="false" type="rule" targetId="1f0a-79e9-85a8-9659">
-                      <modifiers>
-                        <modifier type="set" value="Gotrek only" field="annotation"/>
-                        <modifier type="replace" value="Orcs &amp; Goblins" field="name" arg="*"/>
-                      </modifiers>
-                    </infoLink>
-                    <infoLink name="Relentless" id="95df-f8e7-8f60-9ae5" hidden="false" type="rule" targetId="db34-00cf-d5b6-9a4d">
-                      <modifiers>
-                        <modifier type="set" value="Gotrek only" field="annotation"/>
-                      </modifiers>
-                    </infoLink>
-                    <infoLink name="Magic Resistance" id="0261-04f2-3755-ad45" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-                      <modifiers>
-                        <modifier type="set" value="Dwarf" field="name"/>
-                        <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
-                      </modifiers>
-                    </infoLink>
-                    <infoLink name="Magic Resistance" id="2fd5-8853-c09c-4ac7" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-                      <modifiers>
-                        <modifier type="set" value="Dwarf" field="name"/>
-                        <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                  <rules>
-                    <rule name="Deathblow" id="8b3a-37c6-f9d4-030f" hidden="false">
-                      <description>If a model with this special rule is killed by normal Close Combat Attacks, it will immediately make a single Attack back against the unit or model that killed it before the Slayer is removed as a casualty.</description>
-                      <modifiers>
-                        <modifier type="set" value="Gotrek only" field="annotation"/>
-                      </modifiers>
-                    </rule>
-                    <rule name="Daemon Slayer" id="f46f-1365-7ec6-f56d" hidden="false">
-                      <description>Gotrek always Wound on a To Wound roll of 4+, unless they would need a lower result. Use the model&apos;s Strength to determine the armour save modifier for any successful Wounds. Gotrek has the Multiple Wounds (D3) special rule when attacking Monstrous Infantry, Monstrous Beasts or Monstrous Cavalry, Monstrous Creatures and Monsters. In addition, any Ward saves (except Dodge, Regeneration and Parry) successfully made against Attacks made by the model must be re-rolled.</description>
-                    </rule>
-                  </rules>
-                </selectionEntry>
-                <selectionEntry type="model" import="true" name="Felix Jaeger" hidden="false" id="2ff7-1722-60ac-c97a" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="24f4-cf37-6462-2798"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e417-97eb-8734-c2cc"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Felix Jaeger" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="42f3-5cb0-a2cb-8a1d">
-                      <characteristics>
-                        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
-                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                        <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="90"/>
-                    <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
-                  </costs>
-                  <entryLinks>
-                    <entryLink import="true" name="40. Suits of Armour" hidden="false" id="fd5c-ce44-ac65-08b6" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
-                      <entryLinks>
-                        <entryLink import="true" name="Light Armour" hidden="false" id="019b-1da7-0f1b-1b71" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cb64-01fd-feb1-9665"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <modifiers>
-                        <modifier type="set" value="Felix Jaeger" field="annotation" affects="self.entries.recursive.92be-88b7-6e84-0be3.profiles.Armour"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="20. Primary Weapon" hidden="false" id="da3e-aece-2a96-30aa" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="Karaghul, the Wyrmslayer Blade" hidden="false" id="320a-7920-246b-b741">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="31b2-da40-05fb-404e"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58d9-ef47-8823-076b"/>
-                          </constraints>
-                          <profiles>
-                            <profile name="Karaghul, the Wyrmslayer Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="a8ea-9946-ea2d-4b34">
-                              <characteristics>
-                                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-                                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+2</characteristic>
-                                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Felix must always declare a charge against a Dragon or Drake if it is possible to do so. Against Dragons and Drakes, the Wyrmslayer blade allows Felix to re-roll failed rolls To Hit and To Wound.</characteristic>
-                              </characteristics>
-                              <modifiers>
-                                <modifier type="set" value="Felix Jaeger" field="annotation"/>
-                              </modifiers>
-                            </profile>
-                          </profiles>
-                        </selectionEntry>
-                      </selectionEntries>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-              </selectionEntries>
-              <rules>
-                <rule name="Gotrek&apos;s Doom" id="2858-01b6-7309-5d41" hidden="false">
-                  <description>As long as Gotrek is alive, he and Felix have a 4+ invulnerable save as well as the Magic Resistance (2) and Unbreakable special rules.</description>
-                </rule>
-              </rules>
-              <entryLinks>
-                <entryLink import="true" name="10. Character Options" hidden="false" id="8c6c-de01-a218-7cf2" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171" sortIndex="-1"/>
-              </entryLinks>
-              <modifiers>
-                <modifier type="set" value="Gotrek &amp; Felix" field="name" scope="root-entry"/>
-              </modifiers>
-            </selectionEntry>
             <selectionEntry type="model" import="true" name="Grimm Burloksson" hidden="false" id="c48d-7ee8-fcab-5a28" collective="false" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="dd87-39a5-971d-af21" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
@@ -5117,8 +4959,8 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                   <profiles>
                     <profile name="Grudge-Raker" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="a996-118b-2c74-da45">
                       <characteristics>
-                        <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
-                        <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04"/>
+                        <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">15&quot;</characteristic>
+                        <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04">30&quot;</characteristic>
                         <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
                         <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2D3</characteristic>
                         <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Armour Piercing (1).</characteristic>
@@ -5226,11 +5068,11 @@ Thorek can re-roll a single dice on a failed attempt to Strike the Runes. If thi
                       <profiles>
                         <profile name="Rivet Gun" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="b2cd-55d3-20c0-ee75">
                           <characteristics>
-                            <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
-                            <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04"/>
-                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
-                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
-                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), Dwarf-crafted, Quick to Fire, Rapid Fire</characteristic>
+                            <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">6&quot;</characteristic>
+                            <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04">12&quot;</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Quick Shot, Rapid Fire.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -6003,20 +5845,20 @@ In addition, his troop type changes to War Machine and he counts as being part o
       </categoryLinks>
       <rules>
         <rule name="Oathstone" id="59e6-d52c-a438-cc94" hidden="false">
-          <description>A model with an Oathstone gains the Magic Resistance (1) special rule. A unit that contains one or more models with an Oath Stone can never choose to flee as a charge reaction, cannot be disrupted and, if any of its models are armed with hand weapon and shield, they can make Parry saves against attacks made to their flanks and rear. In addition, a character with an Oath Stone must always accept a challenge. However, if a model on an Oathstone fails a Break Test, they are removed as a casualty.</description>
+          <description>A model with an Oathstone gains the Magic Resistance (2) special rule. A unit that contains one or more models with an Oath Stone can never choose to flee as a charge reaction, cannot be disrupted and, if any of its models are armed with hand weapon and shield, they can make Parry saves against attacks made to their flanks and rear. In addition, a character with an Oath Stone must always accept a challenge. However, if a model on an Oathstone fails a Break Test, they are removed as a casualty.</description>
         </rule>
       </rules>
       <infoLinks>
         <infoLink name="Magic Resistance" id="4545-ea82-91a7-4b8e" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
           <modifiers>
             <modifier type="set" value="Oathstone" field="name"/>
-            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
           </modifiers>
         </infoLink>
         <infoLink name="Magic Resistance" id="3930-4e6d-2dbb-9a8b" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
           <modifiers>
             <modifier type="set" value="Oathstone" field="name"/>
-            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+            <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -6136,24 +5978,24 @@ In addition, his troop type changes to War Machine and he counts as being part o
         <infoLink name="Relentless" id="b29f-4aa2-548f-13ae" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
         <infoLink name="Ancestral Grudge" id="8889-f256-78b3-059d" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
         <infoLink name="Unit Strength (*)" id="f509-acb7-cf57-abcf" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="replace" value="2" field="name" arg="*"/>
+              </modifiers>
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="parent" childId="7397-9aeb-fd96-4051" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="7397-9aeb-fd96-4051" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-            <modifier type="replace" value="2" field="name" arg="*"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Unit Strength (*)" id="b79e-61d7-2fe9-cebf" hidden="true" type="rule" targetId="c397-b441-9fd6-89bb">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
+            </modifierGroup>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="replace" value="3" field="name" arg="*"/>
+              </modifiers>
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="parent" childId="7397-9aeb-fd96-4051" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="7397-9aeb-fd96-4051" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-            <modifier type="replace" value="3" field="name" arg="*"/>
-          </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </infoLink>
         <infoLink name="Inspiring Presence (*)" id="e7b7-8849-431d-4da0" hidden="false" targetId="1c71-6c8f-f47a-0a91" type="rule">
           <modifiers>
@@ -6277,7 +6119,7 @@ In addition, his troop type changes to War Machine and he counts as being part o
       <profiles>
         <profile name="Master Rune of Breaking" typeId="be21-8ba1-7009-d43e" typeName="Weapon Rune" hidden="false" id="1e9c-5b97-4164-afe0" noindex="true">
           <characteristics>
-            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">If a model with a weapon engraved with the Master Rune of Breaking scores one or more successful hits against a model, the foe&apos;s weapon or armour is destroyed on a D6 roll of 2+ (roll once, regardless of the number of successful hits). If the foe has more than one piece of equipment (note that two hand weapons count as one), roll a D6 to randomly determine which one is destroyed.</characteristic>
+            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">If a model with a weapon engraved with the Master Rune of Breaking scores one or more successful hits against a model, the foe&apos;s weapon or armour is destroyed on a D6 roll of 2+ (roll once, regardless of the number of successful hits). If the foe has more than one weapon or armour piece (note that two hand weapons count as one), roll a D6 to randomly determine which one is destroyed.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6562,7 +6404,7 @@ In addition, his troop type changes to War Machine and he counts as being part o
       <profiles>
         <profile name="Master Rune of Balance" typeId="46dc-ac3a-6194-9dc2" typeName="Talismanic Rune" hidden="false" id="f482-722c-a303-db82" noindex="true">
           <characteristics>
-            <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">Runesmiths/Runelords only. During the enemy&apos;s Magic phase, this rune allows the owning player remove one power dice from his opponent&apos;s pool and add it to his own dispel pool.</characteristic>
+            <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">Runesmiths/Runelords only. During the enemy&apos;s Magic phase, this rune allows the owning player to remove one power dice from his opponent&apos;s pool and add it to his own dispel pool.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6574,10 +6416,9 @@ In addition, his troop type changes to War Machine and he counts as being part o
       <profiles>
         <profile name="Rune of Spellbreaking (x2)" typeId="46dc-ac3a-6194-9dc2" typeName="Talismanic Rune" hidden="false" id="6c9e-6771-a70e-1214" noindex="true">
           <characteristics>
-            <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">Runesmiths/Runelords only. One use only. When a spell has been cast, a Runesmith or Runelord can use this rune to dispel it automatically, without the need to roll dispel dice. This rune cannot be used to dispel Remains in Play spells other than at the moment they are cast.
+            <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">One use only. When an enemy spell has been cast, the bearer can use it instead of attempting to dispel the spell by using dispel dice. This gives them 6 free dispel dice to attempt to dispel the spell, which cannot be combined with any other dispel dice (Ultimate Power applies as normal). This may also be used to dispel spells that Remains in Play. 
 
-
-A second Rune of Spell breaking maintains the previous effect and, after the spell is dispelled, roll a D6; on a 4+, the enemy spell is lost to the Wizard casting it and cannot be cast by him for the rest of the game. A third Rune of Spellbreaking has no further effect.</characteristic>
+After the spell is dispelled, roll a D6; on a 4+, the enemy spell is lost to the Wizard casting it and cannot be cast by him for the rest of the game. </characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6967,13 +6808,13 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
                         <infoLink name="Magic Resistance" id="59ef-87ea-2082-9736" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
                           <modifiers>
                             <modifier type="set" value="Rune of Sanctuary (x1)" field="name"/>
-                            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+                            <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
                           </modifiers>
                         </infoLink>
                         <infoLink name="Magic Resistance" id="70a1-19ca-0035-8709" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
                           <modifiers>
                             <modifier type="set" value="Rune of Sanctuary (x1)" field="name"/>
-                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -6996,42 +6837,12 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
                         <infoLink name="Magic Resistance" id="28a3-9218-2a95-6948" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
                           <modifiers>
                             <modifier type="set" value="Rune of Sanctuary (x2)" field="name"/>
-                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
                           </modifiers>
                         </infoLink>
                         <infoLink name="Magic Resistance" id="c93e-d4a8-7d4e-e710" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
                           <modifiers>
                             <modifier type="set" value="Rune of Sanctuary (x2)" field="name"/>
-                            <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
-                          </modifiers>
-                        </infoLink>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Rune of Sanctuary (x3)" hidden="false" id="d8dd-f91e-c537-3914" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b950-2df3-5e88-85fb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1a47-a38b-67fe-d1db" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="Rune of Sanctuary (x3)" typeId="9fca-89e3-04a1-e4ae" typeName="Banner Rune" hidden="false" id="30f6-724c-d963-acc4">
-                          <characteristics>
-                            <characteristic name="Effect" typeId="51cc-aa7c-4178-d853">A standard bearing three Runes of Sanctuary confers Magic Resistance (3) to the bearer&apos;s unit.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="points" value="30"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Magic Resistance" id="ec7f-6291-3550-7f8d" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
-                          <modifiers>
-                            <modifier type="set" value="Rune of Sanctuary (x3)" field="name"/>
-                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
-                          </modifiers>
-                        </infoLink>
-                        <infoLink name="Magic Resistance" id="5391-66c0-bb5e-8116" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
-                          <modifiers>
-                            <modifier type="set" value="Rune of Sanctuary (x3)" field="name"/>
                             <modifier type="set" value="3" field="19f0-e982-f035-416c"/>
                           </modifiers>
                         </infoLink>
@@ -7109,7 +6920,6 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
                     <conditionGroup type="or">
                       <conditions>
                         <condition type="equalTo" value="1" field="selections" scope="parent" childId="0e50-916b-a00a-38d2" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="d8dd-f91e-c537-3914" shared="true" includeChildSelections="true"/>
                         <condition type="equalTo" value="1" field="selections" scope="parent" childId="fb5d-fd58-bbdb-0a96" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
@@ -7182,7 +6992,7 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
           <profiles>
             <profile id="a317-d5fd-f737-b45b" name="Rune of Accuracy" hidden="false" typeId="a099-45a8-556d-3912" typeName="Engineering Rune">
               <characteristics>
-                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine with engraved with a Rune of Accuracy gains +1 To Hit. If it does not use Ballistic Skill To Hit, it can instead re-roll the scatter dice. May not be taken on an Organ Gun.</characteristic>
+                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine with engraved with a Rune of Accuracy may re-roll 1&apos;s To Hit. If it does not use Ballistic Skill To Hit, it can instead re-roll the scatter dice.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7204,7 +7014,7 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
           <profiles>
             <profile id="9631-302f-8f59-e3d1" name="Rune of Forging" hidden="false" typeId="a099-45a8-556d-3912" typeName="Engineering Rune">
               <characteristics>
-                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with a Rune of Forging can re-roll the artillery dice whenever a misfire result is rolled; however, you must accept the result of the second roll. Multiples of this rune have no further effect.</characteristic>
+                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with a Rune of Forging can re-roll the artillery dice whenever a misfire result is rolled.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7249,14 +7059,14 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cb8b-596d-5456-612e" name="Rune of Burning" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
+        <selectionEntry id="cb8b-596d-5456-612e" name="Enchanted Rune" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="be34-2400-f526-5199" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ab7b-e84b-99cf-c258" name="Rune of Burning" hidden="false" typeId="a099-45a8-556d-3912" typeName="Engineering Rune">
+            <profile id="ab7b-e84b-99cf-c258" name="Enchanted Rune" hidden="false" typeId="a099-45a8-556d-3912" typeName="Engineering Rune">
               <characteristics>
-                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">All shooting attacks from a war machine engraved with a Rune of Burning have Flaming Attacks. Multiples of this rune have no further effect.</characteristic>
+                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">All shooting attacks from a war machine engraved with an Enchanted Rune have the Magical Attacks special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7299,7 +7109,7 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
           <profiles>
             <profile id="b61a-d391-3715-8318" name="Rune of Rapid Fire" hidden="false" typeId="a099-45a8-556d-3912" typeName="Engineering Rune">
               <characteristics>
-                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">Bolt Thrower only. A war machine engraved with a Rune of Rapid Fire gains the Multiple Shots (2) special rule.</characteristic>
+                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with a Rune of Rapid Fire gains the Multiple Shots (2) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7313,6 +7123,21 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
               </conditions>
             </modifier>
           </modifiers>
+        </selectionEntry>
+        <selectionEntry id="6a80-080f-5cca-5379" name="Rune of Burning" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e156-b1cc-a680-98cf" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a8f6-2e84-23fe-a2cb" name="Rune of Burning" hidden="false" typeId="a099-45a8-556d-3912" typeName="Engineering Rune">
+              <characteristics>
+                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">All shooting attacks from a war machine engraved with a Rune of Burning have Flaming Attacks. Multiples of this rune have no further effect.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -7362,7 +7187,7 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
               <profiles>
                 <profile name="Rune of Penetrating (x1)" typeId="a099-45a8-556d-3912" typeName="Engineering Rune" hidden="false" id="1f64-7295-c454-99e9">
                   <characteristics>
-                    <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with a Rune of Penetration increases the Strength of its shots by 1, to a maximum of 10.</characteristic>
+                    <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with a Rune of Penetration increases the Strength of its shots by +1. Note that in the case of a Grudge Thrower, this bonus increases the Strength of both Strength values in its profile.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7377,12 +7202,15 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
               <profiles>
                 <profile name="Rune of Penetrating (x2)" typeId="a099-45a8-556d-3912" typeName="Engineering Rune" hidden="false" id="44b5-18f6-0f78-a8af">
                   <characteristics>
-                    <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with two Runes of Penetration increases the Strength of its shots by 1, to a maximum of 10, and allows the user to re-roll a single failed To Wound roll during the course of the battle. A third Rune of Penetration has no further effect. Note that in the case of a Grudge Thrower, this bonus increases the Strength of both Strength values in its profile.</characteristic>
+                    <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with a Rune of Penetration increases the Strength of its shots by +1. Note that in the case of a Grudge Thrower, this bonus increases the Strength of both Strength values in its profile.
+
+
+A war machine engraved with two Runes of Penetration increases the Strength of its shots by +1, and allows the user to re-roll failed To Wound rolls.  </characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="points" value="40"/>
+                <cost name="pts" typeId="points" value="50"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -7392,21 +7220,24 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
         </selectionEntryGroup>
         <selectionEntryGroup name="Master Runes" id="a674-1ce0-b224-1dff" hidden="false" sortIndex="1" flatten="true">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Master Rune of Disguise" hidden="false" id="9745-f4ea-a0e7-80dd" collective="false" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Master Rune of Bursting Flame" hidden="false" id="9745-f4ea-a0e7-80dd" collective="false" sortIndex="6">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9ee7-6e5f-0629-751b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d3a5-80e3-9d3a-fe3d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Master Rune of Disguise" typeId="a099-45a8-556d-3912" typeName="Engineering Rune" hidden="false" id="0c26-1fbe-49e2-5d3a">
+                <profile name="Master Rune of Bursting Flame" typeId="a099-45a8-556d-3912" typeName="Engineering Rune" hidden="false" id="0c26-1fbe-49e2-5d3a">
                   <characteristics>
-                    <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with the Master Rune of Disguise always counts as being in hard cover.</characteristic>
+                    <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with a Master Rune of Bursting Flame uses the large round template.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="points" value="15"/>
+                <cost name="pts" typeId="points" value="40"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Master Rune of Defence" hidden="false" id="4437-78d6-5c81-e77d" collective="false" sortIndex="2">
               <constraints>
@@ -7485,6 +7316,22 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
               </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Master Rune of Disguise" hidden="false" id="b4a1-2307-dcf5-1148" collective="false" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="45a0-d3b5-1d0b-f0a9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b233-6946-76ec-40ad" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Master Rune of Disguise" typeId="a099-45a8-556d-3912" typeName="Engineering Rune" hidden="false" id="d9ca-e38c-4f1b-1617">
+                  <characteristics>
+                    <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with the Master Rune of Disguise always counts as being in hard cover.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -7602,7 +7449,7 @@ It cannot not be used in close combat, but it can always be used in the shootin
                 <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04">24&quot;</characteristic>
                 <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
                 <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">5</characteristic>
-                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), March &amp; Shoot, Quick Shot, Rapid Fire.</characteristic>
+                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">March &amp; Shoot, Quick Shot, Rapid Fire.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7621,7 +7468,7 @@ It cannot not be used in close combat, but it can always be used in the shootin
                 <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04">18&quot;</characteristic>
                 <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
                 <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
-                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), Flaming Attacks, March &amp; Shoot, Multiple Shots (3), Quick Shot, Rapid Fire.</characteristic>
+                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks, March &amp; Shoot, Multiple Shots (3), Quick Shot, Rapid Fire.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7985,7 +7832,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                         <cost name="pts" typeId="points" value="5"/>
                       </costs>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Rune of Speed (x2)" hidden="false" id="ea21-4d77-e468-8f18" collective="true">
+                    <selectionEntry type="upgrade" import="true" name="Rune of Speed (x2)" hidden="true" id="ea21-4d77-e468-8f18" collective="true">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e0ae-a232-942b-14f8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
@@ -8000,7 +7847,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                         <cost name="pts" typeId="points" value="10"/>
                       </costs>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Rune of Speed (x3)" hidden="false" id="ac7b-db09-3b15-456e" collective="true">
+                    <selectionEntry type="upgrade" import="true" name="Rune of Speed (x3)" hidden="true" id="ac7b-db09-3b15-456e" collective="true">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b7f7-9527-71b3-e8c6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="39cf-9e21-c9fd-db82" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
@@ -8151,7 +7998,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                       <profiles>
                         <profile name="Rune of Daemon Slaying (x3)" typeId="be21-8ba1-7009-d43e" typeName="Weapon Rune" hidden="false" id="b279-f9d9-1824-5450">
                           <characteristics>
-                            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">Against any model with Daemonic, a weapon engraved with three Runes of Daemon Slaying hits and Wounds on a roll of 2+, has Multiple Wounds (D3) and no Ward Saves can be taken against it.</characteristic>
+                            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">Against any model with Daemonic, a weapon engraved with three Runes of Daemon Slaying hits and Wounds on a roll of 2+, has Multiple Wounds (D3) and cannot take Magical Ward saves against it.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -8466,24 +8313,24 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Armour Runes" id="e20b-fb56-e78e-f248" hidden="false" collective="false" import="true" collapsible="true">
+            <selectionEntryGroup name="Armour Runes" id="e20b-fb56-e78e-f248" hidden="false" collective="false" import="true" collapsible="true" sortIndex="2">
               <constraints>
                 <constraint type="max" value="3" field="selections" scope="parent" shared="false" id="c3bb-40a5-6cde-e0d1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Rune of Impact" hidden="false" id="20ba-c5b7-0543-6913" collective="true" sortIndex="4">
+                <selectionEntry type="upgrade" import="true" name="Rune of Impact" hidden="false" id="20ba-c5b7-0543-6913" collective="true" sortIndex="6">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f98a-2a94-0324-3ba5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
                     <profile name="Rune of Impact" typeId="6aa2-7707-349b-6651" typeName="Armour Rune" hidden="false" id="48ee-827a-b8e8-cf19">
                       <characteristics>
-                        <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">Armour engraved with a Rune of Impact grants its wearer Impact Hits (1) and Mighty Blow (1). Multiples of this rune have no further effect.</characteristic>
+                        <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">Armour engraved with a Rune of Impact grants its wearer the Impact Hits (1) and Mighty Blow (1) special rules. </characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <costs>
-                    <cost name="pts" typeId="points" value="5"/>
+                    <cost name="pts" typeId="points" value="15"/>
                   </costs>
                 </selectionEntry>
               </selectionEntries>
@@ -8563,7 +8410,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                         </profile>
                       </profiles>
                       <costs>
-                        <cost name="pts" typeId="points" value="50"/>
+                        <cost name="pts" typeId="points" value="45"/>
                       </costs>
                       <infoLinks>
                         <infoLink name="Magical Ward" id="ec69-c837-7d34-9c23" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
@@ -8587,7 +8434,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                         </profile>
                       </profiles>
                       <costs>
-                        <cost name="pts" typeId="points" value="60"/>
+                        <cost name="pts" typeId="points" value="55"/>
                       </costs>
                       <infoLinks>
                         <infoLink name="Magical Ward" id="b19b-d43a-cba1-90eb" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
@@ -8620,7 +8467,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                       <profiles>
                         <profile name="Master Rune of Adamant" typeId="6aa2-7707-349b-6651" typeName="Armour Rune" hidden="false" id="2287-b973-55c9-bfce">
                           <characteristics>
-                            <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">A model wearing armour engraved with the Master Rune of Adamant can only be wounded on natural To Wound rolls of 6.</characteristic>
+                            <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">A model wearing armour engraved with the Master Rune of Adamant can only be wounded on natural To Wound rolls of 6. .</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -8682,12 +8529,12 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                 </modifier>
               </modifiers>
               <entryLinks>
-                <entryLink import="true" name="Rune of Preservation" hidden="false" id="81bd-4f9e-b6f0-1dcc" type="selectionEntry" targetId="ddfe-4651-4aed-bf02" sortIndex="5">
+                <entryLink import="true" name="Rune of Preservation" hidden="false" id="81bd-4f9e-b6f0-1dcc" type="selectionEntry" targetId="ddfe-4651-4aed-bf02" sortIndex="4">
                   <costs>
                     <cost name="pts" typeId="points" value="10"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Rune of Stone" hidden="false" id="6168-cd9a-7348-42c0" type="selectionEntry" targetId="4577-8e33-d04c-eba1" sortIndex="6">
+                <entryLink import="true" name="Rune of Stone" hidden="false" id="6168-cd9a-7348-42c0" type="selectionEntry" targetId="4577-8e33-d04c-eba1" sortIndex="5">
                   <costs>
                     <cost name="pts" typeId="points" value="10"/>
                   </costs>
@@ -8751,7 +8598,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                   <profiles>
                     <profile name="Heavy Metal Ingot" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="c028-1160-872c-a8cb">
                       <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">This item allows the wielder to re-roll failed armour saves and Ward Saves in any turn they have not moved.</characteristic>
+                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">This item allows the wielder to re-roll failed armour saves and invulnerable saves rolls of 1 in any turn they have not moved. </characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -8815,7 +8662,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
               <selectionEntryGroups>
                 <selectionEntryGroup name="Master Runes" id="051a-ef4d-6e90-4c50" hidden="false" sortIndex="1" flatten="true">
                   <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Master Rune of Challenge" hidden="false" id="db18-d492-833a-4583" collective="false" sortIndex="2">
+                    <selectionEntry type="upgrade" import="true" name="Master Rune of Challenge" hidden="false" id="db18-d492-833a-4583" collective="false" sortIndex="1">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4976-029d-2a29-1aff" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="21a9-71b7-0741-fe2f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8831,7 +8678,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                         <cost name="pts" typeId="points" value="15"/>
                       </costs>
                     </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Master Rune of Passage" hidden="false" id="97d8-4e54-1ed2-7c3d" collective="false" sortIndex="1">
+                    <selectionEntry type="upgrade" import="true" name="Master Rune of Passage" hidden="false" id="97d8-4e54-1ed2-7c3d" collective="false" sortIndex="2">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="be0f-54f3-5b28-4bef" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bdd5-4bb6-eaf9-05f9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8839,12 +8686,12 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                       <profiles>
                         <profile name="Master Rune of Passage" typeId="46dc-ac3a-6194-9dc2" typeName="Talismanic Rune" hidden="false" id="7912-78b8-3a1e-0f58">
                           <characteristics>
-                            <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">A model with the Master Rune of Passage, and any unit he joins, automatically pass any Dangerous Terrain tests.</characteristic>
+                            <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">A model with the Master Rune of Passage, and any unit he joins gains the Strider special rule. </characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
                       <costs>
-                        <cost name="pts" typeId="points" value="10"/>
+                        <cost name="pts" typeId="points" value="20"/>
                       </costs>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Master Rune of Spellbinding" hidden="false" id="04de-533e-140b-686c" collective="false" sortIndex="3">
@@ -8914,17 +8761,17 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                   <entryLinks>
                     <entryLink import="true" name="Rune of Warding (x1)" hidden="false" id="8d57-f1f2-c2fa-0889" type="selectionEntry" targetId="e921-82d1-3185-f12a" sortIndex="2">
                       <costs>
-                        <cost name="pts" typeId="points" value="15"/>
+                        <cost name="pts" typeId="points" value="10"/>
                       </costs>
                     </entryLink>
                     <entryLink import="true" name="Rune of Warding (x3)" hidden="false" id="a7ee-3398-55ba-c9e6" type="selectionEntry" targetId="2f9d-30b2-e9f2-8c8d" sortIndex="3">
                       <costs>
-                        <cost name="pts" typeId="points" value="45"/>
+                        <cost name="pts" typeId="points" value="40"/>
                       </costs>
                     </entryLink>
                     <entryLink import="true" name="Rune of Warding (x2)" hidden="false" id="0a03-2644-f6bd-9902" type="selectionEntry" targetId="4f22-a68c-0c96-48c6" sortIndex="2">
                       <costs>
-                        <cost name="pts" typeId="points" value="30"/>
+                        <cost name="pts" typeId="points" value="25"/>
                       </costs>
                     </entryLink>
                   </entryLinks>
@@ -8938,7 +8785,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                       <profiles>
                         <profile name="Rune of Spellbreaking (x1)" typeId="46dc-ac3a-6194-9dc2" typeName="Talismanic Rune" hidden="false" id="64b5-21d9-d7ac-fe0a">
                           <characteristics>
-                            <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">Runesmiths/Runelords only. One use only. When a spell has been cast, a Runesmith or Runelord can use this rune to dispel it automatically, without the need to roll dispel dice. This rune cannot be used to dispel Remains in Play spells other than at the moment they are cast.</characteristic>
+                            <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">One use only. When an enemy spell has been cast, the bearer can use it instead of attempting to dispel the spell by using dispel dice. This gives them 6 free dispel dice to attempt to dispel the spell, which cannot be combined with any other dispel dice (Ultimate Power applies as normal). This may also be used to dispel spells that Remains in Play. </characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -9008,7 +8855,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="af20-ae87-27d3-03ba" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fiery Ring of Thori" hidden="false" id="4927-6e1f-407e-a521" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Fiery Ring of Thori" hidden="false" id="4927-6e1f-407e-a521" collective="false" sortIndex="7">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a932-5746-ce1e-c678" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9674-6430-413b-f652" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9033,7 +8880,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Golden Sceptre of Norgrim" hidden="false" id="50f3-3663-22fd-8b4e" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Golden Sceptre of Norgrim" hidden="false" id="50f3-3663-22fd-8b4e" collective="false" sortIndex="4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2249-8572-a3b7-08d1" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fc9c-0bb3-ce4b-d382" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9041,15 +8888,15 @@ Any additional runes on the weapon will also take effect. After this, the weapon
               <profiles>
                 <profile name="Golden Sceptre of Norgrim" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="e45a-346c-605d-aaf8">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the start of each of your turns, you may bestow either +1 M, Strength or Armour save onto the bearer and any unit he is with. Each bonus last until the start of your next turn.</characteristic>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer and any unit they are with may re-roll 1&apos;s To Hit and To Wound in close combat.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="points" value="40"/>
+                <cost name="pts" typeId="points" value="30"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Focal Lens of Morgrim" hidden="false" id="eaf7-258a-5d42-10c1" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Focal Lens of Morgrim" hidden="false" id="eaf7-258a-5d42-10c1" collective="false" sortIndex="8">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0c83-d102-f12a-30d2" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4250-57d1-4d85-0c57" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9065,7 +8912,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Runic Tablet of Thungni" hidden="false" id="53ce-cdf9-3d95-5f69" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Runic Tablet of Thungni" hidden="false" id="53ce-cdf9-3d95-5f69" collective="false" sortIndex="5">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9b10-b373-e75c-cdd1" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="974e-a5a8-52c2-3bca" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9081,7 +8928,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Teardrop of Grungni" hidden="false" id="5780-d4ea-1db8-0740" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Teardrop of Grungni" hidden="false" id="5780-d4ea-1db8-0740" collective="false" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3b67-ea73-24b0-11ed" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9125-0524-b68e-5767" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9089,7 +8936,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
               <profiles>
                 <profile name="Teardrop of Grungni" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="ad69-2f46-7b63-ad45">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. This item can be used in any of your Shooting phases and has a 6&quot; range. The target automatically suffers D3 Strength 6 Hits. In addition, if the target is a lone model, it must halve all its Movement until the start of your next turn.</characteristic>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. This item is a missile attack with a 6&quot; range. The target automatically suffers D3 Strength 6 Hits. In addition, if the target is a lone model, it must halve all its Movement until the start of your next turn.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9097,7 +8944,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Silver Horn of Vengeance" hidden="false" id="8aa4-5dc7-968b-ca2f" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Silver Horn of Vengeance" hidden="false" id="8aa4-5dc7-968b-ca2f" collective="false" sortIndex="6">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8f54-4bab-ea39-92b7" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="720a-391f-28a3-233c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9113,7 +8960,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Healing Salve of Valaya" hidden="false" id="e915-c0cb-c043-cb38" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Healing Salve of Valaya" hidden="false" id="e915-c0cb-c043-cb38" collective="false" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fbcc-b90d-8fce-85df" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d768-2fcc-8663-3b17" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9129,7 +8976,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Resounding Gromril Horn" hidden="false" id="4616-c989-87cf-81f5" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Resounding Gromril Horn" hidden="false" id="4616-c989-87cf-81f5" collective="false" sortIndex="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8f83-1d0e-4f64-3f1e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6937-ec2d-3f60-0f35" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9236,7 +9083,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
               <profiles>
                 <profile name="Rune of the Reckless" typeId="7522-624a-d7e6-dd28" typeName="Runic Tattoo" hidden="false" id="6799-2d7b-a992-bda2">
                   <characteristics>
-                    <characteristic name="Effect" typeId="e733-22fc-fe56-04eb">A model with this runic tattoo gains the Frenzy special rule and gain +1 To Hit. However, enemy models that target this model in close combat also gain +1 To Hit.</characteristic>
+                    <characteristic name="Effect" typeId="e733-22fc-fe56-04eb">A model with this runic tattoo gains +1 To Hit and the Frenzy special rule. However, enemy models that target this model in close combat also gain +1 To Hit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9374,7 +9221,7 @@ After resolving the damage caused by a grudge buster bomb, roll a D6. On a 4+, t
         <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">9&quot;</characteristic>
         <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04">18&quot;</characteristic>
         <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
-        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
         <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1). Flaming Attacks. Quick Shot. This is a non-physical attack.</characteristic>
       </characteristics>
     </profile>
@@ -9455,9 +9302,9 @@ Each Hit from a cinderblast bomb is multiplied into D3 Hits.</characteristic>
         <characteristic name="Details" typeId="ec93-9bb1-8e60-51a9">All enemy units in base contact with the model suffer 2D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Rune of Oath and Honour" typeId="9dd3-c649-5416-b44f" typeName="Rune" hidden="false" id="429f-5cde-eca4-0163" noindex="true">
+    <profile name="Rune of Haste and Urgency" typeId="9dd3-c649-5416-b44f" typeName="Rune" hidden="false" id="429f-5cde-eca4-0163" noindex="true">
       <characteristics>
-        <characteristic name="Details" typeId="ec93-9bb1-8e60-51a9">The model and their unit gain the Swiftstride special rule until the start of your next turn.</characteristic>
+        <characteristic name="Details" typeId="ec93-9bb1-8e60-51a9"> The model and their unit gain +1 Movement and the Swiftstride special rule until the start of your next turn. </characteristic>
       </characteristics>
     </profile>
     <profile name="Gromril Armour" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="6f82-ea15-712f-4ee5" noindex="true">
@@ -9553,13 +9400,13 @@ Each Hit from a cinderblast bomb is multiplied into D3 Hits.</characteristic>
           <description>Runelords follow the rules for Level 4 Wizards for the purposes of channelling dispel dice and dispelling. Runesmiths follow the rules for Level 2 Wizards for the purposes of channelling dispel dice and dispelling. 
 
 
-In addition, a model with this special rule has four Runes. They may attempt to use one at the start of each of your turns by taking a Leadership test on their own unmodified Leadership. If passed, the Rune is struck and takes immediate effect. A unit can only be under the effect of one Rune at a time.</description>
+In addition, a model with this special rule has four Runes. Unless fleeing, they may attempt to use one at the start of each of your turns by taking a Leadership test on their own unmodified Leadership. If passed, the Rune is struck and takes immediate effect. A unit can only be under the effect of one Rune at a time.</description>
         </rule>
       </rules>
       <infoLinks>
         <infoLink name="Rune of Wrath and Ruin" id="fc24-d0a4-cbfa-a8f5" hidden="false" type="profile" targetId="8204-ac4d-f1bb-94c0"/>
         <infoLink name="Rune of Hearth and Hold" id="7342-01c6-ee11-f895" hidden="false" type="profile" targetId="0e84-b78f-cc00-ea9f"/>
-        <infoLink name="Rune of Oath and Honour" id="73e3-83a0-0a92-2210" hidden="false" type="profile" targetId="429f-5cde-eca4-0163"/>
+        <infoLink name="Rune of Haste and " id="73e3-83a0-0a92-2210" hidden="false" type="profile" targetId="429f-5cde-eca4-0163"/>
         <infoLink name="Rune of Stone and Steel" id="d254-c7de-0b3d-50f1" hidden="false" type="profile" targetId="b11d-7500-8513-8992"/>
       </infoLinks>
     </infoGroup>
