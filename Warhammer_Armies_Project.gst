@@ -1602,7 +1602,7 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self (6&quot;)</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from the Lore of Athel Loren is successfully cast, all enemy units suffer a -3&quot; penalty to their spell and weapon ranges in their next turn when targeting all friendly units within 6&quot; of the Wizard. This is a cumulative effect.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from the Lore of Athel Loren is successfully cast, all enemy units suffer a -3&quot; penalty to their spell and maximum weapon ranges in their next turn when targeting any friendly units within 6&quot; of the Wizard. This is a cumulative effect.</characteristic>
               </characteristics>
             </profile>
             <profile name="Tree Singing" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0537-9093-2be4-8b20">

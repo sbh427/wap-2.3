@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="23c3-d143-4355-c41d" name="Wood Elves WAP 3.0" gameSystemId="bdf8-b76e-2d7b-d47d" gameSystemRevision="61" revision="12" authorName="Leminge" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="23c3-d143-4355-c41d" name="Wood Elves WAP 3.1" gameSystemId="bdf8-b76e-2d7b-d47d" gameSystemRevision="61" revision="12" authorName="Leminge" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="model" import="true" name="Highborns" hidden="false" id="5a1c-e4ae-ae3a-3161" sortIndex="1">
       <entryLinks>
@@ -20,6 +20,21 @@
               <costs>
                 <cost name="pts" typeId="points" value="325"/>
               </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="Glade Lord only" field="annotation"/>
+                    <modifier type="set" value="0" field="378d-7ca8-afa6-fc93"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="ffde-7800-8634-f4bc" shared="true" childName="Tier 2 Character" includeChildSelections="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="69c6-9267-f088-e549" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="378d-7ca8-afa6-fc93" includeChildSelections="false"/>
+              </constraints>
             </entryLink>
             <entryLink import="true" name="Elven Steed" hidden="false" id="33a8-e21e-51fc-6dcd" type="selectionEntry" targetId="4612-bb63-8653-cb34" sortIndex="1">
               <costs>
@@ -575,7 +590,7 @@
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Spear" hidden="false" id="9e76-738f-893b-2224" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="2">
+            <entryLink import="true" name="Saearath " hidden="false" id="9e76-738f-893b-2224" type="selectionEntry" targetId="c911-dbfa-5447-fe24" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
@@ -859,6 +874,11 @@
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="6b37-187a-5a21-8e48" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+        <entryLink import="true" name="91. Forest Spites" hidden="false" id="afd1-9779-9208-d706" type="selectionEntryGroup" targetId="c850-af54-29c4-33ae">
+          <constraints>
+            <constraint type="max" value="100" field="points" scope="parent" shared="true" id="57e8-6b06-b199-c628"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Flammable" id="6aa5-d0be-cd91-3f81" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
@@ -1353,12 +1373,12 @@
               <entryLinks>
                 <entryLink import="true" name="Elven Longbow" hidden="false" id="a72e-e189-d844-8f4c" type="selectionEntry" targetId="4c0a-8554-3275-b8f2" sortIndex="2">
                   <costs>
-                    <cost name="pts" typeId="points" value="2"/>
+                    <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Elven Shortbow" hidden="false" id="6e0b-19df-9115-d256" type="selectionEntry" targetId="d5c0-c223-4cf2-18a3" sortIndex="1">
                   <costs>
-                    <cost name="pts" typeId="points" value="2"/>
+                    <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -1405,6 +1425,7 @@
           </entryLinks>
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="3f1f-82be-57dd-83aa" includeChildSelections="false"/>
+            <constraint type="max" value="15" field="selections" scope="parent" shared="true" id="afb5-4bf1-b0cf-cea6" includeChildSelections="false"/>
           </constraints>
           <infoLinks>
             <infoLink name="Asrai Archery" id="9a44-c541-8551-0524" hidden="false" type="rule" targetId="7a83-61cd-defa-0796"/>
@@ -2148,7 +2169,7 @@
               <entryLinks>
                 <entryLink import="true" name="Elven Longbow" hidden="false" id="6fd8-f387-13aa-fd2c" type="selectionEntry" targetId="4c0a-8554-3275-b8f2" sortIndex="2">
                   <costs>
-                    <cost name="pts" typeId="points" value="1"/>
+                    <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Elven Shortbow" hidden="false" id="129f-17c7-a8f5-80bf" type="selectionEntry" targetId="d5c0-c223-4cf2-18a3" sortIndex="1"/>
@@ -2469,7 +2490,7 @@
                 <entryLink import="true" name="Elven Shortbow" hidden="false" id="b23a-2ba5-3a53-ff5c" type="selectionEntry" targetId="d5c0-c223-4cf2-18a3" sortIndex="1"/>
                 <entryLink import="true" name="Elven Longbow" hidden="false" id="74cf-0322-9874-a4d3" type="selectionEntry" targetId="4c0a-8554-3275-b8f2" sortIndex="2">
                   <costs>
-                    <cost name="pts" typeId="points" value="2"/>
+                    <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -2547,8 +2568,7 @@
                     </profile>
                     <profile name="4 Nets" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="6895-c7b5-132c-0140">
                       <characteristics>
-                        <characteristic name="Result" typeId="686b-22d8-d67f-02eb">All enemy models in base contact with the Waywatchers must pass a Strength test or be unable
-to attack in the ensuing close combat.</characteristic>
+                        <characteristic name="Result" typeId="686b-22d8-d67f-02eb">D3 models in the enemy unit suffer -1 Attacks.</characteristic>
                       </characteristics>
                     </profile>
                     <profile name="5 Camouflaged Pit" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="e03e-91e5-4fc7-9b5b">
@@ -3361,7 +3381,7 @@ to attack in the ensuing close combat.</characteristic>
               </infoLinks>
               <rules>
                 <rule name="Choose Opponent" id="05e4-2e6d-0395-bf08" hidden="false">
-                  <description>In close combat, Wychwethyl can choose to attack any enemy model in the enemy unit, not just the models in base contact with him.</description>
+                  <description>In close combat, Wychwethyl can choose to attack any enemy model in the enemy unit (excluding Challanges), not just the models in base contact with him.</description>
                 </rule>
                 <rule name="Dance of Doom" id="8fbe-6d57-6dba-27c1" hidden="false">
                   <description>Wychwethyl can use the Dance of Doom instead of his normal Shadow Dances. If he does so, he gains +1 Attack for every enemy model in base contact with him</description>
@@ -3652,7 +3672,7 @@ to attack in the ensuing close combat.</characteristic>
                             <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04"/>
                             <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
                             <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
-                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Rapid Fire. Rather than rolling to Hit using Ballistic Skill, the target must pass a Weapon Skill test to avoid being Hit.</characteristic>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Rather than rolling to Hit using Ballistic Skill, the target must pass a Weapon Skill test to avoid being Hit.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3752,8 +3772,16 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
               </costs>
               <infoLinks>
                 <infoLink name="Skirmishers" id="2145-ad81-0283-6ba4" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
-                <infoLink name="Animal Form" id="96b0-b25f-7436-1d38" hidden="false" type="rule" targetId="09c9-ff2d-034f-228d"/>
-                <infoLink name="Elven Grace" id="89f3-db9e-3ed9-22be" hidden="false" type="infoGroup" targetId="b697-4417-5f4b-5140"/>
+                <infoLink name="Animal Form" id="96b0-b25f-7436-1d38" hidden="false" type="rule" targetId="09c9-ff2d-034f-228d">
+                  <modifiers>
+                    <modifier type="set" value="Gruarth only" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Elven Grace" id="89f3-db9e-3ed9-22be" hidden="false" type="infoGroup" targetId="b697-4417-5f4b-5140">
+                  <modifiers>
+                    <modifier type="set" value="Gruarth only" field="annotation"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink name="Fear" id="1c09-c4ba-7353-1c62" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
                 <infoLink name="Mixed Unit" id="3c98-1d94-655d-0d71" hidden="false" type="rule" targetId="e00a-3a09-9b67-e994"/>
                 <infoLink name="Wolf" id="ef72-cf90-08b3-6616" hidden="false" type="profile" targetId="271e-4a82-64f5-2cb6"/>
@@ -3775,7 +3803,7 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
               </infoLinks>
               <rules>
                 <rule name="Beastmaster" id="6dc4-2cd8-78be-88fd" hidden="false">
-                  <description>Fang and Claw are War Beasts (Canine) and Gruarth is their Handler. During the Movement phase, Fang and Claw may move away from Gruath if they wish, forming a unit of their own. They may return to Gruath in the Remaining Moves phase by moving within 1&quot; of him as long as neither of them is fleeing, in which case the unit will revert back to the normal Mixed Unit special rule. While Fang and Claw are more than 12&quot; away from Gruath they are subject to Frenzy. If both Fang and Claw are slain, Gruarth becomes subject to Hatred.</description>
+                  <description>Fang and Claw are War Beasts (Canine) and Gruarth is their Handler. If Gruath is slain, Fang and Claw become subject to Frenzy. If both Fang and Claw are slain, Gruarth becomes subject to Hatred</description>
                 </rule>
               </rules>
               <constraints>
@@ -3962,7 +3990,7 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
                         <profile name="Spear of Kurnous" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="0ae4-653d-aabc-e63c">
                           <characteristics>
                             <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
-                            <characteristic name="Range" typeId="1c88-efb0-083f-b945">18&quot;</characteristic>
+                            <characteristic name="Range" typeId="1c88-efb0-083f-b945">12&quot;/18&quot;</characteristic>
                             <characteristic name="Strength" typeId="6ca0-d074-628f-e276">+1</characteristic>
                             <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1), Multiple Wounds (D3)</characteristic>
                           </characteristics>
@@ -4267,8 +4295,8 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
                           <profiles>
                             <profile name="Talon of Dawn" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e534-f1c6-54ee-fe47">
                               <characteristics>
-                                <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
-                                <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04"/>
+                                <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+                                <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04">36&quot;</characteristic>
                                 <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
                                 <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
                                 <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Armour Piercing (1), Flaming Attacks, Multiple Wounds (D6).
@@ -4334,8 +4362,8 @@ If an attack from the Talon of Dawn causes one or more unsaved Wounds, they rega
                           <profiles>
                             <profile name="Talon of Dusk" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="7121-e1fa-cdce-93f2">
                               <characteristics>
-                                <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
-                                <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04"/>
+                                <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+                                <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04">36&quot;</characteristic>
                                 <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
                                 <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2D6</characteristic>
                                 <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Armour Piercing (1), Poisoned Attacks, Rapid Fire</characteristic>
@@ -4368,7 +4396,7 @@ If an attack from the Talon of Dawn causes one or more unsaved Wounds, they rega
               </selectionEntries>
               <rules>
                 <rule name="Conjoined Destiny" id="275c-b4d6-e245-077c" hidden="false">
-                  <description>If Naestra and Arahan have been reduced to less than 4 Wounds at the end of any turn, they will be restored to 4 Wounds.</description>
+                  <description>Naestra and Arahan counts as a single model for all purposes. If they have been reduced to less than 4 Wounds at the end of any turn, they will be restored to 4 Wounds</description>
                 </rule>
                 <rule name="Sisters of Twilight" id="520a-cac2-4d73-21cb" hidden="false">
                   <description>Naestra’s close combat attacks receive a +1 bonus To Wound against models from the Forces of Destruction. Arahan’s close combat attacks receive a +1 bonus To Wound against models from the Forces of Order.</description>
@@ -4660,7 +4688,7 @@ If an attack from the Talon of Dawn causes one or more unsaved Wounds, they rega
                       <profiles>
                         <profile name="Mantle of Leaves" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="d2c0-d701-b05f-206f">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item allows Belthanos to re-roll failed Ward saves.</characteristic>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item allows Belthanos to re-roll failed Magical Ward saves.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4830,7 +4858,7 @@ If an attack from the Talon of Dawn causes one or more unsaved Wounds, they rega
                       <profiles>
                         <profile name="Verdian Crown" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="9bf9-c710-bd03-7887">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">All friendly units with the Forest Spirit special rule within 6&quot; of the Lady of Vines counts as being in soft cover.</characteristic>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">All friendly units with the Forest Spirit special rule within 6&quot; of the Lady of Vines count as being in soft cover.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4963,13 +4991,6 @@ If an attack from the Talon of Dawn causes one or more unsaved Wounds, they rega
       <infoLinks>
         <infoLink name="Madow Chariot" id="66c0-2b6f-acf0-a515" hidden="false" type="infoGroup" targetId="7b43-d390-3801-7201"/>
       </infoLinks>
-      <modifiers>
-        <modifier type="increment" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="parent" childId="db07-0171-d107-92a1" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Forest Dragon" hidden="false" id="5b67-16b8-9579-4f53" sortIndex="49">
       <categoryLinks>
@@ -5106,10 +5127,10 @@ If an attack from the Talon of Dawn causes one or more unsaved Wounds, they rega
       <description>A Wizard that has this rule and is within 6&quot; of a forest gains a +1 casting and dispel bonus.</description>
     </rule>
     <rule name="Forest Stalker" id="bcd8-5d05-caa4-41d1" hidden="false">
-      <description>While inside a wood, models with this special rule are at an additional -1 to be Hit with missile attacks. In addition, they may deploy within 12&quot; of an enemy unit if they do so within a wood.</description>
+      <description>While inside a wood, models with this special rule are at an additional -1 to be Hit with missile attacks. In addition, when using the Scout special rule, they may deploy within 12&quot; of an enemy unit if they do so within a wood.</description>
     </rule>
     <rule name="Leathal Shot" id="e291-39f3-8f5e-54e2" hidden="false">
-      <description>Models with this rule have the Killing Blow special rule with missile attacks from their Elven longbows.</description>
+      <description>Models with this rule have the Killing Blow special rule with missile attacks from their Elven longbows or shortbows.</description>
     </rule>
     <rule name="Martial Memories" id="4260-7027-c2f1-9a1d" hidden="false">
       <description>Models with this rule may re-roll 1&apos;s when rolling To Hit and To Wound in close combat.</description>
@@ -5121,7 +5142,7 @@ If an attack from the Talon of Dawn causes one or more unsaved Wounds, they rega
       <description>Models with this rule may choose one of the Shadow Dances at the start of each round of close combat. This is done before Impact Hits are resolved. All models in the same unit must choose the same Shadow Dance. The effect of each Shadow Dancelasts until the end of that turn or until a new Shadow Dance is chosen. Models cannot choose the same Shadow Dance in two consecutive rounds of combat.</description>
     </rule>
     <rule name="Tree Aspects" id="1559-be95-1a35-56ca" hidden="false">
-      <description>Models with this special rule may choose one of the Tree Aspects at the start of each round of close combat. This is done before Impact Hits are resolved. All models in the same unit must choose the same Tree Aspect. The effect of each Tree Aspect lasts until the end of that turn or until a new Tree Aspect is chosen. Models cannot choose the Tree Aspect in two consecutive rounds of combat.</description>
+      <description>Models with this special rule may choose one of the Tree Aspects at the start of each round of close combat. This is done before Impact Hits are resolved. All models in the same unit must choose the same Tree Aspect. The effect of each Tree Aspect lasts until the end of that turn or until a new Tree Aspect is chosen. Models cannot choose the same Tree Aspect in two consecutive rounds of combat.</description>
     </rule>
     <rule name="Animal Form" id="09c9-ff2d-034f-228d" hidden="false">
       <description>Models with this special rule may choose one of the Animal Forms at the start of each round of close combat. This is done before Impact Hits are resolved. All models in the same unit must choose the same Animal Form. The effect of each Animal Form lasts until the end of that turn or until a new Animal Form is chosen. Models cannot choose the Animal Form in two consecutive rounds of combat.</description>
@@ -5254,13 +5275,6 @@ If an attack from the Talon of Dawn causes one or more unsaved Wounds, they rega
         <categoryLink name="Mount" hidden="false" id="5665-00e0-4adc-38af" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Chariot" hidden="false" id="11ee-fc62-4b45-3385" targetId="7224-b7fd-d652-3ff2" primary="false"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="increment" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="parent" childId="db07-0171-d107-92a1" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Strangleroots" hidden="false" id="36bb-ac79-f6de-50cc">
       <constraints>
@@ -5359,7 +5373,7 @@ If an attack from the Talon of Dawn causes one or more unsaved Wounds, they rega
       <profiles>
         <profile name="Starfire Shafts" typeId="20d2-b203-b36b-28c4" typeName="Enchanted Arrows" hidden="false" id="3fc3-d4ad-fee2-02f1">
           <characteristics>
-            <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Shooting attacks made with Starfire Shafts forces enemies to re-roll successful Panic tests caused by Heavy Casualties.</characteristic>
+            <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Shooting attacks made with Starfire Shafts have the Magical Attacks special rule and force enemies to re-roll successful Panic tests caused by Heavy Casualties.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5643,7 +5657,7 @@ This close combat attack can be used in addition to the model&apos;s other attac
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target must take a Stupidity test using an additional D6 (discarding the lowest result) in their next Movement phase.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target becomes subject to Stupidity until the start of your next Magic phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5712,7 +5726,7 @@ This Shooting attack can be used in addition to the models other shooting atta
           <profiles>
             <profile name="Hagbane Spite" typeId="b1e7-0b68-3680-1be6" typeName="Forest Spites" hidden="false" id="7353-8dda-3e73-7e24">
               <characteristics>
-                <characteristic name="Effect" typeId="0fc6-57af-c692-1ea3">One use only. A Hagbane Spite can be used after an enemy Wizard has successfully cast a spell instead of dispelling it. When used, the enemy Wizard automatically suffer D3 Hits that Wound on a 4+ with the Ignores Armour Saves special rule.</characteristic>
+                <characteristic name="Effect" typeId="0fc6-57af-c692-1ea3">One use only. A Hagbane Spite can be used after an enemy Wizard has successfully cast a spell within 24&quot; instead of dispelling it. When used, the enemy Wizard automatically suffers D3 Hits that Wound on a 4+ with the Ignores Armour Saves special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5722,10 +5736,10 @@ This Shooting attack can be used in addition to the models other shooting atta
             <profile name="A Pageant of Shrikes" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="7a67-7477-1827-ffc6">
               <characteristics>
                 <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
-                <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04">12&quot;</characteristic>
+                <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04">18&quot;</characteristic>
                 <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
                 <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
-                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magical Attacks, Slow to Fire, Sniper.
+                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magical Attacks, Cumbersome, Sniper.
 This Shooting attack can be used in addition to the models other shooting attacks.</characteristic>
               </characteristics>
             </profile>
@@ -6033,7 +6047,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                     <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                     <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour saves cannot be taken against Wounds caused by the Spirit Sword. Furthermore, immediately when an enemy single model unit (that is not an Animated Construct) or Character suffers one or more unsaved Wounds from the Spirit Sword, both they and the wielder must roll 2D6 and add their respective Leadership values. If the wounded model’s total is higher, or the totals are the same, nothing else happens. If the wounded model’s total is lower, it immediately suffers a Wound which Ignores Armour Saves for each point by which its total was exceeded.</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour saves cannot be taken against Wounds caused by the Spirit Sword. Furthermore, immediately when an enemy single model unit or Character suffers one or more unsaved Wounds from the Spirit Sword, both they and the wielder must roll 2D6 and add their respective Leadership values. If the wounded model’s total is higher, or the totals are the same, nothing else happens. If the wounded model’s total is lower, it immediately suffers a Wound which Ignores Armour Saves for each point by which its total was exceeded.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6185,7 +6199,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
-                    <modifier type="append" value="Parry (5+). Even while mounted." field="de63-d6da-efa8-00ac" join="
+                    <modifier type="append" value="Parry (5+)" field="de63-d6da-efa8-00ac" join="
 
 "/>
                   </modifiers>
@@ -6193,7 +6207,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                 <infoLink name="Spear" id="a21d-5aaf-2534-a0a3" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
                   <modifiers>
                     <modifier type="set" value="Spear of Daith" field="annotation"/>
-                    <modifier type="append" value="Parry (5+). Even while mounted." field="de63-d6da-efa8-00ac" join="
+                    <modifier type="append" value="Parry (5+)" field="de63-d6da-efa8-00ac" join="
 
 "/>
                     <modifier type="set" value="true" field="hidden">
@@ -6220,7 +6234,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                 <profile name="Spear of Daith" typeId="54b0-94fc-eb1e-8e37" typeName="Invulnerable save" hidden="false" id="70c6-3e4a-8157-12ba">
                   <characteristics>
                     <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
-                    <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+ even while mounted.</characteristic>
+                    <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6519,7 +6533,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                 <infoLink name="Light Armour" id="8936-6355-c530-5890" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
                   <modifiers>
                     <modifier type="set" value="Armour of the Fey" field="annotation"/>
-                    <modifier type="append" value="The Armour of the Fey gives the Ward Save (4+) special rule against Magical Attacks." field="ff58-91e4-84d7-e6e4" join="
+                    <modifier type="append" value="The Armour of the Fey gives the baerer the Magical Ward (4+) special rule against Magical Attacks." field="ff58-91e4-84d7-e6e4" join="
 
 "/>
                   </modifiers>
@@ -6639,8 +6653,8 @@ This Shooting attack can be used in addition to the models other shooting attack
                 </profile>
                 <profile name="Hail Arrow of Doom" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="3194-faee-db45-9cee">
                   <characteristics>
-                    <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
-                    <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04"/>
+                    <characteristic name="Effective Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+                    <characteristic name="Maximum Range" typeId="8376-d39e-87f3-ce04">36&quot;</characteristic>
                     <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
                     <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3D6</characteristic>
                     <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">One use only.</characteristic>
@@ -6688,12 +6702,12 @@ This Shooting attack can be used in addition to the models other shooting attack
               <profiles>
                 <profile name="Dragontooth Arrows" typeId="20d2-b203-b36b-28c4" typeName="Enchanted Arrows" hidden="false" id="8010-af54-8d1c-a43b">
                   <characteristics>
-                    <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Any Character, Monstrous Creature or Monster that is Wounded by Dragontooth Arrows gains the Stupidity special rule for the remainder of the game.</characteristic>
+                    <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Any Character, Monstrous Creature or Monster that suffers an unsaved Wound by Dragontooth Arrows gains the Stupidity special rule for the remainder of the game.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="669f-3e43-b6d9-dc72" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5b9-8716-e686-cca1" includeChildSelections="false"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
@@ -6738,7 +6752,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5975-e202-2092-0b53" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="108b-a143-2c3f-370d" includeChildSelections="false"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
@@ -6756,7 +6770,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="812a-ac25-6753-ae35" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b5b3-9ef0-c4d8-6213" includeChildSelections="false"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
@@ -6871,7 +6885,7 @@ This Shooting attack can be used in addition to the models other shooting attack
               <profiles>
                 <profile name="Crown of Fell Bowers" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="190f-9579-7124-9357">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer and any unit they are with gain +1 To Wound against all enemies in close combat.</characteristic>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer and any unit they are with gain +1 To Wound in close combat.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6931,12 +6945,12 @@ This Shooting attack can be used in addition to the models other shooting attack
               <profiles>
                 <profile name="Blight-Tipped Arrows" typeId="20d2-b203-b36b-28c4" typeName="Enchanted Arrows" hidden="false" id="661d-16de-b58f-5df3">
                   <characteristics>
-                    <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Any Character, Monstrous Creature or Monster that is Wounded by Blight-Tipped Arrows must pass a Toughness test at the start of each turn for the remainder of the game or suffer an additional Wound which Ignores Armour Saves.</characteristic>
+                    <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Any Character, Monstrous Creature or Monster that suffers an unsaved Wound by Blight-Tipped Arrows must pass a Toughness test at the start of each turn for the remainder of the game or suffer an additional Wound which Ignores Armour Saves.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7248-8fbd-f436-a0b6" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="67af-375c-417a-487e" includeChildSelections="false"/>
               </constraints>
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
@@ -6977,7 +6991,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e14c-3901-39be-de10" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d525-6ec5-f428-93d4" includeChildSelections="false"/>
               </constraints>
               <profiles>
                 <profile name="Orion&apos;s Favour" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="5e4e-4cb8-8eed-8e1b">
@@ -7026,7 +7040,7 @@ This Shooting attack can be used in addition to the models other shooting attack
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Elf Charm" hidden="false" id="321c-f1d8-0d18-4b56" sortIndex="5">
+            <selectionEntry type="upgrade" import="true" name="Elf Charm" hidden="false" id="321c-f1d8-0d18-4b56" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -7043,12 +7057,12 @@ This Shooting attack can be used in addition to the models other shooting attack
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Silverwood Circlet" hidden="false" id="9997-f2db-d17e-d9ec" sortIndex="6">
               <costs>
-                <cost name="pts" typeId="points" value="20"/>
+                <cost name="pts" typeId="points" value="30"/>
               </costs>
               <profiles>
                 <profile name="Silverwood Circlet" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="aa3d-cc35-601b-cd3f">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item adds +6&quot; to the range of all their spells.</characteristic>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item adds +12&quot; to the range of all their spells (excluding auras).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7056,14 +7070,14 @@ This Shooting attack can be used in addition to the models other shooting attack
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="40f6-c5ee-b87c-e282" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Deepwood Sphere" hidden="false" id="78a3-d1b9-b9e0-99b5" sortIndex="4">
+            <selectionEntry type="upgrade" import="true" name="Deepwood Sphere" hidden="false" id="78a3-d1b9-b9e0-99b5" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
               <profiles>
                 <profile name="Deepwood Sphere" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="329b-7577-672e-f034">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Any enemy unit that enters a forest within 18&quot; of the bearer of the Deepwood Sphere suffers D6 Strength 4 Hits as soon as they have finished their move. They continue to suffer D6 Strength 4 Hits at the start of any of their Movement phases for as long as they remain in the forest.</characteristic>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Any enemy unit that enters a forest within 18&quot; of the bearer of the Deepwood Sphere suffers D6 Strength 4 Hits as soon as they have finished their move. They continue to suffer D6 Strength 4 Hits at the start of any of their Movement phases for as long as they remain in the forest and the baerer of this item remains within range.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7071,7 +7085,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="be4d-561d-2f51-99f3" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Ranu&apos;s Heartstone" hidden="false" id="2bb7-214f-bda4-4304" sortIndex="10">
+            <selectionEntry type="upgrade" import="true" name="Ranu&apos;s Heartstone" hidden="false" id="2bb7-214f-bda4-4304" sortIndex="9">
               <costs>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
@@ -7086,7 +7100,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="47fa-da59-b0b3-3a24" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Divination Orb" hidden="false" id="b62c-4e61-06d4-a5b9" sortIndex="7">
+            <selectionEntry type="upgrade" import="true" name="Divination Orb" hidden="false" id="b62c-4e61-06d4-a5b9" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -7101,7 +7115,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5f76-9ef9-c624-bb75" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Viridencent Shawl" hidden="false" id="c6ca-e671-bd5c-b86f" sortIndex="8">
+            <selectionEntry type="upgrade" import="true" name="Viridencent Shawl" hidden="false" id="c6ca-e671-bd5c-b86f" sortIndex="7">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -7116,7 +7130,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="13d5-e653-2ecc-611a" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Orb of Midsummer" hidden="false" id="c582-6d0b-0f08-2c66" sortIndex="9">
+            <selectionEntry type="upgrade" import="true" name="Orb of Midsummer" hidden="false" id="c582-6d0b-0f08-2c66" sortIndex="8">
               <costs>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
@@ -7131,7 +7145,7 @@ This Shooting attack can be used in addition to the models other shooting attack
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Heartwood Pendant" hidden="false" id="f676-6e31-404d-9f9b" sortIndex="3">
+            <selectionEntry type="upgrade" import="true" name="Heartwood Pendant" hidden="false" id="f676-6e31-404d-9f9b" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="08db-6dfe-6bfd-41e5" includeChildSelections="true"/>
               </constraints>
@@ -7189,7 +7203,7 @@ This Shooting attack can be used in addition to the models other shooting attack
               <profiles>
                 <profile name="Rhymer&apos;s Harp " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="d033-0b95-bc34-979e">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Rhymer&apos;s Harp gives the bearer and any unit they join the Ward Save (5+) and Strider special rules.</characteristic>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Rhymer&apos;s Harp gives the bearer and any unit they join the Magical Ward (5+) and Strider special rules.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7272,7 +7286,7 @@ This Shooting attack can be used in addition to the models other shooting attack
               <profiles>
                 <profile name="Stone of the Crystal Mere " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="0ff8-cffc-cdf8-f012">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Stone of the Crystal Mere gives the bearer the Ward Save (3+) special rule. However, if this Ward Save is ever failed, then the stone shatters and the Ward Save is lost for the rest of the game.</characteristic>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Stone of the Crystal Mere gives the bearer the Magical Ward (3+) special rule. However, if this Ward Save is ever failed, The Magical Ward is lost for the rest of the game.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7295,7 +7309,7 @@ This Shooting attack can be used in addition to the models other shooting attack
               <profiles>
                 <profile name="Amaranthine Brooch " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="6813-5129-b993-8269">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Amaranthine Brooch gives the wearer the Ward Save (4+) special rule against non-Magical Attacks.</characteristic>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Amaranthine Brooch gives the wearer the Magical Ward (4+) special rule against non-Magical Attacks.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7553,7 +7567,7 @@ This Shooting attack can be used in addition to the models other shooting attack
           <profiles>
             <profile name="Banner of Midsummer&apos;s Eve" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="6a6c-63a7-25ac-ce2c">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard do not suffer To Hit penalties for shooting at enemies in cover.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard ignores To Hit penalties for shooting at enemies in cover.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7568,7 +7582,7 @@ This Shooting attack can be used in addition to the models other shooting attack
           <profiles>
             <profile name="Battle Standard of Athel Loren" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="829e-de40-1a31-eafc">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">Any enemy spell cast at a friendly unit within 12&quot; of this standard is automatically dispelled on the roll of a 5+.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">Whenever an enemy spell is cast at a friendly unit within 12&quot; of this standard, roll a D6; on a 5+, the spell is automatically dispelled.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7583,7 +7597,7 @@ This Shooting attack can be used in addition to the models other shooting attack
           <profiles>
             <profile name="Aech, the Banner of Springtide" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="0373-6ba2-79a0-d88e">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying Aech, the Banner of Springtide gains the Quick to Fire special rule and may fire Multiple Shots with their bows when choosing Stand &amp; Shoot as a charge reaction.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying Aech, the Banner of Springtide gains the Quick Shot special rule and may fire Multiple Shots with their bows when choosing Stand &amp; Shoot as a charge reaction.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7781,7 +7795,7 @@ This Shooting attack can be used in addition to the models other shooting attack
               <entryLinks>
                 <entryLink import="true" name="Elven Longbow" hidden="false" id="db07-0171-d107-92a1" type="selectionEntry" targetId="4c0a-8554-3275-b8f2" sortIndex="2">
                   <costs>
-                    <cost name="pts" typeId="points" value="2"/>
+                    <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Elven Shortbow" hidden="false" id="e0f4-b14d-a943-ab22" type="selectionEntry" targetId="d5c0-c223-4cf2-18a3" sortIndex="1">
@@ -7821,13 +7835,6 @@ This Shooting attack can be used in addition to the models other shooting attack
               </conditions>
             </modifierGroup>
           </modifierGroups>
-          <modifiers>
-            <modifier type="decrement" value="2" field="points">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="db07-0171-d107-92a1" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
