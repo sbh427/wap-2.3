@@ -7965,13 +7965,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
               <costs>
                 <cost name="pts" typeId="points" value="255"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="0" field="e097-e765-2573-a6e6">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <modifierGroups>
                 <modifierGroup type="and">
                   <modifiers>
@@ -10126,11 +10119,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <infoLink name="Wolf Chariot" id="72ef-954a-36dc-614b" hidden="false" type="infoGroup" targetId="9b0c-2e56-fd57-74c5"/>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="0" field="3cc3-2612-f02d-54fe">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
         <modifier type="increment" value="2" field="points">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="parent" childId="64d8-9c55-add5-6222" shared="true" includeChildSelections="true"/>
@@ -13904,9 +13892,14 @@ However, in case a Miscast is rolled when casting that spell, add 1 to the resu
           </costs>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="bd2a-1684-6cf4-5f4e" shared="true" includeChildSelections="true" childName="Forest Goblin"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="bd2a-1684-6cf4-5f4e" shared="true" includeChildSelections="true" childName="Forest Goblin"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="bd2a-1684-6cf4-5f4e" shared="true" includeChildSelections="true" childName="Forest Goblin" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -13927,9 +13920,14 @@ However, in case a Miscast is rolled when casting that spell, add 1 to the resu
           </costs>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="4b36-7dac-325f-8159" shared="true" includeChildSelections="true" childName="Night Goblin"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="4b36-7dac-325f-8159" shared="true" includeChildSelections="true" childName="Night Goblin"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4b36-7dac-325f-8159" shared="true" includeChildSelections="true" childName="Night Goblin" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -13950,9 +13948,14 @@ However, in case a Miscast is rolled when casting that spell, add 1 to the resu
           </costs>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="ecf2-7a83-41d1-17d0" shared="true" includeChildSelections="true" childName="Common Goblin"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="ecf2-7a83-41d1-17d0" shared="true" includeChildSelections="true" childName="Common Goblin"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="ecf2-7a83-41d1-17d0" shared="true" includeChildSelections="true" childName="Common Goblin" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -13973,11 +13976,18 @@ However, in case a Miscast is rolled when casting that spell, add 1 to the resu
           </costs>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="a528-b811-89e0-23b1" shared="true" includeChildSelections="true" childName="Common Orc"/>
-                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="5d89-ee6d-ffba-ec4f" shared="true" includeChildSelections="true" childName="Savage Orc"/>
-                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="506f-3894-ca76-cfe0" shared="true" includeChildSelections="true" childName="Black Orc"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="a528-b811-89e0-23b1" shared="true" includeChildSelections="true" childName="Common Orc"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="5d89-ee6d-ffba-ec4f" shared="true" includeChildSelections="true" childName="Savage Orc"/>
+                    <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="506f-3894-ca76-cfe0" shared="true" includeChildSelections="true" childName="Black Orc"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a528-b811-89e0-23b1" shared="true" includeChildSelections="true" childName="Common Orc" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="506f-3894-ca76-cfe0" shared="true" includeChildSelections="true" childName="Black Orc" includeChildForces="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="5d89-ee6d-ffba-ec4f" shared="true" includeChildSelections="true" childName="Savage Orc" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -14106,9 +14116,14 @@ However, in case a Miscast is rolled when casting that spell, add 1 to the resu
           </costs>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="0" field="selections" scope="ancestor" childId="bd2a-1684-6cf4-5f4e" shared="true" includeChildSelections="true" childName="Forest Goblin"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="ancestor" childId="bd2a-1684-6cf4-5f4e" shared="true" includeChildSelections="true" childName="Forest Goblin"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="bd2a-1684-6cf4-5f4e" shared="true" includeChildSelections="true" childName="Forest Goblin" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
