@@ -3802,13 +3802,13 @@ All attacks made by spells and magic items are Magical Attacks. Shots fired fro
       <alias>Magical Attack</alias>
     </rule>
     <rule id="38ba-d48a-be97-f830" name="Vanguard" hidden="false">
-      <description>When starting deployment, all units that choose to Vanguard must be deployed first. The players take it in turns to place their vanguards until they are finished. After this, all other units may be deployed as normal.
+      <description>After both sides have deployed all their other forces (including Scouts), but before the roll to see who gets the first turn is made, units containing only models with the Vanguard special rule can immediately make a move up to 6&quot; (12&quot; in case they move using the Swiftstride special rule) move regardless of their Movement value (they cannot march and are affected by terrain as normal). This cannot be used to move the Vanguard troops within 12&quot; of the enemy. A Vanguard move does not count as moving for the purpose of shooting in the first turn. 
 
 
-Models with this special rule may deploy up to a distance equal to their Movement characteristic (or 2D6&quot; in case they have Random Movement) beyond their deployment zone. However, this cannot be used to deploy a unit within 12&quot; of the enemy. Units that deploy this way cannot declare a charge in the first turn if their army goes first.
+If both players&apos; armies contain Vanguard troops, players should roll off. The players then alternate moving their Vanguard units one at a time, starting with the player who won the roll-off. 
 
 
-Note that a character may only join a unit deploying with the Vanguard special rule if they also have the same rule.</description>
+Units that have made a Vanguard move cannot declare a charge in the first turn if their army goes first. </description>
     </rule>
     <rule id="8877-a5de-cc9c-9142" name="Fast Cavalry" hidden="false">
       <description>Fast Cavalry have the following rules: 
@@ -3934,11 +3934,7 @@ If a unit would gain Mighty Blow in a round of close combat after the first for
       <alias>Mighty Blow</alias>
     </rule>
     <rule id="43ca-96e5-8a47-2d39" name="Volley Fire" hidden="false">
-      <description>When starting deployment, all units that choose to Vanguard must be deployed first.  
-
-Models with this special rule may deploy up to a distance equal to their Movement characteristic beyond of their deployment zone. However, this cannot be used to deploy a unit within 12&quot; of the enemy. Units that deploy this way cannot declare a charge in the first turn if their army goes first.
-
-Note that a character may only join a unit deploying with the Vanguard special rule if they also have the same rule.</description>
+      <description>Weapons with this rule allow the unit to fire with all ranks within range in the Shooting Phase rather than just the first two. However, if they do so, all models in the third and subsequent ranks suffer -1 To Hit. A unit cannot Volley Fire if the target is within half the weapon&apos;s maximum range. </description>
     </rule>
     <rule id="917c-1397-bf0b-5856" name="Ignores Armour Saves" hidden="false">
       <description>Wounds caused by a model with this special rule (or who is attacking with a weapon that has this special rule) ignore all armour saves regardless of value. Unless specified, Ignores Armour Saves only applies to close combat attacks.</description>
