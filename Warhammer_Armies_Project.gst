@@ -3808,7 +3808,7 @@ All attacks made by spells and magic items are Magical Attacks. Shots fired fro
 If both players&apos; armies contain Vanguard troops, players should roll off. The players then alternate moving their Vanguard units one at a time, starting with the player who won the roll-off. 
 
 
-Units that have made a Vanguard move cannot declare a charge in the first turn if their army goes first. </description>
+Units that have made a Vanguard move cannot declare a charge in the first turn if their army goes first.</description>
     </rule>
     <rule id="8877-a5de-cc9c-9142" name="Fast Cavalry" hidden="false">
       <description>Fast Cavalry have the following rules: 
@@ -3934,7 +3934,7 @@ If a unit would gain Mighty Blow in a round of close combat after the first for
       <alias>Mighty Blow</alias>
     </rule>
     <rule id="43ca-96e5-8a47-2d39" name="Volley Fire" hidden="false">
-      <description>Weapons with this rule allow the unit to fire with all ranks within range in the Shooting Phase rather than just the first two. However, if they do so, all models in the third and subsequent ranks suffer -1 To Hit. A unit cannot Volley Fire if the target is within half the weapon&apos;s maximum range. </description>
+      <description>Weapons with this rule allow the unit to fire with all ranks within range in the Shooting Phase rather than just the first two. However, if they do so, all models in the third and subsequent ranks suffer -1 To Hit. A unit cannot Volley Fire if the target is within half the weapon&apos;s maximum range.</description>
     </rule>
     <rule id="917c-1397-bf0b-5856" name="Ignores Armour Saves" hidden="false">
       <description>Wounds caused by a model with this special rule (or who is attacking with a weapon that has this special rule) ignore all armour saves regardless of value. Unless specified, Ignores Armour Saves only applies to close combat attacks.</description>
@@ -4023,7 +4023,7 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
       <description>Whenever a unit where the majority of the models have this special rule takes a Psychology or Break test, it rolls an additional dice and discards the highest result.</description>
     </rule>
     <rule id="2fc8-8eef-c508-0f80" name="Battle Prayers" hidden="false">
-      <description>A model with this special rule knows three Battle Prayers. They may attempt to use one at the start of each of your turns by taking a Leadership test on their own unmodified Leadership. If passed, the prayer is answered and take immediate effect. A friendly unit can only be under the effect of one Battle Prayer at a time.</description>
+      <description>A model with this special rule knows three Battle Prayers. Unless fleeing, they may attempt to use one at the start of each of your turns by taking a Leadership test on their own unmodified Leadership. If passed, the prayer is answered and takes immediate effect. A friendly unit can only be under the effect of one Battle Prayer at a time.</description>
     </rule>
     <rule id="4740-7f33-d5b8-5563" name="Slayer" hidden="false">
       <description>Slayers always Wound on a To Wound roll of 4+ in close combat, unless they would need a lower result. Use the Slayer&apos;s Strength to determine the armour save modifier for any successful Wounds.</description>
@@ -4415,9 +4415,9 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
     <profile id="7e43-605b-bfde-13c3" name="Great Cannon" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Great Cannon</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-60&quot;</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-72&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">10</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6). Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Cumbersome, Multiple Wounds (D6). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
     <profile id="2d26-2a21-00a2-685d" name="Bolt Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -5039,7 +5039,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Organ Gun</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12&quot;/24&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Shots (Artillery Dice + 3D6), Rapid Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Cumbersome, Multiple Shots (Artillery Dice + D6), Rapid Fire.</characteristic>
       </characteristics>
     </profile>
     <profile id="9765-f312-5a8b-5cb8" name="Repeater Bolt Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
