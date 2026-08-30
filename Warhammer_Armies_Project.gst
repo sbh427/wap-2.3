@@ -3763,9 +3763,6 @@ Some Leaders also have the option to take specialised equipment. If this is the
 
 A unit that is accompanied by a Musician may re-roll failed Leadership tests when attempting to march within 6&quot; of enemy units and rallying. Fast Cavalry and Skirmishers that have fled using Feigned Flight automatically rally.</description>
     </rule>
-    <rule id="7799-99da-2b8e-2941" name="Slow to Fire" hidden="false">
-      <description>Weapons with Slow to Fire cannot be used to Stand and Shoot.</description>
-    </rule>
     <rule id="7bd0-8602-4375-a731" name="Fear" hidden="false">
       <description>A unit containing one or more Fear-causing models gains +1 to its Combat Resolution score. If the Unit Strength of all Fear-causing models is double or more that of the total Unit Strength of all enemy units in base contact, the Combat Resolution score is increased by +2. Note that the bonus from Fear is otherwise not cumulative for having multiple units with the Fear 
 special rule involved in the same combat. 
@@ -4417,7 +4414,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Great Cannon</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-72&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">10</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Cumbersome, Multiple Wounds (D6). Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Cumbersome, Multiple Wounds (D6).</characteristic>
       </characteristics>
     </profile>
     <profile id="2d26-2a21-00a2-685d" name="Bolt Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -4425,7 +4422,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">32/48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">6</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Armour Piercing (1). Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Armour Piercing (1). Cumbersome.</characteristic>
       </characteristics>
     </profile>
     <profile id="4f25-d6c7-f4da-a808" name="Cannon" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -4433,7 +4430,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Cannon</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">10</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6/D3). Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6/D3). Cumbersome.</characteristic>
       </characteristics>
     </profile>
     <profile id="78db-91d9-aaca-d5ba" name="Grapeshot" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -4441,7 +4438,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Grapeshot</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1). Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1). Cumbersome.</characteristic>
       </characteristics>
     </profile>
     <profile id="8651-78f3-14e9-f66b" name="Stone Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -4449,7 +4446,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Stone Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4(8)</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Cumbersome.</characteristic>
       </characteristics>
     </profile>
     <profile id="d259-6f2a-d6a9-0eec" name="Fire Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -5047,7 +5044,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">32/48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Shots (6). Armour Piercing (1). Slow to Fire. Rapid Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Shots (6). Armour Piercing (1). Cumbersome. Rapid Fire.</characteristic>
       </characteristics>
     </profile>
     <profile id="c5ac-9a35-f3cf-7c0a" name="Mortar" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -5055,7 +5052,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Mortar</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">3(6)</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire. Armour Piercing (1).</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Cumbersome. Armour Piercing (1).</characteristic>
       </characteristics>
     </profile>
     <profile id="7c7a-74eb-5d2b-bc04" name="Rocket Launcher" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -5063,7 +5060,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Rocket Launcher</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks. Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks. Cumbersome.</characteristic>
       </characteristics>
     </profile>
     <profile id="bd05-6040-b879-d61a" name="The Eagle&apos;s Cry" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
