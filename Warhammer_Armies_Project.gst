@@ -5659,7 +5659,7 @@ All models under the template must roll a D6 per Wound on their profile – fo
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strenght 3 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 3 hits.</characteristic>
       </characteristics>
     </profile>
     <profile name="Oi! Geroff!" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ffaf-9052-2b3a-6fb2">
