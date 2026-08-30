@@ -3951,7 +3951,7 @@ If a model has the Killing Blow special rule from two or more different sources
 Heroic Killing Blow functions exactly like a normal Killing Blow, except it works on any troop type except for Swarms. Models with Immunity (Killing Blow) treat Heroic Killing Blow as normal Killing Blow.</description>
     </rule>
     <rule id="4dc2-df44-cb9c-2c9b" name="Heroic Killing Blow" hidden="false">
-      <description>If a model with Killing Blow rolls a 6 to wound in close combat, they automatically slay their opponent – regardless of the number of wounds on the victim&apos;s profile. Armour saves and regeneration saves cannot be taken against a Killing Blow. Ward Saves may be taken as normal.
+      <description>If a model with Killing Blow rolls a 6 to wound in close combat, they automatically slay their opponent – regardless of the number of wounds on the victim&apos;s profile. Armour saves and regeneration saves cannot be taken against a Killing Blow. Magical Ward saves may be taken as normal.
 
 Heroic Killing Blow is effective against all troop types except Swarms.
 
@@ -4091,7 +4091,7 @@ This rule is cumulative with other sources of Hold Your Ground. If the model ha
       <description>Models with the Mark of Slaanesh have the Immunity (Psychology) special rule and may re-roll the lowest dice on their charge and pursuit distances.</description>
     </rule>
     <rule name="Mark of Tzeentch" id="Mark of Tzeentch" hidden="false">
-      <description>Models with the Mark of Tzeentch have Magic Resistance (1) and Ward Save (6+).</description>
+      <description>Models with the Mark of Tzeentch have Magic Resistance (1) and Magical Ward (6+).</description>
     </rule>
     <rule id="92ff-eedb-a738-a73b" name="Ponderous" hidden="false">
       <description>Weapons with this rule suffer an additional -1 To Hit penalty if they move and shoot in the same turn, and when choosing Stand &amp; Shoot as a charge reaction.</description>
@@ -4333,7 +4333,7 @@ Note that this special rule is not cumulative. If two or more models in a unit 
       <description>Models with this rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
     </rule>
     <rule name="Daemonic" id="6940-194d-860b-18d4" hidden="false">
-      <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a Ward Save (5+) which gets reduced to a Ward Save (6+) against Magical Attacks.</description>
+      <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a Magical Ward (5+) which gets reduced to a Magical Ward (6+) against Magical Attacks.</description>
     </rule>
     <rule name="Cumbersome" id="7ef7-e8ef-ce58-8c93" hidden="false">
       <description>Models or Weapons with the Cumbersome special rule cannot be used to Stand and Shoot.</description>
@@ -5623,7 +5623,7 @@ All models under the template must roll a D6 per Wound on their profile – fo
     </profile>
     <profile name="Ethereal" typeId="54b0-94fc-eb1e-8e37" typeName="Invulnerable save" hidden="false" id="0d17-762d-8841-8d11">
       <characteristics>
-        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Magical Ward</characteristic>
         <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">2+ / 5+ against Magical Attacks</characteristic>
       </characteristics>
     </profile>
@@ -5640,7 +5640,7 @@ All models under the template must roll a D6 per Wound on their profile – fo
     </profile>
     <profile name="Daemonic" typeId="54b0-94fc-eb1e-8e37" typeName="Invulnerable save" hidden="false" id="377d-1fae-4a56-de9e">
       <characteristics>
-        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Magical Ward</characteristic>
         <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+ / 6+ against Magical Attacks.</characteristic>
       </characteristics>
     </profile>
@@ -5948,7 +5948,7 @@ Extend a straight line directly away from the caster&apos;s forward arc. Any m
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target may re-roll armour and Ward Save rolls of 1 until the start of the caster’s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target may re-roll armour and Magical Ward rolls of 1 until the start of the caster’s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile name="Blot of Change" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a5ec-478a-3431-76b3">
