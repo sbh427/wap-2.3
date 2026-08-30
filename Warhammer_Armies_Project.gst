@@ -2239,7 +2239,7 @@ All models hit by the template suffer a Strength 5 hit with the Multiple Wounds
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Roll a D6; on a 1 it has no effect, on a 2 to 3 that model suffers one Wound, on a 4 to 5 it suffers D3 Wounds and on a 6 it suffers D6 Wounds. These Wounds have Ignores Armour Saves. Each time a model is slain by Squiggly Curse, you can add +D3 to any further casting attempts made by the caster this Magic Phase.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Roll a D6; on a 1 it has no effect, on a 2 to 3 that model suffers one Wound, on a 4 to 5 it suffers D3 Wounds and on a 6 it suffers D6 Wounds. These Wounds have Ignores Armour Saves. Each time a model is slain by Squiggly Curse, you can add +2 to any further casting attempts made by the caster this Magic Phase.</characteristic>
               </characteristics>
             </profile>
             <profile name="Gork&apos;s War Cry" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7432-c7ca-3682-cbb3">
