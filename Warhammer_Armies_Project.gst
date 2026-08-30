@@ -2221,7 +2221,7 @@ All models hit by the template suffer a Strength 5 hit with the Multiple Wounds
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers 3D6 Attacks with Weapon Skill 3 and Strength 4, resolved as close combat attacks.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers 3D6 Attacks with Weapon Skill 3 and Strength 4, resolved as close combat attacks. Note that all hits are allocated onto the unit&apos;s rank and file models like missile attacks.</characteristic>
               </characteristics>
             </profile>
             <profile name="Bone Krusha" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1282-6192-4fdb-574d">
