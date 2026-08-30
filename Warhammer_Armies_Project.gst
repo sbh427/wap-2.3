@@ -2295,7 +2295,7 @@ the template at any point during its move suffers a Strength 5 hit. In addition
           <infoLinks>
             <infoLink name="Sneaky Stealin&apos;" id="fbca-7cb6-6d84-5024" hidden="false" targetId="c448-a828-b69c-be59" type="profile"/>
             <infoLink name="Vindictive Glare" id="d9b1-c9f8-00bf-14b3" hidden="false" targetId="f2fe-7a32-6f5a-cd9f" type="profile"/>
-            <infoLink name="Oi! Geroff!" id="12f5-401b-fe48-1501" hidden="false" targetId="ffaf-9052-2b3a-6fb2" type="profile"/>
+            <infoLink name="Oi! Gerroff!" id="12f5-401b-fe48-1501" hidden="false" targetId="ffaf-9052-2b3a-6fb2" type="profile"/>
             <infoLink name="Sneaky Stabbin&apos;" id="5819-d05b-d26b-ece4" hidden="false" targetId="552e-e369-af03-6e30" type="profile"/>
             <infoLink name="Brain Bursta" id="7af2-e4ec-c123-539a" hidden="false" targetId="3860-7301-7e83-915c" type="profile"/>
             <infoLink name="Gaze of Gork" id="813b-7dcf-ceb3-1aec" hidden="false" targetId="40dc-f03a-a858-cfd0" type="profile"/>
@@ -2402,7 +2402,7 @@ the template at any point during its move suffers a Strength 5 hit. In addition
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the targets treats all Ararchnids as causing Fear, and must re-roll successful Terror tests from Arachnarok Spiders.</characteristic>
               </characteristics>
             </profile>
-            <profile name="Gift of the Spider God" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b7b4-2391-d939-39d4">
+            <profile name="Gift of da Spider God" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b7b4-2391-d939-39d4">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -2506,7 +2506,7 @@ the template at any point during its move suffers a Strength 5 hit. In addition
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains the Regeneration (5+) special rule until the start of the caster&apos;s next Magic phase. Models that already have Regeneration (4+) or better may instead re-roll failed Regeneration saves.</characteristic>
               </characteristics>
             </profile>
-            <profile name="Torent of Filth" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0f6d-8f38-e306-b906">
+            <profile name="Torrent of Filth" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0f6d-8f38-e306-b906">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -5662,7 +5662,7 @@ All models under the template must roll a D6 per Wound on their profile – fo
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 3 hits.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Oi! Geroff!" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ffaf-9052-2b3a-6fb2">
+    <profile name="Oi! Gerroff!" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ffaf-9052-2b3a-6fb2">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
