@@ -1204,7 +1204,7 @@
             <infoLink name="Death Dealer" id="edcf-c5f1-824f-8297" hidden="false" targetId="28ca-81e0-f99c-c4f5" type="profile"/>
             <infoLink name="The Caress of Laniph" id="dc3b-e67f-64c4-c17a" hidden="false" targetId="eaec-4553-445b-fdc7" type="profile"/>
             <infoLink name="Spirit Leech" id="f8d9-0cf5-606a-feb9" hidden="false" targetId="a540-a939-e10c-27e0" type="profile"/>
-            <infoLink name="The Chocking Foe" id="feb7-955d-bd76-22cc" hidden="false" targetId="1fea-7441-0472-b626" type="profile"/>
+            <infoLink name="The Choking Foe" id="feb7-955d-bd76-22cc" hidden="false" targetId="1fea-7441-0472-b626" type="profile"/>
             <infoLink name="Wind of Death" id="1791-a018-1593-2d56" hidden="false" targetId="5b23-3e43-d010-d9ac" type="profile"/>
             <infoLink name="Drain Life" id="2e38-d0ae-0031-2fc3" hidden="false" targetId="90cc-1209-6eb5-4598" type="profile"/>
             <infoLink name="Scythe of Shyish" id="dc67-13c2-dd3e-ca90" hidden="false" targetId="c72d-5c12-7c36-3e9e" type="profile"/>
@@ -5519,7 +5519,7 @@ All models under the template suffer a Strength 4 hit.</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target unit gains the Fear special rule. In addition, any model in the target unit that is slain in close combat may immediately make an additional Attack, even if they have already attacked this turn.</characteristic>
       </characteristics>
     </profile>
-    <profile id="1fea-7441-0472-b626" name="The Chocking Foe" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="1fea-7441-0472-b626" name="The Choking Foe" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
