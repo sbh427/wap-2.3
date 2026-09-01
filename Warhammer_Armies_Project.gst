@@ -4990,7 +4990,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers -1 To Hit in close combat and with missile weapons, -1 Movement and -1 Initiative until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
