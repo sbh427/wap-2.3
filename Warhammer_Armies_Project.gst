@@ -1113,7 +1113,7 @@
             <infoLink name="The Cloak of Dain" id="724a-0ce8-786c-0dd0" hidden="false" targetId="c012-31a2-4d4b-bc09" type="profile"/>
             <infoLink name="Flesh to Stone" id="568b-1f05-7e7d-13b7" hidden="false" targetId="2e0a-69a8-1ef0-5f2d" type="profile"/>
             <infoLink name="Leaf Fall" id="b6ff-bd07-8eb4-0c1f" hidden="false" targetId="a4ee-d6b5-362f-3b38" type="profile"/>
-            <infoLink name="Verdant Apotheosis" id="3d66-3b6b-6dd0-48c6" hidden="false" targetId="6c55-6914-3b3c-b2af" type="profile"/>
+            <infoLink name="Gift of Life" id="3d66-3b6b-6dd0-48c6" hidden="false" targetId="6c55-6914-3b3c-b2af" type="profile"/>
             <infoLink name="Throne of Vines" id="2a31-611c-5c20-cf07" hidden="false" targetId="1635-78a9-dace-f919" type="profile"/>
             <infoLink name="Barkskin" id="6100-facc-e730-5241" hidden="false" targetId="6cca-3729-5ee4-ee9e" type="profile"/>
             <infoLink name="Mistress of the Marsh" id="41fb-84a4-08c4-375e" hidden="false" targetId="5c24-c18f-b641-36a0" type="profile"/>
@@ -5402,7 +5402,7 @@ All models under the template suffer a Strength 4 hit.</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All missile attacks targeting the affected units suffer a -1 To Hit penalty until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
-    <profile id="6c55-6914-3b3c-b2af" name="Verdant Apotheosis" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="6c55-6914-3b3c-b2af" name="Gift of Life" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
