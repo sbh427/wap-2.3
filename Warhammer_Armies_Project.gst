@@ -5058,7 +5058,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
     <profile id="7c7a-74eb-5d2b-bc04" name="Rocket Launcher" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Rocket Launcher</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-60&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks. Cumbersome.</characteristic>
       </characteristics>
