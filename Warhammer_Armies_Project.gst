@@ -1023,7 +1023,7 @@
             <infoLink name="Crystal Prison" id="6439-92de-f652-2913" hidden="false" targetId="3ef9-0ce4-239d-2baf" type="profile"/>
             <infoLink name="Portent of Doom" id="3469-e075-86d7-f586" hidden="false" targetId="7053-1cc0-e959-7b6a" type="profile"/>
             <infoLink name="The Sapphire Arch" id="25bb-fa98-a588-5431" hidden="false" targetId="a252-c31c-32b5-ee80" type="profile"/>
-            <infoLink name="Storm of Chronos" id="aba6-a174-5863-27a1" hidden="false" targetId="54d1-69d4-e6f7-e475" type="profile"/>
+            <infoLink name="Storm of Cronos" id="aba6-a174-5863-27a1" hidden="false" targetId="54d1-69d4-e6f7-e475" type="profile"/>
             <infoLink name="Urannon&apos;s Thunderbolt" id="30a6-0611-63d7-ce93" hidden="false" targetId="8bc4-459f-268d-0259" type="profile"/>
             <infoLink name="Comet of Casandora" id="b6e9-fb0e-64aa-9bdc" hidden="false" targetId="d667-970a-a36d-c1de" type="profile"/>
             <infoLink name="Chain Lightning" id="523a-cb87-f103-96d8" hidden="false" targetId="cf74-1c98-bc63-8ea6" type="profile"/>
@@ -5302,7 +5302,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is immediately picked up and removed from the battlefield. The unit will then emerge anywhere on the table at the start of your next Magic phase, just like a summoning spell.</characteristic>
       </characteristics>
     </profile>
-    <profile id="54d1-69d4-e6f7-e475" name="Storm of Chronos" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="54d1-69d4-e6f7-e475" name="Storm of Cronos" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage</characteristic>
