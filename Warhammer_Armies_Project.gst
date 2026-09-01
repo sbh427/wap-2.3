@@ -4405,7 +4405,7 @@ When a model marches, charges, flees, overruns or pursues into or through an ar
 Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangerous Terrain as being Deadly Terrain.</description>
     </rule>
     <rule name="Magical Ward" id="1bcb-4546-7f87-9b62" hidden="false">
-      <description>Models with this rule gain an invulnerable save as indicated in the brackets. This  invulnerable save receives a -1 penalty against wounds caused by Magical Attacks.</description>
+      <description>Models with this rule gain an invulnerable save as indicated in the brackets.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
