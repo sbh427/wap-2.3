@@ -979,7 +979,7 @@
             <infoLink name="Gehenna&apos;s Golden Hounds" id="bc89-811b-8909-5ac1" hidden="false" targetId="48c6-38af-6000-a450" type="profile"/>
             <infoLink name="Transmutation of Lead" id="9fbf-a136-75d5-9113" hidden="false" targetId="51f1-f0f3-356e-2520" type="profile"/>
             <infoLink name="The Gilded Cage" id="c57e-c671-ce43-0aa0" hidden="false" targetId="0b05-4983-c1bf-a836" type="profile"/>
-            <infoLink name="Quicksilver Sword" id="95ff-3ba2-c6ea-22e1" hidden="false" targetId="84c6-faad-709b-99ad" type="profile"/>
+            <infoLink name="Quicksilver Swords" id="95ff-3ba2-c6ea-22e1" hidden="false" targetId="84c6-faad-709b-99ad" type="profile"/>
             <infoLink name="Meteoric Ironclad" id="3360-0089-1b86-ec7a" hidden="false" targetId="283c-6023-f253-bf83" type="profile"/>
             <infoLink name="Final Transmutation" id="738e-efaa-38e7-7234" hidden="false" targetId="5fbf-bbf2-03d3-17d3" type="profile"/>
           </infoLinks>
@@ -5230,7 +5230,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains the Magical Ward (4+) special rule until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
-    <profile id="84c6-faad-709b-99ad" name="Quicksilver Sword" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="84c6-faad-709b-99ad" name="Quicksilver Swords" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
