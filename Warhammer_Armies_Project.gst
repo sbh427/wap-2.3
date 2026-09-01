@@ -1016,7 +1016,7 @@
           <infoLinks>
             <infoLink name="Fantastic Foresight" id="21c8-77cd-8293-6608" hidden="false" type="profile" targetId="64c1-2688-2cd5-b359"/>
             <infoLink name="Harmonic Convergence" id="cbf1-aadc-0126-1e40" hidden="false" targetId="91df-517b-9d00-5628" type="profile"/>
-            <infoLink name="Azur Blades" id="eff0-bbbe-16f8-7746" hidden="false" targetId="6803-b783-38e8-f03c" type="profile"/>
+            <infoLink name="Azure Blades" id="eff0-bbbe-16f8-7746" hidden="false" targetId="6803-b783-38e8-f03c" type="profile"/>
             <infoLink name="Star Tides Ebb" id="e7cd-1875-75d5-e207" hidden="false" targetId="5a3f-0100-e85d-447d" type="profile"/>
             <infoLink name="Cerulean Shield" id="75f1-27fc-c191-722a" hidden="false" targetId="7288-0be2-7efc-3db7" type="profile"/>
             <infoLink name="Sign of Amul" id="f8df-18b1-1220-8d6b" hidden="false" targetId="dec0-3cf7-c1ed-4428" type="profile"/>
@@ -5320,7 +5320,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move suffer a Strength 4 hit with the Lightning Attacks special rule.</characteristic>
       </characteristics>
     </profile>
-    <profile id="6803-b783-38e8-f03c" name="Azur Blades" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="6803-b783-38e8-f03c" name="Azure Blades" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
