@@ -3799,13 +3799,11 @@ All attacks made by spells and magic items are Magical Attacks. Shots fired fro
       <alias>Magical Attack</alias>
     </rule>
     <rule id="38ba-d48a-be97-f830" name="Vanguard" hidden="false">
-      <description>After both sides have deployed all their other forces (including Scouts), but before the roll to see who gets the first turn is made, units containing only models with the Vanguard special rule can immediately make a move up to 6&quot; (12&quot; in case they move using the Swiftstride special rule) move regardless of their Movement value (they cannot march and are affected by terrain as normal). This cannot be used to move the Vanguard troops within 12&quot; of the enemy. A Vanguard move does not count as moving for the purpose of shooting in the first turn. 
+      <description>When starting deployment, all units that choose to Vanguard must be deployed first. The players take it in turns to place their vanguards until they are finished. After this, all other units may be deployed as normal.
 
+Models with this special rule may deploy up to a distance equal to their Movement characteristic (or 2D6&quot; in case they have Random Movement) beyond their deployment zone. However, this cannot be used to deploy a unit within 12&quot; of the enemy. Units that deploy this way cannot declare a charge in the first turn if their army goes first.
 
-If both players&apos; armies contain Vanguard troops, players should roll off. The players then alternate moving their Vanguard units one at a time, starting with the player who won the roll-off. 
-
-
-Units that have made a Vanguard move cannot declare a charge in the first turn if their army goes first.</description>
+Note that a character may only join a unit deploying with the Vanguard special rule if they also have the same rule.</description>
     </rule>
     <rule id="8877-a5de-cc9c-9142" name="Fast Cavalry" hidden="false">
       <description>Fast Cavalry have the following rules: 
