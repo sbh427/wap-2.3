@@ -5050,7 +5050,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
     <profile id="c5ac-9a35-f3cf-7c0a" name="Mortar" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Mortar</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-60&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">3(6)</characteristic>
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Cumbersome. Armour Piercing (1).</characteristic>
       </characteristics>
