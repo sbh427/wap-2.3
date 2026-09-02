@@ -1,8 +1,9 @@
 # WAP data repo — working notes for rulebook update passes
 
-This file captures what was learned doing the Orcs & Goblins 3.0/3.1 update
-(gst + Armoury.cat + O&G cat, ~43 atomic commits), so the same playbook can
-be reused for the next army instead of rediscovering it from scratch.
+This file captures what was learned doing the Orcs & Goblins, Dwarfs,
+Amazons, and Empire 3.0/3.1 updates plus the core rulebook (gst/Armoury/
+Bestiary) pass, so the same playbook can be reused for the next army instead
+of rediscovering it from scratch.
 
 ## What this repo is
 
@@ -88,6 +89,99 @@ in an editor.
   (e.g. `Orc Warboss` / `Orc Big Boss` inside one `Orc Bosses` entry). Look
   for this pattern before assuming a named character entry is missing — it
   may have been absorbed into a merged entry under a different top-level name.
+- **Composition/constraint rules are often already implemented via a
+  mechanism invisible to a shallow grep near the unit's own block.** New
+  books frequently add "when Character X is present, Unit Y counts as a
+  different force-org category" or "Character X must be your Army General"
+  rules (a Knightly-Orders-style pattern: a choice that constrains the rest
+  of army composition, not just its own stat/cost). Before concluding one of
+  these is unenforced, grep the **whole file** for the actual mechanism, not
+  just text/id near the character's own entry — the mechanism usually lives
+  on the entries it *affects*, keyed off the character's (or their own
+  General-option's) id, not on the character's own block:
+  - FOC reclassification: `type="set-primary" field="category"`, generally
+    paired with `type="remove" field="category"` for the category being
+    replaced, gated by a `<condition>` checking `selections` of the trigger
+    character's (or their General-option entryLink's) id. Confirmed working
+    example: `wap_Dwarfs.cat`, Alrik's "Traditional army" and Ungrim's
+    "Slayer King" rules — a first audit pass declared both completely
+    unenforced by grepping near `<categoryLinks>` and the character's own
+    name; both were in fact fully correct, just implemented this way on the
+    *affected* units instead.
+  - "Must be Army General": often a shared gst-level template
+    (`selectionEntryGroup`, look for a comment/name like "General min 1")
+    reused across many army files, referenced indirectly rather than
+    spelled out per-character. A shallow per-character grep will
+    false-negative this the same way as above.
+  - Mandatory escort/companion unit: an error-triggering `<condition>` +
+    modifier pair (compare a working example before concluding one is
+    missing — O&G's Grom/Grimgor and Dwarfs' Josef Bugman all use this).
+  - **The base "Duplicate Choices" rule (how many copies of a Special/Rare
+    unit you may take, scaled by army points) is not mechanically enforced
+    anywhere in this codebase, for any unit, in any army file** — it's
+    reference-table text the player self-applies. A character ability that
+    modifies this (O&G's Grimgor halving it for Black Orcs, Dwarfs' Alrik
+    doubling several war machines' count) is therefore correctly left as
+    text-only too — building real enforcement for one specific case would
+    require inventing a new points-bracket-scaled constraint mechanism (the
+    game's declared points limit *is* accessible to conditions/constraints
+    via `field="limit::points"`, already used for the standard FOC
+    percentage-of-points category constraints — so it's technically
+    buildable, just without any precedent for this specific use, and doing
+    it for one unit while the base rule stays unenforced everywhere else is
+    its own inconsistency) — don't build this without being asked to.
+
+## Dangling references (New Recruit load errors)
+
+A merge, rename, or deletion can leave a reference pointing at an id that no
+longer (or never did) exist anywhere in the repo. New Recruit reports these
+as load errors; they are invisible to `lxml.etree.parse` (which only checks
+well-formedness, not that references resolve) and easy to undercount if you
+only grep for one of the three places BattleScribe stores this kind of
+reference:
+
+- `targetId="..."` on `infoLink`/`entryLink`/`categoryLink` — the obvious one.
+- `childId="..."` on `<condition>`/`<repeat>` — used by roster-selection and
+  duplicate-count logic. Easy to miss because it reads like a normal
+  attribute, not a "this points at another element" attribute.
+- `value="..."` on `<modifier field="category" type="add|remove|set-primary">`
+  — grants/strips/switches an entry's force-org category. The id lives in
+  `value=`, not `targetId=`, so a `targetId`-only dangling-ref sweep will
+  silently miss it (this is exactly how a first fix-pass on Amazons declared
+  the file clean when 4 of these were still broken).
+
+**Use `tools/check_dangling_refs.py`** (checked into this repo) rather than
+re-deriving this by hand — it checks all three patterns against every id
+defined anywhere in the repo's `.cat`/`.gst` files:
+```
+python3 tools/check_dangling_refs.py wap_Dwarfs.cat   # check one file you're actively working on
+python3 tools/check_dangling_refs.py                  # whole-repo audit (see caveat below)
+```
+Run it against whatever file(s) you just edited before considering a Gate B
+pass done — especially after any merge, rename, or deletion, since those are
+what create dangling refs in the first place. **Caveat for whole-repo mode**:
+armies that haven't been through a 3.0+ migration pass yet still reference
+the *old* pre-3.0 gst/Armoury/Bestiary structure, which no longer matches
+after those 3 files were rewritten — their dangling-ref counts are large,
+pre-existing, and not a regression to fix now, just noise until each of
+those armies gets its own migration pass.
+
+`childId=`/`value=` also carry BattleScribe's reserved scope keywords
+(`any`, `model`, `unit`, `mount`, `crew`, `parent`, `force`, `roster`, ...)
+which are not references at all — the script tells these apart from real
+ids by shape (`[0-9a-f]{2,4}(-[0-9a-f]{2,4}){3}`, e.g. `d38a-73da-883b-bab9`)
+rather than a hardcoded keyword list, so it won't false-positive on a new
+keyword it hasn't seen before.
+
+A recurring specific case worth knowing about: a fabricated "Lords" FOC
+category (id `d280-b7df-c185-2ba5`) that was never actually defined anywhere
+in this repo shows up repeatedly across multiple armies' Lord/Hero-merge
+scaffolding (O&G, Amazons at minimum) — always redundant/dead when paired
+with a real `Characters` category check, but occasionally gating something
+that actually should have fired (Amazons' Stegadon-mount crew reduction was
+silently dead code because of exactly this, not just visual clutter — check
+what a dangling condition *was supposed to do* via the PDF before assuming
+its removal is a no-op).
 
 ## Text-encoding gotchas (these caused most of the wasted edit attempts)
 
@@ -188,14 +282,20 @@ The rulebook PDFs are two different layouts:
    that touches more lines than the specific field you meant to change is a
    sign the edit anchor was wrong.
 
-## Tooling (prototyped this session, not currently checked into the repo)
+## Tooling
 
-A small Python toolkit was built and iterated in the session scratchpad:
-`wap_tools.py` (namespace-aware XML load/find/inspect helpers for the .cat/
-.gst files), `pdf_columns.py` (pymupdf 2-column extraction), `pdf_tools.py`
+`tools/` is checked into the repo (`.gitignore` has an allowlist entry for
+it) and is the place to add scripts meant to outlive a single session:
+
+- `tools/check_dangling_refs.py` — the referential-integrity checker
+  described above. Run it against the file(s) you're working on before
+  considering a Gate B pass done.
+
+Everything else used this session was prototyped in the session scratchpad
+and never committed: `wap_tools.py` (namespace-aware XML load/find/inspect
+helpers), `pdf_columns.py` (pymupdf 2-column extraction), `pdf_tools.py`
 (single-column profile-table parser), `pdf_items.py` (magic-item block
-parser), `pdf_spells.py` (lore spell-block parser). None of these are
-committed here — `.gitignore` excludes everything except `*.cat`/`*.gst`/
-`*.md`/`/pictures`/`/.github`/`*.yml`, so a future session will need to
-rebuild them (the notes above should make that fast) or you can ask to have
-them added under a `tools/` directory with a `.gitignore` allowlist entry.
+parser), `pdf_spells.py` (lore spell-block parser). A future session will
+need to rebuild these (the notes above should make that fast) — or, if one
+turns out to be broadly reusable the way the dangling-ref checker did, ask
+to have it added under `tools/` too rather than re-prototyping it forever.
