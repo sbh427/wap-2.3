@@ -2548,7 +2548,7 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While this spell is in effect, add +1 to the result of all Wounds recovered from the The Restless Dead due to spells being cast by this Wizard. (This can trigger The Restless Dead for any unitthey are with)</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While this spell is in effect, add +1 to the result of all Wounds recovered from the The Restless Dead due to spells being cast by this Wizard. (This can trigger The Restless Dead for any unit they are with)</characteristic>
               </characteristics>
             </profile>
             <profile name="Khsar&apos;s Incantation of the Desert Wind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2df4-cfc3-0ca2-8639">
