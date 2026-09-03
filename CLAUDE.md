@@ -1,9 +1,9 @@
 # WAP data repo — working notes for rulebook update passes
 
 This file captures what was learned doing the Orcs & Goblins, Dwarfs,
-Amazons, and Empire 3.0/3.1 updates plus the core rulebook (gst/Armoury/
-Bestiary) pass, so the same playbook can be reused for the next army instead
-of rediscovering it from scratch.
+Amazons, Empire, and High Elves 3.0/3.1 updates plus the core rulebook
+(gst/Armoury/Bestiary) pass, so the same playbook can be reused for the next
+army instead of rediscovering it from scratch.
 
 ## What this repo is
 
@@ -176,12 +176,15 @@ keyword it hasn't seen before.
 A recurring specific case worth knowing about: a fabricated "Lords" FOC
 category (id `d280-b7df-c185-2ba5`) that was never actually defined anywhere
 in this repo shows up repeatedly across multiple armies' Lord/Hero-merge
-scaffolding (O&G, Amazons at minimum) — always redundant/dead when paired
-with a real `Characters` category check, but occasionally gating something
-that actually should have fired (Amazons' Stegadon-mount crew reduction was
-silently dead code because of exactly this, not just visual clutter — check
-what a dangling condition *was supposed to do* via the PDF before assuming
-its removal is a no-op).
+scaffolding — confirmed in O&G, Amazons, and High Elves so far, always the
+same id — always redundant/dead when paired with a real `Characters`
+category check, but occasionally gating something that actually should have
+fired (Amazons' Stegadon-mount crew reduction was silently dead code because
+of exactly this, not just visual clutter — check what a dangling condition
+*was supposed to do* via the PDF before assuming its removal is a no-op).
+Given it's now shown up in 3 of 4 completed armies, **run
+`tools/check_dangling_refs.py` on any newly-migrated file as one of the
+first steps**, not just at the end — expect to find this id again.
 
 ## Text-encoding gotchas (these caused most of the wasted edit attempts)
 
@@ -281,6 +284,46 @@ The rulebook PDFs are two different layouts:
    (`lxml.etree.parse`) and review the diff before every commit — a diff
    that touches more lines than the specific field you meant to change is a
    sign the edit anchor was wrong.
+6. **A file already labeled with the target version (e.g. "WAP 3.1") needs
+   just as much scrutiny as one still at the old version — budget for
+   multiple audit rounds, not one.** Dwarfs, Empire, and High Elves all
+   already carried the "3.1" label from prior work when their audits
+   started, and all three needed 2-4 rounds before the changeset was
+   actually complete — each round finding real, previously-missed gaps
+   (typos, missing rules, wrong stats, unenforced constraints), never zero
+   new findings on the first pass. Don't treat an "already migrated" label,
+   or a first-round "looks mostly done" result, as a reason to stop early;
+   have each round explicitly say whether it's confident the changeset is
+   complete or whether another pass is still warranted, and believe that
+   self-assessment (this worked well across all three — the agent doing the
+   audit consistently gave an honest "not done yet, here's what's left"
+   rather than declaring premature victory).
+7. **When diffing costs/stats, diff the new PDF against the current XML
+   value, not just new-PDF-against-old-PDF.** A pure PDF-vs-PDF diff finds
+   every value that *changed between editions*, but says nothing about
+   whether the XML already has the new value — on High Elves, 17 flagged
+   "cost changed" items turned out to already be correct in the XML (an
+   earlier pass had already applied them), and re-flagging them as fixes
+   would have been wasted work at best. Always confirm against the live
+   file before adding something to the fix list.
+8. **When sweeping costs, read the whole stat line, not just the cost
+   column.** The one real bug hiding among High Elves' 17 "cost" flags
+   (Dragon Mage's Weapon Skill, 5 instead of 4) was only caught because the
+   full profile row was checked alongside the cost, not because the cost
+   itself was wrong.
+9. **A conclusion reached by reading the XML statically ("this mechanism
+   looks disconnected/unimplemented") is a hypothesis, not a fact, when the
+   BattleScribe scope/constraint semantics involved are non-obvious** (e.g.
+   whether `scope="parent"` on a constraint recurses into a nested child
+   group without an explicit `includeChildSelections` — this project's own
+   established pattern says yes, but the semantics aren't independently
+   verified anywhere in this codebase). Present the technical read plainly,
+   including the specific evidence for it, but don't assert it as a
+   confirmed bug — if the user can check it directly in New Recruit, that
+   empirical result overrides a plausible-but-unconfirmed textual reading
+   (this happened on High Elves' Elven Honours allowance: a specific,
+   well-evidenced hypothesis about a missing attribute turned out to be
+   wrong once the user checked in the actual tool).
 
 ## Tooling
 
