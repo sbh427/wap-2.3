@@ -1398,7 +1398,7 @@
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">self</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell isin effect, the Wizard adds 12&quot; to the casting range of all their spells (excluding auras) and their dispel range, can draw Line of Sight in any direction and counts as having a Line of Sight value of 5.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the Wizard adds 12&quot; to the casting range of all their spells (excluding auras) and their dispel range, can draw Line of Sight in any direction and counts as having a Line of Sight value of 5.</characteristic>
               </characteristics>
             </profile>
             <profile name="Walk Between Worlds" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b60d-7a5e-9ee9-08bb">
