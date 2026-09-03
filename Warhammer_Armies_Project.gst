@@ -2593,7 +2593,7 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a Magical Ward (5+) until the start of the caster&apos;s Magic phase.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a Magical Ward (5+) until the start of the caster&apos;s next Magic phase.</characteristic>
               </characteristics>
             </profile>
             <profile name="Ptra&apos;s Incantation of Righteous Smiting" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="41b2-3409-0231-afa3">
