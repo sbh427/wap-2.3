@@ -6577,8 +6577,119 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
         <categoryLink name="Wizard" hidden="false" id="ef03-3b61-1cc4-37b6" targetId="1aae-2529-c509-7573" primary="false"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Necrarch Vampire Lord" hidden="false" id="2b17-9954-5192-2392" collective="false" sortIndex="2">
-      <profiles>
+    <selectionEntry type="model" import="true" name="Necrarch" hidden="false" id="b18d-9672-167d-a0e0" collective="false" sortIndex="2"><entryLinks><entryLink import="true" name="5. Character Selection" hidden="false" id="bed0-efa2-0995-40bd" type="selectionEntryGroup" targetId="405b-a985-02d7-eeff"><entryLinks><entryLink import="true" name="Tier 1 Character" hidden="false" id="e57c-b88d-b930-fe20" type="selectionEntry" targetId="bec4-b947-a609-684a"><profiles>
+        <profile name="Necrarch Vampire" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a839-1da3-6c2c-d677">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Vampire, Necrarch)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="The Red Thirst" id="2250-aa1a-fce3-07c1" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
+        <infoLink name="Vampiric" id="ff63-d25e-9224-1063" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="65. Lores of Magic" id="c597-354c-ea9e-2ca0" hidden="false" defaultSelectionEntryId="50ec-6d64-233e-01fd">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc5b-7ab2-4d22-1088"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e691-4fe3-6cfc-2984"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Lore of Heavens" hidden="false" id="0856-3f21-e556-dff4" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="cea3-acdf-990d-35fb" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
+            <entryLink import="true" name="Lore of Necromancy" hidden="false" id="4556-1d44-c95b-18bb" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="546c-0af2-688e-86fd" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+            <entryLink import="true" name="Lore of Metal" hidden="false" id="b871-031f-7283-2ef6" type="selectionEntry" targetId="527f-89f1-1b92-a01d"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="70"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="86e0-b70c-87f9-fb19" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
+          <entryLinks>
+            <entryLink import="true" name="Army Battle Standard" hidden="false" id="89b1-3d0d-eb8b-6451" type="selectionEntry" targetId="b1d9-62fb-2ed9-b1a4">
+              <entryLinks>
+                <entryLink import="true" name="Magic Standards" hidden="false" id="2f8e-86b0-c4a3-29a7" type="selectionEntryGroup" targetId="a3ca-ccf2-444b-f177"/>
+              </entryLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="model" childId="d322-3c7a-6d1e-7dc2" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c005-1d87-4ac0-f2a4"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="9a8f-45b8-0ef0-f69b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="7c5d-2a11-fb32-126d" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="19a7-24b1-26c8-491c"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="80. Vampiric Powers &amp; Magic Items" hidden="false" id="88a2-9da9-fd6b-82dd" type="selectionEntryGroup" targetId="0175-7a22-f4a1-c988">
+          <modifiers>
+            <modifier type="increment" value="50" field="1c80-33ff-c462-8849"/>
+            <modifier type="decrement" value="25" field="1c80-33ff-c462-8849">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model" childId="2f8e-86b0-c4a3-29a7" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="70. Mount" hidden="false" id="c1ff-a8b9-14ba-23e2" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+          <entryLinks>
+            <entryLink import="true" name="Nightmare" hidden="false" id="33d2-5ba4-2bd1-3d64" type="selectionEntry" targetId="288d-c0a8-77de-61e7" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="21"/>
+              </costs>
+              <entryLinks>
+                <entryLink import="true" name="Barding" hidden="false" id="daf5-3367-54cc-3556" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="Hellsteed" hidden="false" id="2527-f466-4da4-5348" type="selectionEntry" targetId="5ecd-9b99-4f8f-e3ab" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Abyssal Terror" hidden="false" id="c902-f956-992a-60e0" type="selectionEntry" targetId="9a59-eb87-1cf2-64b3" sortIndex="3"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="e2a0-2bc4-df88-d265" type="selectionEntryGroup" targetId="6921-bd2a-e7cb-9029"/>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Characters" hidden="false" id="659e-891d-eb80-dd95" targetId="d38a-73da-883b-bab9" primary="true"/>
+        <categoryLink name="Vampire" hidden="false" id="7bac-bdb2-76cf-c6c8" targetId="27c2-45b8-9859-dda4" primary="false"/>
+        <categoryLink name="Necrarch" hidden="false" id="6cbc-2ff4-1f38-8f75" targetId="9311-1c3e-4507-2477" primary="false"/>
+        <categoryLink name="Z Barding" hidden="false" id="28a6-d268-39ce-0ca6" targetId="e650-a901-f069-ca88" primary="false"/>
+        <categoryLink name="Infantry" hidden="false" id="e6ad-9eb7-29f4-6188" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="Wizard" hidden="false" id="1d2f-a7bc-bd36-4d27" targetId="1aae-2529-c509-7573" primary="false"/>
+      </categoryLinks>
+    <modifiers><modifier type="set" value="Acolyte" field="name"/><modifier type="set" value="Acolyte" field="name" scope="root-entry"/></modifiers></entryLink><entryLink import="true" name="Tier 2 Character" hidden="false" id="5486-e5bf-1363-98ab" type="selectionEntry" targetId="ffde-7800-8634-f4bc"><profiles>
         <profile name="Necrarch Vampire Lord" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f478-a022-b785-2bb2">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
@@ -6678,8 +6789,7 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
         <categoryLink name="Infantry" hidden="false" id="a23f-a2bd-b6a7-837e" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Wizard" hidden="false" id="48ac-1bf1-6da6-1321" targetId="1aae-2529-c509-7573" primary="false"/>
       </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Strigoi Vampire Lord" hidden="false" id="b5bd-d75e-d59a-7dc6" collective="false" sortIndex="5">
+    <modifiers><modifier type="set" value="Master" field="name"/><modifier type="set" value="Master" field="name" scope="root-entry"/></modifiers></entryLink></entryLinks></entryLink></entryLinks><costs><cost name="pts" typeId="points" value="70"/></costs><categoryLinks><categoryLink name="Characters" hidden="false" id="d8de-1b3e-8642-23e1" targetId="d38a-73da-883b-bab9" primary="true"/><categoryLink name="Necrarch" hidden="false" id="3dae-d633-23ec-1005" targetId="9311-1c3e-4507-2477" primary="false"/><categoryLink name="Vampire" hidden="false" id="5149-ed7d-3c2e-1920" targetId="27c2-45b8-9859-dda4" primary="false"/><categoryLink name="Infantry" hidden="false" id="8fc4-85d8-dd7f-39e8" targetId="22c9-1606-58f8-2e60" primary="false"/><categoryLink name="Wizard" hidden="false" id="30df-0306-3655-014e" targetId="1aae-2529-c509-7573" primary="false"/></categoryLinks></selectionEntry><selectionEntry type="model" import="true" name="Strigoi Vampire Lord" hidden="false" id="b5bd-d75e-d59a-7dc6" collective="false" sortIndex="5">
       <profiles>
         <profile name="Strigoi Vampire Lord" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1d12-c7d7-04cb-f042">
           <characteristics>
@@ -7411,120 +7521,6 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
         <categoryLink name="Vampire" hidden="false" id="9f96-c343-2aad-be69" targetId="27c2-45b8-9859-dda4" primary="false"/>
         <categoryLink name="Infantry" hidden="false" id="52f8-dbd4-0d85-2dd6" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Z Armour" hidden="false" id="f18b-45dd-f0b5-b3de" targetId="387c-2b7c-0a30-7305" primary="false"/>
-      </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Necrarch Vampire" hidden="false" id="d60e-2f5a-dbc0-9463" collective="false" sortIndex="12">
-      <profiles>
-        <profile name="Necrarch Vampire" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a839-1da3-6c2c-d677">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Vampire, Necrarch)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="The Red Thirst" id="2250-aa1a-fce3-07c1" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
-        <infoLink name="Vampiric" id="ff63-d25e-9224-1063" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
-      </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="65. Lores of Magic" id="c597-354c-ea9e-2ca0" hidden="false" defaultSelectionEntryId="50ec-6d64-233e-01fd">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc5b-7ab2-4d22-1088"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e691-4fe3-6cfc-2984"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Lore of Heavens" hidden="false" id="0856-3f21-e556-dff4" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="cea3-acdf-990d-35fb" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
-            <entryLink import="true" name="Lore of Necromancy" hidden="false" id="4556-1d44-c95b-18bb" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="546c-0af2-688e-86fd" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
-            <entryLink import="true" name="Lore of Metal" hidden="false" id="b871-031f-7283-2ef6" type="selectionEntry" targetId="527f-89f1-1b92-a01d"/>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="80"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="86e0-b70c-87f9-fb19" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-          <entryLinks>
-            <entryLink import="true" name="Army Battle Standard" hidden="false" id="89b1-3d0d-eb8b-6451" type="selectionEntry" targetId="b1d9-62fb-2ed9-b1a4">
-              <entryLinks>
-                <entryLink import="true" name="Magic Standards" hidden="false" id="2f8e-86b0-c4a3-29a7" type="selectionEntryGroup" targetId="a3ca-ccf2-444b-f177"/>
-              </entryLinks>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="d322-3c7a-6d1e-7dc2" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="25"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c005-1d87-4ac0-f2a4"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="9a8f-45b8-0ef0-f69b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-          <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="7c5d-2a11-fb32-126d" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="19a7-24b1-26c8-491c"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="80. Vampiric Powers &amp; Magic Items" hidden="false" id="88a2-9da9-fd6b-82dd" type="selectionEntryGroup" targetId="0175-7a22-f4a1-c988">
-          <modifiers>
-            <modifier type="increment" value="50" field="1c80-33ff-c462-8849"/>
-            <modifier type="decrement" value="25" field="1c80-33ff-c462-8849">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="model" childId="2f8e-86b0-c4a3-29a7" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="70. Mount" hidden="false" id="c1ff-a8b9-14ba-23e2" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
-          <entryLinks>
-            <entryLink import="true" name="Nightmare" hidden="false" id="33d2-5ba4-2bd1-3d64" type="selectionEntry" targetId="288d-c0a8-77de-61e7" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="21"/>
-              </costs>
-              <entryLinks>
-                <entryLink import="true" name="Barding" hidden="false" id="daf5-3367-54cc-3556" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
-                  <costs>
-                    <cost name="pts" typeId="points" value="5"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="Hellsteed" hidden="false" id="2527-f466-4da4-5348" type="selectionEntry" targetId="5ecd-9b99-4f8f-e3ab" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Abyssal Terror" hidden="false" id="c902-f956-992a-60e0" type="selectionEntry" targetId="9a59-eb87-1cf2-64b3" sortIndex="3"/>
-          </entryLinks>
-        </entryLink>
-        <entryLink import="true" name="60. Wizard Level" hidden="false" id="e2a0-2bc4-df88-d265" type="selectionEntryGroup" targetId="6921-bd2a-e7cb-9029"/>
-      </entryLinks>
-      <categoryLinks>
-        <categoryLink name="Characters" hidden="false" id="659e-891d-eb80-dd95" targetId="d38a-73da-883b-bab9" primary="true"/>
-        <categoryLink name="Vampire" hidden="false" id="7bac-bdb2-76cf-c6c8" targetId="27c2-45b8-9859-dda4" primary="false"/>
-        <categoryLink name="Necrarch" hidden="false" id="6cbc-2ff4-1f38-8f75" targetId="9311-1c3e-4507-2477" primary="false"/>
-        <categoryLink name="Z Barding" hidden="false" id="28a6-d268-39ce-0ca6" targetId="e650-a901-f069-ca88" primary="false"/>
-        <categoryLink name="Infantry" hidden="false" id="e6ad-9eb7-29f4-6188" targetId="22c9-1606-58f8-2e60" primary="false"/>
-        <categoryLink name="Wizard" hidden="false" id="1d2f-a7bc-bd36-4d27" targetId="1aae-2529-c509-7573" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Strigoi Vampire" hidden="false" id="b1a2-30ba-38cd-fd71" collective="false" sortIndex="15">
