@@ -1,528 +1,200 @@
 # WAP data repo — working notes for rulebook update passes
 
-This file captures what was learned doing the Orcs & Goblins, Dwarfs,
-Amazons, Empire, High Elves, Tomb Kings, Dark Elves, and Skaven 3.0/3.1
-updates plus the core rulebook (gst/Armoury/Bestiary) pass, so the same
-playbook can be reused for the next army instead of rediscovering it from
-scratch.
+Playbook learned from migrating/auditing Orcs & Goblins, Dwarfs, Amazons,
+Empire, High Elves, Tomb Kings, Dark Elves, Skaven, and the core rulebook
+(gst/Armoury/Bestiary) to WAP 3.0/3.1. Reuse instead of rediscovering from
+scratch on the next army.
 
 ## What this repo is
 
 Unofficial New Recruit / BattleScribe data files for the Warhammer Armies
 Project. XML, schema-validated by New Recruit but otherwise hand-maintained.
-Do not read these files in full — they're hundreds of KB to multiple MB each.
-Always work through scripts (see "Tooling" below), never manual find/replace
-in an editor.
+Files are hundreds of KB to multiple MB — never read one in full or
+hand-edit in an editor; work through scripts (see "Tooling") and
+id-anchored edits.
 
 ## Where things live
 
-- `Warhammer_Armies_Project.gst` — the game system. Core special rules
-  (`<rule>`), all spell profiles for every lore (`typeName="Spell"`, ~176 of
-  them — **spells are NOT stored per-army-catalogue, they're centralized
-  here**), costTypes, profileTypes, categoryEntries, forceEntries.
-- `Armoury.cat`, `Bestiary.cat` — shared libraries (`library="true"`). Common
-  weapons/armour reference profiles, the "Common" magic item lists usable by
-  any army, and generic monsters/mounts shared across multiple armies
-  (Griffon, Pegasus, Cold One, Warhorse, etc.).
-- `wap_<Army>.cat` — one non-library catalogue per army. Pulls in the gst
-  implicitly (game system) plus Armoury/Bestiary via `<catalogueLinks>`, and
-  defines its own units, army-unique magic items, and army-unique spells are
-  still in the gst (see above) even though the *lore names* are army-flavoured.
-- Naming on `main` still has the old `wap-fr-EN23_` prefix; `develop` has
-  already dropped it and renamed the gst (`Warhammer_Armies_Project.gst`,
-  was `wap-fr-EN23_Warhammer_Armies_Project.gst`). **Always branch off
-  `develop`, not `main`** — check `git log origin/develop -- <file>` before
-  starting, since upstream migration work moves fast and may have already
-  covered part of what you're about to do.
+- `Warhammer_Armies_Project.gst` — game system: core `<rule>`s, all spell
+  profiles for every lore (`typeName="Spell"`, ~176 total — **spells are
+  centralized here, not per-army**), costTypes, profileTypes,
+  categoryEntries, forceEntries.
+- `Armoury.cat`, `Bestiary.cat` — shared libraries (`library="true"`):
+  common weapons/armour, "Common" magic item pools usable by any army,
+  generic monsters/mounts (Griffon, Pegasus, Cold One, Warhorse, etc.).
+- `wap_<Army>.cat` — one catalogue per army: own units, army-unique magic
+  items; army-unique *spells* still live in the gst (lore names only are
+  army-flavoured).
+- **Always branch off `develop`, not `main`** (`main` still has the old
+  `wap-fr-EN23_` prefix). Check `git log origin/develop -- <file>` first.
 
 ## BattleScribe XML gotchas
 
-- **A `<rule>` rename doesn't cascade.** Renaming e.g. "Slow to Fire" to
-  "Cumbersome" in its `<rule>` definition does nothing to the dozens of
-  places that spell the name out as plain text inside a
-  `<characteristic name="Special Rules">` string. Grep for the *old* name
-  across all 4 files after any rename and fix every stale reference — don't
-  assume a rename is "done" just because the rule definition changed. This
-  repo has half-finished renames sitting around (a duplicate old+new rule
-  pair both existing, an orphaned unused rule definition) — check for that
-  pattern specifically when a changelog says "X renamed to Y".
-- **Effects are split across many possible places**, not consistently:
-  - A weapon/armour item's numeric bonus may be a separate
-    `<characteristic name="Strength">+1</characteristic>` rather than
-    mentioned in its Special Rules prose.
-  - A "give this item a Ward/Armour save" effect is usually implemented as
-    an `<infoLink>` to a shared profile (e.g. "Medium Armour", "Shield",
-    "Magical Ward") plus a `<modifier type="set">` overriding that profile's
-    save-value field — *not* as inline text.
-  - A described numeric value ("Strength 4", "6+ armour save") can be a
-    `<modifier type="set" value="4" field="<charTypeId>"/>` targeting a
-    linked profile's characteristic, which won't show up if you only grep
-    the item's own `<characteristics>` block.
-  - **Before concluding something is "missing", check the entry's full
-    subtree** (`.iter()`, not just direct children) for characteristics,
-    modifiers (`type="set"`/`"append"`), and infoLinks — not just the first
-    profile you find.
-- **`id="X"` substring-matches `childId="X"`.** A naive
-  `data.find('id="abc123"')` on raw text will match inside `childId="abc123"`
-  first if that appears earlier in the file. Use
-  `'<selectionEntry id="abc123"'` (with the tag name) or load via lxml and
-  match on `el.get("id")` instead.
-- **A naive `data.find(marker); data.find("</selectionEntry>", idx)` can
-  close on a *nested* selectionEntry**, not the outer one you meant, if the
-  entry has children with their own `</selectionEntry>` before the real
-  close tag. This silently truncates your edit window and assertions fail
-  with "not found" even though the text is right there, just past the wrong
-  end marker. When this happens, don't just widen the window blindly —
-  `grep -n` the actual line number and read it directly.
-- **Unit size constraints**: a `<constraint type="min" .../>` with no
-  sibling `type="max"` means no cap was ever set (older armies/mid-migration
-  entries) — not that the tool doesn't support max caps. New books ~universally
-  add a `type="max"` constraint (mirroring `min`'s attributes, new `id`) once
-  a "UNIT SIZE: X-Y" line appears in the PDF. Always check both.
-- **Duplicate entries with the same name are common and usually
-  correct**, not a bug: a purchasable model + a costless mount-only variant
-  linked from elsewhere, or a unit-wrapper `type="unit"` entry alongside its
-  `type="model"` lead entry with the same cost. Verify which is which before
-  "fixing" an apparent duplicate.
-- **Lord/Hero merges** (a common 3.0-era restructuring across every army):
-  two old separate character entries become one entry with two `<profile>`
-  blocks (one per tier), keeping the original tier names as profile names
-  (e.g. `Orc Warboss` / `Orc Big Boss` inside one `Orc Bosses` entry). Look
-  for this pattern before assuming a named character entry is missing — it
-  may have been absorbed into a merged entry under a different top-level name.
-- **Composition/constraint rules are often already implemented via a
-  mechanism invisible to a shallow grep near the unit's own block.** New
-  books frequently add "when Character X is present, Unit Y counts as a
-  different force-org category" or "Character X must be your Army General"
-  rules (a Knightly-Orders-style pattern: a choice that constrains the rest
-  of army composition, not just its own stat/cost). Before concluding one of
-  these is unenforced, grep the **whole file** for the actual mechanism, not
-  just text/id near the character's own entry — the mechanism usually lives
-  on the entries it *affects*, keyed off the character's (or their own
-  General-option's) id, not on the character's own block:
-  - FOC reclassification: `type="set-primary" field="category"`, generally
-    paired with `type="remove" field="category"` for the category being
-    replaced, gated by a `<condition>` checking `selections` of the trigger
-    character's (or their General-option entryLink's) id. Confirmed working
-    example: `wap_Dwarfs.cat`, Alrik's "Traditional army" and Ungrim's
-    "Slayer King" rules — a first audit pass declared both completely
-    unenforced by grepping near `<categoryLinks>` and the character's own
-    name; both were in fact fully correct, just implemented this way on the
-    *affected* units instead.
-  - "Must be Army General": often a shared gst-level template
-    (`selectionEntryGroup`, look for a comment/name like "General min 1")
-    reused across many army files, referenced indirectly rather than
-    spelled out per-character. A shallow per-character grep will
-    false-negative this the same way as above.
-  - **The failure mode isn't always "missing" — it can be "wired to the
-    wrong shared target."** Tomb Kings' Arkhan the Black targeted the
-    *forced*-General template (the one Settra correctly uses, since only
-    Settra's PDF entry says he must be General) instead of the *optional*
-    one every other character uses — a copy-paste from Settra's block that
-    silently forced Arkhan to be General with no PDF basis. Found by
-    diffing which shared-group id each character's "10. Character Options"
-    `entryLink` points at (`grep` the two known template ids across the
-    whole file and compare), not by reading any one character in isolation.
-  - Mandatory escort/companion unit: an error-triggering `<condition>` +
-    modifier pair (compare a working example before concluding one is
-    missing — O&G's Grom/Grimgor and Dwarfs' Josef Bugman all use this).
-  - **The base "Duplicate Choices" rule (how many copies of a Special/Rare
-    unit you may take, scaled by army points) is not mechanically enforced
-    anywhere in this codebase, for any unit, in any army file** — it's
-    reference-table text the player self-applies. A character ability that
-    modifies this (O&G's Grimgor halving it for Black Orcs, Dwarfs' Alrik
-    doubling several war machines' count) is therefore correctly left as
-    text-only too — building real enforcement for one specific case would
-    require inventing a new points-bracket-scaled constraint mechanism (the
-    game's declared points limit *is* accessible to conditions/constraints
-    via `field="limit::points"`, already used for the standard FOC
-    percentage-of-points category constraints — so it's technically
-    buildable, just without any precedent for this specific use, and doing
-    it for one unit while the base rule stays unenforced everywhere else is
-    its own inconsistency) — don't build this without being asked to.
+- **A `<rule>` rename doesn't cascade** to plain-text mentions of the old
+  name in `<characteristic name="Special Rules">` strings. Grep the old
+  name across all 4 files after any rename; watch for half-finished
+  renames already in the repo (old+new pair, orphaned definition).
+- **Effects are split across many places, inconsistently**: a numeric bonus
+  may be its own `<characteristic>`; a save/stat grant is usually an
+  `<infoLink>` to a shared profile plus a `<modifier type="set">`, not
+  inline text. Before calling something "missing," walk the entry's full
+  subtree (`.iter()`), not just its own block or first match.
+- **`id="X"` substring-matches `childId="X"`** — match the full opening tag
+  or use lxml's `el.get("id")`. Naive tag-close matching can also land on a
+  *nested* element's close tag, truncating your edit window; if an
+  assertion fails on visible text, `grep -n` the real line instead.
+- A `<constraint type="min">` with no sibling `type="max"` usually just
+  means no cap was set yet — check the PDF's "UNIT SIZE" line rather than
+  assuming caps aren't supported.
+- **Duplicate-looking entries are often correct** (purchasable model plus
+  costless mount-only variant; `type="unit"` wrapper alongside its
+  `type="model"` lead entry) — verify roles before "fixing." Same caution
+  for **Lord/Hero merges** (3.0-era, universal): two old character entries
+  become one with two `<profile>` blocks under the original tier names.
+- **Composition/constraint rules usually live on the entries they *affect*,
+  not near the triggering character.** Before calling one unenforced, grep
+  the whole file for the mechanism: FOC reclassification is
+  `type="set-primary"/"remove" field="category"` gated by a `<condition>`
+  on the trigger's id; "must be Army General" is often a shared gst-level
+  template referenced indirectly. Wiring can also be *wrong* (copy-pasted
+  but pointed at the wrong shared template id).
+- The base "Duplicate Choices" rule (max copies of a unit, scaled by army
+  points) is **not mechanically enforced anywhere in this codebase** —
+  self-applied text. Leave abilities that modify it text-only too.
+- **A static XML read is a hypothesis, not a fact** when BattleScribe
+  scope/constraint semantics are non-obvious. State the evidence but don't
+  assert a confirmed bug — an empirical check in New Recruit overrides a
+  plausible textual reading.
 
 ## Dangling references (New Recruit load errors)
 
-A merge, rename, or deletion can leave a reference pointing at an id that no
-longer (or never did) exist anywhere in the repo. New Recruit reports these
-as load errors; they are invisible to `lxml.etree.parse` (which only checks
-well-formedness, not that references resolve) and easy to undercount if you
-only grep for one of the three places BattleScribe stores this kind of
-reference:
+A merge, rename, or deletion can leave a reference pointing at a
+nonexistent id. `lxml.etree.parse` won't catch this (well-formedness only)
+and there are three places a reference can hide:
 
-- `targetId="..."` on `infoLink`/`entryLink`/`categoryLink` — the obvious one.
-- `childId="..."` on `<condition>`/`<repeat>` — used by roster-selection and
-  duplicate-count logic. Easy to miss because it reads like a normal
-  attribute, not a "this points at another element" attribute.
+- `targetId="..."` on `infoLink`/`entryLink`/`categoryLink`.
+- `childId="..."` on `<condition>`/`<repeat>` (also carries reserved scope
+  keywords like `any`/`unit`/`parent`/`force`, not references — told apart
+  by id shape, `[0-9a-f]{2,4}(-[0-9a-f]{2,4}){3}`).
 - `value="..."` on `<modifier field="category" type="add|remove|set-primary">`
-  — grants/strips/switches an entry's force-org category. The id lives in
-  `value=`, not `targetId=`, so a `targetId`-only dangling-ref sweep will
-  silently miss it (this is exactly how a first fix-pass on Amazons declared
-  the file clean when 4 of these were still broken).
+  — the id lives in `value=`, not `targetId=`, easy to miss.
 
-**Use `tools/check_dangling_refs.py`** (checked into this repo) rather than
-re-deriving this by hand — it checks all three patterns against every id
-defined anywhere in the repo's `.cat`/`.gst` files:
+**Use `tools/check_dangling_refs.py`**, checked into this repo:
 ```
-python3 tools/check_dangling_refs.py wap_Dwarfs.cat   # check one file you're actively working on
-python3 tools/check_dangling_refs.py                  # whole-repo audit (see caveat below)
+python3 tools/check_dangling_refs.py wap_Dwarfs.cat   # one file
+python3 tools/check_dangling_refs.py                  # whole repo
 ```
-Run it against whatever file(s) you just edited before considering a Gate B
-pass done — especially after any merge, rename, or deletion, since those are
-what create dangling refs in the first place. **Caveat for whole-repo mode**:
-armies that haven't been through a 3.0+ migration pass yet still reference
-the *old* pre-3.0 gst/Armoury/Bestiary structure, which no longer matches
-after those 3 files were rewritten — their dangling-ref counts are large,
-pre-existing, and not a regression to fix now, just noise until each of
-those armies gets its own migration pass.
+Run it near the start of any file you touch and again before considering a
+pass done. Whole-repo mode is noisy for non-migrated armies — those large
+counts are pre-existing, not a regression to fix now.
 
-`childId=`/`value=` also carry BattleScribe's reserved scope keywords
-(`any`, `model`, `unit`, `mount`, `crew`, `parent`, `force`, `roster`, ...)
-which are not references at all — the script tells these apart from real
-ids by shape (`[0-9a-f]{2,4}(-[0-9a-f]{2,4}){3}`, e.g. `d38a-73da-883b-bab9`)
-rather than a hardcoded keyword list, so it won't false-positive on a new
-keyword it hasn't seen before.
+**Zero-tolerance policy: fix every dangling reference, never just document
+it as harmless** — even a confirmed-inert one. "Resolves to nothing but
+doesn't crash" is not an acceptable end state; occasionally the dangling
+condition gates something that *should* fire, so check the PDF before
+assuming removal is a no-op.
 
-A recurring specific case worth knowing about: a fabricated "Lords" FOC
-category (id `d280-b7df-c185-2ba5`) that was never actually defined anywhere
-in this repo shows up repeatedly across multiple armies' Lord/Hero-merge
-scaffolding — confirmed in O&G, Amazons, High Elves, Tomb Kings, and Skaven
-so far (7 occurrences in Tomb Kings alone, 9 in Skaven), always the same id
-— always redundant/dead when paired with a real `Characters` category
-check, but occasionally gating something that actually should have fired
-(Amazons' Stegadon-mount crew reduction was silently dead code because of
-exactly this, not just visual clutter — check what a dangling condition
-*was supposed to do* via the PDF before assuming its removal is a no-op).
-Given it's now shown up in 5 of 6 completed armies, **run
-`tools/check_dangling_refs.py` on any newly-migrated file as one of the
-first steps**, not just at the end — expect to find this id again.
+Known recurring case: a fabricated "Lords" FOC category (id
+`d280-b7df-c185-2ba5`), never defined anywhere, left over from
+Lord/Hero-merge scaffolding, paired with a real `Characters` categoryLink
+(`d38a-73da-883b-bab9`, the only character-tier category the gst defines).
+Fix: delete the dangling `<categoryLink name="Lords" .../>` and flip its
+sibling `Characters` link's `primary="false"` to `primary="true"` (Lords is
+always `primary="true"`, so removing it without promoting Characters
+leaves zero primary categories) — the sibling isn't always the next line,
+so scope to "next Characters link in the same block." Still unfixed in
+O&G, Amazons, and High Elves.
 
-**Fix it, don't just document it as harmless.** Earlier passes left this
-one alone once its dead-code status was confirmed, on the reasoning that a
-resolved-but-inert dangling reference isn't worth the edit risk. The user
-has since said plainly: a dangling reference is a bug regardless of
-whether it's inert, and wants zero of them, full stop — treat "harmless"
-as a note for *how* to fix it safely, never as a reason to leave it. There
-is no real Lords/Heroes split in the current game system (confirmed:
-`Warhammer_Armies_Project.gst` defines only one unified `Characters`
-categoryEntry, `d38a-73da-883b-bab9` — the Lord/Hero merge collapsed both
-tiers into it), and armies with a clean migration (Dark Elves) never had
-this artifact at all, so there's nothing to repoint the Lords link to.
-The fix: delete each dangling `<categoryLink name="Lords" .../>` and flip
-its sibling `Characters` categoryLink's `primary="false"` to
-`primary="true"` (the Lords link is always `primary="true"`, so removing
-it without promoting Characters leaves the entry with zero primary
-categories). Watch for cases where the Characters link isn't the very
-next line in the block (Skaven's Verminlord had a `Monster` categoryLink
-in between) — scope the fix to "the next Characters link in this same
-`<categoryLinks>` block," not "the next line." O&G, Amazons, and High
-Elves still have this artifact sitting unfixed as of the Skaven pass —
-worth cleaning up next time either of those files is touched, even
-outside a full audit.
+## Text-encoding gotchas
 
-## Text-encoding gotchas (these caused most of the wasted edit attempts)
-
-- **Non-breaking spaces (`\xa0`) are scattered throughout description text**,
-  usually invisibly, wherever the source content was pasted from a
-  word-processor. A copy-pasted string with a normal space where the file
-  has `\xa0` will silently fail to match. When an `Edit`/`str.replace` you're
-  sure is correct reports "not found", **check raw bytes first**
-  (`repr(data[idx:idx+N])` in Python) before assuming the content differs.
-- **Apostrophes, quotes, and dashes are inconsistently entity-encoded.**
-  Some content uses `&apos;`/`&quot;`/`&#8211;`, other content uses literal
-  `'`/`"`/`–` UTF-8 characters, sometimes both within the same file for
-  similar content. `lxml`'s `.text` / `etree.tostring()` will normalize/
-  re-encode entities when it prints them — **never copy a match string from
-  `etree.tostring()` output and expect it to `str.replace()` cleanly against
-  the raw file bytes.** Always verify against the actual raw file content
-  (`open(path).read()`, not the lxml serialization) before building a
-  replacement string.
-- Given the above, prefer this pattern for any content edit: find the
-  element by a unique `id` anchor (not by matching the text you want to
-  change), slice out just that element's substring window, verify the
-  target text is present with `assert segment.count(old) == 1` before
-  substituting, then splice back. Never do a global `str.replace` on
-  description prose without an id-anchored window — a plain-text phrase
-  can appear in more than one unrelated entry.
+- **Non-breaking spaces (`\xa0`)** are scattered through pasted-from-Word
+  text; a normal-space copy silently fails to match. Apostrophes/quotes/
+  dashes are also inconsistently entity-encoded. If an `Edit` you're sure
+  is correct reports "not found," check raw bytes (`repr(data[idx:idx+N])`)
+  — never trust an `etree.tostring()` string to `str.replace()` against raw
+  file bytes; verify against `open(path).read()`.
+- Preferred edit pattern: find the element by a unique `id` anchor, slice
+  its substring window, `assert segment.count(old) == 1`, splice back.
+  Never do a global `str.replace` on prose without an id-anchored window.
 
 ## PDF extraction approach
 
-The rulebook PDFs are two different layouts:
+- **Single-column pages** (profile tables, stat blocks): plain
+  `pdftotext -layout` + `re.split(r'\s{2,}', line)` works well — do this
+  first on any new army, it's very high value for very little effort.
+- **Two-column pages** (Special Rules, Magic Items, Lores of Magic):
+  `pdftotext -layout` interleaves the columns wrong — use `pymupdf` instead:
+  `page.get_text("blocks")`, split by `x0` vs. page midpoint, sort each
+  half by `y0`, concatenate left-then-right.
+- **Item/spell-block parsing**: detect names by an ALL-CAPS-line heuristic,
+  not whitespace guessing. Buffer shouty lines (a name can span 1-2 lines)
+  and flush on a "N points"/"Cast on X+" line, on "Lore Attribute" (flushes
+  immediately, no cast line follows), or the next shouty line;
+  "Signature Spell"/"Level N" are non-flushing markers.
+- **PDF prose repeats Range/Type/Targets as a sentence prefix** the XML
+  correctly omits — strip it before diffing PDF vs. XML text or you get
+  false "text changed" noise.
+- **Known blind spot**: an item next to an embedded D6-result table gets
+  corrupted and can swallow the next item's name — check by hand.
 
-- **Single-column pages** (unit profile tables, special-character stat
-  blocks): plain `pdftotext -layout` works fine and preserves column
-  alignment well enough to parse with a `re.split(r'\s{2,}', line)`
-  column-splitter. This is what section E's "profile sweep" used to
-  cross-check every unit/character/mount's cost and stats in one pass —
-  very high value for very little effort, do this first for any new army.
-- **Two-column pages** (Army Special Rules preamble, Magic Items chapters,
-  Lores of Magic): `pdftotext -layout` **interleaves the two columns
-  incorrectly** — do not trust it here. Use `pymupdf` (`fitz`) block
-  extraction instead: get `page.get_text("blocks")`, split blocks by `x0`
-  vs. page midpoint, sort each half by `y0`, concatenate left-then-right.
-  This was the single biggest extraction fix of the whole session.
-- **Item-block parsing** ("NAME / N points / description" — magic items):
-  detect item names by an **ALL-CAPS-line heuristic**
-  (`all(c.isupper() for c in s if c.isalpha())`), not by trying to guess
-  where one item's description ends and the next name begins from
-  whitespace alone. A name can span 1–2 physical lines before the cost line
-  appears; buffer shouty lines into `name_buf` and only flush into a
-  finished item when either a "N points" line or the *next* shouty line
-  shows up.
-- **Spell-block parsing** (Lore pages): same ALL-CAPS heuristic, but
-  additionally handle "Lore Attribute" as its own immediate-flush marker
-  (it has no "Cast on X+" line following it, so it can't rely on that as a
-  terminator) and "Signature Spell"/"Level N" as level-only markers that
-  don't flush anything.
-- **PDF prose systematically repeats the Range/Type/Targets info as a
-  sentence prefix** ("`<Name>` is a `<type>` spell with a range of `N"`
-  that targets X") that the XML correctly omits from its `Details`
-  field since Type/Range/Targets are already separate characteristics.
-  **Strip this prefix before diffing PDF text against XML text**, or you'll
-  get a wall of false "text changed" flags that are actually identical
-  content. Sampling a few of the worst-scoring diffs by hand to check
-  whether this is what's going on is much cheaper than assuming every flag
-  is real.
-- **Known parser blind spot**: an item description sitting right next to an
-  embedded D6-result table (miscast-style charts) will have its text
-  corrupted by the table rows bleeding into it, and can also swallow the
-  *next* item's name. Any item flagged "not found" or with near-zero text
-  similarity right after this kind of item deserves a manual look before
-  concluding it's missing.
+## Verification/diffing method
 
-## Verification/diffing method that worked well
-
-1. **PDF first, changelog second, current XML last** — a changelog is a
-   convenient index of *where* to look, never authoritative over the PDF
-   itself (it can omit details the PDF states, e.g. a bullet said "no
-   longer causes Impact Hits" but didn't mention the replacement Mighty
-   Blow (2) that the PDF's own unit description had).
-2. Build a **changeset document first** (what changed, old value → new
-   value, PDF page/section cited) before touching any XML — cheap to fix a
-   misread number here, expensive after it's baked into a diff.
-3. Cross-check **every entry with a profile/cost table**, not just the ones
-   a changelog happens to call out — this is what caught Boar Chariot,
-   Wolf Chariot, Pump Wagon, Wurrzag's cost, and a pre-existing (not evenrelated to this update) Skitgit stat-line bug, none of which the changelog mentioned.
-4. A "not found by name" or "near-zero text similarity" result is a
-   **lead to investigate, not a conclusion.** In this session the majority
-   of "missing" and "changed" flags turned out to be: name typos in the
-   XML (fix the typo, not build a duplicate), content correctly split
-   across characteristic/modifier fields the diff script didn't check, or
-   PDF-parser table-adjacency corruption. Verify by hand before building
-   new content or declaring something broken.
-5. **One commit per atomic changeset entry** (a rename across N files is
-   one commit if it's one rename; a Lord/Hero merge is one commit; a single
-   unit's cost fix is one commit) — never batch unrelated fixes into one
-   commit, and never commit a whole "phase" at once. This makes a bad entry
-   revertable in isolation. Validate XML well-formedness
-   (`lxml.etree.parse`) and review the diff before every commit — a diff
-   that touches more lines than the specific field you meant to change is a
-   sign the edit anchor was wrong.
-6. **A file already labeled with the target version (e.g. "WAP 3.1") needs
-   just as much scrutiny as one still at the old version — budget for
-   multiple audit rounds, not one.** Dwarfs, Empire, and High Elves all
-   already carried the "3.1" label from prior work when their audits
-   started, and all three needed 2-4 rounds before the changeset was
-   actually complete — each round finding real, previously-missed gaps
-   (typos, missing rules, wrong stats, unenforced constraints), never zero
-   new findings on the first pass. Don't treat an "already migrated" label,
-   or a first-round "looks mostly done" result, as a reason to stop early;
-   have each round explicitly say whether it's confident the changeset is
-   complete or whether another pass is still warranted, and believe that
-   self-assessment (this worked well across all three — the agent doing the
-   audit consistently gave an honest "not done yet, here's what's left"
-   rather than declaring premature victory).
-7. **When diffing costs/stats, diff the new PDF against the current XML
-   value, not just new-PDF-against-old-PDF.** A pure PDF-vs-PDF diff finds
-   every value that *changed between editions*, but says nothing about
-   whether the XML already has the new value — on High Elves, 17 flagged
-   "cost changed" items turned out to already be correct in the XML (an
-   earlier pass had already applied them), and re-flagging them as fixes
-   would have been wasted work at best. Always confirm against the live
-   file before adding something to the fix list.
-8. **When sweeping costs, read the whole stat line, not just the cost
-   column.** The one real bug hiding among High Elves' 17 "cost" flags
-   (Dragon Mage's Weapon Skill, 5 instead of 4) was only caught because the
-   full profile row was checked alongside the cost, not because the cost
-   itself was wrong.
-9. **A conclusion reached by reading the XML statically ("this mechanism
-   looks disconnected/unimplemented") is a hypothesis, not a fact, when the
-   BattleScribe scope/constraint semantics involved are non-obvious** (e.g.
-   whether `scope="parent"` on a constraint recurses into a nested child
-   group without an explicit `includeChildSelections` — this project's own
-   established pattern says yes, but the semantics aren't independently
-   verified anywhere in this codebase). Present the technical read plainly,
-   including the specific evidence for it, but don't assert it as a
-   confirmed bug — if the user can check it directly in New Recruit, that
-   empirical result overrides a plausible-but-unconfirmed textual reading
-   (this happened on High Elves' Elven Honours allowance: a specific,
-   well-evidenced hypothesis about a missing attribute turned out to be
-   wrong once the user checked in the actual tool).
-10. **A file fully migrated upstream by someone else is not a reason to
-    expect fewer rounds.** Tomb Kings (`wap_Tomb_Kings.cat`) arrived on
-    `develop` already labeled "WAP 3.1" and fully authored by an upstream
-    contributor (commit history: "characters done" / "TK magic items" /
-    "TK done") — not a from-scratch migration done in this session at all.
-    It still took 3 audit rounds to find 25 real, distinct bugs (name
-    typos, wrong stats on two special characters, a stale pre-3.1
-    mechanic, three wrong spell Casting Values, a wrongly-forced Army
-    General, an internally-inconsistent rule name). Round 1 and round 2
-    each explicitly said "not confident this is complete" and were right;
-    only round 3's targeted sweep of the remaining unchecked units found
-    zero further cost/stat errors and could honestly call it converged.
-    Treat "someone else already did this" the same as "this already says
-    3.1" (item 6) — necessary context, not evidence of correctness. Dark
-    Elves repeated the pattern at larger scale: also a fully
-    upstream-migrated "3.1" file, it took 4 rounds and 26 commits (33
-    distinct bugs) before a round self-reported real convergence — don't
-    treat 3 rounds as some fixed ceiling either; keep going while a round
-    is still finding genuine new bugs, stop when one does a systematic
-    sweep and comes back clean.
-11. **Check the `Type` characteristic against the PDF's TROOP TYPE line for
-    every single unit — this turned out to be the single most common bug
-    class in the Dark Elves file (11 separate instances across 3 rounds:
-    a wrong qualifier like "Large Infantry" instead of "Infantry", or a
-    missing race/subtype suffix like "(Dark Elf)", "(Hydra)", "(Armour
-    Save 6+)").** A first pass that only samples a few Type fields will
-    keep finding new ones round after round; once one round does an
-    exhaustive profile-by-profile sweep instead of spot-checking, the
-    class closes out for good (confirmed: zero further Type-field bugs in
-    the round after the exhaustive sweep). Budget for this as a dedicated
-    systematic pass on any new army, not an afterthought.
-12. **When the same option (a mount, a piece of equipment) is offered
-    identically to two different entries, check that both entries agree,
-    not just that each one individually looks plausible.** Dark Elves'
-    Sorceresses had a full mount list (Dark Steed/Cold One/Dark Pegasus)
-    copy-pasted from the Commanders entry, but only the Manticore/Black
-    Dragon costs had been kept in sync with a points update — the three
-    cheaper mounts were still the old, wrong values. Same pattern hit the
-    Beastmaster's and Black Ark Fleetmaster's Sea Dragon Cloak cost vs.
-    the Commanders' copy of the same option. Diffing sibling
-    entries against each other (not just each one against the PDF in
-    isolation) surfaces this class of drift fast.
-13. **A file whose own `selectionEntry` content already uses current gst
-    characteristic typeIds and category structure can still carry stale
-    references from *before* a gst-wide id regeneration** — a distinct
-    failure mode from "not yet migrated" (item 6/10 above), and easy to
-    miss because `check_dangling_refs.py`'s clean-looking summary for
-    other files doesn't tell you a given file is *this* kind of stale
-    until you run it. Skaven (`wap_Skaven.cat`) was the clearest case
-    yet: its own model profiles, categories, and shared-rule *usage*
-    already matched the current 3.x structure, but its `catalogueLinks`
-    to Armoury/Bestiary and infoLinks to shared parametrized rules
-    (Hatred, Impact Hits, Immunity, Random Movement, Line of Sight,
-    Inspiring Presence) all pointed at ids from before those files were
-    regenerated — 29 dangling refs on a file that otherwise looked
-    fully current. The catalogue's own `name=` attribute had also been
-    left at a pre-migration label ("Skaven WAP 1.94") with
-    `library="true"` (hidden from New Recruit) despite the content
-    being current — check for this specific mismatch (modern content,
-    stale label) as its own thing, not just the reverse (stale content,
-    modern label) that item 6 covers.
-14. **Arcane Items are now split into three parallel pools — "Staffs",
-    "Charms", "Relics"** (`Armoury.cat` ids `0868-e6b5-1896-4f34`,
-    `d41c-42d4-1ee8-64ed`, `5439-428a-67d0-36ba`) — replacing the old
-    monolithic "Common Arcane Items" / "Common Arcane Items (One use
-    only)" two-tier pool that pre-3.0 files (or files migrated before
-    this split happened) still reference by a now-dangling targetId.
-    The fix is structural, not a simple re-point: build three sibling
-    `selectionEntryGroup`s named literally "Staffs"/"Charms"/"Relics"
-    (matching Dark Elves/Tomb Kings/High Elves exactly), each with its
-    own `Commom Staffs`/`Commom Charms`/`Commom Relics` entryLink (yes,
-    "Commom" — that typo is the established spelling everywhere in this
-    repo, don't "fix" it in isolation) and its own max-1-of-this-group
-    constraint, then sort the file's own army-specific arcane items into
-    the matching group by whichever label its PDF item text uses
-    ("Staff."/"Charm."/"Relic." — Skaven's own PDF spells this out per
-    item). Drop any old "one use only" vs "regular" split entirely; the
-    new pools don't distinguish on that axis, and neither should the
-    per-army wrapper groups.
-15. **Before adding an item you've concluded is "entirely missing"
-    (zero grep hits for its exact name), grep for near-miss spellings,
-    missing/extra hyphens, and capitalization variants first.** A
-    "missing" conclusion reached by exact-string grep is a hypothesis,
-    same as any other static-read conclusion (see item 9) — it is
-    disproven by a typo, not just by the string existing verbatim.
-    Skaven's round-2 audit flagged 8 magic items as entirely absent;
-    5 of them already existed under a typo'd name ("Gnaswhard" for
-    Gnawshard, "Things bane" for Things-bane, "The Cube of Mist" for
-    "...Mists", "Assassins-Bane Rigging"/"Rat-Tail Snake" with different
-    capitalization than the PDF's own). Adding new entries instead of
-    fixing the typo produced true duplicate content that had to be
-    found and cleaned up in a later pass — a full extra round of work
-    that a `grep -i` and a scan of nearby sortIndex-adjacent entries
-    before writing new XML would have avoided. When you do find a
-    pre-existing near-duplicate, don't reflexively keep the one you just
-    wrote — check which implementation is actually better (one Skaven
-    item, "Lash of Fangs", had a pre-existing version that correctly
-    extended the base "Whip" profile via infoLink, gated on owning a
-    mundane Whip, matching the Shock-Prod/Things-catcher convention —
-    better than the freshly-added stat-less standalone profile).
-16. **A shared weapon profile reused by multiple carriers can be correct
-    for some of them and wrong for others, when the PDF actually gives
-    the same-named weapon two different stat lines depending who wields
-    it.** Skaven's "Warpfire Thrower" profile (an id literally named
-    `Warpfire Thrower (Boneripper)`) is referenced by Boneripper,
-    Boneripper Mk II, Brood Terror, *and* the standalone "Warpfire
-    Thrower" unit — but the standalone unit's own PDF page gives it
-    Strength 4 with Armour Piercing (1), while the other three correctly
-    share Strength 5 with no Armour Piercing. The fix is never to edit
-    the shared profile (that silently breaks the carriers it was already
-    correct for) — add a scoped `<modifier type="set".../>` /
-    `<modifier type="prepend/append".../>` pair on *just* the one
-    infoLink whose carrier needs the different value, exactly like the
-    established magic-item-extends-a-base-profile pattern used
-    elsewhere (Shock-Prod extending Polearm/Halberd, Scrying Stone
-    extending Magical Ward).
-17. **Weapon-profile accuracy (Range/Strength/Special Rules on
-    `typeName="Ranged Weapon"`/`"Melee Weapon"` characteristics) is its
-    own bug class, separate from unit stats, Type fields, and prose —
-    and needs its own dedicated systematic pass, not just spot-checks
-    folded into other sweeps.** On Skaven this class alone accounted for
-    over a dozen bugs across two dedicated rounds, all found only once a
-    fork was pointed at literally every weapon profile in the file
-    rather than sampling: missing short-range values (a dual-range
-    weapon like "12/24"" or "18/36"" written as just the long-range
-    number), a `typeName="Melee Weapon"` profile used for a weapon whose
-    own PDF table clearly gives it a Range (i.e. it's actually a Ranged
-    Weapon, silently losing the ranged-attack capability entirely —
-    confirmed on Doomrocket and Warpvolt Obliterator), and whole
-    mechanical clauses dropped from a weapon's Special Rules text
-    (Poisoned Wind Globes was missing "Each Hit is multiplied into D3
-    Hits" — the entire point of the weapon). Budget a dedicated
-    weapon-profile round on any army where Type-field/profile/cost
-    sweeps have already converged but the file predates or is adjacent
-    to other structural staleness (item 13) — the two classes of bug
-    don't correlate with each other, so a clean Type-field sweep is not
-    evidence the weapon profiles are also clean.
-18. **On a large or heavily-migrated file, five-plus audit rounds finding
-    real bugs in every round is not a sign something is wrong with the
-    process — it can just be what full convergence costs.** Skaven took
-    5 fork rounds plus 3 additional manual sweeps (terminology grep,
-    common-weapon cross-check, exhaustive weapon-profile check) before a
-    pass came back without a new bug class, well past Dark Elves' 4.
-    Each round targeted a narrower, more specific slice than the last
-    (full sweep → constraints → named special characters → mechanical
-    terminology grep → weapon profiles specifically) rather than
-    repeating the same broad sweep — narrowing scope this way is what
-    kept later rounds productive instead of just re-finding the same
-    things. Keep narrowing and keep going as long as a round finds a
-    *new class* of bug, not just as long as rounds are numbered low.
+1. **PDF first, changelog second, current XML last** — a changelog indexes
+   *where* to look but can omit details the PDF states. Build a changeset
+   document before touching any XML; cheap to fix a misread number there,
+   expensive once baked into a diff.
+2. **Cross-check every entry with a profile/cost table**, not just what the
+   changelog calls out. Read the whole stat line, not just the cost
+   column, and diff against the *current* XML value, not just
+   old-PDF-vs-new-PDF (many "changed" flags are already correct).
+3. A "not found" or "near-zero similarity" result is a **lead, not a
+   conclusion.** Usually it's a name typo (fix it, don't duplicate),
+   content split across fields the diff script didn't check, or
+   PDF-parser corruption — verify by hand. Grep near-miss
+   spelling/hyphenation/case before writing a "missing" entry, or you
+   create a true duplicate needing later cleanup.
+4. **One commit per atomic changeset entry**, never batched by file or
+   phase — makes a bad entry revertable in isolation. Validate with
+   `lxml.etree.parse` and review the diff before every commit; a diff
+   wider than the intended field means the edit anchor was wrong.
+5. **"Already labeled 3.1" or "migrated upstream" is context, not
+   evidence of correctness** — budget multiple audit rounds regardless;
+   every army so far took 2-5 rounds before honestly self-reporting
+   convergence. Have each round state its confidence and trust that over
+   a first "looks mostly done." Narrow scope round to round (full sweep →
+   constraints → named characters → terminology grep → weapon profiles)
+   rather than repeating the same broad sweep.
+6. **Check the `Type` characteristic against the PDF's TROOP TYPE line for
+   every unit** — one of the most common bug classes so far; needs an
+   exhaustive sweep, not spot-checks. **Weapon-profile accuracy**
+   (Range/Strength/Special Rules) is an uncorrelated bug class needing its
+   own sweep: missing short-range values on dual-range weapons, a ranged
+   weapon mis-typed as `Melee Weapon`, dropped mechanical clauses.
+7. **When the same option is offered identically on two entries, diff them
+   against each other**, not just each against the PDF — copy-pasted
+   option lists commonly drift when only one gets updated. Same idea for a
+   **shared weapon/item profile reused by multiple carriers**: if the PDF
+   gives different stats per wielder, never edit the shared profile — add
+   a scoped `<modifier>` on just the differing carrier's infoLink.
+8. **A file whose content already matches current gst structure can still
+   carry stale references from before a gst-wide id regeneration** —
+   different from "not yet migrated." Check `catalogueLinks`/infoLinks to
+   shared rules, and for a stale `name=`/`library="true"` label mismatch.
+9. **Arcane Items use three parallel pools** — "Staffs", "Charms", "Relics"
+   (`Armoury.cat` ids `0868-e6b5-1896-4f34`, `d41c-42d4-1ee8-64ed`,
+   `5439-428a-67d0-36ba`), replacing the old monolithic "Common Arcane
+   Items"/"(One use only)" split. Build three sibling
+   `selectionEntryGroup`s named exactly "Staffs"/"Charms"/"Relics", each
+   with a "Commom Staffs/Charms/Relics" entryLink ("Commom" is the
+   established repo-wide typo, don't fix it) and its own max-1 constraint;
+   sort army items in by their PDF's own "Staff./Charm./Relic." label.
 
 ## Tooling
 
-`tools/` is checked into the repo (`.gitignore` has an allowlist entry for
-it) and is the place to add scripts meant to outlive a single session:
+`tools/` is checked into the repo, for scripts meant to outlive a session:
 
-- `tools/check_dangling_refs.py` — the referential-integrity checker
-  described above. Run it against the file(s) you're working on before
-  considering a Gate B pass done.
+- `tools/check_dangling_refs.py` — the referential-integrity checker above.
 
-Everything else used this session was prototyped in the session scratchpad
-and never committed: `wap_tools.py` (namespace-aware XML load/find/inspect
-helpers), `pdf_columns.py` (pymupdf 2-column extraction), `pdf_tools.py`
-(single-column profile-table parser), `pdf_items.py` (magic-item block
-parser), `pdf_spells.py` (lore spell-block parser). A future session will
-need to rebuild these (the notes above should make that fast) — or, if one
-turns out to be broadly reusable the way the dangling-ref checker did, ask
-to have it added under `tools/` too rather than re-prototyping it forever.
+Everything else used so far was prototyped in the session scratchpad and
+never committed. Rebuild from the notes above, or ask to add one under
+`tools/` if it turns out broadly reusable.
