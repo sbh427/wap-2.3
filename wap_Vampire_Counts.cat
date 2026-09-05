@@ -9047,6 +9047,38 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
             <categoryLink name="Suits of Armour" hidden="false" id="a366-ae8e-51d2-587c" targetId="9a61-618b-519a-807c" primary="false"/>
           </categoryLinks>
         </selectionEntry>
+        <selectionEntry id="b386-b4b0-b06a-b2b0" name="The Armour of Blood" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5a53-00e6-4dcd-fbdc" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5419-ff6d-a412-deff" type="max"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="4b62-4ab2-2bd8-72e7" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="f667-6e97-ec08-38ea" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Heavy Armour" id="5bf5-6af5-48f7-5aab" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+              <modifiers>
+                <modifier type="append" value="The wielder automatically regains Wounds through the Red Thirst." field="ff58-91e4-84d7-e6e4" join="  "/>
+                <modifier type="set" value="The Armour of Blood" field="annotation"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink name="Suits of Armour" hidden="false" id="d9c5-386f-de15-9c48" targetId="9a61-618b-519a-807c" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
         <selectionEntry id="e53a-857d-8e5-d0f6" name="Wailing Helm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3e5e-c086-47c-823d" type="max"/>
