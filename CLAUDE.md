@@ -186,16 +186,39 @@ keyword it hasn't seen before.
 A recurring specific case worth knowing about: a fabricated "Lords" FOC
 category (id `d280-b7df-c185-2ba5`) that was never actually defined anywhere
 in this repo shows up repeatedly across multiple armies' Lord/Hero-merge
-scaffolding — confirmed in O&G, Amazons, High Elves, and Tomb Kings so far
-(7 occurrences in Tomb Kings alone), always the same id — always
-redundant/dead when paired with a real `Characters` category check, but
-occasionally gating something that actually should have fired (Amazons'
-Stegadon-mount crew reduction was silently dead code because of exactly
-this, not just visual clutter — check what a dangling condition *was
-supposed to do* via the PDF before assuming its removal is a no-op). Given
-it's now shown up in 4 of 5 completed armies, **run
+scaffolding — confirmed in O&G, Amazons, High Elves, Tomb Kings, and Skaven
+so far (7 occurrences in Tomb Kings alone, 9 in Skaven), always the same id
+— always redundant/dead when paired with a real `Characters` category
+check, but occasionally gating something that actually should have fired
+(Amazons' Stegadon-mount crew reduction was silently dead code because of
+exactly this, not just visual clutter — check what a dangling condition
+*was supposed to do* via the PDF before assuming its removal is a no-op).
+Given it's now shown up in 5 of 6 completed armies, **run
 `tools/check_dangling_refs.py` on any newly-migrated file as one of the
 first steps**, not just at the end — expect to find this id again.
+
+**Fix it, don't just document it as harmless.** Earlier passes left this
+one alone once its dead-code status was confirmed, on the reasoning that a
+resolved-but-inert dangling reference isn't worth the edit risk. The user
+has since said plainly: a dangling reference is a bug regardless of
+whether it's inert, and wants zero of them, full stop — treat "harmless"
+as a note for *how* to fix it safely, never as a reason to leave it. There
+is no real Lords/Heroes split in the current game system (confirmed:
+`Warhammer_Armies_Project.gst` defines only one unified `Characters`
+categoryEntry, `d38a-73da-883b-bab9` — the Lord/Hero merge collapsed both
+tiers into it), and armies with a clean migration (Dark Elves) never had
+this artifact at all, so there's nothing to repoint the Lords link to.
+The fix: delete each dangling `<categoryLink name="Lords" .../>` and flip
+its sibling `Characters` categoryLink's `primary="false"` to
+`primary="true"` (the Lords link is always `primary="true"`, so removing
+it without promoting Characters leaves the entry with zero primary
+categories). Watch for cases where the Characters link isn't the very
+next line in the block (Skaven's Verminlord had a `Monster` categoryLink
+in between) — scope the fix to "the next Characters link in this same
+`<categoryLinks>` block," not "the next line." O&G, Amazons, and High
+Elves still have this artifact sitting unfixed as of the Skaven pass —
+worth cleaning up next time either of those files is touched, even
+outside a full audit.
 
 ## Text-encoding gotchas (these caused most of the wasted edit attempts)
 
