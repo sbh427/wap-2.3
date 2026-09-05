@@ -7837,9 +7837,9 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="f95f-cacf-d784-2d8a" name="Arcane Items" hidden="true" collective="false" import="true" collapsible="true" sortIndex="5">
+    <selectionEntryGroup id="4b1d-bd2c-4f89-981e" name="Staffs" hidden="true" collective="false" import="true" collapsible="true" sortIndex="5">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="893b-c116-8cd8-3b84" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="efa9-4d60-8225-f811" type="max"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="fc64-26c7-15f7-6aac" name="Staff of Damnation" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
@@ -7867,6 +7867,181 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="495b-f29c-c9dc-1d2d" name="Sceptre de Noirot" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d639-3127-203a-ce40" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="682f-7124-208b-149b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0c7e-1d5d-633e-058d" name="Sceptre de Noirot" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item may re-roll one dice of their choice when determining the number of Zombies or Skeletons raised with the Invocation of Nehek and Raise Dead spells from the Lore of Necromancy.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d017-4fee-dde4-bf98" name="Staff of Raukhamon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e143-629c-f2bc-b424" type="max"/>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="699f-cdef-7453-b126" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="ea05-15f7-d496-70dc" name="Staff of Raukhamon" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Bound Spell, power level 4. This staff contains the Hellish Vigour spell from the Lore of Necromacy. Roll a D6 each time the Staff is used. On a roll of 1, the Staff is temporarily exhausted and cannot cast this bound spell for the rest of the battle. In addition, all enemy units within 6" of the Staff`s bearer suffer a -1 penalty on their rolls to hit in close combat.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink id="db7a-bd91-a617-3905" name="3. Hellish Vigour" hidden="false" targetId="3ee0-b48f-5e9a-cd25" type="profile">
+              <modifiers>
+                <modifier type="set" value="4+" field="d6bf-647e-ba69-e8a0"/>
+                <modifier type="set" value="Bound Spell" field="576b-eaa1-0bd1-3f7a"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="45"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="9311-1c3e-4507-2477" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="d59f-fc5a-fe34-eba1" name="Carrion Wand" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="28cc-66a2-1803-8f59" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e5bd-6cd-4370-5810" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e16e-1186-b65f-eba6" name="Carrion Wand" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The wielder counts their Wizard level as being 1 higher than normal.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="aa90-576d-afb2-dd44" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Stave of Suffering" hidden="false" id="f42e-314b-ce22-ecd5" sortIndex="1">
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d63d-2cf0-4bf6-6ae9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Stave of Suffering" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="23c1-93b5-dff1-d41b">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item gains a +1 casting bonus for each spell that has successfully inflicted one or more unsaved Wounds the same Magic Phase. This bonus is cumulative.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry id="7a3b-4cfb-eff7-c7bc" name="Rod of Flaming Death" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b559-b262-1556-e589" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2a1e-0a42-a79c-f4b5" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="01a7-a4e0-9398-cd21" name="Rod of Flaming Death" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Bound Spell.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fulminating Flame Cage" id="4764-87c8-31df-05a8" hidden="false" type="profile" targetId="9526-a4e9-7b88-9276">
+              <modifiers>
+                <modifier type="set" value="Bound Spell" field="576b-eaa1-0bd1-3f7a"/>
+                <modifier type="set" value="11+" field="d6bf-647e-ba69-e8a0"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="65b3-98fd-97bc-1eb2" name="Commom Staffs" hidden="false" collective="false" import="true" targetId="0868-e6b5-1896-4f34" type="selectionEntryGroup" sortIndex="14" flatten="true" collapsible="true"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="model" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="83b7-a2aa-4b7c-3e31" name="Charms" hidden="true" collective="false" import="true" collapsible="true" sortIndex="5">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2612-de8e-e52d-27b1" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="d1df-cd6f-4b46-23c1" name="Wychlight Lantern" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="410-abde-c04f-28a5" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="567b-3d23-52bf-f889" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9eb8-86f5-7231-b451" name="Wychlight Lantern" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. This item can be used during any of your Magic phases. Once used, it allows the bearer to cast one of their spells automatically without using any power dice, at its minimum casting value.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="705d-3155-fdfd-e30a" name="Midnight Tome" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5d2b-9e61-6871-2b18" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="33bf-f7ec-3958-e3e1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="df3d-c7b4-b7e8-581" name="Midnight Tome" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. This item can be used when the wearer successfully casts a spell with a casting value of 10 or less. When used, the opponent cannot attempt to dispel it.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink id="70e2-fd47-0cac-31ab" name="Commom Charms" hidden="false" collective="false" import="true" targetId="d41c-42d4-1ee8-64ed" type="selectionEntryGroup" sortIndex="14" flatten="true" collapsible="true"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="model" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="822c-875a-454c-19a2" name="Relics" hidden="true" collective="false" import="true" collapsible="true" sortIndex="5">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0d56-02d5-a538-8f93" type="max"/>
+      </constraints>
+      <selectionEntries>
         <selectionEntry id="3e63-6196-b119-b100" name="Book of Arkhan" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6836-9289-e1b4-8c72" type="max"/>
@@ -7951,76 +8126,6 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
             </infoGroup>
           </infoGroups>
         </selectionEntry>
-        <selectionEntry id="495b-f29c-c9dc-1d2d" name="Sceptre de Noirot" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d639-3127-203a-ce40" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="682f-7124-208b-149b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0c7e-1d5d-633e-058d" name="Sceptre de Noirot" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item may re-roll one dice of their choice when determining the number of Zombies or Skeletons raised with the Invocation of Nehek and Raise Dead spells from the Lore of Necromancy.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="40"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="757f-c7c3-1013-8abb" name="Crimson Gem of Lahmia" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf8c-77ba-ffca-7a80" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9cd-eb3c-4cdb-bbad" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6a5d-9784-8a9a-a33b" name="Crimson Gem of Lahmia" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Lahmian only. Once per magic phase, while casting spells, the bearer of the Crimson Gem of Lahmia can choose to take a Toughness test. If passed, they may re- roll a single power dice of their choice. If failed, they suffer a Wound with no saves allowed.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="fd59-057a-5103-3761" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry id="d017-4fee-dde4-bf98" name="Staff of Raukhamon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e143-629c-f2bc-b424" type="max"/>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="699f-cdef-7453-b126" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ea05-15f7-d496-70dc" name="Staff of Raukhamon" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Bound Spell, power level 4. This staff contains the Hellish Vigour spell from the Lore of Necromacy. Roll a D6 each time the Staff is used. On a roll of 1, the Staff is temporarily exhausted and cannot cast this bound spell for the rest of the battle. In addition, all enemy units within 6" of the Staff`s bearer suffer a -1 penalty on their rolls to hit in close combat.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="db7a-bd91-a617-3905" name="3. Hellish Vigour" hidden="false" targetId="3ee0-b48f-5e9a-cd25" type="profile">
-              <modifiers>
-                <modifier type="set" value="4+" field="d6bf-647e-ba69-e8a0"/>
-                <modifier type="set" value="Bound Spell" field="576b-eaa1-0bd1-3f7a"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="45"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="9311-1c3e-4507-2477" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
         <selectionEntry id="8a92-4baa-c47d-4fba" name="The Dermal Robe" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c7ee-137e-a4ec-3268" type="max"/>
@@ -8036,29 +8141,6 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="70"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry id="d59f-fc5a-fe34-eba1" name="Carrion Wand" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="28cc-66a2-1803-8f59" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e5bd-6cd-4370-5810" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e16e-1186-b65f-eba6" name="Carrion Wand" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The wielder counts their Wizard level as being 1 higher than normal.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="35"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="aa90-576d-afb2-dd44" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
         <selectionEntry id="8b58-2bed-1bc7-e189" name="Amulet of Screams" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
@@ -8137,40 +8219,38 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Stave of Suffering" hidden="false" id="f42e-314b-ce22-ecd5" sortIndex="1">
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
+        <selectionEntry id="757f-c7c3-1013-8abb" name="Crimson Gem of Lahmia" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d63d-2cf0-4bf6-6ae9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bf8c-77ba-ffca-7a80" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9cd-eb3c-4cdb-bbad" type="max"/>
           </constraints>
           <profiles>
-            <profile name="Stave of Suffering" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="23c1-93b5-dff1-d41b">
+            <profile id="6a5d-9784-8a9a-a33b" name="Crimson Gem of Lahmia" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item gains a +1 casting bonus for each spell that has successfully inflicted one or more unsaved Wounds the same Magic Phase. This bonus is cumulative.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Lahmian only. Once per magic phase, while casting spells, the bearer of the Crimson Gem of Lahmia can choose to take a Toughness test. If passed, they may re- roll a single power dice of their choice. If failed, they suffer a Wound with no saves allowed.</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="fd59-057a-5103-3761" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="3000-ac84-d855-9cda" name="Common Arcane Items" hidden="false" collective="false" import="true" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="14" flatten="true" collapsible="true"/>
+        <entryLink id="84a6-f46c-c744-cc78" name="Commom Relics" hidden="false" collective="false" import="true" targetId="5439-428a-67d0-36ba" type="selectionEntryGroup" sortIndex="14" flatten="true" collapsible="true"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="false" field="hidden">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="model" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
           </conditions>
-        </modifier>
-        <modifier type="set" value="0" field="893b-c116-8cd8-3b84">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="model" childId="db27-b8a6-8e1f-2a53" shared="true" includeChildSelections="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntryGroup>
@@ -10035,65 +10115,7 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
         <entryLink id="82f7-4eb3-b622-6517" name="Common Talismans" hidden="false" collective="false" import="true" targetId="946f-a470-9912-9301" type="selectionEntryGroup" sortIndex="8" flatten="true" collapsible="true"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="db27-b8a6-8e1f-2a53" name="Arcane Items (One use only)" hidden="true" collective="false" import="true" collapsible="true" sortIndex="5.5">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1d03-cdde-44e8-bfa1" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="d1df-cd6f-4b46-23c1" name="Wychlight Lantern" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="410-abde-c04f-28a5" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="567b-3d23-52bf-f889" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9eb8-86f5-7231-b451" name="Wychlight Lantern" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. This item can be used during any of your Magic phases. Once used, it allows the bearer to cast one of their spells automatically without using any power dice, at its minimum casting value.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="705d-3155-fdfd-e30a" name="Midnight Tome" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5d2b-9e61-6871-2b18" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="33bf-f7ec-3958-e3e1" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="df3d-c7b4-b7e8-581" name="Midnight Tome" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. This item can be used when the wearer successfully casts a spell with a casting value of 10 or less. When used, the opponent cannot attempt to dispel it.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="eed1-ee6f-9e33-f86" name="Common Arcane Items (One use only)" hidden="false" collective="false" import="true" targetId="3dfd-c3fd-5a56-45f1" type="selectionEntryGroup" sortIndex="3" flatten="true" collapsible="true"/>
-      </entryLinks>
-      <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="instanceOf" value="1" field="selections" scope="model" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="0" field="1d03-cdde-44e8-bfa1">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="model" childId="f95f-cacf-d784-2d8a" shared="true" includeChildSelections="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </selectionEntryGroup>
+    
     <selectionEntryGroup name="Vampiric Powers" id="5a97-5781-86b4-0c9d" hidden="false" collapsible="true" sortIndex="1">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Curse of the Revenant" hidden="false" id="989f-9e07-487d-79f0" collective="false" sortIndex="6">
@@ -11093,8 +11115,9 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
         <entryLink import="true" name="Magic Weapons" hidden="false" id="7941-9e13-b528-4072" collective="false" targetId="65a4-2cd8-a0c9-8a92" type="selectionEntryGroup" sortIndex="1"/>
         <entryLink import="true" name="Magic Armour" hidden="false" id="270a-adb5-12fa-5a5d" collective="false" targetId="8d7f-61fb-44ba-0b6c" type="selectionEntryGroup" sortIndex="2"/>
         <entryLink import="true" name="Talismans" hidden="false" id="3e81-e236-afcc-fbf4" collective="false" targetId="4215-2a8d-e599-7c88" type="selectionEntryGroup" sortIndex="3"/>
-        <entryLink import="true" name="Arcane Items" hidden="false" id="2958-d69d-0b46-f559" collective="false" targetId="f95f-cacf-d784-2d8a" type="selectionEntryGroup" sortIndex="4"/>
-        <entryLink import="true" name="Arcane Items (One use only)" hidden="false" id="ed28-6dc7-a376-f7dc" collective="false" targetId="db27-b8a6-8e1f-2a53" type="selectionEntryGroup" sortIndex="5"/>
+        <entryLink import="true" name="Staffs" hidden="false" id="c635-d6fb-ada1-d03e" collective="false" targetId="4b1d-bd2c-4f89-981e" type="selectionEntryGroup" sortIndex="4"/>
+        <entryLink import="true" name="Charms" hidden="false" id="be87-57a8-a8d4-da9d" collective="false" targetId="83b7-a2aa-4b7c-3e31" type="selectionEntryGroup" sortIndex="5"/>
+        <entryLink import="true" name="Relics" hidden="false" id="2072-9a9d-6125-e72a" collective="false" targetId="822c-875a-454c-19a2" type="selectionEntryGroup" sortIndex="6"/>
         <entryLink import="true" name="Enchanted Items" hidden="false" id="b3f0-44e2-b951-fe18" collective="false" targetId="60d4-ceaa-5198-1353" type="selectionEntryGroup" sortIndex="6"/>
       </entryLinks>
       <constraints>
@@ -11116,9 +11139,10 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
         <entryLink import="true" name="Magic Weapons" hidden="false" id="8e67-bece-51af-5f24" collective="false" targetId="65a4-2cd8-a0c9-8a92" type="selectionEntryGroup" sortIndex="1"/>
         <entryLink import="true" name="Magic Armour" hidden="false" id="7823-8ad5-0b3e-96b3" collective="false" targetId="8d7f-61fb-44ba-0b6c" type="selectionEntryGroup" sortIndex="2"/>
         <entryLink import="true" name="Talismans" hidden="false" id="32cf-9523-9aed-37f4" collective="false" targetId="4215-2a8d-e599-7c88" type="selectionEntryGroup" sortIndex="3"/>
-        <entryLink import="true" name="Arcane Items" hidden="false" id="6726-0291-695c-2ce8" collective="false" targetId="f95f-cacf-d784-2d8a" type="selectionEntryGroup" sortIndex="4"/>
+        <entryLink import="true" name="Staffs" hidden="false" id="cc74-9c10-7ae1-eb64" collective="false" targetId="4b1d-bd2c-4f89-981e" type="selectionEntryGroup" sortIndex="4"/>
+        <entryLink import="true" name="Charms" hidden="false" id="b559-fa5b-1797-644d" collective="false" targetId="83b7-a2aa-4b7c-3e31" type="selectionEntryGroup" sortIndex="5"/>
+        <entryLink import="true" name="Relics" hidden="false" id="b2f7-f8da-6a34-5de2" collective="false" targetId="822c-875a-454c-19a2" type="selectionEntryGroup" sortIndex="6"/>
         <entryLink import="true" name="Vampiric Powers" hidden="false" id="9e6f-15f9-6fa6-2611" type="selectionEntryGroup" targetId="5a97-5781-86b4-0c9d" sortIndex="0"/>
-        <entryLink import="true" name="Arcane Items (One use only)" hidden="false" id="bc5d-cb08-3d1c-f01" collective="false" targetId="db27-b8a6-8e1f-2a53" type="selectionEntryGroup" sortIndex="5"/>
         <entryLink import="true" name="Enchanted Items" hidden="false" id="ed41-c131-5ede-9e00" collective="false" targetId="60d4-ceaa-5198-1353" type="selectionEntryGroup" sortIndex="6"/>
       </entryLinks>
       <constraints>
