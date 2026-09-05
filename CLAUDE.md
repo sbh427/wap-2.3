@@ -1,9 +1,10 @@
 # WAP data repo — working notes for rulebook update passes
 
 This file captures what was learned doing the Orcs & Goblins, Dwarfs,
-Amazons, Empire, High Elves, Tomb Kings, and Dark Elves 3.0/3.1 updates plus
-the core rulebook (gst/Armoury/Bestiary) pass, so the same playbook can be
-reused for the next army instead of rediscovering it from scratch.
+Amazons, Empire, High Elves, Tomb Kings, Dark Elves, and Skaven 3.0/3.1
+updates plus the core rulebook (gst/Armoury/Bestiary) pass, so the same
+playbook can be reused for the next army instead of rediscovering it from
+scratch.
 
 ## What this repo is
 
@@ -376,6 +377,114 @@ The rulebook PDFs are two different layouts:
     the Commanders' copy of the same option. Diffing sibling
     entries against each other (not just each one against the PDF in
     isolation) surfaces this class of drift fast.
+13. **A file whose own `selectionEntry` content already uses current gst
+    characteristic typeIds and category structure can still carry stale
+    references from *before* a gst-wide id regeneration** — a distinct
+    failure mode from "not yet migrated" (item 6/10 above), and easy to
+    miss because `check_dangling_refs.py`'s clean-looking summary for
+    other files doesn't tell you a given file is *this* kind of stale
+    until you run it. Skaven (`wap_Skaven.cat`) was the clearest case
+    yet: its own model profiles, categories, and shared-rule *usage*
+    already matched the current 3.x structure, but its `catalogueLinks`
+    to Armoury/Bestiary and infoLinks to shared parametrized rules
+    (Hatred, Impact Hits, Immunity, Random Movement, Line of Sight,
+    Inspiring Presence) all pointed at ids from before those files were
+    regenerated — 29 dangling refs on a file that otherwise looked
+    fully current. The catalogue's own `name=` attribute had also been
+    left at a pre-migration label ("Skaven WAP 1.94") with
+    `library="true"` (hidden from New Recruit) despite the content
+    being current — check for this specific mismatch (modern content,
+    stale label) as its own thing, not just the reverse (stale content,
+    modern label) that item 6 covers.
+14. **Arcane Items are now split into three parallel pools — "Staffs",
+    "Charms", "Relics"** (`Armoury.cat` ids `0868-e6b5-1896-4f34`,
+    `d41c-42d4-1ee8-64ed`, `5439-428a-67d0-36ba`) — replacing the old
+    monolithic "Common Arcane Items" / "Common Arcane Items (One use
+    only)" two-tier pool that pre-3.0 files (or files migrated before
+    this split happened) still reference by a now-dangling targetId.
+    The fix is structural, not a simple re-point: build three sibling
+    `selectionEntryGroup`s named literally "Staffs"/"Charms"/"Relics"
+    (matching Dark Elves/Tomb Kings/High Elves exactly), each with its
+    own `Commom Staffs`/`Commom Charms`/`Commom Relics` entryLink (yes,
+    "Commom" — that typo is the established spelling everywhere in this
+    repo, don't "fix" it in isolation) and its own max-1-of-this-group
+    constraint, then sort the file's own army-specific arcane items into
+    the matching group by whichever label its PDF item text uses
+    ("Staff."/"Charm."/"Relic." — Skaven's own PDF spells this out per
+    item). Drop any old "one use only" vs "regular" split entirely; the
+    new pools don't distinguish on that axis, and neither should the
+    per-army wrapper groups.
+15. **Before adding an item you've concluded is "entirely missing"
+    (zero grep hits for its exact name), grep for near-miss spellings,
+    missing/extra hyphens, and capitalization variants first.** A
+    "missing" conclusion reached by exact-string grep is a hypothesis,
+    same as any other static-read conclusion (see item 9) — it is
+    disproven by a typo, not just by the string existing verbatim.
+    Skaven's round-2 audit flagged 8 magic items as entirely absent;
+    5 of them already existed under a typo'd name ("Gnaswhard" for
+    Gnawshard, "Things bane" for Things-bane, "The Cube of Mist" for
+    "...Mists", "Assassins-Bane Rigging"/"Rat-Tail Snake" with different
+    capitalization than the PDF's own). Adding new entries instead of
+    fixing the typo produced true duplicate content that had to be
+    found and cleaned up in a later pass — a full extra round of work
+    that a `grep -i` and a scan of nearby sortIndex-adjacent entries
+    before writing new XML would have avoided. When you do find a
+    pre-existing near-duplicate, don't reflexively keep the one you just
+    wrote — check which implementation is actually better (one Skaven
+    item, "Lash of Fangs", had a pre-existing version that correctly
+    extended the base "Whip" profile via infoLink, gated on owning a
+    mundane Whip, matching the Shock-Prod/Things-catcher convention —
+    better than the freshly-added stat-less standalone profile).
+16. **A shared weapon profile reused by multiple carriers can be correct
+    for some of them and wrong for others, when the PDF actually gives
+    the same-named weapon two different stat lines depending who wields
+    it.** Skaven's "Warpfire Thrower" profile (an id literally named
+    `Warpfire Thrower (Boneripper)`) is referenced by Boneripper,
+    Boneripper Mk II, Brood Terror, *and* the standalone "Warpfire
+    Thrower" unit — but the standalone unit's own PDF page gives it
+    Strength 4 with Armour Piercing (1), while the other three correctly
+    share Strength 5 with no Armour Piercing. The fix is never to edit
+    the shared profile (that silently breaks the carriers it was already
+    correct for) — add a scoped `<modifier type="set".../>` /
+    `<modifier type="prepend/append".../>` pair on *just* the one
+    infoLink whose carrier needs the different value, exactly like the
+    established magic-item-extends-a-base-profile pattern used
+    elsewhere (Shock-Prod extending Polearm/Halberd, Scrying Stone
+    extending Magical Ward).
+17. **Weapon-profile accuracy (Range/Strength/Special Rules on
+    `typeName="Ranged Weapon"`/`"Melee Weapon"` characteristics) is its
+    own bug class, separate from unit stats, Type fields, and prose —
+    and needs its own dedicated systematic pass, not just spot-checks
+    folded into other sweeps.** On Skaven this class alone accounted for
+    over a dozen bugs across two dedicated rounds, all found only once a
+    fork was pointed at literally every weapon profile in the file
+    rather than sampling: missing short-range values (a dual-range
+    weapon like "12/24"" or "18/36"" written as just the long-range
+    number), a `typeName="Melee Weapon"` profile used for a weapon whose
+    own PDF table clearly gives it a Range (i.e. it's actually a Ranged
+    Weapon, silently losing the ranged-attack capability entirely —
+    confirmed on Doomrocket and Warpvolt Obliterator), and whole
+    mechanical clauses dropped from a weapon's Special Rules text
+    (Poisoned Wind Globes was missing "Each Hit is multiplied into D3
+    Hits" — the entire point of the weapon). Budget a dedicated
+    weapon-profile round on any army where Type-field/profile/cost
+    sweeps have already converged but the file predates or is adjacent
+    to other structural staleness (item 13) — the two classes of bug
+    don't correlate with each other, so a clean Type-field sweep is not
+    evidence the weapon profiles are also clean.
+18. **On a large or heavily-migrated file, five-plus audit rounds finding
+    real bugs in every round is not a sign something is wrong with the
+    process — it can just be what full convergence costs.** Skaven took
+    5 fork rounds plus 3 additional manual sweeps (terminology grep,
+    common-weapon cross-check, exhaustive weapon-profile check) before a
+    pass came back without a new bug class, well past Dark Elves' 4.
+    Each round targeted a narrower, more specific slice than the last
+    (full sweep → constraints → named special characters → mechanical
+    terminology grep → weapon profiles specifically) rather than
+    repeating the same broad sweep — narrowing scope this way is what
+    kept later rounds productive instead of just re-finding the same
+    things. Keep narrowing and keep going as long as a round finds a
+    *new class* of bug, not just as long as rounds are numbered low.
 
 ## Tooling
 
