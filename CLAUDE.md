@@ -1,9 +1,9 @@
 # WAP data repo — working notes for rulebook update passes
 
 This file captures what was learned doing the Orcs & Goblins, Dwarfs,
-Amazons, Empire, High Elves, and Tomb Kings 3.0/3.1 updates plus the core
-rulebook (gst/Armoury/Bestiary) pass, so the same playbook can be reused for
-the next army instead of rediscovering it from scratch.
+Amazons, Empire, High Elves, Tomb Kings, and Dark Elves 3.0/3.1 updates plus
+the core rulebook (gst/Armoury/Bestiary) pass, so the same playbook can be
+reused for the next army instead of rediscovering it from scratch.
 
 ## What this repo is
 
@@ -347,7 +347,35 @@ The rulebook PDFs are two different layouts:
     only round 3's targeted sweep of the remaining unchecked units found
     zero further cost/stat errors and could honestly call it converged.
     Treat "someone else already did this" the same as "this already says
-    3.1" (item 6) — necessary context, not evidence of correctness.
+    3.1" (item 6) — necessary context, not evidence of correctness. Dark
+    Elves repeated the pattern at larger scale: also a fully
+    upstream-migrated "3.1" file, it took 4 rounds and 26 commits (33
+    distinct bugs) before a round self-reported real convergence — don't
+    treat 3 rounds as some fixed ceiling either; keep going while a round
+    is still finding genuine new bugs, stop when one does a systematic
+    sweep and comes back clean.
+11. **Check the `Type` characteristic against the PDF's TROOP TYPE line for
+    every single unit — this turned out to be the single most common bug
+    class in the Dark Elves file (11 separate instances across 3 rounds:
+    a wrong qualifier like "Large Infantry" instead of "Infantry", or a
+    missing race/subtype suffix like "(Dark Elf)", "(Hydra)", "(Armour
+    Save 6+)").** A first pass that only samples a few Type fields will
+    keep finding new ones round after round; once one round does an
+    exhaustive profile-by-profile sweep instead of spot-checking, the
+    class closes out for good (confirmed: zero further Type-field bugs in
+    the round after the exhaustive sweep). Budget for this as a dedicated
+    systematic pass on any new army, not an afterthought.
+12. **When the same option (a mount, a piece of equipment) is offered
+    identically to two different entries, check that both entries agree,
+    not just that each one individually looks plausible.** Dark Elves'
+    Sorceresses had a full mount list (Dark Steed/Cold One/Dark Pegasus)
+    copy-pasted from the Commanders entry, but only the Manticore/Black
+    Dragon costs had been kept in sync with a points update — the three
+    cheaper mounts were still the old, wrong values. Same pattern hit the
+    Beastmaster's and Black Ark Fleetmaster's Sea Dragon Cloak cost vs.
+    the Commanders' copy of the same option. Diffing sibling
+    entries against each other (not just each one against the PDF in
+    isolation) surfaces this class of drift fast.
 
 ## Tooling
 
