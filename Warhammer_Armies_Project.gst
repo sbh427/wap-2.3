@@ -1878,10 +1878,10 @@ All models hit by the template suffer a Strength 3 hit (models with the Fly spe
             <profile name="Mesmerise" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0eca-4525-3fb3-de18">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target cannot choose to charge, cast spells or shoot at the Wizard or any unit they are with until the start of the caster&apos;s next Magic phase.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can only be cast on unengaged units within Line of Sight. The target cannot choose to charge, cast spells or shoot at the Wizard or any unit they are with until the start of the caster&apos;s next Magic phase.</characteristic>
               </characteristics>
             </profile>
             <profile name="Nik Magic" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d58c-c129-7beb-497c">
@@ -2221,7 +2221,7 @@ All models hit by the template suffer a Strength 5 hit with the Multiple Wounds
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers 3D6 Attacks with Weapon Skill 3 and Strength 4, resolved as close combat attacks.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers 3D6 Attacks with Weapon Skill 3 and Strength 4, resolved as close combat attacks. Note that all hits are allocated onto the unit&apos;s rank and file models like missile attacks.</characteristic>
               </characteristics>
             </profile>
             <profile name="Bone Krusha" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="1282-6192-4fdb-574d">
@@ -2239,7 +2239,7 @@ All models hit by the template suffer a Strength 5 hit with the Multiple Wounds
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Roll a D6; on a 1 it has no effect, on a 2 to 3 that model suffers one Wound, on a 4 to 5 it suffers D3 Wounds and on a 6 it suffers D6 Wounds. These Wounds have Ignores Armour Saves. Each time a model is slain by Squiggly Curse, you can add +D3 to any further casting attempts made by the caster this Magic Phase.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Roll a D6; on a 1 it has no effect, on a 2 to 3 that model suffers one Wound, on a 4 to 5 it suffers D3 Wounds and on a 6 it suffers D6 Wounds. These Wounds have Ignores Armour Saves. Each time a model is slain by Squiggly Curse, you can add +2 to any further casting attempts made by the caster this Magic Phase.</characteristic>
               </characteristics>
             </profile>
             <profile name="Gork&apos;s War Cry" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7432-c7ca-3682-cbb3">
@@ -2295,7 +2295,7 @@ the template at any point during its move suffers a Strength 5 hit. In addition
           <infoLinks>
             <infoLink name="Sneaky Stealin&apos;" id="fbca-7cb6-6d84-5024" hidden="false" targetId="c448-a828-b69c-be59" type="profile"/>
             <infoLink name="Vindictive Glare" id="d9b1-c9f8-00bf-14b3" hidden="false" targetId="f2fe-7a32-6f5a-cd9f" type="profile"/>
-            <infoLink name="Oi! Geroff!" id="12f5-401b-fe48-1501" hidden="false" targetId="ffaf-9052-2b3a-6fb2" type="profile"/>
+            <infoLink name="Oi! Gerroff!" id="12f5-401b-fe48-1501" hidden="false" targetId="ffaf-9052-2b3a-6fb2" type="profile"/>
             <infoLink name="Sneaky Stabbin&apos;" id="5819-d05b-d26b-ece4" hidden="false" targetId="552e-e369-af03-6e30" type="profile"/>
             <infoLink name="Brain Bursta" id="7af2-e4ec-c123-539a" hidden="false" targetId="3860-7301-7e83-915c" type="profile"/>
             <infoLink name="Gaze of Gork" id="813b-7dcf-ceb3-1aec" hidden="false" targetId="40dc-f03a-a858-cfd0" type="profile"/>
@@ -2402,7 +2402,7 @@ the template at any point during its move suffers a Strength 5 hit. In addition
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the targets treats all Ararchnids as causing Fear, and must re-roll successful Terror tests from Arachnarok Spiders.</characteristic>
               </characteristics>
             </profile>
-            <profile name="Gift of the Spider God" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b7b4-2391-d939-39d4">
+            <profile name="Gift of da Spider God" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b7b4-2391-d939-39d4">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -2506,7 +2506,7 @@ the template at any point during its move suffers a Strength 5 hit. In addition
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains the Regeneration (5+) special rule until the start of the caster&apos;s next Magic phase. Models that already have Regeneration (4+) or better may instead re-roll failed Regeneration saves.</characteristic>
               </characteristics>
             </profile>
-            <profile name="Torent of Filth" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0f6d-8f38-e306-b906">
+            <profile name="Torrent of Filth" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0f6d-8f38-e306-b906">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -3763,9 +3763,6 @@ Some Leaders also have the option to take specialised equipment. If this is the
 
 A unit that is accompanied by a Musician may re-roll failed Leadership tests when attempting to march within 6&quot; of enemy units and rallying. Fast Cavalry and Skirmishers that have fled using Feigned Flight automatically rally.</description>
     </rule>
-    <rule id="7799-99da-2b8e-2941" name="Slow to Fire" hidden="false">
-      <description>Weapons with Slow to Fire cannot be used to Stand and Shoot.</description>
-    </rule>
     <rule id="7bd0-8602-4375-a731" name="Fear" hidden="false">
       <description>A unit containing one or more Fear-causing models gains +1 to its Combat Resolution score. If the Unit Strength of all Fear-causing models is double or more that of the total Unit Strength of all enemy units in base contact, the Combat Resolution score is increased by +2. Note that the bonus from Fear is otherwise not cumulative for having multiple units with the Fear 
 special rule involved in the same combat. 
@@ -3954,7 +3951,7 @@ If a model has the Killing Blow special rule from two or more different sources
 Heroic Killing Blow functions exactly like a normal Killing Blow, except it works on any troop type except for Swarms. Models with Immunity (Killing Blow) treat Heroic Killing Blow as normal Killing Blow.</description>
     </rule>
     <rule id="4dc2-df44-cb9c-2c9b" name="Heroic Killing Blow" hidden="false">
-      <description>If a model with Killing Blow rolls a 6 to wound in close combat, they automatically slay their opponent – regardless of the number of wounds on the victim&apos;s profile. Armour saves and regeneration saves cannot be taken against a Killing Blow. Ward Saves may be taken as normal.
+      <description>If a model with Killing Blow rolls a 6 to wound in close combat, they automatically slay their opponent – regardless of the number of wounds on the victim&apos;s profile. Armour saves and regeneration saves cannot be taken against a Killing Blow. Magical Ward saves may be taken as normal.
 
 Heroic Killing Blow is effective against all troop types except Swarms.
 
@@ -4094,7 +4091,7 @@ This rule is cumulative with other sources of Hold Your Ground. If the model ha
       <description>Models with the Mark of Slaanesh have the Immunity (Psychology) special rule and may re-roll the lowest dice on their charge and pursuit distances.</description>
     </rule>
     <rule name="Mark of Tzeentch" id="Mark of Tzeentch" hidden="false">
-      <description>Models with the Mark of Tzeentch have Magic Resistance (1) and Ward Save (6+).</description>
+      <description>Models with the Mark of Tzeentch have Magic Resistance (1) and Magical Ward (6+).</description>
     </rule>
     <rule id="92ff-eedb-a738-a73b" name="Ponderous" hidden="false">
       <description>Weapons with this rule suffer an additional -1 To Hit penalty if they move and shoot in the same turn, and when choosing Stand &amp; Shoot as a charge reaction.</description>
@@ -4336,7 +4333,7 @@ Note that this special rule is not cumulative. If two or more models in a unit 
       <description>Models with this rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
     </rule>
     <rule name="Daemonic" id="6940-194d-860b-18d4" hidden="false">
-      <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a Ward Save (5+) which gets reduced to a Ward Save (6+) against Magical Attacks.</description>
+      <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a Magical Ward (5+) which gets reduced to a Magical Ward (6+) against Magical Attacks.</description>
     </rule>
     <rule name="Cumbersome" id="7ef7-e8ef-ce58-8c93" hidden="false">
       <description>Models or Weapons with the Cumbersome special rule cannot be used to Stand and Shoot.</description>
@@ -4417,7 +4414,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Great Cannon</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-72&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">10</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Cumbersome, Multiple Wounds (D6). Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Cumbersome, Multiple Wounds (D6).</characteristic>
       </characteristics>
     </profile>
     <profile id="2d26-2a21-00a2-685d" name="Bolt Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -4425,7 +4422,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">32/48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">6</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Armour Piercing (1). Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Armour Piercing (1). Cumbersome.</characteristic>
       </characteristics>
     </profile>
     <profile id="4f25-d6c7-f4da-a808" name="Cannon" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -4433,7 +4430,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Cannon</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">10</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6/D3). Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6/D3). Cumbersome.</characteristic>
       </characteristics>
     </profile>
     <profile id="78db-91d9-aaca-d5ba" name="Grapeshot" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -4441,7 +4438,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Grapeshot</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1). Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1). Cumbersome.</characteristic>
       </characteristics>
     </profile>
     <profile id="8651-78f3-14e9-f66b" name="Stone Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -4449,7 +4446,7 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Stone Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4(8)</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Cumbersome.</characteristic>
       </characteristics>
     </profile>
     <profile id="d259-6f2a-d6a9-0eec" name="Fire Thrower" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -5047,7 +5044,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">32/48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Shots (6). Armour Piercing (1). Slow to Fire. Rapid Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Shots (6). Armour Piercing (1). Cumbersome. Rapid Fire.</characteristic>
       </characteristics>
     </profile>
     <profile id="c5ac-9a35-f3cf-7c0a" name="Mortar" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -5055,7 +5052,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Mortar</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">3(6)</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire. Armour Piercing (1).</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Cumbersome. Armour Piercing (1).</characteristic>
       </characteristics>
     </profile>
     <profile id="7c7a-74eb-5d2b-bc04" name="Rocket Launcher" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
@@ -5063,7 +5060,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Rocket Launcher</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks. Slow to Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks. Cumbersome.</characteristic>
       </characteristics>
     </profile>
     <profile id="bd05-6040-b879-d61a" name="The Eagle&apos;s Cry" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -5626,7 +5623,7 @@ All models under the template must roll a D6 per Wound on their profile – fo
     </profile>
     <profile name="Ethereal" typeId="54b0-94fc-eb1e-8e37" typeName="Invulnerable save" hidden="false" id="0d17-762d-8841-8d11">
       <characteristics>
-        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Magical Ward</characteristic>
         <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">2+ / 5+ against Magical Attacks</characteristic>
       </characteristics>
     </profile>
@@ -5643,7 +5640,7 @@ All models under the template must roll a D6 per Wound on their profile – fo
     </profile>
     <profile name="Daemonic" typeId="54b0-94fc-eb1e-8e37" typeName="Invulnerable save" hidden="false" id="377d-1fae-4a56-de9e">
       <characteristics>
-        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Magical Ward</characteristic>
         <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+ / 6+ against Magical Attacks.</characteristic>
       </characteristics>
     </profile>
@@ -5662,10 +5659,10 @@ All models under the template must roll a D6 per Wound on their profile – fo
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strenght 3 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 3 hits.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Oi! Geroff!" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ffaf-9052-2b3a-6fb2">
+    <profile name="Oi! Gerroff!" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ffaf-9052-2b3a-6fb2">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
@@ -5951,7 +5948,7 @@ Extend a straight line directly away from the caster&apos;s forward arc. Any m
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target may re-roll armour and Ward Save rolls of 1 until the start of the caster’s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target may re-roll armour and Magical Ward rolls of 1 until the start of the caster’s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile name="Blot of Change" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a5ec-478a-3431-76b3">
