@@ -1,9 +1,9 @@
 # WAP data repo — working notes for rulebook update passes
 
 This file captures what was learned doing the Orcs & Goblins, Dwarfs,
-Amazons, Empire, and High Elves 3.0/3.1 updates plus the core rulebook
-(gst/Armoury/Bestiary) pass, so the same playbook can be reused for the next
-army instead of rediscovering it from scratch.
+Amazons, Empire, High Elves, and Tomb Kings 3.0/3.1 updates plus the core
+rulebook (gst/Armoury/Bestiary) pass, so the same playbook can be reused for
+the next army instead of rediscovering it from scratch.
 
 ## What this repo is
 
@@ -113,6 +113,15 @@ in an editor.
     reused across many army files, referenced indirectly rather than
     spelled out per-character. A shallow per-character grep will
     false-negative this the same way as above.
+  - **The failure mode isn't always "missing" — it can be "wired to the
+    wrong shared target."** Tomb Kings' Arkhan the Black targeted the
+    *forced*-General template (the one Settra correctly uses, since only
+    Settra's PDF entry says he must be General) instead of the *optional*
+    one every other character uses — a copy-paste from Settra's block that
+    silently forced Arkhan to be General with no PDF basis. Found by
+    diffing which shared-group id each character's "10. Character Options"
+    `entryLink` points at (`grep` the two known template ids across the
+    whole file and compare), not by reading any one character in isolation.
   - Mandatory escort/companion unit: an error-triggering `<condition>` +
     modifier pair (compare a working example before concluding one is
     missing — O&G's Grom/Grimgor and Dwarfs' Josef Bugman all use this).
@@ -176,13 +185,14 @@ keyword it hasn't seen before.
 A recurring specific case worth knowing about: a fabricated "Lords" FOC
 category (id `d280-b7df-c185-2ba5`) that was never actually defined anywhere
 in this repo shows up repeatedly across multiple armies' Lord/Hero-merge
-scaffolding — confirmed in O&G, Amazons, and High Elves so far, always the
-same id — always redundant/dead when paired with a real `Characters`
-category check, but occasionally gating something that actually should have
-fired (Amazons' Stegadon-mount crew reduction was silently dead code because
-of exactly this, not just visual clutter — check what a dangling condition
-*was supposed to do* via the PDF before assuming its removal is a no-op).
-Given it's now shown up in 3 of 4 completed armies, **run
+scaffolding — confirmed in O&G, Amazons, High Elves, and Tomb Kings so far
+(7 occurrences in Tomb Kings alone), always the same id — always
+redundant/dead when paired with a real `Characters` category check, but
+occasionally gating something that actually should have fired (Amazons'
+Stegadon-mount crew reduction was silently dead code because of exactly
+this, not just visual clutter — check what a dangling condition *was
+supposed to do* via the PDF before assuming its removal is a no-op). Given
+it's now shown up in 4 of 5 completed armies, **run
 `tools/check_dangling_refs.py` on any newly-migrated file as one of the
 first steps**, not just at the end — expect to find this id again.
 
@@ -324,6 +334,20 @@ The rulebook PDFs are two different layouts:
    (this happened on High Elves' Elven Honours allowance: a specific,
    well-evidenced hypothesis about a missing attribute turned out to be
    wrong once the user checked in the actual tool).
+10. **A file fully migrated upstream by someone else is not a reason to
+    expect fewer rounds.** Tomb Kings (`wap_Tomb_Kings.cat`) arrived on
+    `develop` already labeled "WAP 3.1" and fully authored by an upstream
+    contributor (commit history: "characters done" / "TK magic items" /
+    "TK done") — not a from-scratch migration done in this session at all.
+    It still took 3 audit rounds to find 25 real, distinct bugs (name
+    typos, wrong stats on two special characters, a stale pre-3.1
+    mechanic, three wrong spell Casting Values, a wrongly-forced Army
+    General, an internally-inconsistent rule name). Round 1 and round 2
+    each explicitly said "not confident this is complete" and were right;
+    only round 3's targeted sweep of the remaining unchecked units found
+    zero further cost/stat errors and could honestly call it converged.
+    Treat "someone else already did this" the same as "this already says
+    3.1" (item 6) — necessary context, not evidence of correctness.
 
 ## Tooling
 
