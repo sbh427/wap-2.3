@@ -6309,7 +6309,7 @@ All models hit by the template must pass a Weapon Skill test or suffer a Stren
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Wizard successfully casts a hex, magic missile or direct damage spell from this lore, and the casting roll contains any double, the spell&apos;s target unit suffers 2D6 Strength 2 hits with Armour Piercing (1). If the casting roll contains any treble, the spell&apos;s target unit suffers 3D6 hits instead.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Wizard successfully casts a hex, magic missile or direct damage spell from this lore, and the casting roll contains any double, the spell&apos;s target unit suffers 2D6 Strength 2 hits after the spell has been resolved. If the casting roll contains any treble, the spell&apos;s target unit suffers 3D6 hits instead.</characteristic>
       </characteristics>
     </profile>
     <profile name="Anchan-Rogar the Soul Stealer" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2a6c-20a9-1718-e49f" noindex="true">
