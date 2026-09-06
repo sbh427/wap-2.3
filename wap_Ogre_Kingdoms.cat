@@ -2682,7 +2682,7 @@ The wearer gains +1 Strength and a Magical Ward (6+). If a Magic Weapon inflicts
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Arcane Items" id="0559-eca8-cb2e-0a7a" hidden="false" sortIndex="14" collapsible="true">
+    <selectionEntryGroup name="Relics" id="0559-eca8-cb2e-0a7a" hidden="false" sortIndex="14" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="349b-3a30-8e18-4c6b" includeChildSelections="false"/>
       </constraints>
@@ -2692,19 +2692,9 @@ The wearer gains +1 Strength and a Magical Ward (6+). If a Magic Weapon inflicts
             <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
           </conditions>
         </modifier>
-        <modifier type="set" value="0" field="349b-3a30-8e18-4c6b">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="model" childId="c007-f400-d2b6-a49e" shared="true" includeChildSelections="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
       </modifiers>
       <entryLinks>
-        <entryLink import="true" name="Common Arcane Items" hidden="false" id="39b4-88a4-c9b1-a510" type="selectionEntryGroup" targetId="6cd2-3f4b-da2d-1ee9" sortIndex="6" flatten="true"/>
+        <entryLink import="true" name="Commom Relics" hidden="false" id="39b4-88a4-c9b1-a510" type="selectionEntryGroup" targetId="5439-428a-67d0-36ba" sortIndex="6" flatten="true"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Wizardflesh Apron" hidden="false" id="2133-be02-70d8-276b" sortIndex="2">
@@ -2818,24 +2808,29 @@ The wearer gains +1 Strength and a Magical Ward (6+). If a Magic Weapon inflicts
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Arcane Items (One use only)" id="c007-f400-d2b6-a49e" hidden="false" collective="false" import="true" collapsible="true" sortIndex="14.5">
+    <selectionEntryGroup name="Staffs" id="8132-ce2e-05f7-3568" hidden="false" collective="false" import="true" collapsible="true" sortIndex="13.5">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f558-6556-9226-69e7" includeChildSelections="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Commom Staffs" hidden="false" id="49fb-393c-34b0-2cf2" type="selectionEntryGroup" targetId="0868-e6b5-1896-4f34" sortIndex="6" flatten="true"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Charms" id="c007-f400-d2b6-a49e" hidden="false" collective="false" import="true" collapsible="true" sortIndex="14.5">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fc8b-95f4-a5e7-9493" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <entryLinks>
-        <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="a792-00cf-d3e3-0e40" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="5" flatten="true"/>
+        <entryLink import="true" name="Commom Charms" hidden="false" id="a792-00cf-d3e3-0e40" type="selectionEntryGroup" targetId="d41c-42d4-1ee8-64ed" sortIndex="5" flatten="true"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="0" field="fc8b-95f4-a5e7-9493">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="model" childId="0559-eca8-cb2e-0a7a" shared="true" includeChildSelections="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
