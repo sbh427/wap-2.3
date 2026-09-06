@@ -25,8 +25,15 @@ id-anchored edits.
 - `wap_<Army>.cat` — one catalogue per army: own units, army-unique magic
   items; army-unique *spells* still live in the gst (lore names only are
   army-flavoured).
-- **Always branch off `develop`, not `main`** (`main` still has the old
-  `wap-fr-EN23_` prefix). Check `git log origin/develop -- <file>` first.
+- **Never branch off `develop` or `main`** for a new army migration —
+  `main` still has the old `wap-fr-EN23_` prefix, and `develop` lacks this
+  file and `tools/` entirely (they only ever exist on the migration-branch
+  lineage, never merged back). Branch off the **tip of the most recently
+  worked migration branch** instead (e.g. a new army follows the previous
+  army's branch), so CLAUDE.md/tools/ and prior fixes carry forward
+  automatically. Only use `develop` if no prior migration branch exists yet.
+  Check `git log origin/develop -- <file>` to see the pre-migration
+  baseline for a specific file when needed.
 
 ## BattleScribe XML gotchas
 
