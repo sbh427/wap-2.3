@@ -191,10 +191,26 @@ O&G, Amazons, and High Elves.
 
 ## Tooling
 
-`tools/` is checked into the repo, for scripts meant to outlive a session:
+`tools/` is checked into the repo, for scripts meant to outlive a session.
+Reach for these before prototyping a fresh one-off in scratch — check what's
+here first:
 
 - `tools/check_dangling_refs.py` — the referential-integrity checker above.
+- `tools/extract_two_column_pdf.py <pdf> <pages>` — the two-column PDF
+  extraction method (pymupdf, split by x0 vs. midpoint) as a reusable script,
+  for Special Rules/Magic Items/Lores of Magic pages.
+- `tools/parse_unit_profiles.py <pdftotext_output.txt>` — parses the
+  standard single-column stat-block layout (name, `Profile`, M/WS/BS/S/T/
+  W/I/A/Ld/Points rows, UNIT SIZE/TROOP TYPE/EQUIPMENT/SPECIAL RULES/OPTIONS)
+  into structured blocks; import `parse_unit_blocks()` to diff old vs. new
+  PDF programmatically instead of eyeballing text dumps.
+- `tools/dump_cat_profiles.py <cat> [typeName filter]` — quick-print every
+  selectionEntry's profile stats/costs/constraints in a `.cat` file, for
+  spot-checking current XML state without hand-grepping. Doesn't follow
+  infoLink indirection to an off-node profile (common on monster/mount
+  entries) — a "no profiles" result there is a lead, not proof.
 
 Everything else used so far was prototyped in the session scratchpad and
-never committed. Rebuild from the notes above, or ask to add one under
-`tools/` if it turns out broadly reusable.
+never committed (army-specific merge/compare scripts with hardcoded names
+don't generalize — leave those in scratch). Promote a script to `tools/`
+when it's genuinely army-agnostic, and update this list when you do.
