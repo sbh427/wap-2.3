@@ -11,7 +11,9 @@ Unofficial New Recruit / BattleScribe data files for the Warhammer Armies
 Project. XML, schema-validated by New Recruit but otherwise hand-maintained.
 Files are hundreds of KB to multiple MB — never read one in full or
 hand-edit in an editor; work through scripts (see "Tooling") and
-id-anchored edits.
+id-anchored edits. If you do need to eyeball a slice with the Read tool,
+pass `offset`/`limit` for that slice — an unbounded read of one of these
+files burns tens of thousands of tokens for a handful of relevant lines.
 
 ## Where things live
 
