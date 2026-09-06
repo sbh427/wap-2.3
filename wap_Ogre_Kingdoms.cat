@@ -37,6 +37,12 @@
     <rule name="Impale" id="e3e7-5661-775c-c9bf" hidden="false">
       <description>A mount with this special rule has Mighty Blow (1) in any turn it charges.</description>
     </rule>
+    <rule name="Gutseers" id="297d-c71b-e819-b80b" hidden="false">
+      <description>The unit receives an additional +1 casting bonus for every 3 models in the unit with this special rule. Each time the unit casts a spell (or is targeted by a special rule that affects a Wizard), you must nominate one Cleaver as the caster (or target) for the purposes of line of sight, range, etc. In the event of a Cleaver unit rolling a miscast, do not roll on the Miscast table. Instead, the unit suffers D3 Wounds with no saves of any kind allowed.</description>
+    </rule>
+    <rule name="Level 1 Wizard (Lore of Gut Magic)" id="323c-3cb6-d1ad-0cfc" hidden="false">
+      <description>A unit of Cleavers is a Level 1 Wizard who chooses spells from the Lore of Gut Magic.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
         <profile name="Gut-Plate" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="bc67-a19e-91da-e74d" noindex="true">
@@ -6384,6 +6390,91 @@ The wearer gains +1 Strength and a Magical Ward (6+). If a Magic Weapon inflicts
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="d98a-f58e-872e-66d1" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Chariot" hidden="false" id="1827-cbec-d6ac-2b3a" targetId="7224-b7fd-d652-3ff2" primary="false"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Cleavers" hidden="false" id="16f5-2397-176d-8e84" sortIndex="302">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Command Group" id="ea1f-983c-a080-eeb5" hidden="false" sortIndex="2">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="c756-fc7e-e827-4a52">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ad9-c1c2-8152-a810"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Leader" id="40b9-5249-40b2-8df3" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Cleaver" hidden="false" id="c143-8a09-2d27-0bb3" sortIndex="1">
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Ogre Charge" id="2e4b-7a1d-3df5-b9ed" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
+            <infoLink name="Immunity (*)" id="2510-9ffb-1039-8ab0" hidden="false" type="rule" targetId="8f93-30da-a9db-adc7"><modifiers><modifier type="replace" value="Psychology" field="name" arg="*"/></modifiers></infoLink>
+            <infoLink name="Stubborn" id="58f9-0977-b255-e654" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+            <infoLink name="Gutseers" id="bcde-3425-c214-a844" hidden="false" type="rule" targetId="297d-c71b-e819-b80b"/>
+            <infoLink name="Level 1 Wizard (Lore of Gut Magic)" id="642d-6017-5ebd-e77b" hidden="false" type="rule" targetId="323c-3cb6-d1ad-0cfc"/>
+            <infoLink name="Natural Armour" id="d6e1-c6ab-be40-1918" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="Cleaver" field="annotation"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <profiles>
+            <profile name="Cleaver" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ae92-fd4f-0a47-13e2">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Ogre)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="3476-a8b8-b425-0ae4"/>
+            <constraint type="max" value="9" field="selections" scope="parent" shared="true" id="3a22-9f71-ee98-4203"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="41. Gut-Plate" hidden="false" id="61b7-8505-e237-b411" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+              <entryLinks>
+                <entryLink import="true" name="Gut-Plate" hidden="false" id="bc73-a41c-7232-965c" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2fe4-cb83-7188-0445"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="2ddb-d0b7-873d-0865" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="7c94-755b-4a53-8b7e" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="370b-0076-4297-6403" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="a0e9-4478-7de9-9eeb" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="41e0-1d95-613f-2e33" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Grimhorn Rhinox Riders" hidden="false" id="ccbb-2e7d-2253-c03f" sortIndex="301">
