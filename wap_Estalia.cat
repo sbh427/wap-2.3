@@ -5949,9 +5949,9 @@ Place the small round template with its centre anywhere within range. If the at
             <entryLink import="true" name="Common Enchanted Items" hidden="false" id="30ae-fa7d-ea23-8341" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="10" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Arcane Items" id="0407-029e-45e7-a926" hidden="false" sortIndex="4" collapsible="true">
+        <selectionEntryGroup name="Staffs" id="0407-029e-45e7-a926" hidden="false" sortIndex="4" collapsible="true">
           <entryLinks>
-            <entryLink import="true" name="Common Arcane Items" hidden="false" id="74c9-133d-9171-5d17" type="selectionEntryGroup" targetId="6cd2-3f4b-da2d-1ee9" flatten="true" sortIndex="5"/>
+            <entryLink import="true" name="Commom Staffs" hidden="false" id="1c06-3145-ebbb-40b0" type="selectionEntryGroup" targetId="0868-e6b5-1896-4f34" flatten="true" sortIndex="14"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Living Deadwood Staff" hidden="false" id="8f3c-b3e0-00de-0c6d" sortIndex="4">
@@ -5974,7 +5974,7 @@ Place the small round template with its centre anywhere within range. If the at
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Special</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all woods within 18&quot;. Each wood within range may be moved up to 6&quot; in any direction, as long as they stop within 1&quot; of other terrain. In addition, any unit touched by a moving wood suffer D6 Strength 4 Hits.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all woods within 18&quot;. Each wood within range may be moved up to 6&quot; in any direction, as long as they stop within 1&quot; of other terrain. In addition, any unit touched by a moving wood suffer D6 Strength 4 Hits.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5990,11 +5990,28 @@ Place the small round template with its centre anywhere within range. If the at
               <profiles>
                 <profile name="Staff of Arcane Draining" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="0d53-b6c8-2681-5b7f">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains +1 bonus when channelling Dispel Dice. Additionally, for each natural 6 rolled when channelling Dispel Dice with the bearer, you may remove one Power Dice from the enemy’s Power Pool.</characteristic>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains +1 bonus when channelling Dispel Dice. Additionally, for each natural 6 rolled when channelling Dispel Dice with the bearer, you may remove one Power Dice from the enemy’s Power Pool.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6654-585a-4537-4d53" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Charms" id="a0cd-6fe2-ed57-4355" hidden="false" sortIndex="5" collapsible="true">
+          <entryLinks>
+            <entryLink import="true" name="Commom Charms" hidden="false" id="83ea-2e32-0e3f-4398" type="selectionEntryGroup" targetId="d41c-42d4-1ee8-64ed" flatten="true" sortIndex="14"/>
+          </entryLinks>
+          <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Temperance Crystal" hidden="false" id="5e5e-bc8c-9ee1-1892" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dc21-6ce8-d21f-b394" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
@@ -6006,11 +6023,28 @@ Place the small round template with its centre anywhere within range. If the at
               <profiles>
                 <profile name="Temperance Crystal" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="cd1a-6183-8a4d-0b11">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item may re-roll one Power Dice when casting spells once per Magic phase.</characteristic>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item may re-roll one Power Dice when casting spells once per Magic phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b61-c09f-b5e6-4885" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Relics" id="1eed-5663-74d3-4903" hidden="false" sortIndex="6" collapsible="true">
+          <entryLinks>
+            <entryLink import="true" name="Commom Relics" hidden="false" id="95f0-6487-df62-4076" type="selectionEntryGroup" targetId="5439-428a-67d0-36ba" flatten="true" sortIndex="14"/>
+          </entryLinks>
+          <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Ring of the Sanctioned Thaumaturge" hidden="false" id="4926-e76f-94ae-62f9" sortIndex="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6dc0-055a-d73e-6785" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
@@ -6022,14 +6056,30 @@ Place the small round template with its centre anywhere within range. If the at
               <profiles>
                 <profile name="Ring of the Sanctioned Thaumaturge" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="82fc-a2db-db83-d6c9">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard may choose their spells from a combination of Lores of Magic available to them, but may only choose Level 1 spells.</characteristic>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard may choose their spells from a combination of Lores of Magic available to them, but may only choose Level 1 spells.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Gem of Taranto" hidden="false" id="c6e9-e430-69f3-4eeb" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4dfd-acac-3076-414d" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="aa4e-8592-49e0-4118" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <profiles>
+                <profile name="The Gem of Taranto" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="7dd1-9820-d036-4ffe">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Gem of Taranto can be used whenever you successfully dispel an enemy spell (except Summoning Spells). The bearer of the Gem will be able to cast the spell themselves (limited by their Wizard level as normal) for the remainder of the game, even if it is from a lore not normally available to them.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="864b-48ed-e13f-a27f" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb23-5c89-6f49-4454" includeChildSelections="false"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -6037,42 +6087,7 @@ Place the small round template with its centre anywhere within range. If the at
                 <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="0" field="864b-48ed-e13f-a27f">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="7e86-85ed-4697-925c" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
           </modifiers>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Arcane Items (One use only)" id="7e86-85ed-4697-925c" hidden="false" sortIndex="5" collapsible="true">
-          <entryLinks>
-            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="388d-2565-4a90-72e4" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" flatten="true"/>
-          </entryLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="0" field="727c-4874-b8b0-0c28">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="0407-029e-45e7-a926" shared="true" includeChildSelections="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="727c-4874-b8b0-0c28" includeChildSelections="false"/>
-          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
