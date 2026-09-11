@@ -10757,837 +10757,6 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="11. Knightly Orders" id="8d18-9730-7685-8bec" collapsible="true" hidden="false">
-      <constraints>
-        <constraint id="37e4-f6ff-4c16-65ff" field="selections" scope="parent" shared="true" type="max" value="1"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry name="Reiksguard Knights" id="fcfc-1847-4faf-81b6" collective="true" hidden="false" import="true" sortIndex="1" type="upgrade">
-          <constraints>
-            <constraint id="db23-1c93-d6fd-3df8" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="69b3-9729-8c85-bb5d" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Stubborn" id="5ac9-1b2c-28ca-6bb6" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
-          </infoLinks>
-          <modifiers>
-            <modifier field="db23-1c93-d6fd-3df8" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="fcfc-1847-4faf-81b6" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="points" type="set" value="1">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="points" type="set" value="3">
-              <conditions>
-                <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="model" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="69b3-9729-8c85-bb5d" type="increment" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="fcfc-1847-4faf-81b6" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                  <conditions>
-                    <condition childId="e537-0cb1-14a9-2687" field="selections" scope="model" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <rules>
-            <rule name="Reiksguard Knights" id="e76a-22fc-d21a-2606" hidden="false">
-              <description>Must take heavy lances or polearms if mounted. The models have the Stubborn special rule. However, they may not take a regular Grand Master.</description>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditions>
-                    <condition childId="fcfc-1847-4faf-81b6" field="selections" scope="parent" shared="true" type="atLeast" value="1"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry name="Knights of the Blazing Sun" id="130c-3ba2-f0bb-8df7" collective="true" hidden="false" import="true" sortIndex="2" type="upgrade">
-          <constraints>
-            <constraint id="a3b6-3c4d-09af-836b" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="0d73-9f5d-8085-55dd" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-            <constraint id="f48c-d015-c09d-0e10" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
-            <constraint id="1f3d-3a94-9fc8-0077" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <conditions>
-                <condition childId="mount" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
-              </conditions>
-              <modifiers>
-                <modifier field="1f3d-3a94-9fc8-0077" type="set" value="0"/>
-                <modifier field="annotation" type="set" value="Only Cavalry and Monstrous Cavalry"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="a3b6-3c4d-09af-836b" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="130c-3ba2-f0bb-8df7" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="points" type="set" value="1">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="points" type="set" value="3">
-              <conditions>
-                <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="0d73-9f5d-8085-55dd" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="130c-3ba2-f0bb-8df7" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <rules>
-            <rule name="Knights of the Blazing Sun" id="c2c8-efff-27bd-b40e" hidden="false">
-              <description>Whenever a unit where the majority of models have this upgrade declare a charge, the unit being charged suffer -1 Weapon Skill and Ballistic Skill for the duration of the turn.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry name="Knights Panther" id="dc9f-a022-e771-d648" collective="true" hidden="false" import="true" sortIndex="3" type="upgrade">
-          <constraints>
-            <constraint id="3414-33c6-e5f7-be37" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="c97c-36da-08b9-411f" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-            <constraint id="e8c2-77cd-fbb8-4a73" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
-            <constraint id="1e40-f73e-8fae-c373" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <conditions>
-                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
-              </conditions>
-              <modifiers>
-                <modifier field="1e40-f73e-8fae-c373" type="set" value="0"/>
-                <modifier field="annotation" type="set" value="Only Cavalry"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="3414-33c6-e5f7-be37" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="dc9f-a022-e771-d648" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="points" type="set" value="1">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="unit" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="error" type="add" value="Model must ride a Warhorse.">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="model-or-unit" shared="true" type="equalTo" value="0"/>
-                    <condition childId="dc9f-a022-e771-d648" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="c97c-36da-08b9-411f" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="dc9f-a022-e771-d648" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <rules>
-            <rule name="Knights Panther" id="f8dd-eef5-10fc-0341" hidden="false">
-              <description>A unit where all models have this upgrade add an extra D3&quot; to their charge distance.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry name="Knights of the White Wolf" id="62b0-1c10-9c20-ea9b" collective="true" hidden="false" import="true" sortIndex="4" type="upgrade">
-          <constraints>
-            <constraint id="1a5c-4f0f-e29f-c555" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="fd80-93d2-eacf-626d" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Crush the Weak" id="bd98-0a67-ea9e-accc" hidden="false" targetId="da9f-06eb-7dc7-d6e4" type="rule"/>
-            <infoLink name="Natural Armour" id="1192-d90a-ebe0-ef1e" hidden="false" targetId="9aa1-cdbd-98da-c7d1" type="profile">
-              <modifiers>
-                <modifier field="annotation" type="set" value="White Wolf Cloak"/>
-                <modifier field="97ea-ecf7-8d24-b2ca" type="set" value="6+"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <modifiers>
-            <modifier field="1a5c-4f0f-e29f-c555" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="62b0-1c10-9c20-ea9b" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="points" type="set" value="1">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="points" type="set" value="10">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="unit" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="force" field="selections" scope="5b10-3406-8dd2-c0ca" shared="true" type="notInstanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="fd80-93d2-eacf-626d" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="62b0-1c10-9c20-ea9b" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry name="Black Guard of Morr" id="904c-2169-490f-0b91" collective="true" hidden="false" import="true" sortIndex="5" type="upgrade">
-          <constraints>
-            <constraint id="00e2-66e7-ea99-ab6e" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="5874-12f0-0d0d-2c91" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-            <constraint id="dacd-4750-23ea-974a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
-            <constraint id="f25c-c350-3bbc-4cb2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Fear" id="c247-d869-8318-0947" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
-            <infoLink name="Independent" id="caa0-d631-0b4a-eedd" hidden="false" targetId="32b6-55f6-6cc6-8fc4" type="rule"/>
-          </infoLinks>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <conditions>
-                <condition childId="c20e-0cc6-b847-c2ad" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="atLeast" value="1"/>
-              </conditions>
-              <modifiers>
-                <modifier field="f25c-c350-3bbc-4cb2" type="set" value="0"/>
-                <modifier field="annotation" type="set" value="Only Infantry and Cavalry"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="00e2-66e7-ea99-ab6e" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="904c-2169-490f-0b91" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditions>
-                <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="unit" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="5874-12f0-0d0d-2c91" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="904c-2169-490f-0b91" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry name="Knights Griffon" id="4904-0eb6-8fcf-d2dc" collective="true" hidden="false" import="true" sortIndex="6" type="upgrade">
-          <constraints>
-            <constraint id="f0b8-b633-1ad9-e6c2" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="00e9-f27b-47a6-b531" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-            <constraint id="9bcc-ac8b-22ab-1375" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
-            <constraint id="a231-5a39-7e53-5a8f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <conditions>
-                <condition childId="mount" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
-              </conditions>
-              <modifiers>
-                <modifier field="a231-5a39-7e53-5a8f" type="set" value="0"/>
-                <modifier field="annotation" type="set" value="Only Cavalry and Monstrous Cavalry"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="f0b8-b633-1ad9-e6c2" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="4904-0eb6-8fcf-d2dc" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="points" type="set" value="1">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="points" type="set" value="3">
-              <conditions>
-                <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="00e9-f27b-47a6-b531" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="4904-0eb6-8fcf-d2dc" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <rules>
-            <rule name="Knigts Griffon" id="f1c5-5402-d54f-d0e6" hidden="false">
-              <description>The models gain the Disciplined special rule. In addition, they may not choose Flee as a charge reaction, refuse a challenge and ignore Swiftstride when fleeing.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry name="Knights of the Everlasting Light" id="af6c-f51b-1aa6-0908" collective="true" hidden="false" import="true" sortIndex="7" type="upgrade">
-          <constraints>
-            <constraint id="743f-269a-7df5-4b3c" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="a5c2-09e6-46ad-e995" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-            <constraint id="95f9-87ae-83fb-3c0e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
-            <constraint id="ca10-5369-513f-f75e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <conditions>
-                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
-              </conditions>
-              <modifiers>
-                <modifier field="ca10-5369-513f-f75e" type="set" value="0"/>
-                <modifier field="annotation" type="set" value="Only Cavalry"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="743f-269a-7df5-4b3c" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="af6c-f51b-1aa6-0908" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="points" type="set" value="1">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="points" type="set" value="10">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="a5c2-09e6-46ad-e995" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="af6c-f51b-1aa6-0908" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <rules>
-            <rule name="Knights of the Everlasting Light" id="a795-81bc-9125-9d2c" hidden="false">
-              <description>The models gain the Magical Attacks special rule and may re-roll failed armour saves in close combat. However, they must re-roll successful armour saves from missile attacks and successful Dangerous Terrain tests.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry name="Knights of Sigmar&apos;s Blood" id="eb60-252d-b9ad-9269" collective="true" hidden="false" import="true" sortIndex="8" type="upgrade">
-          <constraints>
-            <constraint id="e762-4c66-f617-261d" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="e9d6-df39-7c04-7666" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-            <constraint id="a77d-5cbd-cc3b-c171" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
-            <constraint id="11ed-22e6-71c7-c671" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Inspiring Presence (*)" id="e3ee-3e4e-1cac-0511" hidden="false" targetId="1c71-6c8f-f47a-0a91" type="rule">
-              <modifiers>
-                <modifier arg="*" field="name" type="replace" value="6"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <conditions>
-                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
-              </conditions>
-              <modifiers>
-                <modifier field="11ed-22e6-71c7-c671" type="set" value="0"/>
-                <modifier field="annotation" type="set" value="Only Cavalry"/>
-              </modifiers>
-            </modifierGroup>
-            <modifierGroup type="and">
-              <conditions>
-                <condition childId="a0b3-5670-39e0-ebd6" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="atLeast" value="1"/>
-              </conditions>
-              <modifiers>
-                <modifier field="11ed-22e6-71c7-c671" type="set" value="0"/>
-                <modifier field="annotation" type="set" value="Not allowed for Inner Circle Knights"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="e762-4c66-f617-261d" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="eb60-252d-b9ad-9269" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="points" type="set" value="1">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="e9d6-df39-7c04-7666" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="eb60-252d-b9ad-9269" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry name="Knights of the Black Bear" id="c75f-f113-7acd-4a7e" collective="true" hidden="false" import="true" sortIndex="9" type="upgrade">
-          <constraints>
-            <constraint id="54fe-5754-73cf-1109" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="4b23-8b4b-4478-4499" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-            <constraint id="8113-4531-7d27-c49b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
-            <constraint id="c483-d254-7f62-4be1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <conditions>
-                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
-              </conditions>
-              <modifiers>
-                <modifier field="c483-d254-7f62-4be1" type="set" value="0"/>
-                <modifier field="annotation" type="set" value="Only Cavalry"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="54fe-5754-73cf-1109" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="c75f-f113-7acd-4a7e" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="4b23-8b4b-4478-4499" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="c75f-f113-7acd-4a7e" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <rules>
-            <rule name="Knights of the Black Bear" id="ff3b-b1aa-713d-1a4b" hidden="false">
-              <description>This unit always counts as having one more rank than it actually has for the purpose of determining Steadfast, and enemy units cannot claim the Outnumber bonus against it. However, it must re-roll successful Leadership tests for Marching when within 6&quot; of enemy units, Redirecting a Charge, Reforming from Defeat after losing a round of close combat or Restraining from Pursuit.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry name="Knights of the Twin-Tailed Orb" id="cd78-9066-2028-a361" collective="true" hidden="false" import="true" sortIndex="10" type="upgrade">
-          <constraints>
-            <constraint id="ab52-0d45-e36e-83c9" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="2670-90fc-e606-69d4" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-            <constraint id="2dc1-2a47-4186-0d82" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
-            <constraint id="72f9-d37e-9cad-7306" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Flaming Attacks" id="753c-f3d2-8b18-08dd" hidden="false" targetId="8600-a090-2761-d661" type="rule"/>
-            <infoLink name="Frenzy" id="9165-25ed-f976-b984" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
-          </infoLinks>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <conditions>
-                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
-              </conditions>
-              <modifiers>
-                <modifier field="72f9-d37e-9cad-7306" type="set" value="0"/>
-                <modifier field="annotation" type="set" value="Only Cavalry"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="ab52-0d45-e36e-83c9" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="cd78-9066-2028-a361" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="points" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="points" type="set" value="15">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="2670-90fc-e606-69d4" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="cd78-9066-2028-a361" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry name="Knights Encarmine" id="9f0a-402e-84b7-7a2a" collective="true" hidden="false" import="true" sortIndex="11" type="upgrade">
-          <constraints>
-            <constraint id="e0ae-b548-17a4-97ee" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="2546-b3ae-8b53-6f71" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-            <constraint id="c8a9-58ee-6db8-22c3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
-            <constraint id="79c2-ec39-24a5-7f00" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <conditions>
-                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
-              </conditions>
-              <modifiers>
-                <modifier field="79c2-ec39-24a5-7f00" type="set" value="0"/>
-                <modifier field="annotation" type="set" value="Only Cavalry"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="e0ae-b548-17a4-97ee" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="9f0a-402e-84b7-7a2a" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="points" type="set" value="10">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="2546-b3ae-8b53-6f71" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
-                        <condition childId="9f0a-402e-84b7-7a2a" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier affects="self.entries.recursive.7617-f4b5-02ac-3d15.profiles.Ward Saves" field="hidden" scope="root-entry" type="set" value="false"/>
-          </modifiers>
-          <rules>
-            <rule name="Knights Encarmine" id="52ec-699d-6354-affe" hidden="false">
-              <description>The models may re-roll 1&apos;s To Hit and failed Parry saves. However, they cannot gain any bonus from ranks (including Steadfast) or Disrupt enemy units.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry name="Sons of Manann" id="82c1-00a7-80d9-fa3a" collective="true" hidden="false" import="true" sortIndex="12" type="upgrade">
-          <constraints>
-            <constraint id="3888-17e2-b0d2-4593" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
-            <constraint id="e9ad-be24-8f61-6014" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
-            <constraint id="0541-13a3-005d-e482" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <conditions>
-                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
-              </conditions>
-              <modifiers>
-                <modifier field="0541-13a3-005d-e482" type="set" value="0"/>
-                <modifier field="annotation" type="set" value="Only Cavalry"/>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <modifiers>
-            <modifier field="3888-17e2-b0d2-4593" type="increment" value="1">
-              <conditions>
-                <condition childId="1ae4-d3a0-1fd5-e31c" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-                <condition childId="82c1-00a7-80d9-fa3a" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
-              </conditions>
-            </modifier>
-            <modifier field="points" type="set" value="15">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="points" type="set" value="2">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <rules>
-            <rule name="Sons of Manann" id="4887-9606-3701-5c17" hidden="false">
-              <description>The models (but not their mounts) gain +1 To Hit in the first round of close combat.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry name="Knights of the Black Lynx" id="0d1b-341f-fc90-6399" collective="true" hidden="false" import="true" sortIndex="13" type="upgrade">
-          <constraints>
-            <constraint id="08b8-1059-892b-3088" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
-            <constraint id="c284-e953-92ad-dce0" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Ambushers" id="18ac-7824-a237-ea23" hidden="false" targetId="f366-0f91-841f-cf80" type="rule"/>
-          </infoLinks>
-          <modifiers>
-            <modifier field="points" type="set" value="1"/>
-            <modifier field="hidden" type="set" value="true">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition childId="73d0-0699-09f7-1dc2" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="notInstanceOf" value="1"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier field="c284-e953-92ad-dce0" type="increment" value="1">
-              <conditions>
-                <condition childId="73d0-0699-09f7-1dc2" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="1"/>
-              </conditions>
-              <repeats>
-                <repeat childId="model" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="root-entry" shared="true" value="1"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
     <selectionEntryGroup name="90. Magic Items" id="b73b-2eee-3197-cb01" hidden="false">
       <constraints>
         <constraint id="eab2-4b06-bf7c-9abe" field="points" scope="parent" shared="true" type="max" value="0"/>
@@ -14143,6 +13312,753 @@ normal attacks.
           </entryLinks>
         </entryLink>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="11. Knightly Orders" id="8d18-9730-7685-8bec" collapsible="true" hidden="false">
+      <constraints>
+        <constraint id="37e4-f6ff-4c16-65ff" field="selections" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry name="Reiksguard Knights" id="fcfc-1847-4faf-81b6" collective="true" hidden="false" import="true" sortIndex="1" type="upgrade">
+          <constraints>
+            <constraint id="69b3-9729-8c85-bb5d" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Stubborn" id="5ac9-1b2c-28ca-6bb6" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="points" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="points" type="set" value="3">
+              <conditions>
+                <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="model" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="69b3-9729-8c85-bb5d" type="increment" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="fcfc-1847-4faf-81b6" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition childId="e537-0cb1-14a9-2687" field="selections" scope="model" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="Reiksguard Knights" id="e76a-22fc-d21a-2606" hidden="false">
+              <description>Must take heavy lances or polearms if mounted. The models have the Stubborn special rule. However, they may not take a regular Grand Master.</description>
+              <modifiers>
+                <modifier field="hidden" type="set" value="true">
+                  <conditions>
+                    <condition childId="fcfc-1847-4faf-81b6" field="selections" scope="parent" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Knights of the Blazing Sun" id="130c-3ba2-f0bb-8df7" collective="true" hidden="false" import="true" sortIndex="2" type="upgrade">
+          <constraints>
+            <constraint id="0d73-9f5d-8085-55dd" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="f48c-d015-c09d-0e10" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="1f3d-3a94-9fc8-0077" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="mount" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="1f3d-3a94-9fc8-0077" type="set" value="0"/>
+                <modifier field="annotation" type="set" value="Only Cavalry and Monstrous Cavalry"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="points" type="set" value="3">
+              <conditions>
+                <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="0d73-9f5d-8085-55dd" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="130c-3ba2-f0bb-8df7" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="Knights of the Blazing Sun" id="c2c8-efff-27bd-b40e" hidden="false">
+              <description>Whenever a unit where the majority of models have this upgrade declare a charge, the unit being charged suffer -1 Weapon Skill and Ballistic Skill for the duration of the turn.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Knights Panther" id="dc9f-a022-e771-d648" collective="true" hidden="false" import="true" sortIndex="3" type="upgrade">
+          <constraints>
+            <constraint id="c97c-36da-08b9-411f" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="e8c2-77cd-fbb8-4a73" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="1e40-f73e-8fae-c373" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="1e40-f73e-8fae-c373" type="set" value="0"/>
+                <modifier field="annotation" type="set" value="Only Cavalry"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="unit" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="error" type="add" value="Model must ride a Warhorse.">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="model-or-unit" shared="true" type="equalTo" value="0"/>
+                    <condition childId="dc9f-a022-e771-d648" field="selections" scope="parent" shared="true" type="equalTo" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="c97c-36da-08b9-411f" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="dc9f-a022-e771-d648" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="Knights Panther" id="f8dd-eef5-10fc-0341" hidden="false">
+              <description>A unit where all models have this upgrade add an extra D3&quot; to their charge distance.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Knights of the White Wolf" id="62b0-1c10-9c20-ea9b" collective="true" hidden="false" import="true" sortIndex="4" type="upgrade">
+          <constraints>
+            <constraint id="fd80-93d2-eacf-626d" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Crush the Weak" id="bd98-0a67-ea9e-accc" hidden="false" targetId="da9f-06eb-7dc7-d6e4" type="rule"/>
+            <infoLink name="Natural Armour" id="1192-d90a-ebe0-ef1e" hidden="false" targetId="9aa1-cdbd-98da-c7d1" type="profile">
+              <modifiers>
+                <modifier field="annotation" type="set" value="White Wolf Cloak"/>
+                <modifier field="97ea-ecf7-8d24-b2ca" type="set" value="6+"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier field="points" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="points" type="set" value="10">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="unit" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="force" field="selections" scope="5b10-3406-8dd2-c0ca" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="fd80-93d2-eacf-626d" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="62b0-1c10-9c20-ea9b" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry name="Black Guard of Morr" id="904c-2169-490f-0b91" collective="true" hidden="false" import="true" sortIndex="5" type="upgrade">
+          <constraints>
+            <constraint id="5874-12f0-0d0d-2c91" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="dacd-4750-23ea-974a" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="f25c-c350-3bbc-4cb2" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Fear" id="c247-d869-8318-0947" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
+            <infoLink name="Independent" id="caa0-d631-0b4a-eedd" hidden="false" targetId="32b6-55f6-6cc6-8fc4" type="rule"/>
+          </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="c20e-0cc6-b847-c2ad" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="atLeast" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="f25c-c350-3bbc-4cb2" type="set" value="0"/>
+                <modifier field="annotation" type="set" value="Only Infantry and Cavalry"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="unit" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="5874-12f0-0d0d-2c91" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="904c-2169-490f-0b91" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry name="Knights Griffon" id="4904-0eb6-8fcf-d2dc" collective="true" hidden="false" import="true" sortIndex="6" type="upgrade">
+          <constraints>
+            <constraint id="00e9-f27b-47a6-b531" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="9bcc-ac8b-22ab-1375" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="a231-5a39-7e53-5a8f" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="mount" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="a231-5a39-7e53-5a8f" type="set" value="0"/>
+                <modifier field="annotation" type="set" value="Only Cavalry and Monstrous Cavalry"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="points" type="set" value="3">
+              <conditions>
+                <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+              </conditions>
+            </modifier>
+            <modifier field="00e9-f27b-47a6-b531" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="4904-0eb6-8fcf-d2dc" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="Knigts Griffon" id="f1c5-5402-d54f-d0e6" hidden="false">
+              <description>The models gain the Disciplined special rule. In addition, they may not choose Flee as a charge reaction, refuse a challenge and ignore Swiftstride when fleeing.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Knights of the Everlasting Light" id="af6c-f51b-1aa6-0908" collective="true" hidden="false" import="true" sortIndex="7" type="upgrade">
+          <constraints>
+            <constraint id="a5c2-09e6-46ad-e995" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="95f9-87ae-83fb-3c0e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="ca10-5369-513f-f75e" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="ca10-5369-513f-f75e" type="set" value="0"/>
+                <modifier field="annotation" type="set" value="Only Cavalry"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="points" type="set" value="10">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="a5c2-09e6-46ad-e995" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="af6c-f51b-1aa6-0908" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="Knights of the Everlasting Light" id="a795-81bc-9125-9d2c" hidden="false">
+              <description>The models gain the Magical Attacks special rule and may re-roll failed armour saves in close combat. However, they must re-roll successful armour saves from missile attacks and successful Dangerous Terrain tests.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Knights of Sigmar&apos;s Blood" id="eb60-252d-b9ad-9269" collective="true" hidden="false" import="true" sortIndex="8" type="upgrade">
+          <constraints>
+            <constraint id="e9d6-df39-7c04-7666" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="a77d-5cbd-cc3b-c171" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="11ed-22e6-71c7-c671" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Inspiring Presence (*)" id="e3ee-3e4e-1cac-0511" hidden="false" targetId="1c71-6c8f-f47a-0a91" type="rule">
+              <modifiers>
+                <modifier arg="*" field="name" type="replace" value="6"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="11ed-22e6-71c7-c671" type="set" value="0"/>
+                <modifier field="annotation" type="set" value="Only Cavalry"/>
+              </modifiers>
+            </modifierGroup>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="a0b3-5670-39e0-ebd6" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="atLeast" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="11ed-22e6-71c7-c671" type="set" value="0"/>
+                <modifier field="annotation" type="set" value="Not allowed for Inner Circle Knights"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="set" value="1">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="e9d6-df39-7c04-7666" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="eb60-252d-b9ad-9269" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry name="Knights of the Black Bear" id="c75f-f113-7acd-4a7e" collective="true" hidden="false" import="true" sortIndex="9" type="upgrade">
+          <constraints>
+            <constraint id="4b23-8b4b-4478-4499" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="8113-4531-7d27-c49b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="c483-d254-7f62-4be1" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="c483-d254-7f62-4be1" type="set" value="0"/>
+                <modifier field="annotation" type="set" value="Only Cavalry"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="4b23-8b4b-4478-4499" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="c75f-f113-7acd-4a7e" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="Knights of the Black Bear" id="ff3b-b1aa-713d-1a4b" hidden="false">
+              <description>This unit always counts as having one more rank than it actually has for the purpose of determining Steadfast, and enemy units cannot claim the Outnumber bonus against it. However, it must re-roll successful Leadership tests for Marching when within 6&quot; of enemy units, Redirecting a Charge, Reforming from Defeat after losing a round of close combat or Restraining from Pursuit.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Knights of the Twin-Tailed Orb" id="cd78-9066-2028-a361" collective="true" hidden="false" import="true" sortIndex="10" type="upgrade">
+          <constraints>
+            <constraint id="2670-90fc-e606-69d4" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="2dc1-2a47-4186-0d82" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="72f9-d37e-9cad-7306" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Flaming Attacks" id="753c-f3d2-8b18-08dd" hidden="false" targetId="8600-a090-2761-d661" type="rule"/>
+            <infoLink name="Frenzy" id="9165-25ed-f976-b984" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
+          </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="72f9-d37e-9cad-7306" type="set" value="0"/>
+                <modifier field="annotation" type="set" value="Only Cavalry"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="points" type="set" value="15">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="2670-90fc-e606-69d4" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="cd78-9066-2028-a361" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry name="Knights Encarmine" id="9f0a-402e-84b7-7a2a" collective="true" hidden="false" import="true" sortIndex="11" type="upgrade">
+          <constraints>
+            <constraint id="2546-b3ae-8b53-6f71" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="c8a9-58ee-6db8-22c3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="79c2-ec39-24a5-7f00" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="79c2-ec39-24a5-7f00" type="set" value="0"/>
+                <modifier field="annotation" type="set" value="Only Cavalry"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="set" value="10">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="2546-b3ae-8b53-6f71" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition childId="4f5e-7e79-d329-bb9d" field="selections" includeChildSelections="true" scope="model" shared="true" type="instanceOf" value="1"/>
+                        <condition childId="9f0a-402e-84b7-7a2a" field="selections" includeChildSelections="true" scope="model" shared="true" type="equalTo" value="1"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier affects="self.entries.recursive.7617-f4b5-02ac-3d15.profiles.Ward Saves" field="hidden" scope="root-entry" type="set" value="false"/>
+          </modifiers>
+          <rules>
+            <rule name="Knights Encarmine" id="52ec-699d-6354-affe" hidden="false">
+              <description>The models may re-roll 1&apos;s To Hit and failed Parry saves. However, they cannot gain any bonus from ranks (including Steadfast) or Disrupt enemy units.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Sons of Manann" id="82c1-00a7-80d9-fa3a" collective="true" hidden="false" import="true" sortIndex="12" type="upgrade">
+          <constraints>
+            <constraint id="e9ad-be24-8f61-6014" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="0"/>
+            <constraint id="0541-13a3-005d-e482" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition childId="a7d2-4d12-77bb-99a0" field="selections" includeChildSelections="true" scope="root-entry" shared="true" type="lessThan" value="1"/>
+              </conditions>
+              <modifiers>
+                <modifier field="0541-13a3-005d-e482" type="set" value="0"/>
+                <modifier field="annotation" type="set" value="Only Cavalry"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="points" type="set" value="15">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="4f5e-7e79-d329-bb9d" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="8ab3-de65-ec9d-09ba" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="points" type="set" value="2">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="2e50-5817-ab5a-4b67" field="selections" scope="root-entry" shared="true" type="instanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="Sons of Manann" id="4887-9606-3701-5c17" hidden="false">
+              <description>The models (but not their mounts) gain +1 To Hit in the first round of close combat.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry name="Knights of the Black Lynx" id="0d1b-341f-fc90-6399" collective="true" hidden="false" import="true" sortIndex="13" type="upgrade">
+          <constraints>
+            <constraint id="08b8-1059-892b-3088" field="selections" includeChildSelections="true" scope="force" shared="true" type="min" value="0"/>
+            <constraint id="c284-e953-92ad-dce0" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Ambushers" id="18ac-7824-a237-ea23" hidden="false" targetId="f366-0f91-841f-cf80" type="rule"/>
+          </infoLinks>
+          <modifiers>
+            <modifier field="points" type="set" value="1"/>
+            <modifier field="hidden" type="set" value="true">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition childId="73d0-0699-09f7-1dc2" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                    <condition childId="a28b-1d80-00f0-5b5f" field="selections" scope="root-entry" shared="true" type="notInstanceOf" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier field="c284-e953-92ad-dce0" type="increment" value="1">
+              <conditions>
+                <condition childId="73d0-0699-09f7-1dc2" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="1"/>
+              </conditions>
+              <repeats>
+                <repeat childId="model" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="root-entry" shared="true" value="1"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
 </catalogue>
