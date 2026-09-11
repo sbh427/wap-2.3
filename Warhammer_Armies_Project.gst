@@ -2790,6 +2790,464 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry name="Lore of Ruin" id="c62f-49fd-e206-9566" collective="true" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="8988-3639-976d-f9db" automatic="true" field="selections" includeChildSelections="true" scope="roster" shared="true" type="min" value="1"/>
+            <constraint id="d6aa-6b59-fe03-3928" automatic="true" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Warp Lightning" id="c83a-3657-685b-1978" hidden="false" targetId="4ce5-d856-9436-c373" type="profile"/>
+          </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="d52c-1a3d-404a-6772" childName="Manual Selection" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                    <condition childId="d9da-a5c5-a42f-b04a" childName="Lore of Ruin" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                    <condition childId="d017-0426-8e61-ef85" childName="Lore of Plague &amp; Ruin" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier field="8988-3639-976d-f9db" type="set" value="0"/>
+                <modifier field="d6aa-6b59-fe03-3928" type="set" value="0"/>
+                <modifier field="hidden" type="set" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="8988-3639-976d-f9db" type="set" value="0">
+              <conditions>
+                <condition childId="d52c-1a3d-404a-6772" childName="Manual Selection" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Musk of Fear" id="af12-651c-10a6-57e2" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If one or more spells from the Lore of Ruin affects an  enemy unit, the target suffers -1 to their Leadership (to a minimum of 1) until the start of the caster&apos;s next magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Death Frenzy" id="3bc2-cc41-deca-a3ca" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains the Frenzy special rule for the remainder of the game, though it can be lost as normal. This spell can be cast multiple times on the same target. If the unit already has the Frenzy special rule, it also suffers D3 Wounds with the Ignores Armour save special rule at the end of each Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Warp Power" id="f123-b74e-0186-f1d3" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Warp Power is an augment spell with a range of 18&quot;. The target unit may re-roll failed rolls To Hit and To Wound until the start of the caster&apos;s next Magic phase. However, the target unit suffer D3 Wounds with the Ignores Armour save special rule when the spell ends.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Warp Shield" id="e009-adc2-7cdd-620a" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target unit ignores a number of Hits from missile attacks equal to the casting result (to a maximum of 10). However, if the unit suffer more Hits than that, the spell ends after resolving the Hits and the unit suffers D6 Strength 3 Hits.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Howling Warpgale" id="590f-7e54-acd6-d0ac" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Cast on the wizard itself. Until the start of the caster&apos;s next Magic phase, no units within 18&quot; of the caster may use the Fly special rule, and all non-magical missile attacks suffer -1 To Hit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Splinter" id="5a9e-3717-1fe6-e924" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all enemy units within 6&quot;. All target units must pass a Leadership test or suffer one Wound that Ignores Armour Saves for every point they failed the Leadership test by.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Pit of the Underworld" id="4fe1-8239-33a5-a574" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">36&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place a suitable marker over the exact spot affected. Once cast, the Pit cannot be dispelled. For as long as the spell lasts, the player rolls a D6 at the start of each player&apos;s following Magic phase. On a 4+, the Pit opens. Place the large template over the centre of the marker. All models under the template must roll a D6 per Wound on their profile – for each roll of a 4+ they suffer a Wound which Ignores Armour Saves and Regeneration. After any casualties have been resolved the spell ends.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Flensing Ruin" id="8173-e995-c0b4-d3e0" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single model (even a character in a unit). The target suffers D3 S 6 Hits with the Lightning Attacks special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Madness" id="458d-d42d-e94f-2a8f" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can be cast on an unengaged unit. The target unit will immediately turn on the spot and move 2D6&quot; in a random direction as determined by the scatter dice. They will stop within 1&quot; of any unit or impassable terrain.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Warpstorm" id="c567-b5fa-de67-de74" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all units within range, even if they are engaged in close combat. Roll a D6 for each unit within range. On a 3+, enemy units suffer D6 Strength 5 hits with the Lightning Attacks special rule. Friendly units are only affected on a 6.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Cracks Call" id="c8c4-7961-f609-dd7c" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 24&quot; in length, directly away from the caster. Each model in the way (determined using the line template) must roll a D6 per Wound on their profile – for each roll of a 4+ they suffer a Wound which Ignores Armour Saves and Regeneration.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Scorch" id="3c12-f70a-a17c-e508" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template anywhere within range – it then scatters D6&quot;. All models under the template suffer a Strength 4 hit with the Flaming Attacks special rule. A unit that suffers one or more casualties from Scorch must take a Panic test.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Lore of Stealth" id="aeee-02c2-e2bf-a4d5" collective="true" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="7449-12d8-030a-90c5" automatic="true" field="selections" includeChildSelections="true" scope="roster" shared="true" type="min" value="1"/>
+            <constraint id="902a-5a73-14e9-58ef" automatic="true" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Skitterleap" id="d0dc-8516-dd3b-adcf" hidden="false" targetId="5fab-cda1-fe22-98e6" type="profile"/>
+          </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="d52c-1a3d-404a-6772" childName="Manual Selection" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                    <condition childId="eeff-00f2-653d-fb1d" childName="Lore of Stealth" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier field="7449-12d8-030a-90c5" type="set" value="0"/>
+                <modifier field="902a-5a73-14e9-58ef" type="set" value="0"/>
+                <modifier field="hidden" type="set" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="7449-12d8-030a-90c5" type="set" value="0">
+              <conditions>
+                <condition childId="d52c-1a3d-404a-6772" childName="Manual Selection" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Warp Stars" id="cc3d-ee13-f35c-3141" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits with the Armour Piercing (1) and Poisoned Attacks special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Toxic Rain" id="164c-b30a-2f30-0113" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If one or more spells from the Lore of Stealth affects an enemy unit, the target suffers a -1 penalty to their armour saves until the start of the caster&apos;s next magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Stickypaws" id="cdc6-400e-cd08-f17c" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can be cast on an Infantry unit. The target unit treats cliffs and buildings as open ground (note that it may not end its move within 1&quot; of it as normal) until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Armour of Darkness" id="a559-e111-878e-7865" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next turn, the caster and their unit gain a 6+ armour save and all missile fire directed at them suffer -1 To Hit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Marked for Death" id="7325-9ed8-43cc-c2a3" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All attacks against the target gain +1 To Hit until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Brittle Bone" id="14a4-c926-6b8a-3727" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, all models in the target unit must take a Dangerous Terrain test every time they attempt to charge, march, flee or pursue. Tests in terrain that is already Dangerous Terrain will fail the tests on a 1 or 2, rather than a 1.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Pelt of the Assassin" id="3a3a-ea52-3f2e-69ed" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, no units can draw line of sight to this unit unless they are within 12&quot; of it. However, if the target unit moves for any reason, the spell is immediately dispelled.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Shadow Strike" id="8720-4be3-529c-e65d" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit must take 3D6 Weapon Skill tests. For every test that is failed, the unit suffers a Strength 4 Hit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Swiftscamper" id="cf9e-ab6e-219e-ec89" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit doubles its Movement rate (to a maximum of 10) and can re-roll their Charge, Flee and Pursuit results until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Black Whirlwind" id="f85b-8dd3-258e-4960" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within range – it then scatters D3&quot;. All models underneath the template suffer a Strength 3 hit. The unit then suffers -1 to its Weapon Skill, Ballistic Skill and Initiative until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Veil of Shadows" id="a67b-bc4e-13e4-4cf5" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. Uses the large round template. Any model touched by the template takes a Strength 4 hit, and the unit will count as being Disrupted for the remainder of the turn.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry name="Lore of Plague" id="0fbe-0677-25c0-a75a" collective="true" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="9169-6bcc-d5c0-8d18" automatic="true" field="selections" includeChildSelections="true" scope="roster" shared="true" type="min" value="1"/>
+            <constraint id="bea4-c97b-c538-5640" automatic="true" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <infoGroups>
+            <infoGroup name="Plague Chart" id="a716-ee28-f704-223a" hidden="false">
+              <profiles>
+                <profile name="1" id="effb-dae2-4ad7-6efd" hidden="false" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Your opponent can decide to end the spell or choose any one unit within 6&quot; of a previous target to be affected by Plague.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="2-4" id="acf0-dc19-e1aa-a408" hidden="false" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The spell ends.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="5-6" id="f1f3-9374-f6f3-7c99" hidden="false" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The casting player can decide to end the spell or pass it to another target within 6&quot; of a previous target to be affected by Plague</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </infoGroup>
+          </infoGroups>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="d52c-1a3d-404a-6772" childName="Manual Selection" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                    <condition childId="7a04-d74a-5ec3-8d59" childName="Lore of Plague" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                    <condition childId="d017-0426-8e61-ef85" childName="Lore of Plague &amp; Ruin" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier field="9169-6bcc-d5c0-8d18" type="set" value="0"/>
+                <modifier field="bea4-c97b-c538-5640" type="set" value="0"/>
+                <modifier field="hidden" type="set" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="9169-6bcc-d5c0-8d18" type="set" value="0">
+              <conditions>
+                <condition childId="d52c-1a3d-404a-6772" childName="Manual Selection" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Pestilent Breath" id="6fe9-0b2f-8cac-ee22" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The caster makes a S 2 Breath Attack which Ignores Armour save. This may be cast in close combat, following the normal rules for Breath Weapons.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Bless with Filth" id="45e1-cd71-ee90-a30b" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gets the Poisoned Attacks special rule until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Mantle of Contagion" id="8b3f-9163-6f7a-6a21" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit and any units in base contact with it suffer 2D6 Strength 3 hits with the Ignores Armour Saves special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Veil of Flies" id="f2a2-ffaa-b7e7-9a17" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All enemy units in base contact with the target unit suffer -1 To Hit until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Vermintide" id="11a4-ae00-37ef-6584" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the large round template. Any model touched by the template suffers a Strength 1 hit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Weeping Wounds" id="ace2-e20f-faa1-af16" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. The target unit suffer D6 Strength 2 hits with the Ignores Armour Saves special rule. While the spell is in effect, the target unit suffers an additional D6 Strength 2 hits with the Ignores Armour Saves special rule at the start of each subsequent Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Purulent World Sores" id="4176-f61e-9c70-d1c7" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This summons a normal marshland no more than 6&quot; in diameter. In addition, all models within the marsh when it is summoned or who enter later suffer a Strength 1 Hit with the Ignores Armour Saves special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Putrefy" id="4457-6db4-b64a-bdd0" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers -1 to their Strength for the remainder of the game. This can be cast multiple times on the same target and the effects are cumulative.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Wither" id="cae1-e856-b466-f39f" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers -1 to their T for the remainder of the game. This can be cast multiple times on the same target and the effects are cumulative.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Air of Pestilence" id="076d-81db-a4a8-76b2" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell affects all units within range. Roll a D6 for each unit; enemy units are affected on a 2+, friendly units are affected on a 4+, and models from Clan Pestilens (friend or foe) are affected on a roll of 5+. Each unit that is affected suffers 2D6 Strength 3 hits with the Ignores Armour save special rule. Roll separately for each unit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Cloud of Corruption" id="5ed6-96c5-c7f2-ac12" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large template anywhere within this range – it scatters D6&quot;. All models touched by the template suffer a Strength 2 Hit with the Ignores Armour Saves special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Plague" id="f2a0-2e9b-a185-dacf" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit must pass a Toughness test or suffer a Wound with the Ignores Armour save special rule. If cast on a unit engaged in close combat, all units in base contact (friend and foe) will be affected. After working out the effects of the spell and removing casualties, roll a D6 and consult the Plague chart and continue to apply the results until the spell ends or there are no more viable targets. A unit can only be the target of Plague once per Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Plague Rash" id="5bfa-0985-eb82-072b" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If one or more spells from the Lore of Plague affects an enemy unit, the target suffers -1 to their Weapon Skill and Initiative (to a minimum of 1) until the start of the caster&apos;s next magic phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntry>
   </selectionEntries>
@@ -4848,6 +5306,24 @@ All models hit by the template must pass a Weapon Skill test or suffer a Stren
         <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
       </characteristics>
     </profile>
+    <profile name="Warp Lightning" id="4ce5-d856-9436-c373" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">D3 Strength 5 hits with the Lightning Attacks special rule. If the number of hits rolled is a natural 1 (using a D6), then the caster suffers a Strength 5 hit instead of the target.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Skitterleap" id="5fab-cda1-fe22-98e6" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is immediately picked up and may be moved to any position on the battlefield within 24&quot; of their original position, just like a summoning spell.</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedRules>
     <rule name="Scouts" id="6624-0b7b-c5b8-6397" hidden="false">
@@ -6106,6 +6582,38 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
       <constraints>
         <constraint id="0d82-4817-4004-1fdc" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry name="Lore of Plague" id="7a04-d74a-5ec3-8d59" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="f0c5-8922-7fa8-76ff" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="false" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry name="Lore of Ruin" id="d9da-a5c5-a42f-b04a" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="95dd-ba11-e188-0075" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry name="Lore of Stealth" id="eeff-00f2-653d-fb1d" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="feb2-5455-6fa5-4e37" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry name="Lore of Plague &amp; Ruin" id="d017-0426-8e61-ef85" collective="false" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="d530-f405-2cf8-61fa" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
