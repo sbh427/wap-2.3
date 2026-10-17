@@ -3248,6 +3248,165 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry name="Lore of Hashut" id="8472-08d4-6de0-9da0" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="d326-4964-c599-1c5b" field="selections" scope="parent" shared="true" type="max" value="1"/>
+            <constraint id="133c-9429-1ffd-1891" automatic="true" field="selections" includeChildSelections="true" scope="roster" shared="true" type="min" value="1"/>
+            <constraint id="a3d7-2752-e165-abe3" automatic="true" field="selections" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition childId="d52c-1a3d-404a-6772" childName="Manual Selection" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                    <condition childId="3582-d146-0578-d0ab" childName="Lore of Hashut" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+              <modifiers>
+                <modifier field="133c-9429-1ffd-1891" type="set" value="0"/>
+                <modifier field="a3d7-2752-e165-abe3" type="set" value="0"/>
+                <modifier field="hidden" type="set" value="true"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="133c-9429-1ffd-1891" type="set" value="0">
+              <conditions>
+                <condition childId="d52c-1a3d-404a-6772" childName="Manual Selection" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Killing Fire" id="98c0-9747-f393-a67e" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each time a spell from the Lore of Hashut is successfully cast, all enemy units within 6&quot; of the Wizard suffer D6 Strength 3 Hits with the Flaming Attacks special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Breath of Hatred" id="86ae-d243-9ae3-d2ea" hidden="false" noindex="true" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains the Hatred special rule until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Burning Wrath" id="1af7-5bc1-a34a-6bbe" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It causes D6 Strength 6 hits with the Flaming Attacks special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Dark Subjugation" id="8438-2ddc-05ef-5cb3" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit must pass a Leadership test with a -3 penalty or suffer a permanent reduction of -1 to their Leadership for the rest of the game (to a minimum of 2).</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Fists of Fire" id="c65a-afe0-b94d-8b31" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains +1 Strength and the Flaming Attacks special rule until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Flaming Hide" id="3274-c4cb-5206-876c" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target has the Blazing Body special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Searing Detonation" id="9557-bc63-b204-c80f" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage Aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All enemy units within the caster&apos;s front arc suffer D6 Strength 4 Hits with the Flaming Attacks special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Magma Pool" id="4e49-bb30-1374-7119" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is immediately picked up and may be moved to any point on the battlefield within 12&quot; of its original position, just like a summoning spell.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Curse of Hashut" id="776b-f225-9eab-7a44" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It targets a single enemy model of the caster&apos;s choice (even a character in a unit). The target suffers a number of hits equal to 2D6 minus their Toughness value. Hits from this spell Wound on a 4+ with the Ignores Armour saves special rule.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Doomroar" id="a2a6-caec-ebd1-7b25" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex Aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, all friendly units within range roll an additional D6 for their Leadership test and discard the highest result, and all enemy units within range roll an additional D6 for their Leadership test and discard the lowest result.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Ash Cloud" id="656d-8735-5c93-e1d3" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex Aura</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, all affected units within range suffer -1 To Hit in close combat and with missile attacks, may not march or fly, and must re-roll successful dangerous terrain tests.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Hell Hammer" id="2f81-efce-b584-d348" hidden="false" noindex="true" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage Area</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Uses a line template, placed entirely within their front arc. Each model in the way (determined using the line template) suffer a Strength 6 hit with the Flaming Attacks and Multiple Wounds (D3) special rules. Any unit suffering casualties from this spell must immediately take a Panic test.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Lava Storm" id="9d52-f91f-33ce-0091" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage Area</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">14+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place D3 small round templates anywhere within range. All models touched by each template suffer a Strength 5 hit with the Flaming Attacks and the Multiple Wounds (D3) special rules.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Flames of Azgorh" id="b1e2-da70-567d-d16d" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage Area</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Uses the large template. All models touched by the template suffer a Strength 5 hit with the Flaming Attacks and the Multiple Wounds (D3) special rules.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntry>
   </selectionEntries>
@@ -3985,7 +4144,7 @@ Place it 18&quot; in length, directly away from the caster&apos;s front arc. Ea
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Rocket Launcher</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-60&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks. Cumbersome.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks, Cumbersome.</characteristic>
       </characteristics>
     </profile>
     <profile name="The Eagle&apos;s Cry" id="bd05-6040-b879-d61a" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -6614,6 +6773,11 @@ Cavalry, Monstrous Cavalry, Chariots and Shrines treat what is normally Dangero
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry name="Lore of Hashut" id="3582-d146-0578-d0ab" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="a57f-e4d6-9011-9dfe" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
