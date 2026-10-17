@@ -5704,10 +5704,11 @@ In addition, if the model&apos;s Initiative is higher than their enemy&apos;s w
 In addition, if the model&apos;s Initiative is lower than their 
 enemy&apos;s when it is their turn to attack, they must re-roll successful To Hit rolls when striking in close combat.</description>
     </rule>
-    <rule name="Armour Piercing" id="bf4e-212e-fe1d-20c6" hidden="false">
+    <rule name="Armour Piercing (*)" id="bf4e-212e-fe1d-20c6" hidden="false">
       <description>Wounds caused by a model with this special rule (or who is attacking with a weapon that has this special rule) inflict a further negative armour save modifier as indicated by the number in the brackets, in addition to those for Strength. Unless specified, Armour Piercing only applies to close combat attacks. This rule is cumulative with other sources of Armour Piercing.
 
 If a model has a weapon with the Armour Piercing special rule, only attacks made or shots fired with the weapon are Armour Piercing.</description>
+      <alias>Armour Piercing</alias>
     </rule>
     <rule name="Aquatic" id="3667-691b-abd9-7da6" hidden="false">
       <description>Models with the Aquatic special rule can move within any area of water on the battlefield, including rivers and even deep water that players may have deemed impassable to other models, as if it were open ground. However, they are still subject to any special effects that specific terrain may have (e.g. they are not exempt from the dangers of marshes).

@@ -640,12 +640,8 @@
         <infoLink name="Contempt" id="69af-8b73-cce0-3520" hidden="false" targetId="a16e-837f-8162-8d44" type="rule"/>
         <infoLink name="Relentless" id="abf6-1d04-1da7-cd1d" hidden="false" targetId="6c22-4c29-0d6b-f601" type="rule"/>
         <infoLink name="Resolute" id="bc39-55ad-0f6a-e7bf" hidden="false" targetId="c88d-5cb0-b4e7-7793" type="rule"/>
+        <infoLink name="Infernal Cohort" id="8ea1-bb46-eeda-c823" hidden="false" targetId="7777-6352-ec2d-3a95" type="rule"/>
       </infoLinks>
-      <rules>
-        <rule name="Infernal Cohort" id="7777-6352-ec2d-3a95" hidden="false">
-          <description>You may upgrade one unit of Warriors with heavy armour for +1.5 points/model for each model with this special rule in your army.</description>
-        </rule>
-      </rules>
     </selectionEntry>
     <selectionEntry name="Bull Centaur Taur&apos;ruk" id="bd0f-bb34-e8fa-d822" hidden="false" import="true" sortIndex="14" type="model">
       <categoryLinks>
@@ -1136,7 +1132,7 @@
                 <condition childId="63f9-f678-b549-3d5e" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="equalTo" value="0"/>
               </conditions>
             </modifier>
-            <modifier field="points" type="increment" value="2">
+            <modifier field="points" type="increment" value="1">
               <repeats>
                 <repeat childId="model" field="selections" includeChildSelections="true" repeats="1" roundUp="false" scope="root-entry" shared="true" value="1"/>
               </repeats>
@@ -1144,7 +1140,7 @@
           </modifiers>
           <rules>
             <rule name="The Granite Guard" id="00af-f9c2-e7d8-5635" hidden="false">
-              <description>This unit always counts as fighting behind a defended obstacle in the first round of close combat, and do not suffer -1 To Hit when choosing Stand &amp; Shoot as a charge reaction.</description>
+              <description>This unit always counts as fighting behind a defended obstacle in the first round of close combat.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -1973,7 +1969,11 @@
           </constraints>
           <infoLinks>
             <infoLink name="Magical Attacks" id="6b94-c7c2-7dbe-4653" hidden="false" targetId="03db-d81f-f264-84b8" type="rule"/>
-            <infoLink name="Mighty Blow (*)" id="1e88-8600-0184-b3f0" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
+            <infoLink name="Armour Piercing" id="1e88-8600-0184-b3f0" hidden="false" targetId="bf4e-212e-fe1d-20c6" type="rule">
+              <modifiers>
+                <modifier arg="*" field="name" type="replace" value="1"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier field="hidden" type="set" value="true">
@@ -2076,7 +2076,7 @@
             <infoLink name="Frenzy" id="ea7b-c9e9-006e-4ac3" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
             <infoLink name="Hatred (*)" id="26bf-286b-f924-c2ec" hidden="false" targetId="1f0a-79e9-85a8-9659" type="rule">
               <modifiers>
-                <modifier arg="(*)" field="name" type="replace" value=""/>
+                <modifier arg="(*)" field="name" type="replace"/>
               </modifiers>
             </infoLink>
             <infoLink name="Relentless" id="a18c-001f-22fd-82ff" hidden="false" targetId="6c22-4c29-0d6b-f601" type="rule"/>
@@ -3296,10 +3296,10 @@ If a Destroyed! result is rolled on the Blackpowder Misfire chart, the Steam Can
           <description>Iron Daemons ignore terrain classified as Obstacles and ignores damage from Dangerous Terrain, except Rivers and Marshland, which are treated as Impassable terrain.</description>
         </rule>
         <rule name="Grind Attack" id="aec6-3bfd-eb74-a515" hidden="false">
-          <description>The Iron Daemon has the Stomp (D6) special rule like a Monster, but only against units to its front. </description>
+          <description>The Iron Daemon has the Stomp (D6) special rule like a Monster, but only against units to its front.</description>
         </rule>
         <rule name="Lumbering" id="9ffb-3939-94b6-de36" hidden="false">
-          <description> If a double 1 is rolled for its charge distance, the Iron Daemon does not move at all this turn. Iron Daemons cannot overrun or pursue in combat if they destroy or rout their foes. </description>
+          <description>If a double 1 is rolled for its charge distance, the Iron Daemon does not move at all this turn. Iron Daemons cannot overrun or pursue in combat if they destroy or rout their foes.</description>
         </rule>
       </rules>
       <selectionEntryGroups>
@@ -3945,7 +3945,7 @@ Casualties, it takes the test at -1 Leadership"/>
       </profiles>
       <rules>
         <rule name="Caged Fury" id="2574-3438-103a-34c4" hidden="false">
-          <description>At the beginning of your turn, if the Hellcannon is not in combat, take a Leadership test. If the test is failed, the Hellcannon is then subject to the Random Movement (3D6) special rule until the beginning of the next turn, and must move towards the nearest enemy unit. If the Hellcannon would get destroyed as a result of Daemonic Instability, treat this as rolling a 1 on the table Misfire table.  </description>
+          <description>At the beginning of your turn, if the Hellcannon is not in combat, take a Leadership test. If the test is failed, the Hellcannon is then subject to the Random Movement (3D6) special rule until the beginning of the next turn, and must move towards the nearest enemy unit. If the Hellcannon would get destroyed as a result of Daemonic Instability, treat this as rolling a 1 on the table Misfire table.</description>
         </rule>
       </rules>
       <selectionEntryGroups>
@@ -4051,7 +4051,7 @@ Siege Cannons do not suffer any penalties To Hit for moving and shooting. If you
       </profiles>
       <rules>
         <rule name="Siege Tower" id="64d6-9eb8-a79e-11a2" hidden="false">
-          <description>The Juggernaut may never march. When charging, the Juggernaut can only do so in a straight line forward, with no wheeling allowed. Juggernauts cannot overrun or pursue in combat. The crew of the Juggernaut do not suffer penalties for moving and shooting. </description>
+          <description>The Juggernaut may never march. When charging, the Juggernaut can only do so in a straight line forward, with no wheeling allowed. Juggernauts cannot overrun or pursue in combat. The crew of the Juggernaut do not suffer penalties for moving and shooting.</description>
         </rule>
       </rules>
       <selectionEntryGroups>
@@ -4221,7 +4221,7 @@ Can only be used in close combat.</characteristic>
               </costs>
               <rules>
                 <rule name="Greed Pistons" id="329c-c88d-a3f2-4f02" hidden="false">
-                  <description>The Kolossus gains +1 Movement. </description>
+                  <description>The Kolossus gains +1 Movement.</description>
                   <modifiers>
                     <modifier field="description" type="append" value="(already applied)">
                       <conditions>
@@ -4241,7 +4241,7 @@ Can only be used in close combat.</characteristic>
               </costs>
               <rules>
                 <rule name="Overdrive Switch" id="0755-18fe-a412-a317" hidden="false">
-                  <description>The Kolossus may choose to add +D3 Attacks in each round of close combat when it is its turn to attack. However, if it does so, it suffers a Strength 6 Hit for every natural To Hit roll of 1 it makes. </description>
+                  <description>The Kolossus may choose to add +D3 Attacks in each round of close combat when it is its turn to attack. However, if it does so, it suffers a Strength 6 Hit for every natural To Hit roll of 1 it makes.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -4386,7 +4386,7 @@ Can only be used in close combat.</characteristic>
               </costs>
               <rules>
                 <rule name="Razor Horns" id="9b28-11b9-9d12-d71c" hidden="false">
-                  <description>The model gains the Mighty Blow (1) special rule in any turn it charges. </description>
+                  <description>The model gains the Mighty Blow (1) special rule in any turn it charges.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -4496,7 +4496,7 @@ Can only be used in close combat.</characteristic>
               </costs>
               <rules>
                 <rule name="Runes of Hate" id="c66c-3abf-127e-d4ec" hidden="false">
-                  <description> A Giant with Runes of Hate becomes subject to the Berserk Rage rule from Frenzy. In addition, whenever the Giant may re-roll the number of Hits or Attacks it inflicts above. </description>
+                  <description>A Giant with Runes of Hate becomes subject to the Berserk Rage rule from Frenzy. In addition, whenever the Giant may re-roll the number of Hits or Attacks it inflicts above.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -4523,7 +4523,7 @@ Can only be used in close combat.</characteristic>
                 <constraint id="a710-6cc8-ee6e-695a" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="350"/>
+                <cost name="pts" typeId="points" value="300"/>
               </costs>
               <entryLinks>
                 <entryLink name="10. Character Options" id="c33f-8772-693e-f36b" hidden="false" import="true" targetId="35f1-2fc8-9817-3171" type="selectionEntryGroup"/>
@@ -4533,29 +4533,36 @@ Can only be used in close combat.</characteristic>
                 <infoLink name="Sorcerer&apos;s Curse" id="3b27-b2d4-2469-7010" hidden="false" targetId="a987-736b-7d04-95eb" type="rule"/>
                 <infoLink name="Contempt" id="6427-7ac5-8be5-0625" hidden="false" targetId="a16e-837f-8162-8d44" type="rule"/>
                 <infoLink name="Resolute" id="23e4-4fdb-fb2c-0e88" hidden="false" targetId="c88d-5cb0-b4e7-7793" type="rule"/>
+                <infoLink name="Blackshard Armour" id="6e0f-43f7-865d-ea51" hidden="false" targetId="7ce6-08e4-cd81-90a5" type="rule"/>
               </infoLinks>
+              <modifiers>
+                <modifier field="name" scope="root-entry" type="set" value="Astragoth Ironhand"/>
+              </modifiers>
               <profiles>
                 <profile name="Astragoth Ironhand" id="baab-067c-5fcd-88a5" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
                     <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
                     <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
                     <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Chaos Dwarf)</characteristic>
                   </characteristics>
+                  <modifiers>
+                    <modifier field="df90-5cbd-8cf9-95b2" type="increment" value="1"/>
+                  </modifiers>
                 </profile>
               </profiles>
               <rules>
                 <rule name="The Granite Guard" id="c2a1-2091-bffd-39bc" hidden="false">
-                  <description>If Astragoth Ironhand is included in your army, you may upgrade one unit of Razers to the Granite Guard for a cost of +2 points per model. This unit always counts as fighting behind a defended obstacle in the first round of close combat, and do not suffer -1 To Hit when choosing Stand &amp; Shoot as a charge reaction. The unit must be equipped with blunderbusses.</description>
+                  <description>If Astragoth Ironhand is included in your army, you may upgrade one unit of Razers to the Granite Guard for a cost of +1 points per model. This unit always counts as fighting behind a defended obstacle in the first round of close combat.</description>
                 </rule>
                 <rule name="Mechanical Body" id="3190-f66b-e5e8-a7f3" hidden="false">
-                  <description>Astragoth may never march or charge longer than his Movement value. He will still pursue and flee at a normal speed.</description>
+                  <description>Astragoth may never march or Counter-Charge</description>
                 </rule>
                 <rule name="Overdrive" id="a770-b83b-1164-cb57" hidden="false">
                   <description>If Astragoth successfully Hits with 3 or more Attacks in Close Combat, he can immediately make an additional 3 Attacks. These attacks may not generate any further additional attacks.</description>
@@ -4568,10 +4575,10 @@ Can only be used in close combat.</characteristic>
                     <constraint id="febf-94d4-9b2d-ec8c-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink name="Lore of Fire" id="339f-2a82-6270-13e3" hidden="false" import="true" targetId="4d24-c803-7a05-0894" type="selectionEntry"/>
-                    <entryLink name="Lore of Metal" id="15df-82d2-f8e0-cf21" hidden="false" import="true" targetId="527f-89f1-1b92-a01d" type="selectionEntry"/>
-                    <entryLink name="Lore of Hashut" id="5277-c874-d8b6-53ad" hidden="false" import="true" targetId="8472-08d4-6de0-9da0" type="selectionEntry"/>
-                    <entryLink name="Lore of Death" id="8540-f8cd-aab1-cbe0" hidden="false" import="true" targetId="bc0d-47f8-7220-1e16" type="selectionEntry"/>
+                    <entryLink name="Lore of Fire" id="339f-2a82-6270-13e3" hidden="false" import="true" sortIndex="2" targetId="4d24-c803-7a05-0894" type="selectionEntry"/>
+                    <entryLink name="Lore of Metal" id="15df-82d2-f8e0-cf21" hidden="false" import="true" sortIndex="4" targetId="527f-89f1-1b92-a01d" type="selectionEntry"/>
+                    <entryLink name="Lore of Death" id="8540-f8cd-aab1-cbe0" hidden="false" import="true" sortIndex="1" targetId="bc0d-47f8-7220-1e16" type="selectionEntry"/>
+                    <entryLink name="Lore of Hashut" id="75d1-eac1-ea9d-e932" hidden="false" import="true" sortIndex="3" targetId="3582-d146-0578-d0ab" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
                 <selectionEntryGroup name="90. Magic Items" id="41dc-f2b2-718f-9aae" hidden="false">
@@ -4587,7 +4594,7 @@ Can only be used in close combat.</characteristic>
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+2</characteristic>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Any Flammable model successfully wounded is killed outright.</characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Any Flammable model Wounded (after saves) is killed outright.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4598,9 +4605,9 @@ Can only be used in close combat.</characteristic>
                         <constraint id="3e28-2037-4ac0-a6f9-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
                       </constraints>
                       <profiles>
-                        <profile name="Stone Mantle" id="0470-fb7f-3fb4-9671" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+                        <profile name="Stone Mantle" id="0470-fb7f-3fb4-9671" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer of this item gains +1 Toughness.</characteristic>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of this item gains +1 Toughness. (already applied)</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4617,16 +4624,21 @@ Can only be used in close combat.</characteristic>
                 <constraint id="6697-a9a6-d196-022a" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="285"/>
+                <cost name="pts" typeId="points" value="275"/>
               </costs>
               <entryLinks>
                 <entryLink name="10. Character Options" id="d003-e945-39f9-2825" hidden="false" import="true" targetId="35f1-2fc8-9817-3171" type="selectionEntryGroup"/>
               </entryLinks>
               <infoLinks>
                 <infoLink name="Resolute" id="59ec-8ad2-c670-2e81" hidden="false" targetId="c88d-5cb0-b4e7-7793" type="rule"/>
-                <infoLink name="Contempt" id="b81d-5c2b-87c6-a713" hidden="false" targetId="a16e-837f-8162-8d44" type="rule"/>
+                <infoLink name="Infernal Cohort" id="b81d-5c2b-87c6-a713" hidden="false" targetId="7777-6352-ec2d-3a95" type="rule"/>
                 <infoLink name="Relentless" id="2636-74ad-e585-2798" hidden="false" targetId="6c22-4c29-0d6b-f601" type="rule"/>
+                <infoLink name="Blackshard Armour" id="a246-e771-fd33-121e" hidden="false" targetId="7ce6-08e4-cd81-90a5" type="rule"/>
+                <infoLink name="Contempt" id="e35f-59a0-5afc-3677" hidden="false" targetId="a16e-837f-8162-8d44" type="rule"/>
               </infoLinks>
+              <modifiers>
+                <modifier field="name" scope="root-entry" type="set" value="Zhatan the Black"/>
+              </modifiers>
               <profiles>
                 <profile name="Zhatan the Black" id="783e-5695-1d22-40db" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
@@ -4652,9 +4664,6 @@ Can only be used in close combat.</characteristic>
                 </rule>
                 <rule name="Boundless Cruelty" id="43e3-2efa-f029-fb59" hidden="false">
                   <description>All enemy units within 6&quot; of Zhatan suffer -1 to their Leadership. This has no effect on models with Immunity (Psychology).</description>
-                </rule>
-                <rule name="Infernal Cohort" id="30c9-a706-ecc5-a689" hidden="false">
-                  <description>You may upgrade one unit of Warriors with heavy armour for +1.5 points/model for each model with this special rule in your army.</description>
                 </rule>
               </rules>
               <selectionEntryGroups>
@@ -4705,7 +4714,7 @@ Can only be used in close combat.</characteristic>
                             <modifier field="annotation" type="set" value="Chaos Runeshield"/>
                             <modifier field="ff58-91e4-84d7-e6e4" join="
 
-" type="append" value="This item gives the wearer a 6+ Ward save and the Magic Resistance (2) special rule."/>
+" type="append" value="This item gives the wearer a Magical Ward (6+) and the Magic Resistance (2) special rules."/>
                             <modifier field="ff58-91e4-84d7-e6e4" join=" " type="prepend" value="Magic Armour."/>
                           </modifiers>
                         </infoLink>
@@ -4742,7 +4751,7 @@ Can only be used in close combat.</characteristic>
                 <constraint id="3cd6-543b-9095-d182" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="max" value="1"/>
               </constraints>
               <costs>
-                <cost name="pts" typeId="points" value="600"/>
+                <cost name="pts" typeId="points" value="560"/>
               </costs>
               <entryLinks>
                 <entryLink name="60. Wizard Level" id="6877-21ae-ca55-abcb" hidden="false" import="true" targetId="e548-6739-0537-5d95" type="selectionEntryGroup"/>
@@ -4805,6 +4814,15 @@ Can only be used in close combat.</characteristic>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
+                <entryLink name="40. Suits of Armour" id="954b-0b29-2c10-367a" hidden="false" import="true" targetId="f7f7-2534-4683-595a" type="selectionEntryGroup">
+                  <entryLinks>
+                    <entryLink name="Heavy Armour" id="65c2-25d4-ea04-e3f9" hidden="false" import="true" targetId="30e0-7325-ea6b-af97" type="selectionEntry">
+                      <constraints>
+                        <constraint id="432d-80bc-f56e-0b7b" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
               <infoLinks>
                 <infoLink name="Resolute" id="a18b-cdcb-76cb-b335" hidden="false" targetId="c88d-5cb0-b4e7-7793" type="rule"/>
@@ -4820,6 +4838,9 @@ Can only be used in close combat.</characteristic>
                 <infoLink name="Blackshard Armour" id="4e2c-4d70-e057-0587" hidden="false" targetId="7ce6-08e4-cd81-90a5" type="rule"/>
                 <infoLink name="Relentless" id="cd81-ce3f-704b-1648" hidden="false" targetId="6c22-4c29-0d6b-f601" type="rule"/>
               </infoLinks>
+              <modifiers>
+                <modifier field="name" scope="root-entry" type="set" value="Drazhoath the Ashen"/>
+              </modifiers>
               <profiles>
                 <profile name="Drazhoath the Ashen" id="6491-ce08-3ebe-24b8" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
@@ -4838,10 +4859,10 @@ Can only be used in close combat.</characteristic>
               </profiles>
               <rules>
                 <rule name="Dark Renown" id="a32f-3c42-c15a-f9ca" hidden="false">
-                  <description>All friendly models with the Contempt special rule within 12&quot; add +1 to their combat resolution result.</description>
+                  <description>All friendly Chaos Dwarfs within 12&quot; add +1 to their combat resolution result.</description>
                 </rule>
                 <rule name="The Ironsworn" id="019c-e22b-1db3-7053" hidden="false">
-                  <description>If Drazhoath the Ashen is included in your army, you may upgrade one unit of Infernal Guard to the Ironsworn for a cost of +2 points per model. This unit has Weapon Skill 5, as well as the Mighty Blow (1) and Magical Attacks special rules. The unit must be equipped with hand weapons and shields.</description>
+                  <description>If Drazhoath the Ashen is included in your army, you may upgrade one unit of Infernal Guard to the Ironsworn for a cost of +2 points per model. This unit has Weapon Skill 5, as well as the Armour Piercing (1) and Magical Attacks special rules. The unit must be equipped with hand weapons and shields.</description>
                 </rule>
                 <rule name="Master of the Legion of Azgorh" id="b446-830a-50d6-d73b" hidden="false">
                   <description>If Drazhoath the Ashen is your Army General, units of Infernal Guard (but not Ironsworn) may be taken as Core Units instead of Special Units.</description>
@@ -4854,9 +4875,9 @@ Can only be used in close combat.</characteristic>
                     <constraint id="f84b-6c70-3abb-be38-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink name="Lore of Hashut" id="e5a0-006a-294a-3d5a" hidden="false" import="true" targetId="8472-08d4-6de0-9da0" type="selectionEntry">
+                    <entryLink name="Lore of Hashut" id="bf5f-0da0-ed5d-5a19" hidden="false" import="true" targetId="3582-d146-0578-d0ab" type="selectionEntry">
                       <constraints>
-                        <constraint id="9759-a75d-afba-4a01" field="selections" scope="parent" shared="true" type="min" value="1"/>
+                        <constraint id="b89b-ff36-cc60-35c3" field="selections" includeChildSelections="false" scope="parent" shared="true" type="min" value="1"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -4895,7 +4916,7 @@ Can only be used in close combat.</characteristic>
                       <profiles>
                         <profile name="Hellshard Amulet" id="ffb1-a562-f1fc-4056" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item gives the wearer a 5+ Ward save. In addition, for every failed Ward save the wielder suffers in close combat, a Strength 2 hit is automatically inflicted on the model that caused the Wound.</characteristic>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item gives the wearer a Macigal Ward (5+). In addition, for every failed Ward save the wielder suffers in close combat, a Strength 2 hit is automatically inflicted on the model that caused the Wound.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4908,7 +4929,7 @@ Can only be used in close combat.</characteristic>
                       <profiles>
                         <profile name="Daemonspite Crucible" id="fa4b-6c5f-6e15-0331" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">This item gives the bearer a +1 casting bonus. In addition, every time the bearer kills an enemy Wizard in close combat, the bonus increases by +1.</characteristic>
+                            <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Relic. This item gives the bearer a +1 Casting bonus. In addition, every time the bearer kills an enemy Wizard in close combat, the bonus increases by +1 for the remainder of the game. </characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4953,6 +4974,9 @@ Can only be used in close combat.</characteristic>
                   </modifiers>
                 </infoLink>
               </infoLinks>
+              <modifiers>
+                <modifier field="name" scope="root-entry" type="set" value="Shar&apos;Tor The Executioner"/>
+              </modifiers>
               <profiles>
                 <profile name="Shar&apos;Tor The Executioner" id="f0f3-7f8a-d393-f571" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
@@ -4970,11 +4994,11 @@ Can only be used in close combat.</characteristic>
                 </profile>
                 <profile name="Prayers of Malice" id="2209-d110-fe27-af82" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
                   <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell, Level 1.</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a 6+ Ward save until the start of your next Magic phase.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a Magical Ward (6+) until the start of your next Magic phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5012,7 +5036,7 @@ Can only be used in close combat.</characteristic>
                       <profiles>
                         <profile name="The Mask of the Executioner" id="956d-4638-e902-a3ac" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the start of your Magic phase, you can target one enemy unit within 8&quot; of this model and roll a D6. On a 1 or 2 nothing happens. On a 3-5 that enemy unit suffers D3 wounds which Ignores Armour saves. On a 6, that enemy unit suffers D6 wounds which Ignores Armour saves.</characteristic>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the start of your Magic phase, roll a D6 for each enemy unit within 6&quot;. On a 1 or 2 nothing happens. On a 3-5 that enemy unit suffers D3 Wounds with the Ignores Armour Saves and Magical Attacks special rules. On a 6, that enemy unit suffers D6 Wounds instead. </characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5021,22 +5045,7 @@ Can only be used in close combat.</characteristic>
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-    </selectionEntry>
-    <selectionEntry name="Special Characters" id="18b2-a56b-7c60-63ca" hidden="false" import="true" sortIndex="402" subType="unit-group" type="unit">
-      <categoryLinks>
-        <categoryLink name="Characters" id="b524-6386-69cd-28e6" hidden="false" primary="true" targetId="d38a-73da-883b-bab9"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Character" id="9fa9-dcaa-4a62-e445" defaultSelectionEntryId="none" hidden="false">
-          <constraints>
-            <constraint id="bbe4-f8fb-ec3c-3c39-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
-            <constraint id="bbe4-f8fb-ec3c-3c39-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry name="Rykarth the Unbreakable" id="90a5-bbec-c629-73d4" hidden="false" import="true" sortIndex="1" type="model">
+            <selectionEntry name="Rykarth the Unbreakable" id="90a5-bbec-c629-73d4" hidden="false" import="true" type="model">
               <categoryLinks>
                 <categoryLink name="Infantry" id="1830-e1f4-955b-cbc3" hidden="false" primary="false" targetId="22c9-1606-58f8-2e60"/>
                 <categoryLink name="Z Heavy Armour" id="8c51-c83f-79c3-2145" hidden="false" primary="false" targetId="f667-6e97-ec08-38ea"/>
@@ -5100,9 +5109,10 @@ Can only be used in close combat.</characteristic>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier field="name" scope="root-entry" type="set" value="Rykarth the Unbreakable"/>
               </modifiers>
               <profiles>
-                <profile name="Rykarth the Unbreakable" id="a333-4f5a-162b-607e" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                <profile name="Rykarth" id="a333-4f5a-162b-607e" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
@@ -5123,7 +5133,7 @@ Can only be used in close combat.</characteristic>
                 </rule>
               </rules>
             </selectionEntry>
-            <selectionEntry name="Gorduz Backstabber" id="0276-48d3-653c-ec05" hidden="false" import="true" sortIndex="2" type="model">
+            <selectionEntry name="Gorduz Backstabber" id="0276-48d3-653c-ec05" hidden="false" import="true" type="model">
               <categoryLinks>
                 <categoryLink name="Infantry" id="edb0-2c4b-0e4f-f624" hidden="false" primary="false" targetId="22c9-1606-58f8-2e60"/>
                 <categoryLink name="Hobgoblin" id="a8e8-2da6-51f7-96c8" hidden="false" primary="false" targetId="aec6-79a1-d385-1c43"/>
@@ -5157,7 +5167,7 @@ Can only be used in close combat.</characteristic>
                   <entryLinks>
                     <entryLink name="Giant Wolf" id="06e4-1315-d126-dbcf" hidden="false" import="true" targetId="2acf-8f3a-986b-e5cd" type="selectionEntry">
                       <costs>
-                        <cost name="pts" typeId="points" value="12"/>
+                        <cost name="pts" typeId="points" value="15"/>
                       </costs>
                     </entryLink>
                   </entryLinks>
@@ -5166,13 +5176,16 @@ Can only be used in close combat.</characteristic>
               <infoLinks>
                 <infoLink name="Cowardly Despoilers" id="1d27-9fd4-352f-4330" hidden="false" targetId="8536-b279-7c0d-a0cb" type="rule"/>
                 <infoLink name="Backstabbers" id="eb22-7b73-9b8b-c3ea" hidden="false" targetId="a8ae-0c75-c023-52c8" type="rule"/>
-                <infoLink name="Magical Ward" id="64c6-4d0f-4f88-d726" hidden="false" targetId="0ea4-277a-19d5-3635" type="profile">
+                <infoLink name="Invulnerable" id="64c6-4d0f-4f88-d726" hidden="false" targetId="a5cd-bf6c-a415-ab5f" type="profile">
                   <modifiers>
                     <modifier field="bdf9-d73e-e13b-b0ce" type="set" value="4+ when reduced to one Wound"/>
                     <modifier field="name" type="set" value="Fated... Lucky... Sneaky!"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
+              <modifiers>
+                <modifier field="name" scope="root-entry" type="set" value="Gorduz Backstabber"/>
+              </modifiers>
               <profiles>
                 <profile name="Gorduz Backstabber" id="f025-281d-664c-b64a" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
@@ -5574,6 +5587,9 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
     <rule name="Fulled by Fire" id="f5c6-7683-b0e2-a9eb" hidden="false">
       <description>If a model with this special rule is the target of a non-physical Flaming Attack, it immediately regains 1 Wound lost earlier in the battle.</description>
     </rule>
+    <rule name="Infernal Cohort" id="7777-6352-ec2d-3a95" hidden="false">
+      <description>You may upgrade one unit of Warriors with heavy armour for +1.5 points/model for each model with this special rule in your army.</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry name="Naptha Bombs" id="5b77-b4dd-c48b-52cb" collective="true" hidden="false" import="true" type="upgrade">
@@ -5776,7 +5792,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
         <infoLink name="Hatred (*)" id="c0ad-d4da-3af6-ed8b" hidden="false" targetId="1f0a-79e9-85a8-9659" type="rule">
           <modifiers>
             <modifier field="annotation" type="set" value="Mount only"/>
-            <modifier arg="(*)" field="name" type="replace" value=""/>
+            <modifier arg="(*)" field="name" type="replace"/>
           </modifiers>
         </infoLink>
         <infoLink name="Frenzy" id="7fcf-92fb-7c7f-8c1a" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule">
