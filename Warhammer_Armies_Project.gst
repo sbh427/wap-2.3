@@ -810,6 +810,7 @@
               </characteristics>
             </profile>
             <profile name="Swarms" id="16d3-292a-ce8e-e20f" hidden="false" typeId="3adc-2604-f88f-aa41" typeName="Troop Type">
+              <alias>Swarm</alias>
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
                 <characteristic name="Fighting Rank" typeId="c3c4-4e59-56e4-c322">3</characteristic>
@@ -2662,6 +2663,33 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
             </modifier>
           </modifiers>
           <profiles>
+            <profile name="The Restless Dead" id="7b71-8279-0de0-c1f3" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each time a Wizard successfully casts an augment or conveyance spell from the Lore of Nehekhara, the target of the spell immediately recovers a number of Wounds&apos; worth of models, just like a summoning spell. Core Units (except Chariots) recover D6+1 Wounds. Special Units, Chariots and Monstrous Cavalry recover D3 Wounds. All other units recover 1 Wound.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Khsar&apos;s Incantation of the Desert Wind" id="2df4-cfc3-0ca2-8639" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target can immediately make a normal move as if it were the Remaining Moves sub-phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Sekhubi&apos;s Incantation of Retribution" id="075b-03cf-7b8a-0df3" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Target enemy Unit suffers D6 Strength 4 hits.</characteristic>
+              </characteristics>
+            </profile>
             <profile name="Djaf&apos;s Incantation of Cursed Blades" id="0d3b-24f4-8b87-e867" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
@@ -2680,24 +2708,6 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While this spell is in effect, add +1 to the result of all Wounds recovered from the The Restless Dead due to spells being cast by this Wizard. (This can trigger The Restless Dead for any unit they are with)</characteristic>
               </characteristics>
             </profile>
-            <profile name="Khsar&apos;s Incantation of the Desert Wind" id="2df4-cfc3-0ca2-8639" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target can immediately make a normal move as if it were the Remaining Moves sub-phase.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Mankara&apos;s Incantation of Urgency" id="95c5-0f4c-7376-aeaf" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target can immediately move using the Random Movement (3D6) special rule.</characteristic>
-              </characteristics>
-            </profile>
             <profile name="Merneptah&apos;s Scroll of the Scarab Song" id="6a59-f746-1727-b220" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
@@ -2705,15 +2715,6 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Uses the large round template. All models under the template suffer a Strength 1 hit with the Poisoned Attacks special rule.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Neferre&apos;s Incantation of Quaking Horror" id="d3ac-0808-5f03-3f8f" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target halves their Leadership (after modifiers, rounding up) until the start of the caster&apos;s next Magic phase.</characteristic>
               </characteristics>
             </profile>
             <profile name="Neru&apos;s Incantation of Protection" id="08a1-5fca-46f7-3350" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -2734,6 +2735,15 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit gain +1 Attack and may fire an additional shot with missile weapons (excluding artillery) until the start of the caster&apos;s next Magic phase.</characteristic>
               </characteristics>
             </profile>
+            <profile name="Neferre&apos;s Incantation of Quaking Horror" id="d3ac-0808-5f03-3f8f" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target halves their Leadership (after modifiers, rounding up) until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
             <profile name="Return of the Golden Age" id="b114-cc6d-4e97-7d4c" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
@@ -2741,6 +2751,15 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains +1 Weapon Skill, Strength and Initiative until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Usirian&apos;s Incantation of Vengeance" id="6e30-f3df-96d1-2c98" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers -D3 to its Movement characteristic (to a minimum of 1) and treats all terrain (even open ground) as Dangerous Terrain, testing every time it moves (including when charging, fleeing, pursuing, moving compulsorily, etc.) until the start of the caster&apos;s next Magic phase.</characteristic>
               </characteristics>
             </profile>
             <profile name="Sakhmet&apos;s Incantation of the Skullstorm" id="5330-362a-cefa-2b5e" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -2752,22 +2771,13 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move suffers a Strength 5 hit. Any unit that suffers one or more casualties must take an immediate Panic test.</characteristic>
               </characteristics>
             </profile>
-            <profile name="Sekhubi&apos;s Incantation of Retribution" id="075b-03cf-7b8a-0df3" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+            <profile name="Mankara&apos;s Incantation of Urgency" id="95c5-0f4c-7376-aeaf" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
               <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Target enemy Unit suffers D6 Strength 4 hits.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="The Restless Dead" id="7b71-8279-0de0-c1f3" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each time a Wizard successfully casts an augment or conveyance spell from the Lore of Nehekhara, the target of the spell immediately recovers a number of Wounds&apos; worth of models, just like a summoning spell. Core Units (except Chariots) recover D6+1 Wounds. Special Units, Chariots and Monstrous Cavalry recover D3 Wounds. All other units recover 1 Wound.</characteristic>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target can immediately move using the Random Movement (3D6) special rule.</characteristic>
               </characteristics>
             </profile>
             <profile name="Usekhp&apos;s Incantation of Desiccation" id="9a51-9d71-c7d6-5561" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -2777,15 +2787,6 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit has -1 Strength and -1 Toughness (to a minimum of 1) until the start of the caster&apos;s next Magic phase.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Usirian&apos;s Incantation of Vengeance" id="6e30-f3df-96d1-2c98" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit suffers -D3 to its Movement characteristic (to a minimum of 1) and treats all terrain (even open ground) as Dangerous Terrain, testing every time it moves (including when charging, fleeing, pursuing, moving compulsorily, etc.) until the start of the caster&apos;s next Magic phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>

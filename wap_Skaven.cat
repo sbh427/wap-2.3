@@ -1570,6 +1570,7 @@
         <selectionEntry name="Plague Monk" id="53a3-438c-b17d-23da" collective="false" hidden="false" import="true" type="model">
           <constraints>
             <constraint id="ca51-d4d7-75bd-9675" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="false" type="min" value="15"/>
+            <constraint id="6e46-ff87-30fb-a769" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="false" type="max" value="45"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="points" value="8"/>
@@ -1872,6 +1873,46 @@
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <entryLinks>
+            <entryLink name="56. Upgrades" id="e24e-8980-6087-afef" hidden="false" import="true" targetId="f845-cd7c-43ba-0c0d" type="selectionEntryGroup">
+              <selectionEntries>
+                <selectionEntry name="Plague Rats" id="a987-cc26-b76d-40ef" collective="true" hidden="false" import="true" type="upgrade">
+                  <categoryLinks>
+                    <categoryLink name="Clan Pestilens" id="5c69-6c3a-bdd8-1a34" hidden="false" primary="false" targetId="2d2e-eeb5-e996-4850"/>
+                  </categoryLinks>
+                  <constraints>
+                    <constraint id="488b-67e4-3b61-e663" field="selections" includeChildSelections="false" scope="parent" shared="true" type="max" value="1"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Poisoned Attacks" id="759c-6053-f2f2-5c96" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule">
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a987-cc26-b76d-40ef" childName="Plague Rats" field="selections" scope="parent" shared="true" type="lessThan" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                  <rules>
+                    <rule name="Plague Rats" id="9e62-60b0-442b-d3d9" hidden="false">
+                      <description>The Rat Swarms gain the Poison Attacks special rule and counts as Clan Pestilens.</description>
+                      <modifiers>
+                        <modifier field="hidden" type="set" value="true">
+                          <conditions>
+                            <condition childId="a987-cc26-b76d-40ef" childName="Plague Rats" field="selections" scope="parent" shared="true" type="atLeast" value="1"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </rule>
+                  </rules>
+                </selectionEntry>
+              </selectionEntries>
+            </entryLink>
+          </entryLinks>
           <profiles>
             <profile name="Rat Swarm" id="a16f-18bc-e79a-61b8" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
               <characteristics>
@@ -2088,74 +2129,6 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry name="Plague Rat Swarm" id="9d9b-6738-c81c-9f8d" collective="false" hidden="false" import="true" sortIndex="26" type="unit">
-      <categoryLinks>
-        <categoryLink name="Special" id="392f-028f-1a97-76f5" hidden="false" primary="true" targetId="fc26-7737-f7cb-8977"/>
-        <categoryLink name="Clan Pestilens" id="a36d-2c19-fb7c-6f1d" hidden="false" primary="false" targetId="2d2e-eeb5-e996-4850"/>
-        <categoryLink name="Swarm" id="af82-9c9e-26ce-0f75" hidden="false" primary="false" targetId="f651-5580-8a7b-45eb"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-      <selectionEntries>
-        <selectionEntry name="Plague Rat Swarm" id="f91a-03dd-816a-1582" collective="false" hidden="false" import="true" type="model">
-          <constraints>
-            <constraint id="f06d-ac91-3585-9aae" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="false" type="min" value="2"/>
-            <constraint id="d611-9c92-8411-b812" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" scope="parent" shared="false" type="max" value="10"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Poisoned Attacks" id="4908-aec4-fbcc-7546" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
-          </infoLinks>
-          <profiles>
-            <profile name="Plague Rats" id="cda9-ac1f-89eb-5be6" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">1</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">1</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">8</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">8</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Swarm (Rodent, Clan Pestilens)</characteristic>
-              </characteristics>
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <conditions>
-                    <condition childId="d8c3-9d64-89bf-2e9b" field="selections" includeChildSelections="true" scope="unit" shared="true" type="atLeast" value="1"/>
-                  </conditions>
-                  <modifiers>
-                    <modifier field="f049-8a65-9c04-1559" type="increment" value="1"/>
-                    <modifier field="edd2-7979-54a4-6b35" type="increment" value="1"/>
-                  </modifiers>
-                </modifierGroup>
-              </modifierGroups>
-            </profile>
-          </profiles>
-          <selectionEntries>
-            <selectionEntry name="The Yellow Death" id="d8c3-9d64-89bf-2e9b" hidden="false" import="true" type="upgrade">
-              <constraints>
-                <constraint id="4c7e-c032-8de6-6329" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <modifiers>
-                <modifier field="hidden" type="set" value="true">
-                  <conditions>
-                    <condition childId="9cb2-e321-5d1d-d7da" field="selections" includeChildSelections="true" scope="force" shared="true" type="equalTo" value="0"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntry>
     <selectionEntry name="Wolf Rats" id="5fec-8a93-d0b3-cf74" collective="false" hidden="false" import="true" sortIndex="23" type="unit">
       <categoryLinks>
         <categoryLink name="Special" id="e569-1c21-98fa-7c9b" hidden="false" primary="true" targetId="fc26-7737-f7cb-8977"/>
@@ -2245,7 +2218,7 @@
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Armour Piercing" id="e915-a15e-50db-89d0" hidden="false" targetId="bf4e-212e-fe1d-20c6" type="rule">
+                    <infoLink name="Armour Piercing (*)" id="e915-a15e-50db-89d0" hidden="false" targetId="bf4e-212e-fe1d-20c6" type="rule">
                       <modifiers>
                         <modifier arg="*" field="name" type="replace" value="1"/>
                       </modifiers>
@@ -5293,7 +5266,7 @@ Models hit by the rod must pass a single T test (regardless of the number of hit
                 <infoLink name="Leader of the Pack" id="2c54-3104-394d-ec5d" hidden="false" targetId="b29b-75ba-9d82-c0e2" type="rule"/>
                 <infoLink name="Scurry Away!" id="65f1-e532-f21d-a809" hidden="false" targetId="45db-9bbc-8b3b-4865" type="rule"/>
                 <infoLink name="Strength in Numbers" id="6c5f-13c8-771e-cd5a" hidden="false" targetId="337b-11fe-1de2-0cd0" type="rule"/>
-                <infoLink name="Armour Piercing" id="a8cf-4ad6-2993-3541" hidden="false" targetId="bf4e-212e-fe1d-20c6" type="rule">
+                <infoLink name="Armour Piercing (*)" id="a8cf-4ad6-2993-3541" hidden="false" targetId="bf4e-212e-fe1d-20c6" type="rule">
                   <modifiers>
                     <modifier arg="*" field="name" join=" " type="replace" value="3"/>
                   </modifiers>
@@ -9200,7 +9173,7 @@ All Toughness tests taken from this weapon suffer a +1 modifier.
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
               <infoLinks>
-                <infoLink name="Armour Piercing" id="f92f-dfd1-c51a-1e58" hidden="false" targetId="bf4e-212e-fe1d-20c6" type="rule">
+                <infoLink name="Armour Piercing (*)" id="f92f-dfd1-c51a-1e58" hidden="false" targetId="bf4e-212e-fe1d-20c6" type="rule">
                   <modifiers>
                     <modifier arg="*" field="name" type="replace" value="1"/>
                   </modifiers>
