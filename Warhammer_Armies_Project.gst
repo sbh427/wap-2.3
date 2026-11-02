@@ -2799,9 +2799,6 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <infoLinks>
-            <infoLink name="Warp Lightning" id="c83a-3657-685b-1978" hidden="false" targetId="4ce5-d856-9436-c373" type="profile"/>
-          </infoLinks>
           <modifierGroups>
             <modifierGroup type="and">
               <conditionGroups>
@@ -2835,6 +2832,15 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If one or more spells from the Lore of Ruin affects an  enemy unit, the target suffers -1 to their Leadership (to a minimum of 1) until the start of the caster&apos;s next magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Warp Lightning" id="4ce5-d856-9436-c373" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">D3 Strength 5 hits with the Lightning Attacks special rule. If the number of hits rolled is a natural 1 (using a D6), then the caster suffers a Strength 5 hit instead of the target.</characteristic>
               </characteristics>
             </profile>
             <profile name="Death Frenzy" id="3bc2-cc41-deca-a3ca" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -2946,9 +2952,6 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <infoLinks>
-            <infoLink name="Skitterleap" id="d0dc-8516-dd3b-adcf" hidden="false" targetId="5fab-cda1-fe22-98e6" type="profile"/>
-          </infoLinks>
           <modifierGroups>
             <modifierGroup type="and">
               <conditionGroups>
@@ -2974,15 +2977,6 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
             </modifier>
           </modifiers>
           <profiles>
-            <profile name="Warp Stars" id="cc3d-ee13-f35c-3141" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits with the Armour Piercing (1) and Poisoned Attacks special rule.</characteristic>
-              </characteristics>
-            </profile>
             <profile name="Toxic Rain" id="164c-b30a-2f30-0113" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
@@ -2990,6 +2984,15 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If one or more spells from the Lore of Stealth affects an enemy unit, the target suffers a -1 penalty to their armour saves until the start of the caster&apos;s next magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Warp Stars" id="cc3d-ee13-f35c-3141" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits with the Armour Piercing (1) and Poisoned Attacks special rule.</characteristic>
               </characteristics>
             </profile>
             <profile name="Stickypaws" id="cdc6-400e-cd08-f17c" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -3053,6 +3056,15 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit doubles its Movement rate (to a maximum of 10) and can re-roll their Charge, Flee and Pursuit results until the start of the caster&apos;s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Skitterleap" id="5fab-cda1-fe22-98e6" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is immediately picked up and may be moved to any position on the battlefield within 24&quot; of their original position, just like a summoning spell.</characteristic>
               </characteristics>
             </profile>
             <profile name="Black Whirlwind" id="f85b-8dd3-258e-4960" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -3130,6 +3142,15 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
             </modifier>
           </modifiers>
           <profiles>
+            <profile name="Plague Rash" id="5bfa-0985-eb82-072b" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If one or more spells from the Lore of Plague affects an enemy unit, the target suffers -1 to their Weapon Skill and Initiative (to a minimum of 1) until the start of the caster&apos;s next magic phase.</characteristic>
+              </characteristics>
+            </profile>
             <profile name="Pestilent Breath" id="6fe9-0b2f-8cac-ee22" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
               <characteristics>
                 <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
@@ -3236,15 +3257,6 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
                 <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit must pass a Toughness test or suffer a Wound with the Ignores Armour save special rule. If cast on a unit engaged in close combat, all units in base contact (friend and foe) will be affected. After working out the effects of the spell and removing casualties, roll a D6 and consult the Plague chart and continue to apply the results until the spell ends or there are no more viable targets. A unit can only be the target of Plague once per Magic phase.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Plague Rash" id="5bfa-0985-eb82-072b" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If one or more spells from the Lore of Plague affects an enemy unit, the target suffers -1 to their Weapon Skill and Initiative (to a minimum of 1) until the start of the caster&apos;s next magic phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3462,10 +3474,22 @@ All models under the template suffer a Strength 4 hit with the Ignores Armour S
       </infoLinks>
     </infoGroup>
     <infoGroup name="Daemonic" id="9c1c-92d1-b507-cf66" hidden="false">
-      <infoLinks>
-        <infoLink name="Daemonic" id="5840-89e3-85aa-a46b" hidden="false" targetId="377d-1fae-4a56-de9e" type="profile"/>
-        <infoLink name="Daemonic" id="01cb-230c-673c-8c44" hidden="false" targetId="6940-194d-860b-18d4" type="rule"/>
-      </infoLinks>
+      <profiles>
+        <profile name="Daemonic" id="377d-1fae-4a56-de9e" hidden="false" typeId="54b0-94fc-eb1e-8e37" typeName="Invulnerable save">
+          <characteristics>
+            <characteristic name="Type" typeId="31b2-f73f-865d-f538">Magical Ward</characteristic>
+            <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Daemonic" id="6940-194d-860b-18d4" hidden="false">
+          <description>Models with this rule have the Fear, Magical Attacks, Magical Ward (5+) and Unbreakable special rules (including mounts). 
+
+
+However, if it loses a round of close combat, it must take a Daemonic Instability test. This works like a normal Break test, except that for every point they fail the test by, the Daemon suffers one additional Wound with no saves allowed. The Daemonic Instability test can use Inspiring Presence and/or Hold Your Ground as normal.</description>
+        </rule>
+      </rules>
     </infoGroup>
     <infoGroup name="Stupidity" id="755c-61c2-fa25-f4ce" hidden="false">
       <profiles>
@@ -4723,12 +4747,6 @@ All models under the template must roll a D6 per Wound on their profile – fo
         <characteristic name="Value" typeId="19f0-e982-f035-416c"/>
       </characteristics>
     </profile>
-    <profile name="Daemonic" id="377d-1fae-4a56-de9e" hidden="false" typeId="54b0-94fc-eb1e-8e37" typeName="Invulnerable save">
-      <characteristics>
-        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Magical Ward</characteristic>
-        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+ / 6+ against Magical Attacks.</characteristic>
-      </characteristics>
-    </profile>
     <profile name="Sneaky Stealin&apos;" id="c448-a828-b69c-be59" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
@@ -5466,24 +5484,6 @@ All models hit by the template must pass a Weapon Skill test or suffer a Stren
         <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
       </characteristics>
     </profile>
-    <profile name="Warp Lightning" id="4ce5-d856-9436-c373" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">D3 Strength 5 hits with the Lightning Attacks special rule. If the number of hits rolled is a natural 1 (using a D6), then the caster suffers a Strength 5 hit instead of the target.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Skitterleap" id="5fab-cda1-fe22-98e6" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is immediately picked up and may be moved to any position on the battlefield within 24&quot; of their original position, just like a summoning spell.</characteristic>
-      </characteristics>
-    </profile>
   </sharedProfiles>
   <sharedRules>
     <rule name="Scouts" id="6624-0b7b-c5b8-6397" hidden="false">
@@ -6173,9 +6173,6 @@ Note that this special rule is not cumulative. If two or more models in a unit 
     </rule>
     <rule name="Elven Grace" id="b726-c451-19d2-7658" hidden="false">
       <description>Models with this rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
-    </rule>
-    <rule name="Daemonic" id="6940-194d-860b-18d4" hidden="false">
-      <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a Magical Ward (5+) which gets reduced to a Magical Ward (6+) against Magical Attacks.</description>
     </rule>
     <rule name="Cumbersome" id="7ef7-e8ef-ce58-8c93" hidden="false">
       <description>Models or Weapons with the Cumbersome special rule cannot be used to Stand and Shoot.</description>
